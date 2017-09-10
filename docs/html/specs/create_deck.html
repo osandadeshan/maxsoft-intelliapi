@@ -1,0 +1,278 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Create A Deck Specification</h1>
+<p>Date Created    : 08/23/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: create_deck</p>
+<ul>
+<li>Given that a user needs to invoke &quot;Create Deck&quot;</li>
+</ul>
+<h2>Details of testing environment</h2>
+<ul>
+<li>Testing environment details</li>
+</ul>
+<h2>Create a Deck using valid parameters</h2>
+<ul>
+<li>
+<p>When the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#examDate</td>
+<td>2017-09-25 15:13:51</td>
+</tr>
+<tr>
+<td>#isExpert</td>
+<td>false</td>
+</tr>
+<tr>
+<td>#title</td>
+<td>QE Test</td>
+</tr>
+<tr>
+<td>#userId</td>
+<td>Osanda</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API using the valid access token</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.title</td>
+<td>QE Test</td>
+</tr>
+<tr>
+<td>$.isExpert</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$.examDate</td>
+<td>2017-09-25T15:13:51.000+0000</td>
+</tr>
+<tr>
+<td>$.userId</td>
+<td>Osanda</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Deck using empty exam date</h2>
+<ul>
+<li>
+<p>When the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#examDate</td>
+<td></td>
+</tr>
+<tr>
+<td>#isExpert</td>
+<td>false</td>
+</tr>
+<tr>
+<td>#title</td>
+<td>QE Test</td>
+</tr>
+<tr>
+<td>#userId</td>
+<td>Osanda</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API using the valid access token</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Deck using null exam date</h2>
+<ul>
+<li>
+<p>When the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#examDate</td>
+<td>null</td>
+</tr>
+<tr>
+<td>#isExpert</td>
+<td>false</td>
+</tr>
+<tr>
+<td>#title</td>
+<td>QE Test</td>
+</tr>
+<tr>
+<td>#userId</td>
+<td>Osanda</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API using the valid access token</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;400&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.validation</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>null</td>
+</tr>
+<tr>
+<td>$.fieldErrors[0].objectName</td>
+<td>createDeckDTO</td>
+</tr>
+<tr>
+<td>$.fieldErrors[0].field</td>
+<td>examDate</td>
+</tr>
+<tr>
+<td>$.fieldErrors[0].message</td>
+<td>NotNull</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Deck using invalid exam date</h2>
+<ul>
+<li>
+<p>When the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#examDate</td>
+<td>nullable</td>
+</tr>
+<tr>
+<td>#isExpert</td>
+<td>false</td>
+</tr>
+<tr>
+<td>#title</td>
+<td>QE Test</td>
+</tr>
+<tr>
+<td>#userId</td>
+<td>Osanda</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API using the valid access token</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\database_test.html">></a></li></center>

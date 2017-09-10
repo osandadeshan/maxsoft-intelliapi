@@ -1,0 +1,199 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>New Create A Bucket Specification</h1>
+<p>Date Created    : 07/27/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<ul>
+<li>Given that a user needs to invoke &quot;Create Bucket&quot;</li>
+</ul>
+<h2>Create a Bucket in the bucket page using valid token</h2>
+<ul>
+<li>
+<p>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_valid_parameters.txt&gt; and access token &lt;file:/resources/access_tokens/valid_token.txt&gt;</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.title</td>
+<td>Test</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Test description</td>
+</tr>
+<tr>
+<td>$.goalDate</td>
+<td>2017-08-26T00:00:00</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Bucket in the bucket page using invalid token</h2>
+<ul>
+<li>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_valid_parameters.txt&gt; and access token &lt;file:/resources/access_tokens/invalid_token.txt&gt;</li>
+<li>Then the status code for the request is &quot;401&quot;</li>
+</ul>
+<h2>Create a Bucket in the bucket page using no token</h2>
+<ul>
+<li>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_valid_parameters.txt&gt; and access token &lt;file:/resources/access_tokens/null_token.txt&gt;</li>
+<li>Then the status code for the request is &quot;401&quot;</li>
+</ul>
+<h2>Create a Bucket in the bucket page using empty value as the goal title</h2>
+<ul>
+<li>
+<p>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_empty_goal_title.txt&gt; and access token &lt;file:/resources/access_tokens/valid_token.txt&gt;</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;400&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.Title[0]</td>
+<td>Title Can't be empty</td>
+</tr>
+<tr>
+<td>$.Title[1]</td>
+<td>Title should be more than 2 characters</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Bucket in the bucket page using null value as the goal title</h2>
+<ul>
+<li>
+<p>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_null_goal_title.txt&gt; and access token &lt;file:/resources/access_tokens/valid_token.txt&gt;</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;400&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.Title[0]</td>
+<td>Title Can't be null</td>
+</tr>
+<tr>
+<td>$.Title[1]</td>
+<td>Title Can't be empty</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Bucket in the bucket page using 1 character as the goal title</h2>
+<ul>
+<li>
+<p>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_1_character_goal_title.txt&gt; and access token &lt;file:/resources/access_tokens/valid_token.txt&gt;</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;400&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.Title[0]</td>
+<td>Title should be more than 2 characters</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Bucket in the bucket page using 2 characters as the goal title</h2>
+<ul>
+<li>
+<p>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_2_characters_goal_title.txt&gt; and access token &lt;file:/resources/access_tokens/valid_token.txt&gt;</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.title</td>
+<td>Te</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Test</td>
+</tr>
+<tr>
+<td>$.goalDate</td>
+<td>2017-08-26T00:00:00</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Bucket in the bucket page using past date</h2>
+<ul>
+<li>
+<p>When the user invokes the API using the following request &lt;file:/resources/api_requests/create_bucket/create_bucket_using_past_date.txt&gt; and access token &lt;file:/resources/access_tokens/valid_token.txt&gt;</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;400&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.GoalDate[0]</td>
+<td>Goal date should be a future date</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\new get_all_medicines.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li></center>

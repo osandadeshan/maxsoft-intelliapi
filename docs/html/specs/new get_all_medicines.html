@@ -1,0 +1,76 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Get All Medicines Specification</h1>
+<p>Date Created    : 07/13/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: get_all_medicines</p>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Login API&quot;</p>
+</li>
+<li>
+<p>When the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td><a href="mailto:aansar@gmail.com" rel="nofollow">aansar@gmail.com</a></td>
+</tr>
+<tr>
+<td>#password</td>
+<td>ayesha@123</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API using the above request payload</p>
+</li>
+<li>
+<p>And save the access token which is the attribute value of &quot;token&quot; in the response</p>
+</li>
+</ul>
+<h2>Details of testing environment</h2>
+<ul>
+<li>Testing environment details</li>
+</ul>
+<h2>Get All Medicines using a valid token</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get All Medicines&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following request &quot;{}&quot; and valid access token</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>error</td>
+</tr>
+<tr>
+<td>$.medicineList</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\login.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\new_create_bucket.html">></a></li></center>

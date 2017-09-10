@@ -1,0 +1,64 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Get book by ISBN Specification</h1>
+<p>Date Created    : 07/12/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<h2>User calls web service to get a book by its ISBN</h2>
+<ul>
+<li>
+<p>Given a book exists with an isbn of &quot;0079132863&quot;</p>
+</li>
+<li>
+<p>When a user retrieves the book by isbn of &quot;0079132863&quot;</p>
+</li>
+<li>
+<p>Then the status code for retrieving book request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the response for retrieving book request contains the following</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>totalItems</td>
+<td>1</td>
+</tr>
+<tr>
+<td>kind</td>
+<td>books#volumes</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the response for retrieving book request contains the following information in any order</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>items.volumeInfo.title[0]</td>
+<td>The Complete Guide to Java Database Programming</td>
+</tr>
+<tr>
+<td>items.volumeInfo.publisher[0]</td>
+<td>Computing McGraw-Hill</td>
+</tr>
+<tr>
+<td>items.volumeInfo.pageCount[0]</td>
+<td>333</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\BucketList.html">></a></li></center>

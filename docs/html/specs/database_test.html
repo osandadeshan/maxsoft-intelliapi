@@ -1,0 +1,82 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Database Validation Specification</h1>
+<p>Date Created    : 07/13/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: database_test</p>
+<ul>
+<li>Given a user successfully loaded the MySQL Driver</li>
+</ul>
+<h2>Validate specific users information in the users table</h2>
+<ul>
+<li>
+<p>When the user connects to the database using username as &quot;root&quot; and password as &quot;root&quot;</p>
+</li>
+<li>
+<p>Then the user executes query of &quot;select * from userinfo&quot;</p>
+</li>
+<li>
+<p>And the results obtained from the database should contain the following</p>
+<table>
+<thead>
+<tr>
+<th>FirstName</th>
+<th>LastName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Osanda</td>
+<td>Nimalarathna</td>
+</tr>
+<tr>
+<td>Gemunu</td>
+<td>Priyadarshana</td>
+</tr>
+<tr>
+<td>Thilina</td>
+<td>Jayasinghe</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Validate all users information in the users table</h2>
+<ul>
+<li>
+<p>When the user connects to the database using username as &quot;root&quot; and password as &quot;root&quot;</p>
+</li>
+<li>
+<p>Then the user executes query of &quot;select * from userinfo&quot;</p>
+</li>
+<li>
+<p>And the results obtained from the database should equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>FirstName</th>
+<th>LastName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Osanda</td>
+<td>Nimalarathna</td>
+</tr>
+<tr>
+<td>Gemunu</td>
+<td>Priyadarshana</td>
+</tr>
+<tr>
+<td>Thilina</td>
+<td>Jayasinghe</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Close the database connection</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\create_deck.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\get_all_decks_list.html">></a></li></center>

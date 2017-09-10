@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Get Bucket List Specification</h1>
+<p>Date Created    : 07/27/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: get_bucket_list</p>
+<ul>
+<li>Given that a user invokes &quot;Get Bucket List&quot;</li>
+</ul>
+<h2>Get bucket list using valid token</h2>
+<ul>
+<li>When the user invokes the BucketList API using token &lt;file:/resources/access_tokens/valid_token.txt&gt;</li>
+<li>Then the status code for retrieving bucket list request is &quot;200&quot;</li>
+<li>And the response for retrieving bucket list request contains the following
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id[0]</td>
+<td>1</td>
+</tr>
+<tr>
+<td>title[0]</td>
+<td>string</td>
+</tr>
+<tr>
+<td>description[0]</td>
+<td>string</td>
+</tr>
+<tr>
+<td>goalDate[0]</td>
+<td>2017-08-26T05:03:21.952</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get bucket list using invalid token</h2>
+<ul>
+<li>When the user invokes the BucketList API using token &lt;file:/resources/access_tokens/invalid_token.txt&gt;</li>
+<li>Then the status code for retrieving bucket list request is &quot;401&quot;</li>
+</ul>
+<h2>Get bucket list using no token</h2>
+<ul>
+<li>When the user invokes the BucketList API using token &lt;file:/resources/access_tokens/null_token.txt&gt;</li>
+<li>Then the status code for retrieving bucket list request is &quot;401&quot;</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\create_bucket.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li></center>

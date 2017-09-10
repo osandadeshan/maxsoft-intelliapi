@@ -1,0 +1,8 @@
+{
+	"Flags": {
+		"-simple-console": "true"
+	},
+	"FailedItems": [
+		"specs\\database_test.spec:29"
+	]
+}

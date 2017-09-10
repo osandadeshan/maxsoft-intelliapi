@@ -1,0 +1,384 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Get All Decks List Specification</h1>
+<p>Date Created    : 08/22/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: get_all_decks_list</p>
+<h2>Details of testing environment</h2>
+<ul>
+<li>Testing environment details</li>
+</ul>
+<h2>Get all decks list using a valid userId</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Decks&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$[0].id</td>
+<td>182</td>
+</tr>
+<tr>
+<td>$[0].title</td>
+<td>Sociology: Crime, Deviance, and Social Control (Ch. 17)</td>
+</tr>
+<tr>
+<td>$[0].isExpert</td>
+<td>true</td>
+</tr>
+<tr>
+<td>$[0].userId</td>
+<td>user</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get all decks list using an invalid userId</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Decks&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get all decks list using userId as empty</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Decks&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get all decks list using userId as null</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Decks&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get all decks list using an invalid query parameter</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Decks&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get all decks list using invalid query parameters</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Decks&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>1</td>
+</tr>
+<tr>
+<td>userIs</td>
+<td>2</td>
+</tr>
+<tr>
+<td>userIa</td>
+<td>3</td>
+</tr>
+<tr>
+<td>userIq</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get all decks list without any query parameters</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Decks&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following query parameters</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Then the status code for the request is &quot;500&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.message</td>
+<td>error.internalServerError</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>Internal server error</td>
+</tr>
+<tr>
+<td>$.fieldErrors</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\database_test.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\get_all_medicines.html">></a></li></center>

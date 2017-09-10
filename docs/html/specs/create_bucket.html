@@ -1,0 +1,71 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Create A Bucket Specification</h1>
+<p>Date Created    : 07/27/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: create_bucket</p>
+<p>table:/resources/data_driven_test_csv/create_bucket.csv</p>
+<ul>
+<li>Given that a user invokes &quot;Create Bucket&quot;</li>
+</ul>
+<h2>Create a Bucket in the bucket page using valid token</h2>
+<ul>
+<li>When the user invokes the Create Bucket API using the Goal Title as &lt;Goal_Title&gt;, Goal Description as &lt;Goal_Description&gt; and Goal Date as &lt;Goal_Date&gt; using token &lt;file:/resources/access_tokens/valid_token.txt&gt;</li>
+<li>Then the status code for creating a bucket request is &quot;201&quot;</li>
+<li>And the JSON Path Assertions for the response of creating a bucket request contains the following
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.title</td>
+<td>&lt;Goal_Title&gt;</td>
+</tr>
+<tr>
+<td>$.description</td>
+<td>&lt;Goal_Description&gt;</td>
+</tr>
+<tr>
+<td>$.goalDate</td>
+<td>&lt;Goal_Date&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Create a Bucket in the bucket page using invalid token</h2>
+<ul>
+<li>When the user invokes the Create Bucket API using the Goal Title as &lt;Goal_Title&gt;, Goal Description as &lt;Goal_Description&gt; and Goal Date as &lt;Goal_Date&gt; using token &lt;file:/resources/access_tokens/invalid_token.txt&gt;</li>
+<li>Then the status code for creating a bucket request is &quot;401&quot;</li>
+</ul>
+<h2>Create a Bucket in the bucket page using no token</h2>
+<ul>
+<li>When the user invokes the Create Bucket API using the Goal Title as &lt;Goal_Title&gt;, Goal Description as &lt;Goal_Description&gt; and Goal Date as &lt;Goal_Date&gt; using token &lt;file:/resources/access_tokens/null_token.txt&gt;</li>
+<li>Then the status code for creating a bucket request is &quot;401&quot;</li>
+</ul>
+<h2>Create a Bucket in the bucket page using past date</h2>
+<ul>
+<li>When the user invokes the Create Bucket API using the Goal Title as &lt;Goal_Title&gt;, Goal Description as &lt;Goal_Description&gt; and Goal Date as &quot;2017-06-21T00:00:00&quot; using token &lt;file:/resources/access_tokens/valid_token.txt&gt;</li>
+<li>Then the status code for creating a bucket request is &quot;400&quot;</li>
+<li>And the JSON Path Assertions for the response of creating a bucket request contains the following
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.GoalDate[0]</td>
+<td>Goal date should be a future date</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\Login.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\get_bucket_list.html">></a></li></center>

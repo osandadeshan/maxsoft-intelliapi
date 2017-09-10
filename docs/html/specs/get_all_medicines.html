@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Get All Medicines Specification</h1>
+<p>Date Created    : 07/13/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: get_all_medicines</p>
+<ul>
+<li>Given that a user needs to invoke &quot;Login API&quot;</li>
+<li>When the user invokes the API using the following request &lt;file:/resources/api_requests/login/login.txt&gt;</li>
+<li>And get the attribute value for the attribute of &quot;token&quot; in the response and save it in the data store named &quot;accessToken&quot;</li>
+</ul>
+<h2>Get All Medicines using a valid token</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get All Medicines&quot;</p>
+</li>
+<li>
+<p>When the user invokes the API using the following request &quot;&quot;accessToken&quot;&quot; and valid access token which saved in the data store named {}</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>error</td>
+</tr>
+<tr>
+<td>$.medicineList</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\get_all_decks_list.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\login.html">></a></li></center>
