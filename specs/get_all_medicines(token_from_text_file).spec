@@ -9,6 +9,7 @@ Description  	: This is an executable specification file which follows markdown 
 tags: get_all_medicines
 
 
+
 * Given that a user needs to invoke "Login API"
 * When the user set the request attributes as follows
      |Attribute Value In JSON Template|Attribute Value To Be Set|
@@ -16,6 +17,11 @@ tags: get_all_medicines
      |#username                       |aansar@gmail.com         |
      |#password                       |ayesha@123               |
 * When the user invokes the API using the above request payload
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path |Expected Result             |
+     |----------|----------------------------|
+     |$.status  |successful                  |
 * And save the access token which is the attribute value of "token" in the response
 
 

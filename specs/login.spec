@@ -8,7 +8,7 @@ Description  	: This is an executable specification file which follows markdown 
 
 tags: login
 
-csv: /re
+
 
 Login Scenario
 --------------
@@ -23,5 +23,5 @@ Login Scenario
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path |Expected Result             |
      |----------|----------------------------|
-     |$.title   |QE Update Test              |
-     |$.isExpert|false                       |
+     |$.status  |successful                  |
+

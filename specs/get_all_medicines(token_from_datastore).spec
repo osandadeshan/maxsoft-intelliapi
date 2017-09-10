@@ -9,8 +9,14 @@ Description  	: This is an executable specification file which follows markdown 
 tags: get_all_medicines
 
 
+
 * Given that a user needs to invoke "Login API"
 * When the user invokes the API using the following request <file:/resources/api_requests/login/login.txt>
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path |Expected Result             |
+     |----------|----------------------------|
+     |$.status  |successful                  |
 * And get the attribute value for the attribute of "token" in the response and save it in the data store named "accessToken"
 
 
