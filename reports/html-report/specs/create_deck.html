@@ -30,21 +30,21 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,3,0" data-total="4">
+        <svg id="pie-chart" data-results="1,0,0" data-total="1">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/4</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 3/4</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/4</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">4</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">1</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
         <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">3</span><span class="txt">Passed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">0</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -57,15 +57,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>75%</span>
+          <span>0%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:20</span>
+          <span>00:00:07</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Aug 28, 2017 at 11:20am</span>
+          <span>Nov 3, 2017 at 2:37pm</span>
         </li>
       </ul>
     </div>
@@ -89,39 +89,12 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="get_all_decks_list.html">
+          <a href="create_deck.html">
             
               <li class='failed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Get All Decks List Specification</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="login.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Login Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="update_deck.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Update A Deck Specification</span>
-              <span id="time" class="time">00:00:03</span>
-            </li>
-          </a>
-          
-          <a href="create_deck.html">
-             
-              <li class='passed spec-name'>
-            
               <span id="scenarioName" class="scenarioname">Create A Deck Specification</span>
-              <span id="time" class="time">00:00:09</span>
+              <span id="time" class="time">00:00:06</span>
             </li>
           </a>
           
@@ -137,10 +110,10 @@
     <header class="curr-spec">
       <div class="spec-head-wrapper">
         <h3 class="spec-head" title="C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\create_deck.spec">Create A Deck Specification</h3>
-        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
+        <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">5</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -153,7 +126,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:09</span>
+        <span class="time">00:00:06</span>
       </div>
 
 	
@@ -194,6 +167,8 @@
   
   <span></span>
   
+  <span></span>
+  
   
 
   
@@ -201,13 +176,13 @@
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Details of testing environment</h3>
-    <span class="time">00:00:02</span>
+    <h3 class="head borderBottom">Create a Deck using valid parameters</h3>
+    <span class="time">00:00:06</span>
 
 	
   
@@ -259,142 +234,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-    </div>
-  
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Testing environment details
-      </span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Testing environment name: DEV</p>
- </div><div class="step-message"><p>Testing environment URL: <a href="http://deckcardservice.dev-prsn.com:8080" rel="nofollow">http://deckcardservice.dev-prsn.com:8080</a></p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  
-
-	
-	</div>
-
-      
-        
-	
-  <div class='scenario-container passed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Create a Deck using valid parameters</h3>
-    <span class="time">00:00:03</span>
-
-	
-  
-
-	</div>
-	
-
-  
-    <div class='context-step'>
-      
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Given that a user needs to invoke 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Create Deck"</span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.240.141:8090/api/decks" rel="nofollow">http://10.199.240.141:8090/api/decks</a></p>
  </div>
       </div>
     </div>
@@ -445,11 +285,9 @@
   </tr>
   <tbody>
     
-    <tr><td>#examDate</td><td>2017-09-21 15:13:51</td></tr>
+    <tr><td>#examDate</td><td>2017-12-21</td></tr>
     
-    <tr><td>#isExpert</td><td>false</td></tr>
-    
-    <tr><td>#title</td><td>QE Test</td></tr>
+    <tr><td>#title</td><td>QE Test3</td></tr>
     
     <tr><td>#userId</td><td>Osanda</td></tr>
     
@@ -472,10 +310,72 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “examDate”: “2017-09-21 15:13:51”,<br/>  “isExpert”: false,<br/>  “title”: “QE Test”,<br/>  “userId”: “Osanda”<br/>}</p>
+        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “archived”: true,<br/>  “book”: {<br/>    “bookAuthor”: “#bookAuthor”,<br/>    “bookTitle”: “#bookTitle”,<br/>    “chapter”: “#chapter”<br/>  },<br/>  “cardPreview”: true,<br/>  “createdAt”: “2017-11-02T07:32:11.130Z”,<br/>  “deckAuthor”: “#deckAuthor”,<br/>  “deckAuthorId”: 0,<br/>  “description”: “#description”,<br/>  “downloads”: 0,<br/>  “examDate”: “2017-12-21”,<br/>  “expert”: true,<br/>  “id”: 0,<br/>  “keywords”: [<br/>    “string”<br/>  ],<br/>  “noOfCards”: 0,<br/>  “notificationSettings”: {<br/>    “areNotificationsEnabled”: true,<br/>    “notificationFrequency”: “string”,<br/>    “notificationTime”: “string”<br/>  },<br/>  “parentDeckId”: 0,<br/>  “progress”: 0,<br/>  “purchaseInfo”: {<br/>    “price”: 0,<br/>    “purchasedDate”: “2017-11-02T07:32:11.130Z”,<br/>    “sku”: “string”<br/>  },<br/>  “starred”: true,<br/>  “status”: “string”,<br/>  “subject”: {<br/>    “id”: 0,<br/>    “name”: “string”<br/>  },<br/>  “tags”: [<br/>    “string”<br/>  ],<br/>  “thumbnailUrl”: “string”,<br/>  “title”: “QE Test3”,<br/>  “updatedAt”: “2017-11-02T07:32:11.130Z”,<br/>  “userId”: “Osanda”<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        When the user set the request headers as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Header Name</th><th>Header Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>X-Platform</td><td>Android</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
   
 
 	</li></ul></div></div>
@@ -524,8 +424,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is failed</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: 1424,<br/>    “title”: “QE Test”,<br/>    “isExpert”: false,<br/>    “examDate”: “2017-09-21T15:13:51.000+0000”,<br/>    “userId”: “Osanda”,<br/>    “createdAt”: “2017-08-28T05:50:51.556+0000”,<br/>    “updatedAt”: “2017-08-28T05:50:51.556+0000”<br/>}</p>
+        <div class="step-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is succeeded</p>
+ </div><div class="step-message"><p>Response is empty for the given payload</p>
  </div>
       </div>
     </div>
@@ -550,7 +450,7 @@
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -573,6 +473,20 @@
 
   
   
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+        <div class="exception">
+          <h4 class="error-message">
+            <pre>java.lang.AssertionError: The expected status code for the request is not match with the actual status code<br/> expected [201] but found [400]</pre>
+          </h4>
+          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>BaseClass.verifyResponseStatusCode(BaseClass.java:483)<br/>CommonStepDefinitions.verifyResponseStatusCode(CommonStepDefinitions.java:147)<br/>AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:112)<br/>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
+        </div>
+        
+    </div>
+  </div>
+
     
   
   
@@ -598,7 +512,7 @@
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -622,11 +536,13 @@
   </tr>
   <tbody>
     
-    <tr><td>$.title</td><td>QE Test</td></tr>
+    <tr><td>$.title</td><td>QE Test3</td></tr>
     
-    <tr><td>$.isExpert</td><td>false</td></tr>
+    <tr><td>$.subject.id</td><td>5</td></tr>
     
-    <tr><td>$.examDate</td><td>2017-09-21T15:13:51.000+0000</td></tr>
+    <tr><td>$.subject.name</td><td>SUB 1</td></tr>
+    
+    <tr><td>$.examDate</td><td>1508544000000</td></tr>
     
     <tr><td>$.userId</td><td>Osanda</td></tr>
     
@@ -670,1021 +586,6 @@
     
   
     <span></span>
-  
-
-  
-  
-
-	
-	</div>
-
-      
-        
-	
-  <div class='scenario-container passed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Create a Deck using empty exam date</h3>
-    <span class="time">00:00:01</span>
-
-	
-  
-
-	</div>
-	
-
-  
-    <div class='context-step'>
-      
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Given that a user needs to invoke 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Create Deck"</span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-    </div>
-  
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        When the user set the request attributes as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Attribute Value In JSON Template</th><th>Attribute Value To Be Set</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>#examDate</td><td></td></tr>
-    
-    <tr><td>#isExpert</td><td>false</td></tr>
-    
-    <tr><td>#title</td><td>QE Test</td></tr>
-    
-    <tr><td>#userId</td><td>Osanda</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “examDate”: “”,<br/>  “isExpert”: false,<br/>  “title”: “QE Test”,<br/>  “userId”: “Osanda”<br/>}</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        When the user invokes the API using the valid access token
-      </span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is failed</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “message”: “error.internalServerError”,<br/>    “description”: “Internal server error”,<br/>    “fieldErrors”: null<br/>}</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Then the status code for the request is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"500"</span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        And the JSON Path Assertions for the response should be equal to the following 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>JSON Path</th><th>Expected Result</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>$.message</td><td>error.internalServerError</td></tr>
-    
-    <tr><td>$.description</td><td>Internal server error</td></tr>
-    
-    <tr><td>$.fieldErrors</td><td>null</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-  
-
-	
-	</div>
-
-      
-        
-	
-  <div class='scenario-container passed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Create a Deck using null exam date</h3>
-    <span class="time">00:00:01</span>
-
-	
-  
-
-	</div>
-	
-
-  
-    <div class='context-step'>
-      
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Given that a user needs to invoke 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Create Deck"</span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-    </div>
-  
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        When the user set the request attributes as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Attribute Value In JSON Template</th><th>Attribute Value To Be Set</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>#examDate</td><td>null</td></tr>
-    
-    <tr><td>#isExpert</td><td>false</td></tr>
-    
-    <tr><td>#title</td><td>QE Test</td></tr>
-    
-    <tr><td>#userId</td><td>Osanda</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “examDate”: null,<br/>  “isExpert”: false,<br/>  “title”: “QE Test”,<br/>  “userId”: “Osanda”<br/>}</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        When the user invokes the API using the valid access token
-      </span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is failed</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “message”: “error.validation”,<br/>    “description”: null,<br/>    “fieldErrors”: [<br/>        {<br/>            “objectName”: “createDeckDTO”,<br/>            “field”: “examDate”,<br/>            “message”: “NotNull”<br/>        }<br/>    ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Then the status code for the request is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"400"</span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        And the JSON Path Assertions for the response should be equal to the following 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>JSON Path</th><th>Expected Result</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>$.message</td><td>error.validation</td></tr>
-    
-    <tr><td>$.description</td><td>null</td></tr>
-    
-    <tr><td>$.fieldErrors[0].objectName</td><td>createDeckDTO</td></tr>
-    
-    <tr><td>$.fieldErrors[0].field</td><td>examDate</td></tr>
-    
-    <tr><td>$.fieldErrors[0].message</td><td>NotNull</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-  
-
-	
-	</div>
-
-      
-        
-	
-  <div class='scenario-container passed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Create a Deck using invalid exam date</h3>
-    <span class="time">00:00:00</span>
-
-	
-  
-
-	</div>
-	
-
-  
-    <div class='context-step'>
-      
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Given that a user needs to invoke 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Create Deck"</span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-    </div>
-  
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        When the user set the request attributes as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Attribute Value In JSON Template</th><th>Attribute Value To Be Set</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>#examDate</td><td>nullable</td></tr>
-    
-    <tr><td>#isExpert</td><td>false</td></tr>
-    
-    <tr><td>#title</td><td>QE Test</td></tr>
-    
-    <tr><td>#userId</td><td>Osanda</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “examDate”: “nullable”,<br/>  “isExpert”: false,<br/>  “title”: “QE Test”,<br/>  “userId”: “Osanda”<br/>}</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        When the user invokes the API using the valid access token
-      </span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is failed</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “message”: “error.internalServerError”,<br/>    “description”: “Internal server error”,<br/>    “fieldErrors”: null<br/>}</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        Then the status code for the request is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"500"</span>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-    
-      <span>
-        And the JSON Path Assertions for the response should be equal to the following 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>JSON Path</th><th>Expected Result</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>$.message</td><td>error.internalServerError</td></tr>
-    
-    <tr><td>$.description</td><td>Internal server error</td></tr>
-    
-    <tr><td>$.fieldErrors</td><td>null</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-  
-    
-  
-  
-	
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
   
 
   

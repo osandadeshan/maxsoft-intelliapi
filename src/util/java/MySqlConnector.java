@@ -1,6 +1,7 @@
 import com.mysql.jdbc.CommunicationsException;
 import com.thoughtworks.gauge.Gauge;
 import org.junit.Assert;
+
 import java.sql.*;
 
 
@@ -12,7 +13,7 @@ import java.sql.*;
 public class MySqlConnector extends BaseClass{
     
     static String MYSQL_DRIVER_CLASS = "com.mysql.jdbc.Driver";
-    static  String DATABASE_SERVER_URL = System.getenv("database_server_url");
+    static String DATABASE_SERVER_URL = System.getenv("database_url");
     static String MYSQL_DATABASE_CONNECTION_CLOSE_MESSAGE = "Database connection successfully closed";
     static Connection dbConnection;
     

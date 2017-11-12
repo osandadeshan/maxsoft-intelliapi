@@ -1,8 +1,9 @@
 {
-	"Flags": {
-		"-simple-console": "true"
-	},
-	"FailedItems": [
-		"specs\\database_test.spec:29"
-	]
+	"Args": [
+		"run",
+		"--machine-readable",
+		"--hide-suggestion",
+		"--simple-console"
+	],
+	"FailedItems": []
 }

@@ -30,21 +30,21 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,3,0" data-total="4">
+        <svg id="pie-chart" data-results="5,2,0" data-total="7">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/4</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 5/7</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 3/4</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 2/7</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/4</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/7</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">4</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">7</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">3</span><span class="txt">Passed</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">5</span><span class="txt">Failed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">2</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -57,15 +57,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>75%</span>
+          <span>28%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:20</span>
+          <span>00:00:34</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Aug 28, 2017 at 11:20am</span>
+          <span>Sep 8, 2017 at 11:23am</span>
         </li>
       </ul>
     </div>
@@ -89,20 +89,47 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="get_all_medicines(token_from_text_file).html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Get All Medicines Specification (Access Token obtained from the text file)</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="login.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Login Specification</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="database_test.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Database Validation Specification</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
           <a href="get_all_decks_list.html">
             
               <li class='failed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Get All Decks List Specification</span>
-              <span id="time" class="time">00:00:05</span>
+              <span id="time" class="time">00:00:06</span>
             </li>
           </a>
           
-          <a href="login.html">
-             
-              <li class='passed spec-name'>
+          <a href="get_all_medicines(token_from_datastore).html">
             
-              <span id="scenarioName" class="scenarioname">Login Specification</span>
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Get All Medicines Specification (Access Token obtained from the DataStore for the Specification)</span>
               <span id="time" class="time">00:00:00</span>
             </li>
           </a>
@@ -112,7 +139,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Update A Deck Specification</span>
-              <span id="time" class="time">00:00:03</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -121,7 +148,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Create A Deck Specification</span>
-              <span id="time" class="time">00:00:09</span>
+              <span id="time" class="time">00:00:11</span>
             </li>
           </a>
           
@@ -153,7 +180,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:03</span>
+        <span class="time">00:00:05</span>
       </div>
 
 	
@@ -342,7 +369,7 @@
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Update a Deck using valid parameters</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:02</span>
 
 	
   
@@ -496,7 +523,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -527,7 +554,7 @@
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
         <div class="step-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is failed</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: 1421,<br/>    “title”: “QE Update Test”,<br/>    “isExpert”: false,<br/>    “examDate”: “2017-09-21T15:13:51.000+0000”,<br/>    “userId”: “Osanda”,<br/>    “createdAt”: null,<br/>    “updatedAt”: “2017-08-28T05:51:04.172+0000”<br/>}</p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: 1421,<br/>    “title”: “QE Update Test”,<br/>    “isExpert”: false,<br/>    “examDate”: “2017-09-21T15:13:51.000+0000”,<br/>    “userId”: “Osanda”,<br/>    “createdAt”: null,<br/>    “updatedAt”: “2017-09-08T05:54:23.457+0000”<br/>}</p>
  </div>
       </div>
     </div>

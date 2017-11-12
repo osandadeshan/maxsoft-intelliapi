@@ -1,0 +1,3 @@
+api,creatorId,creatorPlatform,creatoredSource,creatoredType,deckId,kind,learningObjectives,imageUrl,media,prompt,promptType,timeout,rationale,boxId,correctAttempts,inCorrectAttempts,lastAswered,questionId,skips,userId,correctAnswer1,iscorrectAnswer1CaseSensitive,tags
+Create Question,osanda12,Mobile,App,Manual,2,SHORT_ANSWER,objective1,www.maxsoft.com/image1,TEXT,Who is the owner of MaxSoft? _ _ _ _ _ _ _ _,TEXT,60,string,0,1,0,11/7/2017,0,0,0,Osanda Deshan,false,MaxSoft
+Create Question,osanda13,Web,App,Manual,3,SHORT_ANSWER,objective2,www.maxsoft.com/image2,TEXT,Who is the owner of MaxSoft? _ _ _ _ _ _ _ _,TEXT,61,string,0,1,0,11/8/2017,0,0,0,Osanda Deshan,false,MaxSoft

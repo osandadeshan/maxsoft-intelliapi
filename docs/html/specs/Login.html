@@ -1,14 +1,14 @@
 <link rel="stylesheet" type="text/css" href="..\style.css"><h1>Login Specification</h1>
-<p>Created by Osanda on 8/5/2017</p>
-<p>This is an executable specification file which follows markdown syntax.
-Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>Date Created    : 07/13/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: login</p>
+<p>csv: /re</p>
 <h2>Login Scenario</h2>
 <ul>
-<li>
-<p>Given that a user needs to invoke &quot;Login API&quot;</p>
-</li>
-<li>
-<p>When the user set the request attributes as follows</p>
+<li>Given that a user needs to invoke &quot;Login API&quot;</li>
+<li>When the user set the request attributes as follows
 <table>
 <thead>
 <tr>
@@ -28,5 +28,27 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
 </tbody>
 </table>
 </li>
+<li>When the user invokes the API using the above request payload</li>
+<li>Then the status code for the request is &quot;200&quot;</li>
+<li>And the JSON Path Assertions for the response should be equal to the following
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.title</td>
+<td>QE Update Test</td>
+</tr>
+<tr>
+<td>$.isExpert</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
-<ul id="navigation"><center><li class="nav"><a href=".\get_all_medicines.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\new get_all_medicines.html">></a></li></center>
+<ul id="navigation"><center><li class="nav"><a href=".\get_all_medicines(token_from_text_file).html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\update_deck.html">></a></li></center>

@@ -52,20 +52,14 @@ public class Compare {
 						loop = false;
 					}
 				}
-				if(!mismatchedResultsInSpecFile.isEmpty() || !mismatchedResultsInDb.isEmpty()) {
-                    System.out.println("________________________________________________________________________________________");
-                    Gauge.writeMessage("________________________________________________________________________________________");
-                    System.out.println("Mismatched results in the specification file:");
-                    Gauge.writeMessage("Mismatched results in the specification file:");
-                    System.out.println(mismatchedResultsInSpecFile);
-                    Gauge.writeMessage(String.valueOf(mismatchedResultsInSpecFile));
-                    System.out.println("________________________________________________________________________________________");
-                    Gauge.writeMessage("________________________________________________________________________________________");
-                    System.out.println("Mismatched results in the database:");
-                    Gauge.writeMessage("Mismatched results in the database:");
-                    System.out.println(mismatchedResultsInDb);
-                    Gauge.writeMessage(String.valueOf(mismatchedResultsInDb));
-                }
+					System.out.println("\nMismatched results in the specification file:");
+					Gauge.writeMessage("\nMismatched results in the specification file:");
+					System.out.println(mismatchedResultsInSpecFile);
+					Gauge.writeMessage(String.valueOf(mismatchedResultsInSpecFile));
+					System.out.println("\nMismatched results in the database:");
+					Gauge.writeMessage("\nMismatched results in the database:");
+					System.out.println(mismatchedResultsInDb);
+					Gauge.writeMessage(String.valueOf(mismatchedResultsInDb));
 	}
 	
 	

@@ -31577,1831 +31577,1120 @@ java.lang.Thread.run(Thread.java:745)
 16:50:15.267 
 Total time taken: 4.722s
 16:50:15.267 Updates are available. Run gauge --check-updates for more info.
-20:26:04.950 Got a kill message. Killing runner.
-20:26:08.955 Killing runner with PID:3476 forcefully
-21:36:45.536 Got a kill message. Killing runner.
-21:36:49.539 Killing runner with PID:5656 forcefully
-22:13:19.070 Got a kill message. Killing runner.
-22:13:23.215 Killing runner with PID:3628 forcefully
-22:16:41.437 Checking updates...
-22:16:41.441 Failed to download csharp-install.json file: Get https://downloads.getgauge.io/plugin/csharp?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:16:41.444 Failed to download html-report-install.json file: Get https://downloads.getgauge.io/plugin/html-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:16:41.447 Failed to download java-install.json file: Get https://downloads.getgauge.io/plugin/java?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:16:41.450 Failed to download ruby-install.json file: Get https://downloads.getgauge.io/plugin/ruby?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:16:41.454 Failed to download spectacle-install.json file: Get https://downloads.getgauge.io/plugin/spectacle?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:16:41.457 Failed to download xml-report-install.json file: Get https://downloads.getgauge.io/plugin/xml-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:16:50.894 # Database Validation Specification
-22:16:50.897 ## Validate specific users information in the users table
-22:16:50.920 * Given a user successfully loaded the MySQL Driver
-
-22:16:51.886 * When the user connects to the database of "user" using username as "root" and password as "root"
-22:16:52.899 
-Failed Step: When the user connects to the database of "user" using username as "root" and password as "root"
-22:16:52.899 Specification: specs\database_test.spec:18
-22:16:52.899 Error Message: java.lang.AssertionError: MySQL database was not successfully connected due to Access denied for user 'root'@'localhost' (using password: YES)
-22:16:52.899 Stacktrace: 
-org.junit.Assert.fail(Assert.java:88)
-MySqlConnector.connectDatabase(MySqlConnector.java:38)
-DatabaseDataValidation.loadMySqlDatabase(DatabaseDataValidation.java:27)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-22:16:52.899 * Close the database connection
-22:16:52.906 ## Validate all users information in the users table
-22:16:52.908 * Given a user successfully loaded the MySQL Driver
-
-22:16:52.913 * When the user connects to the database of "user" using username as "root" and password as "root"
-22:16:53.271 
-Failed Step: When the user connects to the database of "user" using username as "root" and password as "root"
-22:16:53.271 Specification: specs\database_test.spec:31
-22:16:53.271 Error Message: java.lang.AssertionError: MySQL database was not successfully connected due to Access denied for user 'root'@'localhost' (using password: YES)
-22:16:53.271 Stacktrace: 
-org.junit.Assert.fail(Assert.java:88)
-MySqlConnector.connectDatabase(MySqlConnector.java:38)
-DatabaseDataValidation.loadMySqlDatabase(DatabaseDataValidation.java:27)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-22:16:53.271 * Close the database connection
-22:16:55.386 Plugin [Html Report] with pid [2040] has exited
-22:16:55.686 Specifications:	1 executed	0 passed	1 failed	0 skipped
-22:16:55.686 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-22:16:55.686 
-Total time taken: 2.702s
-22:18:10.718 Checking updates...
-22:18:10.724 Failed to download csharp-install.json file: Get https://downloads.getgauge.io/plugin/csharp?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:18:10.733 Failed to download html-report-install.json file: Get https://downloads.getgauge.io/plugin/html-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:18:10.738 Failed to download java-install.json file: Get https://downloads.getgauge.io/plugin/java?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:18:10.747 Failed to download ruby-install.json file: Get https://downloads.getgauge.io/plugin/ruby?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:18:10.760 Failed to download spectacle-install.json file: Get https://downloads.getgauge.io/plugin/spectacle?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:18:10.797 Failed to download xml-report-install.json file: Get https://downloads.getgauge.io/plugin/xml-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:18:19.709 # Database Validation Specification
-22:18:19.714 ## Validate specific users information in the users table
-22:18:19.719 * Given a user successfully loaded the MySQL Driver
-
-22:18:20.661 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-22:18:21.127 * Then the user executes query of "select * from userinfo"
-22:18:21.243 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Osanda   |Nimalarathna |
-     |Gemunu   |Priyadarshana|
-     |Thilina  |Jayasinghe   |
-22:18:21.781 
-Failed Step: And the results obtained from the database should contain the following
-22:18:21.781 Specification: specs\database_test.spec:20
-22:18:21.781 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-22:18:21.781 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:109)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-22:18:21.781 * Close the database connection
-22:18:21.789 ## Validate all users information in the users table
-22:18:21.790 * Given a user successfully loaded the MySQL Driver
-
-22:18:21.793 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-22:18:21.807 * Then the user executes query of "select * from userinfo"
-22:18:21.848 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Osanda   |Nimalarathna |
-     |Gemunu   |Priyadarshana|
-     |Thilina  |Jayasinghe   |
-22:18:22.105 
-Failed Step: And the results obtained from the database should equal to the following
-22:18:22.105 Specification: specs\database_test.spec:33
-22:18:22.105 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-22:18:22.105 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:71)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-22:18:22.105 * Close the database connection
-22:18:22.214 Plugin [Html Report] with pid [6020] has exited
-22:18:22.514 Specifications:	1 executed	0 passed	1 failed	0 skipped
-22:18:22.514 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-22:18:22.514 
-Total time taken: 2.539s
-22:20:53.777 Checking updates...
-22:20:53.783 Failed to download csharp-install.json file: Get https://downloads.getgauge.io/plugin/csharp?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:20:53.800 Failed to download html-report-install.json file: Get https://downloads.getgauge.io/plugin/html-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:20:53.807 Failed to download java-install.json file: Get https://downloads.getgauge.io/plugin/java?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:20:53.811 Failed to download ruby-install.json file: Get https://downloads.getgauge.io/plugin/ruby?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:20:53.815 Failed to download spectacle-install.json file: Get https://downloads.getgauge.io/plugin/spectacle?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:20:53.819 Failed to download xml-report-install.json file: Get https://downloads.getgauge.io/plugin/xml-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-22:21:03.672 # Database Validation Specification
-22:21:03.676 ## Validate specific users information in the users table
-22:21:03.679 * Given a user successfully loaded the MySQL Driver
-
-22:21:04.559 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-22:21:04.931 * Then the user executes query of "select * from userinfo"
-22:21:04.984 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-22:21:05.500 
-Failed Step: And the results obtained from the database should contain the following
-22:21:05.500 Specification: specs\database_test.spec:20
-22:21:05.500 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-22:21:05.500 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:109)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-22:21:05.500 * Close the database connection
-22:21:05.506 ## Validate all users information in the users table
-22:21:05.508 * Given a user successfully loaded the MySQL Driver
-
-22:21:05.512 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-22:21:05.526 * Then the user executes query of "select * from userinfo"
-22:21:05.573 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-22:21:05.895 
-Failed Step: And the results obtained from the database should equal to the following
-22:21:05.895 Specification: specs\database_test.spec:33
-22:21:05.895 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-22:21:05.895 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:71)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-22:21:05.895 * Close the database connection
-22:21:06.006 Plugin [Html Report] with pid [5636] has exited
-22:21:06.207 Specifications:	1 executed	0 passed	1 failed	0 skipped
-22:21:06.207 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-22:21:06.207 
-Total time taken: 2.374s
-13:27:04.468 Got a kill message. Killing runner.
-13:27:08.938 Killing runner with PID:7196 forcefully
-10:49:52.493 Got a kill message. Killing runner.
-10:49:56.576 Killing runner with PID:396 forcefully
-11:00:37.231 Checking updates...
-11:00:44.665 # Database Validation Specification
-11:00:44.672 ## Validate specific users information in the users table
-11:00:44.677 * Given a user successfully loaded the MySQL Driver
-
-11:00:45.837 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:00:46.277 * Then the user executes query of "select * from userinfo"
-11:00:46.440 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:00:47.062 
-Failed Step: And the results obtained from the database should contain the following
-11:00:47.062 Specification: specs\database_test.spec:20
-11:00:47.062 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:00:47.062 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:124)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:00:47.062 * Close the database connection
-11:00:47.073 ## Validate all users information in the users table
-11:00:47.074 * Given a user successfully loaded the MySQL Driver
-
-11:00:47.078 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:00:47.093 * Then the user executes query of "select * from userinfo"
-11:00:47.134 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:00:47.417 
-Failed Step: And the results obtained from the database should equal to the following
-11:00:47.417 Specification: specs\database_test.spec:33
-11:00:47.417 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:00:47.418 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:86)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:00:47.418 * Close the database connection
-11:00:48.023 Plugin [Html Report] with pid [7972] has exited
-11:00:48.223 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:00:48.223 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:00:48.223 
-Total time taken: 3.134s
-11:00:48.223 Updates are available. Run gauge --check-updates for more info.
-11:03:51.283 Checking updates...
-11:04:00.331 # Database Validation Specification
-11:04:00.334 ## Validate specific users information in the users table
-11:04:00.337 * Given a user successfully loaded the MySQL Driver
-
-11:04:01.305 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:04:01.706 * Then the user executes query of "select * from userinfo"
-11:04:01.773 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:04:02.374 
-Failed Step: And the results obtained from the database should contain the following
-11:04:02.374 Specification: specs\database_test.spec:20
-11:04:02.374 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:04:02.374 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:124)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:04:02.374 * Close the database connection
-11:04:02.380 ## Validate all users information in the users table
-11:04:02.382 * Given a user successfully loaded the MySQL Driver
-
-11:04:02.386 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:04:02.401 * Then the user executes query of "select * from userinfo"
-11:04:02.444 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:04:02.763 
-Failed Step: And the results obtained from the database should equal to the following
-11:04:02.763 Specification: specs\database_test.spec:33
-11:04:02.763 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:04:02.763 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:85)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:04:02.763 * Close the database connection
-11:04:02.875 Plugin [Html Report] with pid [5848] has exited
-11:04:03.076 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:04:03.076 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:04:03.076 
-Total time taken: 2.579s
-11:04:03.076 Updates are available. Run gauge --check-updates for more info.
-11:05:39.743 Checking updates...
-11:05:46.844 # Database Validation Specification
-11:05:46.847 ## Validate specific users information in the users table
-11:05:46.851 * Given a user successfully loaded the MySQL Driver
-
-11:05:47.813 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:05:48.173 * Then the user executes query of "select * from userinfo"
-11:05:48.231 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:05:48.835 
-Failed Step: And the results obtained from the database should contain the following
-11:05:48.835 Specification: specs\database_test.spec:20
-11:05:48.835 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:05:48.835 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:123)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:05:48.835 * Close the database connection
-11:05:48.842 ## Validate all users information in the users table
-11:05:48.845 * Given a user successfully loaded the MySQL Driver
-
-11:05:48.848 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:05:48.864 * Then the user executes query of "select * from userinfo"
-11:05:48.912 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:05:49.205 
-Failed Step: And the results obtained from the database should equal to the following
-11:05:49.205 Specification: specs\database_test.spec:33
-11:05:49.205 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:05:49.205 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:85)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:05:49.205 * Close the database connection
-11:05:49.315 Plugin [Html Report] with pid [4560] has exited
-11:05:49.515 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:05:49.515 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:05:49.515 
-Total time taken: 2.504s
-11:05:49.515 Updates are available. Run gauge --check-updates for more info.
-11:07:05.128 Checking updates...
-11:07:12.593 # Database Validation Specification
-11:07:12.598 ## Validate specific users information in the users table
-11:07:12.602 * Given a user successfully loaded the MySQL Driver
-
-11:07:13.693 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:07:14.054 * Then the user executes query of "select * from userinfo"
-11:07:14.112 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:07:14.614 
-Failed Step: And the results obtained from the database should contain the following
-11:07:14.614 Specification: specs\database_test.spec:20
-11:07:14.614 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:07:14.614 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:120)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:07:14.614 * Close the database connection
-11:07:14.620 ## Validate all users information in the users table
-11:07:14.622 * Given a user successfully loaded the MySQL Driver
-
-11:07:14.626 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:07:14.641 * Then the user executes query of "select * from userinfo"
-11:07:14.682 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:07:14.965 
-Failed Step: And the results obtained from the database should equal to the following
-11:07:14.965 Specification: specs\database_test.spec:33
-11:07:14.965 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:07:14.965 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:82)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:07:14.965 * Close the database connection
-11:07:15.175 Plugin [Html Report] with pid [5820] has exited
-11:07:15.477 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:07:15.477 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:07:15.477 
-Total time taken: 2.525s
-11:07:15.477 Updates are available. Run gauge --check-updates for more info.
-11:09:17.228 Checking updates...
-11:09:24.566 # Database Validation Specification
-11:09:24.569 ## Validate specific users information in the users table
-11:09:24.572 * Given a user successfully loaded the MySQL Driver
-
-11:09:25.499 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:09:25.969 * Then the user executes query of "select * from userinfo"
-11:09:26.032 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:09:26.656 
-Failed Step: And the results obtained from the database should contain the following
-11:09:26.656 Specification: specs\database_test.spec:20
-11:09:26.656 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:09:26.656 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:120)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:09:26.656 * Close the database connection
-11:09:26.662 ## Validate all users information in the users table
-11:09:26.664 * Given a user successfully loaded the MySQL Driver
-
-11:09:26.669 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:09:26.685 * Then the user executes query of "select * from userinfo"
-11:09:26.727 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:09:27.045 
-Failed Step: And the results obtained from the database should equal to the following
-11:09:27.045 Specification: specs\database_test.spec:33
-11:09:27.045 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:09:27.045 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:82)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:09:27.045 * Close the database connection
-11:09:27.158 Plugin [Html Report] with pid [5584] has exited
-11:09:27.358 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:09:27.358 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:09:27.358 
-Total time taken: 2.622s
-11:09:27.358 Updates are available. Run gauge --check-updates for more info.
-11:12:07.506 Checking updates...
-11:12:15.202 # Database Validation Specification
-11:12:15.205 ## Validate specific users information in the users table
-11:12:15.209 * Given a user successfully loaded the MySQL Driver
-
-11:12:16.014 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:12:16.400 * Then the user executes query of "select * from userinfo"
-11:12:16.458 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:12:16.994 
-Failed Step: And the results obtained from the database should contain the following
-11:12:16.994 Specification: specs\database_test.spec:20
-11:12:16.994 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:12:16.994 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:118)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:12:16.994 * Close the database connection
-11:12:17.000 ## Validate all users information in the users table
-11:12:17.002 * Given a user successfully loaded the MySQL Driver
-
-11:12:17.007 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:12:17.027 * Then the user executes query of "select * from userinfo"
-11:12:17.075 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:12:17.343 
-Failed Step: And the results obtained from the database should equal to the following
-11:12:17.343 Specification: specs\database_test.spec:33
-11:12:17.343 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:12:17.343 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:12:17.343 * Close the database connection
-11:12:17.455 Plugin [Html Report] with pid [7660] has exited
-11:12:17.655 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:12:17.655 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:12:17.655 
-Total time taken: 2.288s
-11:12:17.655 Updates are available. Run gauge --check-updates for more info.
-11:17:04.082 Checking updates...
-11:17:11.401 # Database Validation Specification
-11:17:11.405 ## Validate specific users information in the users table
-11:17:11.408 * Given a user successfully loaded the MySQL Driver
-
-11:17:12.292 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:17:12.679 * Then the user executes query of "select * from userinfo"
-11:17:12.737 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:17:13.319 
-Failed Step: And the results obtained from the database should contain the following
-11:17:13.319 Specification: specs\database_test.spec:20
-11:17:13.319 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:17:13.319 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:118)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:17:13.320 * Close the database connection
-11:17:13.329 ## Validate all users information in the users table
-11:17:13.332 * Given a user successfully loaded the MySQL Driver
-
-11:17:13.338 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:17:13.366 * Then the user executes query of "select * from userinfo"
-11:17:13.427 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:17:13.724 
-Failed Step: And the results obtained from the database should equal to the following
-11:17:13.724 Specification: specs\database_test.spec:33
-11:17:13.724 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:17:13.724 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:17:13.724 * Close the database connection
-11:17:13.835 Plugin [Html Report] with pid [7856] has exited
-11:17:14.035 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:17:14.035 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:17:14.035 
-Total time taken: 2.465s
-11:17:14.035 Updates are available. Run gauge --check-updates for more info.
-11:18:10.192 Checking updates...
-11:18:18.386 # Database Validation Specification
-11:18:18.390 ## Validate specific users information in the users table
-11:18:18.394 * Given a user successfully loaded the MySQL Driver
-
-11:18:19.245 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:18:19.601 * Then the user executes query of "select * from userinfo"
-11:18:19.661 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:18:20.288 
-Failed Step: And the results obtained from the database should contain the following
-11:18:20.288 Specification: specs\database_test.spec:20
-11:18:20.288 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:18:20.288 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:118)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:18:20.288 * Close the database connection
-11:18:20.296 ## Validate all users information in the users table
-11:18:20.298 * Given a user successfully loaded the MySQL Driver
-
-11:18:20.302 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:18:20.323 * Then the user executes query of "select * from userinfo"
-11:18:20.389 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:18:20.718 
-Failed Step: And the results obtained from the database should equal to the following
-11:18:20.718 Specification: specs\database_test.spec:33
-11:18:20.718 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:18:20.718 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:18:20.718 * Close the database connection
-11:18:20.867 Plugin [Html Report] with pid [7156] has exited
-11:18:21.167 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:18:21.167 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:18:21.167 
-Total time taken: 2.487s
-11:18:21.167 Updates are available. Run gauge --check-updates for more info.
-11:22:49.665 Checking updates...
-11:22:55.936 # Database Validation Specification
-11:22:55.940 ## Validate specific users information in the users table
-11:22:55.944 * Given a user successfully loaded the MySQL Driver
-
-11:22:56.973 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:22:57.369 * Then the user executes query of "select * from userinfo"
-11:22:57.435 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:22:58.042 
-Failed Step: And the results obtained from the database should contain the following
-11:22:58.042 Specification: specs\database_test.spec:20
-11:22:58.042 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:22:58.042 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:118)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:22:58.042 * Close the database connection
-11:22:58.049 ## Validate all users information in the users table
-11:22:58.050 * Given a user successfully loaded the MySQL Driver
-
-11:22:58.055 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:22:58.072 * Then the user executes query of "select * from userinfo"
-11:22:58.119 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:22:58.410 
-Failed Step: And the results obtained from the database should equal to the following
-11:22:58.410 Specification: specs\database_test.spec:33
-11:22:58.410 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:22:58.410 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:22:58.410 * Close the database connection
-11:22:58.626 Plugin [Html Report] with pid [6672] has exited
-11:22:58.826 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:22:58.826 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:22:58.826 
-Total time taken: 2.628s
-11:22:58.826 Updates are available. Run gauge --check-updates for more info.
-11:25:19.017 Checking updates...
-11:25:26.349 # Database Validation Specification
-11:25:26.352 ## Validate specific users information in the users table
-11:25:26.355 * Given a user successfully loaded the MySQL Driver
-
-11:25:27.385 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:25:27.750 * Then the user executes query of "select * from userinfo"
-11:25:27.807 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:25:28.375 
-Failed Step: And the results obtained from the database should contain the following
-11:25:28.375 Specification: specs\database_test.spec:20
-11:25:28.375 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:25:28.375 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:118)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:25:28.375 * Close the database connection
-11:25:28.381 ## Validate all users information in the users table
-11:25:28.382 * Given a user successfully loaded the MySQL Driver
-
-11:25:28.386 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:25:28.400 * Then the user executes query of "select * from userinfo"
-11:25:28.441 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:25:28.699 
-Failed Step: And the results obtained from the database should equal to the following
-11:25:28.699 Specification: specs\database_test.spec:33
-11:25:28.699 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:25:28.699 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:25:28.700 * Close the database connection
-11:25:28.810 Plugin [Html Report] with pid [5720] has exited
-11:25:29.010 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:25:29.010 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:25:29.010 
-Total time taken: 2.497s
-11:25:29.010 Updates are available. Run gauge --check-updates for more info.
-11:28:24.789 Checking updates...
-11:28:31.490 # Database Validation Specification
-11:28:31.493 ## Validate specific users information in the users table
-11:28:31.496 * Given a user successfully loaded the MySQL Driver
-
-11:28:32.506 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:28:32.838 * Then the user executes query of "select * from userinfo"
-11:28:32.895 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:28:33.473 
-Failed Step: And the results obtained from the database should contain the following
-11:28:33.473 Specification: specs\database_test.spec:20
-11:28:33.473 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:28:33.473 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyResultsAndReturnMismatches(ValidateDatabaseResults.java:118)
-DatabaseDataValidation.verifyResults(DatabaseDataValidation.java:50)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:28:33.473 * Close the database connection
-11:28:33.479 ## Validate all users information in the users table
-11:28:33.481 * Given a user successfully loaded the MySQL Driver
-
-11:28:33.485 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:28:33.500 * Then the user executes query of "select * from userinfo"
-11:28:33.542 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:28:33.844 
-Failed Step: And the results obtained from the database should equal to the following
-11:28:33.844 Specification: specs\database_test.spec:33
-11:28:33.844 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:28:33.844 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:28:33.844 * Close the database connection
-11:28:33.953 Plugin [Html Report] with pid [4620] has exited
-11:28:34.153 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:28:34.153 Scenarios:	2 executed	0 passed	2 failed	0 skipped
-11:28:34.153 
-Total time taken: 2.493s
-11:28:34.153 Updates are available. Run gauge --check-updates for more info.
-11:30:14.787 Checking updates...
-11:30:19.466 Checking updates...
-11:30:26.478 # Database Validation Specification
-11:30:26.482 ## Validate specific users information in the users table
-11:30:26.486 * Given a user successfully loaded the MySQL Driver
-
-11:30:28.163 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:30:28.820 * Then the user executes query of "select * from userinfo"
-11:30:28.972 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:30:29.042 * Close the database connection
-11:30:29.050 ## Validate all users information in the users table
-11:30:29.052 * Given a user successfully loaded the MySQL Driver
-
-11:30:29.060 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:30:29.084 * Then the user executes query of "select * from userinfo"
-11:30:29.161 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:30:29.997 
-Failed Step: And the results obtained from the database should equal to the following
-11:30:29.997 Specification: specs\database_test.spec:33
-11:30:29.997 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:30:29.997 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:30:29.997 * Close the database connection
-11:30:30.215 Plugin [Html Report] with pid [7660] has exited
-11:30:30.516 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:30:30.516 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:30:30.516 
-Total time taken: 3.68s
-11:30:30.516 Updates are available. Run gauge --check-updates for more info.
-11:30:30.790 # Database Validation Specification
-11:30:30.793 ## Validate specific users information in the users table
-11:30:30.796 * Given a user successfully loaded the MySQL Driver
-
-11:30:32.380 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:30:32.720 * Then the user executes query of "select * from userinfo"
-11:30:32.780 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:30:32.813 * Close the database connection
-11:30:32.819 ## Validate all users information in the users table
-11:30:32.820 * Given a user successfully loaded the MySQL Driver
-
-11:30:32.824 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:30:32.838 * Then the user executes query of "select * from userinfo"
-11:30:32.879 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:30:33.479 
-Failed Step: And the results obtained from the database should equal to the following
-11:30:33.479 Specification: specs\database_test.spec:33
-11:30:33.479 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:30:33.479 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:30:33.479 * Close the database connection
-11:30:33.587 Plugin [Html Report] with pid [7272] has exited
-11:30:33.887 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:30:33.887 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:30:33.887 
-Total time taken: 2.79s
-11:30:33.887 Updates are available. Run gauge --check-updates for more info.
-11:34:37.700 Checking updates...
-11:34:44.746 # Database Validation Specification
-11:34:44.749 ## Validate specific users information in the users table
-11:34:44.752 * Given a user successfully loaded the MySQL Driver
-
-11:34:45.561 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:34:45.959 * Then the user executes query of "select * from userinfo"
-11:34:46.018 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:34:46.056 * Close the database connection
-11:34:46.061 ## Validate all users information in the users table
-11:34:46.063 * Given a user successfully loaded the MySQL Driver
-
-11:34:46.066 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:34:46.081 * Then the user executes query of "select * from userinfo"
-11:34:46.122 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:34:46.691 
-Failed Step: And the results obtained from the database should equal to the following
-11:34:46.691 Specification: specs\database_test.spec:33
-11:34:46.691 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:34:46.691 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:34:46.691 * Close the database connection
-11:34:46.802 Plugin [Html Report] with pid [6684] has exited
-11:34:47.002 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:34:47.002 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:34:47.002 
-Total time taken: 2.085s
-11:34:47.002 Updates are available. Run gauge --check-updates for more info.
-11:37:55.638 Checking updates...
-11:38:00.168 # Database Validation Specification
-11:38:00.171 ## Validate specific users information in the users table
-11:38:00.174 * Given a user successfully loaded the MySQL Driver
-
-11:38:01.016 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:38:01.383 * Then the user executes query of "select * from userinfo"
-11:38:01.445 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:38:01.480 * Close the database connection
-11:38:01.485 ## Validate all users information in the users table
-11:38:01.486 * Given a user successfully loaded the MySQL Driver
-
-11:38:01.490 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:38:01.504 * Then the user executes query of "select * from userinfo"
-11:38:01.546 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:38:02.081 
-Failed Step: And the results obtained from the database should equal to the following
-11:38:02.081 Specification: specs\database_test.spec:33
-11:38:02.081 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:38:02.081 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:38:02.081 * Close the database connection
-11:38:02.191 Plugin [Html Report] with pid [6768] has exited
-11:38:02.392 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:38:02.392 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:38:02.392 
-Total time taken: 2.055s
-11:38:02.392 Updates are available. Run gauge --check-updates for more info.
-11:38:28.267 Checking updates...
-11:38:36.074 # Database Validation Specification
-11:38:36.078 ## Validate specific users information in the users table
-11:38:36.082 * Given a user successfully loaded the MySQL Driver
-
-11:38:37.114 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:38:37.421 * Then the user executes query of "select * from userinfo"
-11:38:37.476 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:38:37.509 * Close the database connection
-11:38:37.516 ## Validate all users information in the users table
-11:38:37.517 * Given a user successfully loaded the MySQL Driver
-
-11:38:37.522 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:38:37.540 * Then the user executes query of "select * from userinfo"
-11:38:37.589 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:38:38.147 
-Failed Step: And the results obtained from the database should equal to the following
-11:38:38.147 Specification: specs\database_test.spec:33
-11:38:38.147 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:38:38.147 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:38:38.147 * Close the database connection
-11:38:38.257 Plugin [Html Report] with pid [6928] has exited
-11:38:38.457 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:38:38.457 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:38:38.457 
-Total time taken: 2.227s
-11:38:38.457 Updates are available. Run gauge --check-updates for more info.
-11:40:32.803 Checking updates...
-11:40:40.232 # Database Validation Specification
-11:40:40.236 ## Validate specific users information in the users table
-11:40:40.240 * Given a user successfully loaded the MySQL Driver
-
-11:40:41.205 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:40:41.552 * Then the user executes query of "select * from userinfo"
-11:40:41.610 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:40:41.646 * Close the database connection
-11:40:41.652 ## Validate all users information in the users table
-11:40:41.654 * Given a user successfully loaded the MySQL Driver
-
-11:40:41.657 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:40:41.672 * Then the user executes query of "select * from userinfo"
-11:40:41.711 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:40:42.253 
-Failed Step: And the results obtained from the database should equal to the following
-11:40:42.253 Specification: specs\database_test.spec:33
-11:40:42.253 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:40:42.253 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:40:42.253 * Close the database connection
-11:40:42.364 Plugin [Html Report] with pid [2836] has exited
-11:40:42.564 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:40:42.564 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:40:42.564 
-Total time taken: 2.173s
-11:40:42.564 Updates are available. Run gauge --check-updates for more info.
-11:42:18.457 Checking updates...
-11:42:23.469 # Database Validation Specification
-11:42:23.473 ## Validate specific users information in the users table
-11:42:23.476 * Given a user successfully loaded the MySQL Driver
-
-11:42:24.283 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:42:24.635 * Then the user executes query of "select * from userinfo"
-11:42:24.694 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:42:24.732 * Close the database connection
-11:42:24.738 ## Validate all users information in the users table
-11:42:24.739 * Given a user successfully loaded the MySQL Driver
-
-11:42:24.743 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:42:24.758 * Then the user executes query of "select * from userinfo"
-11:42:24.798 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:42:25.368 
-Failed Step: And the results obtained from the database should equal to the following
-11:42:25.368 Specification: specs\database_test.spec:33
-11:42:25.368 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:42:25.368 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:42:25.368 * Close the database connection
-11:42:25.477 Plugin [Html Report] with pid [5032] has exited
-11:42:25.679 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:42:25.679 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:42:25.679 
-Total time taken: 2.04s
-11:42:56.473 Checking updates...
-11:43:03.312 # Database Validation Specification
-11:43:03.316 ## Validate specific users information in the users table
-11:43:03.319 * Given a user successfully loaded the MySQL Driver
-
-11:43:04.258 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:43:04.605 * Then the user executes query of "select * from userinfo"
-11:43:04.674 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-11:43:04.705 * Close the database connection
-11:43:04.711 ## Validate all users information in the users table
-11:43:04.712 * Given a user successfully loaded the MySQL Driver
-
-11:43:04.716 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-11:43:04.731 * Then the user executes query of "select * from userinfo"
-11:43:04.770 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-11:43:05.319 
-Failed Step: And the results obtained from the database should equal to the following
-11:43:05.320 Specification: specs\database_test.spec:33
-11:43:05.320 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-11:43:05.320 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:55)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-11:43:05.320 * Close the database connection
-11:43:05.429 Plugin [Html Report] with pid [7728] has exited
-11:43:05.629 Specifications:	1 executed	0 passed	1 failed	0 skipped
-11:43:05.629 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-11:43:05.629 
-Total time taken: 2.149s
-11:43:05.629 Updates are available. Run gauge --check-updates for more info.
-15:32:19.433 Got a kill message. Killing runner.
-15:32:23.582 Killing runner with PID:5148 forcefully
-15:58:34.358 Checking updates...
-15:58:34.397 Failed to download csharp-install.json file: Get https://downloads.getgauge.io/plugin/csharp?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-15:58:34.428 Failed to download html-report-install.json file: Get https://downloads.getgauge.io/plugin/html-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-15:58:34.432 Failed to download java-install.json file: Get https://downloads.getgauge.io/plugin/java?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-15:58:34.435 Failed to download ruby-install.json file: Get https://downloads.getgauge.io/plugin/ruby?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-15:58:34.439 Failed to download spectacle-install.json file: Get https://downloads.getgauge.io/plugin/spectacle?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-15:58:34.444 Failed to download xml-report-install.json file: Get https://downloads.getgauge.io/plugin/xml-report?l=java&p=csharp,html-report,java,ruby,spectacle,xml-report&o=windows&a=amd64: dial tcp: lookup downloads.getgauge.io: getaddrinfow: No such host is known.
-15:58:44.250 # Database Validation Specification
-15:58:44.253 ## Validate specific users information in the users table
-15:58:44.278 * Given a user successfully loaded the MySQL Driver
-
-15:58:45.147 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-15:58:45.677 * Then the user executes query of "select * from userinfo"
-15:58:45.791 * And the results obtained from the database should contain the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Eranga   |Nimalarathna |
-15:58:45.825 * Close the database connection
-15:58:45.831 ## Validate all users information in the users table
-15:58:45.833 * Given a user successfully loaded the MySQL Driver
-
-15:58:45.837 * When the user connects to the database of "user" using username as "root" and password as "osanda92"
-15:58:45.852 * Then the user executes query of "select * from userinfo"
-15:58:45.895 * And the results obtained from the database should equal to the following 
-
-     |FirstName|LastName     |
-     |---------|-------------|
-     |Gemunu   |Priyadarshana|
-     |Osanda   |Nimalarathna |
-     |Thilina  |Jayasinghe   |
-15:58:46.514 
-Failed Step: And the results obtained from the database should equal to the following
-15:58:46.514 Specification: specs\database_test.spec:33
-15:58:46.514 Error Message: java.lang.AssertionError: Results obtained from the database for the executed query and the expected results are different.
- expected [true] but found [false]
-15:58:46.514 Stacktrace: 
-org.testng.Assert.fail(Assert.java:94)
-org.testng.Assert.failNotEquals(Assert.java:494)
-org.testng.Assert.assertTrue(Assert.java:42)
-ValidateDatabaseResults.verifyAllResultsAtOnce(ValidateDatabaseResults.java:80)
-DatabaseDataValidation.verifyAllResults(DatabaseDataValidation.java:49)
-AllStepsDefinitions.verifyAllResults(AllStepsDefinitions.java:144)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)
-com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)
-com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)
-com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)
-com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)
-com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)
-com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)
-com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)
-com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)
-com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)
-com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)
-java.lang.Thread.run(Thread.java:745)
-15:58:46.514 * Close the database connection
-15:58:46.722 Plugin [Html Report] with pid [4824] has exited
-15:58:46.922 Specifications:	1 executed	0 passed	1 failed	0 skipped
-15:58:46.922 Scenarios:	2 executed	1 passed	1 failed	0 skipped
-15:58:46.922 
-Total time taken: 2.585s
+14:48:22.666 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+12:47:59.964 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+12:46:43.592 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:45:10.847 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:45:12.729 Checking updates...
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:19 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:34 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:49 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:64 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:81 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:98 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:115 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_purchased_decks_list.spec:150 Step implementation not found => 'When the user invokes the API using the access token "" and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:19 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:36 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:51 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:66 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:83 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.767 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:100 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:117 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_all_decks_list.spec:152 Step implementation not found => 'When the user invokes the API using the access token "" and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:19 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:36 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:51 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:66 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:83 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:100 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:117 Step implementation not found => 'When the user invokes the API using the access token <file: /resources/access_tokens/valid_token.txt> and the following query parameters <table>'
+13:45:24.770 [ValidationError] C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\specs\get_created_decks_list.spec:152 Step implementation not found => 'When the user invokes the API using the access token "" and the following query parameters <table>'
+13:45:37.422 Plugin [Html Report] with pid [6136] has exited
+13:45:37.624 Specifications:	4 executed	4 passed	0 failed	0 skipped
+13:45:37.625 Scenarios:	8 executed	8 passed	0 failed	24 skipped
+13:45:37.625 
+Total time taken: 12.438s
+13:55:53.588 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:55:55.667 Checking updates...
+13:56:48.177 Plugin [Html Report] with pid [8468] has exited
+13:56:48.378 Specifications:	4 executed	1 passed	3 failed	0 skipped
+13:56:48.379 Scenarios:	32 executed	29 passed	3 failed	0 skipped
+13:56:48.379 
+Total time taken: 35.611s
+22:34:54.602 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+22:34:55.608 Unable to send analytics data, timed out
+15:41:54.139 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:46:30.760 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:46:32.548 Checking updates...
+15:47:30.860 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:47:31.886 Unable to send analytics data, timed out
+15:47:32.887 Unable to send analytics data, timed out
+15:47:34.655 Checking updates...
+15:47:53.334 Plugin [Html Report] with pid [6044] has exited
+15:47:53.553 Specifications:	1 executed	1 passed	0 failed	0 skipped
+15:47:53.553 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+15:47:53.553 
+Total time taken: 7.704s
+14:26:20.342 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:26:21.344 Unable to send analytics data, timed out
+13:58:15.300 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:58:16.318 Unable to send analytics data, timed out
+13:58:17.329 Unable to send analytics data, timed out
+13:58:19.028 Checking updates...
+13:58:36.604 Plugin [Html Report] with pid [7720] has exited
+13:58:36.849 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:58:36.849 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:58:36.849 
+Total time taken: 3.822s
+14:00:24.007 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:00:25.010 Unable to send analytics data, timed out
+14:00:26.022 Unable to send analytics data, timed out
+14:00:27.938 Checking updates...
+14:00:42.962 Plugin [Html Report] with pid [3336] has exited
+14:00:43.279 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:00:43.279 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:00:43.279 
+Total time taken: 3.382s
+14:01:54.176 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:01:55.195 Unable to send analytics data, timed out
+14:01:56.198 Unable to send analytics data, timed out
+14:01:57.589 Checking updates...
+14:02:33.174 Plugin [Html Report] with pid [2084] has exited
+14:02:33.390 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:02:33.390 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:02:33.390 
+Total time taken: 21.258s
+14:04:12.584 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:04:13.619 Unable to send analytics data, timed out
+14:04:14.632 Unable to send analytics data, timed out
+14:04:16.053 Checking updates...
+14:04:30.435 Plugin [Html Report] with pid [11032] has exited
+14:04:30.767 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:04:30.767 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:04:30.767 
+Total time taken: 3.442s
+14:06:42.539 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:06:43.557 Unable to send analytics data, timed out
+14:06:44.572 Unable to send analytics data, timed out
+14:06:46.302 Checking updates...
+14:07:04.973 Plugin [Html Report] with pid [1288] has exited
+14:07:05.182 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:07:05.182 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:07:05.182 
+Total time taken: 6.632s
+14:11:50.455 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:11:51.484 Unable to send analytics data, timed out
+14:11:52.492 Unable to send analytics data, timed out
+14:11:54.479 Checking updates...
+14:12:13.034 Plugin [Html Report] with pid [9220] has exited
+14:12:13.234 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:12:13.234 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:12:13.234 
+Total time taken: 7.121s
+14:37:37.396 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:37:38.424 Unable to send analytics data, timed out
+14:37:39.427 Unable to send analytics data, timed out
+14:37:41.215 Checking updates...
+14:38:00.579 Plugin [Html Report] with pid [10148] has exited
+14:38:00.784 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:38:00.784 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:38:00.784 
+Total time taken: 7.126s
+14:47:35.865 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:47:36.871 Unable to send analytics data, timed out
+14:47:37.915 Unable to send analytics data, timed out
+14:47:39.629 Checking updates...
+14:47:53.642 Plugin [Html Report] with pid [4564] has exited
+14:47:53.842 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:47:53.842 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:47:53.842 
+Total time taken: 3.091s
+14:50:12.097 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:50:13.102 Unable to send analytics data, timed out
+14:50:15.345 Checking updates...
+14:50:31.231 Plugin [Html Report] with pid [11000] has exited
+14:50:31.432 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:50:31.432 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:50:31.433 
+Total time taken: 3.395s
+14:53:43.547 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:53:44.573 Unable to send analytics data, timed out
+14:53:45.584 Unable to send analytics data, timed out
+14:53:47.983 Checking updates...
+14:54:06.357 Plugin [Html Report] with pid [5620] has exited
+14:54:06.558 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:54:06.558 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:54:06.558 
+Total time taken: 7.065s
+14:57:56.417 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:57:57.430 Unable to send analytics data, timed out
+14:57:58.448 Unable to send analytics data, timed out
+14:58:00.177 Checking updates...
+14:58:16.641 Plugin [Html Report] with pid [6200] has exited
+14:58:16.843 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:58:16.843 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:58:16.844 
+Total time taken: 3.864s
+15:10:55.565 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:10:56.572 Unable to send analytics data, timed out
+15:10:57.587 Unable to send analytics data, timed out
+15:10:59.660 Checking updates...
+15:11:15.786 Plugin [Html Report] with pid [7940] has exited
+15:11:15.989 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:11:15.989 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:11:15.991 
+Total time taken: 3.977s
+18:25:58.597 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+18:25:59.602 Unable to send analytics data, timed out
+18:26:00.602 Unable to send analytics data, timed out
+18:26:02.381 Checking updates...
+18:26:18.593 Plugin [Html Report] with pid [8084] has exited
+18:26:18.793 Specifications:	1 executed	0 passed	1 failed	0 skipped
+18:26:18.793 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+18:26:18.794 
+Total time taken: 5.873s
+18:27:36.972 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+18:27:37.999 Unable to send analytics data, timed out
+18:27:40.227 Checking updates...
+18:27:54.810 Plugin [Html Report] with pid [10036] has exited
+18:27:55.035 Specifications:	1 executed	0 passed	1 failed	0 skipped
+18:27:55.035 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+18:27:55.035 
+Total time taken: 5.523s
+08:43:28.277 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+08:43:29.263 Unable to send analytics data, timed out
+08:43:30.294 Unable to send analytics data, timed out
+08:43:32.065 Checking updates...
+08:43:46.924 Plugin [Html Report] with pid [8016] has exited
+08:43:47.160 Specifications:	1 executed	0 passed	1 failed	0 skipped
+08:43:47.160 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+08:43:47.160 
+Total time taken: 4.878s
+09:22:51.645 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+09:22:52.647 Unable to send analytics data, timed out
+09:22:53.678 Unable to send analytics data, timed out
+09:22:55.474 Checking updates...
+09:23:10.658 Plugin [Html Report] with pid [3040] has exited
+09:23:10.862 Specifications:	1 executed	0 passed	1 failed	0 skipped
+09:23:10.862 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+09:23:10.862 
+Total time taken: 6.206s
+09:24:54.332 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+09:24:55.334 Unable to send analytics data, timed out
+16:03:32.518 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:21:15.406 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:21:16.415 Unable to send analytics data, timed out
+16:21:17.415 Unable to send analytics data, timed out
+16:21:19.239 Checking updates...
+16:21:40.219 Plugin [Html Report] with pid [4888] has exited
+16:21:40.654 Specifications:	1 executed	0 passed	1 failed	0 skipped
+16:21:40.654 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+16:21:40.654 
+Total time taken: 6.127s
+16:34:27.698 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:34:28.708 Unable to send analytics data, timed out
+16:34:29.716 Unable to send analytics data, timed out
+16:34:31.371 Checking updates...
+16:34:43.695 Plugin [Html Report] with pid [4352] has exited
+16:34:43.895 Specifications:	1 executed	0 passed	1 failed	0 skipped
+16:34:43.895 Scenarios:	2 executed	0 passed	2 failed	0 skipped
+16:34:43.895 
+Total time taken: 2.656s
+16:39:50.043 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:39:51.051 Unable to send analytics data, timed out
+16:39:52.053 Unable to send analytics data, timed out
+16:39:53.898 Checking updates...
+16:40:05.005 Plugin [Html Report] with pid [7252] has exited
+16:40:05.206 Specifications:	1 executed	0 passed	1 failed	0 skipped
+16:40:05.206 Scenarios:	2 executed	0 passed	2 failed	0 skipped
+16:40:05.206 
+Total time taken: 2.453s
+16:43:12.763 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:43:13.769 Unable to send analytics data, timed out
+16:43:14.769 Unable to send analytics data, timed out
+16:43:16.456 Checking updates...
+16:43:30.648 Plugin [Html Report] with pid [9088] has exited
+16:43:30.964 Specifications:	1 executed	0 passed	1 failed	0 skipped
+16:43:30.964 Scenarios:	2 executed	1 passed	1 failed	0 skipped
+16:43:30.964 
+Total time taken: 6.652s
+16:44:24.344 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:44:25.351 Unable to send analytics data, timed out
+16:44:27.156 Checking updates...
+16:44:42.609 Plugin [Html Report] with pid [6632] has exited
+16:44:42.818 Specifications:	1 executed	0 passed	1 failed	0 skipped
+16:44:42.818 Scenarios:	2 executed	1 passed	1 failed	0 skipped
+16:44:42.818 
+Total time taken: 6.427s
+16:47:00.373 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:47:01.380 Unable to send analytics data, timed out
+16:47:03.189 Checking updates...
+16:47:19.002 Plugin [Html Report] with pid [2112] has exited
+16:47:19.466 Specifications:	1 executed	0 passed	1 failed	0 skipped
+16:47:19.467 Scenarios:	2 executed	1 passed	1 failed	0 skipped
+16:47:19.467 
+Total time taken: 6.793s
+17:03:33.241 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:03:34.254 Unable to send analytics data, timed out
+17:03:35.254 Unable to send analytics data, timed out
+17:03:36.912 Checking updates...
+17:03:51.904 Plugin [Html Report] with pid [6640] has exited
+17:03:52.105 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:03:52.105 Scenarios:	2 executed	1 passed	1 failed	0 skipped
+17:03:52.105 
+Total time taken: 6.847s
+17:06:59.991 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:07:01.001 Unable to send analytics data, timed out
+17:07:03.129 Checking updates...
+17:07:17.782 Plugin [Html Report] with pid [2028] has exited
+17:07:17.983 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:07:17.983 Scenarios:	2 executed	1 passed	1 failed	0 skipped
+17:07:17.983 
+Total time taken: 6.826s
+17:09:59.371 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:10:00.381 Unable to send analytics data, timed out
+17:10:01.381 Unable to send analytics data, timed out
+17:10:02.858 Checking updates...
+17:10:17.580 Plugin [Html Report] with pid [3048] has exited
+17:10:17.780 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:10:17.780 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+17:10:17.780 
+Total time taken: 6.692s
+17:10:43.547 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:10:44.552 Unable to send analytics data, timed out
+17:10:46.398 Checking updates...
+17:11:00.785 Plugin [Html Report] with pid [6640] has exited
+17:11:00.989 Specifications:	1 executed	1 passed	0 failed	0 skipped
+17:11:00.989 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+17:11:00.989 
+Total time taken: 6.175s
+17:11:46.714 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:11:47.718 Unable to send analytics data, timed out
+17:11:49.506 Checking updates...
+17:12:03.519 Plugin [Html Report] with pid [7924] has exited
+17:12:03.719 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:12:03.719 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+17:12:03.719 
+Total time taken: 5.156s
+17:16:19.937 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:16:20.942 Unable to send analytics data, timed out
+17:16:21.942 Unable to send analytics data, timed out
+17:16:23.609 Checking updates...
+17:16:38.731 Plugin [Html Report] with pid [9044] has exited
+17:16:38.931 Specifications:	1 executed	1 passed	0 failed	0 skipped
+17:16:38.931 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+17:16:38.931 
+Total time taken: 6.422s
+17:16:49.499 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:16:50.503 Unable to send analytics data, timed out
+17:16:52.238 Checking updates...
+17:17:05.280 Plugin [Html Report] with pid [5248] has exited
+17:17:05.480 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:17:05.480 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+17:17:05.480 
+Total time taken: 4.799s
+17:18:05.166 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:18:06.172 Unable to send analytics data, timed out
+17:18:08.415 Checking updates...
+17:18:22.665 Plugin [Html Report] with pid [3012] has exited
+17:18:22.866 Specifications:	1 executed	1 passed	0 failed	0 skipped
+17:18:22.866 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+17:18:22.866 
+Total time taken: 6.552s
+17:20:39.778 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:20:40.784 Unable to send analytics data, timed out
+17:20:41.786 Unable to send analytics data, timed out
+17:20:43.280 Checking updates...
+17:20:58.474 Plugin [Html Report] with pid [8428] has exited
+17:20:58.774 Specifications:	1 executed	1 passed	0 failed	0 skipped
+17:20:58.774 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+17:20:58.774 
+Total time taken: 6.648s
+17:21:50.823 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:21:51.828 Unable to send analytics data, timed out
+17:21:53.640 Checking updates...
+17:22:06.441 Plugin [Html Report] with pid [1540] has exited
+17:22:06.642 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:22:06.642 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+17:22:06.642 
+Total time taken: 4.648s
+17:23:57.204 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:23:58.209 Unable to send analytics data, timed out
+17:23:59.211 Unable to send analytics data, timed out
+17:24:00.911 Checking updates...
+17:24:22.489 Plugin [Html Report] with pid [1152] has exited
+17:24:22.690 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:24:22.690 Scenarios:	9 executed	2 passed	7 failed	0 skipped
+17:24:22.690 
+Total time taken: 12.927s
+11:53:36.690 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:53:37.696 Unable to send analytics data, timed out
+12:23:54.150 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+12:23:55.167 Unable to send analytics data, timed out
+12:23:56.169 Unable to send analytics data, timed out
+12:23:58.160 Checking updates...
+12:24:15.968 Plugin [Html Report] with pid [8620] has exited
+12:24:16.173 Specifications:	1 executed	1 passed	0 failed	0 skipped
+12:24:16.173 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+12:24:16.173 
+Total time taken: 7.808s
+12:29:29.532 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+12:29:30.536 Unable to send analytics data, timed out
+12:29:31.538 Unable to send analytics data, timed out
+12:29:33.956 Checking updates...
+12:29:47.539 Plugin [Html Report] with pid [7892] has exited
+12:29:47.744 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:29:47.744 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:29:47.744 
+Total time taken: 5.223s
+13:25:24.559 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:25:25.563 Unable to send analytics data, timed out
+13:25:26.572 Unable to send analytics data, timed out
+13:25:28.321 Checking updates...
+13:25:42.962 Plugin [Html Report] with pid [8692] has exited
+13:25:43.266 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:25:43.266 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:25:43.266 
+Total time taken: 6.03s
+14:16:41.454 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:16:42.460 Unable to send analytics data, timed out
+14:16:43.460 Unable to send analytics data, timed out
+14:16:45.141 Checking updates...
+14:17:05.757 Plugin [Html Report] with pid [8716] has exited
+14:17:05.974 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:17:05.974 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:17:05.977 
+Total time taken: 7.12s
+14:19:19.730 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:19:20.738 Unable to send analytics data, timed out
+14:19:21.738 Unable to send analytics data, timed out
+14:19:23.401 Checking updates...
+14:19:41.737 Plugin [Html Report] with pid [10096] has exited
+14:19:42.055 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:19:42.055 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:19:42.055 
+Total time taken: 6.693s
+14:23:48.984 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:23:49.990 Unable to send analytics data, timed out
+14:23:50.990 Unable to send analytics data, timed out
+14:23:52.932 Checking updates...
+14:24:16.379 Plugin [Html Report] with pid [7480] has exited
+14:24:16.580 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:24:16.580 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:24:16.583 
+Total time taken: 5.294s
+14:26:06.584 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:26:07.589 Unable to send analytics data, timed out
+14:26:08.595 Unable to send analytics data, timed out
+14:26:10.749 Checking updates...
+14:26:24.330 Plugin [Html Report] with pid [9420] has exited
+14:26:24.532 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:26:24.532 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:26:24.532 
+Total time taken: 4.925s
+14:27:03.335 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:27:04.340 Unable to send analytics data, timed out
+14:27:06.302 Checking updates...
+14:27:23.149 Plugin [Html Report] with pid [10136] has exited
+14:27:23.352 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:27:23.352 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:27:23.352 
+Total time taken: 8.13s
+14:27:43.788 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:27:44.793 Unable to send analytics data, timed out
+14:27:46.900 Checking updates...
+14:28:01.014 Plugin [Html Report] with pid [6348] has exited
+14:28:01.215 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:28:01.215 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:28:01.215 
+Total time taken: 6.194s
+14:28:51.037 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:28:52.042 Unable to send analytics data, timed out
+14:28:53.042 Unable to send analytics data, timed out
+14:29:09.053 Plugin [Html Report] with pid [10232] has exited
+14:29:09.255 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:29:09.255 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:29:09.255 
+Total time taken: 5.19s
+14:29:41.092 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:29:42.097 Unable to send analytics data, timed out
+14:29:43.099 Unable to send analytics data, timed out
+14:29:59.682 Plugin [Html Report] with pid [7860] has exited
+14:29:59.883 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:29:59.883 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:29:59.883 
+Total time taken: 5.498s
+14:30:18.808 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:30:19.814 Unable to send analytics data, timed out
+14:30:20.814 Unable to send analytics data, timed out
+14:30:22.636 Checking updates...
+14:30:36.412 Plugin [Html Report] with pid [5104] has exited
+14:30:36.639 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:30:36.639 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:30:36.639 
+Total time taken: 4.592s
+14:31:18.109 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:31:19.114 Unable to send analytics data, timed out
+14:31:20.115 Unable to send analytics data, timed out
+14:31:22.589 Checking updates...
+14:31:35.230 Plugin [Html Report] with pid [6052] has exited
+14:31:35.431 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:31:35.431 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:31:35.431 
+Total time taken: 4.928s
+14:33:36.792 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:33:37.796 Unable to send analytics data, timed out
+14:33:40.188 Checking updates...
+14:33:53.188 Plugin [Html Report] with pid [9664] has exited
+14:33:53.388 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:33:53.388 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:33:53.388 
+Total time taken: 5.23s
+14:34:08.557 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:34:09.562 Unable to send analytics data, timed out
+14:34:12.156 Checking updates...
+14:34:24.726 Plugin [Html Report] with pid [9904] has exited
+14:34:24.926 Specifications:	1 executed	0 passed	1 failed	0 skipped
+14:34:24.926 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+14:34:24.926 
+Total time taken: 5.066s
+14:34:48.799 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:34:49.804 Unable to send analytics data, timed out
+14:34:52.500 Checking updates...
+14:35:07.406 Plugin [Html Report] with pid [9708] has exited
+14:35:07.606 Specifications:	1 executed	1 passed	0 failed	0 skipped
+14:35:07.606 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+14:35:07.606 
+Total time taken: 7.468s
+14:51:50.177 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:51:51.181 Unable to send analytics data, timed out
+14:51:52.181 Unable to send analytics data, timed out
+14:51:54.626 Checking updates...
+14:52:08.730 Plugin [Html Report] with pid [9544] has exited
+14:52:08.932 Specifications:	1 executed	1 passed	0 failed	0 skipped
+14:52:08.932 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+14:52:08.932 
+Total time taken: 5.158s
+14:56:10.305 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:56:11.309 Unable to send analytics data, timed out
+14:56:13.659 Checking updates...
+14:56:36.474 Plugin [Html Report] with pid [7956] has exited
+14:56:36.674 Specifications:	1 executed	1 passed	0 failed	0 skipped
+14:56:36.674 Scenarios:	4 executed	4 passed	0 failed	0 skipped
+14:56:36.674 
+Total time taken: 14.69s
+15:47:46.340 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:47:47.346 Unable to send analytics data, timed out
+15:47:48.346 Unable to send analytics data, timed out
+15:47:50.200 Checking updates...
+15:48:13.542 Plugin [Html Report] with pid [8884] has exited
+15:48:13.845 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:48:13.845 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:48:13.845 
+Total time taken: 6.753s
+15:48:34.531 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:48:35.540 Unable to send analytics data, timed out
+15:48:37.319 Checking updates...
+15:48:58.210 Plugin [Html Report] with pid [2672] has exited
+15:48:58.545 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:48:58.545 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:48:58.545 
+Total time taken: 7.272s
+21:43:40.717 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:43:41.722 Unable to send analytics data, timed out
+21:43:42.726 Unable to send analytics data, timed out
+21:43:44.715 Checking updates...
+21:44:01.314 Plugin [Html Report] with pid [10684] has exited
+21:44:01.514 Specifications:	1 executed	0 passed	1 failed	0 skipped
+21:44:01.514 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+21:44:01.514 
+Total time taken: 7.02s
+09:30:32.852 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+09:30:33.852 Unable to send analytics data, timed out
+09:33:01.633 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+09:33:02.640 Unable to send analytics data, timed out
+09:33:03.640 Unable to send analytics data, timed out
+09:33:05.247 Checking updates...
+09:33:22.984 Accessing an invalid parameter (creatorId)
+goroutine 1 [running]:
+runtime/debug.Stack(0xc04246ce68, 0x9a57c0, 0xc0421445c0)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/debug/stack.go:24 +0xae
+github.com/getgauge/gauge/execution.recoverPanic()
+	src/github.com/getgauge/gauge/execution/execute.go:130 +0x5e
+panic(0x9a57c0, 0xc0421445c0)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/panic.go:491 +0x291
+github.com/getgauge/gauge/gauge.(*ArgLookup).GetArg(0xc0420e1760, 0xc04214ff01, 0x9, 0xc0422e2400)
+	src/github.com/getgauge/gauge/gauge/arg.go:68 +0x179
+github.com/getgauge/gauge/parser.(*ParamResolver).createProtoStepTable(0xc04246d198, 0xc042470180, 0xc0420e1760, 0xe14430)
+	src/github.com/getgauge/gauge/parser/resolver.go:104 +0x2d4
+github.com/getgauge/gauge/parser.(*ParamResolver).GetResolvedParams(0xc04246d198, 0xc04246e000, 0x0, 0xc0420e1760, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/parser/resolver.go:79 +0x345
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoStepItem(0xc0421329c0, 0xc04246e000, 0x7e29c7)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:188 +0x85
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoItem(0xc0421329c0, 0xdaa780, 0xc04246e000, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:154 +0x11b
+github.com/getgauge/gauge/execution.(*specExecutor).resolveItems(0xc0421329c0, 0xc04215cc00, 0x5, 0x8, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:140 +0xfc
+github.com/getgauge/gauge/execution.(*specExecutor).addAllItemsForScenarioExecution(0xc0421329c0, 0xc042314000, 0xc042156238)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:317 +0x29e
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenario(0xc0421329c0, 0xc042314000, 0x8f1c7e)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:305 +0x148
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenarios(0xc0421329c0, 0xc04214c1e8, 0x1, 0x1, 0xc04227e200, 0x0, 0xc04204e1c0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:292 +0xb1
+github.com/getgauge/gauge/execution.(*specExecutor).execute(0xc0421329c0, 0x10101, 0xc0421f04b0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:103 +0x496
+github.com/getgauge/gauge/execution.(*simpleExecution).executeSpecs(0xc0423dccb0, 0xc042143b90, 0xbe786a02837cc3a8, 0x4c2dd90c0, 0xdf62c0)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:129 +0x1a8
+github.com/getgauge/gauge/execution.(*simpleExecution).execute(0xc0423dccb0)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:91 +0x123
+github.com/getgauge/gauge/execution.(*simpleExecution).run(0xc0423dccb0, 0xdaa440)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:70 +0x40
+github.com/getgauge/gauge/execution.ExecuteSpecs(0xc0420398c0, 0x1, 0x4, 0x0)
+	src/github.com/getgauge/gauge/execution/execute.go:125 +0x927
+github.com/getgauge/gauge/cmd.execute(0xc0420398c0, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:108 +0x159
+github.com/getgauge/gauge/cmd.glob..func11(0xdecf80, 0xc0420398c0, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:50 +0x9e
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).execute(0xdecf80, 0xc042039880, 0x4, 0x4, 0xdecf80, 0xc042039880)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:651 +0x244
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xdebc60, 0xc0421c1040, 0x0, 0xc04206dde8)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:726 +0x305
+github.com/getgauge/gauge/cmd.Parse(0xa95cae, 0xa, 0x0)
+	src/github.com/getgauge/gauge/cmd/cmd.go:107 +0x93
+main.main()
+	src/github.com/getgauge/gauge/gauge.go:87 +0x6a
+09:36:51.389 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+09:36:52.394 Unable to send analytics data, timed out
+09:36:53.394 Unable to send analytics data, timed out
+09:36:54.772 Checking updates...
+09:37:10.365 Accessing an invalid parameter (creatorId)
+goroutine 1 [running]:
+runtime/debug.Stack(0xc042244e68, 0x9a57c0, 0xc04211e510)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/debug/stack.go:24 +0xae
+github.com/getgauge/gauge/execution.recoverPanic()
+	src/github.com/getgauge/gauge/execution/execute.go:130 +0x5e
+panic(0x9a57c0, 0xc04211e510)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/panic.go:491 +0x291
+github.com/getgauge/gauge/gauge.(*ArgLookup).GetArg(0xc04213c3a0, 0xc042364481, 0x9, 0xc042422400)
+	src/github.com/getgauge/gauge/gauge/arg.go:68 +0x179
+github.com/getgauge/gauge/parser.(*ParamResolver).createProtoStepTable(0xc042245198, 0xc042456180, 0xc04213c3a0, 0xe14430)
+	src/github.com/getgauge/gauge/parser/resolver.go:104 +0x2d4
+github.com/getgauge/gauge/parser.(*ParamResolver).GetResolvedParams(0xc042245198, 0xc042454000, 0x0, 0xc04213c3a0, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/parser/resolver.go:79 +0x345
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoStepItem(0xc0421b5020, 0xc042454000, 0x7e29c7)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:188 +0x85
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoItem(0xc0421b5020, 0xdaa780, 0xc042454000, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:154 +0x11b
+github.com/getgauge/gauge/execution.(*specExecutor).resolveItems(0xc0421b5020, 0xc04214ae80, 0x5, 0x8, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:140 +0xfc
+github.com/getgauge/gauge/execution.(*specExecutor).addAllItemsForScenarioExecution(0xc0421b5020, 0xc0420782c0, 0xc04212c248)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:317 +0x29e
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenario(0xc0421b5020, 0xc0420782c0, 0x8f1c7e)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:305 +0x148
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenarios(0xc0421b5020, 0xc042136198, 0x1, 0x1, 0xc0423b8200, 0x0, 0xc04213e340)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:292 +0xb1
+github.com/getgauge/gauge/execution.(*specExecutor).execute(0xc0421b5020, 0x10101, 0xc0422beea0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:103 +0x496
+github.com/getgauge/gauge/execution.(*simpleExecution).executeSpecs(0xc0421df650, 0xc04217eab0, 0xbe786a3b60eabf44, 0x43bcb2c00, 0xdf62c0)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:129 +0x1a8
+github.com/getgauge/gauge/execution.(*simpleExecution).execute(0xc0421df650)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:91 +0x123
+github.com/getgauge/gauge/execution.(*simpleExecution).run(0xc0421df650, 0xdaa440)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:70 +0x40
+github.com/getgauge/gauge/execution.ExecuteSpecs(0xc04213fd00, 0x1, 0x4, 0x0)
+	src/github.com/getgauge/gauge/execution/execute.go:125 +0x927
+github.com/getgauge/gauge/cmd.execute(0xc04213fd00, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:108 +0x159
+github.com/getgauge/gauge/cmd.glob..func11(0xdecf80, 0xc04213fd00, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:50 +0x9e
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).execute(0xdecf80, 0xc04213fcc0, 0x4, 0x4, 0xdecf80, 0xc04213fcc0)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:651 +0x244
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xdebc60, 0xc0421ab2c0, 0x0, 0xc042061de8)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:726 +0x305
+github.com/getgauge/gauge/cmd.Parse(0xa95cae, 0xa, 0x0)
+	src/github.com/getgauge/gauge/cmd/cmd.go:107 +0x93
+main.main()
+	src/github.com/getgauge/gauge/gauge.go:87 +0x6a
+09:38:22.896 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+09:38:23.901 Unable to send analytics data, timed out
+09:38:25.840 Checking updates...
+09:38:39.675 Accessing an invalid parameter (creatorId)
+goroutine 1 [running]:
+runtime/debug.Stack(0xc042034e68, 0x9a57c0, 0xc04226a330)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/debug/stack.go:24 +0xae
+github.com/getgauge/gauge/execution.recoverPanic()
+	src/github.com/getgauge/gauge/execution/execute.go:130 +0x5e
+panic(0x9a57c0, 0xc04226a330)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/panic.go:491 +0x291
+github.com/getgauge/gauge/gauge.(*ArgLookup).GetArg(0xc04212d1c0, 0xc042316981, 0x9, 0xc042438400)
+	src/github.com/getgauge/gauge/gauge/arg.go:68 +0x179
+github.com/getgauge/gauge/parser.(*ParamResolver).createProtoStepTable(0xc042035198, 0xc0423f69d0, 0xc04212d1c0, 0xe14430)
+	src/github.com/getgauge/gauge/parser/resolver.go:104 +0x2d4
+github.com/getgauge/gauge/parser.(*ParamResolver).GetResolvedParams(0xc042035198, 0xc0423ae870, 0x0, 0xc04212d1c0, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/parser/resolver.go:79 +0x345
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoStepItem(0xc04203c960, 0xc0423ae870, 0x7e29c7)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:188 +0x85
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoItem(0xc04203c960, 0xdaa780, 0xc0423ae870, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:154 +0x11b
+github.com/getgauge/gauge/execution.(*specExecutor).resolveItems(0xc04203c960, 0xc042150a00, 0x5, 0x8, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:140 +0xfc
+github.com/getgauge/gauge/execution.(*specExecutor).addAllItemsForScenarioExecution(0xc04203c960, 0xc0421c3290, 0xc042128288)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:317 +0x29e
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenario(0xc04203c960, 0xc0421c3290, 0x8f1c7e)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:305 +0x148
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenarios(0xc04203c960, 0xc042156538, 0x1, 0x1, 0xc0423f6200, 0x0, 0xc042038440)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:292 +0xb1
+github.com/getgauge/gauge/execution.(*specExecutor).execute(0xc04203c960, 0x10101, 0xc04222e030)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:103 +0x496
+github.com/getgauge/gauge/execution.(*simpleExecution).executeSpecs(0xc042374070, 0xc0423ca000, 0xbe786a51d63f2314, 0x3d72cdca8, 0xdf62c0)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:129 +0x1a8
+github.com/getgauge/gauge/execution.(*simpleExecution).execute(0xc042374070)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:91 +0x123
+github.com/getgauge/gauge/execution.(*simpleExecution).run(0xc042374070, 0xdaa440)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:70 +0x40
+github.com/getgauge/gauge/execution.ExecuteSpecs(0xc042120d00, 0x1, 0x4, 0x0)
+	src/github.com/getgauge/gauge/execution/execute.go:125 +0x927
+github.com/getgauge/gauge/cmd.execute(0xc042120d00, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:108 +0x159
+github.com/getgauge/gauge/cmd.glob..func11(0xdecf80, 0xc042120d00, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:50 +0x9e
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).execute(0xdecf80, 0xc042120cc0, 0x4, 0x4, 0xdecf80, 0xc042120cc0)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:651 +0x244
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xdebc60, 0xc0421ba9a0, 0x0, 0xc042061de8)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:726 +0x305
+github.com/getgauge/gauge/cmd.Parse(0xa95cae, 0xa, 0x0)
+	src/github.com/getgauge/gauge/cmd/cmd.go:107 +0x93
+main.main()
+	src/github.com/getgauge/gauge/gauge.go:87 +0x6a
+11:55:03.733 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:55:04.743 Unable to send analytics data, timed out
+11:55:05.743 Unable to send analytics data, timed out
+11:55:07.368 Checking updates...
+11:55:22.310 Accessing an invalid parameter (creatorId)
+goroutine 1 [running]:
+runtime/debug.Stack(0xc042030e68, 0x9a57c0, 0xc04212a8e0)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/debug/stack.go:24 +0xae
+github.com/getgauge/gauge/execution.recoverPanic()
+	src/github.com/getgauge/gauge/execution/execute.go:130 +0x5e
+panic(0x9a57c0, 0xc04212a8e0)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/panic.go:491 +0x291
+github.com/getgauge/gauge/gauge.(*ArgLookup).GetArg(0xc042252fe0, 0xc04232c5e1, 0x9, 0xc04209c400)
+	src/github.com/getgauge/gauge/gauge/arg.go:68 +0x179
+github.com/getgauge/gauge/parser.(*ParamResolver).createProtoStepTable(0xc042031198, 0xc042416490, 0xc042252fe0, 0xe14430)
+	src/github.com/getgauge/gauge/parser/resolver.go:104 +0x2d4
+github.com/getgauge/gauge/parser.(*ParamResolver).GetResolvedParams(0xc042031198, 0xc0420df3b0, 0x0, 0xc042252fe0, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/parser/resolver.go:79 +0x345
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoStepItem(0xc042200900, 0xc0420df3b0, 0x7e29c7)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:188 +0x85
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoItem(0xc042200900, 0xdaa780, 0xc0420df3b0, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:154 +0x11b
+github.com/getgauge/gauge/execution.(*specExecutor).resolveItems(0xc042200900, 0xc0421f8800, 0x5, 0x8, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:140 +0xfc
+github.com/getgauge/gauge/execution.(*specExecutor).addAllItemsForScenarioExecution(0xc042200900, 0xc04218b340, 0xc042004358)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:317 +0x29e
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenario(0xc042200900, 0xc04218b340, 0x8f1c7e)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:305 +0x148
+github.com/getgauge/gauge/execution.(*specExecutor).executeScenarios(0xc042200900, 0xc042132390, 0x1, 0x1, 0xc0425de500, 0x0, 0xc0420386c0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:292 +0xb1
+github.com/getgauge/gauge/execution.(*specExecutor).execute(0xc042200900, 0x10101, 0xc0422c0030)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:103 +0x496
+github.com/getgauge/gauge/execution.(*simpleExecution).executeSpecs(0xc0425de070, 0xc04214c360, 0xbe78725478cc161c, 0x44034634c, 0xdf62c0)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:129 +0x1a8
+github.com/getgauge/gauge/execution.(*simpleExecution).execute(0xc0425de070)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:91 +0x123
+github.com/getgauge/gauge/execution.(*simpleExecution).run(0xc0425de070, 0xdaa440)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:70 +0x40
+github.com/getgauge/gauge/execution.ExecuteSpecs(0xc04212db80, 0x1, 0x4, 0x0)
+	src/github.com/getgauge/gauge/execution/execute.go:125 +0x927
+github.com/getgauge/gauge/cmd.execute(0xc04212db80, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:108 +0x159
+github.com/getgauge/gauge/cmd.glob..func11(0xdecf80, 0xc04212db80, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:50 +0x9e
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).execute(0xdecf80, 0xc04212db40, 0x4, 0x4, 0xdecf80, 0xc04212db40)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:651 +0x244
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xdebc60, 0xc042183220, 0x0, 0xc04205bde8)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:726 +0x305
+github.com/getgauge/gauge/cmd.Parse(0xa95cae, 0xa, 0x0)
+	src/github.com/getgauge/gauge/cmd/cmd.go:107 +0x93
+main.main()
+	src/github.com/getgauge/gauge/gauge.go:87 +0x6a
+12:27:31.128 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+12:27:32.132 Unable to send analytics data, timed out
+12:27:33.138 Unable to send analytics data, timed out
+12:27:34.904 Checking updates...
+12:27:49.484 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+12:27:50.488 Unable to send analytics data, timed out
+12:27:52.116 Checking updates...
+12:28:14.552 Plugin [Html Report] with pid [12176] has exited
+12:28:14.752 Specifications:	1 executed	0 passed	1 failed	0 skipped
+12:28:14.752 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+12:28:14.752 
+Total time taken: 6.464s
+13:15:00.357 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:15:01.363 Unable to send analytics data, timed out
+13:15:02.363 Unable to send analytics data, timed out
+13:15:03.948 Checking updates...
+13:15:20.976 Plugin [Html Report] with pid [11688] has exited
+13:15:21.176 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:15:21.176 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:15:21.176 
+Total time taken: 5.317s
+13:16:38.596 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:16:39.603 Unable to send analytics data, timed out
+13:16:41.240 Checking updates...
+13:16:55.385 Plugin [Html Report] with pid [11900] has exited
+13:16:55.685 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:16:55.685 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:16:55.685 
+Total time taken: 5.153s
+13:19:22.695 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:19:23.699 Unable to send analytics data, timed out
+13:19:24.718 Unable to send analytics data, timed out
+13:19:26.424 Checking updates...
+13:19:41.370 Plugin [Html Report] with pid [12096] has exited
+13:19:41.571 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:19:41.571 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:19:41.571 
+Total time taken: 5.591s
+13:22:15.131 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:22:16.138 Unable to send analytics data, timed out
+13:22:17.138 Unable to send analytics data, timed out
+13:22:18.589 Checking updates...
+13:22:34.249 Plugin [Html Report] with pid [3884] has exited
+13:22:34.450 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:22:34.450 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:22:34.450 
+Total time taken: 5.905s
+13:24:22.393 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:24:23.397 Unable to send analytics data, timed out
+13:24:24.432 Unable to send analytics data, timed out
+13:24:29.896 Checking updates...
+13:24:41.476 Plugin [Html Report] with pid [1276] has exited
+13:24:41.676 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:24:41.676 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:24:41.676 
+Total time taken: 5.722s
+13:27:33.039 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:27:34.045 Unable to send analytics data, timed out
+13:27:35.862 Checking updates...
+13:27:49.834 Plugin [Html Report] with pid [2044] has exited
+13:27:50.038 Specifications:	1 executed	0 passed	1 failed	0 skipped
+13:27:50.038 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+13:27:50.038 
+Total time taken: 5.355s
+13:33:14.291 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+13:33:15.295 Unable to send analytics data, timed out
+13:33:16.295 Unable to send analytics data, timed out
+13:33:17.931 Checking updates...
+13:33:32.518 Plugin [Html Report] with pid [7032] has exited
+13:33:32.718 Specifications:	1 executed	1 passed	0 failed	0 skipped
+13:33:32.718 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+13:33:32.718 
+Total time taken: 5.635s
+16:18:23.382 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:18:24.387 Unable to send analytics data, timed out
+16:18:25.387 Unable to send analytics data, timed out
+16:18:27.311 Checking updates...
+16:18:39.425 Accessing an invalid parameter (creatorId)
+goroutine 1 [running]:
+runtime/debug.Stack(0xc04257d018, 0x9a57c0, 0xc0421363e0)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/debug/stack.go:24 +0xae
+github.com/getgauge/gauge/execution.recoverPanic()
+	src/github.com/getgauge/gauge/execution/execute.go:130 +0x5e
+panic(0x9a57c0, 0xc0421363e0)
+	/usr/local/Cellar/go/1.9/libexec/src/runtime/panic.go:491 +0x291
+github.com/getgauge/gauge/gauge.(*ArgLookup).GetArg(0xc04234a360, 0xc04216dec1, 0x9, 0xc04234aea0)
+	src/github.com/getgauge/gauge/gauge/arg.go:68 +0x179
+github.com/getgauge/gauge/parser.(*ParamResolver).createProtoStepTable(0xc04257d348, 0xc042366c00, 0xc04234a360, 0xe14430)
+	src/github.com/getgauge/gauge/parser/resolver.go:104 +0x2d4
+github.com/getgauge/gauge/parser.(*ParamResolver).GetResolvedParams(0xc04257d348, 0xc0421ebb30, 0x0, 0xc04234a360, 0x0, 0x0, 0x0)
+	src/github.com/getgauge/gauge/parser/resolver.go:79 +0x345
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoStepItem(0xc04203c960, 0xc0421ebb30, 0x7e29c7)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:188 +0x85
+github.com/getgauge/gauge/execution.(*specExecutor).resolveToProtoItem(0xc04203c960, 0xdaa780, 0xc0421ebb30, 0xc042138ec0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:154 +0x11b
+github.com/getgauge/gauge/execution.(*specExecutor).resolveItems(0xc04203c960, 0xc042268000, 0x11, 0x20, 0x40000000000, 0x8, 0x10)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:140 +0xfc
+github.com/getgauge/gauge/execution.(*specExecutor).execute(0xc04203c960, 0x10101, 0xc04218d5c0)
+	src/github.com/getgauge/gauge/execution/specExecutor.go:86 +0xd6
+github.com/getgauge/gauge/execution.(*simpleExecution).executeSpecs(0xc042396070, 0xc04218da40, 0xbe7881c1cb620574, 0x3af5b6870, 0xdf62c0)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:129 +0x1a8
+github.com/getgauge/gauge/execution.(*simpleExecution).execute(0xc042396070)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:91 +0x123
+github.com/getgauge/gauge/execution.(*simpleExecution).run(0xc042396070, 0xdaa440)
+	src/github.com/getgauge/gauge/execution/simpleExecution.go:70 +0x40
+github.com/getgauge/gauge/execution.ExecuteSpecs(0xc042139100, 0x1, 0x4, 0x0)
+	src/github.com/getgauge/gauge/execution/execute.go:125 +0x927
+github.com/getgauge/gauge/cmd.execute(0xc042139100, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:108 +0x159
+github.com/getgauge/gauge/cmd.glob..func11(0xdecf80, 0xc042139100, 0x1, 0x4)
+	src/github.com/getgauge/gauge/cmd/run.go:50 +0x9e
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).execute(0xdecf80, 0xc0421390c0, 0x4, 0x4, 0xdecf80, 0xc0421390c0)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:651 +0x244
+github.com/getgauge/gauge/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xdebc60, 0xc0421b8b40, 0x0, 0xc04206dde8)
+	src/github.com/getgauge/gauge/vendor/github.com/spf13/cobra/command.go:726 +0x305
+github.com/getgauge/gauge/cmd.Parse(0xa95cae, 0xa, 0x0)
+	src/github.com/getgauge/gauge/cmd/cmd.go:107 +0x93
+main.main()
+	src/github.com/getgauge/gauge/gauge.go:87 +0x6a
+16:23:25.298 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:23:26.304 Unable to send analytics data, timed out
+16:23:27.304 Unable to send analytics data, timed out
+16:23:29.277 Checking updates...
+16:23:47.878 Plugin [Html Report] with pid [10236] has exited
+16:23:48.078 Specifications:	1 executed	1 passed	0 failed	0 skipped
+16:23:48.078 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+16:23:48.078 
+Total time taken: 7.847s
+16:27:07.626 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+16:27:08.633 Unable to send analytics data, timed out
+16:27:09.634 Unable to send analytics data, timed out
+16:27:11.138 Checking updates...
+16:27:30.322 Plugin [Html Report] with pid [7608] has exited
+16:27:30.522 Specifications:	1 executed	1 passed	0 failed	0 skipped
+16:27:30.522 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+16:27:30.522 
+Total time taken: 7.886s
+17:21:39.962 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+17:21:40.967 Unable to send analytics data, timed out
+17:21:41.967 Unable to send analytics data, timed out
+17:21:43.861 Checking updates...
+17:22:02.968 Plugin [Html Report] with pid [8652] has exited
+17:22:03.168 Specifications:	1 executed	0 passed	1 failed	0 skipped
+17:22:03.168 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+17:22:03.168 
+Total time taken: 8.047s
+21:12:09.559 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:12:10.566 Unable to send analytics data, timed out
+21:12:11.566 Unable to send analytics data, timed out
+21:12:13.689 Checking updates...
+21:12:32.526 Plugin [Html Report] with pid [11564] has exited
+21:12:32.726 Specifications:	1 executed	1 passed	0 failed	0 skipped
+21:12:32.726 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+21:12:32.726 
+Total time taken: 7.452s
+21:14:05.918 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:14:06.925 Unable to send analytics data, timed out
+21:14:07.925 Unable to send analytics data, timed out
+21:14:10.418 Checking updates...
+21:14:30.686 Plugin [Html Report] with pid [8272] has exited
+21:14:30.888 Specifications:	1 executed	1 passed	0 failed	0 skipped
+21:14:30.888 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+21:14:30.888 
+Total time taken: 8.583s
+22:04:17.372 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+22:04:18.379 Unable to send analytics data, timed out
+22:04:19.379 Unable to send analytics data, timed out
+22:04:21.246 Checking updates...
+22:04:43.646 Plugin [Html Report] with pid [8468] has exited
+22:04:43.849 Specifications:	1 executed	1 passed	0 failed	0 skipped
+22:04:43.850 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+22:04:43.850 
+Total time taken: 9.523s
+22:05:28.214 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+22:05:29.218 Unable to send analytics data, timed out
+22:05:30.218 Unable to send analytics data, timed out
+22:05:32.010 Checking updates...
+22:05:48.234 Plugin [Html Report] with pid [8864] has exited
+22:05:48.435 Specifications:	1 executed	0 passed	1 failed	0 skipped
+22:05:48.435 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+22:05:48.435 
+Total time taken: 5.272s
+22:08:36.519 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+22:08:37.523 Unable to send analytics data, timed out
+22:08:38.523 Unable to send analytics data, timed out
+22:08:40.494 Checking updates...
+22:08:55.660 Plugin [Html Report] with pid [3020] has exited
+22:08:55.865 Specifications:	1 executed	0 passed	1 failed	0 skipped
+22:08:55.865 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+22:08:55.865 
+Total time taken: 6.077s
+09:17:45.179 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+09:38:43.556 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+10:50:28.231 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+10:50:29.237 Unable to send analytics data, timed out
+10:50:30.237 Unable to send analytics data, timed out
+10:50:31.949 Checking updates...
+10:50:59.053 Plugin [Html Report] with pid [4700] has exited
+10:50:59.359 Specifications:	1 executed	0 passed	1 failed	0 skipped
+10:50:59.359 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+10:50:59.360 
+Total time taken: 8.59s
+10:51:44.075 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+10:51:45.080 Unable to send analytics data, timed out
+10:51:46.080 Unable to send analytics data, timed out
+10:51:49.145 Checking updates...
+10:52:08.296 Plugin [Html Report] with pid [8444] has exited
+10:52:08.499 Specifications:	1 executed	0 passed	1 failed	0 skipped
+10:52:08.499 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+10:52:08.507 
+Total time taken: 6.788s
+11:15:09.045 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:15:10.052 Unable to send analytics data, timed out
+11:15:11.052 Unable to send analytics data, timed out
+11:15:13.228 Checking updates...
+11:15:33.419 Plugin [Html Report] with pid [7772] has exited
+11:15:33.630 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:15:33.630 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:15:33.631 
+Total time taken: 5.826s
+11:24:22.983 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:24:23.987 Unable to send analytics data, timed out
+11:24:24.988 Unable to send analytics data, timed out
+11:24:26.984 Checking updates...
+11:24:41.972 Plugin [Html Report] with pid [10012] has exited
+11:24:42.172 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:24:42.172 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:24:42.172 
+Total time taken: 5.863s
+11:27:30.884 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:27:31.888 Unable to send analytics data, timed out
+11:27:32.888 Unable to send analytics data, timed out
+11:27:34.699 Checking updates...
+11:28:20.906 Plugin [Html Report] with pid [7636] has exited
+11:28:21.133 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:28:21.133 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:28:21.133 
+Total time taken: 31.099s
+11:28:50.783 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:28:51.788 Unable to send analytics data, timed out
+11:28:52.808 Unable to send analytics data, timed out
+11:28:54.565 Checking updates...
+11:34:40.380 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:34:41.395 Unable to send analytics data, timed out
+11:34:42.395 Unable to send analytics data, timed out
+11:34:44.779 Checking updates...
+11:35:01.164 Plugin [Html Report] with pid [9864] has exited
+11:35:01.374 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:35:01.374 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:35:01.374 
+Total time taken: 6.449s
+11:36:27.072 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:36:28.079 Unable to send analytics data, timed out
+11:36:29.079 Unable to send analytics data, timed out
+11:36:30.850 Checking updates...
+11:36:44.126 Plugin [Html Report] with pid [4008] has exited
+11:36:44.327 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:36:44.327 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:36:44.327 
+Total time taken: 3.249s
+11:38:17.627 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:38:18.634 Unable to send analytics data, timed out
+11:38:19.634 Unable to send analytics data, timed out
+11:38:22.063 Checking updates...
+11:38:37.554 Plugin [Html Report] with pid [9116] has exited
+11:38:37.755 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:38:37.755 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:38:37.755 
+Total time taken: 6.157s
+11:39:59.556 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:40:00.563 Unable to send analytics data, timed out
+11:40:01.573 Unable to send analytics data, timed out
+11:40:03.112 Checking updates...
+11:40:21.002 Plugin [Html Report] with pid [10228] has exited
+11:40:21.203 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:40:21.203 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:40:21.203 
+Total time taken: 6.664s
+11:43:04.633 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+11:43:05.640 Unable to send analytics data, timed out
+11:43:06.641 Unable to send analytics data, timed out
+11:43:08.814 Checking updates...
+11:43:26.430 Plugin [Html Report] with pid [9772] has exited
+11:43:26.632 Specifications:	1 executed	0 passed	1 failed	0 skipped
+11:43:26.632 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+11:43:26.632 
+Total time taken: 6.055s
+14:41:23.486 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:41:24.494 Unable to send analytics data, timed out
+14:41:25.494 Unable to send analytics data, timed out
+14:41:27.507 Checking updates...
+14:41:49.943 Plugin [Html Report] with pid [12224] has exited
+14:41:50.251 Specifications:	1 executed	1 passed	0 failed	0 skipped
+14:41:50.252 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+14:41:50.253 
+Total time taken: 9.094s
+14:53:15.729 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:53:16.736 Unable to send analytics data, timed out
+14:53:17.736 Unable to send analytics data, timed out
+14:53:20.697 Checking updates...
+14:53:37.848 Plugin [Html Report] with pid [7476] has exited
+14:53:38.055 Specifications:	1 executed	1 passed	0 failed	0 skipped
+14:53:38.055 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+14:53:38.055 
+Total time taken: 8.328s
+15:00:01.922 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:00:02.930 Unable to send analytics data, timed out
+15:00:03.930 Unable to send analytics data, timed out
+15:00:05.673 Checking updates...
+15:00:25.366 Plugin [Html Report] with pid [10012] has exited
+15:00:25.668 Specifications:	1 executed	1 passed	0 failed	0 skipped
+15:00:25.668 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+15:00:25.668 
+Total time taken: 8.975s
+15:06:40.050 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:06:41.054 Unable to send analytics data, timed out
+15:06:42.054 Unable to send analytics data, timed out
+15:06:44.553 Checking updates...
+15:07:00.928 Plugin [Html Report] with pid [10268] has exited
+15:07:01.236 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:07:01.236 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:07:01.236 
+Total time taken: 6.723s
+15:46:33.650 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:46:35.786 Checking updates...
+15:46:54.798 Plugin [Html Report] with pid [19228] has exited
+15:46:55.002 Specifications:	1 executed	1 passed	0 failed	0 skipped
+15:46:55.002 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+15:46:55.002 
+Total time taken: 6.94s
+15:47:15.885 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:47:18.042 Checking updates...
+15:47:53.234 Plugin [Html Report] with pid [24928] has exited
+15:47:53.442 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:47:53.442 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:47:53.443 
+Total time taken: 25.21s
+15:50:04.076 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:50:05.125 Unable to send analytics data, timed out
+15:50:06.128 Unable to send analytics data, timed out
+15:50:08.437 Checking updates...
+15:50:29.232 Plugin [Html Report] with pid [24584] has exited
+15:50:29.433 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:50:29.434 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:50:29.435 
+Total time taken: 7.685s
+15:51:40.802 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:51:41.804 Unable to send analytics data, timed out
+15:51:42.802 Unable to send analytics data, timed out
+15:51:44.580 Checking updates...
+15:52:04.320 Plugin [Html Report] with pid [23996] has exited
+15:52:04.520 Specifications:	1 executed	1 passed	0 failed	0 skipped
+15:52:04.520 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+15:52:04.521 
+Total time taken: 7.964s
+15:52:22.558 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+15:52:23.559 Unable to send analytics data, timed out
+15:52:25.392 Checking updates...
+15:52:43.017 Plugin [Html Report] with pid [25644] has exited
+15:52:43.218 Specifications:	1 executed	0 passed	1 failed	0 skipped
+15:52:43.218 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+15:52:43.219 
+Total time taken: 7.345s
+18:22:00.510 Unable to send analytics data, timed out
+21:46:07.810 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:46:08.829 Unable to send analytics data, timed out
+21:48:35.382 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:48:36.388 Unable to send analytics data, timed out
+21:53:09.827 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:53:10.835 Unable to send analytics data, timed out
+21:56:26.969 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:56:27.974 Unable to send analytics data, timed out
+21:56:28.974 Unable to send analytics data, timed out
+21:56:31.902 Checking updates...
+21:56:51.723 Plugin [Html Report] with pid [31128] has exited
+21:56:51.937 Specifications:	1 executed	1 passed	0 failed	0 skipped
+21:56:51.937 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+21:56:51.937 
+Total time taken: 10.589s
