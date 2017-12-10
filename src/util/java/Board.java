@@ -15,7 +15,7 @@ public class Board {
 
     private Block initialBlock;
 
-    private List<CharsUsedForTable> charsInTableBoarders;
+    private List<TableChars> charsInTableBoarders;
 
     private String preview;
 
@@ -25,7 +25,7 @@ public class Board {
 
     public Board(int boardWidth) {
         this.boardWidth = boardWidth;
-        this.charsInTableBoarders = new ArrayList<CharsUsedForTable>();
+        this.charsInTableBoarders = new ArrayList<TableChars>();
         this.preview = "";
         this.showBlockIndex = false;
         Block.nextIndex = 0;
@@ -138,7 +138,7 @@ public class Board {
 
             int maxY = -1;
             int maxX = -1;
-            for (CharsUsedForTable charsInTableBoarder : charsInTableBoarders) {
+            for (TableChars charsInTableBoarder : charsInTableBoarders) {
                 int testY = charsInTableBoarder.getY();
                 int testX = charsInTableBoarder.getX();
                 if (maxY < testY) {
@@ -149,22 +149,22 @@ public class Board {
                 }
             }
             String[][] dataPoints = new String[maxY + 1][boardWidth];
-            for (CharsUsedForTable charsUsedForTable : charsInTableBoarders) {
-                String currentValue = dataPoints[charsUsedForTable.getY()][charsUsedForTable.getX()];
-                String newValue = String.valueOf(charsUsedForTable.getC());
+            for (TableChars tableChars : charsInTableBoarders) {
+                String currentValue = dataPoints[tableChars.getY()][tableChars.getX()];
+                String newValue = String.valueOf(tableChars.getC());
                 if (currentValue == null || !currentValue.equals("+")) {
-                    dataPoints[charsUsedForTable.getY()][charsUsedForTable.getX()] = newValue;
+                    dataPoints[tableChars.getY()][tableChars.getX()] = newValue;
                 }
             }
 
             for (String[] dataPoint : dataPoints) {
                 for (String point : dataPoint) {
                     if (point == null) {
-                        point = String.valueOf(CharsUsedForTable.S);
+                        point = String.valueOf(TableChars.S);
                     }
                     preview = preview.concat(point);
                 }
-                preview = preview.concat(String.valueOf(CharsUsedForTable.NL));
+                preview = preview.concat(String.valueOf(TableChars.NL));
             }
         }
 
@@ -178,7 +178,7 @@ public class Board {
 
     public Board invalidate() {
         invalidateBlock(initialBlock);
-        charsInTableBoarders = new ArrayList<CharsUsedForTable>();
+        charsInTableBoarders = new ArrayList<TableChars>();
         preview = "";
         return this;
     }

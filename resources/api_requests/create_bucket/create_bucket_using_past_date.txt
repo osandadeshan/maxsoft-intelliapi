@@ -1,5 +1,0 @@
-{
-  "title": "Test",
-  "description": "Test",
-  "goalDate": "2017-07-26"
-}

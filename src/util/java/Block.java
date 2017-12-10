@@ -60,7 +60,7 @@ public final class Block {
 
     private Block belowBlock;
 
-    private List<CharsUsedForTable> charrsList;
+    private List<TableChars> charrsList;
 
     private String preview;
 
@@ -80,7 +80,7 @@ public final class Block {
         this.y = 0;
         this.rightBlock = null;
         this.belowBlock = null;
-        this.charrsList = new ArrayList<CharsUsedForTable>();
+        this.charrsList = new ArrayList<TableChars>();
         this.preview = "";
         this.index = nextIndex;
         Block.nextIndex++;
@@ -222,7 +222,7 @@ public final class Block {
     }
 
     protected Block invalidate() {
-        charrsList = new ArrayList<CharsUsedForTable>();
+        charrsList = new ArrayList<TableChars>();
         preview = "";
         return this;
     }
@@ -273,7 +273,7 @@ public final class Block {
                     if (i + 1 != dataInLines.size()) {
                         String prifix = dataLine.substring(getWidth(), dataLine.length());
                         String suffix = dataInLines.get(i + 1);
-                        String combinedValue = prifix.concat((suffix.length() > 0 ? String.valueOf(CharsUsedForTable.S) : "")).concat(suffix);
+                        String combinedValue = prifix.concat((suffix.length() > 0 ? String.valueOf(TableChars.S) : "")).concat(suffix);
                         dataInLines.set(i + 1, combinedValue);
                     }
                 }
@@ -307,15 +307,15 @@ public final class Block {
                     if (isGridAllowed()) {
                         if ((iy == startingIY) || (iy == extendedIY - 1)) {
                             if ((ix == startingIX) || (ix == extendedIX - 1)) {
-                                charrsList.add(new CharsUsedForTable(ix, iy, CharsUsedForTable.P));
+                                charrsList.add(new TableChars(ix, iy, TableChars.P));
                                 writeData = false;
                             } else {
-                                charrsList.add(new CharsUsedForTable(ix, iy, CharsUsedForTable.D));
+                                charrsList.add(new TableChars(ix, iy, TableChars.D));
                                 writeData = false;
                             }
                         } else {
                             if ((ix == startingIX) || (ix == extendedIX - 1)) {
-                                charrsList.add(new CharsUsedForTable(ix, iy, CharsUsedForTable.VL));
+                                charrsList.add(new TableChars(ix, iy, TableChars.VL));
                                 writeData = false;
                             } else {
                                 writeData = true;
@@ -340,7 +340,7 @@ public final class Block {
                             int dataEndingIndex = (startingIX + dataLeftSideSpaces + lineData.length() - (isGridAllowed() ? 0 : 1));
                             if (ix >= dataStartingIndex && ix <= dataEndingIndex) {
                                 char charData = lineData.charAt(ix - dataStartingIndex);
-                                charrsList.add(new CharsUsedForTable(ix, iy, charData));
+                                charrsList.add(new TableChars(ix, iy, charData));
                             }
                         }
                     }
@@ -351,7 +351,7 @@ public final class Block {
         return this;
     }
 
-    protected List<CharsUsedForTable> getChars() {
+    protected List<TableChars> getChars() {
         return this.charrsList;
     }
 
@@ -360,7 +360,7 @@ public final class Block {
         if (preview.isEmpty()) {
             int maxY = -1;
             int maxX = -1;
-            for (CharsUsedForTable charsInTableBoarder : charrsList) {
+            for (TableChars charsInTableBoarder : charrsList) {
                 int testY = charsInTableBoarder.getY();
                 int testX = charsInTableBoarder.getX();
                 if (maxY < testY) {
@@ -371,18 +371,18 @@ public final class Block {
                 }
             }
             String[][] dataPoints = new String[maxY + 1][board.boardWidth];
-            for (CharsUsedForTable charsInTableBoarder : charrsList) {
+            for (TableChars charsInTableBoarder : charrsList) {
                 dataPoints[charsInTableBoarder.getY()][charsInTableBoarder.getX()] = String.valueOf(charsInTableBoarder.getC());
             }
 
             for (String[] dataPoint : dataPoints) {
                 for (String point : dataPoint) {
                     if (point == null) {
-                        point = String.valueOf(CharsUsedForTable.S);
+                        point = String.valueOf(TableChars.S);
                     }
                     preview = preview.concat(point);
                 }
-                preview = preview.concat(String.valueOf(CharsUsedForTable.NL));
+                preview = preview.concat(String.valueOf(TableChars.NL));
             }
         }
         return preview;

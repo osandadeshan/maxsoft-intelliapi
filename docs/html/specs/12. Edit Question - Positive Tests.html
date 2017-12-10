@@ -1,0 +1,191 @@
+<link rel="stylesheet" type="text/css" href="..\style.css"><h1>Edit Question - Positive Test Specification</h1>
+<p>Date Created    : 11/15/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: edit_question, edit_question-positive_tests, positive</p>
+<ul>
+<li>Given that a user needs to invoke &quot;Edit Question&quot;</li>
+</ul>
+<h2>Edit a question using an valid creatorId</h2>
+<ul>
+<li>And the user set the request authentication configurations as follows
+<table>
+<thead>
+<tr>
+<th>Configuration Property Name</th>
+<th>Configuration Property Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isAccessTokenIncluded</td>
+<td>True</td>
+</tr>
+<tr>
+<td>isAccessTokenRetrievedFromTextFile</td>
+<td>True</td>
+</tr>
+<tr>
+<td>accessTokenString</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>And the user set the request attributes as follows
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#creatorId</td>
+<td>osanda12</td>
+</tr>
+<tr>
+<td>#creatorPlatform</td>
+<td>Web</td>
+</tr>
+<tr>
+<td>#creatoredSource</td>
+<td>App</td>
+</tr>
+<tr>
+<td>#creatoredType</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>#deckId</td>
+<td>51</td>
+</tr>
+<tr>
+<td>#kind</td>
+<td>SHORT_ANSWER</td>
+</tr>
+<tr>
+<td>#learningObjectives</td>
+<td>learningObjective1</td>
+</tr>
+<tr>
+<td>#imageUrl</td>
+<td><a href="http://www.maxsoft.com/image" rel="nofollow">www.maxsoft.com/image</a></td>
+</tr>
+<tr>
+<td>#media</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>#questionPrompt</td>
+<td>Who is the owner of MaxSoft? _ _ _ _ _ _ _ _</td>
+</tr>
+<tr>
+<td>#promptType</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>#timeout</td>
+<td>60</td>
+</tr>
+<tr>
+<td>#rationale</td>
+<td>rationale</td>
+</tr>
+<tr>
+<td>#boxId</td>
+<td>0</td>
+</tr>
+<tr>
+<td>#correctAttempts</td>
+<td>1</td>
+</tr>
+<tr>
+<td>#inCorrectAttempts</td>
+<td>0</td>
+</tr>
+<tr>
+<td>#lastAswered</td>
+<td>11/8/2017</td>
+</tr>
+<tr>
+<td>#questionId</td>
+<td>0</td>
+</tr>
+<tr>
+<td>#skips</td>
+<td>0</td>
+</tr>
+<tr>
+<td>#userId</td>
+<td>0</td>
+</tr>
+<tr>
+<td>#correctAnswer1</td>
+<td>Osanda Deshan</td>
+</tr>
+<tr>
+<td>#iscorrectAnswer1CaseSensitive</td>
+<td>false</td>
+</tr>
+<tr>
+<td>#tags</td>
+<td>MaxSoft</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>And the user set the path parameters as follows
+<table>
+<thead>
+<tr>
+<th>Path Parameter</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>5a0974b75ed274e204b9554c</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>When the user invokes the API</li>
+<li>Then the status code for the request is &quot;400&quot;</li>
+<li>And the JSON Path Assertions for the response should be equal to the following
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.question.prompt</td>
+<td>Who is the owner of MaxSoft? _ _ _ _ _ _ _ _</td>
+</tr>
+<tr>
+<td>$.question.media</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>$.question.promptType</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>$.kind</td>
+<td>SHORT_ANSWER</td>
+</tr>
+<tr>
+<td>$.correctAnswers[0].value</td>
+<td>Osanda Deshan</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\11. Edit Question - Negative Tests.html"><</a></li><li class="nav"><a href="..\index.html">=</a></li><li class="nav"><a href=".\12. Get A Question In A Deck.html">></a></li></center>

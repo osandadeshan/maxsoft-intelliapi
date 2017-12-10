@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class AllStepsDefinitions{
 
 	private CommonStepDefinitions commonStepDefinitions = new CommonStepDefinitions();
-    private DatabaseOperator databaseOperator = new DatabaseOperator();
+    private MySqlDatabaseOperator mySQLDatabaseOperator = new MySqlDatabaseOperator();
 
 	// Use this method to print the testing environment name in the HTML report
 	@Step("Get the configuration details of the testing environment")
@@ -90,32 +90,32 @@ public class AllStepsDefinitions{
 
     @Step("Given a user successfully connected to the MySQL Driver")
     public void loadMySqlDriver() throws SQLException, ClassNotFoundException {
-        databaseOperator.loadMySqlDriver();
+        mySQLDatabaseOperator.loadMySqlDriver();
     }
 
     @Step("When the user connects to the database of <databaseName> using username as <username> and password as <password>")
     public void loadMySqlDatabase (String databaseName, String username, String password) throws SQLException, ClassNotFoundException {
-        databaseOperator.loadMySqlDatabase(databaseName, username, password);
+        mySQLDatabaseOperator.loadMySqlDatabase(databaseName, username, password);
     }
 
     @Step("Then the user executes the query as <query>")
     public void executeGivenQuery(String query) {
-        databaseOperator.executeGivenQuery(query);
+        mySQLDatabaseOperator.executeGivenQuery(query);
     }
 
     @Step("And the results obtained from the database should contain the following <table>")
     public void verifyResults( Table table) throws SQLException, ClassNotFoundException {
-        databaseOperator.verifyResults(table);
+        mySQLDatabaseOperator.verifyResults(table);
     }
 
     @Step("And the results obtained from the database should equal to the following <table>")
     public void verifyAllResults( Table table) throws SQLException, ClassNotFoundException {
-        databaseOperator.verifyAllResults(table);
+        mySQLDatabaseOperator.verifyAllResults(table);
     }
 
     @Step("And the user close the database connection")
     public void closeDbConnection() throws Exception {
-        databaseOperator.closeDbConnection();
+        mySQLDatabaseOperator.closeDbConnection();
     }
 	
 }

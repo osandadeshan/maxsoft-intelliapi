@@ -41,8 +41,11 @@ public class CommonStepDefinitions extends BaseClass{
 		List<String> columnNames = table.getColumnNames();
 		JsonPayload.setRequestToDefault();
 		for (TableRow row : rows) {
-			if (row.getCell(columnNames.get(1)).equalsIgnoreCase("null")){
+			if (row.getCell(columnNames.get(1)).equalsIgnoreCase("\"null\"")){
 				JsonPayload.setJsonAttributeValueAs("\""+row.getCell(columnNames.get(0))+"\"", "null");
+			}
+			else if (row.getCell(columnNames.get(1)).equalsIgnoreCase("null")){
+				JsonPayload.setJsonAttributeValueAs(row.getCell(columnNames.get(0)), "null");
 			} else {
 				JsonPayload.setJsonAttributeValueAs(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
 			}
@@ -86,9 +89,9 @@ public class CommonStepDefinitions extends BaseClass{
     public void setQueryParams(Table parameterTable){
         List<TableRow> rows = parameterTable.getTableRows();
         List<String> columnNames = parameterTable.getColumnNames();
-        String queryParams = "";
+        String queryParams = "?";
         for (TableRow row : rows) {
-            queryParams = queryParams + row.getCell(columnNames.get(0)) + "=" + row.getCell(columnNames.get(1)) + "&";
+				queryParams = queryParams.concat(row.getCell(columnNames.get(0)) + "=" + row.getCell(columnNames.get(1)) + "&");
         }
         queryParams = queryParams.replaceAll(".$", "");
         System.out.println("Query parameters which will append to the request URL: " + queryParams);
@@ -99,15 +102,14 @@ public class CommonStepDefinitions extends BaseClass{
     public void setPathParams(Table parameterTable){
         List<TableRow> rows = parameterTable.getTableRows();
         List<String> columnNames = parameterTable.getColumnNames();
-        String pathParams = "";
+        String pathParams = "/";
         for (TableRow row : rows) {
             pathParams = pathParams + row.getCell(columnNames.get(1));
             pathParams = pathParams.concat("/");
         }
-        System.out.println("Path parameters which will append to the request URL:");
-        System.out.println(pathParams);
-        Gauge.writeMessage("Path parameters which will append to the request URL:");
-        Gauge.writeMessage(pathParams);
+        pathParams = pathParams.substring(0, pathParams.length() - 1);
+        System.out.println("Path parameters which will append to the request URL:" + pathParams);
+        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams);
         saveValueForScenario("pathParams", pathParams);
     }
 	

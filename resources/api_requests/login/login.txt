@@ -1,7 +1,0 @@
-{
- 
-  "username": "aansar@gmail.com",
-
-  "password": "ayesha@123"
-
-}

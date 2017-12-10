@@ -17,9 +17,11 @@ import org.hamcrest.CoreMatchers;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
+
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+
 import static io.restassured.RestAssured.given;
 
 
@@ -29,12 +31,7 @@ import static io.restassured.RestAssured.given;
 
 
 public class BaseClass {
-    
-    private Response response;
-    private ValidatableResponse json;
-    private RequestSpecification request = getRequestSpecification();
-    String ENVIRONMENT = System.getenv("environment");
-    public String SERVER_HOST = setUp();
+
     private static final String DEFAULT = "dev";
     private static final String DEV = "dev";
     private static final String QA = "qa";
@@ -43,39 +40,76 @@ public class BaseClass {
     public String AUTHENTICATION_FIRST_VALUE = System.getenv("authentication_first_value");
     public String CURRENT_DIRECTORY = System.getProperty("user.dir");
     public String ACCESS_TOKEN_FILE_PATH = CURRENT_DIRECTORY + "\\" + System.getenv("access_token_file_path");
+    String ENVIRONMENT = System.getenv("environment");
+    public String SERVER_HOST = setUp();
+    private Response response;
+    private ValidatableResponse json;
+    private RequestSpecification request = getRequestSpecification();
 
-    public String setUp(){
+    public static void printRequest(String request) {
+        System.out.println("Request is: " + "\n" + request);
+        Gauge.writeMessage("Request is: " + "\n" + request);
+    }
+
+    public static String getSavedValueForScenario(String variableNameOfValueStoredInDataStore) {
+        // Fetching Value from the Data Store
+        DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
+        return (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
+    }
+
+    public static String getSavedValueForSpecification(String variableNameOfValueStoredInDataStore) {
+        // Fetching Value from the Data Store
+        DataStore specDataStore = DataStoreFactory.getSpecDataStore();
+        return (String) specDataStore.get(variableNameOfValueStoredInDataStore);
+    }
+
+    public static void saveValueForScenario(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
+        // Adding value to the Data Store
+        DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
+        scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+    }
+
+    public static void saveValueForSpecification(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
+        // Adding value to the Data Store
+        DataStore specDataStore = DataStoreFactory.getSpecDataStore();
+        specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+    }
+
+    public String setUp() {
         String HOST = "";
         if (ENVIRONMENT == null) {
             ENVIRONMENT = DEFAULT;
-        } if (ENVIRONMENT.toLowerCase().equals(DEV)) {
+        }
+        if (ENVIRONMENT.toLowerCase().equals(DEV)) {
             HOST = System.getenv("dev_server_host");
-            } if (ENVIRONMENT.toLowerCase().equals(QA)) {
-                HOST = System.getenv("qa_server_host");
-                } if (ENVIRONMENT.toLowerCase().equals(UAT)) {
-                    HOST = System.getenv("uat_server_host");
-                }
-                if (HOST == null){
-                    HOST = "";
-                }
+        }
+        if (ENVIRONMENT.toLowerCase().equals(QA)) {
+            HOST = System.getenv("qa_server_host");
+        }
+        if (ENVIRONMENT.toLowerCase().equals(UAT)) {
+            HOST = System.getenv("uat_server_host");
+        }
+        if (HOST == null) {
+            HOST = "";
+        }
         return HOST;
     }
-    
+
     public RequestSpecification getRequestSpecification() {
         return RestAssured.given().contentType(ContentType.JSON);
     }
 
-    public void printTestingEnvironmentName(){
+    public void printTestingEnvironmentName() {
         System.out.println("Testing environment name: " + ENVIRONMENT.toUpperCase());
         Gauge.writeMessage("Testing environment name: " + ENVIRONMENT.toUpperCase());
     }
 
-    public void printTestingEnvironmentURL(){
+    public void printTestingEnvironmentURL() {
         System.out.println("Testing environment URL: " + SERVER_HOST);
         Gauge.writeMessage("Testing environment URL: " + SERVER_HOST);
     }
 
-    public void testingEnvDetails(){
+    public void testingEnvDetails() {
         printTestingEnvironmentName();
         printTestingEnvironmentURL();
     }
@@ -84,49 +118,42 @@ public class BaseClass {
         System.out.println("API Endpoint is: " + "\n" + apiEndpoint);
         Gauge.writeMessage("API Endpoint is: " + "\n" + apiEndpoint);
     }
-    
+
     public void printResponse() {
         if (response.prettyPrint().toString().equals("")) {
             System.out.println("Response is empty for the given payload");
             Gauge.writeMessage("Response is empty for the given payload");
-        }
-        else if (response.prettyPrint().toString().equals("[]")) {
+        } else if (response.prettyPrint().toString().equals("[]")) {
             System.out.println("Response is null for the given payload");
             Gauge.writeMessage("Response is null for the given payload");
-        }
-        else {
+        } else {
             System.out.println("Response is: " + "\n" + response.prettyPrint());
             Gauge.writeMessage("Response is: " + "\n" + response.prettyPrint());
         }
     }
-    
+
     public void apiToBeInvoked(String apiEndpointName) throws IOException {
         saveValueForScenario("API_NAME", apiEndpointName);
         // Print API Endpoint
         printApiEndpoint(ApiEndpoints.getApiEndpointByName(apiEndpointName));
     }
-    
-    public static void printRequest(String request) {
-        System.out.println("Request is: " + "\n" + request);
-        Gauge.writeMessage("Request is: " + "\n" + request);
-    }
 
-    public String getQueryParams(){
+    public String getQueryParams() {
         String queryParams = String.valueOf(getSavedValueForScenario("queryParams"));
-        if (queryParams.equals("") || queryParams.equals("null")){
+        if (queryParams.equals("") || queryParams.equals("null")) {
             queryParams = "";
         }
         return queryParams;
     }
 
-    public String getPathParams(){
+    public String getPathParams() {
         String pathParams = String.valueOf(getSavedValueForScenario("pathParams"));
-        if (pathParams.equals("") || pathParams.equals("null")){
+        if (pathParams.equals("") || pathParams.equals("null")) {
             pathParams = "";
         }
         return pathParams;
     }
-    
+
     public void postAPI(String jsonPayload) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         // Executing API and getting the response
@@ -139,7 +166,7 @@ public class BaseClass {
         getResponse();
         printResponse();
     }
-    
+
     public void postAPI(String apiEndpoint, String jsonPayload) {
         response = given()
                 .contentType("application/json")
@@ -150,27 +177,27 @@ public class BaseClass {
         getResponse();
         printResponse();
     }
-    
+
     public void postAPIWithAuth(String jsonPayload, String headerValue) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         String invokingEndpoint = SERVER_HOST.concat(ApiEndpoints.getApiEndpointByName(apiName)).concat(getPathParams().concat(getQueryParams()));
         System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
         // Executing API and getting the response
-        if (headerValue == null){
+        if (headerValue == null) {
             response = given()
                     .contentType("application/json")
                     .body(jsonPayload)
                     .when()
                     .post(invokingEndpoint);
-            } else {
-                    response = given()
-                        .contentType("application/json")
-                        .header(AUTHORIZATION_HEADER_NAME, headerValue) //Some API contains access token to run with the API
-                        .body(jsonPayload)
-                        .when()
-                        .post(SERVER_HOST.concat(ApiEndpoints.getApiEndpointByName(apiName)));
-                   }
+        } else {
+            response = given()
+                    .contentType("application/json")
+                    .header(AUTHORIZATION_HEADER_NAME, headerValue) //Some API contains access token to run with the API
+                    .body(jsonPayload)
+                    .when()
+                    .post(SERVER_HOST.concat(ApiEndpoints.getApiEndpointByName(apiName)));
+        }
         getStatusCode();
         getResponse();
         printResponse();
@@ -183,27 +210,27 @@ public class BaseClass {
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
         Headers headers = new Headers(headerList);
         // Executing API and getting the response
-        if (accessToken == null){
+        if (accessToken == null) {
             response = given()
                     .contentType("application/json")
                     .headers(headers)
                     .body(jsonPayload)
                     .when()
                     .post(invokingEndpoint);
-            } else {
-                    response = given()
-                        .contentType("application/json")
-                        .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
-                        .headers(headers)
-                        .body(jsonPayload)
-                        .when()
-                        .post(invokingEndpoint);
-                   }
+        } else {
+            response = given()
+                    .contentType("application/json")
+                    .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                    .headers(headers)
+                    .body(jsonPayload)
+                    .when()
+                    .post(invokingEndpoint);
+        }
         getStatusCode();
         getResponse();
         printResponse();
     }
-    
+
     public void postAPIWithAuth(String headerValue) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         // Executing API and getting the response
@@ -216,7 +243,7 @@ public class BaseClass {
         getResponse();
         printResponse();
     }
-    
+
     public void postAPIWithAuth(String apiEndpoint, String jsonPayload, String headerName, String headerValue) throws IOException {
         response = given()
                 .contentType("application/json")
@@ -228,7 +255,7 @@ public class BaseClass {
         getResponse();
         printResponse();
     }
-    
+
     public void getAPI() throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         response = request
@@ -295,12 +322,12 @@ public class BaseClass {
         }
         System.out.println(param);
         if (isHeadersInclueded.equals(Boolean.TRUE)) {
-            if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+            if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
                 getAPIByAppendingPathParamsAndMultipleHeaders(param, accessToken, headerList);
                 printApiEndpoint(ApiEndpoints.getApiEndpointByName(getSavedValueForScenario("API_NAME")).concat("/" + param));
             }
         } else {
-            if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+            if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
                 getAPIByAppendingParam(param, accessToken);
                 printApiEndpoint(ApiEndpoints.getApiEndpointByName(getSavedValueForScenario("API_NAME")).concat("/" + param));
             }
@@ -328,7 +355,7 @@ public class BaseClass {
         getResponse();
         printResponse();
     }
-    
+
     public void getAPI(String query) throws IOException {
         String headerValue = "";
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
@@ -343,7 +370,7 @@ public class BaseClass {
         }
         response = request
                 .given()
-               // .header(AUTHORIZATION_HEADER_NAME, headerValue) //Some API contains headers to run with the API
+                // .header(AUTHORIZATION_HEADER_NAME, headerValue) //Some API contains headers to run with the API
                 .when()
                 .get(requestEndPoint);
         System.out.println(printText);
@@ -428,16 +455,16 @@ public class BaseClass {
         }
         query = query.replaceAll(".$", "");
         if (isHeadersInclueded.equals(Boolean.TRUE)) {
-            if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
-                if (query.equals("=")){
+            if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+                if (query.equals("=")) {
                     getAPIWithMultipleHeadersAndAuthAndQueryParams(accessToken, "", headerList);
                 } else {
                     getAPIWithMultipleHeadersAndAuthAndQueryParams(accessToken, query, headerList);
                 }
             }
         } else {
-            if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
-                if (query.equals("=")){
+            if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+                if (query.equals("=")) {
                     getAPIWithAuthAndQueryParams(accessToken, "");
                 } else {
                     getAPIWithAuthAndQueryParams(accessToken, query);
@@ -457,7 +484,7 @@ public class BaseClass {
         getResponse();
         printResponse();
     }
-    
+
     public void getAPIWithAuth(String accessToken) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         String invokingEndpoint = SERVER_HOST.concat(ApiEndpoints.getApiEndpointByName(apiName)).concat(getPathParams().concat(getQueryParams()));
@@ -479,7 +506,7 @@ public class BaseClass {
         System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
         Headers headers = new Headers(headerList);
-        if (accessToken == null){
+        if (accessToken == null) {
             response = request
                     .given()
                     .headers(headers)
@@ -497,45 +524,39 @@ public class BaseClass {
             printResponse();
         }
     }
-    
+
     public void invokeApiWithToken(String jsonPayload, String headerValue) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         System.out.println("You have invoked a " + ReadDataFromApiDoc.getHttpMethod(apiName));
-        if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
             // Executing API and getting the response
             postAPIWithAuth(jsonPayload, headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
             // Executing API and getting the response
             putAPIWithAuth(jsonPayload, headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
             // Executing API and getting the response
             getAPIWithAuth(headerValue);
-        }
-        else {
+        } else {
             System.out.println("HTTP Method type is not implemented");
             Gauge.writeMessage("HTTP Method type is not implemented");
         }
     }
-    
+
     public void invokeApiWithTokenInDataStore(String jsonPayload, String accessToken) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         System.out.println("You are going to invoked a " + ReadDataFromApiDoc.getHttpMethod(apiName));
         String headerValue = AUTHENTICATION_FIRST_VALUE + getSavedValueForSpecification(accessToken); // Fetching Value from the Data Store
-        if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
             // Executing API and getting the response
             postAPIWithAuth(jsonPayload, headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
             // Executing API and getting the response
             putAPIWithAuth(jsonPayload, headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
             // Executing API and getting the response
             getAPIWithAuth(headerValue);
-        }
-        else {
+        } else {
             System.out.println("HTTP Method type is not implemented");
             Gauge.writeMessage("HTTP Method type is not implemented");
         }
@@ -545,19 +566,16 @@ public class BaseClass {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         System.out.println("You are going to invoked a " + ReadDataFromApiDoc.getHttpMethod(apiName));
         String accessToken = readAccessToken(); // Fetching token from the text file
-        if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
             // Executing API and getting the response
             postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
             // Executing API and getting the response
             putAPIWithAuth(jsonPayload, accessToken);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
             // Executing API and getting the response
             getAPIWithAuthMultipleHeaders(accessToken, headerList);
-        }
-        else {
+        } else {
             System.out.println("HTTP Method type is not implemented");
             Gauge.writeMessage("HTTP Method type is not implemented");
         }
@@ -572,91 +590,81 @@ public class BaseClass {
         Boolean isAccessTokenRetrievedFromTextFile = Boolean.valueOf(getSavedValueForScenario("isAccessTokenRetrievedFromTextFile"));
         String accessTokenString = String.valueOf(getSavedValueForScenario("accessTokenString"));
 
-            if (isAccessTokenIncluded.equals(Boolean.TRUE)) {
-                if (isAccessTokenRetrievedFromTextFile.equals(Boolean.TRUE)) {
-                    accessToken = accessTokenInFile;
-                } else {
-                    accessToken = accessTokenString;
-                }
+        if (isAccessTokenIncluded.equals(Boolean.TRUE)) {
+            if (isAccessTokenRetrievedFromTextFile.equals(Boolean.TRUE)) {
+                accessToken = accessTokenInFile;
             } else {
-                accessToken = "";
+                accessToken = accessTokenString;
             }
+        } else {
+            accessToken = "";
+        }
 
-                if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
-                        getAPIWithAuthMultipleHeaders(accessToken, headerList);
-                }
-                if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
-                        postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
-                }
-                if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
-                        putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
-                }
-                if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("DELETE")) {
-                        deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
-                }
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+            getAPIWithAuthMultipleHeaders(accessToken, headerList);
+        }
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
+            postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
+        }
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
+            putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
+        }
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("DELETE")) {
+            deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
+        }
 
-            }
+    }
 
-    
     public void invokeApiWithoutRequestWithToken() throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         System.out.println("You are going to invoked a " + ReadDataFromApiDoc.getHttpMethod(apiName));
         String headerValue = AUTHENTICATION_FIRST_VALUE + getSavedValueForSpecification("accessToken"); // Fetching Value from the Data Store
-        if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
             // Executing API and getting the response
             postAPIWithAuth(headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
             // Executing API and getting the response
             putAPIWithAuth("", headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
             // Executing API and getting the response
             getAPIWithAuth(headerValue);
-        }
-        else {
+        } else {
             System.out.println("HTTP Method type is not implemented");
             Gauge.writeMessage("HTTP Method type is not implemented");
         }
     }
-    
+
     public void invokeApiWithoutRequestWithToken(String headerValue) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         System.out.println("You are going to invoked a " + ReadDataFromApiDoc.getHttpMethod(apiName));
-        if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
             // Executing API and getting the response
             postAPIWithAuth(headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
             // Executing API and getting the response
             putAPIWithAuth("", headerValue);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
             // Executing API and getting the response
             getAPIWithAuth(headerValue);
-        }
-        else {
+        } else {
             System.out.println("HTTP Method type is not implemented");
             Gauge.writeMessage("HTTP Method type is not implemented");
         }
     }
-    
+
     public void invokeApiWithNoAuth(String jsonPayload) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         System.out.println("You are going to invoked a " + ReadDataFromApiDoc.getHttpMethod(apiName));
-        if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
+        if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("POST")) {
             // Executing API and getting the response
             postAPI(jsonPayload);
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("PUT")) {
             // Executing API and getting the response
             putAPIWithAuth(jsonPayload, "");
-        }
-        else if(ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
+        } else if (ReadDataFromApiDoc.getHttpMethod(apiName).equals("GET")) {
             // Executing API and getting the response
             getAPI();
-        }
-        else {
+        } else {
             System.out.println("HTTP Method type is not implemented");
             Gauge.writeMessage("HTTP Method type is not implemented");
         }
@@ -668,7 +676,7 @@ public class BaseClass {
         System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
         // Executing API and getting the response
-        if (headerValue == null){
+        if (headerValue == null) {
             response = given()
                     .contentType("application/json")
                     .body(jsonPayload)
@@ -694,7 +702,7 @@ public class BaseClass {
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
         Headers headers = new Headers(headerList);
         // Executing API and getting the response
-        if (accessToken == null){
+        if (accessToken == null) {
             response = given()
                     .contentType("application/json")
                     .headers(headers)
@@ -722,7 +730,7 @@ public class BaseClass {
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
         Headers headers = new Headers(headerList);
         // Executing API and getting the response
-        if (accessToken == null){
+        if (accessToken == null) {
             response = given()
                     .contentType("application/json")
                     .headers(headers)
@@ -742,34 +750,34 @@ public class BaseClass {
         getResponse();
         printResponse();
     }
-    
+
     public ValidatableResponse verifyStatusCode(int statusCode) {
         json = response.then().statusCode(statusCode);
         return json;
     }
-    
+
     public void verifyResponseStatusCode(String statusCode) {
         Assert.assertEquals(getSavedValueForScenario("statusCode"), statusCode, "The expected status code for the request is not match with the actual status code\n");
     }
-    
+
     public void getStatusCode() {
         int statusCode = response.statusCode();
         // Set the value of status code into a Data Store
         saveValueForScenario("statusCode", String.valueOf(statusCode));
     }
-    
+
     public String getResponse() {
         String responseAsString = response.prettyPrint();
         // Set the value of response into a Data Store
         saveValueForScenario("response", responseAsString);
         return responseAsString;
     }
-    
+
     public void saveResponseAttributeValue(String attributeName, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
         String jsonData = getSavedValueForScenario("response");
         System.out.println(jsonData);
         JSONObject obj = new JSONObject(jsonData);
-        System.out.println("Attribute value: "+ obj.get(attributeName).toString());
+        System.out.println("Attribute value: " + obj.get(attributeName).toString());
         // Save the value of response into a Data Store
         saveValueForSpecification(variableNameOfValueToBeStoredInDataStore, obj.get(attributeName).toString());
     }
@@ -778,7 +786,7 @@ public class BaseClass {
         String jsonData = getSavedValueForScenario("response");
         System.out.println(jsonData);
         JSONObject obj = new JSONObject(jsonData);
-        if (AUTHENTICATION_FIRST_VALUE == null || AUTHENTICATION_FIRST_VALUE.equals(" ") || AUTHENTICATION_FIRST_VALUE.equals("")){
+        if (AUTHENTICATION_FIRST_VALUE == null || AUTHENTICATION_FIRST_VALUE.equals(" ") || AUTHENTICATION_FIRST_VALUE.equals("")) {
             AUTHENTICATION_FIRST_VALUE = "";
         }
         System.out.println("Access token: " + AUTHENTICATION_FIRST_VALUE + obj.get(attributeName).toString());
@@ -793,16 +801,16 @@ public class BaseClass {
         }
     }
 
-    public String readAccessToken(){
+    public String readAccessToken() {
         String accessToken = "";
         try {
-                accessToken = FileReadWrite.readFromFile(ACCESS_TOKEN_FILE_PATH);
-            } catch (Exception ex) {
-                } finally {
-                        return accessToken;
-                    }
+            accessToken = FileReadWrite.readFromFile(ACCESS_TOKEN_FILE_PATH);
+        } catch (Exception ex) {
+        } finally {
+            return accessToken;
+        }
     }
-    
+
     // Asserts on JSON fields with single values
     public void responseEquals(Table responseFields) {
         for (TableRow row : responseFields.getTableRows()) {
@@ -811,83 +819,59 @@ public class BaseClass {
                 json.body(row.getCell("Key"), CoreMatchers.equalTo(Integer.parseInt(row.getCell("Value"))));
             } else if (StringUtils.isAlphanumeric(row.getCell("Value"))) {
                 json.body(row.getCell("Key"), CoreMatchers.equalTo(row.getCell("Value")));
-            }
-            else{
-                if(row.getCell("Value")== null) {
+            } else {
+                if (row.getCell("Value") == null) {
                     json.body(row.getCell("Key"), CoreMatchers.equalTo(null));
                 }
             }
         }
     }
-    
-    public void jsonPathAssertion(String jsonPath, String expectedResult){
+
+    public void jsonPathAssertion(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
-        if(responseString.toString().equals("")) {
+        if (responseString.toString().equals("")) {
             System.out.println("No any JSON Paths found. Because the response is empty for the given payload");
             Gauge.writeMessage("No any JSON Paths found. Because the response is empty for the given payload");
         }
-        if(responseString.toString().equals("[]")) {
-            System.out.println("No any JSON Paths found. Because the response is null for the given payload");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
-        }
-        if(expectedResult.toLowerCase().equals("[]")) {
-            String expectedResultForNull = "[]";
-            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(),expectedResultForNull, "Found mismatches in Expected and Actual results");
-        }
-        else if(expectedResult.toLowerCase().equals("null")) {
-            String expectedResultForNull = null;
-            Assert.assertEquals(JsonPath.read(responseString, jsonPath),expectedResultForNull, "Found mismatches in Expected and Actual results");
-        }
-        else if(expectedResult.toLowerCase().equals("true")) {
-            Assert.assertEquals(JsonPath.read(responseString, jsonPath),Boolean.TRUE, "Found mismatches in Expected and Actual results");
-        }
-        else if(expectedResult.toLowerCase().equals("false")) {
-            Assert.assertEquals(JsonPath.read(responseString, jsonPath),Boolean.FALSE, "Found mismatches in Expected and Actual results");
-        }
-        else if(expectedResult.trim().equals("")) {
-            String expectedResultForEmpty = "";
-            Assert.assertEquals(JsonPath.read(responseString, jsonPath),expectedResultForEmpty, "Found mismatches in Expected and Actual results");
-        }
-        else if (expectedResult.matches("\\d+")){
-            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(),expectedResult, "Found mismatches in Expected and Actual results");
-        }
-        else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")){
-            Assert.assertEquals(JsonPath.read(responseString, jsonPath),Integer.valueOf(expectedResult), "Found mismatches in Expected and Actual results");
-        } else {
-            Assert.assertEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"),expectedResult, "Found mismatches in Expected and Actual results");
-        }
+            if (responseString.toString().equals("[]")) {
+                System.out.println("No any JSON Paths found. Because the response is null for the given payload");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
+            }
+                if (expectedResult.toLowerCase().equals("[]")) {
+                    String expectedResultForNull = "[]";
+                    Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, "Found mismatches in Expected and Actual results");
+                }
+                    else if (expectedResult.toLowerCase().equals("null")) {
+                        String expectedResultForNull = null;
+                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, "Found mismatches in Expected and Actual results");
+                    }
+                    else if (expectedResult.toLowerCase().equals("true")) {
+                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, "Found mismatches in Expected and Actual results");
+                    }
+                    else if (expectedResult.toLowerCase().equals("false")) {
+                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, "Found mismatches in Expected and Actual results");
+                    }
+                    else if (expectedResult.trim().equals("")) {
+                        String expectedResultForEmpty = "";
+                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, "Found mismatches in Expected and Actual results");
+                    }
+                    else if (expectedResult.matches("\\d+")) {
+                        Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, "Found mismatches in Expected and Actual results");
+                    }
+                    else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
+                        Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), "Found mismatches in Expected and Actual results");
+                    }
+                else {
+                    Assert.assertEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, "Found mismatches in Expected and Actual results");
+                }
     }
-    
-    public static String getSavedValueForScenario(String variableNameOfValueStoredInDataStore) {
-        // Fetching Value from the Data Store
-        DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-        return (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
-    }
-    
-    public static String getSavedValueForSpecification(String variableNameOfValueStoredInDataStore) {
-        // Fetching Value from the Data Store
-        DataStore specDataStore = DataStoreFactory.getSpecDataStore();
-        return (String) specDataStore.get(variableNameOfValueStoredInDataStore);
-    }
-    
-    public static void saveValueForScenario(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
-        // Adding value to the Data Store
-        DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-        scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
-    }
-    
-    public static void saveValueForSpecification(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
-        // Adding value to the Data Store
-        DataStore specDataStore = DataStoreFactory.getSpecDataStore();
-        specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
-    }
-    
-    public void printResults(List<String> headersList, List<List<String>> rowsList, String additional){
+
+    public void printResults(List<String> headersList, List<List<String>> rowsList, String additional) {
         Board board = new Board(75);
         String tableString = board.setInitialBlock(new StringTable(board, 75, headersList, rowsList).tableToBlocks()).build().getPreview();
-        System.out.println("\nResults " + additional + " from the database for the executed query: \n"+ tableString);
-        Gauge.writeMessage("\nResults " + additional + " from the database for the executed query: \n"+ tableString);
+        System.out.println("\nResults " + additional + " from the database for the executed query: \n" + tableString);
+        Gauge.writeMessage("\nResults " + additional + " from the database for the executed query: \n" + tableString);
     }
-    
-    
+
+
 }
