@@ -6,19 +6,14 @@
 		"--simple-console"
 	],
 	"FailedItems": [
-		"specs\\18. Create MCQ Type Question - Negative Tests.spec:1949",
-		"specs\\18. Create MCQ Type Question - Negative Tests.spec:2139",
 		"specs\\07. Create Short Answer Type Question - Data Driven Positive Tests.spec:20",
-		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:1578",
-		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:2230",
-		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:2279",
 		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:2326",
 		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:2373",
 		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:1439",
-		"specs\\10. Delete A Question.spec:17",
-		"specs\\11. Edit Question - Positive Tests.spec:17",
-		"specs\\12. Edit Question - Negative Tests.spec:17",
-		"specs\\13. Get A Question In A Deck.spec:17",
-		"specs\\15. Aggregated Text Questions.spec:20"
+		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:1578",
+		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:2230",
+		"specs\\09. Create Short Answer Type Question - Negative Tests.spec:2279",
+		"specs\\11. Edit Short Answer Type Question - Positive Tests.spec:17",
+		"specs\\12. Edit Short Answer Type Question - Negative Tests.spec:17"
 	]
 }
