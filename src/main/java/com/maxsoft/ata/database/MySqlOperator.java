@@ -13,9 +13,9 @@ import java.sql.SQLException;
 
 public class MySqlOperator extends MySqlConnector {
 	
-	static String MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE = "MySQL driver has been loaded successfully";
-	static String MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE = "MySQL database has been connected successfully";
-	static String QUERY_EXECUTION_SUCCESS_MESSAGE = "Query has been successfully executed";
+	private static String MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE = "MySQL driver has been loaded successfully";
+	private static String MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE = "MySQL database has been connected successfully";
+	private static String QUERY_EXECUTION_SUCCESS_MESSAGE = "Query has been successfully executed";
 
 	public void loadMySqlDriver() throws SQLException, ClassNotFoundException {
 		MySqlConnector.loadDriver();
