@@ -80,16 +80,16 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.jsonPathAssertions(table);
 	}
 	
-	// Use this method to retrieve and save an attribute value of the response
-	@Step("And get the attribute value for the attribute of <attributeName> in the response and save it in a data store named <variableNameOfValueToBeStoredInDataStore>")
-	public void retrieveAttributeValue(String attributeName, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
-		commonStepDefinitions.retrieveAttributeValue(attributeName, variableNameOfValueToBeStoredInDataStore);
+	// Use this method to retrieve and save a JSON Path value in the response
+	@Step("And get the value for the JSON Path of <jsonPath> in the response and save it in a data store named <variableNameOfValueToBeStoredInDataStore>")
+	public void saveJsonPathValue(String attributeName, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
+		commonStepDefinitions.saveJsonPathValue(attributeName, variableNameOfValueToBeStoredInDataStore);
 	}
 
 	// Use this method to retrieve and save the access token of the login response
-	@Step("And save the access token which is the attribute value of <attributeName> in the response")
-	public void retrieveAccessToken(String attributeName) throws JSONException {
-		commonStepDefinitions.retrieveAccessToken(attributeName);
+	@Step("And save the access token in the response which is located inside the JSON Path of <attributeName>")
+	public void saveAccessToken(String jsonPath) throws JSONException {
+		commonStepDefinitions.saveAccessToken(jsonPath);
 	}
 
     @Step("Given a user successfully connected to the MySQL Driver")

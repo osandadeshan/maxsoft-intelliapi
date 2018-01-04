@@ -784,26 +784,30 @@ public class BaseClass {
         return responseAsString;
     }
 
-    public void saveResponseAttributeValue(String attributeName, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
+    public void saveResponseJsonPathValue(String jsonPath, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
         String jsonData = getSavedValueForScenario("response");
         System.out.println(jsonData);
-        JSONObject obj = new JSONObject(jsonData);
-        System.out.println("Attribute value: " + obj.get(attributeName).toString());
+        Object dataObject = JsonPath.parse(jsonData).read(jsonPath);
+        String jsonPathValue = dataObject.toString();
         // Save the value of response into a Data Store
-        saveValueForSpecification(variableNameOfValueToBeStoredInDataStore, obj.get(attributeName).toString());
+        saveValueForScenario(variableNameOfValueToBeStoredInDataStore, jsonPathValue);
+        // Retrieve the value of the Data Store
+        System.out.println("JsonPath value of \"" + jsonPath + "\": " + getSavedValueForScenario(variableNameOfValueToBeStoredInDataStore));
+        Gauge.writeMessage("JsonPath value of \"" + jsonPath + "\": " + getSavedValueForScenario(variableNameOfValueToBeStoredInDataStore));
     }
 
-    public void saveAccessToken(String attributeName) throws JSONException {
+    public void saveAccessToken(String jsonPath) throws JSONException {
         String jsonData = getSavedValueForScenario("response");
         System.out.println(jsonData);
-        JSONObject obj = new JSONObject(jsonData);
+        Object dataObject = JsonPath.parse(jsonData).read(jsonPath);
+        String jsonPathValue = dataObject.toString();
         if (AUTHENTICATION_FIRST_VALUE == null || AUTHENTICATION_FIRST_VALUE.equals(" ") || AUTHENTICATION_FIRST_VALUE.equals("")) {
             AUTHENTICATION_FIRST_VALUE = "";
         }
-        System.out.println("Access token: " + AUTHENTICATION_FIRST_VALUE + obj.get(attributeName).toString());
+        System.out.println("Access token: " + AUTHENTICATION_FIRST_VALUE + jsonPathValue);
         // Save the token into a file
         try {
-            FileReadWrite.writeToFile(AUTHENTICATION_FIRST_VALUE + obj.get(attributeName).toString(), ACCESS_TOKEN_FILE_PATH);
+            FileReadWrite.writeToFile(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
             System.out.println("Saving the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\" is succeeded");
             Gauge.writeMessage("Saving the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\" is succeeded");
         } catch (Exception ex) {

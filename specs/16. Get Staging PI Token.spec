@@ -1,5 +1,5 @@
-Get QA INT PI Token Specification
-=================================
+Get Staging PI Token Specification
+==================================
 Date Created    : 11/29/2017
 Version   		: 1.0.0
 Owner      		: Osanda Deshan
@@ -32,7 +32,7 @@ tags: get_pi_token, staging
      |JSON Path     |Expected Result|
      |--------------|---------------|
      |$.status      |success        |
-* And save the access token which is the attribute value of "data" in the response
+* And save the access token in the response which is located inside the JSON Path of "$.data"
 
 
 

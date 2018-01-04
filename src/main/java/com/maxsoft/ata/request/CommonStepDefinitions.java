@@ -192,15 +192,14 @@ public class CommonStepDefinitions extends BaseClass{
 		}
 	}
 	
-	// Use this method to catch and save an attribute value of the response
-	public void retrieveAttributeValue(String attributeName, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
-		saveResponseAttributeValue(attributeName, variableNameOfValueToBeStoredInDataStore);
-		Gauge.writeMessage("Attribute value: " + getSavedValueForSpecification(variableNameOfValueToBeStoredInDataStore));
+	// Use this method to catch and save a jsonPath value of the response
+	public void saveJsonPathValue(String jsonPath, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
+		saveResponseJsonPathValue(jsonPath, variableNameOfValueToBeStoredInDataStore);
 	}
 
 	// Use this method to catch and save the access token of the login response
-	public void retrieveAccessToken(String attributeName) throws JSONException {
-		saveAccessToken(attributeName);
+	public void saveAccessToken(String jsonPath) throws JSONException {
+		super.saveAccessToken(jsonPath);
 	}
 	
 	

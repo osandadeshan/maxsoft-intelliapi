@@ -39893,3 +39893,15 @@ Total time taken: 1m34.565s
 21:47:02.039 Unable to send analytics data, timed out
 21:52:42.185 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
 21:52:43.193 Unable to send analytics data, timed out
+14:22:29.145 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+14:22:30.175 Unable to send analytics data, timed out
+21:55:27.742 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+22:28:43.567 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+22:28:44.575 Unable to send analytics data, timed out
+22:28:46.664 Checking updates...
+22:29:17.953 Plugin [Flash] with pid [10988] has exited
+22:29:18.226 Plugin [Html Report] with pid [3060] has exited
+22:29:18.541 Specifications:	1 executed	1 passed	0 failed	0 skipped
+22:29:18.541 Scenarios:	2 executed	2 passed	0 failed	0 skipped
+22:29:18.542 
+Total time taken: 18.529s

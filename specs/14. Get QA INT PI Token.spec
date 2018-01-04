@@ -32,4 +32,4 @@ tags: get_pi_token, qa_int
      |JSON Path     |Expected Result|
      |--------------|---------------|
      |$.status      |success        |
-* And save the access token which is the attribute value of "data" in the response
+* And save the access token in the response which is located inside the JSON Path of "$.data"
