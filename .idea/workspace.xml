@@ -7,25 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da163332-ca71-4df7-b1ab-413b7c36a756" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MaxSoft_ATA_Framework/MaxSoft-ATA-Framework.jar" afterPath="$PROJECT_DIR$/out/artifacts/MaxSoft_ATA_Framework/MaxSoft-ATA-Framework.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gauge/failures.json" afterPath="$PROJECT_DIR$/.gauge/failures.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concepts/Save QA INT PI Token.cpt" afterPath="$PROJECT_DIR$/concepts/Save QA INT PI Token.cpt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concepts/Save Staging PI Token.cpt" afterPath="$PROJECT_DIR$/concepts/Save Staging PI Token.cpt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/api.log" afterPath="$PROJECT_DIR$/logs/api.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/gauge.log" afterPath="$PROJECT_DIR$/logs/gauge.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/index.html" afterPath="$PROJECT_DIR$/reports/html-report/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/js/search_index.js" afterPath="$PROJECT_DIR$/reports/html-report/js/search_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/01. Get PI Token.html" afterPath="$PROJECT_DIR$/reports/html-report/specs/01. Get PI Token.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/get_all_medicines(token_from_datastore).html" afterPath="$PROJECT_DIR$/reports/html-report/specs/get_all_medicines(token_from_datastore).html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/get_all_medicines(token_from_text_file).html" afterPath="$PROJECT_DIR$/reports/html-report/specs/get_all_medicines(token_from_text_file).html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/get_all_medicines.html" afterPath="$PROJECT_DIR$/reports/html-report/specs/get_all_medicines.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/new get_all_medicines.html" afterPath="$PROJECT_DIR$/reports/html-report/specs/new get_all_medicines.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/access_tokens/access_token_to_be_used_for_testing.txt" afterPath="$PROJECT_DIR$/resources/access_tokens/access_token_to_be_used_for_testing.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/01. Get PI Token.spec" afterPath="$PROJECT_DIR$/specs/01. Get PI Token.spec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/14. Get QA INT PI Token.spec" afterPath="$PROJECT_DIR$/specs/14. Get QA INT PI Token.spec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/16. Get Staging PI Token.spec" afterPath="$PROJECT_DIR$/specs/16. Get Staging PI Token.spec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java" afterPath="$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,100 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApiDocumentReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ApiDocumentReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySqlOperator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/database/MySqlOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="14. Get QA INT PI Token.spec" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/specs/14. Get QA INT PI Token.spec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="2" lean-forward="false" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="16. Get Staging PI Token.spec" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/specs/16. Get Staging PI Token.spec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AllStepsDefinitions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommonStepDefinitions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="195" column="24" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="798" column="26" lean-forward="true" selection-start-line="798" selection-start-column="26" selection-end-line="798" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiEndpoints.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/ApiEndpoints.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Headers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/Headers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -158,6 +50,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java" />
         <option value="$PROJECT_DIR$/specs/14. Get QA INT PI Token.spec" />
         <option value="$PROJECT_DIR$/specs/16. Get Staging PI Token.spec" />
+        <option value="$PROJECT_DIR$/concepts/Save QA INT PI Token.cpt" />
+        <option value="$PROJECT_DIR$/concepts/Save Staging PI Token.cpt" />
       </list>
     </option>
   </component>
@@ -192,15 +86,54 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
+              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
+              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
+              <item name="database" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
+              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
+              <item name="request" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
+              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
+              <item name="util" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="MaxSoft-ATA-Framework" type="b2602c69:ProjectViewProjectNode" />
               <item name="MaxSoft-ATA-Framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MaxSoft-ATA-Framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MaxSoft-ATA-Framework" type="462c0819:PsiDirectoryNode" />
+              <item name="concepts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MaxSoft-ATA-Framework" type="b2602c69:ProjectViewProjectNode" />
@@ -271,40 +204,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="step" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
-              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
-              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
-              <item name="database" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
-              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
-              <item name="request" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="MaxSoft-ATA-Framework" type="58d84e3e:PackageViewProjectNode" />
-              <item name="MaxSoft-ATA-Framework" type="616d4139:PackageViewModuleNode" />
-              <item name="com.maxsoft.ata" type="1f31426a:PackageElementNode" />
-              <item name="util" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -486,11 +385,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -501,8 +398,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -513,7 +409,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -524,26 +422,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/MySqlConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/JsonPayload.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,7 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -867,7 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ApiDocumentReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="170">
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
@@ -875,15 +750,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="798" column="26" lean-forward="true" selection-start-line="798" selection-start-column="26" selection-end-line="798" selection-end-column="26" />
+        <state relative-caret-position="13022">
+          <caret line="798" column="26" lean-forward="false" selection-start-line="798" selection-start-column="26" selection-end-line="798" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="3145">
           <caret line="195" column="24" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
           <folding />
         </state>
@@ -891,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state relative-caret-position="1275">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -913,18 +788,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specs/16. Get Staging PI Token.spec">
+    <entry file="file://$PROJECT_DIR$/concepts/Save QA INT PI Token.cpt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="459">
+          <caret line="27" column="93" lean-forward="false" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concepts/Save Staging PI Token.cpt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="93" lean-forward="false" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/specs/14. Get QA INT PI Token.spec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="2" lean-forward="false" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="93" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/16. Get Staging PI Token.spec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>
