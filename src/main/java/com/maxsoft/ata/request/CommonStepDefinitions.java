@@ -55,6 +55,39 @@ public class CommonStepDefinitions extends BaseClass{
 		JsonPayload.saveFinalJsonRequestBody();
 	}
 
+	// Use this method to set the attribute values for the JSON request template in the Excel file using data store values
+	public void setPayloadJsonAttributesFromDataStores(Table table) throws IOException {
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		JsonPayload.setRequestToDefault();
+		for (TableRow row : rows) {
+		    String valueToBeReplaced = row.getCell(columnNames.get(0));
+		    String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+		    String dataStoreType = row.getCell(columnNames.get(2));
+		    String dataStoreVariableName = row.getCell(columnNames.get(3));
+		    String replacementValue = row.getCell(columnNames.get(4));
+
+			if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")){
+                JsonPayload.setJsonAttributeValueAs(valueToBeReplaced, readFromDataStore(dataStoreType, dataStoreVariableName));
+            } else {
+                if (replacementValue.equalsIgnoreCase("\"null\"")){
+                    JsonPayload.setJsonAttributeValueAs("\""+valueToBeReplaced+"\"", "null");
+                }
+                else if (replacementValue.equalsIgnoreCase("null")){
+                    JsonPayload.setJsonAttributeValueAs(valueToBeReplaced, "null");
+                } else {
+                    JsonPayload.setJsonAttributeValueAs(valueToBeReplaced, replacementValue);
+                }
+            }
+		}
+		JsonPayload.saveFinalJsonRequestBody();
+	}
+
+	// Use this method to set a custom request payload
+	public void setRequestPayload(String payload) throws IOException {
+		JsonPayload.saveFinalJsonRequestBody(payload);
+	}
+
 	public void invokeApiWithMultiplePathParameters(Table parameterTable) throws IOException {
         List<Header> headerList = Headers.getFinalHeaders();
         invokeApiWithMultiplePathParameters(parameterTable, headerList);
@@ -80,7 +113,7 @@ public class CommonStepDefinitions extends BaseClass{
 		}
 	}
 
-	public void saveRequestConfigurations(Table configTable) {
+	public void saveRequestAuthConfigurations(Table configTable) {
 		List<TableRow> rows = configTable.getTableRows();
 		List<String> columnNames = configTable.getColumnNames();
 		for (TableRow row : rows) {
@@ -101,12 +134,56 @@ public class CommonStepDefinitions extends BaseClass{
         saveValueForScenario("queryParams", queryParams);
     }
 
+    public void setQueryParamsFromDataStores(Table parameterTable){
+        List<TableRow> rows = parameterTable.getTableRows();
+        List<String> columnNames = parameterTable.getColumnNames();
+        String queryParams = "?";
+        for (TableRow row : rows) {
+            String queryName = row.getCell(columnNames.get(0));
+            String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+            String dataStoreType = row.getCell(columnNames.get(2));
+            String dataStoreVariableName = row.getCell(columnNames.get(3));
+            String queryValue = row.getCell(columnNames.get(4));
+            if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+                queryParams = queryParams.concat(queryName + "=" + readFromDataStore(dataStoreType, dataStoreVariableName) + "&");
+            } else {
+                queryParams = queryParams.concat(queryName + "=" + queryValue + "&");
+            }
+        }
+        queryParams = queryParams.replaceAll(".$", "");
+        System.out.println("Query parameters which will append to the request URL: " + queryParams);
+        Gauge.writeMessage("Query parameters which will append to the request URL: " + queryParams);
+        saveValueForScenario("queryParams", queryParams);
+    }
+
     public void setPathParams(Table parameterTable){
         List<TableRow> rows = parameterTable.getTableRows();
         List<String> columnNames = parameterTable.getColumnNames();
         String pathParams = "/";
         for (TableRow row : rows) {
-            pathParams = pathParams + row.getCell(columnNames.get(1));
+            pathParams = pathParams.concat(row.getCell(columnNames.get(1)));
+            pathParams = pathParams.concat("/");
+        }
+        pathParams = pathParams.substring(0, pathParams.length() - 1);
+        System.out.println("Path parameters which will append to the request URL:" + pathParams);
+        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams);
+        saveValueForScenario("pathParams", pathParams);
+    }
+
+    public void setPathParamsFromDataStores(Table parameterTable){
+        List<TableRow> rows = parameterTable.getTableRows();
+        List<String> columnNames = parameterTable.getColumnNames();
+        String pathParams = "/";
+        for (TableRow row : rows) {
+            String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+            String dataStoreType = row.getCell(columnNames.get(2));
+            String dataStoreVariableName = row.getCell(columnNames.get(3));
+            String pathValue = row.getCell(columnNames.get(4));
+                if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+                    pathParams = pathParams.concat(readFromDataStore(dataStoreType, dataStoreVariableName));
+                } else {
+                    pathParams = pathParams.concat(pathValue);
+                }
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.substring(0, pathParams.length() - 1);
@@ -131,7 +208,7 @@ public class CommonStepDefinitions extends BaseClass{
 	}
 
 	/* Use this method when you need to pass the JSON request in previous step and the access token from the text file into the GET/POST API.
-	   The "saveRequestConfigurations" and "setRequestAttributes" must use before using this step */
+	   The "saveRequestAuthConfigurations" and "setRequestAttributes" must use before using this step */
 	public void invokeConfiguredApi() throws IOException {
 		String jsonRequest = String.valueOf(getSavedValueForScenario("finalJsonRequestBody"));
 		if (jsonRequest.equals("") || jsonRequest.equals("null")){
@@ -191,16 +268,47 @@ public class CommonStepDefinitions extends BaseClass{
 			jsonPathAssertion(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
 		}
 	}
-	
+
+	// Use this method to validate the JSON Path Existence in the response
+	public void isJsonPathExists(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			isJsonPathExists(row.getCell(columnNames.get(0)), Boolean.valueOf(row.getCell(columnNames.get(1))));
+		}
+	}
+
 	// Use this method to catch and save a jsonPath value of the response
-	public void saveJsonPathValue(String jsonPath, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
-		saveResponseJsonPathValue(jsonPath, variableNameOfValueToBeStoredInDataStore);
+	public void saveJsonPathValues(Table table) throws JSONException {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            saveResponseJsonPathValue(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+        }
 	}
 
 	// Use this method to catch and save the access token of the login response
 	public void saveAccessToken(String jsonPath) throws JSONException {
 		super.saveAccessToken(jsonPath);
 	}
-	
-	
+
+	// Use this method to save strings in data store
+	public void saveValueToDataStore(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			saveToDataStore(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+		}
+	}
+
+	// Use this method to read strings from data store
+	public void readValueFromDataStore(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			readFromDataStore(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+		}
+	}
+
+
 }

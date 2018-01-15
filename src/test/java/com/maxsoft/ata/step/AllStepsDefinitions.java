@@ -43,10 +43,28 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.setRequestAttributes(table);
 	}
 
+	// Use this method to set the attribute values for the JSON request template in the Excel file using data store values
+	@Step("And the user set the request attributes using data stores as follows <table>")
+	public void setPayloadJsonAttributesFromDataStores(Table table) throws IOException {
+		commonStepDefinitions.setPayloadJsonAttributesFromDataStores(table);
+	}
+
+	// Use this method to set a custom request payload
+	@Step("And the user set the request payload as follows <payload>")
+	public void setRequestPayload(String payload) throws IOException {
+		commonStepDefinitions.setRequestPayload(payload);
+	}
+
 	// Use this method to set the query parameters
 	@Step("And the user set the query parameters as follows <table>")
 	public void setQueryParams(Table table) throws IOException {
 		commonStepDefinitions.setQueryParams(table);
+	}
+
+	// Use this method to set the query parameters using data store values
+	@Step("And the user set the query parameters using data stores as follows <table>")
+	public void setQueryParamsFromDataStores(Table table) throws IOException {
+		commonStepDefinitions.setQueryParamsFromDataStores(table);
 	}
 
 	// Use this method to set the path parameters
@@ -55,10 +73,28 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.setPathParams(table);
 	}
 
+	// Use this method to set the path parameters using data store values
+	@Step("And the user set the path parameters using data stores as follows <table>")
+	public void setPathParamsFromDataStores(Table table) throws IOException {
+		commonStepDefinitions.setPathParamsFromDataStores(table);
+	}
+
 	// Use this method to set the attribute values for the JSON request template in the Excel file
 	@Step("And the user set the request authentication configurations as follows <table>")
 	public void saveRequestAuthConfigurations(Table table) throws IOException {
-		commonStepDefinitions.saveRequestConfigurations(table);
+		commonStepDefinitions.saveRequestAuthConfigurations(table);
+	}
+
+	// Use this method to save strings in data store
+	@Step("And the user save the values inside data stores as follows <table>")
+	public void saveValueToDataStore(Table table){
+		commonStepDefinitions.saveValueToDataStore(table);
+	}
+
+	// Use this method to read strings from data store
+	@Step("And the user read the values from data stores as follows <table>")
+	public void readValueFromDataStore(Table table){
+		commonStepDefinitions.readValueFromDataStore(table);
 	}
 
 	/* Use this method when you need to pass the JSON request in previous step and the access token from the text file into the GET/POST/PUT/DELETE API.
@@ -79,11 +115,17 @@ public class AllStepsDefinitions{
 	public void jsonPathAssertions(Table table){
 		commonStepDefinitions.jsonPathAssertions(table);
 	}
+
+	// Use this method to validate the node of the JSON Path is exists
+	@Step("And the JSON Path Existence in the response should be equal to the following <jsonPaths>")
+	public void jsonPathExistence(Table table){
+		commonStepDefinitions.isJsonPathExists(table);
+	}
 	
-	// Use this method to retrieve and save a JSON Path value in the response
-	@Step("And get the value for the JSON Path of <jsonPath> in the response and save it in a data store named <variableNameOfValueToBeStoredInDataStore>")
-	public void saveJsonPathValue(String attributeName, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
-		commonStepDefinitions.saveJsonPathValue(attributeName, variableNameOfValueToBeStoredInDataStore);
+	// Use this method to retrieve and save the values of JSON Paths in the response
+	@Step("And save the JSON Path values in the response inside the data stores <table>")
+	public void saveJsonPathValue(Table table) throws JSONException {
+		commonStepDefinitions.saveJsonPathValues(table);
 	}
 
 	// Use this method to retrieve and save the access token of the login response

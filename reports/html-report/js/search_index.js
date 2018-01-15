@@ -1,1 +1,1 @@
-var index = {"Tags":{"get_pi_token":["specs\\01. Get PI Token.html"],"qa_int":["specs\\01. Get PI Token.html"],"staging":["specs\\01. Get PI Token.html"]},"Specs":{"Get PI Token Specification":["specs\\01. Get PI Token.html"]}};
+var index = {"Tags":{"get_pi_token":["specs\\Saving And Reading Values From Data Store.html"],"staging":["specs\\Saving And Reading Values From Data Store.html"]},"Specs":{"Saving And Reading Values From Data Store Specification":["specs\\Saving And Reading Values From Data Store.html"]}};
