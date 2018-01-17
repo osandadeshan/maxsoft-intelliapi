@@ -7,26 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da163332-ca71-4df7-b1ab-413b7c36a756" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/MaxSoft_ATA_Framework/MaxSoft-ATA-Framework.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reports/html-report.rar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/access_tokens/access_token_to_be_used_for_testing.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MaxSoft_ATA_Framework/MaxSoft-ATA-Framework.jar" afterPath="$PROJECT_DIR$/out/artifacts/MaxSoft_ATA_Framework/MaxSoft-ATA-Framework.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/env/default/default.properties" afterPath="$PROJECT_DIR$/env/default/default.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/api.log" afterPath="$PROJECT_DIR$/logs/api.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/gauge.log" afterPath="$PROJECT_DIR$/logs/gauge.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/index.html" afterPath="$PROJECT_DIR$/reports/html-report/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/js/search_index.js" afterPath="$PROJECT_DIR$/reports/html-report/js/search_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/01. Get PI Token.html" afterPath="$PROJECT_DIR$/reports/html-report/specs/01. Get PI Token.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/03. Get Created Decks List.html" afterPath="$PROJECT_DIR$/reports/html-report/specs/03. Get Created Decks List.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/html-report/specs/10. Delete A Question.html" afterPath="$PROJECT_DIR$/reports/html-report/specs/10. Delete A Question.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/10. Delete A Question.spec" afterPath="$PROJECT_DIR$/specs/10. Delete A Question.spec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/access_tokens/saved_valid_access_token.txt" afterPath="$PROJECT_DIR$/resources/access_tokens/saved_valid_access_token.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specs/Saving And Reading Values From Data Store.spec" afterPath="$PROJECT_DIR$/specs/Saving And Reading Values From Data Store.spec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/Headers.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/Headers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/JsonPayload.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/JsonPayload.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ApiDocumentReader.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ApiDocumentReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/GetCellAddressInExcel.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/GetCellAddressInExcel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/MongoDBConnector.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/MongoDBConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java" afterPath="$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,18 +31,18 @@
       <file leaf-file-name="CommonStepDefinitions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="172" column="36" lean-forward="false" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
+            <state relative-caret-position="398">
+              <caret line="282" column="33" lean-forward="false" selection-start-line="282" selection-start-column="16" selection-end-line="282" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonPayload.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/JsonPayload.java">
+      <file leaf-file-name="BaseClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            <state relative-caret-position="17">
+              <caret line="933" column="5" lean-forward="true" selection-start-line="933" selection-start-column="5" selection-end-line="933" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -63,18 +51,9 @@
       <file leaf-file-name="AllStepsDefinitions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="163" column="35" lean-forward="true" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
-              <folding>
-                <element signature="e#3763#3764#0" expanded="true" />
-                <element signature="e#3819#3820#0" expanded="true" />
-                <element signature="e#4603#4604#0" expanded="true" />
-                <element signature="e#4668#4669#0" expanded="true" />
-                <element signature="e#4909#4910#0" expanded="true" />
-                <element signature="e#4963#4964#0" expanded="true" />
-                <element signature="e#5176#5177#0" expanded="true" />
-                <element signature="e#5228#5229#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="115" column="38" lean-forward="true" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,8 +71,8 @@
       <file leaf-file-name="MongoDBConnector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/MongoDBConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,41 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelOperator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ExcelOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileOperator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/FileOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Saving And Reading Values From Data Store.spec" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Saving And Reading Values From Data Store.spec" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/specs/Saving And Reading Values From Data Store.spec">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1870">
-              <caret line="110" column="94" lean-forward="false" selection-start-line="110" selection-start-column="94" selection-end-line="110" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="01. Get PI Token.spec" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/specs/01. Get PI Token.spec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="46">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/specs/10. Delete A Question.spec">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -193,15 +142,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/JsonPayload.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ApiDocumentReader.java" />
         <option value="$PROJECT_DIR$/specs/10. Delete A Question.spec" />
-        <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java" />
         <option value="$PROJECT_DIR$/specs/01. Get PI Token.spec" />
         <option value="$PROJECT_DIR$/env/default/default.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java" />
-        <option value="$PROJECT_DIR$/specs/Saving And Reading Values From Data Store.spec" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/MongoDBConnector.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/FileOperator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ExcelOperator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java" />
+        <option value="$PROJECT_DIR$/specs/Saving And Reading Values From Data Store.spec" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java" />
       </list>
     </option>
   </component>
@@ -236,7 +185,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -399,8 +350,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,7 +377,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MongoDBConnector">
+  <component name="RunManager" selected="Gauge Execution.Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file">
     <configuration name="10. Delete A Question.spec" type="executeSpecs" factoryName="Gauge Execution" temporary="true">
       <setting name="environment" value="" />
       <setting name="specsToExecute" value="$PROJECT_DIR$/specs/10. Delete A Question.spec" />
@@ -586,8 +535,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MongoDBConnector" />
-        <item index="1" class="java.lang.String" itemvalue="Gauge Execution.Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file" />
+        <item index="0" class="java.lang.String" itemvalue="Gauge Execution.Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MongoDBConnector" />
         <item index="2" class="java.lang.String" itemvalue="Gauge Execution.Invoke PI API in Staging Environment using valid username and password" />
         <item index="3" class="java.lang.String" itemvalue="Gauge Execution.10. Delete A Question.spec" />
         <item index="4" class="java.lang.String" itemvalue="Gauge Execution.Delete a question using a valid cardId" />
@@ -611,15 +560,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="10__Delete_A_Question_spec - 2018.01.14 at 17h 20m 37s.xml">
-      <configuration name="10. Delete A Question.spec" configurationId="executeSpecs" />
-    </history-entry>
-    <history-entry file="Delete_a_question_using_a_valid_cardId - 2018.01.14 at 17h 18m 22s.xml">
-      <configuration name="Delete a question using a valid cardId" configurationId="executeSpecs" />
-    </history-entry>
-    <history-entry file="Invoke_PI_API_in_Staging_Environment_using_valid_username_and_password - 2018.01.14 at 21h 31m 56s.xml">
-      <configuration name="Invoke PI API in Staging Environment using valid username and password" configurationId="executeSpecs" />
-    </history-entry>
     <history-entry file="Invoke_PI_API_in_Staging_Environment_using_valid_username_and_password - 2018.01.14 at 21h 36m 22s.xml">
       <configuration name="Invoke PI API in Staging Environment using valid username and password" configurationId="executeSpecs" />
     </history-entry>
@@ -641,6 +581,15 @@
     <history-entry file="Invoke_PI_API_in_Staging_Environment_using_valid_username_and_password_and_save_the_access_token_inside_the_text_file - 2018.01.15 at 19h 04m 35s.xml">
       <configuration name="Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file" configurationId="executeSpecs" />
     </history-entry>
+    <history-entry file="Invoke_PI_API_in_Staging_Environment_using_valid_username_and_password_and_save_the_access_token_inside_the_text_file - 2018.01.17 at 22h 08m 27s.xml">
+      <configuration name="Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file" configurationId="executeSpecs" />
+    </history-entry>
+    <history-entry file="Invoke_PI_API_in_Staging_Environment_using_valid_username_and_password_and_save_the_access_token_inside_the_text_file - 2018.01.17 at 22h 09m 19s.xml">
+      <configuration name="Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file" configurationId="executeSpecs" />
+    </history-entry>
+    <history-entry file="Invoke_PI_API_in_Staging_Environment_using_valid_username_and_password_and_save_the_access_token_inside_the_text_file - 2018.01.17 at 22h 16m 40s.xml">
+      <configuration name="Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file" configurationId="executeSpecs" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -648,7 +597,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32753164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32753164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -660,7 +609,6 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26207906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -672,6 +620,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -682,22 +631,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/Headers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding>
-            <element signature="e#1028#1029#0" expanded="false" />
-            <element signature="e#1061#1062#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ApiDocumentReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,12 +686,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#4909#4910#0" expanded="true" />
-            <element signature="e#4963#4964#0" expanded="true" />
-            <element signature="e#5176#5177#0" expanded="true" />
-            <element signature="e#5228#5229#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,12 +760,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#4909#4910#0" expanded="true" />
-            <element signature="e#4963#4964#0" expanded="true" />
-            <element signature="e#5176#5177#0" expanded="true" />
-            <element signature="e#5228#5229#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -871,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="93" lean-forward="false" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="93" lean-forward="false" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -977,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,13 +918,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/JsonPayload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="425">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding />
         </state>
@@ -1012,7 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,48 +940,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="49" column="96" lean-forward="true" selection-start-line="49" selection-start-column="96" selection-end-line="49" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="172" column="36" lean-forward="false" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/specs/10. Delete A Question.spec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="163" column="35" lean-forward="true" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
-          <folding>
-            <element signature="e#3763#3764#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
-            <element signature="e#4603#4604#0" expanded="true" />
-            <element signature="e#4668#4669#0" expanded="true" />
-            <element signature="e#4909#4910#0" expanded="true" />
-            <element signature="e#4963#4964#0" expanded="true" />
-            <element signature="e#5176#5177#0" expanded="true" />
-            <element signature="e#5228#5229#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1075,8 +961,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/MongoDBConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1085,7 +971,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/FileOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="170">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding />
         </state>
@@ -1093,16 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/util/ExcelOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="357">
           <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/specs/Saving And Reading Values From Data Store.spec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="110" column="94" lean-forward="false" selection-start-line="110" selection-start-column="94" selection-end-line="110" selection-end-column="94" />
           <folding />
         </state>
       </provider>
@@ -1110,7 +988,47 @@
     <entry file="file://$PROJECT_DIR$/specs/01. Get PI Token.spec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/04. Get Purchased Decks List.spec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/maxsoft/ata/step/AllStepsDefinitions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="115" column="38" lean-forward="true" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/BaseClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="933" column="5" lean-forward="true" selection-start-line="933" selection-start-column="5" selection-end-line="933" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxsoft/ata/request/CommonStepDefinitions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="282" column="33" lean-forward="false" selection-start-line="282" selection-start-column="16" selection-end-line="282" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/Saving And Reading Values From Data Store.spec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>

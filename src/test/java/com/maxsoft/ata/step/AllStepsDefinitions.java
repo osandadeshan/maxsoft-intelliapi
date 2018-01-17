@@ -116,6 +116,12 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.jsonPathAssertions(table);
 	}
 
+	// Use this method to validate the content of the response using JSON Path Assertions with data stores
+	@Step("And the JSON Path Assertions for the response should be equal to the values inside the data stores <responseFields>")
+	public void jsonPathAssertionsFromDataStores(Table table){
+		commonStepDefinitions.jsonPathAssertionsFromDataStores(table);
+	}
+
 	// Use this method to validate the node of the JSON Path is exists
 	@Step("And the JSON Path Existence in the response should be equal to the following <jsonPaths>")
 	public void jsonPathExistence(Table table){

@@ -94,16 +94,21 @@ tags: get_pi_token, staging
      |JSON Path     |Expected Result|
      |--------------|---------------|
      |$.status      |success        |
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |---------------|---------------|-----------------------|
+    |Scenario       |status         |$.status               |
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+    |JSON Path      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |$.status       |y                  |scenario       |status                  |N/A            |
+    |$.status       |n                  |N/A            |N/A                     |success        |
 * And save the access token in the response which is located inside the JSON Path of "$.data"
 * And the JSON Path Existence in the response should be equal to the following
      |JSON Path     |isExists       |
      |--------------|---------------|
      |$.status      |true           |
      |$.fuck        |false          |
-* And save the JSON Path values in the response inside the data stores
-    |DataStore Type |Variable Name  |Value To Be Stored     |
-    |---------------|---------------|-----------------------|
-    |Scenario       |status         |$.status               |
 * And the user set the query parameters using data stores as follows
     |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name|Query Value|
     |---------------|-------------------|---------------|------------------------|-----------|

@@ -269,6 +269,24 @@ public class CommonStepDefinitions extends BaseClass{
 		}
 	}
 
+	// Use this method to validate the content of the response using JSON Path Assertions with data stores
+	public void jsonPathAssertionsFromDataStores(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			String jsonPath = row.getCell(columnNames.get(0));
+			String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+			String dataStoreType = row.getCell(columnNames.get(2));
+			String dataStoreVariableName = row.getCell(columnNames.get(3));
+			String expectedValue = row.getCell(columnNames.get(4));
+			if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+                jsonPathAssertion(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
+            } else {
+                jsonPathAssertion(jsonPath, expectedValue);
+            }
+		}
+	}
+
 	// Use this method to validate the JSON Path Existence in the response
 	public void isJsonPathExists(Table table){
 		List<TableRow> rows = table.getTableRows();
