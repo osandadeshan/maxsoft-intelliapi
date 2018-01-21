@@ -71,12 +71,6 @@ Invoke PI API in Staging Environment using valid username and password and save 
 tags: get_pi_token, staging
 
 * Given that a user needs to invoke "Get Staging PI Token"
-* And the user set the request authentication configurations as follows
-     |Configuration                                                     |Configuration Value            |
-     |------------------------------------------------------------------|-------------------------------|
-     |Is authentication required?                                       |No                             |
-     |Do you need to retrieve the access token from the text file?      |N/A                            |
-     |Provide the access token if you need to authorize the API manually|N/A                            |
 * And the user save the values inside data stores as follows
     |DataStore Type |Variable Name  |Value To Be Stored     |
     |---------------|---------------|-----------------------|
@@ -90,10 +84,22 @@ tags: get_pi_token, staging
     |#password                       |n                  |N/A            |N/A                     |Password1                |
 * When the user invokes the API
 * Then the status code for the request is "201"
+* And the JSON Path values of the response should contains the following
+     |JSON Path     |isContains     |
+     |--------------|---------------|
+     |$.status      |success        |
+* And the JSON Path values of the response should not contains the following
+     |JSON Path     |notContains    |
+     |--------------|---------------|
+     |$.status      |fail           |
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path     |Expected Result|
      |--------------|---------------|
      |$.status      |success        |
+* And the JSON Path Assertions for the response should not be equal to the following
+     |JSON Path     |Expected Result|
+     |--------------|---------------|
+     |$.status      |fail           |
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored     |
     |---------------|---------------|-----------------------|
@@ -103,6 +109,10 @@ tags: get_pi_token, staging
     |---------------|-------------------|---------------|------------------------|---------------|
     |$.status       |y                  |scenario       |status                  |N/A            |
     |$.status       |n                  |N/A            |N/A                     |success        |
+* And the JSON Path Assertions for the response should not be equal to the values inside the data stores
+    |JSON Path      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |$.status       |n                  |N/A            |N/A                     |fail           |
 * And save the access token in the response which is located inside the JSON Path of "$.data"
 * And the JSON Path Existence in the response should be equal to the following
      |JSON Path     |isExists       |

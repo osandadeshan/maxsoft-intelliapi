@@ -111,15 +111,39 @@ public class AllStepsDefinitions{
 	}
 	
 	// Use this method to validate the content of the response using JSON Path Assertions
+	@Step("And the JSON Path values of the response should contains the following <responseFields>")
+	public void jsonPathValueContains(Table table){
+		commonStepDefinitions.jsonPathValueContains(table);
+	}
+
+	// Use this method to validate the content of the response using JSON Path Assertions
+	@Step("And the JSON Path values of the response should not contains the following <responseFields>")
+	public void jsonPathValueNotContains(Table table){
+		commonStepDefinitions.jsonPathValueNotContains(table);
+	}
+
+	// Use this method to validate the content of the response using JSON Path Assertions
 	@Step("And the JSON Path Assertions for the response should be equal to the following <responseFields>")
-	public void jsonPathAssertions(Table table){
-		commonStepDefinitions.jsonPathAssertions(table);
+	public void jsonPathAssertionEquals(Table table){
+		commonStepDefinitions.jsonPathAssertionEquals(table);
 	}
 
 	// Use this method to validate the content of the response using JSON Path Assertions with data stores
 	@Step("And the JSON Path Assertions for the response should be equal to the values inside the data stores <responseFields>")
-	public void jsonPathAssertionsFromDataStores(Table table){
-		commonStepDefinitions.jsonPathAssertionsFromDataStores(table);
+	public void jsonPathAssertionFromDataStoreEquals(Table table){
+		commonStepDefinitions.jsonPathAssertionFromDataStoreEquals(table);
+	}
+
+	// Use this method to validate the content of the response using JSON Path Assertions
+	@Step("And the JSON Path Assertions for the response should not be equal to the following <responseFields>")
+	public void jsonPathAssertionNotEquals(Table table){
+		commonStepDefinitions.jsonPathAssertionNotEquals(table);
+	}
+
+	// Use this method to validate the content of the response using JSON Path Assertions with data stores
+	@Step("And the JSON Path Assertions for the response should not be equal to the values inside the data stores <responseFields>")
+	public void jsonPathAssertionFromDataStoreNotEquals(Table table){
+		commonStepDefinitions.jsonPathAssertionFromDataStoreNotEquals(table);
 	}
 
 	// Use this method to validate the node of the JSON Path is exists

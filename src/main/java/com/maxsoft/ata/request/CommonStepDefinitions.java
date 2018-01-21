@@ -260,17 +260,44 @@ public class CommonStepDefinitions extends BaseClass{
 		super.verifyResponseStatusCode(statusCode);
 	}
 	
-	// Use this method to validate the content of the response using JSON Path Assertions
-	public void jsonPathAssertions(Table table){
+	// Use this method to validate the content of the response
+	public void jsonPathValueContains(Table table){
 		List<TableRow> rows = table.getTableRows();
 		List<String> columnNames = table.getColumnNames();
 		for (TableRow row : rows) {
-			jsonPathAssertion(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+			jsonPathValueContains(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+		}
+	}
+
+	// Use this method to validate the content of the response
+	public void jsonPathValueNotContains(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			jsonPathValueNotContains(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+		}
+	}
+
+	// Use this method to validate the content of the response using JSON Path Assertions
+	public void jsonPathAssertionEquals(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			jsonPathAssertionEquals(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+		}
+	}
+
+	// Use this method to validate the content of the response using JSON Path Assertions
+	public void jsonPathAssertionNotEquals(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			jsonPathAssertionNotEquals(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
 		}
 	}
 
 	// Use this method to validate the content of the response using JSON Path Assertions with data stores
-	public void jsonPathAssertionsFromDataStores(Table table){
+	public void jsonPathAssertionFromDataStoreEquals(Table table){
 		List<TableRow> rows = table.getTableRows();
 		List<String> columnNames = table.getColumnNames();
 		for (TableRow row : rows) {
@@ -280,9 +307,27 @@ public class CommonStepDefinitions extends BaseClass{
 			String dataStoreVariableName = row.getCell(columnNames.get(3));
 			String expectedValue = row.getCell(columnNames.get(4));
 			if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
-                jsonPathAssertion(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
+                jsonPathAssertionEquals(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
             } else {
-                jsonPathAssertion(jsonPath, expectedValue);
+                jsonPathAssertionEquals(jsonPath, expectedValue);
+            }
+		}
+	}
+
+	// Use this method to validate the content of the response using JSON Path Assertions with data stores
+	public void jsonPathAssertionFromDataStoreNotEquals(Table table){
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		for (TableRow row : rows) {
+			String jsonPath = row.getCell(columnNames.get(0));
+			String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+			String dataStoreType = row.getCell(columnNames.get(2));
+			String dataStoreVariableName = row.getCell(columnNames.get(3));
+			String expectedValue = row.getCell(columnNames.get(4));
+			if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+                jsonPathAssertionNotEquals(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
+            } else {
+				jsonPathAssertionNotEquals(jsonPath, expectedValue);
             }
 		}
 	}

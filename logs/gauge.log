@@ -40318,3 +40318,219 @@ Total time taken: 7.824s
 22:16:40.465 
 Total time taken: 9.803s
 22:16:40.465 Updates are available. Run `gauge update -c` for more info.
+18:23:11.966 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+18:23:12.979 Unable to send analytics data, timed out
+18:53:45.220 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+18:53:46.233 Unable to send analytics data, timed out
+18:53:47.219 Unable to send analytics data, timed out
+18:53:56.307 Checking updates...
+18:53:57.123 Unable to send analytics data, Post https://www.google-analytics.com/collect: net/http: TLS handshake timeout
+18:53:57.123 Unable to send analytics data, Post https://www.google-analytics.com/collect: net/http: TLS handshake timeout
+18:54:27.158 Plugin [Flash] with pid [13320] has exited
+18:54:27.697 Plugin [Html Report] with pid [8716] has exited
+18:54:28.208 Specifications:	1 executed	1 passed	0 failed	0 skipped
+18:54:28.208 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+18:54:28.208 
+Total time taken: 11.934s
+18:57:28.590 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+18:57:29.602 Unable to send analytics data, timed out
+18:57:30.603 Unable to send analytics data, timed out
+18:57:32.494 Checking updates...
+18:58:03.511 Plugin [Flash] with pid [10408] has exited
+18:58:03.512 Plugin [Html Report] with pid [13348] has exited
+18:58:03.863 Specifications:	1 executed	0 passed	1 failed	0 skipped
+18:58:03.864 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+18:58:03.865 
+Total time taken: 10.076s
+18:58:03.866 Updates are available. Run `gauge update -c` for more info.
+19:08:09.773 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:08:13.028 Checking updates...
+19:08:33.239 Plugin [Flash] with pid [6396] has exited
+19:08:33.339 Plugin [Html Report] with pid [8036] has exited
+19:08:33.841 Specifications:	1 executed	0 passed	1 failed	0 skipped
+19:08:33.841 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+19:08:33.841 
+Total time taken: 8.885s
+19:08:33.841 Updates are available. Run `gauge update -c` for more info.
+19:15:13.591 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:15:14.597 Unable to send analytics data, timed out
+19:15:16.909 Checking updates...
+19:15:40.620 Plugin [Flash] with pid [10892] has exited
+19:15:40.820 Plugin [Html Report] with pid [3880] has exited
+19:15:41.131 Specifications:	1 executed	0 passed	1 failed	0 skipped
+19:15:41.131 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+19:15:41.132 
+Total time taken: 9.119s
+19:15:41.132 Updates are available. Run `gauge update -c` for more info.
+19:17:27.713 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:17:29.926 Checking updates...
+19:17:54.128 Plugin [Flash] with pid [8124] has exited
+19:17:54.340 Plugin [Html Report] with pid [4860] has exited
+19:17:54.655 Specifications:	1 executed	0 passed	1 failed	0 skipped
+19:17:54.655 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+19:17:54.655 
+Total time taken: 7.917s
+19:17:54.655 Updates are available. Run `gauge update -c` for more info.
+19:19:05.228 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:19:06.275 Unable to send analytics data, timed out
+19:19:08.519 Checking updates...
+19:19:29.126 Plugin [Flash] with pid [13552] has exited
+19:19:29.226 Plugin [Html Report] with pid [3828] has exited
+19:19:29.548 Specifications:	1 executed	0 passed	1 failed	0 skipped
+19:19:29.548 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+19:19:29.548 
+Total time taken: 8.95s
+19:19:29.548 Updates are available. Run `gauge update -c` for more info.
+19:20:20.293 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:20:22.636 Checking updates...
+19:20:40.526 Plugin [Flash] with pid [11044] has exited
+19:20:40.626 Plugin [Html Report] with pid [8692] has exited
+19:20:40.935 Specifications:	1 executed	0 passed	1 failed	0 skipped
+19:20:40.935 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+19:20:40.936 
+Total time taken: 8.001s
+19:20:40.937 Updates are available. Run `gauge update -c` for more info.
+19:22:28.720 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:22:30.918 Checking updates...
+19:22:54.949 Plugin [Flash] with pid [8364] has exited
+19:22:55.049 Plugin [Html Report] with pid [3860] has exited
+19:22:55.385 Specifications:	1 executed	0 passed	1 failed	0 skipped
+19:22:55.385 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+19:22:55.387 
+Total time taken: 8.469s
+19:22:55.388 Updates are available. Run `gauge update -c` for more info.
+19:26:01.899 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:26:04.335 Checking updates...
+19:26:23.029 Plugin [Flash] with pid [12012] has exited
+19:26:23.123 Plugin [Html Report] with pid [10948] has exited
+19:26:23.434 Specifications:	1 executed	0 passed	1 failed	0 skipped
+19:26:23.434 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+19:26:23.434 
+Total time taken: 8.915s
+19:26:23.435 Updates are available. Run `gauge update -c` for more info.
+19:27:19.166 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:27:21.276 Checking updates...
+19:27:48.823 Plugin [Flash] with pid [11840] has exited
+19:27:48.955 Plugin [Html Report] with pid [6216] has exited
+19:27:49.269 Specifications:	1 executed	1 passed	0 failed	0 skipped
+19:27:49.269 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+19:27:49.271 
+Total time taken: 8.225s
+19:27:49.272 Updates are available. Run `gauge update -c` for more info.
+19:45:54.002 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+19:45:57.432 Checking updates...
+19:46:26.896 Plugin [Flash] with pid [12676] has exited
+19:46:27.001 Plugin [Html Report] with pid [13632] has exited
+19:46:27.402 Specifications:	1 executed	1 passed	0 failed	0 skipped
+19:46:27.402 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+19:46:27.404 
+Total time taken: 10.165s
+19:46:27.404 Updates are available. Run `gauge update -c` for more info.
+20:00:21.117 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+20:00:24.375 Checking updates...
+20:00:50.513 Plugin [Flash] with pid [11540] has exited
+20:00:50.602 Plugin [Html Report] with pid [1768] has exited
+20:00:51.033 Specifications:	1 executed	0 passed	1 failed	0 skipped
+20:00:51.033 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+20:00:51.033 
+Total time taken: 8.446s
+20:00:51.033 Updates are available. Run `gauge update -c` for more info.
+20:06:29.872 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+20:06:32.337 Checking updates...
+20:06:53.651 Plugin [Flash] with pid [11928] has exited
+20:06:53.750 Plugin [Html Report] with pid [12920] has exited
+20:06:54.151 Specifications:	1 executed	0 passed	1 failed	0 skipped
+20:06:54.151 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+20:06:54.153 
+Total time taken: 8.701s
+20:06:54.154 Updates are available. Run `gauge update -c` for more info.
+20:07:26.215 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+20:07:27.264 Unable to send analytics data, timed out
+20:07:28.269 Unable to send analytics data, timed out
+20:07:29.883 Checking updates...
+20:08:00.624 Plugin [Flash] with pid [3496] has exited
+20:08:00.724 Plugin [Html Report] with pid [13792] has exited
+20:08:01.029 Specifications:	1 executed	0 passed	1 failed	0 skipped
+20:08:01.029 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+20:08:01.030 
+Total time taken: 9.542s
+20:08:01.031 Updates are available. Run `gauge update -c` for more info.
+20:12:03.609 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+20:12:06.121 Checking updates...
+20:12:30.220 Plugin [Flash] with pid [11624] has exited
+20:12:30.424 Plugin [Html Report] with pid [1436] has exited
+20:12:30.826 Specifications:	1 executed	0 passed	1 failed	0 skipped
+20:12:30.826 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+20:12:30.827 
+Total time taken: 10.119s
+20:12:30.828 Updates are available. Run `gauge update -c` for more info.
+21:07:26.616 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:07:29.403 Checking updates...
+21:08:01.577 Plugin [Flash] with pid [2948] has exited
+21:08:01.678 Plugin [Html Report] with pid [5220] has exited
+21:08:02.182 Specifications:	1 executed	0 passed	1 failed	0 skipped
+21:08:02.184 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+21:08:02.185 
+Total time taken: 10.569s
+21:08:02.185 Updates are available. Run `gauge update -c` for more info.
+21:09:53.090 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:09:55.518 Checking updates...
+21:10:10.222 Plugin [Flash] with pid [10384] has exited
+21:10:10.323 Plugin [Html Report] with pid [11948] has exited
+21:10:10.534 Specifications:	1 executed	0 passed	1 failed	0 skipped
+21:10:10.534 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+21:10:10.534 
+Total time taken: 2.594s
+21:10:10.534 Updates are available. Run `gauge update -c` for more info.
+21:18:19.117 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:18:22.510 Checking updates...
+21:18:42.672 Plugin [Html Report] with pid [10948] has exited
+21:18:42.672 Plugin [Flash] with pid [11640] has exited
+21:18:43.074 Specifications:	1 executed	0 passed	1 failed	0 skipped
+21:18:43.074 Scenarios:	1 executed	0 passed	1 failed	0 skipped
+21:18:43.074 
+Total time taken: 8.137s
+21:18:43.074 Updates are available. Run `gauge update -c` for more info.
+21:20:01.052 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:20:02.075 Unable to send analytics data, timed out
+21:20:03.108 Unable to send analytics data, timed out
+21:20:05.445 Checking updates...
+21:21:05.558 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:21:06.595 Unable to send analytics data, timed out
+21:21:11.791 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:21:12.832 Unable to send analytics data, timed out
+21:21:13.836 Unable to send analytics data, timed out
+21:21:15.992 Checking updates...
+21:21:39.424 Plugin [Flash] with pid [10568] has exited
+21:21:39.832 Plugin [Html Report] with pid [13172] has exited
+21:21:40.140 Specifications:	1 executed	0 passed	1 failed	0 skipped
+21:21:40.140 Scenarios:	5 executed	4 passed	1 failed	0 skipped
+21:21:40.140 
+Total time taken: 11.371s
+21:21:40.140 Updates are available. Run `gauge update -c` for more info.
+21:27:46.296 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:27:47.373 Unable to send analytics data, timed out
+21:27:48.380 Unable to send analytics data, timed out
+21:27:50.532 Checking updates...
+21:28:13.236 Plugin [Flash] with pid [5596] has exited
+21:28:13.337 Plugin [Html Report] with pid [12292] has exited
+21:28:13.637 Specifications:	1 executed	1 passed	0 failed	0 skipped
+21:28:13.637 Scenarios:	1 executed	1 passed	0 failed	0 skipped
+21:28:13.637 
+Total time taken: 8.102s
+21:28:13.637 Updates are available. Run `gauge update -c` for more info.
+21:32:24.678 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:32:25.726 Unable to send analytics data, timed out
+21:32:26.729 Unable to send analytics data, timed out
+21:32:28.805 Checking updates...
+21:32:44.379 Gauge Install ID: 486879c2-413b-4545-af0c-869629921c34
+21:32:45.417 Unable to send analytics data, timed out
+21:32:46.402 Unable to send analytics data, timed out
+21:32:48.568 Checking updates...
+21:33:11.761 Plugin [Flash] with pid [12388] has exited
+21:33:12.067 Plugin [Html Report] with pid [8636] has exited
+21:33:12.369 Specifications:	1 executed	1 passed	0 failed	0 skipped
+21:33:12.369 Scenarios:	4 executed	4 passed	0 failed	0 skipped
+21:33:12.369 
+Total time taken: 11.463s
+21:33:12.369 Updates are available. Run `gauge update -c` for more info.
