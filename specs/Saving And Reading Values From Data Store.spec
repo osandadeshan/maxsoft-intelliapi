@@ -51,7 +51,7 @@ tags: get_pi_token, staging
      |JSON Path     |isExists       |
      |--------------|---------------|
      |$.status      |true           |
-     |$.fuck        |false          |
+     |$.osa         |false          |
 * And save the access token in the response which is located inside the JSON Path of "$.data"
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored     |
