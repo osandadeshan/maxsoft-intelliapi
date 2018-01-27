@@ -56,13 +56,13 @@ tags: get_pi_token, staging
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored     |
     |---------------|---------------|-----------------------|
-    |Scenario       |variable1      |$.status               |
-    |Specification  |variable2      |$.data                 |
+    |Scenario       |variable4      |$.status               |
+    |Specification  |variable5      |$.data                 |
 * And the user read the values from data stores as follows
     |DataStore Type |Variable Name  |
     |---------------|---------------|
-    |Scenario       |variable1      |
-    |Specification  |variable2      |
+    |Scenario       |variable4      |
+    |Specification  |variable5      |
 
 
 
@@ -75,8 +75,8 @@ tags: get_pi_token, staging
     |DataStore Type |Variable Name  |Value To Be Stored     |
     |---------------|---------------|-----------------------|
     |Scenario       |username       |osanda12               |
-    |Specification  |variable2      |Osanda Nimalarathna    |
-    |Scenario       |variable3      |Software Automation    |
+    |Specification  |variable6      |Osanda Nimalarathna    |
+    |Scenario       |variable7      |Software Automation    |
 * And the user set the request attributes using data stores as follows
     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
     |--------------------------------|-------------------|---------------|------------------------|-------------------------|
@@ -84,14 +84,26 @@ tags: get_pi_token, staging
     |#password                       |n                  |N/A            |N/A                     |Password1                |
 * When the user invokes the API
 * Then the status code for the request is "201"
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |---------------|---------------|-----------------------|
+    |Scenario       |status         |$.status               |
 * And the JSON Path values of the response should contains the following
      |JSON Path     |isContains     |
      |--------------|---------------|
      |$.status      |success        |
+* And the JSON Path values of the response should contains the values inside the data stores
+    |JSON Path      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |$.status       |y                  |scenario       |status                  |N/A            |
 * And the JSON Path values of the response should not contains the following
      |JSON Path     |notContains    |
      |--------------|---------------|
      |$.status      |fail           |
+* And the JSON Path values of the response should not contains the values inside the data stores
+    |JSON Path      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |$.status       |y                  |scenario       |variable7               |N/A            |
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path     |Expected Result|
      |--------------|---------------|
@@ -100,10 +112,6 @@ tags: get_pi_token, staging
      |JSON Path     |Expected Result|
      |--------------|---------------|
      |$.status      |fail           |
-* And save the JSON Path values in the response inside the data stores
-    |DataStore Type |Variable Name  |Value To Be Stored     |
-    |---------------|---------------|-----------------------|
-    |Scenario       |status         |$.status               |
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
     |JSON Path      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value |
     |---------------|-------------------|---------------|------------------------|---------------|
@@ -118,7 +126,7 @@ tags: get_pi_token, staging
      |JSON Path     |isExists       |
      |--------------|---------------|
      |$.status      |true           |
-     |$.fuck        |false          |
+     |$.osa         |false          |
 * And the user set the query parameters using data stores as follows
     |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name|Query Value|
     |---------------|-------------------|---------------|------------------------|-----------|

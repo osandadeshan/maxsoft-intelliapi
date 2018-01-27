@@ -61,16 +61,13 @@
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:09</span>
+          <span>00:00:11</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jan 25, 2018 at 10:05pm</span>
+          <span>Jan 27, 2018 at 7:44pm</span>
         </li>
       </ul>
-      
-  
-
     </div>
   </div>
 
@@ -97,7 +94,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:08</span>
+              <span id="time" class="time">00:00:10</span>
             </li>
           </a>
           
@@ -113,7 +110,7 @@
     <header class="curr-spec">
       <div class="spec-head-wrapper">
         <h3 class="spec-head" title="C:\Users\UnimaOs\IdeaProjects\MaxSoft-ATA-Framework\specs\Saving And Reading Values From Data Store.spec">Saving And Reading Values From Data Store Specification</h3>
-        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
+        <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
@@ -129,7 +126,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:08</span>
+        <span class="time">00:00:10</span>
       </div>
 
 	
@@ -138,9 +135,6 @@
 	</header>
 	<div id="specItemsContainer">
 	
-    
-  
-
     
 
     <div class="content">
@@ -176,8 +170,8 @@
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password</h3>
-    <span class="time">00:00:08</span>
+    <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file</h3>
+    <span class="time">00:00:10</span>
 
 	
   
@@ -192,9 +186,6 @@
   
 
 	</div>
-  
-  
-
 	
 
   
@@ -225,10 +216,6 @@
 
   
   
-
-  
-  
-  
     
       <span>
         Given that a user needs to invoke 
@@ -242,10 +229,19 @@
   </div>
 
   
+  
     
   
   
+	
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a></p>
+ </div>
+      </div>
+    </div>
   
 
 	</li></ul></div></div>
@@ -276,13 +272,9 @@
 
   
   
-
-  
-  
-  
     
       <span>
-        And the user set the request authentication configurations as follows 
+        And the user save the values inside data stores as follows 
       </span>
     
   
@@ -291,15 +283,15 @@
         <div>
           <table>
   <tr>
-    <th>Configuration</th><th>Configuration Value</th>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
   </tr>
   <tbody>
     
-    <tr><td>Is authentication required?</td><td>No</td></tr>
+    <tr><td>Scenario</td><td>username</td><td>osanda12</td></tr>
     
-    <tr><td>Do you need to retrieve the access token from the text file?</td><td>N/A</td></tr>
+    <tr><td>Specification</td><td>variable6</td><td>Osanda Nimalarathna</td></tr>
     
-    <tr><td>Provide the access token if you need to authorize the API manually</td><td>N/A</td></tr>
+    <tr><td>Scenario</td><td>variable7</td><td>Software Automation</td></tr>
     
   </tbody>
 </table>
@@ -311,10 +303,21 @@
   </div>
 
   
+  
     
   
   
+	
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“osanda12” is successfully saved as a text in Scenario Data Store [username]</p>
+ </div><div class="step-message"><p>“Osanda Nimalarathna” is successfully saved as a text in Specification Data Store [variable6]</p>
+ </div><div class="step-message"><p>“Software Automation” is successfully saved as a text in Scenario Data Store [variable7]</p>
+ </div>
+      </div>
+    </div>
   
 
 	</li></ul></div></div>
@@ -345,39 +348,49 @@
 
   
   
-
-  
-  
-  
     
       <span>
-        And the user set the request payload as follows 
+        And the user set the request attributes using data stores as follows 
       </span>
     
   
     
-      
-  <span class="modal-link">&lt;file:/resources/payloads/login.txt&gt;</span>
-    <div class="modal">
-      <h2 class="modal-title">/resources/payloads/login.txt</h2>
-      <span class="close">&times;</span>
-      <div class="modal-content">
-        <pre>{
- "userName": "osanda12",
- "password": "Password1"
-}</pre>
-      </div>
-    </div>
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Attribute Value In JSON Template</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Attribute Value To Be Set</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>#username</td><td>y</td><td>scenario</td><td>username</td><td>N/A</td></tr>
+    
+    <tr><td>#password</td><td>n</td><td>N/A</td><td>N/A</td><td>Password1</td></tr>
+    
+  </tbody>
+</table>
 
+        </div>
+      </div>
     
   
   </div>
 
   
+  
     
   
   
+	
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [username] is: “osanda12”</p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/> “userName”: “osanda12”,<br/> “password”: “Password1”<br/>}</p>
+ </div>
+      </div>
+    </div>
   
 
 	</li></ul></div></div>
@@ -396,7 +409,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:05</span>
+      <span class='time'>Execution Time : 00:00:07</span>
     </h5>
   
   <div class='step-info passed'>
@@ -406,10 +419,6 @@
       <div class='step-txt'>
 
 
-  
-  
-
-  
   
   
     
@@ -421,10 +430,21 @@
   </div>
 
   
+  
     
   
   
+	
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-ATA-Framework\resources/access_tokens/saved_valid_access_token.txt”</p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTE3MDczMjU0LCJpYXQiOjE1MTcwNjI0NTMsInNlc3NpZCI6IjhmZDAwYTFkLTNmZmQtNGU3My04YzM3LTMxMDA3ODQyZWY4ZCJ9.Rqj9RRhYITJLgm70qYWjO8SSIgFaVCWpY8qvT7e64s03qkdYd-MgMnz4xB8mAKsmYpn1fldnUGbol6sG8aCmJYooJL6EKz92zJf3VTOcTaJ5bI96p2jL_TmL5FDjt_a_CVSFEpJeXYtz14VJL0gHbKVnAxXPFPvGBJwl57JcWnk”<br/>}</p>
+ </div>
+      </div>
+    </div>
   
 
 	</li></ul></div></div>
@@ -453,10 +473,6 @@
       <div class='step-txt'>
 
 
-  
-  
-
-  
   
   
     
@@ -472,10 +488,11 @@
   </div>
 
   
+  
     
   
   
-  
+	
   
 
 	</li></ul></div></div>
@@ -506,8 +523,338 @@
 
   
   
+    
+      <span>
+        And save the JSON Path values in the response inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>status</td><td>$.status</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
 
   
+  
+    
+  
+  
+	
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“success” is successfully saved as a text in Scenario Data Store [status]</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should contains the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>isContains</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>success</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should contains the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>y</td><td>scenario</td><td>status</td><td>N/A</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [status] is: “success”</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should not contains the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>notContains</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>fail</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should not contains the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>y</td><td>scenario</td><td>variable7</td><td>N/A</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [variable7] is: “Software Automation”</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
   
   
     
@@ -537,10 +884,11 @@
   </div>
 
   
+  
     
   
   
-  
+	
   
 
 	</li></ul></div></div>
@@ -571,8 +919,256 @@
 
   
   
+    
+      <span>
+        And the JSON Path Assertions for the response should not be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>fail</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
 
   
+  
+    
+  
+  
+	
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>y</td><td>scenario</td><td>status</td><td>N/A</td></tr>
+    
+    <tr><td>$.status</td><td>n</td><td>N/A</td><td>N/A</td><td>success</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [status] is: “success”</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should not be equal to the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>n</td><td>N/A</td><td>N/A</td><td>fail</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+    
+      <span>
+        And save the access token in the response which is located inside the JSON Path of 
+      </span>
+    
+  
+    
+      <span class='parameter'>"$.data"</span>
+    
+  
+  </div>
+
+  
+  
+    
+  
+  
+	
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully saved the access token into the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-ATA-Framework\resources/access_tokens/saved_valid_access_token.txt”</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
   
   
     
@@ -604,10 +1200,11 @@
   </div>
 
   
+  
     
   
   
-  
+	
   
 
 	</li></ul></div></div>
@@ -638,64 +1235,9 @@
 
   
   
-
-  
-  
-  
     
       <span>
-        And save the access token in the response which is located inside the JSON Path of 
-      </span>
-    
-  
-    
-      <span class='parameter'>"$.data"</span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And save the JSON Path values in the response inside the data stores 
+        And the user set the query parameters using data stores as follows 
       </span>
     
   
@@ -704,13 +1246,13 @@
         <div>
           <table>
   <tr>
-    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+    <th>Query Name</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Query Value</th>
   </tr>
   <tbody>
     
-    <tr><td>Scenario</td><td>variable1</td><td>$.status</td></tr>
+    <tr><td>username</td><td>y</td><td>scenario</td><td>username</td><td>N/A</td></tr>
     
-    <tr><td>Specification</td><td>variable2</td><td>$.data</td></tr>
+    <tr><td>password</td><td>n</td><td>N/A</td><td>N/A</td><td>Password1</td></tr>
     
   </tbody>
 </table>
@@ -722,10 +1264,20 @@
   </div>
 
   
+  
     
   
   
+	
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [username] is: “osanda12”</p>
+ </div><div class="step-message"><p>Query parameters which will append to the request URL: ?username=osanda12&amp;password=Password1</p>
+ </div>
+      </div>
+    </div>
   
 
 	</li></ul></div></div>
@@ -756,13 +1308,9 @@
 
   
   
-
-  
-  
-  
     
       <span>
-        And the user read the values from data stores as follows 
+        And the user set the path parameters using data stores as follows 
       </span>
     
   
@@ -771,13 +1319,13 @@
         <div>
           <table>
   <tr>
-    <th>DataStore Type</th><th>Variable Name</th>
+    <th>Path Name</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Path Value</th>
   </tr>
   <tbody>
     
-    <tr><td>Scenario</td><td>variable1</td></tr>
+    <tr><td>#username</td><td>y</td><td>scenario</td><td>username</td><td>N/A</td></tr>
     
-    <tr><td>Specification</td><td>variable2</td></tr>
+    <tr><td>#password</td><td>n</td><td>N/A</td><td>N/A</td><td>Password1</td></tr>
     
   </tbody>
 </table>
@@ -789,10 +1337,20 @@
   </div>
 
   
+  
     
   
   
+	
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [username] is: “osanda12”</p>
+ </div><div class="step-message"><p>Path parameters which will append to the request URL:/osanda12/Password1</p>
+ </div>
+      </div>
+    </div>
   
 
 	</li></ul></div></div>
@@ -800,27 +1358,6 @@
     
   
 
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
-  
   
 
   
@@ -833,9 +1370,6 @@
 
     </div>
     </div>
-
-    
-  
 
     
     </div>

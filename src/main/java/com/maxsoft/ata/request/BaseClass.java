@@ -968,8 +968,10 @@ public class BaseClass {
                 System.out.println("No any JSON Paths found. Because the response is null for the given payload");
                 Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
             }
-        String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is not contains the expected value.\n";
-        Assert.assertTrue(JsonPath.read(responseString, jsonPath).toString().contains(expectedResult), nullableMessage);
+        String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
+        String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is not contains the expected value.\nJSON Path value is: " + jsonPathValue +
+                "\n"+ "Expected value to be contained is: " + expectedResult + "\n\n";
+        Assert.assertTrue(jsonPathValue.contains(expectedResult), nullableMessage);
     }
 
     public void jsonPathValueNotContains(String jsonPath, String expectedResult) {
@@ -982,8 +984,10 @@ public class BaseClass {
                 System.out.println("No any JSON Paths found. Because the response is null for the given payload");
                 Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
             }
-        String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is contains the expected value.\n";
-        Assert.assertFalse(JsonPath.read(responseString, jsonPath).toString().contains(expectedResult), nullableMessage);
+        String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
+        String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is contains the expected value.\nJSON Path value is: " + jsonPathValue +
+                "\n"+ "Expected value not to be contained is: " + expectedResult + "\n\n";
+        Assert.assertFalse(jsonPathValue.contains(expectedResult), nullableMessage);
     }
 
     public void jsonPathAssertionEquals(String jsonPath, String expectedResult) {

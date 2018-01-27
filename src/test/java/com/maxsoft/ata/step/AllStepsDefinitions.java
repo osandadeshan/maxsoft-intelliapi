@@ -116,11 +116,23 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.jsonPathValueContains(table);
 	}
 
+	// Use this method to validate the content of the response using JSON Path Assertions with data stores
+	@Step("And the JSON Path values of the response should contains the values inside the data stores <responseFields>")
+	public void jsonPathValueFromDataStoreContains(Table table){
+		commonStepDefinitions.jsonPathValueFromDataStoreContains(table);
+	}
+
 	// Use this method to validate the content of the response using JSON Path Assertions
 	@Step("And the JSON Path values of the response should not contains the following <responseFields>")
 	public void jsonPathValueNotContains(Table table){
 		commonStepDefinitions.jsonPathValueNotContains(table);
 	}
+
+    // Use this method to validate the content of the response using JSON Path Assertions with data stores
+    @Step("And the JSON Path values of the response should not contains the values inside the data stores <responseFields>")
+    public void jsonPathValueFromDataStoreNotContains(Table table){
+        commonStepDefinitions.jsonPathValueFromDataStoreNotContains(table);
+    }
 
 	// Use this method to validate the content of the response using JSON Path Assertions
 	@Step("And the JSON Path Assertions for the response should be equal to the following <responseFields>")
