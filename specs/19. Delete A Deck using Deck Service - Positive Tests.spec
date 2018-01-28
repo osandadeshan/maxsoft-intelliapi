@@ -40,6 +40,22 @@ Delete a Deck using a valid deckId
 
 
 
+Get a Deck using a deleted deckId
+----------------------------------
+* Given that a user needs to invoke "Get a Deck using Deck Service"
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |deckId         |y                  |spec           |deckId                  |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "404"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path     |Expected Result|
+     |--------------|---------------|
+     |$             |               |
+
+
+
 
 
 

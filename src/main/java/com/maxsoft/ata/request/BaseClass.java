@@ -253,6 +253,10 @@ public class BaseClass {
         }
     }
 
+    public void printResponseHeaders() {
+        print("Response Headers are: \n" + response.getHeaders().toString());
+    }
+
     public void apiToBeInvoked(String apiEndpointName) throws IOException {
         saveValueForScenario("API_NAME", apiEndpointName);
         // Print API Endpoint
@@ -350,6 +354,7 @@ public class BaseClass {
         getStatusCode();
         getResponse();
         printResponse();
+        printResponseHeaders();
     }
 
     public void postAPIWithAuth(String headerValue) throws IOException {
@@ -643,6 +648,7 @@ public class BaseClass {
             getStatusCode();
             getResponse();
             printResponse();
+            printResponseHeaders();
         }
     }
 
@@ -852,6 +858,7 @@ public class BaseClass {
         getStatusCode();
         getResponse();
         printResponse();
+        printResponseHeaders();
     }
 
     public void deleteAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
@@ -880,6 +887,7 @@ public class BaseClass {
         getStatusCode();
         getResponse();
         printResponse();
+        printResponseHeaders();
     }
 
     public ValidatableResponse verifyStatusCode(int statusCode) {

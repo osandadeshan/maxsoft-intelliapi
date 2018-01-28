@@ -37,6 +37,12 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.setRequestHeaders(table);
 	}
 
+	// Use this method to set the headers values for the JSON request using data store values
+	@Step("And the user set the request headers using data stores as follows <table>")
+	public void setRequestHeadersFromDataStores(Table table) throws IOException {
+		commonStepDefinitions.setRequestHeadersFromDataStores(table);
+	}
+
 	// Use this method to set the attribute values for the JSON request template in the Excel file
 	@Step("And the user set the request attributes as follows <table>")
 	public void setRequestPayloadJsonAttributes(Table table) throws IOException {

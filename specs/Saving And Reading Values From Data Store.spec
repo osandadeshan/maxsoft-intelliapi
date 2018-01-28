@@ -77,6 +77,10 @@ tags: get_pi_token, staging
     |Scenario       |username       |osanda12               |
     |Specification  |variable6      |Osanda Nimalarathna    |
     |Scenario       |variable7      |Software Automation    |
+* And the user set the request headers using data stores as follows
+    |Header Name    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value   |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |header1        |y                  |spec           |variable6               |N/A            |
 * And the user set the request attributes using data stores as follows
     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
     |--------------------------------|-------------------|---------------|------------------------|-------------------------|

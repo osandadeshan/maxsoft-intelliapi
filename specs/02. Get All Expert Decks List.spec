@@ -17,11 +17,11 @@ tags: get_all_expert_decks_list
 Get all decks list using the valid X-Platform (X-Platform = "Authoring")
 ------------------------------------------------------------------------
 * And the user set the request authentication configurations as follows
-     |Configuration Property Name       |Configuration Property Value   |
-     |----------------------------------|-------------------------------|
-     |isAccessTokenIncluded             |True                           |
-     |isAccessTokenRetrievedFromTextFile|True                           |
-     |accessTokenString                 |N/A                            |
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
 * And the user set the request headers as follows
      |Header Name                     |Header Value             |
      |--------------------------------|-------------------------|

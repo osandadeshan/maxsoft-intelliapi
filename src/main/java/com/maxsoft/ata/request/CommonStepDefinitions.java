@@ -37,6 +37,26 @@ public class CommonStepDefinitions extends BaseClass{
 		Headers.getFinalHeaders();
 	}
 
+	// Use this method to set the header values for the JSON request template in the Excel file using data store values
+	public void setRequestHeadersFromDataStores(Table table) throws IOException {
+		List<TableRow> rows = table.getTableRows();
+		List<String> columnNames = table.getColumnNames();
+		Headers.clearHeaders();
+		for (TableRow row : rows) {
+			String headerName = row.getCell(columnNames.get(0));
+			String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+			String dataStoreType = row.getCell(columnNames.get(2));
+			String dataStoreVariableName = row.getCell(columnNames.get(3));
+			String headerValue = row.getCell(columnNames.get(4));
+			if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+				Headers.setRequestHeaders(headerName, readFromDataStore(dataStoreType, dataStoreVariableName));
+			} else {
+				Headers.setRequestHeaders(headerName, headerValue);
+			}
+		}
+		Headers.getFinalHeaders();
+	}
+
 	// Use this method to set the attribute values for the JSON request template in the Excel file
 	public void setRequestAttributes(Table table) throws IOException {
 		List<TableRow> rows = table.getTableRows();
