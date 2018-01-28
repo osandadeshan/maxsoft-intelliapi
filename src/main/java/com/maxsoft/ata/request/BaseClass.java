@@ -2,9 +2,10 @@ package com.maxsoft.ata.request;
 
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.PathNotFoundException;
 import com.maxsoft.ata.util.ApiDocumentReader;
 import com.maxsoft.ata.util.Board;
-import com.maxsoft.ata.util.FileReadWrite;
+import com.maxsoft.ata.util.FileOperator;
 import com.maxsoft.ata.util.StringTable;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
@@ -21,7 +22,6 @@ import io.restassured.specification.RequestSpecification;
 import org.apache.commons.lang.StringUtils;
 import org.hamcrest.CoreMatchers;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.testng.Assert;
 
 import java.io.File;
@@ -42,6 +42,11 @@ public class BaseClass {
     private static final String DEV = "dev";
     private static final String QA = "qa";
     private static final String UAT = "uat";
+    private static final String PROD = "prod";
+    private static final String GET = "get";
+    private static final String POST = "post";
+    private static final String PUT = "put";
+    private static final String DELETE = "delete";
     public String AUTHORIZATION_HEADER_NAME = System.getenv("header_name_for_authorization");
     public String AUTHENTICATION_FIRST_VALUE = System.getenv("authentication_first_value");
     public String CURRENT_DIRECTORY = System.getProperty("user.dir");
@@ -53,37 +58,138 @@ public class BaseClass {
     private ValidatableResponse json;
     private RequestSpecification request = getRequestSpecification();
 
+    public void print(String text){
+        System.out.println(text);
+        Gauge.writeMessage(text);
+    }
+
     public static void printRequest(String request) {
         System.out.println("Request is: " + "\n" + request);
         Gauge.writeMessage("Request is: " + "\n" + request);
     }
 
-    public String getLocatorFilePath() {
+    public String getAPIDocumentFilePath() {
         return CURRENT_DIRECTORY + API_DOC_FILE_PATH;
     }
 
     public static String getSavedValueForScenario(String variableNameOfValueStoredInDataStore) {
-        // Fetching Value from the Data Store
-        DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-        return (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
+        try {
+            // Fetching Value from the Data Store
+            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
+            String value = (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
+            return value;
+        } catch (Exception ex) {
+            System.out.println("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            Gauge.writeMessage("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            return "";
+        }
     }
 
     public static String getSavedValueForSpecification(String variableNameOfValueStoredInDataStore) {
-        // Fetching Value from the Data Store
-        DataStore specDataStore = DataStoreFactory.getSpecDataStore();
-        return (String) specDataStore.get(variableNameOfValueStoredInDataStore);
+        try {
+            // Fetching Value from the Data Store
+            DataStore specDataStore = DataStoreFactory.getSpecDataStore();
+            String value = (String) specDataStore.get(variableNameOfValueStoredInDataStore);
+            return value;
+        } catch (Exception ex) {
+            System.out.println("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            Gauge.writeMessage("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            return "";
+        }
     }
 
     public static void saveValueForScenario(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
-        // Adding value to the Data Store
-        DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-        scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+        try {
+            // Adding value to the Data Store
+            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
+            scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+        } catch (Exception ex) {
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+        }
     }
 
     public static void saveValueForSpecification(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
-        // Adding value to the Data Store
-        DataStore specDataStore = DataStoreFactory.getSpecDataStore();
-        specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+        try {
+            // Adding value to the Data Store
+            DataStore specDataStore = DataStoreFactory.getSpecDataStore();
+            specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+        } catch (Exception ex) {
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+        }
+    }
+
+    public static String getScenarioDataStoreValue(String variableNameOfValueStoredInDataStore) {
+        try {
+            // Fetching Value from the Data Store
+            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
+            String value = (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
+            System.out.println("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
+            Gauge.writeMessage("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
+            return value;
+        } catch (Exception ex) {
+            System.out.println("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]");
+            Gauge.writeMessage("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]");
+            return "";
+        }
+    }
+
+    public static String getSpecificationDataStoreValue(String variableNameOfValueStoredInDataStore) {
+        try {
+            // Fetching Value from the Data Store
+            DataStore specDataStore = DataStoreFactory.getSpecDataStore();
+            String value = (String) specDataStore.get(variableNameOfValueStoredInDataStore);
+            System.out.println("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
+            Gauge.writeMessage("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
+            return value;
+        } catch (Exception ex) {
+            System.out.println("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]");
+            Gauge.writeMessage("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]");
+            return "";
+        }
+    }
+
+    public static void saveToScenarioDataStore(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
+        try {
+            // Adding value to the Data Store
+            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
+            scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+        } catch (Exception ex) {
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+        }
+    }
+
+    public static void saveToSpecificationDataStore(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
+        try {
+            // Adding value to the Data Store
+            DataStore specDataStore = DataStoreFactory.getSpecDataStore();
+            specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+        } catch (Exception ex) {
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+        }
+    }
+
+    public void saveToDataStore(String dataStoreType, String variableName, String valueToBeStored){
+        if (dataStoreType.toLowerCase().equals("spec") || dataStoreType.toLowerCase().equals("specification")){
+            saveToSpecificationDataStore(variableName, valueToBeStored);
+        } else {
+            saveToScenarioDataStore(variableName, valueToBeStored);
+        }
+    }
+
+    public String readFromDataStore(String dataStoreType, String variableName){
+        if (dataStoreType.toLowerCase().equals("spec") || dataStoreType.toLowerCase().equals("specification")){
+            return getSpecificationDataStoreValue(variableName);
+        } else {
+            return getScenarioDataStoreValue(variableName);
+        }
     }
 
     public String setUp() {
@@ -99,6 +205,9 @@ public class BaseClass {
         }
         if (ENVIRONMENT.toLowerCase().equals(UAT)) {
             HOST = System.getenv("uat_server_host");
+        }
+        if (ENVIRONMENT.toLowerCase().equals(PROD)) {
+            HOST = System.getenv("prod_server_host");
         }
         if (HOST == null) {
             HOST = "";
@@ -131,16 +240,21 @@ public class BaseClass {
     }
 
     public void printResponse() {
-        if (response.prettyPrint().toString().equals("")) {
+        String response = getSavedValueForScenario("response");
+        if (response.equals("")) {
             System.out.println("Response is empty for the given payload");
             Gauge.writeMessage("Response is empty for the given payload");
-        } else if (response.prettyPrint().toString().equals("[]")) {
+        } else if (response.equals("[]")) {
             System.out.println("Response is null for the given payload");
             Gauge.writeMessage("Response is null for the given payload");
         } else {
-            System.out.println("Response is: " + "\n" + response.prettyPrint());
-            Gauge.writeMessage("Response is: " + "\n" + response.prettyPrint());
+            System.out.println("Response is: " + "\n" + response);
+            Gauge.writeMessage("Response is: " + "\n" + response);
         }
+    }
+
+    public void printResponseHeaders() {
+        print("Response Headers are: \n" + response.getHeaders().toString());
     }
 
     public void apiToBeInvoked(String apiEndpointName) throws IOException {
@@ -240,6 +354,7 @@ public class BaseClass {
         getStatusCode();
         getResponse();
         printResponse();
+        printResponseHeaders();
     }
 
     public void postAPIWithAuth(String headerValue) throws IOException {
@@ -533,6 +648,7 @@ public class BaseClass {
             getStatusCode();
             getResponse();
             printResponse();
+            printResponseHeaders();
         }
     }
 
@@ -592,17 +708,31 @@ public class BaseClass {
         }
     }
 
+    public enum HttpMethod {
+        GET, POST, PUT, DELETE
+    }
+
     public void invokeConfiguredApi(String jsonPayload, List<Header> headerList) throws IOException {
         String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
         System.out.println("You are going to invoked a " + ApiDocumentReader.getHttpMethod(apiName));
         String accessTokenInFile = readAccessToken(); // Fetching token from the text file
         String accessToken = "";
-        Boolean isAccessTokenIncluded = Boolean.valueOf(getSavedValueForScenario("isAccessTokenIncluded"));
-        Boolean isAccessTokenRetrievedFromTextFile = Boolean.valueOf(getSavedValueForScenario("isAccessTokenRetrievedFromTextFile"));
-        String accessTokenString = String.valueOf(getSavedValueForScenario("accessTokenString"));
+        String isAuthenticationRequired = "";
+        String isAccessTokenRetrievedFromTextFile = "";
+        String accessTokenString = "";
 
-        if (isAccessTokenIncluded.equals(Boolean.TRUE)) {
-            if (isAccessTokenRetrievedFromTextFile.equals(Boolean.TRUE)) {
+        try {
+            isAuthenticationRequired = String.valueOf(getSavedValueForScenario("Is authentication required?").toLowerCase());
+            isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase());
+            accessTokenString = String.valueOf(getSavedValueForScenario("Provide the access token if you need to authorize the API manually").toLowerCase());
+        } catch (Exception ex){
+            isAuthenticationRequired = "";
+            isAccessTokenRetrievedFromTextFile = "";
+            accessTokenString = "";
+        }
+
+        if (Boolean.valueOf(isAuthenticationRequired).equals(Boolean.TRUE) || isAuthenticationRequired.equals("yes") || isAuthenticationRequired.equals("y")) {
+            if (Boolean.valueOf(isAccessTokenRetrievedFromTextFile).equals(Boolean.TRUE) || isAccessTokenRetrievedFromTextFile.equals("yes") || isAccessTokenRetrievedFromTextFile.equals("y")) {
                 accessToken = accessTokenInFile;
             } else {
                 accessToken = accessTokenString;
@@ -611,18 +741,14 @@ public class BaseClass {
             accessToken = "";
         }
 
-        if (ApiDocumentReader.getHttpMethod(apiName).equals("GET")) {
-            getAPIWithAuthMultipleHeaders(accessToken, headerList);
-        }
-        if (ApiDocumentReader.getHttpMethod(apiName).equals("POST")) {
-            postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
-        }
-        if (ApiDocumentReader.getHttpMethod(apiName).equals("PUT")) {
-            putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
-        }
-        if (ApiDocumentReader.getHttpMethod(apiName).equals("DELETE")) {
-            deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
-        }
+                HttpMethod httpMethod = HttpMethod.valueOf(ApiDocumentReader.getHttpMethod(apiName).toUpperCase());
+                switch (httpMethod){
+                    case GET: getAPIWithAuthMultipleHeaders(accessToken, headerList); break;
+                    case POST: postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
+                    case PUT: putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
+                    case DELETE: deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
+                    default: print("HTTP Method is not implemented");
+                }
 
     }
 
@@ -732,6 +858,7 @@ public class BaseClass {
         getStatusCode();
         getResponse();
         printResponse();
+        printResponseHeaders();
     }
 
     public void deleteAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
@@ -760,6 +887,7 @@ public class BaseClass {
         getStatusCode();
         getResponse();
         printResponse();
+        printResponseHeaders();
     }
 
     public ValidatableResponse verifyStatusCode(int statusCode) {
@@ -768,7 +896,7 @@ public class BaseClass {
     }
 
     public void verifyResponseStatusCode(String statusCode) {
-        Assert.assertEquals(getSavedValueForScenario("statusCode"), statusCode, "The expected status code for the request is not match with the actual status code\n");
+        Assert.assertEquals(getSavedValueForScenario("statusCode"), statusCode, "The expected status code for the request is not equal to the actual status code\n");
     }
 
     public void getStatusCode() {
@@ -784,16 +912,13 @@ public class BaseClass {
         return responseAsString;
     }
 
-    public void saveResponseJsonPathValue(String jsonPath, String variableNameOfValueToBeStoredInDataStore) throws JSONException {
+    public void saveResponseJsonPathValue(String dataStoreType, String variableName, String jsonPath) throws JSONException {
         String jsonData = getSavedValueForScenario("response");
         System.out.println(jsonData);
         Object dataObject = JsonPath.parse(jsonData).read(jsonPath);
         String jsonPathValue = dataObject.toString();
         // Save the value of response into a Data Store
-        saveValueForScenario(variableNameOfValueToBeStoredInDataStore, jsonPathValue);
-        // Retrieve the value of the Data Store
-        System.out.println("JsonPath value of \"" + jsonPath + "\": " + getSavedValueForScenario(variableNameOfValueToBeStoredInDataStore));
-        Gauge.writeMessage("JsonPath value of \"" + jsonPath + "\": " + getSavedValueForScenario(variableNameOfValueToBeStoredInDataStore));
+        saveToDataStore(dataStoreType, variableName, jsonPathValue);
     }
 
     public void saveAccessToken(String jsonPath) throws JSONException {
@@ -807,19 +932,19 @@ public class BaseClass {
         System.out.println("Access token: " + AUTHENTICATION_FIRST_VALUE + jsonPathValue);
         // Save the token into a file
         try {
-            FileReadWrite.writeToFile(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
-            System.out.println("Saving the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\" is succeeded");
-            Gauge.writeMessage("Saving the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\" is succeeded");
+            FileOperator.writeToFile(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
+            System.out.println("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
+            Gauge.writeMessage("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
         } catch (Exception ex) {
-            System.out.println("Saving the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\" is failed" + ex.getMessage());
-            Gauge.writeMessage("Saving the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\" is failed" + ex.getMessage());
+            System.out.println("Failed to save the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
+            Gauge.writeMessage("Failed to save the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
         }
     }
 
     public String readAccessToken() {
         String accessToken = "";
         try {
-            accessToken = FileReadWrite.readFromFile(ACCESS_TOKEN_FILE_PATH);
+            accessToken = FileOperator.readFromFile(ACCESS_TOKEN_FILE_PATH);
         } catch (Exception ex) {
         } finally {
             return accessToken;
@@ -842,7 +967,7 @@ public class BaseClass {
         }
     }
 
-    public void jsonPathAssertion(String jsonPath, String expectedResult) {
+    public void jsonPathValueContains(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
             System.out.println("No any JSON Paths found. Because the response is empty for the given payload");
@@ -852,33 +977,118 @@ public class BaseClass {
                 System.out.println("No any JSON Paths found. Because the response is null for the given payload");
                 Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
             }
+        String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
+        String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is not contains the expected value.\nJSON Path value is: " + jsonPathValue +
+                "\n"+ "Expected value to be contained is: " + expectedResult + "\n\n";
+        Assert.assertTrue(jsonPathValue.contains(expectedResult), nullableMessage);
+    }
+
+    public void jsonPathValueNotContains(String jsonPath, String expectedResult) {
+        Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
+        if (responseString.toString().equals("")) {
+            System.out.println("No any JSON Paths found. Because the response is empty for the given payload");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is empty for the given payload");
+        }
+            if (responseString.toString().equals("[]")) {
+                System.out.println("No any JSON Paths found. Because the response is null for the given payload");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
+            }
+        String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
+        String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is contains the expected value.\nJSON Path value is: " + jsonPathValue +
+                "\n"+ "Expected value not to be contained is: " + expectedResult + "\n\n";
+        Assert.assertFalse(jsonPathValue.contains(expectedResult), nullableMessage);
+    }
+
+    public void jsonPathAssertionEquals(String jsonPath, String expectedResult) {
+        Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
+        if (responseString.toString().equals("")) {
+            System.out.println("No any JSON Paths found. Because the response is empty for the given payload");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is empty for the given payload");
+        }
+            if (responseString.toString().equals("[]")) {
+                System.out.println("No any JSON Paths found. Because the response is null for the given payload");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
+            }
+        String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is not equal to the Actual value.\n";
                 if (expectedResult.toLowerCase().equals("[]")) {
                     String expectedResultForNull = "[]";
-                    Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, "Found mismatches in Expected and Actual results");
+                    Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, nullableMessage);
                 }
-                    else if (expectedResult.toLowerCase().equals("null")) {
-                        String expectedResultForNull = null;
-                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, "Found mismatches in Expected and Actual results");
-                    }
-                    else if (expectedResult.toLowerCase().equals("true")) {
-                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, "Found mismatches in Expected and Actual results");
-                    }
-                    else if (expectedResult.toLowerCase().equals("false")) {
-                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, "Found mismatches in Expected and Actual results");
-                    }
-                    else if (expectedResult.trim().equals("")) {
-                        String expectedResultForEmpty = "";
-                        Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, "Found mismatches in Expected and Actual results");
-                    }
-                    else if (expectedResult.matches("\\d+")) {
-                        Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, "Found mismatches in Expected and Actual results");
-                    }
-                    else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
-                        Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), "Found mismatches in Expected and Actual results");
-                    }
+                        else if (expectedResult.toLowerCase().equals("null")) {
+                            String expectedResultForNull = null;
+                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, nullableMessage);
+                        }
+                        else if (expectedResult.toLowerCase().equals("true")) {
+                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, nullableMessage);
+                        }
+                        else if (expectedResult.toLowerCase().equals("false")) {
+                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, nullableMessage);
+                        }
+                        else if (expectedResult.trim().equals("")) {
+                            String expectedResultForEmpty = "";
+                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, nullableMessage);
+                        }
+                        else if (expectedResult.matches("\\d+")) {
+                            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, nullableMessage);
+                        }
+                        else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
+                            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
+                        }
                 else {
-                    Assert.assertEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, "Found mismatches in Expected and Actual results");
+                    Assert.assertEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
                 }
+    }
+
+    public void jsonPathAssertionNotEquals(String jsonPath, String expectedResult) {
+        Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
+        if (responseString.toString().equals("")) {
+            System.out.println("No any JSON Paths found. Because the response is empty for the given payload");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is empty for the given payload");
+        }
+            if (responseString.toString().equals("[]")) {
+                System.out.println("No any JSON Paths found. Because the response is null for the given payload");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is null for the given payload");
+            }
+            String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is equal to the Actual value.\n";
+                if (expectedResult.toLowerCase().equals("[]")) {
+                    String expectedResultForNull = "[]";
+                    Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, nullableMessage);
+                }
+                        else if (expectedResult.toLowerCase().equals("null")) {
+                            String expectedResultForNull = null;
+                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, nullableMessage);
+                        }
+                        else if (expectedResult.toLowerCase().equals("true")) {
+                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, nullableMessage);
+                        }
+                        else if (expectedResult.toLowerCase().equals("false")) {
+                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, nullableMessage);
+                        }
+                        else if (expectedResult.trim().equals("")) {
+                            String expectedResultForEmpty = "";
+                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, nullableMessage);
+                        }
+                        else if (expectedResult.matches("\\d+")) {
+                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, nullableMessage);
+                        }
+                        else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
+                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
+                        }
+                else {
+                    Assert.assertNotEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
+                }
+    }
+
+    public void isJsonPathExists(String jsonPath, Boolean isExists) {
+        Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
+        Boolean actualResult = Boolean.FALSE;
+        try {
+            JsonPath.read(responseString, jsonPath);
+            actualResult = Boolean.TRUE;
+        } catch (PathNotFoundException ex) {
+            actualResult = Boolean.FALSE;
+        }
+        Assert.assertEquals(actualResult, isExists, "Expected and the Actual results are mismatched for the JSON Path \"" + jsonPath + "\"");
     }
 
     public void printResults(List<String> headersList, List<List<String>> rowsList, String additional) {

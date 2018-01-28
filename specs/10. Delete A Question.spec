@@ -11,17 +11,17 @@ tags: delete_a_question
 
 
 * Given that a user needs to invoke "Delete a Question"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
 
 
 
 Delete a question using a valid cardId
 --------------------------------------
-* And the user set the request authentication configurations as follows
-     |Configuration Property Name       |Configuration Property Value   |
-     |----------------------------------|-------------------------------|
-     |isAccessTokenIncluded             |True                           |
-     |isAccessTokenRetrievedFromTextFile|True                           |
-     |accessTokenString                 |N/A                            |
 * And the user set the path parameters as follows
      |Path Parameter |Path Value               |
      |---------------|-------------------------|
@@ -33,12 +33,6 @@ Delete a question using a valid cardId
 
 Delete a question using already deleted cardId
 ----------------------------------------------
-* And the user set the request authentication configurations as follows
-     |Configuration Property Name       |Configuration Property Value   |
-     |----------------------------------|-------------------------------|
-     |isAccessTokenIncluded             |True                           |
-     |isAccessTokenRetrievedFromTextFile|True                           |
-     |accessTokenString                 |N/A                            |
 * And the user set the path parameters as follows
      |Path Parameter |Path Value               |
      |---------------|-------------------------|
@@ -56,12 +50,6 @@ Delete a question using already deleted cardId
 
 Delete a question using an invalid cardId
 -----------------------------------------
-* And the user set the request authentication configurations as follows
-     |Configuration Property Name       |Configuration Property Value   |
-     |----------------------------------|-------------------------------|
-     |isAccessTokenIncluded             |True                           |
-     |isAccessTokenRetrievedFromTextFile|True                           |
-     |accessTokenString                 |N/A                            |
 * And the user set the path parameters as follows
      |Path Parameter |Path Value               |
      |---------------|-------------------------|
@@ -79,12 +67,6 @@ Delete a question using an invalid cardId
 
 Delete a question using an empty value as the cardId
 ----------------------------------------------------
-* And the user set the request authentication configurations as follows
-     |Configuration Property Name       |Configuration Property Value   |
-     |----------------------------------|-------------------------------|
-     |isAccessTokenIncluded             |True                           |
-     |isAccessTokenRetrievedFromTextFile|True                           |
-     |accessTokenString                 |N/A                            |
 * And the user set the path parameters as follows
      |Path Parameter |Path Value               |
      |---------------|-------------------------|
@@ -102,12 +84,6 @@ Delete a question using an empty value as the cardId
 
 Delete a question without cardId path parameter
 -----------------------------------------------
-* And the user set the request authentication configurations as follows
-     |Configuration Property Name       |Configuration Property Value   |
-     |----------------------------------|-------------------------------|
-     |isAccessTokenIncluded             |True                           |
-     |isAccessTokenRetrievedFromTextFile|True                           |
-     |accessTokenString                 |N/A                            |
 * When the user invokes the API
 * Then the status code for the request is "405"
 * And the JSON Path Assertions for the response should be equal to the following

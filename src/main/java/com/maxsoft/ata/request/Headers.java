@@ -19,7 +19,7 @@ public class Headers extends BaseClass {
     static List<Header> headerList = new LinkedList<Header>();
     static {
         try {
-            request = ApiDocumentReader.getRequestTemplate(apiName);
+            request = ApiDocumentReader.getRequestPayloadTemplate(apiName);
         } catch (IOException e) {
             e.printStackTrace();
         }

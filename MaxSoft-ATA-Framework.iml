@@ -25,7 +25,7 @@
     <orderEntry type="library" name="Maven: com.jayway.restassured:rest-assured-common:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.jayway.restassured:xml-path:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
-    <orderEntry type="library" name="Maven: com.thoughtworks.gauge:gauge-java:0.6.5" level="project" />
+    <orderEntry type="library" name="Maven: com.thoughtworks.gauge:gauge-java:0.6.6" level="project" />
     <orderEntry type="library" name="Maven: org.reflections:reflections:0.9.11" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.21.0-GA" level="project" />
     <orderEntry type="library" name="Maven: com.github.javaparser:javaparser-core:2.5.1" level="project" />
