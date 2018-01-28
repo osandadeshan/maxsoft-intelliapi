@@ -240,15 +240,16 @@ public class BaseClass {
     }
 
     public void printResponse() {
-        if (response.prettyPrint().toString().equals("")) {
+        String response = getSavedValueForScenario("response");
+        if (response.equals("")) {
             System.out.println("Response is empty for the given payload");
             Gauge.writeMessage("Response is empty for the given payload");
-        } else if (response.prettyPrint().toString().equals("[]")) {
+        } else if (response.equals("[]")) {
             System.out.println("Response is null for the given payload");
             Gauge.writeMessage("Response is null for the given payload");
         } else {
-            System.out.println("Response is: " + "\n" + response.prettyPrint());
-            Gauge.writeMessage("Response is: " + "\n" + response.prettyPrint());
+            System.out.println("Response is: " + "\n" + response);
+            Gauge.writeMessage("Response is: " + "\n" + response);
         }
     }
 
@@ -702,7 +703,7 @@ public class BaseClass {
     }
 
     public enum HttpMethod {
-        GET, POST, PUT, DELETE;
+        GET, POST, PUT, DELETE
     }
 
     public void invokeConfiguredApi(String jsonPayload, List<Header> headerList) throws IOException {
@@ -887,7 +888,7 @@ public class BaseClass {
     }
 
     public void verifyResponseStatusCode(String statusCode) {
-        Assert.assertEquals(getSavedValueForScenario("statusCode"), statusCode, "The expected status code for the request is not match with the actual status code\n");
+        Assert.assertEquals(getSavedValueForScenario("statusCode"), statusCode, "The expected status code for the request is not equal to the actual status code\n");
     }
 
     public void getStatusCode() {
