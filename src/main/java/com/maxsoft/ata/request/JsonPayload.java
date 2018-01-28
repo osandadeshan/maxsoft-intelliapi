@@ -16,7 +16,7 @@ public abstract class JsonPayload extends BaseClass {
 	static String request;
 	static {
 		try {
-			request = ApiDocumentReader.getRequestTemplate(apiName);
+			request = ApiDocumentReader.getRequestPayloadTemplate(apiName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -36,9 +36,15 @@ public abstract class JsonPayload extends BaseClass {
 		System.out.println("The JSON request body that you are going to use for the API is:\n" + request);
 		Gauge.writeMessage("The JSON request body that you are going to use for the API is:\n" + request);
 	}
+
+	public static void saveFinalJsonRequestBody(String payload){
+		saveValueForScenario("finalJsonRequestBody", payload);
+		System.out.println("The JSON request body that you are going to use for the API is:\n" + payload);
+		Gauge.writeMessage("The JSON request body that you are going to use for the API is:\n" + payload);
+	}
 	
 	public static void setRequestToDefault() throws IOException {
-		request = ApiDocumentReader.getRequestTemplate(getSavedValueForScenario("API_NAME"));
+		request = ApiDocumentReader.getRequestPayloadTemplate(getSavedValueForScenario("API_NAME"));
 	}
 	
 	
