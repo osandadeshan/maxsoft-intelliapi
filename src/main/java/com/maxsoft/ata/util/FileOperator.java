@@ -37,7 +37,7 @@ public abstract class FileOperator {
                     }
     }
 
-    public static String readFromFile(String filePath){
+    public static String readAccessTokenFromFile(String filePath){
         String content = null;
         try {
             content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
@@ -46,7 +46,18 @@ public abstract class FileOperator {
         } catch (FileNotFoundException e) {
             System.out.println("Reading the access token from the text file in the directory of \"" + filePath + "\" is failed");
             Gauge.writeMessage("Reading the access token from the text file in the directory of \"" + filePath + "\" is failed");
+        }
+        System.out.println(content);
+        return content;
+    }
 
+    public static String readFromFile(String filePath){
+        String content = null;
+        try {
+            content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
+        } catch (FileNotFoundException e) {
+            System.out.println("Reading the text file in the directory of \"" + filePath + "\" is failed");
+            Gauge.writeMessage("Reading the text file in the directory of \"" + filePath + "\" is failed");
         }
         System.out.println(content);
         return content;

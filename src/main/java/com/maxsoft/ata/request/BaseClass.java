@@ -944,7 +944,7 @@ public class BaseClass {
     public String readAccessToken() {
         String accessToken = "";
         try {
-            accessToken = FileOperator.readFromFile(ACCESS_TOKEN_FILE_PATH);
+            accessToken = FileOperator.readAccessTokenFromFile(ACCESS_TOKEN_FILE_PATH);
         } catch (Exception ex) {
         } finally {
             return accessToken;

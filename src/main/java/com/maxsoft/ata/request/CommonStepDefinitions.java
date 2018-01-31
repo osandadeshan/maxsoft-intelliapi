@@ -1,10 +1,13 @@
 package com.maxsoft.ata.request;
 
+import com.maxsoft.ata.util.FileOperator;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
 import io.restassured.http.Header;
 import org.json.JSONException;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -14,7 +17,9 @@ import java.util.List;
  */
 
 
-public class CommonStepDefinitions extends BaseClass{
+public class CommonStepDefinitions extends BaseClass {
+    public static final String FILE_SYNTAX = "<file:";
+    public static final int FILE_SYNTAX_CHARACTER_COUNT = 6;
 
 	// Use this method to print the testing environment name in the HTML report
 	public void testEnvDetails(){
@@ -32,7 +37,11 @@ public class CommonStepDefinitions extends BaseClass{
 		List<String> columnNames = table.getColumnNames();
 		Headers.clearHeaders();
 		for (TableRow row : rows) {
-			Headers.setRequestHeaders(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                Headers.setRequestHeaders(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
+            } else {
+                Headers.setRequestHeaders(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
 		}
 		Headers.getFinalHeaders();
 	}
@@ -51,7 +60,11 @@ public class CommonStepDefinitions extends BaseClass{
 			if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
 				Headers.setRequestHeaders(headerName, readFromDataStore(dataStoreType, dataStoreVariableName));
 			} else {
-				Headers.setRequestHeaders(headerName, headerValue);
+                if (headerValue.substring(0, Math.min(headerValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    Headers.setRequestHeaders(headerName, FileOperator.readFromFile(CURRENT_DIRECTORY + headerValue.substring(FILE_SYNTAX_CHARACTER_COUNT, headerValue.length() - 1)));
+                } else {
+                    Headers.setRequestHeaders(headerName, headerValue);
+                }
 			}
 		}
 		Headers.getFinalHeaders();
@@ -68,7 +81,11 @@ public class CommonStepDefinitions extends BaseClass{
 			}
 			else if (row.getCell(columnNames.get(1)).equalsIgnoreCase("null")){
 				JsonPayload.setJsonAttributeValueAs(row.getCell(columnNames.get(0)), "null");
-			} else {
+			}
+			else if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+			  JsonPayload.setJsonAttributeValueAs(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length()-1)));
+            }
+			else {
 				JsonPayload.setJsonAttributeValueAs(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
 			}
 		}
@@ -95,6 +112,9 @@ public class CommonStepDefinitions extends BaseClass{
                 }
                 else if (replacementValue.equalsIgnoreCase("null")){
                     JsonPayload.setJsonAttributeValueAs(valueToBeReplaced, "null");
+                }
+                else if (replacementValue.substring(0, Math.min(replacementValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    JsonPayload.setJsonAttributeValueAs(valueToBeReplaced, FileOperator.readFromFile(CURRENT_DIRECTORY + replacementValue.substring(FILE_SYNTAX_CHARACTER_COUNT, replacementValue.length() - 1)));
                 } else {
                     JsonPayload.setJsonAttributeValueAs(valueToBeReplaced, replacementValue);
                 }
@@ -146,7 +166,11 @@ public class CommonStepDefinitions extends BaseClass{
         List<String> columnNames = parameterTable.getColumnNames();
         String queryParams = "?";
         for (TableRow row : rows) {
-				queryParams = queryParams.concat(row.getCell(columnNames.get(0)) + "=" + row.getCell(columnNames.get(1)) + "&");
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                queryParams = queryParams.concat(row.getCell(columnNames.get(0)) + "=" + FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)) + "&");
+            } else {
+                queryParams = queryParams.concat(row.getCell(columnNames.get(0)) + "=" + row.getCell(columnNames.get(1)) + "&");
+            }
         }
         queryParams = queryParams.replaceAll(".$", "");
         System.out.println("Query parameters which will append to the request URL: " + queryParams);
@@ -167,7 +191,11 @@ public class CommonStepDefinitions extends BaseClass{
             if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
                 queryParams = queryParams.concat(queryName + "=" + readFromDataStore(dataStoreType, dataStoreVariableName) + "&");
             } else {
-                queryParams = queryParams.concat(queryName + "=" + queryValue + "&");
+                if (queryValue.substring(0, Math.min(queryValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    queryParams = queryParams.concat(queryName + "=" + FileOperator.readFromFile(CURRENT_DIRECTORY + queryValue.substring(FILE_SYNTAX_CHARACTER_COUNT, queryValue.length() - 1)) + "&");
+                } else {
+                    queryParams = queryParams.concat(queryName + "=" + queryValue + "&");
+                }
             }
         }
         queryParams = queryParams.replaceAll(".$", "");
@@ -181,7 +209,11 @@ public class CommonStepDefinitions extends BaseClass{
         List<String> columnNames = parameterTable.getColumnNames();
         String pathParams = "/";
         for (TableRow row : rows) {
-            pathParams = pathParams.concat(row.getCell(columnNames.get(1)));
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                pathParams = pathParams.concat(FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
+            } else {
+                pathParams = pathParams.concat(row.getCell(columnNames.get(1)));
+            }
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.substring(0, pathParams.length() - 1);
@@ -202,7 +234,11 @@ public class CommonStepDefinitions extends BaseClass{
                 if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
                     pathParams = pathParams.concat(readFromDataStore(dataStoreType, dataStoreVariableName));
                 } else {
-                    pathParams = pathParams.concat(pathValue);
+                    if (pathValue.substring(0, Math.min(pathValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                        pathParams = pathParams.concat(FileOperator.readFromFile(CURRENT_DIRECTORY + pathValue.substring(FILE_SYNTAX_CHARACTER_COUNT, pathValue.length() - 1)));
+                    } else {
+                        pathParams = pathParams.concat(pathValue);
+                    }
                 }
             pathParams = pathParams.concat("/");
         }
@@ -285,7 +321,11 @@ public class CommonStepDefinitions extends BaseClass{
 		List<TableRow> rows = table.getTableRows();
 		List<String> columnNames = table.getColumnNames();
 		for (TableRow row : rows) {
-			jsonPathValueContains(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                jsonPathValueContains(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
+            } else {
+                jsonPathValueContains(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
 		}
 	}
 
@@ -302,7 +342,11 @@ public class CommonStepDefinitions extends BaseClass{
             if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
                 jsonPathValueContains(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
             } else {
-                jsonPathValueContains(jsonPath, expectedValue);
+                if (expectedValue.substring(0, Math.min(expectedValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    jsonPathValueContains(jsonPath, FileOperator.readFromFile(CURRENT_DIRECTORY + expectedValue.substring(FILE_SYNTAX_CHARACTER_COUNT, expectedValue.length() - 1)));
+                } else {
+                    jsonPathValueContains(jsonPath, expectedValue);
+                }
             }
 		}
 	}
@@ -312,7 +356,11 @@ public class CommonStepDefinitions extends BaseClass{
 		List<TableRow> rows = table.getTableRows();
 		List<String> columnNames = table.getColumnNames();
 		for (TableRow row : rows) {
-			jsonPathValueNotContains(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                jsonPathValueNotContains(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
+            } else {
+                jsonPathValueNotContains(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
 		}
 	}
 
@@ -329,7 +377,11 @@ public class CommonStepDefinitions extends BaseClass{
             if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
                 jsonPathValueNotContains(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
             } else {
-                jsonPathValueNotContains(jsonPath, expectedValue);
+                if (expectedValue.substring(0, Math.min(expectedValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    jsonPathValueNotContains(jsonPath, FileOperator.readFromFile(CURRENT_DIRECTORY + expectedValue.substring(FILE_SYNTAX_CHARACTER_COUNT, expectedValue.length() - 1)));
+                } else {
+                    jsonPathValueNotContains(jsonPath, expectedValue);
+                }
             }
         }
     }
@@ -339,7 +391,11 @@ public class CommonStepDefinitions extends BaseClass{
 		List<TableRow> rows = table.getTableRows();
 		List<String> columnNames = table.getColumnNames();
 		for (TableRow row : rows) {
-			jsonPathAssertionEquals(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+			if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                jsonPathAssertionEquals(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length()-1)));
+            } else {
+                jsonPathAssertionEquals(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
 		}
 	}
 
@@ -356,7 +412,11 @@ public class CommonStepDefinitions extends BaseClass{
             if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
                 jsonPathAssertionEquals(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
             } else {
-                jsonPathAssertionEquals(jsonPath, expectedValue);
+                if (expectedValue.substring(0, Math.min(expectedValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    jsonPathAssertionEquals(jsonPath, FileOperator.readFromFile(CURRENT_DIRECTORY + expectedValue.substring(FILE_SYNTAX_CHARACTER_COUNT, expectedValue.length()-1)));
+                } else {
+                    jsonPathAssertionEquals(jsonPath, expectedValue);
+                }
             }
         }
     }
@@ -366,7 +426,11 @@ public class CommonStepDefinitions extends BaseClass{
 		List<TableRow> rows = table.getTableRows();
 		List<String> columnNames = table.getColumnNames();
 		for (TableRow row : rows) {
-			jsonPathAssertionNotEquals(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                jsonPathAssertionNotEquals(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
+            } else {
+                jsonPathAssertionNotEquals(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
 		}
 	}
 
@@ -383,7 +447,11 @@ public class CommonStepDefinitions extends BaseClass{
 			if(isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
                 jsonPathAssertionNotEquals(jsonPath, readFromDataStore(dataStoreType, dataStoreVariableName));
             } else {
-				jsonPathAssertionNotEquals(jsonPath, expectedValue);
+                if (expectedValue.substring(0, Math.min(expectedValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    jsonPathAssertionNotEquals(jsonPath, FileOperator.readFromFile(CURRENT_DIRECTORY + expectedValue.substring(FILE_SYNTAX_CHARACTER_COUNT, expectedValue.length() - 1)));
+                } else {
+                    jsonPathAssertionNotEquals(jsonPath, expectedValue);
+                }
             }
 		}
 	}
