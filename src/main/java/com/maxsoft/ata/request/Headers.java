@@ -1,8 +1,10 @@
 package com.maxsoft.ata.request;
 
 import com.maxsoft.ata.util.ApiDocumentReader;
+import com.thoughtworks.gauge.Gauge;
 import io.restassured.http.Header;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -37,6 +39,15 @@ public class Headers extends BaseClass {
 
     public static List<Header> getFinalHeaders(){
         return headerList;
+    }
+
+    public static void printHeaders() {
+        System.out.println("Header List: ");
+        Gauge.writeMessage("Header List: ");
+        for(Header header : headerList) {
+            System.out.println(header.getName() + " = " + header.getValue());
+            Gauge.writeMessage(header.getName() + " = " + header.getValue());
+        }
     }
 
     public static void clearHeaders() throws IOException {

@@ -159,6 +159,8 @@ tags: get_pi_token, staging
     |Header Name    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                        |
     |---------------|-------------------|---------------|------------------------|------------------------------------|
     |header1        |n                  |               |                        |<file:/resources/texts/header1.txt> |
+    |header2        |n                  |               |                        |<file:/resources/texts/header1.txt> |
+    |header3        |n                  |               |                        |<file:/resources/texts/header1.txt> |
 * And the user set the request attributes using data stores as follows
     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set            |
     |--------------------------------|-------------------|---------------|------------------------|-------------------------------------|

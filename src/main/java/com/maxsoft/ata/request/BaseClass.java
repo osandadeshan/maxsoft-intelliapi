@@ -27,6 +27,7 @@ import org.testng.Assert;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
 
@@ -253,6 +254,10 @@ public class BaseClass {
         }
     }
 
+    public void printResponseTime(){
+        print("Response Time is: " + response.getTimeIn(TimeUnit.MILLISECONDS) + "ms");
+    }
+
     public void printResponseHeaders() {
         print("Response Headers are: \n" + response.getHeaders().toString());
     }
@@ -353,6 +358,7 @@ public class BaseClass {
         }
         getStatusCode();
         getResponse();
+        printResponseTime();
         printResponse();
         printResponseHeaders();
     }
@@ -647,6 +653,7 @@ public class BaseClass {
                     .get(invokingEndpoint);
             getStatusCode();
             getResponse();
+            printResponseTime();
             printResponse();
             printResponseHeaders();
         }
@@ -857,6 +864,7 @@ public class BaseClass {
         }
         getStatusCode();
         getResponse();
+        printResponseTime();
         printResponse();
         printResponseHeaders();
     }
@@ -886,6 +894,7 @@ public class BaseClass {
         }
         getStatusCode();
         getResponse();
+        printResponseTime();
         printResponse();
         printResponseHeaders();
     }

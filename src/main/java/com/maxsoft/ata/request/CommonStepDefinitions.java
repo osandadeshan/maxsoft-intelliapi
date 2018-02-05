@@ -44,6 +44,7 @@ public class CommonStepDefinitions extends BaseClass {
             }
 		}
 		Headers.getFinalHeaders();
+		Headers.printHeaders();
 	}
 
 	// Use this method to set the header values for the JSON request template in the Excel file using data store values
@@ -68,6 +69,7 @@ public class CommonStepDefinitions extends BaseClass {
 			}
 		}
 		Headers.getFinalHeaders();
+		Headers.printHeaders();
 	}
 
 	// Use this method to set the attribute values for the JSON request template in the Excel file
