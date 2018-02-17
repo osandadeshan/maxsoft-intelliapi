@@ -7,7 +7,6 @@ import com.thoughtworks.gauge.TableRow;
 import io.restassured.http.Header;
 import org.json.JSONException;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -29,6 +28,11 @@ public class CommonStepDefinitions extends BaseClass {
 	// Use this method at the beginning of the scenario to identify which API is going to use in that scenario
 	public void apiToBeInvoked(String apiEndpointName) throws IOException {
 		super.apiToBeInvoked(apiEndpointName);
+	}
+
+	// Use this method to replace column values into timestamps by column name of a CSV file
+	public void replaceCSVColumnValuesToTimestamps(String filePath, String columnName) throws IOException {
+		replaceAllColumnValuesToTimestamps(CURRENT_DIRECTORY + filePath, columnName);
 	}
 
 	// Use this method to set the header values for the JSON request template in the Excel file

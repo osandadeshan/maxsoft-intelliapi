@@ -3,10 +3,7 @@ package com.maxsoft.ata.request;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
-import com.maxsoft.ata.util.ApiDocumentReader;
-import com.maxsoft.ata.util.Board;
-import com.maxsoft.ata.util.FileOperator;
-import com.maxsoft.ata.util.StringTable;
+import com.maxsoft.ata.util.*;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
@@ -23,12 +20,11 @@ import org.apache.commons.lang.StringUtils;
 import org.hamcrest.CoreMatchers;
 import org.json.JSONException;
 import org.testng.Assert;
-
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import static io.restassured.RestAssured.given;
 
 
@@ -58,6 +54,7 @@ public class BaseClass {
     private Response response;
     private ValidatableResponse json;
     private RequestSpecification request = getRequestSpecification();
+    private static CSV csv = new CSV();
 
     public void print(String text){
         System.out.println(text);
@@ -71,6 +68,17 @@ public class BaseClass {
 
     public String getAPIDocumentFilePath() {
         return CURRENT_DIRECTORY + API_DOC_FILE_PATH;
+    }
+
+    public String getCurrentTimestamp(){
+        return new SimpleDateFormat("dd.MM.yyyy HH:mm:ss:SSSSSS").format(new java.util.Date());
+    }
+
+    public void replaceAllColumnValuesToTimestamps(String filePath, String columnName) throws IOException {
+        for(int i=1; i<=csv.getLinesCount(filePath); i++){
+            csv.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(), i,
+                    csv.getColumnIndexByColumnName(filePath, columnName));
+        }
     }
 
     public static String getSavedValueForScenario(String variableNameOfValueStoredInDataStore) {

@@ -30,6 +30,11 @@ public class AllStepsDefinitions{
 	public void apiToBeInvoked(String apiEndpointName) throws IOException {
 		commonStepDefinitions.apiToBeInvoked(apiEndpointName);
 	}
+
+	@Step("And replace the values in <columnName> column into timestamps in the CSV <filePath>")
+	public void replaceCSVColumn(String columnName, String filePath) throws IOException {
+		commonStepDefinitions.replaceCSVColumnValuesToTimestamps(filePath, columnName);
+	}
 	
 	// Use this method to set the headers values for the JSON request
 	@Step("And the user set the request headers as follows <table>")
