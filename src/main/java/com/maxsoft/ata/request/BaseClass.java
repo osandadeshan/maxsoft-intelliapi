@@ -985,12 +985,12 @@ public class BaseClass {
     public void jsonPathValueContains(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload");
+            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
             if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload");
+                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
             }
         String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is not contains the expected value.\nJSON Path value is: " + jsonPathValue +
@@ -1001,12 +1001,12 @@ public class BaseClass {
     public void jsonPathValueNotContains(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload");
+            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
             if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload");
+                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
             }
         String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is contains the expected value.\nJSON Path value is: " + jsonPathValue +
@@ -1017,12 +1017,12 @@ public class BaseClass {
     public void jsonPathAssertionEquals(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload");
+            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
             if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload");
+                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
             }
         String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is not equal to the Actual value.\n";
                 if (expectedResult.toLowerCase().equals("[]")) {
@@ -1057,12 +1057,12 @@ public class BaseClass {
     public void jsonPathAssertionNotEquals(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload");
+            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
             if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload");
+                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
             }
             String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is equal to the Actual value.\n";
                 if (expectedResult.toLowerCase().equals("[]")) {
