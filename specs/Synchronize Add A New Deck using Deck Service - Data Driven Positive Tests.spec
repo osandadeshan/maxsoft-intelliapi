@@ -19,7 +19,7 @@ table: /resources/data_driven_test_csv/sync_deck/sync_add_a_new_deck_using_deck_
      |Is authentication required?                                       |Yes                            |
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
-* And replace the values in "tempDeckId" column into timestamps in the CSV "\\resources\\data_driven_test_csv\\sync_deck\\sync_add_a_new_deck_using_deck_service.csv"
+* And replace the row values in "tempDeckId" column of the CSV "\\resources\\data_driven_test_csv\\sync_deck\\sync_add_a_new_deck_using_deck_service.csv" into the "dd.MM.yyyy HH:mm:ss:SSSSSS" timestamp pattern
 
 
 

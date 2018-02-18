@@ -31,8 +31,8 @@ public class CommonStepDefinitions extends BaseClass {
 	}
 
 	// Use this method to replace column values into timestamps by column name of a CSV file
-	public void replaceCSVColumnValuesToTimestamps(String filePath, String columnName) throws IOException {
-		replaceAllColumnValuesToTimestamps(CURRENT_DIRECTORY + filePath, columnName);
+	public void replaceCSVColumnValuesToTimestamps(String filePath, String columnName, String timestampPattern) throws IOException {
+		replaceAllColumnValuesToTimestamps(CURRENT_DIRECTORY + filePath, columnName, timestampPattern);
 	}
 
 	// Use this method to set the header values for the JSON request template in the Excel file

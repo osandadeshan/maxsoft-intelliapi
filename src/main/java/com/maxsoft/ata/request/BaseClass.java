@@ -23,6 +23,7 @@ import org.testng.Assert;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import static io.restassured.RestAssured.given;
@@ -70,13 +71,13 @@ public class BaseClass {
         return CURRENT_DIRECTORY + API_DOC_FILE_PATH;
     }
 
-    public String getCurrentTimestamp(){
-        return new SimpleDateFormat("dd.MM.yyyy HH:mm:ss:SSSSSS").format(new java.util.Date());
+    public String getCurrentTimestamp(String timestampPattern){
+        return new SimpleDateFormat(timestampPattern).format(new Date());
     }
 
-    public void replaceAllColumnValuesToTimestamps(String filePath, String columnName) throws IOException {
+    public void replaceAllColumnValuesToTimestamps(String filePath, String columnName, String timestampPattern) throws IOException {
         for(int i=1; i<=csv.getLinesCount(filePath); i++){
-            csv.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(), i,
+            csv.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(timestampPattern), i,
                     csv.getColumnIndexByColumnName(filePath, columnName));
         }
     }
@@ -251,11 +252,8 @@ public class BaseClass {
     public void printResponse() {
         String response = getSavedValueForScenario("response");
         if (response.equals("")) {
-            System.out.println("Response is empty for the given payload");
-            Gauge.writeMessage("Response is empty for the given payload");
-        } else if (response.equals("[]")) {
-            System.out.println("Response is null for the given payload");
-            Gauge.writeMessage("Response is null for the given payload");
+            System.out.println("No Content Response");
+            Gauge.writeMessage("No Content Response");
         } else {
             System.out.println("Response is: " + "\n" + response);
             Gauge.writeMessage("Response is: " + "\n" + response);
