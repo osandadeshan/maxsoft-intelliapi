@@ -150,7 +150,7 @@ public class MySqlConnector extends BaseClass {
 
         Collections.sort(recordListForValuesInSpecFile);
         Collections.sort(recordListForValuesInDatabase);
-        Compare.compareRecords(recordListForValuesInSpecFile, recordListForValuesInDatabase);
+        Comparison.compareRecords(recordListForValuesInSpecFile, recordListForValuesInDatabase);
         if (!(recordListForValuesInSpecFile.equals(recordListForValuesInDatabase))) {
             printResults(headersList1, rowsList1, "obtained");
         }

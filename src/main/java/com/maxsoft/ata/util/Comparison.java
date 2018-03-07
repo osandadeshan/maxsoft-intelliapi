@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 
-public class Compare {
+public class Comparison {
 	
 	static ArrayList<Record> mismatchedResultsInSpecFile = new ArrayList<Record>();
 	static ArrayList<Record> mismatchedResultsInDb = new ArrayList<Record>();

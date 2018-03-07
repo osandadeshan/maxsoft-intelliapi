@@ -1,4 +1,4 @@
-package com.maxsoft.ata.step;
+package com.maxsoft.ata.stepdefinition;
 
 import com.maxsoft.ata.database.MySqlOperator;
 import com.maxsoft.ata.request.CommonStepDefinitions;

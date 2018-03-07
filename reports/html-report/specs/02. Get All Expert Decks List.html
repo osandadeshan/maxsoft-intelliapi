@@ -156,7 +156,7 @@
   <span><p>Owner           : Osanda Deshan</p>
 </span>
   
-  <span><p>Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+  <span><p>Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a stepdefinition.</p>
 </span>
   
   <span></span>
@@ -191,23 +191,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:04</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -234,7 +234,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.240.141:8090/api/decks" rel="nofollow">http://10.199.240.141:8090/api/decks</a></p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/><a href="http://10.199.240.141:8090/api/decks" rel="nofollow">http://10.199.240.141:8090/api/decks</a></p>
  </div>
       </div>
     </div>
@@ -254,18 +254,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -320,18 +320,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -382,18 +382,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:05</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -416,9 +416,9 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-ATA-Framework\resources/access_tokens/saved_valid_access_token.txt”</p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.240.141:8090/api/decks" rel="nofollow">http://10.199.240.141:8090/api/decks</a></p>
- </div><div class="step-message"><p>Response is empty for the given payload</p>
+        <div class="stepdefinition-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-ATA-Framework\resources/access_tokens/saved_valid_access_token.txt”</p>
+ </div><div class="stepdefinition-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.240.141:8090/api/decks" rel="nofollow">http://10.199.240.141:8090/api/decks</a></p>
+ </div><div class="stepdefinition-message"><p>Response is empty for the given payload</p>
  </div>
       </div>
     </div>
@@ -436,18 +436,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='stepdefinition-info failed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -474,7 +474,7 @@
           <h4 class="error-message">
             <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [200] but found [500]</pre>
           </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.ata.request.BaseClass.verifyResponseStatusCode(BaseClass.java:891)<br/>com.maxsoft.ata.request.CommonStepDefinitions.verifyResponseStatusCode(CommonStepDefinitions.java:280)<br/>com.maxsoft.ata.step.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:116)<br/></pre>
+          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.ata.request.BaseClass.verifyResponseStatusCode(BaseClass.java:891)<br/>com.maxsoft.ata.request.CommonStepDefinitions.verifyResponseStatusCode(CommonStepDefinitions.java:280)<br/>stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:116)<br/></pre>
         </div>
         
     </div>
@@ -498,18 +498,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='stepdefinition-info not-executed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   

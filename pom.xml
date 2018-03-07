@@ -6,7 +6,7 @@
 
     <groupId>com.maxsoft.ata</groupId>
     <artifactId>MaxSoft-ATA-Framework</artifactId>
-    <version>v1.0.0</version>
+    <version>v1.1.0</version>
 
     <dependencies>
         <dependency>
@@ -103,17 +103,6 @@
                 <groupId>com.thoughtworks.gauge.maven</groupId>
                 <artifactId>gauge-maven-plugin</artifactId>
                     <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <configuration>
-                            <specsDir>specs</specsDir>
-                        </configuration>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

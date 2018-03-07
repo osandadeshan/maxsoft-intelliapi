@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.List;
 
 
-public class CSV {
+public class CsvOperator {
 
     public int getLinesCount(String filePath) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));

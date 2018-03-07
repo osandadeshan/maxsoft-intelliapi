@@ -156,7 +156,7 @@
   <span><p>Owner           : Osanda Deshan</p>
 </span>
   
-  <span><p>Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+  <span><p>Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a stepdefinition.</p>
 </span>
   
   <span></span>
@@ -191,23 +191,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -234,7 +234,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.240.141:8089/api/questions" rel="nofollow">http://10.199.240.141:8089/api/questions</a></p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/><a href="http://10.199.240.141:8089/api/questions" rel="nofollow">http://10.199.240.141:8089/api/questions</a></p>
  </div>
       </div>
     </div>
@@ -254,18 +254,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -325,8 +325,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/><a href="http://10.199.240.141:8089/api/questions?deckId=1497" rel="nofollow">http://10.199.240.141:8089/api/questions?deckId=1497</a></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “questions”: [<br/>        <br/>    ]<br/>}</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/><a href="http://10.199.240.141:8089/api/questions?deckId=1497" rel="nofollow">http://10.199.240.141:8089/api/questions?deckId=1497</a></p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>{<br/>    “questions”: [<br/>        <br/>    ]<br/>}</p>
  </div>
       </div>
     </div>
@@ -344,18 +344,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -378,8 +378,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is succeeded</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “questions”: [<br/>        <br/>    ]<br/>}</p>
+        <div class="stepdefinition-message"><p>Reading the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\Smart-Flashcards-API-Testing-Framework\resources\access_tokens\access_token_to_be_used_for_testing.txt” is succeeded</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>{<br/>    “questions”: [<br/>        <br/>    ]<br/>}</p>
  </div>
       </div>
     </div>
@@ -397,18 +397,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -445,18 +445,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='stepdefinition-info failed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -501,7 +501,7 @@
           <h4 class="error-message">
             <pre>com.jayway.jsonpath.PathNotFoundException: Filter: [:1][&#39;title&#39;] can only be applied to arrays. Current context is: {questions=[]}</pre>
           </h4>
-          <pre class="stacktrace">com.jayway.jsonpath.internal.path.ArrayPathToken.checkArrayModel(ArrayPathToken.java:184)<br/>com.jayway.jsonpath.internal.path.ArrayPathToken.evaluate(ArrayPathToken.java:47)<br/>com.jayway.jsonpath.internal.path.RootPathToken.evaluate(RootPathToken.java:62)<br/>com.jayway.jsonpath.internal.path.CompiledPath.evaluate(CompiledPath.java:53)<br/>com.jayway.jsonpath.internal.path.CompiledPath.evaluate(CompiledPath.java:61)<br/>com.jayway.jsonpath.JsonPath.read(JsonPath.java:187)<br/>com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:102)<br/>com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:89)<br/>com.jayway.jsonpath.JsonPath.read(JsonPath.java:488)<br/>jsonPathAssertionEquals(com.maxsoft.ata.request.BaseClass.java:599)<br/>jsonPathAssertionEquals(com.maxsoft.ata.request.CommonStepDefinitions.java:155)<br/>com.maxsoft.ata.step.AllStepsDefinitions.jsonPathAssertions(com.maxsoft.ata.step.AllStepsDefinitions.java:118)<br/>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
+          <pre class="stacktrace">com.jayway.jsonpath.internal.path.ArrayPathToken.checkArrayModel(ArrayPathToken.java:184)<br/>com.jayway.jsonpath.internal.path.ArrayPathToken.evaluate(ArrayPathToken.java:47)<br/>com.jayway.jsonpath.internal.path.RootPathToken.evaluate(RootPathToken.java:62)<br/>com.jayway.jsonpath.internal.path.CompiledPath.evaluate(CompiledPath.java:53)<br/>com.jayway.jsonpath.internal.path.CompiledPath.evaluate(CompiledPath.java:61)<br/>com.jayway.jsonpath.JsonPath.read(JsonPath.java:187)<br/>com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:102)<br/>com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:89)<br/>com.jayway.jsonpath.JsonPath.read(JsonPath.java:488)<br/>jsonPathAssertionEquals(com.maxsoft.ata.request.BaseClass.java:599)<br/>jsonPathAssertionEquals(com.maxsoft.ata.request.CommonStepDefinitions.java:155)<br/>stepdefinition.AllStepsDefinitions.jsonPathAssertions(stepdefinition.AllStepsDefinitions.java:118)<br/>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
         </div>
         
     </div>

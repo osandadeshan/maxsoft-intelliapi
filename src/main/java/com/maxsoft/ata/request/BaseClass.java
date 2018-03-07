@@ -55,7 +55,7 @@ public class BaseClass {
     private Response response;
     private ValidatableResponse json;
     private RequestSpecification request = getRequestSpecification();
-    private static CSV csv = new CSV();
+    private static CsvOperator csvOperator = new CsvOperator();
 
     public void print(String text){
         System.out.println(text);
@@ -76,9 +76,9 @@ public class BaseClass {
     }
 
     public void replaceAllColumnValuesToTimestamps(String filePath, String columnName, String timestampPattern) throws IOException {
-        for(int i=1; i<=csv.getLinesCount(filePath); i++){
-            csv.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(timestampPattern), i,
-                    csv.getColumnIndexByColumnName(filePath, columnName));
+        for(int i = 1; i<= csvOperator.getLinesCount(filePath); i++){
+            csvOperator.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(timestampPattern), i,
+                    csvOperator.getColumnIndexByColumnName(filePath, columnName));
         }
     }
 
