@@ -13,9 +13,11 @@ import java.sql.SQLException;
 
 public class MySqlOperator extends MySqlConnector {
 	
-	private static String MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE = "MySQL driver has been loaded successfully";
-	private static String MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE = "MySQL database has been connected successfully";
-	private static String QUERY_EXECUTION_SUCCESS_MESSAGE = "Query has been successfully executed";
+	private static final String MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE = "MySQL driver has been loaded successfully";
+	private static final String MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE = "MySQL database has been connected successfully";
+	private static final String QUERY_EXECUTION_SUCCESS_MESSAGE = "Query has been successfully executed";
+	private static final String EMPTY_QUERY_MESSAGE = "No records found for the executed query";
+	private static final String INVALID_QUERY_MESSAGE = "The executed query is invalid";
 
 	public void loadMySqlDriver() throws SQLException, ClassNotFoundException {
 		MySqlConnector.loadDriver();
@@ -31,12 +33,12 @@ public class MySqlOperator extends MySqlConnector {
 
 	public void executeGivenQuery(String query) {
 		if (executeQuery(query).toString().equals("")){
-			System.out.println("No records found for the executed query");
-			Gauge.writeMessage("No records found for the executed query");
+			System.out.println(EMPTY_QUERY_MESSAGE);
+			Gauge.writeMessage(EMPTY_QUERY_MESSAGE);
 		}
 		if (executeQuery(query) == null){
-			System.out.println("The executed query is invalid");
-			Gauge.writeMessage("The executed query is invalid");
+			System.out.println(INVALID_QUERY_MESSAGE);
+			Gauge.writeMessage(INVALID_QUERY_MESSAGE);
 		} else {
 			executeQuery(query);
 			System.out.println(QUERY_EXECUTION_SUCCESS_MESSAGE);
