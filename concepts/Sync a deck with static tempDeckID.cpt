@@ -1,0 +1,52 @@
+Created by VGAMAKI on 2/15/2018
+
+This is a concept file with following syntax for each concept.
+
+
+
+# Sync a deck with static tempDeckID
+
+* Given that a user needs to invoke "Sync API"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the request attributes as follows
+     |Attribute Value In JSON Template|Attribute Value To Be Set                                                                                    |
+     |#activityId                     |act1                                                                                                         |
+     |#activityType                   |add                                                                                                          |
+     |#title                          |API Deck No: 1                                                                                               |
+     |#description                    |Test Description for API Test Deck No: 1                                                                     |
+     |#tags1                          |API tag                                                                                                      |
+     |#subjectId                      |3                                                                                                            |
+     |#subjectName                    |API Testing                                                                                                  |
+     |#bookTitle                      |Backend Testing                                                                                              |
+     |#bookAuthor                     |Osanda Deshan                                                                                                |
+     |#bookChapter                    |Chap. 03                                                                                                     |
+     |#purchasedDate                  |1512021142001                                                                                                |
+     |#purchaseInformationPrice       |999                                                                                                          |
+     |#purchaseInformationsku         |com.pearson.smartflashcards.test1                                                                            |
+     |#areNotificationsEnabled        |false                                                                                                        |
+     |#notificationTime               |08:00 AM                                                                                                     |
+     |#notificationFrequency          |4                                                                                                            |
+     |#examDate                       |1512021142200                                                                                                |
+     |#categoryId                     |5a5db30a12ef181b0af109ba                                                                                     |
+     |#userId                         |5                                                                                                            |
+     |#parentDeckId                   |7                                                                                                            |
+     |#tempDeckId                     |1                                                                                                            |
+     |#archived                       |false                                                                                                        |
+     |#cardPreview                    |true                                                                                                         |
+     |#noOfCards                      |2                                                                                                            |
+     |#progress                       |65                                                                                                           |
+     |#downloads                      |2                                                                                                            |
+     |#deckAuthorName                 |Osanda                                                                                                       |
+     |#deckAuthorId                   |3                                                                                                            |
+     |#thumbnailUrl                   |C://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL|
+     |#status                         |Closed                                                                                                       |
+     |#starred                        |false                                                                                                        |
+     |#deckId                         |1                                                                                                            |
+     |#serverDate                     |2018-02-06T09:40:26.456Z                                                                                     |
+* When the user invokes the API
+* Then the status code for the request is "200"

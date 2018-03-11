@@ -19,8 +19,7 @@ import java.util.Iterator;
 
 
 public abstract class ExcelOperator {
-	
-	//private static final String FILE_PATH = System.getProperty("user.dir") + "\\" + System.getenv("api_document_path");
+
 	static BaseClass baseObj = new BaseClass();
 	static int column;
 	

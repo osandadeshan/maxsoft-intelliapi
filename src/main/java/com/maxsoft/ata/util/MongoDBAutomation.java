@@ -7,7 +7,9 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBCursor;
 import org.testng.Assert;
 
+
 public class MongoDBAutomation{
+
     public static void main( String args[] ){
         try{
 

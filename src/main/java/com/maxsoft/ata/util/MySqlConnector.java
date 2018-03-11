@@ -6,7 +6,6 @@ import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
 import org.junit.Assert;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;

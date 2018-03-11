@@ -1,7 +1,6 @@
 package com.maxsoft.ata.request;
 
 import com.maxsoft.ata.util.ApiDocumentReader;
-
 import java.io.IOException;
 
 

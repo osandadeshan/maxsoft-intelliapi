@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Headers extends BaseClass {
 
-    static String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
+    static String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
     static String request;
     static List<Header> headerList = new LinkedList<Header>();
     static {

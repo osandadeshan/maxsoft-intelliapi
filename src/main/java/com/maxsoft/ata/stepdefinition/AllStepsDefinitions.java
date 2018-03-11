@@ -20,7 +20,7 @@ public class AllStepsDefinitions{
     private MySqlOperator mySQLOperator = new MySqlOperator();
 
 	// Use this method to print the testing environment name in the HTML report
-	@Step("Get the configuration details of the testing environment")
+	@Step("Configurations of the testing environment")
 	public void testEnvDetails(){
 		commonStepDefinitions.testingEnvDetails();
 	}
@@ -112,13 +112,13 @@ public class AllStepsDefinitions{
 	   The "saveRequestAuthConfigurations" must use before using this step */
 	@Step("When the user invokes the API")
 	public void invokeApi() throws IOException {
-		commonStepDefinitions.invokeConfiguredApi();
+		commonStepDefinitions.invokeApi();
 	}
 
 	// Use this method to validate the status code of the response
 	@Step("Then the status code for the request is <statusCode>")
 	public void verifyResponseStatusCode(String statusCode){
-		commonStepDefinitions.verifyResponseStatusCode(statusCode);
+		commonStepDefinitions.isResponseStatusCodeEqualTo(statusCode);
 	}
 	
 	// Use this method to validate the content of the response using JSON Path Assertions

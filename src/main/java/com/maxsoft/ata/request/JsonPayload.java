@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public abstract class JsonPayload extends BaseClass {
 	
-	static String apiName = getSavedValueForScenario("API_NAME"); // Fetching Value from the Data Store
+	static String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
 	static String request;
 	static {
 		try {
@@ -44,7 +44,7 @@ public abstract class JsonPayload extends BaseClass {
 	}
 	
 	public static void setRequestToDefault() throws IOException {
-		request = ApiDocumentReader.getRequestPayloadTemplate(getSavedValueForScenario("API_NAME"));
+		request = ApiDocumentReader.getRequestPayloadTemplate(getSavedValueForScenario("apiName"));
 	}
 	
 	

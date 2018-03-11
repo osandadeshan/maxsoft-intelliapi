@@ -7,6 +7,12 @@ Description  	: This is an executable specification file which follows markdown 
 
 
 
+Get configurations of the testing environment
+---------------------------------------------
+* Configurations of the testing environment
+
+
+
 Saving values to Data Store
 ---------------------------
 * And the user save the values inside data stores as follows
