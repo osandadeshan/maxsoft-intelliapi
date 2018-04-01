@@ -6,7 +6,7 @@ Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: get_pi_token
+tags: get_pi_token, staging_token
 
 
 * Given that a user needs to invoke "Get Staging PI Token"

@@ -1180,8 +1180,8 @@ Create a Deck using a null value as the noOfCards
      |#purchaseInformationPrice       |3                                                                                                            |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                            |
      |#areNotificationsEnabled        |false                                                                                                        |
-     |#notificationTime               |string3                                                                                                      |
-     |#notificationFrequency          |1                                                                                                      |
+     |#notificationTime               |03:00                                                                                                        |
+     |#notificationFrequency          |1                                                                                                            |
      |#examDate                       |1512021142000                                                                                                |
      |#userId                         |osan                                                                                                         |
      |#parentDeckId                   |3                                                                                                            |
@@ -1213,7 +1213,7 @@ Create a Deck using a null value as the noOfCards
      |$.book.bookAuthor                                 |Osanda3                                                                                                                         |
      |$.book.chapter                                    |Chap. 03                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |false                                                                                                                           |
-     |$.notificationSettings.notificationTime           |string3                                                                                                                         |
+     |$.notificationSettings.notificationTime           |03:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |osan                                                                                                                            |

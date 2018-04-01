@@ -6,7 +6,7 @@ Owner      		: Dilp Wickramasinghe
 Description  	: This specification covers get decks scenarios from the aggrigation service
 
 
-tags: aggregation_service, deck_management, get_all_decks
+tags: aggregation_service, deck_management, get_all_decks, ci_ready
 
 
 
