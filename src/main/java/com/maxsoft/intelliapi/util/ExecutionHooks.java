@@ -13,4 +13,5 @@ public class ExecutionHooks {
         Email.send(ExecutionResults.getTestResultsAsString());
     }
 
+
 }

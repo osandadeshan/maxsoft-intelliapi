@@ -3,7 +3,6 @@ package com.maxsoft.intelliapi.request;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
-import com.maxsoft.ata.util.*;
 import com.maxsoft.intelliapi.util.*;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.datastore.DataStore;
