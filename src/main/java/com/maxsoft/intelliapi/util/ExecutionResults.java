@@ -2,6 +2,9 @@ package com.maxsoft.intelliapi.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 /**
@@ -69,6 +72,14 @@ public class ExecutionResults {
                          "\n-------------------------------------------------------------------------------------------------------------");
         System.out.println(result);
         return result;
+    }
+
+    public static String getExecutedTime() throws ParseException {
+        String time = getTestResultsAsString().split("\r\n|\n|\r")[5];
+        SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat sdf2 = new SimpleDateFormat("hh:mm:ss aa");
+        Date date = sdf1.parse(time);
+        return (sdf2.format(date));
     }
 
     public static void deleteLogFile(){

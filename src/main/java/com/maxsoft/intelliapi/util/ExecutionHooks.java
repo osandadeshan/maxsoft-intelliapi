@@ -1,5 +1,7 @@
 package com.maxsoft.intelliapi.util;
 
+import java.text.ParseException;
+
 
 /**
  * Created by Osanda on 3/31/2018.
@@ -9,7 +11,7 @@ package com.maxsoft.intelliapi.util;
 public class ExecutionHooks {
 
 //    @AfterSuite
-    public void sendEmail() {
+    public void sendEmail() throws ParseException {
         Email.send(ExecutionResults.getTestResultsAsString());
     }
 

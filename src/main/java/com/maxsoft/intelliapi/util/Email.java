@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -14,6 +15,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import static com.maxsoft.intelliapi.util.ExecutionResults.getExecutedTime;
 
 
 /**
@@ -34,7 +36,13 @@ public class Email {
     static Properties emailProperties = new Properties();
     static InputStream input = null;
 
-    public static void send(String messageBody) {
+    public static String getCurrentDate(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, YYYY");
+        String formattedDate = dateFormat.format(new Date()).toString();
+        return formattedDate;
+    }
+
+    public static void send(String messageBody) throws ParseException {
         try {
             input = new FileInputStream(CURRENT_DIRECTORY + File.separator + "env" + File.separator + "email"
                                         + File.separator + "email.properties");
@@ -83,7 +91,7 @@ public class Email {
                 message.setFrom(new InternetAddress(SENDER_EMAIL_ADDRESS));
                 message.setRecipients(Message.RecipientType.TO,
                         InternetAddress.parse(RECIPIENTS_EMAIL_ADDRESSES));
-                message.setSubject(EMAIL_SUBJECT + " - " + new SimpleDateFormat("dd/MMMM/YYYY").format(new Date()));
+                message.setSubject(EMAIL_SUBJECT + " - (Executed On: " + getCurrentDate() + " " + getExecutedTime() + ")");
                 message.setText(messageBody + "\n" + EMAIL_BODY);
                 Transport.send(message);
 
