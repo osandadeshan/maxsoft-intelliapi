@@ -12,7 +12,6 @@ import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
@@ -47,7 +46,6 @@ public class BaseClass {
     public static String OS = System.getProperty("os.name");
     public String baseUrl = setUp();
     private Response response;
-    private ValidatableResponse json;
     private RequestSpecification request = getRequestSpecification();
     private static CsvOperator csvOperator = new CsvOperator();
 
@@ -348,50 +346,6 @@ public class BaseClass {
         }
     }
 
-    public enum HttpMethod {
-        GET, POST, PUT, DELETE
-    }
-
-    public void invokeApi(String jsonPayload, List<Header> headerList) throws IOException {
-        String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        System.out.println("You are going to invoked a " + ApiDocumentReader.getHttpMethod(apiName));
-        String accessTokenInFile = readAccessToken(); // Fetching token from the text file
-        String accessToken = "";
-        String isAuthenticationRequired = "";
-        String isAccessTokenRetrievedFromTextFile = "";
-        String accessTokenString = "";
-
-        try {
-            isAuthenticationRequired = String.valueOf(getSavedValueForScenario("Is authentication required?").toLowerCase());
-            isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase());
-            accessTokenString = String.valueOf(getSavedValueForScenario("Provide the access token if you need to authorize the API manually").toLowerCase());
-        } catch (Exception ex){
-            isAuthenticationRequired = "";
-            isAccessTokenRetrievedFromTextFile = "";
-            accessTokenString = "";
-        }
-
-        if (Boolean.valueOf(isAuthenticationRequired).equals(Boolean.TRUE) || isAuthenticationRequired.equals("yes") || isAuthenticationRequired.equals("y")) {
-            if (Boolean.valueOf(isAccessTokenRetrievedFromTextFile).equals(Boolean.TRUE) || isAccessTokenRetrievedFromTextFile.equals("yes") || isAccessTokenRetrievedFromTextFile.equals("y")) {
-                accessToken = accessTokenInFile;
-            } else {
-                accessToken = accessTokenString;
-            }
-        } else {
-            accessToken = "";
-        }
-
-                HttpMethod httpMethod = HttpMethod.valueOf(ApiDocumentReader.getHttpMethod(apiName).toUpperCase());
-                switch (httpMethod){
-                    case GET: getAPIWithAuthMultipleHeaders(accessToken, headerList); break;
-                    case POST: postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
-                    case PUT: putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
-                    case DELETE: deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
-                    default: print("HTTP Method is not implemented");
-                }
-
-    }
-
     public void putAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
         String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
         String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName)).concat(getPathParams().concat(getQueryParams()));
@@ -450,6 +404,50 @@ public class BaseClass {
         printResponseTime();
         printResponse();
         printResponseHeaders();
+    }
+
+    public enum HttpMethod {
+        GET, POST, PUT, DELETE
+    }
+
+    public void invokeApi(String jsonPayload, List<Header> headerList) throws IOException {
+        String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
+        System.out.println("You are going to invoked a " + ApiDocumentReader.getHttpMethod(apiName));
+        String accessTokenInFile = readAccessToken(); // Fetching token from the text file
+        String accessToken = "";
+        String isAuthenticationRequired = "";
+        String isAccessTokenRetrievedFromTextFile = "";
+        String accessTokenString = "";
+
+        try {
+            isAuthenticationRequired = String.valueOf(getSavedValueForScenario("Is authentication required?").toLowerCase());
+            isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase());
+            accessTokenString = String.valueOf(getSavedValueForScenario("Provide the access token if you need to authorize the API manually").toLowerCase());
+        } catch (Exception ex){
+            isAuthenticationRequired = "";
+            isAccessTokenRetrievedFromTextFile = "";
+            accessTokenString = "";
+        }
+
+        if (Boolean.valueOf(isAuthenticationRequired).equals(Boolean.TRUE) || isAuthenticationRequired.equals("yes") || isAuthenticationRequired.equals("y")) {
+            if (Boolean.valueOf(isAccessTokenRetrievedFromTextFile).equals(Boolean.TRUE) || isAccessTokenRetrievedFromTextFile.equals("yes") || isAccessTokenRetrievedFromTextFile.equals("y")) {
+                accessToken = accessTokenInFile;
+            } else {
+                accessToken = accessTokenString;
+            }
+        } else {
+            accessToken = "";
+        }
+
+        HttpMethod httpMethod = HttpMethod.valueOf(ApiDocumentReader.getHttpMethod(apiName).toUpperCase());
+        switch (httpMethod){
+            case GET: getAPIWithAuthMultipleHeaders(accessToken, headerList); break;
+            case POST: postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
+            case PUT: putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
+            case DELETE: deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
+            default: print("HTTP Method is not implemented");
+        }
+
     }
 
     public void isResponseStatusCodeEqualTo(String statusCode) {
