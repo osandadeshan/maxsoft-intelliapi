@@ -1,23 +1,18 @@
-Edit MCQ Type Question using Question Service - Data Driven Positive Test Specification
-=======================================================================================
+Create All Type Question using Aggregation Service - Data Driven Positive Tests Specification
+=============================================================================================
 Date Created    : 11/06/2017
 Version   		: 1.0.0
 Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: edit_question, edit_question_mcq_type, edit_question-positive_tests, positive
+tags: create_question, create_question_all_type, create_question-positive_tests, positive, ci_ready
 
 
-table: /resources/data_driven_test_csv/edit_question/question_service/edit_question_mcq_type-positive_tests.csv
+table: /resources/data_driven_test_csv/create_question/aggregation_service/create_question_all_type-positive_tests.csv
 
 
 
-* Create a MCQ question using Question Service
-* And save the JSON Path values in the response inside the data stores
-    |DataStore Type |Variable Name  |Value To Be Stored     |
-    |---------------|---------------|-----------------------|
-    |scenario       |questionId     |$.id                   |
 * Given that a user needs to invoke <api>
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -25,15 +20,11 @@ table: /resources/data_driven_test_csv/edit_question/question_service/edit_quest
      |Is authentication required?                                       |Yes                            |
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
-* And the user set the path parameters using data stores as follows
-    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
-    |---------------|-------------------|---------------|------------------------|---------------|
-    |questionId     |y                  |scenario       |questionId              |N/A            |
 
 
 
-Edit a question using a valid payload
--------------------------------------
+Create a question using a valid payload
+---------------------------------------
 * And the user set the request attributes as follows
      |Attribute Value In JSON Template|Attribute Value To Be Set               |
      |--------------------------------|----------------------------------------|
@@ -42,9 +33,9 @@ Edit a question using a valid payload
      |#creatoredSource                |<creatoredSource>                       |
      |#creatoredType                  |<creatoredType>                         |
      |#deckId                         |<deckId>                                |
+     |#kind                           |<kind>                                  |
      |#isDeleted                      |<isDeleted>                             |
      |#tempQuestionId                 |<tempQuestionId>                        |
-     |#kind                           |<kind>                                  |
      |#learningObjectives             |<learningObjectives>                    |
      |#imageUrl                       |<imageUrl>                              |
      |#media                          |<media>                                 |
@@ -82,7 +73,7 @@ Edit a question using a valid payload
      |#answer5CaseSensitive           |<answer5CaseSensitive>                  |
      |#tags                           |<tags>                                  |
 * When the user invokes the API
-* Then the status code for the request is "200"
+* Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
@@ -90,6 +81,7 @@ Edit a question using a valid payload
      |$.question.prompt                         |<prompt>                                                 |
      |$.question.imageUrl                       |<imageUrl>                                               |
      |$.question.promptType                     |<promptType>                                             |
+     |$.deleted                                 |<isDeleted>                                              |
      |$.stats.questionId                        |<questionId>                                             |
      |$.stats.userId                            |<userId>                                                 |
      |$.stats.boxId                             |<boxId>                                                  |
@@ -103,7 +95,6 @@ Edit a question using a valid payload
      |$.creatoredType                           |<creatoredType>                                          |
      |$.creatorPlatform                         |<creatorPlatform>                                        |
      |$.creatoredSource                         |<creatoredSource>                                        |
-     |$.deleted                                 |<isDeleted>                                              |
      |$.tempQuestionId                          |<tempQuestionId>                                         |
      |$.correctAnswers[0]                       |<correctAnswerList>                                      |
 //     |$.answers[0].id                           |<answer1Id>                                              |

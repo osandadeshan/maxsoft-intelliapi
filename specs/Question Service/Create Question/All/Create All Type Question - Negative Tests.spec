@@ -1,4 +1,4 @@
-Create MCQ Type Question using Question Service - Negative Test Specification
+Create All Type Question using Question Service - Negative Test Specification
 =============================================================================
 Date Created    : 12/08/2017
 Version   		: 1.0.0
@@ -6,7 +6,7 @@ Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: create_question, create_question_mcq_type, create_question-negative_tests, negative
+tags: create_question, create_question_all_type, create_question-negative_tests, negative
 
 
 
@@ -15,7 +15,7 @@ tags: create_question, create_question_mcq_type, create_question-negative_tests,
     |DataStore Type |Variable Name              |Value To Be Stored     |
     |---------------|---------------------------|-----------------------|
     |scenario       |deckId                     |$.id                   |
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+* Given that a user needs to invoke "Create All Type Question using Question Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |------------------------------------------------------------------|-------------------------------|
@@ -35,7 +35,7 @@ Create a question using an empty value for the creatorId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -97,7 +97,7 @@ Create a question using an invalid creatorPlatform
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -158,7 +158,7 @@ Create a question using an empty creatorPlatform
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -219,7 +219,7 @@ Create a question using an invalid creatoredSource
      |#creatoredSource                |n                  |               |                            |Ap                                                       |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -280,7 +280,7 @@ Create a question using an empty creatoredSource
      |#creatoredSource                |n                  |               |                            |                                                         |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -341,7 +341,7 @@ Create a question using an invalid creatoredType
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manua                                                    |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -402,7 +402,7 @@ Create a question using an empty creatoredType
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |                                                         |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -463,7 +463,7 @@ Create a question using an invalid deckId type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |osanda                                                   |
-     |#kind                           |MULTIPLE_CHOICE		                                     |
+     |#kind                           |ALL                                                      |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -522,7 +522,7 @@ Create a question using an empty deckId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |                                                         |
-     |#kind                           |MULTIPLE_CHOICE		                                     |
+     |#kind                           |ALL                                                      |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |learningObjective1                                       |
@@ -699,7 +699,7 @@ Create a question using an invalid media
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -761,7 +761,7 @@ Create a question using an empty media
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -823,7 +823,7 @@ Create a question using an empty questionPrompt
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -885,7 +885,7 @@ Create a question using an invalid promptType
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -947,7 +947,7 @@ Create a question using an empty promptType
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1009,7 +1009,7 @@ Create a question using a string as the timeout
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1068,7 +1068,7 @@ Create a question using an negative value as the timeout
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1130,7 +1130,7 @@ Create a question using a string value as the boxId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1189,7 +1189,7 @@ Create a question using a negative integer value as the boxId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1251,7 +1251,7 @@ Create a question using an empty value as the boxId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1310,7 +1310,7 @@ Create a question using a string value as the correctAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1369,7 +1369,7 @@ Create a question using a negative integer value as the correctAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1431,7 +1431,7 @@ Create a question using a special characters value as the correctAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1490,7 +1490,7 @@ Create a question using an empty value as the correctAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1549,7 +1549,7 @@ Create a question using a special characters value as the inCorrectAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1608,7 +1608,7 @@ Create a question using a string value as the inCorrectAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1667,7 +1667,7 @@ Create a question using a negative integer value as the inCorrectAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1726,7 +1726,7 @@ Create a question using an empty value as the inCorrectAttempts
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1785,7 +1785,7 @@ Create a question using a negative integer value as the questionId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1847,7 +1847,7 @@ Create a question using a string value as the questionId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1906,7 +1906,7 @@ Create a question using a special characters value as the questionId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -1965,7 +1965,7 @@ Create a question using an empty value as the questionId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2024,7 +2024,7 @@ Create a question using a negative integer value as the skips
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2086,7 +2086,7 @@ Create a question using a special characters value as the skips
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2145,7 +2145,7 @@ Create a question using a string value as the skips
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2204,7 +2204,7 @@ Create a question using an empty value as the skips
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2263,7 +2263,7 @@ Create a question using a negative integer value as the userId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2325,7 +2325,7 @@ Create a question using a string value as the userId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2384,7 +2384,7 @@ Create a question using a special character as the userId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2443,7 +2443,7 @@ Create a question using an empty value as the userId
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2502,7 +2502,7 @@ Create a question using a string value as the correctAnswerList
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2561,7 +2561,7 @@ Create a question using a special character as the correctAnswerList
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2620,7 +2620,7 @@ Create a question using an empty value as the correctAnswerList
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2682,7 +2682,7 @@ Create a question using an empty string as the correctAnswerList
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2744,7 +2744,7 @@ Create a question using null value as the correctAnswerList
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2806,7 +2806,7 @@ Create a question using a string value as the answer1Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2866,7 +2866,7 @@ Create a question using a special character as the answer1Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2926,7 +2926,7 @@ Create a question using a negative integer value as the answer1Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -2988,7 +2988,7 @@ Create a question using an empty value as the answer1Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3050,7 +3050,7 @@ Create a question using null value as the answer1Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3112,7 +3112,7 @@ Create a question using empty value as the answer1Value
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3174,7 +3174,7 @@ Create a question using null value as the answer1Value
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3235,7 +3235,7 @@ Create a question using empty value as the answer1Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3296,7 +3296,7 @@ Create a question using null as the answer1Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3357,7 +3357,7 @@ Create a question using String as the answer1Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3418,7 +3418,7 @@ Create a question using numbers as the answer1Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3480,7 +3480,7 @@ Create a question using a string value as the answer2Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3540,7 +3540,7 @@ Create a question using a special character as the answer2Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3600,7 +3600,7 @@ Create a question using a negative integer value as the answer2Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3662,7 +3662,7 @@ Create a question using an empty value as the answer2Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3724,7 +3724,7 @@ Create a question using null value as the answer2Id
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3786,7 +3786,7 @@ Create a question using empty value as the answer2Value
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3848,7 +3848,7 @@ Create a question using null value as the answer2Value
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3909,7 +3909,7 @@ Create a question using empty value as the answer2Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -3970,7 +3970,7 @@ Create a question using null as the answer2Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -4031,7 +4031,7 @@ Create a question using String as the answer2Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -4092,7 +4092,7 @@ Create a question using numbers as the answer2Type
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
@@ -4154,7 +4154,7 @@ Create a question using an invalid imageUrl
      |#creatoredSource                |n                  |               |                            |App                                                      |
      |#creatoredType                  |n                  |               |                            |Manual                                                   |
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
-     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE		                                     |
+     |#kind                           |n                  |               |                            |ALL                                                      |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
      |#learningObjectives             |n                  |               |                            |learningObjective1                                       |

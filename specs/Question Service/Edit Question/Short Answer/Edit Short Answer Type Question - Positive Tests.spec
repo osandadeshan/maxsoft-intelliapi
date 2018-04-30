@@ -38,7 +38,7 @@ Edit a question using an valid creatorId
      |#creatorPlatform                |Web                                                      |
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
-     |#deckId                         |41                                                       |
+     |#deckId                         |5a603af62e02d86561172dac                                 |
      |#kind                           |SHORT_ANSWER                                             |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |true                                                     |

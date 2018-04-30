@@ -30,24 +30,24 @@ Get a question using a valid existing cardId
     |questionId     |y                  |scenario       |questionId              |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "200"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                           |Value                                              |
-     |------------------------------------|---------------------------------------------------|
-     |$.question.media                    |TEXT                                               |
-     |$.question.prompt                   |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _       |
-     |$.question.imageUrl                 |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL|
-     |$.question.promptType               |TEXT                                               |
-     |$.kind                              |SHORT_ANSWER                                       |
-     |$.learningObjectives[0]             |                                                   |
-     |$.tags[0]                           |MaxSoft                                            |
-     |$.creatorId                         |osanda12                                           |
-     |$.deckId                            |5a603af62e02d86561172dac                           |
-     |$.creatoredType                     |Manual                                             |
-     |$.creatorPlatform                   |Web                                                |
-     |$.creatoredSource                   |App                                                |
-     |$.answers.[0].value                 |Osanda Deshan                                      |
-     |$.answers.[0].caseSensitive         |false                                              |
-     |$.answers.[0].type                  |TEXT                                               |
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+     |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Value                                              |
+     |------------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------|
+     |$.question.media                    |n                  |               |                            |TEXT                                               |
+     |$.question.prompt                   |n                  |               |                            |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _       |
+     |$.question.imageUrl                 |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL|
+     |$.question.promptType               |n                  |               |                            |TEXT                                               |
+     |$.kind                              |n                  |               |                            |SHORT_ANSWER                                       |
+     |$.learningObjectives[0]             |n                  |               |                            |                                                   |
+     |$.tags[0]                           |n                  |               |                            |MaxSoft                                            |
+     |$.creatorId                         |n                  |               |                            |osanda12                                           |
+     |$.deckId                            |y                  |scenario       |deckId                      |5a603af62e02d86561172dac                           |
+     |$.creatoredType                     |n                  |               |                            |Manual                                             |
+     |$.creatorPlatform                   |n                  |               |                            |Web                                                |
+     |$.creatoredSource                   |n                  |               |                            |App                                                |
+     |$.answers.[0].value                 |n                  |               |                            |Osanda Deshan                                      |
+     |$.answers.[0].caseSensitive         |n                  |               |                            |false                                              |
+     |$.answers.[0].type                  |n                  |               |                            |TEXT                                               |
 
 
 
@@ -69,7 +69,7 @@ Get a question using an already deleted cardId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                             |
      |---------------------------|------------------------------------------------------------------|
-     |$.message                  |Couldn't find a question for given id : 5a0a7bce5ed274e204b95568  |
+     |$.message                  |Couldn't find question with id : 5a0a7bce5ed274e204b95568         |
      |$.description              |null                                                              |
      |$.fieldErrors              |null                                                              |
 
@@ -93,7 +93,7 @@ Get a question using an invalid cardId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                             |
      |---------------------------|------------------------------------------------------------------|
-     |$.message                  |Couldn't find a question for given id : sfsgsgfsgfsgsgsgfsgfsfgs  |
+     |$.message                  |Couldn't find question with id : sfsgsgfsgfsgsgsgfsgfsfgs         |
      |$.description              |null                                                              |
      |$.fieldErrors              |null                                                              |
 
@@ -113,13 +113,13 @@ Get a question using the cardId as empty
      |---------------|-------------------------|
      |Id             |                         |
 * When the user invokes the API
-* Then the status code for the request is "500"
+* Then the status code for the request is "400"
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                      |
      |---------------------------|-----------------------------------------------------------|
-     |$.message                  |error.internalServerError                                  |
-     |$.description              |Internal server error                                      |
-     |$.fieldErrors              |null                                                       |
+     |$.message                  |Required String parameter 'deckId' is not present          |
+     |$.error                    |Bad Request                                                |
+     |$.path                     |/api/questions/                                            |
 
 
 
@@ -133,10 +133,10 @@ Get a question without cardId path parameter
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
 * When the user invokes the API
-* Then the status code for the request is "500"
+* Then the status code for the request is "400"
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                      |
      |---------------------------|-----------------------------------------------------------|
-     |$.message                  |error.internalServerError                                  |
-     |$.description              |Internal server error                                      |
-     |$.fieldErrors              |null                                                       |
+     |$.message                  |Required String parameter 'deckId' is not present          |
+     |$.error                    |Bad Request                                                |
+     |$.path                     |/api/questions                                             |

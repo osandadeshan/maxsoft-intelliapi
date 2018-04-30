@@ -12,7 +12,7 @@ tags: get_questions_count, ci_ready
 
 Get questions count using a valid expert deckId with newly created questions
 ----------------------------------------------------------------------------
-* Create an expert deck with all types of 8 questions
+* Create an expert deck with all types of 9 questions
 * Given that a user needs to invoke "Get Questions Count using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -23,20 +23,20 @@ Get questions count using a valid expert deckId with newly created questions
 * And the user set the query parameters using data stores as follows
     |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
     |---------------|-------------------|---------------|----------------------------|---------------|
-    |deckId         |y                  |spec           |expertDeckIdWith8Questions  |N/A            |
+    |deckId         |y                  |spec           |expertDeckIdWith9Questions  |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
      |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
-     |$.deckId                            |y                  |spec           |expertDeckIdWith8Questions   |                                                   |
-     |$.questionCount                     |n                  |               |                             |8                                                  |
+     |$.deckId                            |y                  |spec           |expertDeckIdWith9Questions   |                                                   |
+     |$.questionCount                     |n                  |               |                             |9                                                  |
 
 
 
 Edit the last question of that expert deck
 ------------------------------------------
-* Create an expert deck with all types of 8 questions
+* Create an expert deck with all types of 9 questions
 * Given that a user needs to invoke "Edit Short Answer Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -55,7 +55,7 @@ Edit the last question of that expert deck
      |#creatorPlatform                |n                  |               |                             |Web                                                      |
      |#creatoredSource                |n                  |               |                             |App                                                      |
      |#creatoredType                  |n                  |               |                             |Manual                                                   |
-     |#deckId                         |y                  |spec           |expertDeckIdWith8Questions   |                                                         |
+     |#deckId                         |y                  |spec           |expertDeckIdWith9Questions   |                                                         |
      |#isDeleted                      |n                  |               |                             |false                                                    |
      |#tempQuestionId                 |n                  |               |                             |testId                                                   |
      |#kind                           |n                  |               |                             |SHORT_ANSWER                                             |
@@ -104,20 +104,20 @@ Get questions count using a valid expert deckId with newly created questions and
 * And the user set the query parameters using data stores as follows
     |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
     |---------------|-------------------|---------------|----------------------------|---------------|
-    |deckId         |y                  |spec           |expertDeckIdWith8Questions  |N/A            |
+    |deckId         |y                  |spec           |expertDeckIdWith9Questions  |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
      |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
-     |$.deckId                            |y                  |spec           |expertDeckIdWith8Questions   |                                                   |
-     |$.questionCount                     |n                  |               |                             |8                                                  |
+     |$.deckId                            |y                  |spec           |expertDeckIdWith9Questions   |                                                   |
+     |$.questionCount                     |n                  |               |                             |9                                                  |
 
 
 
 Delete a question in that expert deck
 -------------------------------------
-* Create an expert deck with all types of 8 questions
+* Create an expert deck with all types of 9 questions
 * Given that a user needs to invoke "Delete a Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -146,14 +146,14 @@ Get questions count using a valid expert deckId with newly created questions and
 * And the user set the query parameters using data stores as follows
     |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
     |---------------|-------------------|---------------|----------------------------|---------------|
-    |deckId         |y                  |spec           |expertDeckIdWith8Questions  |N/A            |
+    |deckId         |y                  |spec           |expertDeckIdWith9Questions  |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
      |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
-     |$.deckId                            |y                  |spec           |expertDeckIdWith8Questions   |                                                   |
-     |$.questionCount                     |n                  |               |                             |7                                                  |
+     |$.deckId                            |y                  |spec           |expertDeckIdWith9Questions   |                                                   |
+     |$.questionCount                     |n                  |               |                             |8                                                  |
 
 
 
@@ -169,7 +169,7 @@ Delete the previously created expert deck with 8 questions
 * And the user set the path parameters using data stores as follows
     |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name   |Path Value     |
     |---------------|-------------------|---------------|---------------------------|---------------|
-    |deckId         |y                  |spec           |expertDeckIdWith8Questions |N/A            |
+    |deckId         |y                  |spec           |expertDeckIdWith9Questions |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "204"
 
@@ -177,7 +177,7 @@ Delete the previously created expert deck with 8 questions
 
 Get questions count using a valid my deckId with newly created questions
 ------------------------------------------------------------------------
-* Create a my deck with all types of 8 questions
+* Create a my deck with all types of 9 questions
 * Given that a user needs to invoke "Get Questions Count using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -195,7 +195,7 @@ Get questions count using a valid my deckId with newly created questions
      |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
      |$.deckId                            |y                  |spec           |myDeckIdWith8Questions       |                                                   |
-     |$.questionCount                     |n                  |               |                             |8                                                  |
+     |$.questionCount                     |n                  |               |                             |9                                                  |
 * When the user invokes the API
 * Then the status code for the request is "200"
 
@@ -203,7 +203,7 @@ Get questions count using a valid my deckId with newly created questions
 
 Edit the last question of that my deck
 --------------------------------------
-* Create a my deck with all types of 8 questions
+* Create a my deck with all types of 9 questions
 * Given that a user needs to invoke "Edit Short Answer Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -278,13 +278,13 @@ Get questions count using a valid my deckId with newly created questions and edi
      |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
      |$.deckId                            |y                  |spec           |myDeckIdWith8Questions       |                                                   |
-     |$.questionCount                     |n                  |               |                             |8                                                  |
+     |$.questionCount                     |n                  |               |                             |9                                                  |
 
 
 
 Delete a question in that my deck
 ---------------------------------
-* Create a my deck with all types of 8 questions
+* Create a my deck with all types of 9 questions
 * Given that a user needs to invoke "Delete a Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -320,7 +320,7 @@ Get questions count using a valid my deckId with newly created questions and del
      |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
      |$.deckId                            |y                  |spec           |myDeckIdWith8Questions       |                                                   |
-     |$.questionCount                     |n                  |               |                             |7                                                  |
+     |$.questionCount                     |n                  |               |                             |8                                                  |
 
 
 

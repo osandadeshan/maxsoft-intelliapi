@@ -12,6 +12,7 @@ tags: get_all_questions_in_a_deck
 
 Get all questions of a deck using a valid deckId
 ------------------------------------------------
+* Create a my deck with all types of 9 questions
 * Given that a user needs to invoke "Get all Questions using Question Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -19,25 +20,23 @@ Get all questions of a deck using a valid deckId
      |Is authentication required?                                       |Yes                            |
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
-*  And the user set the query parameters as follows
-     |Query Parameter|Query Value                     |
-     |---------------|--------------------------------|
-     |deckId         |5a603af62e02d86561172dac        |
+*  And the user set the query parameters using data stores as follows
+     |Query Parameter|Is Data Store Used?|Data Store Type|Data Store Variable Name     |Query Value                     |
+     |---------------|-------------------|---------------|-----------------------------|--------------------------------|
+     |deckId         |y                  |spec           |myDeckIdWith9Questions       |                                |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                         |Value                                              |
-     |--------------------------------------------------|---------------------------------------------------|
-     |$.questions.[0].question.media                    |TEXT                                               |
-     |$.questions.[0].question.prompt                   |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _       |
-     |$.questions.[0].question.imageUrl                 |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL|
-     |$.questions.[0].question.promptType               |TEXT                                               |
-     |$.questions.[0].kind                              |SHORT_ANSWER                                       |
-     |$.questions.[0].creatoredSource                   |App                                                |
-     |$.questions.[0].answers.[0].id                    |1                                                  |
-     |$..questions.[0].answers.[0].value                |Osanda Deshan                                      |
-     |$.questions.[0].answers.[0].caseSensitive         |false                                              |
-     |$.questions.[0].answers.[0].type                  |TEXT                                               |
+     |JSON Path                                          |Value                                              |
+     |---------------------------------------------------|---------------------------------------------------|
+     |$.questions[-1:].question.media                    |TEXT                                               |
+     |$.questions[-1:].question.prompt                   |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _       |
+     |$.questions[-1:].question.promptType               |TEXT                                               |
+     |$.questions[-1:].kind                              |ALL                                                |
+     |$.questions[-1:].creatorPlatform                   |Web                                                |
+     |$.questions[-1:].creatoredSource                   |App                                                |
+     |$.questions[-1:].creatoredType                     |Manual                                             |
+     |$.questions[-1:].creatorId                         |osanda12                                           |
 
 
 
@@ -81,8 +80,7 @@ Get all questions of a deck using empty deckId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                        |
      |---------------------------|---------------------------------------------|
-     |$.description              |null                                         |
-     |$.fieldErrors              |null                                         |
+     |$.questions                |[]                                           |
 
 
 
@@ -144,13 +142,13 @@ Get all questions of a deck using an invalid query parameter
      |---------------|--------------------------|
      |deck           |5a603af62e02d86561172dac  |
 * When the user invokes the API
-* Then the status code for the request is "500"
+* Then the status code for the request is "400"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                        |
-     |---------------------------|---------------------------------------------|
-     |$.message                  |error.internalServerError                    |
-     |$.description              |Internal server error                        |
-     |$.fieldErrors              |null                                         |
+     |JSON Path                  |Value                                                      |
+     |---------------------------|-----------------------------------------------------------|
+     |$.message                  |Required String parameter 'deckId' is not present          |
+     |$.error                    |Bad Request                                                |
+     |$.path                     |/api/questions                                             |
 
 
 
@@ -210,13 +208,13 @@ Get all questions of a deck without query parameters
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
 * When the user invokes the API
-* Then the status code for the request is "500"
+* Then the status code for the request is "400"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                        |
-     |---------------------------|---------------------------------------------|
-     |$.message                  |error.internalServerError                    |
-     |$.description              |Internal server error                        |
-     |$.fieldErrors              |null                                         |
+     |JSON Path                  |Value                                                      |
+     |---------------------------|-----------------------------------------------------------|
+     |$.message                  |Required String parameter 'deckId' is not present          |
+     |$.error                    |Bad Request                                                |
+     |$.path                     |/api/questions                                             |
 
 
 

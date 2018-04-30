@@ -1,4 +1,4 @@
-Edit MCQ Type Question using Question Service - Data Driven Positive Test Specification
+Edit All Type Question using Question Service - Data Driven Positive Test Specification
 =======================================================================================
 Date Created    : 11/06/2017
 Version   		: 1.0.0
@@ -6,14 +6,14 @@ Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: edit_question, edit_question_mcq_type, edit_question-positive_tests, positive
+tags: edit_question, edit_question_all_type, edit_question-positive_tests, positive
 
 
-table: /resources/data_driven_test_csv/edit_question/question_service/edit_question_mcq_type-positive_tests.csv
+table: /resources/data_driven_test_csv/edit_question/question_service/edit_question_all_type-positive_tests.csv
 
 
 
-* Create a MCQ question using Question Service
+* Create an All type question using Question Service
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored     |
     |---------------|---------------|-----------------------|

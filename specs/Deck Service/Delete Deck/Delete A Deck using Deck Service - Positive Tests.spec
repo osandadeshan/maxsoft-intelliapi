@@ -31,7 +31,7 @@ Delete a Deck using a valid deckId
     |---------------|-------------------|---------------|------------------------|---------------|
     |deckId         |y                  |spec           |deckId                  |N/A            |
 * When the user invokes the API
-* Then the status code for the request is "200"
+* Then the status code for the request is "204"
 
 
 

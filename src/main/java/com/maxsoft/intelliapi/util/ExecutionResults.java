@@ -16,6 +16,7 @@ public class ExecutionResults {
 
     public static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
     public static final String FILE_PATH = CURRENT_DIRECTORY + File.separator + "logs" + File.separator + "gauge.log";
+    public static final String UPDATES_AVAILABLE_MESSAGE = "Updates are available";
 
     public static String readFromGaugeLog(String filePath, int lines) {
         File file = new File(filePath);
@@ -68,14 +69,20 @@ public class ExecutionResults {
         String result = ("-------------------------------------------------------------------------------------------------------------\n" +
                          "Test Execution Results: \n" +
                          "-------------------------------------------------------------------------------------------------------------\n"
-                         + readFromGaugeLog(FILE_PATH, 4) +
+                         + readFromGaugeLog(FILE_PATH, getLineCountToPrint()) +
                          "\n-------------------------------------------------------------------------------------------------------------");
         System.out.println(result);
         return result;
     }
 
     public static String getExecutedTime() throws ParseException {
-        String time = getTestResultsAsString().split("\r\n|\n|\r")[5];
+        int i = 4;
+        if (getLineCountToPrint() == 5){
+            i = 4;
+        } else {
+            i = 5;
+        }
+        String time = getTestResultsAsString().split("\r\n|\n|\r")[i];
         SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss");
         SimpleDateFormat sdf2 = new SimpleDateFormat("hh:mm:ss aa");
         Date date = sdf1.parse(time);
@@ -93,6 +100,16 @@ public class ExecutionResults {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static int getLineCountToPrint(){
+        int lineCount = 4;
+            if(readFromGaugeLog(FILE_PATH, 1).contains(UPDATES_AVAILABLE_MESSAGE)){
+                lineCount = 5;
+                return lineCount;
+            } else {
+                return lineCount;
+            }
     }
 
 

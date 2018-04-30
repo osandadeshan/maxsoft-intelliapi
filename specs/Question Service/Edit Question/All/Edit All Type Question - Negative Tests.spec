@@ -1,4 +1,4 @@
-Edit MCQ Type Question using Question Service - Negative Test Specification
+Edit All Type Question using Question Service - Negative Test Specification
 ===========================================================================
 Date Editd    : 12/08/2017
 Version   		: 1.0.0
@@ -6,16 +6,16 @@ Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: edit_question, edit_question_mcq_type, edit_question-positive_tests, negative
+tags: edit_question, edit_question_all_type, edit_question-positive_tests, negative
 
 
 
-* Create a MCQ question using Question Service
+* Create an All type question using Question Service
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored     |
     |---------------|---------------|-----------------------|
     |scenario       |questionId     |$.id                   |
-* Given that a user needs to invoke "Edit MCQ Type Question using Question Service"
+* Given that a user needs to invoke "Edit All Type Question using Question Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |------------------------------------------------------------------|-------------------------------|
@@ -41,7 +41,7 @@ Edit a question using an empty value for the creatorId
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -103,7 +103,7 @@ Edit a question using an invalid creatorPlatform
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -162,7 +162,7 @@ Edit a question using an empty creatorPlatform
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |learningObjective1                                       |
@@ -225,7 +225,7 @@ Edit a question using an invalid creatoredSource
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -284,7 +284,7 @@ Edit a question using an empty creatoredSource
      |#creatoredSource                |                                                         |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -345,7 +345,7 @@ Edit a question using an invalid creatoredType
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manua                                                    |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -406,7 +406,7 @@ Edit a question using an empty creatoredType
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manua                                                    |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -469,7 +469,7 @@ Edit a question using an invalid deckId type
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#deckId                         |osanda                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -515,7 +515,7 @@ Edit a question using an invalid deckId type
      |$.description                             |null                                                     |
      |$.fieldErrors[0].objectName               |                                                         |
      |$.fieldErrors[0].field                    |deckId                                                   |
-     |$.fieldErrors[0].message                  |must match \"^[0-9a-fA-F]{24}$                           |
+     |$.fieldErrors[0].message                  |must match \"^[0-9a-fA-F]{24}$\                          |
 
 
 
@@ -531,7 +531,7 @@ Edit a question using an empty deckId
      |#deckId                         |                                                         |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |learningObjective1                                       |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -575,9 +575,9 @@ Edit a question using an empty deckId
      |------------------------------------------|---------------------------------------------------------|
      |$.message                                 |error.validation                                         |
      |$.description                             |null                                                     |
-     |$.fieldErrors[0].objectName               |                                                         |
-     |$.fieldErrors[0].field                    |deckId                                                   |
-     |$.fieldErrors[0].message                  |'deckId Cannot be null or empty                          |
+     |$.fieldErrors[1].objectName               |                                                         |
+     |$.fieldErrors[1].field                    |deckId                                                   |
+     |$.fieldErrors[1].message                  |'deckId Cannot be null or empty                          |
 
 
 
@@ -709,7 +709,7 @@ Edit a question using an invalid media
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -771,7 +771,7 @@ Edit a question using an empty media
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -833,7 +833,7 @@ Edit a question using an empty questionPrompt
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -895,7 +895,7 @@ Edit a question using an invalid promptType
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -957,7 +957,7 @@ Edit a question using an empty promptType
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1021,7 +1021,7 @@ Edit a question using a string as the timeout
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -1078,7 +1078,7 @@ Edit a question using an negative value as the timeout
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -1140,7 +1140,7 @@ Edit a question using a string value as the boxId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -1199,7 +1199,7 @@ Edit a question using a negative integer value as the boxId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1261,7 +1261,7 @@ Edit a question using an empty value as the boxId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -1320,7 +1320,7 @@ Edit a question using a string value as the correctAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1379,7 +1379,7 @@ Edit a question using a negative integer value as the correctAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1441,7 +1441,7 @@ Edit a question using a special characters value as the correctAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1500,7 +1500,7 @@ Edit a question using an empty value as the correctAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1559,7 +1559,7 @@ Edit a question using a special characters value as the inCorrectAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1618,7 +1618,7 @@ Edit a question using a string value as the inCorrectAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1677,7 +1677,7 @@ Edit a question using a negative integer value as the inCorrectAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1736,7 +1736,7 @@ Edit a question using an empty value as the inCorrectAttempts
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -1795,7 +1795,7 @@ Edit a question using a negative integer value as the questionId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -1859,7 +1859,7 @@ Edit a question using a string value as the questionId
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -1916,7 +1916,7 @@ Edit a question using a special characters value as the questionId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -1975,7 +1975,7 @@ Edit a question using an empty value as the questionId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -2034,7 +2034,7 @@ Edit a question using a negative integer value as the skips
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -2096,7 +2096,7 @@ Edit a question using a special characters value as the skips
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -2155,7 +2155,7 @@ Edit a question using a string value as the skips
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2214,7 +2214,7 @@ Edit a question using an empty value as the skips
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -2275,7 +2275,7 @@ Edit a question using a negative integer value as the userId
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -2335,7 +2335,7 @@ Edit a question using a string value as the userId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2394,7 +2394,7 @@ Edit a question using a special character as the userId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2453,7 +2453,7 @@ Edit a question using an empty value as the userId
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2512,7 +2512,7 @@ Edit a question using a string value as the correctAnswerList
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -2571,7 +2571,7 @@ Edit a question using a special character as the correctAnswerList
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -2630,7 +2630,7 @@ Edit a question using an empty value as the correctAnswerList
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -2692,7 +2692,7 @@ Edit a question using an empty string as the correctAnswerList
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2754,7 +2754,7 @@ Edit a question using null value as the correctAnswerList
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2816,7 +2816,7 @@ Edit a question using a string value as the answer1Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2876,7 +2876,7 @@ Edit a question using a special character as the answer1Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2936,7 +2936,7 @@ Edit a question using a negative integer value as the answer1Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -2998,7 +2998,7 @@ Edit a question using an empty value as the answer1Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3060,7 +3060,7 @@ Edit a question using null value as the answer1Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -3122,7 +3122,7 @@ Edit a question using empty value as the answer1Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -3184,7 +3184,7 @@ Edit a question using null value as the answer1Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3245,7 +3245,7 @@ Edit a question using empty value as the answer1Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -3308,7 +3308,7 @@ Edit a question using null as the answer1Type
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -3367,7 +3367,7 @@ Edit a question using String as the answer1Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -3430,7 +3430,7 @@ Edit a question using numbers as the answer1Type
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -3490,7 +3490,7 @@ Edit a question using a string value as the answer2Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -3550,7 +3550,7 @@ Edit a question using a special character as the answer2Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3610,7 +3610,7 @@ Edit a question using a negative integer value as the answer2Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3672,7 +3672,7 @@ Edit a question using an empty value as the answer2Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3734,7 +3734,7 @@ Edit a question using null value as the answer2Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3796,7 +3796,7 @@ Edit a question using empty value as the answer2Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3858,7 +3858,7 @@ Edit a question using null value as the answer2Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -3921,7 +3921,7 @@ Edit a question using empty value as the answer2Type
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -3980,7 +3980,7 @@ Edit a question using null as the answer2Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -4041,7 +4041,7 @@ Edit a question using String as the answer2Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -4102,7 +4102,7 @@ Edit a question using numbers as the answer2Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -4164,7 +4164,7 @@ Edit a question using a string value as the answer3Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -4224,7 +4224,7 @@ Edit a question using a special character as the answer3Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -4286,7 +4286,7 @@ Edit a question using a negative integer value as the answer3Id
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -4346,7 +4346,7 @@ Edit a question using an empty value as the answer3Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -4408,7 +4408,7 @@ Edit a question using null value as the answer3Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -4470,7 +4470,7 @@ Edit a question using empty value as the answer3Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -4532,7 +4532,7 @@ Edit a question using null value as the answer3Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -4593,7 +4593,7 @@ Edit a question using empty value as the answer3Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -4654,7 +4654,7 @@ Edit a question using null as the answer3Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -4715,7 +4715,7 @@ Edit a question using String as the answer3Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -4778,7 +4778,7 @@ Edit a question using numbers as the answer3Type
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -4838,7 +4838,7 @@ Edit a question using a string value as the answer4Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -4898,7 +4898,7 @@ Edit a question using a special character as the answer4Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -4958,7 +4958,7 @@ Edit a question using a negative integer value as the answer4Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5020,7 +5020,7 @@ Edit a question using an empty value as the answer4Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5082,7 +5082,7 @@ Edit a question using null value as the answer4Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -5144,7 +5144,7 @@ Edit a question using empty value as the answer4Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5206,7 +5206,7 @@ Edit a question using null value as the answer4Value
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5267,7 +5267,7 @@ Edit a question using empty value as the answer4Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -5328,7 +5328,7 @@ Edit a question using null as the answer4Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5389,7 +5389,7 @@ Edit a question using String as the answer4Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5450,7 +5450,7 @@ Edit a question using numbers as the answer4Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5512,7 +5512,7 @@ Edit a question using a string value as the answer5Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
@@ -5572,7 +5572,7 @@ Edit a question using a special character as the answer5Id
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -5634,7 +5634,7 @@ Edit a question using a negative integer value as the answer5Id
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -5696,7 +5696,7 @@ Edit a question using an empty value as the answer5Id
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -5758,7 +5758,7 @@ Edit a question using null value as the answer5Id
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -5820,7 +5820,7 @@ Edit a question using empty value as the answer5Value
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -5882,7 +5882,7 @@ Edit a question using null value as the answer5Value
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -5943,7 +5943,7 @@ Edit a question using empty value as the answer5Type
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -6004,7 +6004,7 @@ Edit a question using null as the answer5Type
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -6065,7 +6065,7 @@ Edit a question using String as the answer5Type
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |TEXT                                                     |
@@ -6124,7 +6124,7 @@ Edit a question using numbers as the answer5Type
      |#creatoredSource                |App                                                      |
      |#creatoredType                  |Manual                                                   |
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
      |#learningObjectives             |objective1                                               |
@@ -6188,7 +6188,7 @@ Edit a question using an invalid imageUrl
      |#deckId                         |5ae583c52e02d8503eac0eeb                                 |
      |#isDeleted                      |false                                                    |
      |#tempQuestionId                 |testId                                                   |
-     |#kind                           |MULTIPLE_CHOICE                                          |
+     |#kind                           |ALL                                                                  |
      |#learningObjectives             |objective1                                               |
      |#imageUrl                       |www.maxsoft/image                                        |
      |#media                          |TEXT                                                     |

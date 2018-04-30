@@ -5,14 +5,14 @@ Description  	: This is a concept file with following syntax for each concept.
 
 
 
-# Create a short answer type question
+# Create a MCQ question using Aggregation Service
 
 * Create a deck
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name              |Value To Be Stored     |
     |---------------|---------------------------|-----------------------|
     |scenario       |deckId                     |$.id                   |
-* Given that a user needs to invoke "Create Short Answer Type Question using Question Service"
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |------------------------------------------------------------------|-------------------------------|
@@ -29,8 +29,8 @@ Description  	: This is a concept file with following syntax for each concept.
      |#deckId                         |y                  |scenario       |deckId                      |                                                         |
      |#isDeleted                      |n                  |               |                            |false                                                    |
      |#tempQuestionId                 |n                  |               |                            |testId                                                   |
-     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
-     |#learningObjectives             |n                  |               |                            |                                                         |
+     |#kind                           |n                  |               |                            |MULTIPLE_CHOICE                                          |
+     |#learningObjectives             |n                  |               |                            |learningObjective1                                       |
      |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
      |#media                          |n                  |               |                            |TEXT                                                     |
      |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _             |
@@ -44,10 +44,27 @@ Description  	: This is a concept file with following syntax for each concept.
      |#questionId                     |n                  |               |                            |0                                                        |
      |#skips                          |n                  |               |                            |0                                                        |
      |#userId                         |n                  |               |                            |0                                                        |
-     |#correctAnswerId                |n                  |               |                            |1                                                        |
-     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
-     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#correctAnswerList              |n                  |               |                            |1,2                                                      |
+     |#answer1Id                      |n                  |               |                            |1                                                        |
+     |#answer1Value                   |n                  |               |                            |Osanda                                                   |
+     |#answer1Type                    |n                  |               |                            |TEXT                                                     |
+     |#answer1CaseSensitive           |n                  |               |                            |true                                                     |
+     |#answer2Id                      |n                  |               |                            |2                                                        |
+     |#answer2Value                   |n                  |               |                            |Gemunu                                                   |
+     |#answer2Type                    |n                  |               |                            |TEXT                                                     |
+     |#answer2CaseSensitive           |n                  |               |                            |true                                                     |
+     |#answer3Id                      |n                  |               |                            |3                                                        |
+     |#answer3Value                   |n                  |               |                            |Eranga                                                   |
+     |#answer3Type                    |n                  |               |                            |TEXT                                                     |
+     |#answer3CaseSensitive           |n                  |               |                            |false                                                    |
+     |#answer4Id                      |n                  |               |                            |4                                                        |
+     |#answer4Value                   |n                  |               |                            |Heshan                                                   |
+     |#answer4Type                    |n                  |               |                            |TEXT                                                     |
+     |#answer4CaseSensitive           |n                  |               |                            |false                                                    |
+     |#answer5Id                      |n                  |               |                            |5                                                        |
+     |#answer5Value                   |n                  |               |                            |Thilina                                                  |
+     |#answer5Type                    |n                  |               |                            |TEXT                                                     |
+     |#answer5CaseSensitive           |n                  |               |                            |true                                                     |
      |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"

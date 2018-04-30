@@ -372,11 +372,12 @@ Edit a question using an empty deckId
      |#tags                           |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
+* And the JSON Path values of the response should contains the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
-     |$.description                             |null                                                     |
-     |$.fieldErrors                             |null                                                     |
+     |$.description                             |'deckId' Cannot be null or empty                         |
+     |$.error                                   |Bad Request                                              |
+     |$.exception                               |org.springframework.web.bind.MethodArgumentNotValidException|
 
 
 
@@ -2173,12 +2174,12 @@ Edit a question using special characters as the iscorrectAnswerCaseSensitive
      |#tags                           |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
+* And the JSON Path values of the response should contains the following
      |JSON Path                                 |Value                                                                                                                                                                                            |
      |------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-     |$.message                                 |Unexpected character ('!' (code 33)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')\n at [Source: java.io.PushbackInputStream@36b6c47f; line: 31, column: 29]|
-     |$.description                             |null                                                                                                                                                                                             |
-     |$.fieldErrors                             |null                                                                                                                                                                                             |
+     |$.message                                 |JSON parse error: Unexpected character ('!' (code 33)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')                                                        |
+     |$.error                             |Bad Request                                                                                                                                                                                             |
+     |$.exception                            |org.springframework.http.converter.HttpMessageNotReadableException                                                                                                                                                                                            |
 
 
 

@@ -116,7 +116,7 @@ This is a concept file with following syntax for each concept.
      |#creatoredType                  |n                  |               |                        |Manual                                                   |
      |#isDeleted                      |n                  |               |                        |false                                                    |
      |#tempQuestionId                 |n                  |               |                        |testId                                                   |
-     |#deckId                         |y                  |spec           | deckIdWith4Questions   |N/A                                                      |
+     |#deckId                         |y                  |spec           |deckIdWith4Questions    |N/A                                                      |
      |#kind                           |n                  |               |                        |MULTIPLE_CHOICE                                          |
      |#learningObjectives             |n                  |               |                        |learningObjective1                                       |
      |#imageUrl                       |n                  |               |                        |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL|

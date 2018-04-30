@@ -183,7 +183,7 @@ tags: copy_decks, positive
     |DataStore Type |Variable Name        |Value To Be Stored     |
     |---------------|---------------------|-----------------------|
     |spec           |myDeckId             |$.id                   |
-* Create an expert deck with all types of 8 questions
+* Create an expert deck with all types of 9 questions
 * Given that a user needs to invoke "Copy Decks using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -201,7 +201,7 @@ tags: copy_decks, positive
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                   |Value                                     |
      |----------------------------|------------------------------------------|
-     |$.questions.length()        |8                                         |
+     |$.questions.length()        |9                                         |
 
 
 
@@ -223,7 +223,7 @@ Validate the previously copied all types of questions from Expert Deck
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                   |Value                                     |
      |----------------------------|------------------------------------------|
-     |$.questions.length()        |8                                         |
+     |$.questions.length()        |9                                         |
 
 
 
@@ -250,7 +250,7 @@ Validate the all types of question count in above my deck copied from an expert 
 
 
 
-Delete the previously created expert deck with 8 questions
+Delete the previously created expert deck with 9 questions
 ----------------------------------------------------------
 * Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
 * And the user set the path parameters using data stores as follows

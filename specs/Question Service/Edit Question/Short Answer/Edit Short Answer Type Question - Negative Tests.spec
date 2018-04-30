@@ -1,6 +1,6 @@
 Edit Short Answer Type Question using Question Service - Negative Test Specification
 ====================================================================================
-Date Editd    : 11/13/2017
+Date Editd      : 11/13/2017
 Version   		: 1.0.0
 Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
@@ -375,8 +375,9 @@ Edit a question using an empty deckId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
+     |$.message                                 |error.validation                                         |
      |$.description                             |null                                                     |
-     |$.fieldErrors                             |null                                                     |
+     |$.fieldErrors[0].field                    |deckId                                                   |
 
 
 
@@ -417,8 +418,10 @@ Edit a question using a null deckId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
+     |$.message                                 |error.validation                                         |
      |$.description                             |null                                                     |
-     |$.fieldErrors                             |null                                                     |
+     |$.fieldErrors[0].field                    |deckId                                                   |
+     |$.fieldErrors[0].message                  |'deckId Cannot be null or empty                          |
 
 
 
@@ -459,8 +462,10 @@ Edit a question using an integer deckId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
+     |$.message                                 |error.validation                                         |
      |$.description                             |null                                                     |
-     |$.fieldErrors                             |null                                                     |
+     |$.fieldErrors[0].field                    |deckId                                                   |
+     |$.fieldErrors[0].message                  |must match "^[0-9a-fA-F]{24}$                            |
 
 
 
@@ -1328,47 +1333,6 @@ Edit a question using an empty value as the inCorrectAttempts
 
 
 
-Edit a question using a integer value as the lastAswered
-----------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561172dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |123                                                      |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
-* When the user invokes the API
-* Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                    |
-     |------------------------------------------|---------------------------------------------------------|
-     |$.stats.lastAswered                       |123                                                      |
-
-
-
 Edit a question using a decimal value as the lastAswered
 ----------------------------------------------------------
 * And the user set the request attributes as follows
@@ -1452,47 +1416,6 @@ Edit a question using a string value as the lastAnswered
      |$.message                                 |stats: Invalid value 'abc'                               |
      |$.description                             |null                                                     |
      |$.fieldErrors                             |null                                                     |
-
-
-
-Edit a question using a negative integer value as the lastAswered
--------------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561172dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |-1                                                       |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
-* When the user invokes the API
-* Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                    |
-     |------------------------------------------|---------------------------------------------------------|
-     |$.stats.lastAswered                       |-1                                                       |
 
 
 
@@ -2131,11 +2054,10 @@ Edit a question using a string value as the iscorrectAnswerCaseSensitive
 * When the user invokes the API
 * Then the status code for the request is "400"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                                                                                                        |
-     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-     |$.message                                 |Unrecognized token 'abc': was expecting ('true', 'false' or 'null')\n at [Source: java.io.PushbackInputStream@51bf4b27; line: 31, column: 32]|
-     |$.description                             |null                                                                                                                                         |
-     |$.fieldErrors                             |null                                                                                                                                         |
+     |JSON Path                                 |Value                                                                  |
+     |------------------------------------------|-----------------------------------------------------------------------|
+     |$.description                             |null                                                                   |
+     |$.fieldErrors                             |null                                                                   |
 
 
 
@@ -2174,11 +2096,10 @@ Edit a question using special characters as the iscorrectAnswerCaseSensitive
 * When the user invokes the API
 * Then the status code for the request is "400"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                                                                                                                                                            |
-     |------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-     |$.message                                 |Unexpected character ('!' (code 33)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')\n at [Source: java.io.PushbackInputStream@36b6c47f; line: 31, column: 29]|
-     |$.description                             |null                                                                                                                                                                                             |
-     |$.fieldErrors                             |null                                                                                                                                                                                             |
+     |JSON Path                                 |Value                                                                  |
+     |------------------------------------------|-----------------------------------------------------------------------|
+     |$.description                             |null                                                                   |
+     |$.fieldErrors                             |null                                                                   |
 
 
 
