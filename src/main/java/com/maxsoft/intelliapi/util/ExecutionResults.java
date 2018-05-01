@@ -1,5 +1,7 @@
 package com.maxsoft.intelliapi.util;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
@@ -82,7 +84,7 @@ public class ExecutionResults {
         } else {
             i = 5;
         }
-        String time = getTestResultsAsString().split("\r\n|\n|\r")[i];
+        String time = StringUtils.split(getTestResultsAsString(), System.lineSeparator())[i];
         SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss");
         SimpleDateFormat sdf2 = new SimpleDateFormat("hh:mm:ss aa");
         Date date = sdf1.parse(time);
