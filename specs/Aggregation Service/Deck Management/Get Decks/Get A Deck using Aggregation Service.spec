@@ -10,16 +10,6 @@ tags: aggregation_service, deck_management, get_a_deck, ci_ready
 
 
 
-* Given that a user needs to invoke "Get a Deck using Aggregation service"
-* And the user set the request authentication configurations as follows
-     |Configuration                                                     |Configuration Value            |
-     |------------------------------------------------------------------|-------------------------------|
-     |Is authentication required?                                       |Yes                            |
-     |Do you need to retrieve the access token from the text file?      |Yes                            |
-     |Provide the access token if you need to authorize the API manually|N/A                            |
-
-
-
 Get a deck using valid deckId
 -----------------------------
 tags: get_a_deck, positive
@@ -53,6 +43,13 @@ Get a deck without deckId
 -------------------------
 tags: get_a_deck, negative
 
+* Given that a user needs to invoke "Get a Deck using Aggregation service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
 * And the user set the path parameters as follows
        |Path Parameter |Path Value               |
        |---------------|-------------------------|
@@ -72,6 +69,13 @@ Get a deck using invalid DeckId
 -------------------------------
 tags: get_a_deck, negative
 
+* Given that a user needs to invoke "Get a Deck using Aggregation service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
 * And the user set the path parameters as follows
      |Path Parameter |Path Value               |
      |---------------|-------------------------|
@@ -90,6 +94,14 @@ tags: get_a_deck, negative
 Get a deck using invalid DeckId format
 --------------------------------------
 tags: get_a_deck, negative
+
+* Given that a user needs to invoke "Get a Deck using Aggregation service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
 * And the user set the path parameters as follows
      |Path Parameter |Path Value               |
      |---------------|-------------------------|

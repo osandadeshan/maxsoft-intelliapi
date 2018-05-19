@@ -194,7 +194,7 @@ tags: copy_decks, positive
 * And the user set the query parameters using data stores as follows
        |Query Parameter |Is Data Store Used?|Data Store Type|Data Store Variable Name   |Query Value               |
        |----------------|-------------------|---------------|---------------------------|--------------------------|
-       |sourceId        |y                  |spec           |expertDeckIdWith8Questions |                          |
+       |sourceId        |y                  |spec           |expertDeckIdWith9Questions |                          |
        |destinationId   |y                  |spec           |myDeckId                   |                          |
 * When the user invokes the API
 * Then the status code for the request is "200"
@@ -246,7 +246,7 @@ Validate the all types of question count in above my deck copied from an expert 
      |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
      |$.deckId                            |y                  |spec           |myDeckId                     |                                                   |
-     |$.questionCount                     |n                  |               |                             |8                                                  |
+     |$.questionCount                     |n                  |               |                             |9                                                  |
 
 
 
@@ -256,7 +256,7 @@ Delete the previously created expert deck with 9 questions
 * And the user set the path parameters using data stores as follows
     |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name   |Path Value     |
     |---------------|-------------------|---------------|---------------------------|---------------|
-    |deckId         |y                  |spec           |expertDeckIdWith8Questions |N/A            |
+    |deckId         |y                  |spec           |expertDeckIdWith9Questions |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "204"
 

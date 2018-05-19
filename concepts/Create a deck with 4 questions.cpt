@@ -6,7 +6,7 @@ This is a concept file with following syntax for each concept.
 
 # Create a deck with 4 questions
 
-* Given that a user needs to invoke "Create a Deck using Deck Service"
+* Given that a user needs to invoke "Create a Deck using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -26,13 +26,13 @@ This is a concept file with following syntax for each concept.
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00 AM                                                                                                           |
-     |#notificationFrequency          |5                                                                                                                  |
+     |#notificationTime               |08:00                                                                                                              |
+     |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -48,7 +48,7 @@ This is a concept file with following syntax for each concept.
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name        |Value To Be Stored     |
     |spec           |deckIdWith4Questions |$.id                   |
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -102,7 +102,7 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                        |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -156,7 +156,7 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                        |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -210,7 +210,7 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                        |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |

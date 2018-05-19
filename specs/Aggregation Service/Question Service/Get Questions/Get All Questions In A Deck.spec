@@ -12,6 +12,7 @@ tags: get_all_questions_in_a_deck, ci_ready
 
 Get all questions of a deck using a valid deckId
 ------------------------------------------------
+* Create a my deck with all types of 9 questions
 * Given that a user needs to invoke "Get all Questions using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -19,10 +20,10 @@ Get all questions of a deck using a valid deckId
      |Is authentication required?                                       |Yes                            |
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
-*  And the user set the query parameters as follows
-     |Query Parameter|Query Value                     |
-     |---------------|--------------------------------|
-     |deckId         |5a603af62e02d86561172dac        |
+* And the user set the query parameters using data stores as follows
+    |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
+    |---------------|-------------------|---------------|----------------------------|---------------|
+    |deckId         |y                  |spec           |myDeckIdWith9Questions      |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -30,9 +31,7 @@ Get all questions of a deck using a valid deckId
      |----------------------------------------------------|---------------------------------------------------|
      |$.questions.[-1:].question.media                    |TEXT                                               |
      |$.questions.[-1:].question.promptType               |TEXT                                               |
-     |$.questions.[-1:].kind                              |SHORT_ANSWER                                       |
      |$.questions.[-1:].creatoredSource                   |App                                                |
-     |$..questions.[-1:].answers.[0].value                |Osanda Deshan                                      |
      |$.questions.[-1:].answers.[0].type                  |TEXT                                               |
 
 

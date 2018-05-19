@@ -1,0 +1,2 @@
+scenario,api,subject,title,status,previewcards,skuId,bookAuthor,bookTitle,id1,id2,userId,createdSource,price,keyword1,keyword2,noOfDecks,description
+Create bundle using expert deck service all the attributes in the contract,Create Expert Bundle,Madol doowa,Ape gama,true,true,1234,Kinkini Gamage,Ch. 02,,,Osanda Nimalarathna,web,100.0,key1,key2,44,"Martin Wickramasinhe, Book Series"

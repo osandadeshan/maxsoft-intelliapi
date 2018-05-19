@@ -10,8 +10,8 @@ tags: delete_a_question, ci_ready
 
 
 
-Delete a short answer type question using valid question id
------------------------------------------------------------
+Delete the only question using valid question id (short answer type)
+--------------------------------------------------------------------
 * Create a short answer type question
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored     |
@@ -33,9 +33,9 @@ Delete a short answer type question using valid question id
 
 
 
-Delete a MCQ question using valid question id
----------------------------------------------
-* Create a MCQ question
+Delete the only question using valid question id (MCQ type)
+-----------------------------------------------------------
+* Create a MCQ question using Aggregation Service
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored     |
     |---------------|---------------|-----------------------|
@@ -51,6 +51,86 @@ Delete a MCQ question using valid question id
     |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
     |---------------|-------------------|---------------|------------------------|---------------|
     |questionId     |y                  |scenario       |questionId              |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+
+
+Delete the only question using valid question id (ALL type)
+-----------------------------------------------------------
+* Create an All type question using Aggregation Service
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |---------------|---------------|-----------------------|
+    |scenario       |questionId     |$.id                   |
+* Given that a user needs to invoke "Delete a Question using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |questionId     |y                  |scenario       |questionId              |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+
+
+Delete the second question using valid question id (short answer type)
+----------------------------------------------------------------------
+* Create a my deck with all types of 9 questions
+* Given that a user needs to invoke "Delete a Question using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |questionId     |y                  |scenario       |cardId2                 |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+
+
+Delete the second last question using valid question id (MCQ type)
+------------------------------------------------------------------
+* Create a deck with 4 MCQ questions
+* Given that a user needs to invoke "Delete a Question using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |questionId     |y                  |spec           |mcqCardId2              |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+
+
+Delete the fifth question using valid question id (ALL type)
+------------------------------------------------------------
+* Create a my deck with all types of 9 questions
+* Given that a user needs to invoke "Delete a Question using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |questionId     |y                  |scenario       |cardId5                 |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "204"
 
@@ -72,9 +152,11 @@ Delete a question using already deleted cardId
 * When the user invokes the API
 * Then the status code for the request is "404"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                                                                                        |
-     |---------------------------|-------------------------------------------------------------------------------------------------------------|
-     |$.message                  |{"message":"Couldn't find question with id - 5a0a7bce5ed274e204b95568","description":null,"fieldErrors":null}|
+     |JSON Path                  |Value                                                      |
+     |---------------------------|-----------------------------------------------------------|
+     |$.message                  |Couldn't find question with id - 5a0a7bce5ed274e204b95568  |
+     |$.description              |null                                                       |
+     |$.fieldErrors              |null                                                       |
 
 
 
@@ -94,9 +176,11 @@ Delete a question using an invalid cardId
 * When the user invokes the API
 * Then the status code for the request is "404"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                                                                                      |
-     |---------------------------|-----------------------------------------------------------------------------------------------------------|
-     |$.message                  |{"message":"Couldn't find question with id - safkjashfjashjkfahsjkf","description":null,"fieldErrors":null}|
+     |JSON Path                  |Value                                                      |
+     |---------------------------|-----------------------------------------------------------|
+     |$.message                  |Couldn't find question with id - safkjashfjashjkfahsjkf    |
+     |$.description              |null                                                       |
+     |$.fieldErrors              |null                                                       |
 
 
 
@@ -114,13 +198,13 @@ Delete a question using an empty value as the cardId
      |---------------|-------------------------|
      |Id             |                         |
 * When the user invokes the API
-* Then the status code for the request is "404"
+* Then the status code for the request is "405"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                                             |
-     |---------------------------|------------------------------------------------------------------|
-     |$.status                   |404                                                               |
-     |$.message                  |Request method 'DELETE' not supported                             |
-     |$.exception                |org.springframework.web.HttpRequestMethodNotSupportedException    |
+     |JSON Path                  |Value                                                      |
+     |---------------------------|-----------------------------------------------------------|
+     |$.message                  |error.methodNotSupported                                   |
+     |$.description              |Request method 'DELETE' not supported                      |
+     |$.fieldErrors              |null                                                       |
 
 
 
@@ -134,10 +218,10 @@ Delete a question without cardId path parameter
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
 *  When the user invokes the API
-* Then the status code for the request is "404"
+* Then the status code for the request is "405"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                                             |
-     |---------------------------|------------------------------------------------------------------|
-     |$.status                   |404                                                               |
-     |$.message                  |Request method 'DELETE' not supported                             |
-     |$.exception                |org.springframework.web.HttpRequestMethodNotSupportedException    |
+     |JSON Path                  |Value                                                      |
+     |---------------------------|-----------------------------------------------------------|
+     |$.message                  |error.methodNotSupported                                   |
+     |$.description              |Request method 'DELETE' not supported                      |
+     |$.fieldErrors              |null                                                       |

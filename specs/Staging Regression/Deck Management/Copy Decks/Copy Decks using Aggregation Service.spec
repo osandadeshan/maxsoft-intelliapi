@@ -63,6 +63,29 @@ Validate the previously copied questions from My Deck
 
 
 
+Validate the question count in above my deck copied from another my deck using question count API
+-------------------------------------------------------------------------------------------------
+* Given that a user needs to invoke "Get Questions Count using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the query parameters using data stores as follows
+    |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
+    |---------------|-------------------|---------------|----------------------------|---------------|
+    |deckId         |y                  |spec           |deckId                      |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+     |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
+     |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
+     |$.deckId                            |y                  |spec           |deckId                       |                                                   |
+     |$.questionCount                     |n                  |               |                             |4                                                  |
+
+
+
 Copy questions from Expert Deck to My Deck
 ------------------------------------------
 tags: copy_decks, positive
@@ -116,6 +139,29 @@ Validate the previously copied questions from Expert Deck
 
 
 
+Validate the question count in above my deck copied from an expert deck using question count API
+------------------------------------------------------------------------------------------------
+* Given that a user needs to invoke "Get Questions Count using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the query parameters using data stores as follows
+    |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
+    |---------------|-------------------|---------------|----------------------------|---------------|
+    |deckId         |y                  |spec           |deckId2                     |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+     |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
+     |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
+     |$.deckId                            |y                  |spec           |deckId2                      |                                                   |
+     |$.questionCount                     |n                  |               |                             |4                                                  |
+
+
+
 Delete the previously created expert deck with 4 questions
 ----------------------------------------------------------
 * Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
@@ -137,7 +183,7 @@ tags: copy_decks, positive
     |DataStore Type |Variable Name        |Value To Be Stored     |
     |---------------|---------------------|-----------------------|
     |spec           |myDeckId             |$.id                   |
-* Create an expert deck with all types of 8 questions
+* Create an expert deck with all types of 9 questions
 * Given that a user needs to invoke "Copy Decks using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -148,14 +194,14 @@ tags: copy_decks, positive
 * And the user set the query parameters using data stores as follows
        |Query Parameter |Is Data Store Used?|Data Store Type|Data Store Variable Name   |Query Value               |
        |----------------|-------------------|---------------|---------------------------|--------------------------|
-       |sourceId        |y                  |spec           |expertDeckIdWith8Questions |                          |
+       |sourceId        |y                  |spec           |expertDeckIdWith9Questions |                          |
        |destinationId   |y                  |spec           |myDeckId                   |                          |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                   |Value                                     |
      |----------------------------|------------------------------------------|
-     |$.questions.length()        |8                                         |
+     |$.questions.length()        |9                                         |
 
 
 
@@ -177,17 +223,40 @@ Validate the previously copied all types of questions from Expert Deck
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                   |Value                                     |
      |----------------------------|------------------------------------------|
-     |$.questions.length()        |8                                         |
+     |$.questions.length()        |9                                         |
 
 
 
-Delete the previously created expert deck with 8 questions
+Validate the all types of question count in above my deck copied from an expert deck using question count API
+-------------------------------------------------------------------------------------------------------------
+* Given that a user needs to invoke "Get Questions Count using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the query parameters using data stores as follows
+    |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
+    |---------------|-------------------|---------------|----------------------------|---------------|
+    |deckId         |y                  |spec           |myDeckId                    |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+     |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
+     |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
+     |$.deckId                            |y                  |spec           |myDeckId                     |                                                   |
+     |$.questionCount                     |n                  |               |                             |9                                                  |
+
+
+
+Delete the previously created expert deck with 9 questions
 ----------------------------------------------------------
 * Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
 * And the user set the path parameters using data stores as follows
     |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name   |Path Value     |
     |---------------|-------------------|---------------|---------------------------|---------------|
-    |deckId         |y                  |spec           |expertDeckIdWith8Questions |N/A            |
+    |deckId         |y                  |spec           |expertDeckIdWith9Questions |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "204"
 

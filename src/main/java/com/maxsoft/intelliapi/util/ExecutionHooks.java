@@ -12,7 +12,7 @@ public class ExecutionHooks {
 
 //    @AfterSuite
     public void sendEmail() throws ParseException {
-        Email.send(ExecutionResults.getTestResultsAsString());
+        Email.send(JsonReader.getExecutionResults());
     }
 
 

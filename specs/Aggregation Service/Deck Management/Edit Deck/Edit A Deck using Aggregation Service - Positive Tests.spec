@@ -72,7 +72,7 @@ Edit a Deck only using deck title and userId
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path     |Value                            |
+     |JSON Path     |Value                                       |
      |--------------|--------------------------------------------|
      |$.title       |API Deck3                                   |
      |$.userId      |Osanda Deshan                               |
@@ -96,13 +96,13 @@ Edit a Deck using a null value as the description
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |0                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -125,13 +125,13 @@ Edit a Deck using a null value as the description
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |0                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
      |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -163,13 +163,13 @@ Edit a Deck using an empty value as the bookTitle
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -191,13 +191,13 @@ Edit a Deck using an empty value as the bookTitle
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -230,13 +230,13 @@ Edit a Deck using a null value as the bookTitle
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -258,13 +258,13 @@ Edit a Deck using a null value as the bookTitle
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -298,13 +298,13 @@ Edit a Deck using an empty value as the bookAuthor
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |3                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -326,13 +326,13 @@ Edit a Deck using an empty value as the bookAuthor
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |3                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -366,13 +366,13 @@ Edit a Deck using a null value as the bookAuthor
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -394,13 +394,13 @@ Edit a Deck using a null value as the bookAuthor
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -434,13 +434,13 @@ Edit a Deck using an empty value as the bookChapter
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -462,13 +462,13 @@ Edit a Deck using an empty value as the bookChapter
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -502,13 +502,13 @@ Edit a Deck using a null value as the bookChapter
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |3                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -530,13 +530,13 @@ Edit a Deck using a null value as the bookChapter
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |3                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -570,13 +570,13 @@ Edit a Deck using an empty value as the purchasedDate
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -598,13 +598,13 @@ Edit a Deck using an empty value as the purchasedDate
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -640,13 +640,13 @@ Edit a Deck using a null value as the purchaseInformationSku
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |"null"                                                                                                             |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -668,13 +668,13 @@ Edit a Deck using a null value as the purchaseInformationSku
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -708,13 +708,13 @@ Edit a Deck using a null value as the areNotificationsEnabled
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |null                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -737,149 +737,13 @@ Edit a Deck using a null value as the areNotificationsEnabled
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |false                                                                                                                           |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
-     |$.cardPreview                                     |true                                                                                                                            |
-     |$.noOfCards                                       |2                                                                                                                               |
-     |$.progress                                        |3                                                                                                                               |
-     |$.downloads                                       |12                                                                                                                              |
-     |$.deckAuthor                                      |Osanda                                                                                                                          |
-     |$.deckAuthorId                                    |6                                                                                                                               |
-     |$.thumbnailUrl                                    |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL               |
-     |$.status                                          |Closed                                                                                                                          |
-     |$.expert                                          |false                                                                                                                           |
-     |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
-     |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
-
-
-
-Edit a Deck using a null value as the notificationTime
---------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                                                                          |
-     |--------------------------------|-------------------------------------------------------------------------------------------------------------------|
-     |#title                          |API Deck3                                                                                                          |
-     |#description                    |Test description for API Deck3                                                                                     |
-     |#tags1                          |API tag1                                                                                                           |
-     |#subjectId                      |2                                                                                                                  |
-     |#subjectName                    |API Testing3                                                                                                       |
-     |#bookTitle                      |Automation3                                                                                                        |
-     |#bookAuthor                     |Osanda Nimalarathna                                                                                                |
-     |#bookChapter                    |Chap. 04                                                                                                           |
-     |#purchasedDate                  |1512021142001                                                                                                      |
-     |#purchaseInformationPrice       |777                                                                                                                |
-     |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
-     |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |"null"                                                                                                             |
-     |#notificationFrequency          |1                                                                                                                  |
-     |#examDate                       |1512021142000                                                                                                      |
-     |#userId                         |34                                                                                                                 |
-     |#parentDeckId                   |5                                                                                                                  |
-     |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
-     |#cardPreview                    |true                                                                                                               |
-     |#noOfCards                      |2                                                                                                                  |
-     |#progress                       |3                                                                                                                  |
-     |#downloads                      |12                                                                                                                 |
-     |#deckAuthorName                 |Osanda                                                                                                             |
-     |#deckAuthorId                   |6                                                                                                                  |
-     |#thumbnailUrl                   |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL  |
-     |#status                         |Closed                                                                                                             |
-     |#starred                        |true                                                                                                               |
-     |#categoryId                     |5a5db30a12ef181b0af109ba                                                                                           |
-* When the user invokes the API
-* Then the status code for the request is "200"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                         |Value                                                                                                                           |
-     |--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-     |$.title                                           |API Deck3                                                                                                                       |
-     |$.description                                     |Test description for API Deck3                                                                                                  |
-     |$.tags[0]                                         |API tag1                                                                                                                        |
-     |$.book.bookTitle                                  |Automation3                                                                                                                     |
-     |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
-     |$.book.chapter                                    |Chap. 04                                                                                                                        |
-     |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
-     |$.examDate                                        |1512021142000                                                                                                                   |
-     |$.userId                                          |34                                                                                                                              |
-     |$.parentDeckId                                    |5                                                                                                                               |
-	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
-     |$.cardPreview                                     |true                                                                                                                            |
-     |$.noOfCards                                       |2                                                                                                                               |
-     |$.progress                                        |3                                                                                                                               |
-     |$.downloads                                       |12                                                                                                                              |
-     |$.deckAuthor                                      |Osanda                                                                                                                          |
-     |$.deckAuthorId                                    |6                                                                                                                               |
-     |$.thumbnailUrl                                    |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL               |
-     |$.status                                          |Closed                                                                                                                          |
-     |$.expert                                          |false                                                                                                                           |
-     |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
-     |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
-
-
-
-Edit a Deck using an empty value as the notificationTime
------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                                                                          |
-     |--------------------------------|-------------------------------------------------------------------------------------------------------------------|
-     |#title                          |API Deck3                                                                                                          |
-     |#description                    |Test description for API Deck3                                                                                     |
-     |#tags1                          |API tag1                                                                                                           |
-     |#subjectId                      |2                                                                                                                  |
-     |#subjectName                    |API Testing3                                                                                                       |
-     |#bookTitle                      |Automation3                                                                                                        |
-     |#bookAuthor                     |Osanda Nimalarathna                                                                                                |
-     |#bookChapter                    |Chap. 04                                                                                                           |
-     |#purchasedDate                  |1512021142001                                                                                                      |
-     |#purchaseInformationPrice       |777                                                                                                                |
-     |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
-     |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |                                                                                                                   |
-     |#notificationFrequency          |2                                                                                                                  |
-     |#examDate                       |1512021142000                                                                                                      |
-     |#userId                         |34                                                                                                                 |
-     |#parentDeckId                   |5                                                                                                                  |
-     |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
-     |#cardPreview                    |true                                                                                                               |
-     |#noOfCards                      |2                                                                                                                  |
-     |#progress                       |3                                                                                                                  |
-     |#downloads                      |12                                                                                                                 |
-     |#deckAuthorName                 |Osanda                                                                                                             |
-     |#deckAuthorId                   |6                                                                                                                  |
-     |#thumbnailUrl                   |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL  |
-     |#status                         |Closed                                                                                                             |
-     |#starred                        |true                                                                                                               |
-     |#categoryId                     |5a5db30a12ef181b0af109ba                                                                                           |
-* When the user invokes the API
-* Then the status code for the request is "200"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                         |Value                                                                                                                           |
-     |--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-     |$.title                                           |API Deck3                                                                                                                       |
-     |$.description                                     |Test description for API Deck3                                                                                                  |
-     |$.tags[0]                                         |API tag1                                                                                                                        |
-     |$.book.bookTitle                                  |Automation3                                                                                                                     |
-     |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
-     |$.book.chapter                                    |Chap. 04                                                                                                                        |
-     |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
-     |$.examDate                                        |1512021142000                                                                                                                   |
-     |$.userId                                          |34                                                                                                                              |
-     |$.parentDeckId                                    |5                                                                                                                               |
-	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -913,13 +777,13 @@ Edit a Deck using an empty value as the examDate
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |""                                                                                                                 |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -942,12 +806,12 @@ Edit a Deck using an empty value as the examDate
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -981,13 +845,13 @@ Edit a Deck using an null value as the examDate
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |null                                                                                                               |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1010,12 +874,12 @@ Edit a Deck using an null value as the examDate
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1049,13 +913,13 @@ Edit a Deck using a null value as the parentDeckId
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |3                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |"null"                                                                                                             |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1078,12 +942,12 @@ Edit a Deck using a null value as the parentDeckId
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |3                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1117,7 +981,7 @@ Edit a Deck using a null value as the archived
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
@@ -1146,7 +1010,7 @@ Edit a Deck using a null value as the archived
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
@@ -1186,13 +1050,13 @@ Edit a Deck using a null value as the cardPreview
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |2                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |null                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1215,13 +1079,13 @@ Edit a Deck using a null value as the cardPreview
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |2                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |false                                                                                                                           |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1256,13 +1120,13 @@ Edit a Deck using an empty value as the noOfCards
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |""                                                                                                                 |
      |#progress                       |3                                                                                                                  |
@@ -1285,13 +1149,13 @@ Edit a Deck using an empty value as the noOfCards
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |0                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1324,13 +1188,13 @@ Edit a Deck using a null value as the progress
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |null                                                                                                               |
@@ -1353,13 +1217,13 @@ Edit a Deck using a null value as the progress
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |0                                                                                                                               |
@@ -1393,13 +1257,13 @@ Edit a Deck using a null value as the downloads
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1422,13 +1286,13 @@ Edit a Deck using a null value as the downloads
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1462,13 +1326,13 @@ Edit a Deck using a null value as the deckAuthorName
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |3                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1491,13 +1355,13 @@ Edit a Deck using a null value as the deckAuthorName
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |3                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1530,13 +1394,13 @@ Edit a Deck using a null value as the deckAuthorId
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1559,13 +1423,13 @@ Edit a Deck using a null value as the deckAuthorId
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1598,13 +1462,13 @@ Edit a Deck using a null value as the thumbnailUrl
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1627,13 +1491,13 @@ Edit a Deck using a null value as the thumbnailUrl
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1666,13 +1530,13 @@ Edit a Deck using a null value as the status
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1695,13 +1559,13 @@ Edit a Deck using a null value as the status
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1734,13 +1598,13 @@ Edit a Deck using a null value as the starred
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1763,13 +1627,13 @@ Edit a Deck using a null value as the starred
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1803,13 +1667,13 @@ Edit a Deck using an integer value as the starred
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |2                                                                                                                 |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1832,14 +1696,14 @@ Edit a Deck using an integer value as the starred
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |2                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
-     |$.cardPreview                                     |null                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
+     |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
      |$.downloads                                       |12                                                                                                                              |
@@ -1872,13 +1736,13 @@ Edit a Deck using an empty value as the tempDeckId
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |                                                                                                                   |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1901,13 +1765,13 @@ Edit a Deck using an empty value as the tempDeckId
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |                                                                                                                                |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -1941,13 +1805,13 @@ Edit a Deck using a null value as the tempDeckId
      |#purchaseInformationPrice       |777                                                                                                                |
      |#purchaseInformationsku         |com.pearson.smartflashcards.test3                                                                                  |
      |#areNotificationsEnabled        |true                                                                                                               |
-     |#notificationTime               |08:00                                                                                                           |
+     |#notificationTime               |08:00                                                                                                              |
      |#notificationFrequency          |1                                                                                                                  |
      |#examDate                       |1512021142000                                                                                                      |
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |"null"                                                                                                             |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -1970,12 +1834,12 @@ Edit a Deck using a null value as the tempDeckId
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
-     |$.notificationSettings.notificationTime           |08:00                                                                                                                        |
+     |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |1                                                                                                                               |
      |$.examDate                                        |1512021142000                                                                                                                   |
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |

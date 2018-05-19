@@ -15,7 +15,7 @@ This is a concept file with following syntax for each concept.
 * And the user set the request attributes as follows
      |Attribute Value In JSON Template   |Attribute Value To Be Set                                   |
      |-----------------------------------|------------------------------------------------------------|
-     |#isArchived                        |true                                                        |
+     |#isArchived                        |false                                                       |
      |#bookAuthorName                    |Osanda Deshan                                               |
      |#bookTitle                         |API Deck3                                                   |
      |#tags                              |API tag1                                                    |
@@ -29,7 +29,7 @@ This is a concept file with following syntax for each concept.
      |#deckAuthorId                      |234325345345                                                |
      |#description                       |Deck has been created via an automated script               |
      |#downloads                         |328                                                         |
-     |#examDate                          |2018-01-19T07:10:20.943Z                                    |
+     |#examDate                          |                                                            |
      |#keywords                          |API                                                         |
      |#noOfCards                         |12                                                          |
      |#areNotificationsEnabled           |false                                                       |

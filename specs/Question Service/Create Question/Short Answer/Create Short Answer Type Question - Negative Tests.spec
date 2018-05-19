@@ -1319,47 +1319,6 @@ Create a question using an empty value as the inCorrectAttempts
 
 
 
-Create a question using a integer value as the lastAswered
-----------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561172dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |123                                                      |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
-* When the user invokes the API
-* Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                    |
-     |------------------------------------------|---------------------------------------------------------|
-     |$.stats.lastAswered                       |123                                                      |
-
-
-
 Create a question using a decimal value as the lastAswered
 ----------------------------------------------------------
 * And the user set the request attributes as follows
@@ -1443,47 +1402,6 @@ Create a question using a string value as the lastAnswered
      |$.message                                 |stats: Invalid value 'abc'                               |
      |$.description                             |null                                                     |
      |$.fieldErrors                             |null                                                     |
-
-
-
-Create a question using a negative integer value as the lastAswered
--------------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561172dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |-1                                                       |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
-* When the user invokes the API
-* Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                    |
-     |------------------------------------------|---------------------------------------------------------|
-     |$.stats.lastAswered                       |-1                                                       |
 
 
 
@@ -2084,92 +2002,6 @@ Create a question using an empty value as the correctAnswer
      |$.fieldErrors[0].objectName               |                                                         |
      |$.fieldErrors[0].field                    |answers[].value                                          |
      |$.fieldErrors[0].message                  |'value' Cannot be null or empty                          |
-
-
-
-Create a question using a string value as the iscorrectAnswerCaseSensitive
---------------------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561172dac                                 |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |abc                                                      |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
-* When the user invokes the API
-* Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                                                                                                        |
-     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-     |$.message                                 |Unrecognized token 'abc': was expecting ('true', 'false' or 'null')\n at [Source: java.io.PushbackInputStream@51bf4b27; line: 31, column: 32]|
-     |$.description                             |null                                                                                                                                         |
-     |$.fieldErrors                             |null                                                                                                                                         |
-
-
-
-Create a question using special characters as the iscorrectAnswerCaseSensitive
-------------------------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561172dac                                 |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |!                                                        |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
-* When the user invokes the API
-* Then the status code for the request is "400"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                                                                                                                                                            |
-     |------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-     |$.message                                 |Unexpected character ('!' (code 33)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')\n at [Source: java.io.PushbackInputStream@36b6c47f; line: 31, column: 29]|
-     |$.description                             |null                                                                                                                                                                                             |
-     |$.fieldErrors                             |null                                                                                                                                                                                             |
 
 
 

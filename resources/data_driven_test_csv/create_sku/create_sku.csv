@@ -1,0 +1,2 @@
+scenario,api,skuId,price
+Create a SKU,Create SKU,com.pearsoned.smartflashcards.test1,0.99

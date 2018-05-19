@@ -6,10 +6,15 @@ Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: create_question, create_question_short_answer_type, create_question-positive_tests, positive, ci_ready
+tags: create_question, create_question_short_answer_type, create_question-positive_tests, positive
 
 
 
+* Create a deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |---------------|---------------------------|-----------------------|
+    |scenario       |deckId                     |$.id                   |
 * Given that a user needs to invoke "Create Short Answer Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -22,36 +27,36 @@ tags: create_question, create_question_short_answer_type, create_question-positi
 
 Create a question using a decimal value as the boxId
 ----------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |5.5                                                      |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5.5                                                      |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -63,36 +68,36 @@ Create a question using a decimal value as the boxId
 
 Create a question using a decimal value as the userId
 -----------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#learningObjectives             |objective1                                               |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |2.5                                                      |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |2.5                                                      |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -104,36 +109,36 @@ Create a question using a decimal value as the userId
 
 Create a question using a decimal value as the questionId
 ---------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |1.2                                                      |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |1.2                                                      |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -145,36 +150,36 @@ Create a question using a decimal value as the questionId
 
 Create a question using an empty value as the lastAswered
 ---------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |                                                         |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |                                                         |
+     |#questionId                     |n                  |               |                            |2                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -186,36 +191,36 @@ Create a question using an empty value as the lastAswered
 
 Create a question using a decimal value as the inCorrectAttempts
 ----------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |2.5                                                      |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |2.5                                                      |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -227,36 +232,36 @@ Create a question using a decimal value as the inCorrectAttempts
 
 Create a question using a decimal value as the correctAttempts
 --------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1.1                                                      |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1.1                                                      |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -268,36 +273,36 @@ Create a question using a decimal value as the correctAttempts
 
 Create a question using a decimal value as the skips
 ----------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |2.1                                                      |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |2.2                                                      |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -309,36 +314,36 @@ Create a question using a decimal value as the skips
 
 Create a question using an empty learningObjective
 --------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#learningObjectives             |                                                         |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |60                                                       |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |0                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |                                                         |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -350,36 +355,36 @@ Create a question using an empty learningObjective
 
 Create a question using a positive integer value as the iscorrectAnswerCaseSensitive
 ------------------------------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |123                                                      |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |12344                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -391,80 +396,39 @@ Create a question using a positive integer value as the iscorrectAnswerCaseSensi
 
 Create a question using negative integer value as the iscorrectAnswerCaseSensitive
 ----------------------------------------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |5a603af62e02d86561173dac                                 |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |objective1                                               |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft?                             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |120                                                      |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |1                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |-1                                                       |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |objective1                                               |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft?                             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |120                                                      |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |5                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |-1233                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
      |$.answers[0].caseSensitive                |true                                                     |
-
-
-
-Create a question using a string value as deckId
-------------------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set                                |
-     |--------------------------------|---------------------------------------------------------|
-     |#creatorId                      |osanda12                                                 |
-     |#creatorPlatform                |Web                                                      |
-     |#creatoredSource                |App                                                      |
-     |#creatoredType                  |Manual                                                   |
-     |#deckId                         |osanda                                                   |
-     |#kind                           |SHORT_ANSWER                                             |
-     |#isDeleted                      |false                                                    |
-     |#tempQuestionId                 |testId                                                   |
-     |#learningObjectives             |learningObjective1                                       |
-     |#imageUrl                       |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
-     |#media                          |TEXT                                                     |
-     |#questionPrompt                 |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _             |
-     |#promptType                     |TEXT                                                     |
-     |#timeout                        |60                                                       |
-     |#rationale                      |rationale                                                |
-     |#boxId                          |0                                                        |
-     |#correctAttempts                |1                                                        |
-     |#inCorrectAttempts              |0                                                        |
-     |#lastAswered                    |2018-01-01T12:00:00+01:00                                |
-     |#questionId                     |0                                                        |
-     |#skips                          |0                                                        |
-     |#userId                         |0                                                        |
-     |#correctAnswerId                |1                                                        |
-     |#correctAnswerValue             |Osanda Deshan                                            |
-     |#iscorrectAnswerCaseSensitive   |false                                                    |
-     |#correctAnswerType              |TEXT                                                     |
-     |#tags                           |MaxSoft                                                  |
-* When the user invokes the API
-* Then the status code for the request is "201"
-* And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                 |Value                                                    |
-     |------------------------------------------|---------------------------------------------------------|
-     |$.deckId                                  |osanda                                                   |

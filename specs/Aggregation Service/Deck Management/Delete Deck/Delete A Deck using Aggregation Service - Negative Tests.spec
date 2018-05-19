@@ -48,7 +48,14 @@ Delete a deck using an empty value as the deckId
      |---------------|-------------------------|
      |deckId         |						   |
 * When the user invokes the API
-* Then the status code for the request is "400"
+* Then the status code for the request is "405"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path                  |Value                                                            |
+     |---------------------------|-----------------------------------------------------------------|
+     |$.status                   |405                                                              |
+     |$.message                  |Request method 'DELETE' not supported                            |
+     |$.exception                |org.springframework.web.HttpRequestMethodNotSupportedException   |
+     |$.error                    |Method Not Allowed                                               |
 
 
 

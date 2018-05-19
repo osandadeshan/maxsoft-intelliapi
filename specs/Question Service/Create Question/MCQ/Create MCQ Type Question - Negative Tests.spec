@@ -1712,7 +1712,7 @@ Create a question using a negative integer value as the inCorrectAttempts
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
      |$.description                             |null                                                     |
-     |$.fieldErrors                             |null                                                     |
+     |$.fieldErrors[0].message                  |'skips' should be zero or positive integer.              |
 
 
 
@@ -2850,7 +2850,7 @@ Create a question using a string value as the answer1Id
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
-     |$.message                                 |answers: Invalid value 'id'                              |
+     |$.message                                 |answers: Invalid value 'a'                               |
      |$.description                             |null                                                     |
      |$.fieldErrors                             |null                                                     |
 
@@ -3524,7 +3524,7 @@ Create a question using a string value as the answer2Id
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                 |Value                                                    |
      |------------------------------------------|---------------------------------------------------------|
-     |$.message                                 |answers: Invalid value 'id'                              |
+     |$.message                                 |answers: Invalid value 'a'                               |
      |$.description                             |null                                                     |
      |$.fieldErrors                             |null                                                     |
 
@@ -3833,7 +3833,7 @@ Create a question using empty value as the answer2Value
      |$.message                                 |error.validation                                         |
      |$.description                             |null                                                     |
      |$.fieldErrors[0].objectName               |                                                         |
-     |$.fieldErrors[0].field                    |answers[0].value                                         |
+     |$.fieldErrors[0].field                    |answers[1].value                                         |
      |$.fieldErrors[0].message                  |'value' Cannot be null or empty                          |
 
 

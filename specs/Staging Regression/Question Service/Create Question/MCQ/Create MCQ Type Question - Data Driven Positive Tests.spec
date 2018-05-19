@@ -1,18 +1,23 @@
-Create MCQ Type Question using Aggregation Service - Data Driven Positive Tests Specification
-=============================================================================================
+Create MCQ Type Question using Aggregation Service - Data Driven Positive Test Specification
+============================================================================================
 Date Created    : 11/06/2017
 Version   		: 1.0.0
 Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: create_question, create_question_mcq_type, create_question-positive_tests, positive, ci_ready
+tags: create_question, create_question_mcq_type, create_question-positive_tests, positive
 
 
 table: /resources/data_driven_test_csv/create_question/aggregation_service/create_question_mcq_type-positive_tests.csv
 
 
 
+* Create a deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |---------------|---------------------------|-----------------------|
+    |scenario       |deckId                     |$.id                   |
 * Given that a user needs to invoke <api>
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -25,53 +30,53 @@ table: /resources/data_driven_test_csv/create_question/aggregation_service/creat
 
 Create a question using a valid payload
 ---------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set               |
-     |--------------------------------|----------------------------------------|
-     |#creatorId                      |<creatorId>                             |
-     |#creatorPlatform                |<creatorPlatform>                       |
-     |#creatoredSource                |<creatoredSource>                       |
-     |#creatoredType                  |<creatoredType>                         |
-     |#deckId                         |<deckId>                                |
-     |#kind                           |<kind>                                  |
-     |#isDeleted                      |<isDeleted>                             |
-     |#tempQuestionId                 |<tempQuestionId>                        |
-     |#learningObjectives             |<learningObjectives>                    |
-     |#imageUrl                       |<imageUrl>                              |
-     |#media                          |<media>                                 |
-     |#questionPrompt                 |<prompt>                                |
-     |#promptType                     |<promptType>                            |
-     |#timeout                        |<timeout>                               |
-     |#rationale                      |<rationale>                             |
-     |#boxId                          |<boxId>                                 |
-     |#correctAttempts                |<correctAttempts>                       |
-     |#inCorrectAttempts              |<inCorrectAttempts>                     |
-     |#lastAswered                    |<lastAswered>                           |
-     |#questionId                     |<questionId>                            |
-     |#skips                          |<skips>                                 |
-     |#userId                         |<userId>                                |
-     |#correctAnswerList              |<correctAnswerList>                     |
-     |#answer1Id                      |<answer1Id>                             |
-     |#answer1Value                   |<answer1Value>                          |
-     |#answer1Type                    |<answer1Type>                           |
-     |#answer1CaseSensitive           |<answer1CaseSensitive>                  |
-     |#answer2Id                      |<answer2Id>                             |
-     |#answer2Value                   |<answer2Value>                          |
-     |#answer2Type                    |<answer2Type>                           |
-     |#answer2CaseSensitive           |<answer2CaseSensitive>                  |
-     |#answer3Id                      |<answer3Id>                             |
-     |#answer3Value                   |<answer3Value>                          |
-     |#answer3Type                    |<answer3Type>                           |
-     |#answer3CaseSensitive           |<answer3CaseSensitive>                  |
-     |#answer4Id                      |<answer4Id>                             |
-     |#answer4Value                   |<answer4Value>                          |
-     |#answer4Type                    |<answer4Type>                           |
-     |#answer4CaseSensitive           |<answer4CaseSensitive>                  |
-     |#answer5Id                      |<answer5Id>                             |
-     |#answer5Value                   |<answer5Value>                          |
-     |#answer5Type                    |<answer5Type>                           |
-     |#answer5CaseSensitive           |<answer5CaseSensitive>                  |
-     |#tags                           |<tags>                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set               |
+     |--------------------------------|-------------------|---------------|----------------------------|----------------------------------------|
+     |#creatorId                      |n                  |               |                            |<creatorId>                             |
+     |#creatorPlatform                |n                  |               |                            |<creatorPlatform>                       |
+     |#creatoredSource                |n                  |               |                            |<creatoredSource>                       |
+     |#creatoredType                  |n                  |               |                            |<creatoredType>                         |
+     |#deckId                         |y                  |scenario       |deckId                      |                                        |
+     |#kind                           |n                  |               |                            |<kind>                                  |
+     |#isDeleted                      |n                  |               |                            |<isDeleted>                             |
+     |#tempQuestionId                 |n                  |               |                            |<tempQuestionId>                        |
+     |#learningObjectives             |n                  |               |                            |<learningObjectives>                    |
+     |#imageUrl                       |n                  |               |                            |<imageUrl>                              |
+     |#media                          |n                  |               |                            |<media>                                 |
+     |#questionPrompt                 |n                  |               |                            |<prompt>                                |
+     |#promptType                     |n                  |               |                            |<promptType>                            |
+     |#timeout                        |n                  |               |                            |<timeout>                               |
+     |#rationale                      |n                  |               |                            |<rationale>                             |
+     |#boxId                          |n                  |               |                            |<boxId>                                 |
+     |#correctAttempts                |n                  |               |                            |<correctAttempts>                       |
+     |#inCorrectAttempts              |n                  |               |                            |<inCorrectAttempts>                     |
+     |#lastAswered                    |n                  |               |                            |<lastAswered>                           |
+     |#questionId                     |n                  |               |                            |<questionId>                            |
+     |#skips                          |n                  |               |                            |<skips>                                 |
+     |#userId                         |n                  |               |                            |<userId>                                |
+     |#correctAnswerList              |n                  |               |                            |<correctAnswerList>                     |
+     |#answer1Id                      |n                  |               |                            |<answer1Id>                             |
+     |#answer1Value                   |n                  |               |                            |<answer1Value>                          |
+     |#answer1Type                    |n                  |               |                            |<answer1Type>                           |
+     |#answer1CaseSensitive           |n                  |               |                            |<answer1CaseSensitive>                  |
+     |#answer2Id                      |n                  |               |                            |<answer2Id>                             |
+     |#answer2Value                   |n                  |               |                            |<answer2Value>                          |
+     |#answer2Type                    |n                  |               |                            |<answer2Type>                           |
+     |#answer2CaseSensitive           |n                  |               |                            |<answer2CaseSensitive>                  |
+     |#answer3Id                      |n                  |               |                            |<answer3Id>                             |
+     |#answer3Value                   |n                  |               |                            |<answer3Value>                          |
+     |#answer3Type                    |n                  |               |                            |<answer3Type>                           |
+     |#answer3CaseSensitive           |n                  |               |                            |<answer3CaseSensitive>                  |
+     |#answer4Id                      |n                  |               |                            |<answer4Id>                             |
+     |#answer4Value                   |n                  |               |                            |<answer4Value>                          |
+     |#answer4Type                    |n                  |               |                            |<answer4Type>                           |
+     |#answer4CaseSensitive           |n                  |               |                            |<answer4CaseSensitive>                  |
+     |#answer5Id                      |n                  |               |                            |<answer5Id>                             |
+     |#answer5Value                   |n                  |               |                            |<answer5Value>                          |
+     |#answer5Type                    |n                  |               |                            |<answer5Type>                           |
+     |#answer5CaseSensitive           |n                  |               |                            |<answer5CaseSensitive>                  |
+     |#tags                           |n                  |               |                            |<tags>                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following

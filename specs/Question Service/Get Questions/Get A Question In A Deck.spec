@@ -69,7 +69,7 @@ Get a question using an already deleted cardId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                             |
      |---------------------------|------------------------------------------------------------------|
-     |$.message                  |Couldn't find question with id : 5a0a7bce5ed274e204b95568         |
+     |$.message                  |Couldn't find a question for given id : 5a0a7bce5ed274e204b95568  |
      |$.description              |null                                                              |
      |$.fieldErrors              |null                                                              |
 
@@ -93,7 +93,7 @@ Get a question using an invalid cardId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                             |
      |---------------------------|------------------------------------------------------------------|
-     |$.message                  |Couldn't find question with id : sfsgsgfsgfsgsgsgfsgfsfgs         |
+     |$.message                  |Couldn't find a question for given id : sfsgsgfsgfsgsgsgfsgfsfgs  |
      |$.description              |null                                                              |
      |$.fieldErrors              |null                                                              |
 

@@ -97,7 +97,7 @@ Delete a question using already deleted cardId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                           |
      |---------------------------|----------------------------------------------------------------|
-     |$.message                  |Couldn't find question with id : 5a0a7bce5ed274e204b95568       |
+     |$.message                  |Couldn't find question with id - 5a0a7bce5ed274e204b95568       |
      |$.description              |null                                                            |
      |$.fieldErrors              |null                                                            |
 
@@ -121,7 +121,7 @@ Delete a question using an invalid cardId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                           |
      |---------------------------|----------------------------------------------------------------|
-     |$.message                  |Couldn't find question with id : safkjashfjashjkfahsjkf         |
+     |$.message                  |Couldn't find question with id - safkjashfjashjkfahsjkf         |
      |$.description              |null                                                            |
      |$.fieldErrors              |null                                                            |
 

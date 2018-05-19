@@ -1,18 +1,23 @@
-Create Short Answer Type Question using Aggregation Service - Data Driven Positive Tests Specification
-======================================================================================================
+Create Short Answer Type Question using Aggregation Service - Data Driven Positive Test Specification
+=====================================================================================================
 Date Created    : 11/06/2017
 Version   		: 1.0.0
 Owner      		: Osanda Deshan
 Description  	: This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-tags: create_question, create_question_short_answer_type, create_question-positive_tests, positive, ci_ready
+tags: create_question, create_question_short_answer_type, create_question-positive_tests, positive
 
 
 table: /resources/data_driven_test_csv/create_question/aggregation_service/create_question_short_answer_type-positive_tests.csv
 
 
 
+* Create a deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |---------------|---------------------------|-----------------------|
+    |scenario       |deckId                     |$.id                   |
 * Given that a user needs to invoke <api>
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -25,36 +30,36 @@ table: /resources/data_driven_test_csv/create_question/aggregation_service/creat
 
 Create a question using a valid payload
 ---------------------------------------
-* And the user set the request attributes as follows
-     |Attribute Value In JSON Template|Attribute Value To Be Set               |
-     |--------------------------------|----------------------------------------|
-     |#creatorId                      |<creatorId>                             |
-     |#creatorPlatform                |<creatorPlatform>                       |
-     |#creatoredSource                |<creatoredSource>                       |
-     |#creatoredType                  |<creatoredType>                         |
-     |#deckId                         |<deckId>                                |
-     |#isDeleted                      |<isDeleted>                             |
-     |#tempQuestionId                 |<tempQuestionId>                        |
-     |#kind                           |<kind>                                  |
-     |#learningObjectives             |<learningObjectives>                    |
-     |#imageUrl                       |<imageUrl>                              |
-     |#media                          |<media>                                 |
-     |#questionPrompt                 |<prompt>                                |
-     |#promptType                     |<promptType>                            |
-     |#timeout                        |<timeout>                               |
-     |#rationale                      |<rationale>                             |
-     |#boxId                          |<boxId>                                 |
-     |#correctAttempts                |<correctAttempts>                       |
-     |#inCorrectAttempts              |<inCorrectAttempts>                     |
-     |#lastAswered                    |<lastAswered>                           |
-     |#questionId                     |<questionId>                            |
-     |#skips                          |<skips>                                 |
-     |#userId                         |<userId>                                |
-     |#correctAnswerId                |<correctAnswerId>                       |
-     |#correctAnswerValue             |<correctAnswer>                         |
-     |#iscorrectAnswerCaseSensitive   |<iscorrectAnswerCaseSensitive>          |
-     |#correctAnswerType              |<correctAnswerType>                     |
-     |#tags                           |<tags>                                  |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set               |
+     |--------------------------------|-------------------|---------------|----------------------------|----------------------------------------|
+     |#creatorId                      |n                  |               |                            |<creatorId>                             |
+     |#creatorPlatform                |n                  |               |                            |<creatorPlatform>                       |
+     |#creatoredSource                |n                  |               |                            |<creatoredSource>                       |
+     |#creatoredType                  |n                  |               |                            |<creatoredType>                         |
+     |#deckId                         |y                  |scenario       |deckId                      |                                        |
+     |#isDeleted                      |n                  |               |                            |<isDeleted>                             |
+     |#tempQuestionId                 |n                  |               |                            |<tempQuestionId>                        |
+     |#kind                           |n                  |               |                            |<kind>                                  |
+     |#learningObjectives             |n                  |               |                            |<learningObjectives>                    |
+     |#imageUrl                       |n                  |               |                            |<imageUrl>                              |
+     |#media                          |n                  |               |                            |<media>                                 |
+     |#questionPrompt                 |n                  |               |                            |<prompt>                                |
+     |#promptType                     |n                  |               |                            |<promptType>                            |
+     |#timeout                        |n                  |               |                            |<timeout>                               |
+     |#rationale                      |n                  |               |                            |<rationale>                             |
+     |#boxId                          |n                  |               |                            |<boxId>                                 |
+     |#correctAttempts                |n                  |               |                            |<correctAttempts>                       |
+     |#inCorrectAttempts              |n                  |               |                            |<inCorrectAttempts>                     |
+     |#lastAswered                    |n                  |               |                            |<lastAswered>                           |
+     |#questionId                     |n                  |               |                            |<questionId>                            |
+     |#skips                          |n                  |               |                            |<skips>                                 |
+     |#userId                         |n                  |               |                            |<userId>                                |
+     |#correctAnswerId                |n                  |               |                            |<correctAnswerId>                       |
+     |#correctAnswerValue             |n                  |               |                            |<correctAnswer>                         |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |<iscorrectAnswerCaseSensitive>          |
+     |#correctAnswerType              |n                  |               |                            |<correctAnswerType>                     |
+     |#tags                           |n                  |               |                            |<tags>                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -77,10 +82,10 @@ Create a question using a valid payload
      |$.creatoredType                           |<creatoredType>                                          |
      |$.creatorPlatform                         |<creatorPlatform>                                        |
      |$.creatoredSource                         |<creatoredSource>                                        |
+     |$.deleted                                 |<isDeleted>                                              |
+     |$.tempQuestionId                          |<tempQuestionId>                                         |
      |$.answers[0].id                           |<correctAnswerId>                                        |
      |$.answers[0].value                        |<correctAnswer>                                          |
      |$.answers[0].caseSensitive                |<iscorrectAnswerCaseSensitive>                           |
      |$.answers[0].type                         |<correctAnswerType>                                      |
-     |$.deleted                                 |<isDeleted>                                              |
-     |$.tempQuestionId                          |<tempQuestionId>                                         |
 // Cannot assert lastAnswered since we can give it as ISO DateTime format and it returns epoch time

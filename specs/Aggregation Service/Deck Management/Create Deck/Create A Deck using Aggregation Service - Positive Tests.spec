@@ -203,6 +203,7 @@ Create a Deck using an empty value as the bookTitle
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
 
+
 Create a Deck using a null value as the bookTitle
 -------------------------------------------------
 * And the user set the request attributes as follows
@@ -267,7 +268,6 @@ Create a Deck using a null value as the bookTitle
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -338,7 +338,6 @@ Create a Deck using an empty value as the bookAuthor
 
 
 
-
 Create a Deck using a null value as the bookAuthor
 --------------------------------------------------
 * And the user set the request attributes as follows
@@ -403,7 +402,6 @@ Create a Deck using a null value as the bookAuthor
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -474,7 +472,6 @@ Create a Deck using an empty value as the bookChapter
 
 
 
-
 Create a Deck using a null value as the bookChapter
 ---------------------------------------------------
 * And the user set the request attributes as follows
@@ -542,7 +539,6 @@ Create a Deck using a null value as the bookChapter
 
 
 
-
 Create a Deck using an empty value as the purchasedDate
 -------------------------------------------------------
 * And the user set the request attributes as follows
@@ -577,7 +573,6 @@ Create a Deck using an empty value as the purchasedDate
      |#status                         |Closed                                                                                                             |
      |#starred                        |true                                                                                                               |
      |#categoryId                     |5a5db30a12ef181b0af109ba                                                                                           |
-
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
@@ -608,9 +603,6 @@ Create a Deck using an empty value as the purchasedDate
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
-
-pugrchase date validation
 
 
 
@@ -678,7 +670,6 @@ Create a Deck using a null value as the purchaseInformationSku
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -817,7 +808,6 @@ Create a Deck using an empty value as the examDate
 
 
 
-
 Create a Deck using an null value as the examDate
 -------------------------------------------------
 * And the user set the request attributes as follows
@@ -885,7 +875,6 @@ Create a Deck using an null value as the examDate
 
 
 
-
 Create a Deck using a null value as the parentDeckId
 ----------------------------------------------------
 * And the user set the request attributes as follows
@@ -950,7 +939,6 @@ Create a Deck using a null value as the parentDeckId
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -1022,7 +1010,6 @@ Create a Deck using a null value as the archived
 
 
 
-
 Create a Deck using a null value as the cardPreview
 ---------------------------------------------------
 * And the user set the request attributes as follows
@@ -1091,8 +1078,6 @@ Create a Deck using a null value as the cardPreview
 
 
 
-
-
 Create a Deck using an empty value as the noOfCards
 ---------------------------------------------------
 * And the user set the request attributes as follows
@@ -1158,7 +1143,6 @@ Create a Deck using an empty value as the noOfCards
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -1235,7 +1219,6 @@ Create a Deck using a null value as the noOfCards
 
 
 
-
 Create a Deck using a null value as the progress
 ------------------------------------------------
 * And the user set the request attributes as follows
@@ -1301,7 +1284,6 @@ Create a Deck using a null value as the progress
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -1373,7 +1355,6 @@ Create a Deck using a null value as the downloads
 
 
 
-
 Create a Deck using a null value as the deckAuthorName
 ------------------------------------------------------
 * And the user set the request attributes as follows
@@ -1438,7 +1419,6 @@ Create a Deck using a null value as the deckAuthorName
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -1509,7 +1489,6 @@ Create a Deck using a null value as the deckAuthorId
 
 
 
-
 Create a Deck using a null value as the thumbnailUrl
 ----------------------------------------------------
 * And the user set the request attributes as follows
@@ -1577,7 +1556,6 @@ Create a Deck using a null value as the thumbnailUrl
 
 
 
-
 Create a Deck using a null value as the status
 ----------------------------------------------
 * And the user set the request attributes as follows
@@ -1642,7 +1620,6 @@ Create a Deck using a null value as the status
      |$.starred                                         |true                                                                                                                            |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -1714,7 +1691,6 @@ Create a Deck using a null value as the starred
 
 
 
-
 Create a Deck using an integer value as the starred
 ---------------------------------------------------
 * And the user set the request attributes as follows
@@ -1768,7 +1744,7 @@ Create a Deck using an integer value as the starred
      |$.parentDeckId                                    |5                                                                                                                               |
 	 |$.tempDeckId                                      |999                                                                                                                             |
      |$.archived                                        |true                                                                                                                            |
-     |$.cardPreview                                     |null                                                                                                                            |
+     |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
      |$.downloads                                       |12                                                                                                                              |
@@ -1780,7 +1756,6 @@ Create a Deck using an integer value as the starred
      |$.starred                                         |false                                                                                                                           |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
 
 
 
@@ -1852,7 +1827,6 @@ Create a Deck using an empty value as the tempDeckId
 
 
 
-
 Create a Deck using a null value as the tempDeckId
 --------------------------------------------------
 * And the user set the request attributes as follows
@@ -1917,8 +1891,6 @@ Create a Deck using a null value as the tempDeckId
      |$.starred                                         |false                                                                                                                           |
      |$.purchaseInfo.price                              |0                                                                                                                               |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
-
-
 
 
 

@@ -32,7 +32,6 @@ Get all questions of a deck using a valid deckId
      |$.questions[-1:].question.media                    |TEXT                                               |
      |$.questions[-1:].question.prompt                   |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _       |
      |$.questions[-1:].question.promptType               |TEXT                                               |
-     |$.questions[-1:].kind                              |ALL                                                |
      |$.questions[-1:].creatorPlatform                   |Web                                                |
      |$.questions[-1:].creatoredSource                   |App                                                |
      |$.questions[-1:].creatoredType                     |Manual                                             |

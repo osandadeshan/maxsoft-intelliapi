@@ -60,13 +60,13 @@ tags: get_all_decks, negative
      |---------------|-------------------------|
      |User           |                         |
 * When the user invokes the API
-* Then the status code for the request is "404"
+* Then the status code for the request is "400"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                                         |Value                                                                                                            |
-     |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-     |$.status                                          |404                                                                                                              |
-     |$.error                                           |Not Found                                                                                                        |
-     |$.exception                                       |org.springframework.web.client.ResourceAccessException                                                           |
+     |JSON Path                                         |Value                                                   |
+     |--------------------------------------------------|--------------------------------------------------------|
+     |$.status                                          |400                                                     |
+     |$.error                                           |Bad Request                                             |
+     |$.exception                                       |org.springframework.web.client.ResourceAccessException  |
 
 
 

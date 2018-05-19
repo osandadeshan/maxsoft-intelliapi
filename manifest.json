@@ -3,6 +3,7 @@
   "Plugins": [
     "html-report",
     "spectacle",
+    "json-report",
     "flash"
   ]
 }

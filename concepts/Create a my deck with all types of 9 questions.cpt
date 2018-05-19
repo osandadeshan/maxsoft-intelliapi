@@ -49,7 +49,8 @@ This is a concept file with following syntax for each concept.
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name              |Value To Be Stored     |
     |spec           |myDeckIdWith9Questions     |$.id                   |
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -103,7 +104,8 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                             |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -157,7 +159,11 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                             |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |scenario       |cardId2                    |$.id                   |
+
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -211,7 +217,8 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                             |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
-* Given that a user needs to invoke "Create MCQ Type Question using Question Service"
+
+* Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -266,7 +273,7 @@ This is a concept file with following syntax for each concept.
 * When the user invokes the API
 * Then the status code for the request is "201"
 
-* Given that a user needs to invoke "Create All Type Question using Question Service"
+* Given that a user needs to invoke "Create All Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -320,8 +327,11 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                             |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |scenario       |cardId5                    |$.id                   |
 
-* Given that a user needs to invoke "Create Short Answer Type Question using Question Service"
+* Given that a user needs to invoke "Create Short Answer Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -359,7 +369,7 @@ This is a concept file with following syntax for each concept.
 * When the user invokes the API
 * Then the status code for the request is "201"
 
-* Given that a user needs to invoke "Create Short Answer Type Question using Question Service"
+* Given that a user needs to invoke "Create Short Answer Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -397,7 +407,7 @@ This is a concept file with following syntax for each concept.
 * When the user invokes the API
 * Then the status code for the request is "201"
 
-* Given that a user needs to invoke "Create Short Answer Type Question using Question Service"
+* Given that a user needs to invoke "Create Short Answer Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |
@@ -434,8 +444,11 @@ This is a concept file with following syntax for each concept.
      |#tags                           |n                  |               |                             |MaxSoft                                                  |
 * When the user invokes the API
 * Then the status code for the request is "201"
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |scenario       |cardId8                    |$.id                   |
 
-* Given that a user needs to invoke "Create Short Answer Type Question using Question Service"
+* Given that a user needs to invoke "Create Short Answer Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |Is authentication required?                                       |Yes                            |

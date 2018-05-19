@@ -67,10 +67,6 @@ Recommendation for the next cards using invalid personId and valid deckId
      |--------------------------------------------------|----------------------------------------|
      |$.person                                          |person                                  |
      |$.deck                                            |deckId2                                 |
-     |$.session.cards[0]                                |cardId4                                 |
-     |$.session.cards[1]                                |cardId3                                 |
-     |$.session.cards[2]                                |cardId2                                 |
-     |$.session.cards[3]                                |cardId1                                 |
      |$.session.sessionSize                             |20                                      |
      |$.groups[0].groupId                               |0                                       |
      |$.groups[0].groupType                             |UNPLAYED                                |

@@ -41,13 +41,16 @@ Get a question using a valid existing cardId
      |$.learningObjectives[0]             |                                                   |
      |$.tags[0]                           |MaxSoft                                            |
      |$.creatorId                         |osanda12                                           |
-     |$.deckId                            |5a603af62e02d86561172dac                           |
      |$.creatoredType                     |Manual                                             |
      |$.creatorPlatform                   |Web                                                |
      |$.creatoredSource                   |App                                                |
      |$.answers.[0].value                 |Osanda Deshan                                      |
      |$.answers.[0].caseSensitive         |false                                              |
      |$.answers.[0].type                  |TEXT                                               |
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+    |JSON Path      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Value          |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |$.deckId       |y                  |scenario       |deckId                  |N/A            |
 
 
 
@@ -67,9 +70,11 @@ Get a question using an already deleted cardId
 * When the user invokes the API
 * Then the status code for the request is "404"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                                                                                                |
-     |---------------------------|---------------------------------------------------------------------------------------------------------------------|
-     |$.message                  |{"message":"Couldn't find a question for given id : 5a0a7bce5ed274e204b95568","description":null,"fieldErrors":null} |
+     |JSON Path                  |Value                                                             |
+     |---------------------------|------------------------------------------------------------------|
+     |$.message                  |Couldn't find a question for given id : 5a0a7bce5ed274e204b95568  |
+     |$.description              |null                                                              |
+     |$.fieldErrors              |null                                                              |
 
 
 
@@ -89,9 +94,11 @@ Get a question using an invalid cardId
 * When the user invokes the API
 * Then the status code for the request is "404"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path                  |Value                                                                                                                |
-     |---------------------------|---------------------------------------------------------------------------------------------------------------------|
-     |$.message                  |{"message":"Couldn't find a question for given id : sfsgsgfsgfsgsgsgfsgfsfgs","description":null,"fieldErrors":null} |
+     |JSON Path                  |Value                                                             |
+     |---------------------------|------------------------------------------------------------------|
+     |$.message                  |Couldn't find a question for given id : sfsgsgfsgfsgsgsgfsgfsfgs  |
+     |$.description              |null                                                              |
+     |$.fieldErrors              |null                                                              |
 
 
 
@@ -113,7 +120,9 @@ Get a question using the cardId as empty
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                      |
      |---------------------------|-----------------------------------------------------------|
-     |$.message                  |Required String parameter 'deckId' is not present          |
+     |$.message                  |error.internalServerError                                  |
+     |$.description              |Internal server error                                      |
+     |$.fieldErrors              |null                                                       |
 
 
 
@@ -131,4 +140,6 @@ Get a question without cardId path parameter
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                  |Value                                                      |
      |---------------------------|-----------------------------------------------------------|
-     |$.message                  |Required String parameter 'deckId' is not present          |
+     |$.message                  |error.internalServerError                                  |
+     |$.description              |Internal server error                                      |
+     |$.fieldErrors              |null                                                       |

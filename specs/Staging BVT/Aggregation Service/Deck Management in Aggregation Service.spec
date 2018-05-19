@@ -103,7 +103,7 @@ Edit the previously created deck
      |#userId                         |34                                                                                                                 |
      |#parentDeckId                   |5                                                                                                                  |
      |#tempDeckId                     |999                                                                                                                |
-     |#archived                       |true                                                                                                               |
+     |#archived                       |false                                                                                                              |
      |#cardPreview                    |true                                                                                                               |
      |#noOfCards                      |2                                                                                                                  |
      |#progress                       |3                                                                                                                  |
@@ -132,7 +132,7 @@ Edit the previously created deck
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
      |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -172,7 +172,7 @@ Get the previously created deck
      |$.userId                                          |34                                                                                                                              |
      |$.parentDeckId                                    |5                                                                                                                               |
      |$.tempDeckId                                      |999                                                                                                                             |
-     |$.archived                                        |true                                                                                                                            |
+     |$.archived                                        |false                                                                                                                           |
      |$.cardPreview                                     |true                                                                                                                            |
      |$.noOfCards                                       |2                                                                                                                               |
      |$.progress                                        |3                                                                                                                               |
@@ -195,4 +195,4 @@ Delete the previously created deck
     |---------------|-------------------|---------------|------------------------|---------------|
     |deckId         |y                  |spec           |deckId                  |N/A            |
 * When the user invokes the API
-* Then the status code for the request is "200"
+* Then the status code for the request is "204"

@@ -28,6 +28,10 @@ Add an expert deck to my deck
        |userId          |n                  |               |                           |osan                      |
 * When the user invokes the API
 * Then the status code for the request is "201"
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |---------------|---------------------------|-----------------------|
+    |spec           |purchasedExpertDeckId      |$.id                   |
 
 
 
@@ -43,17 +47,40 @@ Verify all the questions are in the newly added deck
 * And the user set the query parameters using data stores as follows
     |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name   |Query Value    |
     |---------------|-------------------|---------------|---------------------------|---------------|
-    |deckId         |y                  |spec           |expertDeckIdWith4Questions |N/A            |
+    |deckId         |y                  |spec           |purchasedExpertDeckId      |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
     |JSON Path               |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Expected Value |
     |------------------------|-------------------|---------------|-----------------------------|---------------|
-    |$.questions[0].deckId   |y                  |spec           |expertDeckIdWith4Questions   |N/A            |
+    |$.questions[0].deckId   |y                  |spec           |purchasedExpertDeckId        |N/A            |
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                   |Value                                     |
      |----------------------------|------------------------------------------|
      |$.questions.length()        |4                                         |
+
+
+
+Counting the number of questions inside that deck
+-------------------------------------------------
+* Given that a user needs to invoke "Get Questions Count using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the query parameters using data stores as follows
+    |Query Name     |Is Data Store Used?|Data Store Type|Data Store Variable Name    |Query Value    |
+    |---------------|-------------------|---------------|----------------------------|---------------|
+    |deckId         |y                  |spec           |purchasedExpertDeckId       |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+     |JSON Path                           |Is Data Store Used?|Data Store Type|Data Store Variable Name     |Value                                              |
+     |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
+     |$.deckId                            |y                  |spec           |purchasedExpertDeckId        |                                                   |
+     |$.questionCount                     |n                  |               |                             |4                                                  |
 
 
 

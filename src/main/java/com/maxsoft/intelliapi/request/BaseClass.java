@@ -32,7 +32,6 @@ import static io.restassured.RestAssured.given;
 
 public class BaseClass {
 
-    private static final String DEFAULT = "dev";
     private static final String DEV = "dev";
     private static final String QA = "qa";
     private static final String UAT = "uat";
@@ -41,7 +40,6 @@ public class BaseClass {
     public String AUTHENTICATION_FIRST_VALUE = System.getenv("authentication_first_value");
     public String CURRENT_DIRECTORY = System.getProperty("user.dir");
     public String ACCESS_TOKEN_FILE_PATH = CURRENT_DIRECTORY + File.separator + System.getenv("access_token_file_path");
-    public String API_DOC_FILE_PATH = File.separator + System.getenv("api_document_path");
     public static String ENVIRONMENT = System.getenv("environment");
     public static String OS = System.getProperty("os.name");
     public String baseUrl = setUp();
@@ -59,8 +57,60 @@ public class BaseClass {
         Gauge.writeMessage("Request is: " + "\n" + request);
     }
 
+    public String setUp() {
+        String baseUrl = "";
+        if (ENVIRONMENT == null) {
+            Assert.fail("Please add \"environment\" in the property file and assign an environment QA|DEV|UAT|PROD");
+        }
+        switch (ENVIRONMENT.toLowerCase()) {
+            case DEV:
+                baseUrl = System.getenv("dev_environment_base_url");
+                break;
+            case QA:
+                baseUrl = System.getenv("qa_environment_base_url");
+                break;
+            case UAT:
+                baseUrl = System.getenv("uat_environment_base_url");
+                break;
+            case PROD:
+                baseUrl = System.getenv("prod_environment_base_url");
+                break;
+            default:
+                Assert.fail("Please assign an valid environment QA|DEV|UAT|PROD for \"environment\" in the property file");
+                break;
+    }
+        if (baseUrl == null) {
+            baseUrl = "";
+        }
+        return baseUrl;
+    }
+
     public String getAPIDocumentFilePath() {
-        return CURRENT_DIRECTORY + API_DOC_FILE_PATH;
+        String apiDocPath = "";
+        if (ENVIRONMENT == null) {
+            Assert.fail("Please add \"environment\" in the property file and assign an environment QA|DEV|UAT|PROD");
+        }
+        switch (ENVIRONMENT.toLowerCase()) {
+            case DEV:
+                apiDocPath = System.getenv("dev_api_document_path");
+                break;
+            case QA:
+                apiDocPath = System.getenv("qa_api_document_path");
+                break;
+            case UAT:
+                apiDocPath = System.getenv("uat_api_document_path");
+                break;
+            case PROD:
+                apiDocPath = System.getenv("prod_api_document_path");
+                break;
+            default:
+                Assert.fail("Please assign an valid environment QA|DEV|UAT|PROD for \"environment\" in the property file");
+                break;
+        }
+        if (apiDocPath == null) {
+            apiDocPath = "";
+        }
+        return CURRENT_DIRECTORY + File.separator + apiDocPath;
     }
 
     public String getCurrentTimestamp(String timestampPattern){
@@ -192,29 +242,6 @@ public class BaseClass {
         } else {
             return getScenarioDataStoreValue(variableName);
         }
-    }
-
-    public String setUp() {
-        String baseUrl = "";
-        if (ENVIRONMENT == null) {
-            ENVIRONMENT = DEFAULT;
-        }
-        if (ENVIRONMENT.toLowerCase().equals(DEV)) {
-            baseUrl = System.getenv("dev_environment_base_url");
-        }
-        if (ENVIRONMENT.toLowerCase().equals(QA)) {
-            baseUrl = System.getenv("qa_environment_base_url");
-        }
-        if (ENVIRONMENT.toLowerCase().equals(UAT)) {
-            baseUrl = System.getenv("uat_environment_base_url");
-        }
-        if (ENVIRONMENT.toLowerCase().equals(PROD)) {
-            baseUrl = System.getenv("prod_environment_base_url");
-        }
-        if (baseUrl == null) {
-            baseUrl = "";
-        }
-        return baseUrl;
     }
 
     public RequestSpecification getRequestSpecification() {
@@ -445,7 +472,7 @@ public class BaseClass {
             case POST: postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
             case PUT: putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
             case DELETE: deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
-            default: print("HTTP Method is not implemented");
+            default: Assert.fail("HTTP Method is not implemented"); break;
         }
 
     }

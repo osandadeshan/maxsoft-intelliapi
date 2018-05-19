@@ -41,13 +41,16 @@ Get a question using a valid existing cardId
      |$.learningObjectives[0]             |                                                   |
      |$.tags[0]                           |MaxSoft                                            |
      |$.creatorId                         |osanda12                                           |
-     |$.deckId                            |5a603af62e02d86561172dac                           |
      |$.creatoredType                     |Manual                                             |
      |$.creatorPlatform                   |Web                                                |
      |$.creatoredSource                   |App                                                |
      |$.answers.[0].value                 |Osanda Deshan                                      |
      |$.answers.[0].caseSensitive         |false                                              |
      |$.answers.[0].type                  |TEXT                                               |
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+    |JSON Path      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Value          |
+    |---------------|-------------------|---------------|------------------------|---------------|
+    |$.deckId       |y                  |scenario       |deckId                  |N/A            |
 
 
 

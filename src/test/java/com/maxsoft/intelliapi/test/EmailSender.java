@@ -1,7 +1,7 @@
 package com.maxsoft.intelliapi.test;
 
 import com.maxsoft.intelliapi.util.Email;
-import com.maxsoft.intelliapi.util.ExecutionResults;
+import com.maxsoft.intelliapi.util.JsonReader;
 import java.text.ParseException;
 
 
@@ -13,7 +13,7 @@ import java.text.ParseException;
 public class EmailSender {
 
     public static void main(String[] args) throws ParseException {
-        Email.send(ExecutionResults.getTestResultsAsString());
+        Email.send(JsonReader.getExecutionResults());
     }
 
 
