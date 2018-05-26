@@ -196,8 +196,6 @@ Get questions count using a valid my deckId with newly created questions
      |------------------------------------|-------------------|---------------|-----------------------------|---------------------------------------------------|
      |$.deckId                            |y                  |spec           |myDeckIdWith9Questions       |                                                   |
      |$.questionCount                     |n                  |               |                             |9                                                  |
-* When the user invokes the API
-* Then the status code for the request is "200"
 
 
 

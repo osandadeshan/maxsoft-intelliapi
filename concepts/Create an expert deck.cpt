@@ -15,7 +15,7 @@ This is a concept file with following syntax for each concept.
 * And the user set the request attributes as follows
      |Attribute Value In JSON Template   |Attribute Value To Be Set                                   |
      |-----------------------------------|------------------------------------------------------------|
-     |#isArchived                        |true                                                        |
+     |#isArchived                        |false                                                       |
      |#bookAuthorName                    |Osanda Deshan                                               |
      |#bookTitle                         |Expert API Deck3                                            |
      |#chapter                           |Ch. 02                                                      |
@@ -53,5 +53,5 @@ This is a concept file with following syntax for each concept.
       |JSON Path                           |Expected Result                                        |
       |$.title                             |Expert API Automation using MaxSoft ATA Framework      |
       |$.userId                            |osan                                                   |
-      |$.archived                          |true                                                   |
+      |$.archived                          |false                                                  |
       |$.book.bookTitle                    |Expert API Deck3                                       |

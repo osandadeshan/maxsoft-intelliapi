@@ -106,6 +106,7 @@ This is a concept file with following syntax for each concept.
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name              |Value To Be Stored     |
     |spec           |mcqCardId1                 |$.id                   |
+    |scenario       |mcqCardId1                 |$.id                   |
 * Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -163,6 +164,7 @@ This is a concept file with following syntax for each concept.
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name              |Value To Be Stored     |
     |spec           |mcqCardId2                 |$.id                   |
+    |scenario       |mcqCardId2                 |$.id                   |
 * Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -220,6 +222,7 @@ This is a concept file with following syntax for each concept.
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name              |Value To Be Stored     |
     |spec           |mcqCardId3                 |$.id                   |
+    |scenario       |mcqCardId3                 |$.id                   |
 * Given that a user needs to invoke "Create MCQ Type Question using Aggregation Service"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -277,3 +280,4 @@ This is a concept file with following syntax for each concept.
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name              |Value To Be Stored     |
     |spec           |mcqCardId4                 |$.id                   |
+    |scenario       |mcqCardId4                 |$.id                   |

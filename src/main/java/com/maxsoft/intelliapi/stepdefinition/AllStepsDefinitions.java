@@ -31,6 +31,18 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.apiToBeInvoked(apiEndpointName);
 	}
 
+	// Use this method to replace the placeholders inside the API Endpoint in Excel
+	@Step("And the user set the API endpoint placeholders as follows <table>")
+	public void setApiEndpointReplacements(Table table) throws IOException {
+		commonStepDefinitions.setApiEndpointReplacements(table);
+	}
+
+	// Use this method to replace the placeholders inside the API Endpoint in Excel using data store values
+	@Step("And the user set the API endpoint placeholders using data stores as follows <table>")
+	public void setApiEndpointReplacementsFromDataStores(Table table) throws IOException {
+		commonStepDefinitions.setApiEndpointReplacementsFromDataStores(table);
+	}
+
 	@Step("And replace the row values in <columnName> column of the CSV <filePath> into the <timestampPattern> timestamp pattern")
 	public void replaceCSVColumn(String columnName, String filePath, String timestampPattern) throws IOException {
 		commonStepDefinitions.replaceCSVColumnValuesToTimestamps(filePath, columnName, timestampPattern);

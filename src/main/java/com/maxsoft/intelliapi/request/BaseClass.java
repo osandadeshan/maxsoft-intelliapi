@@ -275,6 +275,10 @@ public class BaseClass {
         Gauge.writeMessage("API Endpoint is: " + "\n" + apiEndpoint);
     }
 
+    public void printHttpMethod(String apiEndpoint) throws IOException {
+        print("HTTP Method is: " + ApiDocumentReader.getHttpMethod(apiEndpoint));
+    }
+
     public void printResponse() {
         String response = getSavedValueForScenario("response");
         if (response.equals("")) {
@@ -297,7 +301,9 @@ public class BaseClass {
     public void apiToBeInvoked(String apiEndpointName) throws IOException {
         saveValueForScenario("apiName", apiEndpointName);
         // Print API Endpoint
+        System.out.println("\n");
         printApiEndpoint(ApiEndpoints.getApiEndpointByName(apiEndpointName));
+        printHttpMethod(apiEndpointName);
     }
 
     public String getQueryParams() {
@@ -316,11 +322,35 @@ public class BaseClass {
         return pathParams;
     }
 
-    public void postAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
+    public String getApiEndpointToBeInvoked() throws IOException {
+        String invokingEndpoint = getSavedValueForScenario("invokingEndpoint");
         String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName)).concat(getPathParams().concat(getQueryParams()));
+        if (invokingEndpoint == null || invokingEndpoint.equals("")){
+            invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName)).
+                    concat(getPathParams().concat(getQueryParams()));
+        } else {
+            invokingEndpoint = baseUrl.concat(invokingEndpoint)
+                    .concat(getPathParams().concat(getQueryParams()));
+        }
         System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
+        printHttpMethod(apiName);
+        return invokingEndpoint;
+    }
+
+    public void setScenarioDataStoreEmpty(String dataStoreName){
+        saveValueForScenario(dataStoreName, "");
+    }
+
+    public void setInvokingApiEndpointEmpty(){
+        setScenarioDataStoreEmpty("apiName");
+        setScenarioDataStoreEmpty("invokingEndpoint");
+        setScenarioDataStoreEmpty("pathParams");
+        setScenarioDataStoreEmpty("queryParams");
+    }
+
+    public void postAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
+        String invokingEndpoint = getApiEndpointToBeInvoked();
         Headers headers = new Headers(headerList);
         // Executing API and getting the response
         if (accessToken == null) {
@@ -344,13 +374,11 @@ public class BaseClass {
         printResponseTime();
         printResponse();
         printResponseHeaders();
+        setInvokingApiEndpointEmpty();
     }
 
     public void getAPIWithAuthMultipleHeaders(String accessToken, List<Header> headerList) throws IOException {
-        String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName)).concat(getPathParams().concat(getQueryParams()));
-        System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
-        Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
+        String invokingEndpoint = getApiEndpointToBeInvoked();
         Headers headers = new Headers(headerList);
         if (accessToken == null) {
             response = request
@@ -370,14 +398,12 @@ public class BaseClass {
             printResponseTime();
             printResponse();
             printResponseHeaders();
+            setInvokingApiEndpointEmpty();
         }
     }
 
     public void putAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
-        String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName)).concat(getPathParams().concat(getQueryParams()));
-        System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
-        Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
+        String invokingEndpoint = getApiEndpointToBeInvoked();
         Headers headers = new Headers(headerList);
         // Executing API and getting the response
         if (accessToken == null) {
@@ -401,13 +427,11 @@ public class BaseClass {
         printResponseTime();
         printResponse();
         printResponseHeaders();
+        setInvokingApiEndpointEmpty();
     }
 
     public void deleteAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
-        String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName)).concat(getPathParams().concat(getQueryParams()));
-        System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
-        Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
+        String invokingEndpoint = getApiEndpointToBeInvoked();
         Headers headers = new Headers(headerList);
         // Executing API and getting the response
         if (accessToken == null) {
@@ -431,6 +455,7 @@ public class BaseClass {
         printResponseTime();
         printResponse();
         printResponseHeaders();
+        setInvokingApiEndpointEmpty();
     }
 
     public enum HttpMethod {

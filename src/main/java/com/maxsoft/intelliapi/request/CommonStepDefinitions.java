@@ -137,6 +137,49 @@ public class CommonStepDefinitions extends BaseClass {
 		}
 	}
 
+    public void setApiEndpointReplacements(Table parameterTable) throws IOException {
+        List<TableRow> rows = parameterTable.getTableRows();
+        List<String> columnNames = parameterTable.getColumnNames();
+        String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
+        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName));
+        for (TableRow row : rows) {
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                invokingEndpoint = invokingEndpoint.replaceAll(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
+            } else {
+                invokingEndpoint = invokingEndpoint.replaceAll(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
+        }
+        saveValueForScenario("invokingEndpoint", invokingEndpoint);
+        System.out.println(getSavedValueForScenario("invokingEndpoint"));
+        Gauge.writeMessage(getSavedValueForScenario("invokingEndpoint"));
+    }
+
+    public void setApiEndpointReplacementsFromDataStores(Table parameterTable) throws IOException {
+        List<TableRow> rows = parameterTable.getTableRows();
+        List<String> columnNames = parameterTable.getColumnNames();
+        String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
+        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName));
+        for (TableRow row : rows) {
+            String placeholder = row.getCell(columnNames.get(0));
+            String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+            String dataStoreType = row.getCell(columnNames.get(2));
+            String dataStoreVariableName = row.getCell(columnNames.get(3));
+            String replacement = row.getCell(columnNames.get(4));
+            if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+                invokingEndpoint = invokingEndpoint.replaceAll(placeholder, readFromDataStore(dataStoreType, dataStoreVariableName));
+            } else {
+                if (replacement.substring(0, Math.min(replacement.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    invokingEndpoint = invokingEndpoint.replaceAll(placeholder, FileOperator.readFromFile(CURRENT_DIRECTORY + replacement.substring(FILE_SYNTAX_CHARACTER_COUNT, replacement.length() - 1)));
+                } else {
+                    invokingEndpoint = invokingEndpoint.replaceAll(placeholder, replacement);
+                }
+            }
+        }
+        saveValueForScenario("invokingEndpoint", invokingEndpoint);
+        System.out.println(getSavedValueForScenario("invokingEndpoint"));
+        Gauge.writeMessage(getSavedValueForScenario("invokingEndpoint"));
+    }
+
     public void setQueryParams(Table parameterTable){
         List<TableRow> rows = parameterTable.getTableRows();
         List<String> columnNames = parameterTable.getColumnNames();
