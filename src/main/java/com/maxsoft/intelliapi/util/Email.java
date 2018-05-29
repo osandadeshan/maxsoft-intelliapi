@@ -4,15 +4,20 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.ParseException;
 import java.util.Properties;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import static com.maxsoft.intelliapi.util.Chart.getSavedPieChartImageName;
+import static com.maxsoft.intelliapi.util.Chart.getSavedPieChartImagePath;
+import static com.maxsoft.intelliapi.util.JsonReader.getFailedScenarioCount;
+import static com.maxsoft.intelliapi.util.JsonReader.getPassedScenarioCount;
+import static com.maxsoft.intelliapi.util.JsonReader.getSkippedScenarioCount;
 
 
 /**
@@ -22,29 +27,23 @@ import javax.mail.internet.MimeMessage;
 
 public class Email {
 
-//    public static final String IS_EMAIL_NOTIFICATIONS_NEEDED = System.getenv("is_email_notifications_needed");
-//    public static final String SENDER_EMAIL_ADDRESS = System.getenv("sender_email_address");
-//    public static final String SENDER_EMAIL_PASSWORD = System.getenv("sender_email_password");
-//    public static final String RECIPIENTS_EMAIL_ADDRESSES = System.getenv("recipients_email_addresses");
-//    public static final String EMAIL_SUBJECT = System.getenv("email_subject");
-//    public static final String EMAIL_BODY = System.getenv("email_body");
     public static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
 
     static Properties emailProperties = new Properties();
-    static InputStream input = null;
+    static InputStream inputEmailPropertyFile = null;
 
-    public static void send(String messageBody) throws ParseException {
+    public static void send(String executionResults) {
         try {
-            input = new FileInputStream(CURRENT_DIRECTORY + File.separator + "env" + File.separator + "email"
+            inputEmailPropertyFile = new FileInputStream(CURRENT_DIRECTORY + File.separator + "env" + File.separator + "email"
                     + File.separator + "email.properties");
             // load a properties file
-            emailProperties.load(input);
+            emailProperties.load(inputEmailPropertyFile);
         } catch (IOException ex) {
             ex.printStackTrace();
         } finally {
-            if (input != null) {
+            if (inputEmailPropertyFile != null) {
                 try {
-                    input.close();
+                    inputEmailPropertyFile.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -58,9 +57,9 @@ public class Email {
         final String RECIPIENTS_EMAIL_ADDRESSES = emailProperties.getProperty("recipients_email_addresses");
         final String EMAIL_SUBJECT = emailProperties.getProperty("email_subject");
         final String EMAIL_BODY = emailProperties.getProperty("email_body");
+        final String EMAIL_BODY_TITLE = emailProperties.getProperty("email_body_title");
 
-        if (IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("true")
-                || IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("yes")
+        if (IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("true") || IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("yes")
                 || IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("y")) {
 
             Properties props = new Properties();
@@ -77,20 +76,56 @@ public class Email {
                     });
 
             try {
-
+                // Create a default MimeMessage object.
                 Message message = new MimeMessage(session);
+
+                // Set From: header field of the header.
                 message.setFrom(new InternetAddress(SENDER_EMAIL_ADDRESS));
+
+                // Set To: header field of the header.
                 message.setRecipients(Message.RecipientType.TO,
                         InternetAddress.parse(RECIPIENTS_EMAIL_ADDRESSES));
+
+                // Set Subject: header field
                 message.setSubject(EMAIL_SUBJECT);
-                message.setText(messageBody + "\n" + EMAIL_BODY);
+
+                // This mail has 2 parts, the BODY and the embedded image
+                MimeMultipart multipart = new MimeMultipart("related");
+
+                // first part (the html)
+                BodyPart messageBodyPart = new MimeBodyPart();
+                String htmlText = "<h2>" + EMAIL_BODY_TITLE + "</h2>" + executionResults + "<br /><br />" + EMAIL_BODY;
+                messageBodyPart.setContent(htmlText, "text/html");
+                // add it
+                multipart.addBodyPart(messageBodyPart);
+
+                // second part (the image)
+                messageBodyPart = new MimeBodyPart();
+                Chart.savePieChart(getPassedScenarioCount(), getFailedScenarioCount(), getSkippedScenarioCount());
+                DataSource fds = new FileDataSource(
+                        getSavedPieChartImagePath());
+
+                messageBodyPart.setDataHandler(new DataHandler(fds));
+                messageBodyPart.setHeader("Content-ID", "<image>");
+                messageBodyPart.setFileName(getSavedPieChartImageName());
+
+                // add image to the multipart
+                multipart.addBodyPart(messageBodyPart);
+
+                // put everything together
+                message.setContent(multipart);
+                // Send message
                 Transport.send(message);
 
-                System.out.println("Successfully sent the email\n");
+                System.out.println("Sent message successfully....");
+
 
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         } else {
             System.out.println("\n\nEmail notifications are currently turned off. " +
                     "To turn on, go to <project_dir>/env/default/default.properties\n\n");
