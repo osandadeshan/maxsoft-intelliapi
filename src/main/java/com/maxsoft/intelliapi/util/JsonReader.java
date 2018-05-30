@@ -160,18 +160,20 @@ public class JsonReader {
                     (Integer.valueOf(passedScenarioCount) + Integer.valueOf(failedScenarioCount) + Integer.valueOf(skippedScenarioCount)))
                     + "%";
 
-            String executionResults = "<img src=\"cid:image\"> <br /><br />" +
-                    "<table style=\"width:100%; text-align:left\" border=\"0\">" +
-                    "<tr><td><b>" + "Project Name </td>" + "<td>" + projectName + "<td></tr>" +
+            String executionResults = "<img src=\"cid:image\" alt=\"Pie Chart For Test Execution Results\" align=\"left\"> <br /><br /><br />" +
+                    "<table style=\"width:68%; text-align:left\" border=\"0\">" +
+                    "<tr align=\"left\"><td><b>" + "Project Name </td>" + "<td>" + projectName + "<td></tr>" +
                     "<tr><td><b>" + "Timestamp </td>" + "<td>" + timestamp + "<td></tr>" +
                     "<tr><td><b>" + "Environment </td>" + "<td>" + environment.substring(0, 1).toUpperCase() + environment.substring(1) + "<td></tr>" +
                     "<tr><td><b>" + "Execution Time </td>" + "<td>" + milliSecondsToTime(Integer.valueOf(executionTime)) + "<td></tr>" +
                     "<tr><td><b>" + "Execution Status </td>" + "<td>" + executionStatus.substring(0, 1).toUpperCase() + executionStatus.substring(1) + "<td></tr>" +
                     "<tr><td><b>" + "Success Rate </td>" + "<td>" + successRate + "<td></tr>" +
-                    "<tr><td><b>" + "Fail Rate </td>" + "<td>" + failRate + "<td></tr>" +
+                    "<tr><td><b>" + "Fail Rate </td>" + "<td>" + failRate + "<td></tr><br />" +
+                    "<tr><td><b><u>" + "Scenario Information </td></tr>" +
                     "<tr><td><b>" + "Passed Scenario Count </td>" + "<td>" + passedScenarioCount + "<td></tr>" +
                     "<tr><td><b>" + "Failed Scenario Count </td>" + "<td>" + failedScenarioCount + "<td></tr>" +
-                    "<tr><td><b>" + "Skipped Scenario Count </td>" + "<td>" + skippedScenarioCount + "<td></tr>" +
+                    "<tr><td><b>" + "Skipped Scenario Count </td>" + "<td>" + skippedScenarioCount + "<td></tr><br />" +
+                    "<tr><td><b><u>" + "Specification Information </td></tr>" +
                     "<tr><td><b>" + "Passed Specs Count </td>" + "<td>" + passedSpecsCount + "<td></tr>" +
                     "<tr><td><b>" + "Failed Specs Count </td>" + "<td>" + failedSpecsCount + "<td></tr>" +
                     "<tr><td><b>" + "Skipped Specs Count </td>" + "<td>" + skippedSpecsCount + "<td></tr>" ;
