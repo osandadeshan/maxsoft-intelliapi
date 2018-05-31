@@ -56,8 +56,12 @@ public class Email {
         final String SENDER_EMAIL_PASSWORD = emailProperties.getProperty("sender_email_password");
         final String RECIPIENTS_EMAIL_ADDRESSES = emailProperties.getProperty("recipients_email_addresses");
         final String EMAIL_SUBJECT = emailProperties.getProperty("email_subject");
-        final String EMAIL_BODY = emailProperties.getProperty("email_body");
+        final String EMAIL_BODY_TITLE_HEADING_SIZE = emailProperties.getProperty("email_body_title_heading_size");
         final String EMAIL_BODY_TITLE = emailProperties.getProperty("email_body_title");
+        final String EMAIL_BODY = emailProperties.getProperty("email_body");
+        final String EMAIL_FOOTER_LINE1 = emailProperties.getProperty("email_footer_line1");
+        final String EMAIL_FOOTER_LINE2 = emailProperties.getProperty("email_footer_line2");
+        final String EMAIL_FOOTER_LINE3 = emailProperties.getProperty("email_footer_line3");
 
         if (IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("true") || IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("yes")
                 || IS_EMAIL_NOTIFICATIONS_NEEDED.toLowerCase().equals("y")) {
@@ -94,7 +98,8 @@ public class Email {
 
                 // first part (the html)
                 BodyPart messageBodyPart = new MimeBodyPart();
-                String htmlText = "<h2>" + EMAIL_BODY_TITLE + "</h2>" + executionResults + "<br /><br />" + EMAIL_BODY;
+                String htmlText = "<h" + EMAIL_BODY_TITLE_HEADING_SIZE + ">" + EMAIL_BODY_TITLE + "</h" + EMAIL_BODY_TITLE_HEADING_SIZE + ">" + executionResults +
+                        "<br /><br />" + EMAIL_BODY + "<br /><br /><br />" + EMAIL_FOOTER_LINE1 + "<br />" + EMAIL_FOOTER_LINE2 + "<br />" + EMAIL_FOOTER_LINE3;
                 messageBodyPart.setContent(htmlText, "text/html");
                 // add it
                 multipart.addBodyPart(messageBodyPart);
