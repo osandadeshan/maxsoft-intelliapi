@@ -68,7 +68,7 @@ public class Chart {
         chart.getStyler().setLegendVisible(true);
         chart.getStyler().setAnnotationType(PieStyler.AnnotationType.LabelAndPercentage);
         chart.getStyler().setAnnotationDistance(1.15);
-        chart.getStyler().setPlotContentSize(.8);
+        chart.getStyler().setPlotContentSize(.6);
         chart.getStyler().setStartAngleInDegrees(90);
 
         // Series

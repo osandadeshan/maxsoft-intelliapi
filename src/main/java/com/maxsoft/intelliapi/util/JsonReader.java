@@ -12,6 +12,7 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.Properties;
 
 
@@ -147,18 +148,20 @@ public class JsonReader {
             String environment = JsonPath.read(responseString, "$.environment").toString();
             String executionTime = JsonPath.read(responseString, "$.executionTime").toString();
             String executionStatus = JsonPath.read(responseString, "$.executionStatus").toString();
-            String passedScenarioCount = JsonPath.read(responseString, "$.passedScenariosCount").toString();
-            String failedScenarioCount = JsonPath.read(responseString, "$.failedScenariosCount").toString();
-            String skippedScenarioCount = JsonPath.read(responseString, "$.skippedScenariosCount").toString();
-            String passedSpecsCount = JsonPath.read(responseString, "$.passedSpecsCount").toString();
-            String failedSpecsCount = JsonPath.read(responseString, "$.failedSpecsCount").toString();
-            String skippedSpecsCount = JsonPath.read(responseString, "$.skippedSpecsCount").toString();
-            String successRate = String.valueOf(Integer.valueOf(passedScenarioCount) * 100 /
-                    (Integer.valueOf(passedScenarioCount) + Integer.valueOf(failedScenarioCount) + Integer.valueOf(skippedScenarioCount)))
-                    + "%";
-            String failRate = String.valueOf(Integer.valueOf(failedScenarioCount) * 100 /
-                    (Integer.valueOf(passedScenarioCount) + Integer.valueOf(failedScenarioCount) + Integer.valueOf(skippedScenarioCount)))
-                    + "%";
+
+            int passedScenariosCount = Integer.valueOf(JsonPath.read(responseString, "$.passedScenariosCount").toString());
+            int failedScenariosCount = Integer.valueOf(JsonPath.read(responseString, "$.failedScenariosCount").toString());
+            int skippedScenariosCount = Integer.valueOf(JsonPath.read(responseString, "$.skippedScenariosCount").toString());
+            int totalScenariosCount = passedScenariosCount + failedScenariosCount + skippedScenariosCount;
+
+            int passedSpecsCount = Integer.valueOf(JsonPath.read(responseString, "$.passedSpecsCount").toString());
+            int failedSpecsCount = Integer.valueOf(JsonPath.read(responseString, "$.failedSpecsCount").toString());
+            int skippedSpecsCount = Integer.valueOf(JsonPath.read(responseString, "$.skippedSpecsCount").toString());
+            int totalSpecsCount = passedSpecsCount + failedSpecsCount + skippedSpecsCount;
+
+            DecimalFormat df = new DecimalFormat(".##");
+            String successRate = df.format((double) passedScenariosCount * 100/ totalScenariosCount) + "%";
+            String failRate = df.format((double) failedScenariosCount * 100/ totalScenariosCount) + "%";
 
             String executionResults = "<img src=\"cid:image\" alt=\"Pie Chart For Test Execution Results\" align=\"left\"> <br /><br /><br />" +
                     "<table style=\"width:68%; text-align:left\" border=\"0\">" +
@@ -170,10 +173,12 @@ public class JsonReader {
                     "<tr><td><b>" + "Success Rate </td>" + "<td>" + successRate + "<td></tr>" +
                     "<tr><td><b>" + "Fail Rate </td>" + "<td>" + failRate + "<td></tr><br />" +
                     "<tr><td><b><u>" + "Scenario Information </td></tr>" +
-                    "<tr><td><b>" + "Passed Scenario Count </td>" + "<td>" + passedScenarioCount + "<td></tr>" +
-                    "<tr><td><b>" + "Failed Scenario Count </td>" + "<td>" + failedScenarioCount + "<td></tr>" +
-                    "<tr><td><b>" + "Skipped Scenario Count </td>" + "<td>" + skippedScenarioCount + "<td></tr><br />" +
+                    "<tr><td><b>" + "Total Scenarios Count </td>" + "<td>" + totalScenariosCount + "<td></tr>" +
+                    "<tr><td><b>" + "Passed Scenarios Count </td>" + "<td>" + passedScenariosCount + "<td></tr>" +
+                    "<tr><td><b>" + "Failed Scenarios Count </td>" + "<td>" + failedScenariosCount + "<td></tr>" +
+                    "<tr><td><b>" + "Skipped Scenarios Count </td>" + "<td>" + skippedScenariosCount + "<td></tr><br />" +
                     "<tr><td><b><u>" + "Specification Information </td></tr>" +
+                    "<tr><td><b>" + "Total Specs Count </td>" + "<td>" + totalSpecsCount + "<td></tr>" +
                     "<tr><td><b>" + "Passed Specs Count </td>" + "<td>" + passedSpecsCount + "<td></tr>" +
                     "<tr><td><b>" + "Failed Specs Count </td>" + "<td>" + failedSpecsCount + "<td></tr>" +
                     "<tr><td><b>" + "Skipped Specs Count </td>" + "<td>" + skippedSpecsCount + "<td></tr>" ;
