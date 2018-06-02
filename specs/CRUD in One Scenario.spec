@@ -1,13 +1,13 @@
-Specification Heading
-=====================
+CRUD in One Scenario Specification
+==================================
 Created by Osanda Deshan on 5/26/2018
 
 This is an executable specification file which follows markdown syntax.
 Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
-Edit a sku with duplicate skuId
--------------------------------
+CRUD operation for a sku and get all the 9 questions in a deck
+--------------------------------------------------------------
 * Given that a user needs to invoke "Create SKU"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -111,6 +111,7 @@ Edit a sku with duplicate skuId
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path                                           |Value                                              |
      |----------------------------------------------------|---------------------------------------------------|
+     |$.questions.length()                                |9                                                  |
      |$.questions.[-1:].question.media                    |TEXT                                               |
      |$.questions.[-1:].question.promptType               |TEXT                                               |
      |$.questions.[-1:].creatoredSource                   |App                                                |

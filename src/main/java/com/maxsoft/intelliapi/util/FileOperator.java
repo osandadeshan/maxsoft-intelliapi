@@ -41,11 +41,11 @@ public abstract class FileOperator {
         String content = null;
         try {
             content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
-            System.out.println("Successfully read the access token from the text file in the directory of \"" + filePath + "\"");
-            Gauge.writeMessage("Successfully read the access token from the text file in the directory of \"" + filePath + "\"");
+            System.out.println("Successfully read the access token from the text file in the directory of \"" + filePath + "\"\n\n");
+            Gauge.writeMessage("Successfully read the access token from the text file in the directory of \"" + filePath + "\"\n\n");
         } catch (FileNotFoundException e) {
-            System.out.println("Reading the access token from the text file in the directory of \"" + filePath + "\" is failed");
-            Gauge.writeMessage("Reading the access token from the text file in the directory of \"" + filePath + "\" is failed");
+            System.out.println("Reading the access token from the text file in the directory of \"" + filePath + "\" is failed\n\n");
+            Gauge.writeMessage("Reading the access token from the text file in the directory of \"" + filePath + "\" is failed\n\n");
         }
         System.out.println(content);
         return content;

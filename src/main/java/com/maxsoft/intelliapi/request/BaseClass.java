@@ -20,9 +20,13 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import static com.maxsoft.intelliapi.request.BaseClass.BodyType.JSON;
 import static io.restassured.RestAssured.given;
+import static io.restassured.config.EncoderConfig.encoderConfig;
 
 
 /**
@@ -46,6 +50,7 @@ public class BaseClass {
     private Response response;
     private RequestSpecification request = getRequestSpecification();
     private static CsvOperator csvOperator = new CsvOperator();
+    Map<String, String> formParams = new HashMap<>();
 
     public void print(String text){
         System.out.println(text);
@@ -177,12 +182,12 @@ public class BaseClass {
             // Fetching Value from the Data Store
             DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
             String value = (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
-            System.out.println("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
-            Gauge.writeMessage("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
+            System.out.println("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            Gauge.writeMessage("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            System.out.println("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]");
-            Gauge.writeMessage("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]");
+            System.out.println("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            Gauge.writeMessage("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -192,12 +197,12 @@ public class BaseClass {
             // Fetching Value from the Data Store
             DataStore specDataStore = DataStoreFactory.getSpecDataStore();
             String value = (String) specDataStore.get(variableNameOfValueStoredInDataStore);
-            System.out.println("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
-            Gauge.writeMessage("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"");
+            System.out.println("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            Gauge.writeMessage("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            System.out.println("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]");
-            Gauge.writeMessage("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]");
+            System.out.println("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            Gauge.writeMessage("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -271,27 +276,27 @@ public class BaseClass {
     }
 
     public void printApiEndpoint(String apiEndpoint) {
-        System.out.println("API Endpoint is: " + "\n" + apiEndpoint);
-        Gauge.writeMessage("API Endpoint is: " + "\n" + apiEndpoint);
+        System.out.println("API Endpoint is: " + "\n" + apiEndpoint + "\n\n");
+        Gauge.writeMessage("API Endpoint is: " + "\n" + apiEndpoint + "\n\n");
     }
 
     public void printHttpMethod(String apiEndpoint) throws IOException {
-        print("HTTP Method is: " + ApiDocumentReader.getHttpMethod(apiEndpoint));
+        print("HTTP Method is: " + ApiDocumentReader.getHttpMethod(apiEndpoint) + "\n\n");
     }
 
     public void printResponse() {
         String response = getSavedValueForScenario("response");
         if (response.equals("")) {
-            System.out.println("No Content Response");
-            Gauge.writeMessage("No Content Response");
+            System.out.println("Response is Empty" + "\n\n");
+            Gauge.writeMessage("Response is Empty" + "\n\n");
         } else {
-            System.out.println("Response is: " + "\n" + response);
-            Gauge.writeMessage("Response is: " + "\n" + response);
+            System.out.println("Response is: " + "\n" + response + "\n\n");
+            Gauge.writeMessage("Response is: " + "\n" + response + "\n\n");
         }
     }
 
     public void printResponseTime(){
-        print("Response Time is: " + response.getTimeIn(TimeUnit.MILLISECONDS) + "ms");
+        print("Response Time is: " + response.getTimeIn(TimeUnit.MILLISECONDS) + "ms" + "\n\n");
     }
 
     public void printResponseHeaders() {
@@ -332,8 +337,8 @@ public class BaseClass {
             invokingEndpoint = baseUrl.concat(invokingEndpoint)
                     .concat(getPathParams().concat(getQueryParams()));
         }
-        System.out.println("Invoked API Endpoint: \n" + invokingEndpoint);
-        Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint);
+        System.out.println("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n");
+        Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n");
         printHttpMethod(apiName);
         return invokingEndpoint;
     }
@@ -375,6 +380,7 @@ public class BaseClass {
         printResponse();
         printResponseHeaders();
         setInvokingApiEndpointEmpty();
+        headerList.clear();
     }
 
     public void getAPIWithAuthMultipleHeaders(String accessToken, List<Header> headerList) throws IOException {
@@ -393,13 +399,14 @@ public class BaseClass {
                     .headers(headers)
                     .when()
                     .get(invokingEndpoint);
-            getStatusCode();
-            getResponse();
-            printResponseTime();
-            printResponse();
-            printResponseHeaders();
-            setInvokingApiEndpointEmpty();
         }
+        getStatusCode();
+        getResponse();
+        printResponseTime();
+        printResponse();
+        printResponseHeaders();
+        setInvokingApiEndpointEmpty();
+        headerList.clear();
     }
 
     public void putAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
@@ -428,6 +435,7 @@ public class BaseClass {
         printResponse();
         printResponseHeaders();
         setInvokingApiEndpointEmpty();
+        headerList.clear();
     }
 
     public void deleteAPIWithAuthMultipleHeaders(String jsonPayload, String accessToken, List<Header> headerList) throws IOException {
@@ -456,10 +464,521 @@ public class BaseClass {
         printResponse();
         printResponseHeaders();
         setInvokingApiEndpointEmpty();
+        headerList.clear();
+    }
+
+    public Map<String, String> setFormParamsMap(String formKey, String formValue) {
+        formParams.put(formKey, formValue);
+        return formParams;
+    }
+
+    public void printFormParamsMap() {
+        System.out.println("Form Params Map: \n\n");
+        Gauge.writeMessage("Form Params Map: \n\n");
+        for (Map.Entry entry : formParams.entrySet())
+        {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+            Gauge.writeMessage(entry.getKey() + " = " + entry.getValue());
+        }
+    }
+
+    public void clearFormParamsMap() {
+        formParams.clear();
+    }
+
+    public void clearMultipartFileInfo() {
+        for(int i = 1; i <= 5; i++){
+            saveValueForScenario("fileKey"+i, "");
+            saveValueForScenario("filePath"+i, "");
+            saveValueForScenario("mimeType"+i, "");
+            saveValueForScenario("noOfRows", "");
+        }
+    }
+
+    public void postFormDataAPIWithAuthMultipleHeaders(String accessToken, List<Header> headerList) throws IOException {
+        String invokingEndpoint = getApiEndpointToBeInvoked();
+        Headers headers = new Headers(headerList);
+
+        // File Keys
+        String fileKey1 = getSavedValueForScenario("fileKey1");
+        String fileKey2 = getSavedValueForScenario("fileKey2");
+        String fileKey3 = getSavedValueForScenario("fileKey3");
+        String fileKey4 = getSavedValueForScenario("fileKey4");
+        String fileKey5 = getSavedValueForScenario("fileKey5");
+
+        // File Paths
+        String filePath1 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath1");
+        String filePath2 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath2");
+        String filePath3 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath3");
+        String filePath4 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath4");
+        String filePath5 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath5");
+
+        // File Mime Types
+        String mimeType1 = getSavedValueForScenario("mimeType1");
+        String mimeType2 = getSavedValueForScenario("mimeType2");
+        String mimeType3 = getSavedValueForScenario("mimeType3");
+        String mimeType4 = getSavedValueForScenario("mimeType4");
+        String mimeType5 = getSavedValueForScenario("mimeType5");
+
+        int noOfMultipartFiles = 0;
+
+        try {
+            noOfMultipartFiles = Integer.valueOf(getSavedValueForScenario("noOfRows"));
+        } catch (Exception e){
+            noOfMultipartFiles = 0;
+        }
+        // Executing API and getting the response
+        switch (noOfMultipartFiles) {
+
+            case 1:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .headers(headers)
+                            .when()
+                            .post(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .when()
+                            .post(invokingEndpoint);
+                }
+                break;
+
+            case 2:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .headers(headers)
+                            .when()
+                            .post(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .when()
+                            .post(invokingEndpoint);
+                }
+                break;
+
+            case 3:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .headers(headers)
+                            .when()
+                            .post(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .when()
+                            .post(invokingEndpoint);
+                }
+                break;
+
+            case 4:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .headers(headers)
+                            .when()
+                            .post(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .when()
+                            .post(invokingEndpoint);
+                }
+                break;
+
+            case 5:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .multiPart(fileKey5, new File(filePath5), mimeType5)
+                            .headers(headers)
+                            .when()
+                            .post(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .multiPart(fileKey5, new File(filePath5), mimeType5)
+                            .when()
+                            .post(invokingEndpoint);
+                }
+                break;
+
+            default:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .headers(headers)
+                            .when()
+                            .post(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .when()
+                            .post(invokingEndpoint);
+                }
+                break;
+        }
+
+        getStatusCode();
+        getResponse();
+        printResponseTime();
+        printResponse();
+        printResponseHeaders();
+        setInvokingApiEndpointEmpty();
+        clearFormParamsMap();
+        clearMultipartFileInfo();
+        headerList.clear();
+    }
+
+    public void putFormDataAPIWithAuthMultipleHeaders(String accessToken, List<Header> headerList) throws IOException {
+        String invokingEndpoint = getApiEndpointToBeInvoked();
+        Headers headers = new Headers(headerList);
+
+        // File Keys
+        String fileKey1 = getSavedValueForScenario("fileKey1");
+        String fileKey2 = getSavedValueForScenario("fileKey2");
+        String fileKey3 = getSavedValueForScenario("fileKey3");
+        String fileKey4 = getSavedValueForScenario("fileKey4");
+        String fileKey5 = getSavedValueForScenario("fileKey5");
+
+        // File Paths
+        String filePath1 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath1");
+        String filePath2 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath2");
+        String filePath3 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath3");
+        String filePath4 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath4");
+        String filePath5 = CURRENT_DIRECTORY + getSavedValueForScenario("filePath5");
+
+        // File Mime Types
+        String mimeType1 = getSavedValueForScenario("mimeType1");
+        String mimeType2 = getSavedValueForScenario("mimeType2");
+        String mimeType3 = getSavedValueForScenario("mimeType3");
+        String mimeType4 = getSavedValueForScenario("mimeType4");
+        String mimeType5 = getSavedValueForScenario("mimeType5");
+
+        int noOfMultipartFiles = 0;
+
+        try {
+            noOfMultipartFiles = Integer.valueOf(getSavedValueForScenario("noOfRows"));
+        } catch (Exception e){
+            noOfMultipartFiles = 0;
+        }
+        // Executing API and getting the response
+        switch (noOfMultipartFiles) {
+
+            case 1:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .headers(headers)
+                            .when()
+                            .put(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .when()
+                            .put(invokingEndpoint);
+                }
+                break;
+
+            case 2:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .headers(headers)
+                            .when()
+                            .put(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .when()
+                            .put(invokingEndpoint);
+                }
+                break;
+
+            case 3:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .headers(headers)
+                            .when()
+                            .put(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .when()
+                            .put(invokingEndpoint);
+                }
+                break;
+
+            case 4:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .headers(headers)
+                            .when()
+                            .put(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .when()
+                            .put(invokingEndpoint);
+                }
+                break;
+
+            case 5:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .multiPart(fileKey5, new File(filePath5), mimeType5)
+                            .headers(headers)
+                            .when()
+                            .put(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .formParams(formParams)
+                            .multiPart(fileKey1, new File(filePath1), mimeType1)
+                            .multiPart(fileKey2, new File(filePath2), mimeType2)
+                            .multiPart(fileKey3, new File(filePath3), mimeType3)
+                            .multiPart(fileKey4, new File(filePath4), mimeType4)
+                            .multiPart(fileKey5, new File(filePath5), mimeType5)
+                            .when()
+                            .put(invokingEndpoint);
+                }
+                break;
+
+            default:
+                if (accessToken == null) {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .headers(headers)
+                            .when()
+                            .put(invokingEndpoint);
+                } else {
+                    response = given()
+                            .config(
+                                    RestAssured.config()
+                                            .encoderConfig(
+                                                    encoderConfig()
+                                                            .encodeContentTypeAs("multipart/form-data", ContentType.TEXT)))
+                            .formParams(formParams)
+                            .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                            .headers(headers)
+                            .when()
+                            .put(invokingEndpoint);
+                }
+                break;
+        }
+
+        getStatusCode();
+        getResponse();
+        printResponseTime();
+        printResponse();
+        printResponseHeaders();
+        setInvokingApiEndpointEmpty();
+        clearFormParamsMap();
+        clearMultipartFileInfo();
+        headerList.clear();
     }
 
     public enum HttpMethod {
         GET, POST, PUT, DELETE
+    }
+
+    public enum BodyType {
+        JSON, FORM_DATA
     }
 
     public void invokeApi(String jsonPayload, List<Header> headerList) throws IOException {
@@ -492,14 +1011,67 @@ public class BaseClass {
         }
 
         HttpMethod httpMethod = HttpMethod.valueOf(ApiDocumentReader.getHttpMethod(apiName).toUpperCase());
-        switch (httpMethod){
-            case GET: getAPIWithAuthMultipleHeaders(accessToken, headerList); break;
-            case POST: postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
-            case PUT: putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
-            case DELETE: deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList); break;
-            default: Assert.fail("HTTP Method is not implemented"); break;
+
+        String bodyTypeFromExcel = ApiDocumentReader.getBodyType(apiName);
+
+        if (bodyTypeFromExcel.equals("") || bodyTypeFromExcel == null){
+            bodyTypeFromExcel = String.valueOf(JSON);
         }
 
+        BodyType bodyType = BodyType.valueOf(bodyTypeFromExcel.toUpperCase());
+
+        if (ApiDocumentReader.getBodyType(apiName).equals("") || ApiDocumentReader.getBodyType(apiName) == null){
+            bodyType = JSON;
+        }
+
+        switch ((bodyType)){
+
+            case JSON:
+
+                switch (httpMethod) {
+                    case GET:
+                        getAPIWithAuthMultipleHeaders(accessToken, headerList);
+                        break;
+                    case POST:
+                        postAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
+                        break;
+                    case PUT:
+                        putAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
+                        break;
+                    case DELETE:
+                        deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
+                        break;
+                    default:
+                        Assert.fail("HTTP Method is not implemented");
+                        break;
+                }
+                break;
+
+            case FORM_DATA:
+
+                switch (httpMethod) {
+                    case GET:
+                        getAPIWithAuthMultipleHeaders(accessToken, headerList);
+                        break;
+                    case POST:
+                        postFormDataAPIWithAuthMultipleHeaders(accessToken, headerList);
+                        break;
+                    case PUT:
+                        putFormDataAPIWithAuthMultipleHeaders(accessToken, headerList);
+                        break;
+                    case DELETE:
+                        deleteAPIWithAuthMultipleHeaders(jsonPayload, accessToken, headerList);
+                        break;
+                    default:
+                        Assert.fail("HTTP Method is not implemented");
+                        break;
+                }
+                break;
+
+            default:
+                Assert.fail("Body Type is not implemented");
+                break;
+        }
     }
 
     public void isResponseStatusCodeEqualTo(String statusCode) {

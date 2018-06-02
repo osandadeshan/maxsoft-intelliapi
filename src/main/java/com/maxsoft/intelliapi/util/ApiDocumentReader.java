@@ -63,11 +63,24 @@ public abstract class ApiDocumentReader {
             return getDataFromExcel(row, column);
         }
 	}
+
+	public static String getBodyType(String apiEndpointName) throws IOException {
+		int row, column;
+		row = ExcelOperator.findRowNumber(apiEndpointName);
+		column = ExcelOperator.findColumnNumber(apiEndpointName) + 3;
+        error = "\""+ apiEndpointName + "\" API Endpoint Name is not exist in the API Document Excel file located in \"" + baseObj.getAPIDocumentFilePath() + "\"";
+		if (row == 0 && column == 2){
+            Assert.fail(error);
+            return error;
+        } else {
+            return getDataFromExcel(row, column);
+        }
+	}
 	
 	public static String getRequestPayloadTemplate(String apiEndpointName) throws IOException {
 		int row, column;
 		row = ExcelOperator.findRowNumber(apiEndpointName);
-		column = ExcelOperator.findColumnNumber(apiEndpointName) + 3;
+		column = ExcelOperator.findColumnNumber(apiEndpointName) + 4;
         error = "\""+ apiEndpointName + "\" API Endpoint Name is not exist in the API Document Excel file located in \"" + baseObj.getAPIDocumentFilePath() + "\"";
 		if (row == 0 && column == 2){
             Assert.fail(error);

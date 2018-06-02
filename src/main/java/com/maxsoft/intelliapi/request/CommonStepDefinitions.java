@@ -124,6 +124,61 @@ public class CommonStepDefinitions extends BaseClass {
 		JsonPayload.saveFinalJsonRequestBody();
 	}
 
+	// Use this method to set form-data values
+    public void setFormData(Table table){
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                setFormParamsMap(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length()-1)));
+            } else {
+                setFormParamsMap(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
+        }
+        printFormParamsMap();
+    }
+
+	// Use this method to set form-data values using data stores
+    public void setFormDataFromDataStores(Table table){
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            String formKey = row.getCell(columnNames.get(0));
+            String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+            String dataStoreType = row.getCell(columnNames.get(2));
+            String dataStoreVariableName = row.getCell(columnNames.get(3));
+            String formValue = row.getCell(columnNames.get(4));
+
+            if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+                setFormParamsMap(formKey, readFromDataStore(dataStoreType, dataStoreVariableName));
+            } else {
+                if (formValue.substring(0, Math.min(formValue.length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                    setFormParamsMap(formKey, FileOperator.readFromFile(CURRENT_DIRECTORY + formValue.substring(FILE_SYNTAX_CHARACTER_COUNT, formValue.length() - 1)));
+                } else {
+                    setFormParamsMap(formKey, formValue);
+                }
+            }
+        }
+        printFormParamsMap();
+    }
+
+    // Use this method to set multipart file key value pairs
+    public void setMultipartFileData(Table table){
+	    int noOfRows = 0;
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            noOfRows++;
+            String fileKey = row.getCell(columnNames.get(0));
+            String filePath = row.getCell(columnNames.get(1));
+            String mimeType = row.getCell(columnNames.get(2));
+            saveValueForScenario("fileKey" + noOfRows, fileKey);
+            saveValueForScenario("filePath" + noOfRows, filePath);
+            saveValueForScenario("mimeType" + noOfRows, mimeType);
+        }
+        saveValueForScenario("noOfRows", String.valueOf(noOfRows));
+    }
+
 	// Use this method to set a custom request payload
 	public void setRequestPayload(String payload) throws IOException {
 		JsonPayload.saveFinalJsonRequestBody(payload);
@@ -192,8 +247,8 @@ public class CommonStepDefinitions extends BaseClass {
             }
         }
         queryParams = queryParams.replaceAll(".$", "");
-        System.out.println("Query parameters which will append to the request URL: " + queryParams);
-        Gauge.writeMessage("Query parameters which will append to the request URL: " + queryParams);
+        System.out.println("Query parameters which will append to the request URL: " + queryParams + "\n\n");
+        Gauge.writeMessage("Query parameters which will append to the request URL: " + queryParams + "\n\n");
         saveValueForScenario("queryParams", queryParams);
     }
 
@@ -218,8 +273,8 @@ public class CommonStepDefinitions extends BaseClass {
             }
         }
         queryParams = queryParams.replaceAll(".$", "");
-        System.out.println("Query parameters which will append to the request URL: " + queryParams);
-        Gauge.writeMessage("Query parameters which will append to the request URL: " + queryParams);
+        System.out.println("Query parameters which will append to the request URL: " + queryParams + "\n\n");
+        Gauge.writeMessage("Query parameters which will append to the request URL: " + queryParams + "\n\n");
         saveValueForScenario("queryParams", queryParams);
     }
 
@@ -236,8 +291,8 @@ public class CommonStepDefinitions extends BaseClass {
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.substring(0, pathParams.length() - 1);
-        System.out.println("Path parameters which will append to the request URL:" + pathParams);
-        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams);
+        System.out.println("Path parameters which will append to the request URL:" + pathParams + "\n\n");
+        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams + "\n\n");
         saveValueForScenario("pathParams", pathParams);
     }
 
@@ -262,8 +317,8 @@ public class CommonStepDefinitions extends BaseClass {
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.substring(0, pathParams.length() - 1);
-        System.out.println("Path parameters which will append to the request URL:" + pathParams);
-        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams);
+        System.out.println("Path parameters which will append to the request URL:" + pathParams + "\n\n");
+        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams + "\n\n");
         saveValueForScenario("pathParams", pathParams);
     }
 

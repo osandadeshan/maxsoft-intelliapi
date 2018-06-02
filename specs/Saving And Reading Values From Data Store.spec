@@ -247,7 +247,7 @@ tags: get_pi_token, staging
 Replace API Endpoint placeholders - Scenario 1
 ----------------------------------------------
 * Given that a user needs to invoke "Purchase Validator API"
-* And the user set the API endpoint placeholders as follows
+* And the user set values to the API endpoint placeholders as follows
     |Placeholder In JSON Template    |Replacement Text                                            |
     |--------------------------------|------------------------------------------------------------|
     |#skuid                          |com.pearsoned.smartflashcards.expert.elementary             |
@@ -272,7 +272,7 @@ Replace API Endpoint placeholders - Scenario 2
     |---------------|---------------|---------------------------------------------------|
     |Scenario       |purchaseToken  |jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0           |
     |Scenario       |accessToken    |ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB      |
-* And the user set the API endpoint placeholders using data stores as follows
+* And the user set values to the API endpoint placeholders using data stores as follows
     |Placeholder In JSON Template    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Replacement Text                                            |
     |--------------------------------|-------------------|---------------|------------------------|------------------------------------------------------------|
     |#skuid                          |n                  |               |                        |com.pearsoned.smartflashcards.expert.elementary             |

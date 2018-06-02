@@ -32,13 +32,13 @@ public class AllStepsDefinitions{
 	}
 
 	// Use this method to replace the placeholders inside the API Endpoint in Excel
-	@Step("And the user set the API endpoint placeholders as follows <table>")
+	@Step("And the user set values to the API endpoint placeholders as follows <table>")
 	public void setApiEndpointReplacements(Table table) throws IOException {
 		commonStepDefinitions.setApiEndpointReplacements(table);
 	}
 
 	// Use this method to replace the placeholders inside the API Endpoint in Excel using data store values
-	@Step("And the user set the API endpoint placeholders using data stores as follows <table>")
+	@Step("And the user set values to the API endpoint placeholders using data stores as follows <table>")
 	public void setApiEndpointReplacementsFromDataStores(Table table) throws IOException {
 		commonStepDefinitions.setApiEndpointReplacementsFromDataStores(table);
 	}
@@ -76,6 +76,24 @@ public class AllStepsDefinitions{
 	@Step("And the user set the request payload as follows <payload>")
 	public void setRequestPayload(String payload) throws IOException {
 		commonStepDefinitions.setRequestPayload(payload);
+	}
+
+	// Use this method to set the form-data key values for the request template in the Excel file
+	@Step("And the user set the form-data key value pairs as follows <table>")
+	public void setFormData(Table table) throws IOException {
+		commonStepDefinitions.setFormData(table);
+	}
+
+	// Use this method to set the form-data key values for the request template in the Excel file using data store values
+	@Step("And the user set the form-data key value pairs using data stores as follows <table>")
+	public void setFormDataFromDataStores(Table table) throws IOException {
+		commonStepDefinitions.setFormDataFromDataStores(table);
+	}
+
+	// Use this method to set the multipart file key value pairs for the request template in the Excel file
+	@Step("And the user set the multipart file key value pairs as follows <table>")
+	public void setMultipartFileData(Table table) throws IOException {
+		commonStepDefinitions.setMultipartFileData(table);
 	}
 
 	// Use this method to set the query parameters
