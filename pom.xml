@@ -118,6 +118,7 @@
 	
 	<properties>
         <src.dir>src/main/java</src.dir>
+        <emailConfigEnv>dev</emailConfigEnv>
     </properties>
 
     <build>

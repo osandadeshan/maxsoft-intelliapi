@@ -46,7 +46,7 @@ public class BaseClass {
     public String ACCESS_TOKEN_FILE_PATH = CURRENT_DIRECTORY + File.separator + System.getenv("access_token_file_path");
     public static String ENVIRONMENT = System.getenv("environment");
     public static String OS = System.getProperty("os.name");
-    public String baseUrl = setUp();
+    public String baseUrl = setBaseUrl();
     private Response response;
     private RequestSpecification request = getRequestSpecification();
     private static CsvOperator csvOperator = new CsvOperator();
@@ -62,7 +62,7 @@ public class BaseClass {
         Gauge.writeMessage("Request is: " + "\n" + request);
     }
 
-    public String setUp() {
+    public String setBaseUrl() {
         String baseUrl = "";
         if (ENVIRONMENT == null) {
             Assert.fail("Please add \"environment\" in the property file and assign an environment QA|DEV|UAT|PROD");
