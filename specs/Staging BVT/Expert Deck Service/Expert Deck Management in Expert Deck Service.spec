@@ -139,7 +139,7 @@ Get the previously created deck
      |$.book.bookTitle                                  |API Deck3                                                                                                                       |
      |$.book.bookAuthor                                 |Osanda Deshan                                                                                                                   |
      |$.book.chapter                                    |Ch. 02                                                                                                                          |
-     |$.purchaseInfo.price                              |99                                                                                                                              |
+     |$.purchaseInfo.price                              |99.0                                                                                                                            |
      |$.notificationSettings.areNotificationsEnabled    |false                                                                                                                           |
      |$.notificationSettings.notificationTime           |09.30 AM                                                                                                                        |
      |$.notificationSettings.notificationFrequency      |3 times a day                                                                                                                   |

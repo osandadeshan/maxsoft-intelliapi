@@ -115,7 +115,7 @@ Create a Deck using a null value as the description
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
      |$.notificationSettings.notificationTime           |08:00 AM                                                                                                                        |
      |$.notificationSettings.notificationFrequency      |5                                                                                                                               |
@@ -201,7 +201,7 @@ Create a Deck using an empty value as the bookTitle
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -268,7 +268,7 @@ Create a Deck using a null value as the bookTitle
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -336,7 +336,7 @@ Create a Deck using an empty value as the bookAuthor
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -404,7 +404,7 @@ Create a Deck using a null value as the bookAuthor
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -472,7 +472,7 @@ Create a Deck using an empty value as the bookChapter
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -540,7 +540,7 @@ Create a Deck using a null value as the bookChapter
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -609,7 +609,7 @@ Create a Deck using an empty value as the purchasedDate
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -679,7 +679,7 @@ Create a Deck using a null value as the purchaseInformationSku
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -748,7 +748,7 @@ Create a Deck using a null value as the areNotificationsEnabled
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -816,7 +816,7 @@ Create a Deck using a null value as the notificationTime
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -884,7 +884,7 @@ Create a Deck using an empty value as the notificationTime
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -952,7 +952,7 @@ Create a Deck using an empty value as the notificationFrequency
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1086,7 +1086,7 @@ Create a Deck using an empty value as the examDate
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1154,7 +1154,7 @@ Create a Deck using an null value as the examDate
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1222,7 +1222,7 @@ Create a Deck using a null value as the parentDeckId
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1291,7 +1291,7 @@ Create a Deck using a null value as the archived
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1360,7 +1360,7 @@ Create a Deck using a null value as the cardPreview
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1430,7 +1430,7 @@ Create a Deck using an empty value as the noOfCards
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1504,7 +1504,7 @@ Create a Deck using a null value as the noOfCards
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |false                                                                                                                           |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1573,7 +1573,7 @@ Create a Deck using a null value as the progress
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1642,7 +1642,7 @@ Create a Deck using a null value as the downloads
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1710,7 +1710,7 @@ Create a Deck using a null value as the deckAuthorName
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1778,7 +1778,7 @@ Create a Deck using a null value as the deckAuthorId
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1846,7 +1846,7 @@ Create a Deck using a null value as the thumbnailUrl
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -1914,7 +1914,7 @@ Create a Deck using a null value as the status
      |$.thumbnailUrl                                    |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL               |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |true                                                                                                                            |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 lp
@@ -1983,7 +1983,7 @@ Create a Deck using a null value as the starred
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |false                                                                                                                           |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -2052,7 +2052,7 @@ Create a Deck using an integer value as the starred
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |false                                                                                                                           |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -2121,7 +2121,7 @@ Create a Deck using an empty value as the tempDeckId
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |false                                                                                                                           |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |
 
@@ -2189,6 +2189,6 @@ Create a Deck using a null value as the tempDeckId
      |$.status                                          |Closed                                                                                                                          |
      |$.expert                                          |false                                                                                                                           |
      |$.starred                                         |false                                                                                                                           |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.userDeck                                        |true                                                                                                                            |
      |$.categoryId                                      |5a5db30a12ef181b0af109ba                                                                                                        |

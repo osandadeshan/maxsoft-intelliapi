@@ -5,6 +5,7 @@ import com.maxsoft.intelliapi.request.CommonStepDefinitions;
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.Table;
 import org.json.JSONException;
+import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -215,6 +216,12 @@ public class AllStepsDefinitions{
 	@Step("And save the access token in the response which is located inside the JSON Path of <attributeName>")
 	public void saveAccessToken(String jsonPath) throws JSONException {
 		commonStepDefinitions.saveAccessToken(jsonPath);
+	}
+
+	// Use this method to retrieve and save the response JSON array values in a CSV file
+	@Step("And save the JSON Array values of the response into CSV files <table>")
+	public void saveJsonArrayValuesToCsv(Table table) throws ParseException, IOException {
+		commonStepDefinitions.saveJsonArrayValuesToCsv(table);
 	}
 
     @Step("Given a user successfully connected to the MySQL Driver")

@@ -1,1 +1,1 @@
-var index = {"Tags":{"get_pi_token":["specs\\Saving And Reading Values From Data Store.html"],"staging":["specs\\Saving And Reading Values From Data Store.html"]},"Specs":{"CRUD in One Scenario Specification":["specs\\CRUD in One Scenario.html"],"Form-Data Example Specification":["specs\\Form-Data Example.html"],"Saving And Reading Values From Data Store Specification":["specs\\Saving And Reading Values From Data Store.html"]}};
+var index = {"Tags":{},"Specs":{"Write to CSV Specification":["specs\\Write to CSV.html"]}};

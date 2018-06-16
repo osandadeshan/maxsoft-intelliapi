@@ -124,7 +124,7 @@ Edit the previously created deck
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
      |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |0                                                                                                                               |
@@ -164,7 +164,7 @@ Get the previously created deck
      |$.book.bookTitle                                  |Automation3                                                                                                                     |
      |$.book.bookAuthor                                 |Osanda Nimalarathna                                                                                                             |
      |$.book.chapter                                    |Chap. 04                                                                                                                        |
-     |$.purchaseInfo.price                              |0                                                                                                                               |
+     |$.purchaseInfo.price                              |0.0                                                                                                                             |
      |$.notificationSettings.areNotificationsEnabled    |true                                                                                                                            |
      |$.notificationSettings.notificationTime           |08:00                                                                                                                           |
      |$.notificationSettings.notificationFrequency      |0                                                                                                                               |

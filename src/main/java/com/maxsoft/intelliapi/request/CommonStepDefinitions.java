@@ -6,6 +6,7 @@ import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
 import io.restassured.http.Header;
 import org.json.JSONException;
+import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.util.List;
 
@@ -521,6 +522,15 @@ public class CommonStepDefinitions extends BaseClass {
 			readFromDataStore(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1)));
 		}
 	}
+
+    // Use this method to retrieve and save the response JSON array items in a CSV file
+    public void saveJsonArrayValuesToCsv(Table table) throws ParseException, IOException {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.saveJsonArrayValuesToCsv(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+        }
+    }
 
 
 }

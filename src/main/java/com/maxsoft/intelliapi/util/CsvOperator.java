@@ -4,6 +4,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import java.io.*;
 import java.util.List;
+import static com.maxsoft.intelliapi.util.JsonReader.CURRENT_DIRECTORY;
 
 
 public class CsvOperator {
@@ -48,5 +49,18 @@ public class CsvOperator {
         writer.close();
     }
 
-//replacement.concat(String.valueOf(i))
+    public static void writeToCsv(String filePath, String header1, String data, int noOfIterations) throws IOException {
+        File inputFile = new File(CURRENT_DIRECTORY + filePath);
+        inputFile.getParentFile().mkdirs();
+        String[] header = {header1};
+        CSVWriter writer = new CSVWriter(new FileWriter(inputFile), ',');
+        writer.writeNext(header);
+        for (int i = 0; i < noOfIterations; i++) {
+            writer.writeNext(new String[]{data});
+        }
+        writer.flush();
+        writer.close();
+    }
+
+
 }

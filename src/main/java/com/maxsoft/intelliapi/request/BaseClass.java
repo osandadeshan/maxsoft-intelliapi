@@ -4,6 +4,7 @@ import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
 import com.maxsoft.intelliapi.util.*;
+import com.opencsv.CSVWriter;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.datastore.DataStore;
 import com.thoughtworks.gauge.datastore.DataStoreFactory;
@@ -15,8 +16,12 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -1252,6 +1257,28 @@ public class BaseClass {
             actualResult = Boolean.FALSE;
         }
         Assert.assertEquals(actualResult, isExists, "Expected and the Actual results are mismatched for the JSON Path \"" + jsonPath + "\"");
+    }
+
+    public void saveJsonArrayValuesToCsv(String jsonPath, String header1, String csvFilePath) throws ParseException, IOException {
+        Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
+        String JsonArrayResults = JsonPath.read(responseString, jsonPath).toString();
+        JSONParser parser = new JSONParser();
+        Object obj = parser.parse(JsonArrayResults);
+        JSONArray array = (JSONArray)obj;
+
+        File inputFile = new File(CURRENT_DIRECTORY + csvFilePath);
+        inputFile.getParentFile().mkdirs();
+        String[] header = {header1};
+        CSVWriter writer = new CSVWriter(new FileWriter(inputFile), ',');
+        writer.writeNext(header);
+        for (int i=0; i<array.size(); i++){
+            System.out.println(array.get(i));
+            Gauge.writeMessage((String) array.get(i));
+            writer.writeNext(new String[]{(String) array.get(i)});
+        }
+
+        writer.flush();
+        writer.close();
     }
 
     public void printResults(List<String> headersList, List<List<String>> rowsList, String additional) {
