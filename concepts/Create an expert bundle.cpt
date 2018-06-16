@@ -25,7 +25,8 @@ This is a concept file with following syntax for each concept.
      |#bookTitle                      |n                  |               |                        |Security Enhancement     |
      |#description                    |n                  |               |                        |Security Test in mobile  |
      |#id1                            |y                  |scenario       |expertDeckId1           |                         |
-     |#id2                            |y                  |scenario       |expertDeckId2           |                         |
+     |#id3                            |y                  |scenario       |expertDeckId2           |                         |
+     |"#id2",                         |n                  |               |                        |                         |
      |#authorId                       |n                  |               |                        |Aruna Gamage             |
      |#createdSource                  |n                  |               |                        |web                      |
      |#price                          |n                  |               |                        |500                      |
@@ -39,15 +40,9 @@ This is a concept file with following syntax for each concept.
      |JSON Path                 |Expected Result             |
      |$.subjectId               |Information Security        |
      |$.title                   |Network Security            |
-     //|$.id1                     |                            |
-     //|$.id2                     |                            |
-     //|$.userId                  |Osa                         |
-     //|$.createdSource           |web                         |
-     //|$.price                   |500                         |
-     //|$.keyword1                |key1                        |
-     //|$.keyword2                |key2                        |
-     //|$.noOfDecks               |20                          |
 * And save the JSON Path values in the response inside the data stores
     |DataStore Type |Variable Name  |Value To Be Stored |
+    |scenario       |bundleId2      |$.id               |
+    |scenario       |title2         |$.title            |
     |scenario       |bundleId       |$.id               |
     |scenario       |title          |$.title            |

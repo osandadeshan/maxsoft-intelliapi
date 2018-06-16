@@ -14,7 +14,6 @@ This is a concept file with following syntax for each concept.
      |Provide the access token if you need to authorize the API manually|N/A                            |
 * And the user set the request attributes as follows
      |Attribute Value In JSON Template   |Attribute Value To Be Set                                   |
-     |-----------------------------------|------------------------------------------------------------|
      |#isArchived                        |false                                                       |
      |#bookAuthorName                    |Osanda Deshan                                               |
      |#bookTitle                         |API Deck3                                                   |

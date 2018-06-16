@@ -1,0 +1,117 @@
+Project Name : Pearson_Prep_API_Test_Automation
+Developer    : Osanda Deshan
+Version      : 1.0.0
+Date         : 6/4/2018
+Time         : 11:13 AM
+Description  : This is a concept file which follows markdown syntax. Every bulleted point denotes a step.
+
+
+# Delete 3 expert bundles and associated 6 expert decks
+
+* Given that a user needs to invoke "Delete a Bundle"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |bundleId       |y                  |scenario       |bundleId1               |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete a Bundle"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |bundleId       |y                  |scenario       |bundleId2               |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete a Bundle"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |bundleId       |y                  |scenario       |bundleId3               |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |skuUUID        |y                  |scenario       |expertDeckId1           |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |skuUUID        |y                  |scenario       |expertDeckId2           |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |skuUUID        |y                  |scenario       |expertDeckId3           |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |skuUUID        |y                  |scenario       |expertDeckId4           |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |skuUUID        |y                  |scenario       |expertDeckId5           |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
+
+* Given that a user needs to invoke "Delete Expert Deck by ID using Expert Deck Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the path parameters using data stores as follows
+    |Path Name      |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value     |
+    |skuUUID        |y                  |scenario       |expertDeckId6           |N/A            |
+* When the user invokes the API
+* Then the status code for the request is "204"
