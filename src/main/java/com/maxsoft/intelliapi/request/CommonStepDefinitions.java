@@ -19,7 +19,7 @@ import java.util.List;
 public class CommonStepDefinitions extends BaseClass {
 
     public static final String FILE_SYNTAX = "<file:";
-    public static final int FILE_SYNTAX_CHARACTER_COUNT = 6;
+    public static final int FILE_SYNTAX_CHARACTER_COUNT = FILE_SYNTAX.length();
 
 	// Use this method at the beginning of the scenario to identify which API is going to use in that scenario
 	public void apiToBeInvoked(String apiEndpointName) throws IOException {
@@ -189,7 +189,11 @@ public class CommonStepDefinitions extends BaseClass {
 		List<TableRow> rows = configTable.getTableRows();
 		List<String> columnNames = configTable.getColumnNames();
 		for (TableRow row : rows) {
-			saveValueForScenario(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
+                saveValueForScenario(row.getCell(columnNames.get(0)), FileOperator.readFromFile(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
+            } else {
+                saveValueForScenario(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+            }
 		}
 	}
 
@@ -503,6 +507,15 @@ public class CommonStepDefinitions extends BaseClass {
 	// Use this method to catch and save the access token of the login response
 	public void saveAccessToken(String jsonPath) throws JSONException {
 		super.saveAccessToken(jsonPath);
+	}
+
+	// Use this method to catch and save the attribute values of the response into text files
+	public void saveResponseData(Table table) throws JSONException {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.saveResponseData(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+        }
 	}
 
 	// Use this method to save strings in data store

@@ -218,6 +218,12 @@ public class AllStepsDefinitions{
 		commonStepDefinitions.saveAccessToken(jsonPath);
 	}
 
+	// Use this method to retrieve and save the attribute values of the response into text files
+	@Step("And save the JSON Path values of the response into text files <table>")
+	public void saveResponseData(Table table) throws JSONException {
+		commonStepDefinitions.saveResponseData(table);
+	}
+
 	// Use this method to retrieve and save the response JSON array values in a CSV file
 	@Step("And save the JSON Array values of the response into CSV files <table>")
 	public void saveJsonArrayValuesToCsv(Table table) throws ParseException, IOException {

@@ -1135,6 +1135,25 @@ public class BaseClass {
         }
     }
 
+    public void saveResponseData(String jsonPath, String filePath){
+        String jsonData = getSavedValueForScenario("response");
+        Object dataObject = JsonPath.parse(jsonData).read(jsonPath);
+        String jsonPathValue = dataObject.toString();
+        // Save the token into a file
+        try {
+            File file = new File(CURRENT_DIRECTORY + filePath);
+                if(!file.exists()){
+                    file.createNewFile();
+                }else{
+                    System.out.println("Text file already exists in " + CURRENT_DIRECTORY + filePath);
+                }
+            FileOperator.writeToFile(jsonPathValue, CURRENT_DIRECTORY + filePath);
+            print("Successfully saved the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"");
+        } catch (Exception ex) {
+            print("Failed to save the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
+        }
+    }
+
     public void jsonPathValueContains(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
