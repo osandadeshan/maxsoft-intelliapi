@@ -30,21 +30,21 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,3,0" data-total="3">
+        <svg id="pie-chart" data-results="1,0,0" data-total="1">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/3</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 3/3</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/3</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">3</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">1</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">3</span><span class="txt">Passed</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">0</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -57,15 +57,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>100%</span>
+          <span>0%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:02:48</span>
+          <span>00:00:07</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jun 3, 2018 at 12:56am</span>
+          <span>Jun 25, 2018 at 10:38pm</span>
         </li>
       </ul>
       
@@ -92,30 +92,12 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="Form-Data Example.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
-              <span id="time" class="time">00:01:42</span>
-            </li>
-          </a>
-          
-          <a href="Saving And Reading Values From Data Store.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:17</span>
-            </li>
-          </a>
-          
           <a href="CRUD in One Scenario.html">
-             
-              <li class='passed spec-name'>
+            
+              <li class='failed spec-name'>
             
               <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
-              <span id="time" class="time">00:00:44</span>
+              <span id="time" class="time">00:00:06</span>
             </li>
           </a>
           
@@ -133,8 +115,8 @@
         <h3 class="spec-head" title="C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\specs\CRUD in One Scenario.spec">CRUD in One Scenario Specification</h3>
         <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -147,7 +129,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:44</span>
+        <span class="time">00:00:06</span>
       </div>
 
 	
@@ -177,13 +159,13 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">CRUD operation for a sku and get all the 9 questions in a deck</h3>
-    <span class="time">00:00:44</span>
+    <span class="time">00:00:06</span>
 
 	
   
@@ -446,9 +428,9 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
         <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
  </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8090/api/store/sku" rel="nofollow">http://10.199.253.187:8090/api/store/sku</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2361ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: “5b12ef882e02d85d8b54c7cf”,<br/>    “skuId”: “sampleSkuId1”,<br/>    “price”: 1.19,<br/>    “type”: “DECK”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>X-Application-Context=application:dev:8090<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:04 GMT</p>
+ </div><div class="step-message"><p>Response Time is: 2609ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “httpStatus”: “BAD_REQUEST”,<br/>    “message”: “SKU already exists”,<br/>    “localizedMessage”: “SKU already exists”,<br/>    “suppressed”: [<br/>        <br/>    ]<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>X-Application-Context=application:dev:8090<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Mon, 25 Jun 2018 17:08:43 GMT<br/>Connection=close</p>
  </div>
       </div>
     </div>
@@ -473,7 +455,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -500,6 +482,20 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
 
   
     
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+        <div class="exception">
+          <h4 class="error-message">
+            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [400]</pre>
+          </h4>
+          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.request.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/></pre>
+        </div>
+        
+    </div>
+  </div>
+
+    
   
   
   
@@ -524,7 +520,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -593,7 +589,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -638,14 +634,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b12ef882e02d85d8b54c7cf” is successfully saved as a text in Scenario Data Store [skuUUID1]</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -669,10 +657,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -704,7 +692,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -735,15 +723,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8090/api/store/sku" rel="nofollow">http://10.199.253.187:8090/api/store/sku</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -764,7 +743,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -833,7 +812,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -882,14 +861,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/> “skuId”:“AAPIPH5-DC2-Y”,<br/> “price”:3.99,<br/> “type”:“DECK”<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -907,10 +878,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -937,19 +908,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8090/api/store/sku" rel="nofollow">http://10.199.253.187:8090/api/store/sku</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 794ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: “5b12ef8a2e02d85d8b54c7d0”,<br/>    “skuId”: “AAPIPH5-DC2-Y”,<br/>    “price”: 3.99,<br/>    “type”: “DECK”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>X-Application-Context=application:dev:8090<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:06 GMT</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -970,7 +928,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1021,7 +979,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1095,7 +1053,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1140,14 +1098,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b12ef8a2e02d85d8b54c7d0” is successfully saved as a text in Scenario Data Store [skuUUID2]</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1174,7 +1124,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1205,15 +1155,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8090/api/store/sku" rel="nofollow">http://10.199.253.187:8090/api/store/sku</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: PUT<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1234,7 +1175,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1279,15 +1220,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Scenario Data Store [skuUUID2] is: “5b12ef8a2e02d85d8b54c7d0”<br/><br/></p>
- </div><div class="step-message"><p>Path parameters which will append to the request URL:/5b12ef8a2e02d85d8b54c7d0<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1308,7 +1240,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1377,7 +1309,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1426,14 +1358,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/> “skuId”:“sampleSkuId2”,<br/> “price”:1.07,<br/> “type”:“DECK”<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1451,10 +1375,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1481,19 +1405,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8090/api/store/sku/5b12ef8a2e02d85d8b54c7d0" rel="nofollow">http://10.199.253.187:8090/api/store/sku/5b12ef8a2e02d85d8b54c7d0</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: PUT<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 865ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: “5b12ef8a2e02d85d8b54c7d0”,<br/>    “skuId”: “sampleSkuId2”,<br/>    “price”: 1.07,<br/>    “type”: “DECK”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>X-Application-Context=application:dev:8090<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:09 GMT</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1514,7 +1425,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1565,7 +1476,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1640,7 +1551,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1671,15 +1582,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8090/api/store/sku" rel="nofollow">http://10.199.253.187:8090/api/store/sku</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1700,7 +1602,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1769,7 +1671,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1814,15 +1716,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Scenario Data Store [skuUUID1] is: “5b12ef882e02d85d8b54c7cf”<br/><br/></p>
- </div><div class="step-message"><p>Path parameters which will append to the request URL:/5b12ef882e02d85d8b54c7cf<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1840,10 +1733,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1870,19 +1763,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8090/api/store/sku/5b12ef882e02d85d8b54c7cf" rel="nofollow">http://10.199.253.187:8090/api/store/sku/5b12ef882e02d85d8b54c7cf</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 840ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>X-Application-Context=application:dev:8090<br/>Content-Type=application/json;charset=UTF-8<br/>Date=Sat, 02 Jun 2018 19:27:11 GMT</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -1903,7 +1783,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1954,7 +1834,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -1985,15 +1865,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8090/api/store/sku" rel="nofollow">http://10.199.253.187:8090/api/store/sku</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2014,7 +1885,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2083,7 +1954,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2128,15 +1999,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Scenario Data Store [skuUUID2] is: “5b12ef8a2e02d85d8b54c7d0”<br/><br/></p>
- </div><div class="step-message"><p>Path parameters which will append to the request URL:/5b12ef8a2e02d85d8b54c7d0<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2154,10 +2016,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2184,19 +2046,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8090/api/store/sku/5b12ef8a2e02d85d8b54c7d0" rel="nofollow">http://10.199.253.187:8090/api/store/sku/5b12ef8a2e02d85d8b54c7d0</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 798ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>X-Application-Context=application:dev:8090<br/>Content-Type=application/json;charset=UTF-8<br/>Date=Sat, 02 Jun 2018 19:27:13 GMT</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2217,7 +2066,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2265,10 +2114,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:26</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2300,7 +2149,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2331,15 +2180,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/decks" rel="nofollow">http://10.199.253.187:8085/api/decks</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2360,7 +2200,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2429,7 +2269,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2530,14 +2370,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “title”: “API Deck3”,<br/>  “description”: null,<br/>  “tags”: [<br/>    “API tag1”<br/>  ],<br/>  “subject”: {<br/>    “id”: 2,<br/>    “name”: “API Testing3”<br/>  },<br/>  “book”: {<br/>    “bookTitle”: “Automation3”,<br/>    “bookAuthor”: “Osanda Nimalarathna”,<br/>    “chapter”: “Chap. 04”<br/>  },<br/>  “purchaseInformation”: {<br/>    “purchasedDate”: 1512021142001,<br/>    “price”: 777,<br/>    “sku”: “com.pearson.smartflashcards.test3”<br/>  },<br/>  “notificationSettings”: {<br/>    “areNotificationsEnabled”: true,<br/>    “notificationTime”: “08:00”,<br/>    “notificationFrequency”: “0”<br/>  },<br/>  “categoryId”: “5a5db30a12ef181b0af109ba”,<br/>  “examDate”: 1512021142000,<br/>  “userId”: “osan”,<br/>  “parentDeckId”: “5”,<br/>  “tempDeckId”: “999”,<br/>  “archived”: true,<br/>  “cardPreview”: true,<br/>  “noOfCards”: 2,<br/>  “progress”: 3,<br/>  “downloads”: 12,<br/>  “deckAuthor”: “Osanda”,<br/>  “deckAuthorId”: “6”,<br/>  “thumbnailUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>  “status”: “Closed”,<br/>  “starred”: true<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2555,10 +2387,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2585,19 +2417,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/decks" rel="nofollow">http://10.199.253.187:8085/api/decks</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 846ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: “5b12ef932e02d85d8b54c7d1”,<br/>    “title”: “API Deck3”,<br/>    “tags”: [<br/>        “API tag1”<br/>    ],<br/>    “categoryId”: “5a5db30a12ef181b0af109ba”,<br/>    “book”: {<br/>        “bookTitle”: “Automation3”,<br/>        “bookAuthor”: “Osanda Nimalarathna”,<br/>        “chapter”: “Chap. 04”<br/>    },<br/>    “purchaseInfo”: {<br/>        “price”: 0.0<br/>    },<br/>    “notificationSettings”: {<br/>        “areNotificationsEnabled”: true,<br/>        “notificationTime”: “08:00”,<br/>        “notificationFrequency”: “0”<br/>    },<br/>    “epochTime”: {<br/>        “createdAt”: 1527967635204,<br/>        “updatedAt”: 1527967635204<br/>    },<br/>    “examDate”: 1512021142000,<br/>    “userId”: “osan”,<br/>    “parentDeckId”: “5”,<br/>    “tempDeckId”: “999”,<br/>    “createdAt”: “2018-06-02T19:27:15.204Z”,<br/>    “updatedAt”: “2018-06-02T19:27:15.206Z”,<br/>    “archived”: true,<br/>    “cardPreview”: true,<br/>    “noOfCards”: 2,<br/>    “progress”: 3,<br/>    “downloads”: 12,<br/>    “deckAuthor”: “Osanda”,<br/>    “deckAuthorId”: “6”,<br/>    “thumbnailUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “status”: “Closed”,<br/>    “starred”: true,<br/>    “examReminder”: {<br/>        “startDate”: 1510811542000,<br/>        “endDate”: 1512021142000,<br/>        “time”: “08:00”<br/>    },<br/>    “expert”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=a45f4b99-3004-4059-bd71-8043540b7d82<br/>X-Application-Context=application:dev:8090<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:15 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2618,7 +2437,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2669,7 +2488,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2714,14 +2533,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b12ef932e02d85d8b54c7d1” is successfully saved as a text in Specification Data Store [myDeckIdWith9Questions]</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2742,7 +2553,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2773,15 +2584,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -2802,7 +2604,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -2871,7 +2673,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3002,15 +2804,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3028,10 +2821,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:03</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3058,19 +2851,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2716ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967637486,<br/>        “updatedAt”: 1527967637486<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b12ef95e4b0e5964009c2aa”,<br/>    “createdAt”: “2018-06-02T19:27:17.486Z”,<br/>    “updatedAt”: “2018-06-02T19:27:17.488Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=f67e2adb-dce4-4f1f-b03d-19ead359bf99<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:17 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3091,7 +2871,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3142,7 +2922,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3173,15 +2953,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3202,7 +2973,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3271,7 +3042,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3402,15 +3173,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3428,10 +3190,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3458,19 +3220,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1601ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967641336,<br/>        “updatedAt”: 1527967641336<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b12ef99e4b0e5964009c2ab”,<br/>    “createdAt”: “2018-06-02T19:27:21.336Z”,<br/>    “updatedAt”: “2018-06-02T19:27:21.337Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=63a983cb-7386-4823-8e7e-55aff479d9e0<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:21 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3491,7 +3240,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3542,7 +3291,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3587,14 +3336,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b12ef99e4b0e5964009c2ab” is successfully saved as a text in Scenario Data Store [cardId2]</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3615,7 +3356,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3646,15 +3387,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3675,7 +3407,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3744,7 +3476,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3875,15 +3607,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3901,10 +3624,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -3931,19 +3654,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1198ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967644621,<br/>        “updatedAt”: 1527967644621<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b12ef9ce4b0e5964009c2ac”,<br/>    “createdAt”: “2018-06-02T19:27:24.621Z”,<br/>    “updatedAt”: “2018-06-02T19:27:24.622Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=76d62d54-c4b9-46f0-925c-d5c3381fe7fc<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:24 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -3964,7 +3674,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4015,7 +3725,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4046,15 +3756,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4075,7 +3776,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4144,7 +3845,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4275,15 +3976,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4301,10 +3993,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4331,19 +4023,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2300ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967647666,<br/>        “updatedAt”: 1527967647666<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b12ef9fe4b0e5964009c2ad”,<br/>    “createdAt”: “2018-06-02T19:27:27.666Z”,<br/>    “updatedAt”: “2018-06-02T19:27:27.668Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=86ba0169-a219-45a0-89b3-f2eb37ab5ff0<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:27 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4364,7 +4043,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4415,7 +4094,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4446,15 +4125,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4475,7 +4145,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4544,7 +4214,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4675,15 +4345,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “ALL”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4701,10 +4362,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4731,19 +4392,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1253ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “ALL”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967650262,<br/>        “updatedAt”: 1527967650262<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b12efa2e4b0e5964009c2ae”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=56f3216e-8b02-4759-b088-eed1c9da9a6a<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:30 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4764,7 +4412,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4815,7 +4463,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4860,14 +4508,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b12efa2e4b0e5964009c2ae” is successfully saved as a text in Scenario Data Store [cardId5]</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4888,7 +4528,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -4919,15 +4559,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -4948,7 +4579,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5017,7 +4648,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5114,15 +4745,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5140,10 +4762,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5170,19 +4792,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1253ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967652854,<br/>        “updatedAt”: 1527967652854<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b12efa4e4b0e5964009c2af”,<br/>    “createdAt”: “2018-06-02T19:27:32.854Z”,<br/>    “updatedAt”: “2018-06-02T19:27:32.865Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=a45f4b99-3004-4059-bd71-8043540b7d82<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:32 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5203,7 +4812,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5254,7 +4863,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5285,15 +4894,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5314,7 +4914,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5383,7 +4983,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5480,15 +5080,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5506,10 +5097,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5536,19 +5127,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1376ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967655498,<br/>        “updatedAt”: 1527967655498<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b12efa7e4b0e5964009c2b0”,<br/>    “createdAt”: “2018-06-02T19:27:35.498Z”,<br/>    “updatedAt”: “2018-06-02T19:27:35.500Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=f67e2adb-dce4-4f1f-b03d-19ead359bf99<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:35 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5569,7 +5147,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5620,7 +5198,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5651,15 +5229,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5680,7 +5249,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5749,7 +5318,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5846,15 +5415,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5872,10 +5432,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5902,19 +5462,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1302ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967658324,<br/>        “updatedAt”: 1527967658324<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b12efaae4b0e5964009c2b1”,<br/>    “createdAt”: “2018-06-02T19:27:38.324Z”,<br/>    “updatedAt”: “2018-06-02T19:27:38.325Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=a77a933e-8a13-4c30-839b-54ed37522dc1<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:38 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -5935,7 +5482,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -5986,7 +5533,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6031,14 +5578,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b12efaae4b0e5964009c2b1” is successfully saved as a text in Scenario Data Store [cardId8]</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6059,7 +5598,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6090,15 +5629,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6119,7 +5649,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6188,7 +5718,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6285,15 +5815,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6311,10 +5832,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6341,19 +5862,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1202ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1527967660527,<br/>        “updatedAt”: 1527967660527<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b12eface4b0e5964009c2b2”,<br/>    “createdAt”: “2018-06-02T19:27:40.527Z”,<br/>    “updatedAt”: “2018-06-02T19:27:40.528Z”,<br/>    “deleted”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=86ba0169-a219-45a0-89b3-f2eb37ab5ff0<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:40 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6374,7 +5882,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6425,7 +5933,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6470,14 +5978,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b12eface4b0e5964009c2b2” is successfully saved as a text in Scenario Data Store [questionId]</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6503,7 +6003,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6534,15 +6034,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://10.199.253.187:8085/api/questions" rel="nofollow">http://10.199.253.187:8085/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6563,7 +6054,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6632,7 +6123,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6677,15 +6168,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b12ef932e02d85d8b54c7d1”<br/><br/></p>
- </div><div class="step-message"><p>Query parameters which will append to the request URL: ?deckId=5b12ef932e02d85d8b54c7d1<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6703,10 +6185,10 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6733,19 +6215,6 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://10.199.253.187:8085/api/questions?deckId=5b12ef932e02d85d8b54c7d1" rel="nofollow">http://10.199.253.187:8085/api/questions?deckId=5b12ef932e02d85d8b54c7d1</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1249ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “questions”: [<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967644621,<br/>                “updatedAt”: 1527967644621<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “id”: “5b12ef9ce4b0e5964009c2ac”,<br/>            “createdAt”: “2018-06-02T19:27:24.621Z”,<br/>            “updatedAt”: “2018-06-02T19:27:24.622Z”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967658324,<br/>                “updatedAt”: 1527967658324<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                }<br/>            ],<br/>            “id”: “5b12efaae4b0e5964009c2b1”,<br/>            “createdAt”: “2018-06-02T19:27:38.324Z”,<br/>            “updatedAt”: “2018-06-02T19:27:38.325Z”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967637486,<br/>                “updatedAt”: 1527967637486<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “id”: “5b12ef95e4b0e5964009c2aa”,<br/>            “createdAt”: “2018-06-02T19:27:17.486Z”,<br/>            “updatedAt”: “2018-06-02T19:27:17.488Z”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “ALL”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967650262,<br/>                “updatedAt”: 1527967650262<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “id”: “5b12efa2e4b0e5964009c2ae”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967641336,<br/>                “updatedAt”: 1527967641336<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “id”: “5b12ef99e4b0e5964009c2ab”,<br/>            “createdAt”: “2018-06-02T19:27:21.336Z”,<br/>            “updatedAt”: “2018-06-02T19:27:21.337Z”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967647666,<br/>                “updatedAt”: 1527967647666<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: true<br/>                },<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true,<br/>                    “correct”: false<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “id”: “5b12ef9fe4b0e5964009c2ad”,<br/>            “createdAt”: “2018-06-02T19:27:27.666Z”,<br/>            “updatedAt”: “2018-06-02T19:27:27.668Z”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967655498,<br/>                “updatedAt”: 1527967655498<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                }<br/>            ],<br/>            “id”: “5b12efa7e4b0e5964009c2b0”,<br/>            “createdAt”: “2018-06-02T19:27:35.498Z”,<br/>            “updatedAt”: “2018-06-02T19:27:35.500Z”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967652854,<br/>                “updatedAt”: 1527967652854<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                }<br/>            ],<br/>            “id”: “5b12efa4e4b0e5964009c2af”,<br/>            “createdAt”: “2018-06-02T19:27:32.854Z”,<br/>            “updatedAt”: “2018-06-02T19:27:32.865Z”,<br/>            “deleted”: false<br/>        },<br/>        {<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b12ef932e02d85d8b54c7d1”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “parentId”: null,<br/>            “tempQuestionId”: “testId”,<br/>            “epochTime”: {<br/>                “createdAt”: 1527967660527,<br/>                “updatedAt”: 1527967660527<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false,<br/>                    “correct”: false<br/>                }<br/>            ],<br/>            “id”: “5b12eface4b0e5964009c2b2”,<br/>            “createdAt”: “2018-06-02T19:27:40.527Z”,<br/>            “updatedAt”: “2018-06-02T19:27:40.528Z”,<br/>            “deleted”: false<br/>        }<br/>    ]<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=56f3216e-8b02-4759-b088-eed1c9da9a6a<br/>Server=Apache-Coyote/1.1<br/>X-Content-Type-Options=nosniff<br/>X-XSS-Protection=1; mode=block<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=0<br/>X-Application-Context=flashcardservice:dev:8070<br/>ServerTime=2018-06-02 19:27:42<br/>Transfer-Encoding=chunked<br/>Date=Sat, 02 Jun 2018 19:27:42 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
-  
 
 	</li></ul></div></div>
   
@@ -6766,7 +6235,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -6817,7 +6286,7 @@ Every heading in this file denotes a scenario. Every bulleted point denotes a st
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>

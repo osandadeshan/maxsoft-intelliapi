@@ -1,7 +1,7 @@
 package com.maxsoft.intelliapi.test;
 
 import com.maxsoft.intelliapi.util.Email;
-import com.maxsoft.intelliapi.util.JsonReader;
+import com.maxsoft.intelliapi.util.JsonReportReader;
 
 
 /**
@@ -12,7 +12,7 @@ import com.maxsoft.intelliapi.util.JsonReader;
 public class EmailSender {
 
     public static void main(String[] args) {
-        Email.send(JsonReader.getExecutionResults());
+        Email.send(JsonReportReader.getExecutionResults());
     }
 
 

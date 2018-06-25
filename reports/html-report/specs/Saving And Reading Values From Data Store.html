@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,1,0" data-total="1">
+        <svg id="pie-chart" data-results="1,0,0" data-total="1">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/1</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 1/1</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
         </svg>
@@ -43,8 +43,8 @@
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">1</span><span class="txt">Passed</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">0</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -57,15 +57,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>100%</span>
+          <span>0%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:11</span>
+          <span>00:00:20</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jun 17, 2018 at 2:59pm</span>
+          <span>Jun 25, 2018 at 10:24pm</span>
         </li>
       </ul>
       
@@ -93,11 +93,11 @@
         <ul id="scenarios" class="spec-list">
         
           <a href="Saving And Reading Values From Data Store.html">
-             
-              <li class='passed spec-name'>
+            
+              <li class='failed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:10</span>
+              <span id="time" class="time">00:00:17</span>
             </li>
           </a>
           
@@ -115,8 +115,8 @@
         <h3 class="spec-head" title="C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\specs\Saving And Reading Values From Data Store.spec">Saving And Reading Values From Data Store Specification</h3>
         <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">2</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">6</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -129,7 +129,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:10</span>
+        <span class="time">00:00:17</span>
       </div>
 
 	
@@ -159,13 +159,863 @@ Description     : This is an executable specification file which follows markdow
       
         
 	
+  <div class='scenario-container failed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Replace API Endpoint placeholders - Scenario 1</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+
+	</div>
+  
+  
+
+	
+
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info failed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Given that a user needs to invoke 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Purchase Validator API"</span>
+    
+  
+  </div>
+
+  
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+        <div class="exception">
+          <h4 class="error-message">
+            <pre>java.lang.AssertionError: &#34;Purchase Validator API&#34; API Endpoint Name is not exist in the API Document Excel file located in &#34;C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/api_document/dev_api_doc.xlsx&#34;</pre>
+          </h4>
+          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>com.maxsoft.intelliapi.util.ApiDocumentReader.getAPIEndpoint(ApiDocumentReader.java:47)<br/>com.maxsoft.intelliapi.request.ApiEndpoints.getApiEndpointByName(ApiEndpoints.java:15)<br/>com.maxsoft.intelliapi.request.BaseClass.apiToBeInvoked(BaseClass.java:315)<br/>com.maxsoft.intelliapi.request.CommonStepDefinitions.apiToBeInvoked(CommonStepDefinitions.java:26)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.apiToBeInvoked(AllStepsDefinitions.java:32)<br/></pre>
+        </div>
+        
+    </div>
+  </div>
+
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set values to the API endpoint placeholders as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Placeholder In JSON Template</th><th>Replacement Text</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>#skuid</td><td>com.pearsoned.smartflashcards.expert.elementary</td></tr>
+    
+    <tr><td>#purchaseToken</td><td>&lt;file:/resources/access_tokens/purchase_token.txt&gt;</td></tr>
+    
+    <tr><td>#access_token</td><td>&lt;file:/resources/access_tokens/access_token.txt&gt;</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Then the status code for the request is 
+      </span>
+    
+  
+    
+      <span class='parameter'>"401"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.error.errors[0].reason</td><td>authError</td></tr>
+    
+    <tr><td>$.error.errors[0].message</td><td>Invalid Credentials</td></tr>
+    
+    <tr><td>$.error.code</td><td>401</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container failed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Replace API Endpoint placeholders - Scenario 2</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+
+	</div>
+  
+  
+
+	
+
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info failed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Given that a user needs to invoke 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Purchase Validator API"</span>
+    
+  
+  </div>
+
+  
+    
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+        <div class="exception">
+          <h4 class="error-message">
+            <pre>java.lang.AssertionError: &#34;Purchase Validator API&#34; API Endpoint Name is not exist in the API Document Excel file located in &#34;C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/api_document/dev_api_doc.xlsx&#34;</pre>
+          </h4>
+          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>com.maxsoft.intelliapi.util.ApiDocumentReader.getAPIEndpoint(ApiDocumentReader.java:47)<br/>com.maxsoft.intelliapi.request.ApiEndpoints.getApiEndpointByName(ApiEndpoints.java:15)<br/>com.maxsoft.intelliapi.request.BaseClass.apiToBeInvoked(BaseClass.java:315)<br/>com.maxsoft.intelliapi.request.CommonStepDefinitions.apiToBeInvoked(CommonStepDefinitions.java:26)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.apiToBeInvoked(AllStepsDefinitions.java:32)<br/></pre>
+        </div>
+        
+    </div>
+  </div>
+
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user save the values inside data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>purchaseToken</td><td>jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0</td></tr>
+    
+    <tr><td>Scenario</td><td>accessToken</td><td>ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set values to the API endpoint placeholders using data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Placeholder In JSON Template</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Replacement Text</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>#skuid</td><td>n</td><td></td><td></td><td>com.pearsoned.smartflashcards.expert.elementary</td></tr>
+    
+    <tr><td>#purchaseToken</td><td>y</td><td>scenario</td><td>purchaseToken</td><td></td></tr>
+    
+    <tr><td>#access_token</td><td>y</td><td>scenario</td><td>accessToken</td><td></td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Then the status code for the request is 
+      </span>
+    
+  
+    
+      <span class='parameter'>"401"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info not-executed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.error.errors[0].reason</td><td>authError</td></tr>
+    
+    <tr><td>$.error.errors[0].message</td><td>Invalid Credentials</td></tr>
+    
+    <tr><td>$.error.code</td><td>401</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
   <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password using request attributes from text files</h3>
-    <span class="time">00:00:10</span>
+    <h3 class="head borderBottom">Reading values from Data Store</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+
+	</div>
+  
+  
+
+	
+
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user read the values from data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>variable1</td></tr>
+    
+    <tr><td>Specification</td><td>variable2</td></tr>
+    
+    <tr><td>Scenario</td><td>variable3</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [variable1] is: “null”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Specification Data Store [variable2] is: “Osanda Nimalarathna”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Scenario Data Store [variable3] is: “null”<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password using payload text file</h3>
+    <span class="time">00:00:08</span>
 
 	
   
@@ -201,7 +1051,2062 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:01</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Given that a user needs to invoke 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Get Staging PI Token"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set the request authentication configurations as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Configuration</th><th>Configuration Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Is authentication required?</td><td>No</td></tr>
+    
+    <tr><td>Do you need to retrieve the access token from the text file?</td><td>N/A</td></tr>
+    
+    <tr><td>Provide the access token if you need to authorize the API manually</td><td>N/A</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set the request payload as follows 
+      </span>
+    
+  
+    
+      
+  <span class="modal-link">&lt;file:/resources/payloads/login.txt&gt;</span>
+    <div class="modal">
+      <h2 class="modal-title">/resources/payloads/login.txt</h2>
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <pre>{
+ "userName": "osanda12",
+ "password": "Password1"
+}</pre>
+      </div>
+    </div>
+
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “osanda12”,
+<br/> “password”: “Password1”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:06</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 4777ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=95ba167e-e049-479f-9870-ac23ac93fa7d<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Mon, 25 Jun 2018 16:54:58 GMT</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Then the status code for the request is 
+      </span>
+    
+  
+    
+      <span class='parameter'>"201"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>success</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Existence in the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>isExists</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>true</td></tr>
+    
+    <tr><td>$.osa</td><td>false</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And save the access token in the response which is located inside the JSON Path of 
+      </span>
+    
+  
+    
+      <span class='parameter'>"$.data"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully saved the access token into the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And save the JSON Path values in the response inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>variable4</td><td>$.status</td></tr>
+    
+    <tr><td>Specification</td><td>variable5</td><td>$.data</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“success” is successfully saved as a text in Scenario Data Store [variable4]</p>
+ </div><div class="step-message"><p>“eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ” is successfully saved as a text in Specification Data Store [variable5]</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user read the values from data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>variable4</td></tr>
+    
+    <tr><td>Specification</td><td>variable5</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [variable4] is: “success”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Specification Data Store [variable5] is: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ”<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file</h3>
+    <span class="time">00:00:03</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> get_pi_token</span>
+      
+        <span> staging</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Given that a user needs to invoke 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Get Staging PI Token"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user save the values inside data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>username</td><td>osanda12</td></tr>
+    
+    <tr><td>Specification</td><td>variable6</td><td>Osanda Nimalarathna</td></tr>
+    
+    <tr><td>Scenario</td><td>variable7</td><td>Software Automation</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“osanda12” is successfully saved as a text in Scenario Data Store [username]</p>
+ </div><div class="step-message"><p>“Osanda Nimalarathna” is successfully saved as a text in Specification Data Store [variable6]</p>
+ </div><div class="step-message"><p>“Software Automation” is successfully saved as a text in Scenario Data Store [variable7]</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set the request headers using data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Header Name</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Header Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>header1</td><td>y</td><td>spec</td><td>variable6</td><td>N/A</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Specification Data Store [variable6] is: “Osanda Nimalarathna”<br/><br/></p>
+ </div><div class="step-message"><p>Header List:</p>
+ </div><div class="step-message"><p>header1 = Osanda Nimalarathna</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set the request attributes using data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Attribute Value In JSON Template</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Attribute Value To Be Set</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>#username</td><td>y</td><td>scenario</td><td>username</td><td>N/A</td></tr>
+    
+    <tr><td>#password</td><td>n</td><td>N/A</td><td>N/A</td><td>Password1</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [username] is: “osanda12”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/> “userName”: “osanda12”,<br/> “password”: “Password1”<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 2239ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA0LCJpYXQiOjE1Mjk5NDU3MDMsInNlc3NpZCI6IjcyYjU0YWViLWVhMzEtNGJlMS1hODRlLTA3M2NhYzQ3MGNlNCJ9.Ily0tdorJP64aVocxcwqnOzVNNMNuyhJpLmpA5MfiYqdd59kyGj7PNQsBG6vhKies36ksjQWi-mKW1jxL_L-H3V2RP9LKP1LlObDH9zEsjWxZGfnO25k8BNW4zKt2B_wliZYmEsDegAYlMJPJECmivGdxTeTEwSABiKFcAOGUP8”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=58fbb323-b1cb-4a49-bf1c-369148b1125a<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA0LCJpYXQiOjE1Mjk5NDU3MDMsInNlc3NpZCI6IjcyYjU0YWViLWVhMzEtNGJlMS1hODRlLTA3M2NhYzQ3MGNlNCJ9.Ily0tdorJP64aVocxcwqnOzVNNMNuyhJpLmpA5MfiYqdd59kyGj7PNQsBG6vhKies36ksjQWi-mKW1jxL_L-H3V2RP9LKP1LlObDH9zEsjWxZGfnO25k8BNW4zKt2B_wliZYmEsDegAYlMJPJECmivGdxTeTEwSABiKFcAOGUP8" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA0LCJpYXQiOjE1Mjk5NDU3MDMsInNlc3NpZCI6IjcyYjU0YWViLWVhMzEtNGJlMS1hODRlLTA3M2NhYzQ3MGNlNCJ9.Ily0tdorJP64aVocxcwqnOzVNNMNuyhJpLmpA5MfiYqdd59kyGj7PNQsBG6vhKies36ksjQWi-mKW1jxL_L-H3V2RP9LKP1LlObDH9zEsjWxZGfnO25k8BNW4zKt2B_wliZYmEsDegAYlMJPJECmivGdxTeTEwSABiKFcAOGUP8</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Mon, 25 Jun 2018 16:55:03 GMT</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Then the status code for the request is 
+      </span>
+    
+  
+    
+      <span class='parameter'>"201"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And save the JSON Path values in the response inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>status</td><td>$.status</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“success” is successfully saved as a text in Scenario Data Store [status]</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should contains the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>isContains</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>success</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should contains the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>y</td><td>scenario</td><td>status</td><td>N/A</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [status] is: “success”<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should not contains the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>notContains</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>fail</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path values of the response should not contains the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>y</td><td>scenario</td><td>variable7</td><td>N/A</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [variable7] is: “Software Automation”<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>success</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should not be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>fail</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>y</td><td>scenario</td><td>status</td><td>N/A</td></tr>
+    
+    <tr><td>$.status</td><td>n</td><td>N/A</td><td>N/A</td><td>success</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [status] is: “success”<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should not be equal to the values inside the data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>n</td><td>N/A</td><td>N/A</td><td>fail</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And save the access token in the response which is located inside the JSON Path of 
+      </span>
+    
+  
+    
+      <span class='parameter'>"$.data"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully saved the access token into the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Existence in the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>isExists</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.status</td><td>true</td></tr>
+    
+    <tr><td>$.osa</td><td>false</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set the query parameters using data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Query Name</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Query Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>username</td><td>y</td><td>scenario</td><td>username</td><td>N/A</td></tr>
+    
+    <tr><td>password</td><td>n</td><td>N/A</td><td>N/A</td><td>Password1</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [username] is: “osanda12”<br/><br/></p>
+ </div><div class="step-message"><p>Query parameters which will append to the request URL: ?username=osanda12&amp;password=Password1<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set the path parameters using data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Path Name</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Path Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>#username</td><td>y</td><td>scenario</td><td>username</td><td>N/A</td></tr>
+    
+    <tr><td>#password</td><td>n</td><td>N/A</td><td>N/A</td><td>Password1</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [username] is: “osanda12”<br/><br/></p>
+ </div><div class="step-message"><p>Path parameters which will append to the request URL:/osanda12/Password1<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password using request attributes from text files</h3>
+    <span class="time">00:00:03</span>
+
+	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> get_pi_token</span>
+      
+        <span> staging</span>
+      
+    </div>
+  
+
+	</div>
+  
+  
+
+	
+
+  
+  
+    
+  
+    <span></span>
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -496,7 +3401,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:06</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
   <div class='step-info passed'>
@@ -531,9 +3436,9 @@ Description     : This is an executable specification file which follows markdow
       <div class="messages">
         <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 4529ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5MjM4NTY4LCJpYXQiOjE1MjkyMjc3NjcsInNlc3NpZCI6Ijc2MDI0YjU3LTA4NDQtNDNkMS05OWFiLTM4OGFkMThkNDc1YSJ9.Ca8nvPpMV_OgM6RCHReJ3I4GBme37e1_Td4rUAYAGPwwubyHDrIkpu2JIXiRqJ7YXyHLCr6JuIBldOS9D-uaH9JEafH4Ex3QSoZAe6PvyGeE9TwK43VgalMrY2-AiGuJFHEt6OB7wkooatpw1u8CSBzCoYS3ocy7_d9Ogxde75A”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=c559668a-87a0-410b-a850-b872cfe7d245<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5MjM4NTY4LCJpYXQiOjE1MjkyMjc3NjcsInNlc3NpZCI6Ijc2MDI0YjU3LTA4NDQtNDNkMS05OWFiLTM4OGFkMThkNDc1YSJ9.Ca8nvPpMV_OgM6RCHReJ3I4GBme37e1_Td4rUAYAGPwwubyHDrIkpu2JIXiRqJ7YXyHLCr6JuIBldOS9D-uaH9JEafH4Ex3QSoZAe6PvyGeE9TwK43VgalMrY2-AiGuJFHEt6OB7wkooatpw1u8CSBzCoYS3ocy7_d9Ogxde75A" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5MjM4NTY4LCJpYXQiOjE1MjkyMjc3NjcsInNlc3NpZCI6Ijc2MDI0YjU3LTA4NDQtNDNkMS05OWFiLTM4OGFkMThkNDc1YSJ9.Ca8nvPpMV_OgM6RCHReJ3I4GBme37e1_Td4rUAYAGPwwubyHDrIkpu2JIXiRqJ7YXyHLCr6JuIBldOS9D-uaH9JEafH4Ex3QSoZAe6PvyGeE9TwK43VgalMrY2-AiGuJFHEt6OB7wkooatpw1u8CSBzCoYS3ocy7_d9Ogxde75A</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sun, 17 Jun 2018 09:29:27 GMT</p>
+ </div><div class="step-message"><p>Response Time is: 2206ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA4LCJpYXQiOjE1Mjk5NDU3MDcsInNlc3NpZCI6IjE0OTNkYTVlLTUxN2MtNDRlYy1hNDcwLTYzZGM4MzI3M2NhNCJ9.TnC9-gh4wWJt2yjPYV1YU5Oc6Qy0IcxpK-77nqT7X3vIyv_4gabDJDIXWA8AL82UVvWkCvzthcOUHc9FcDEN9WjoCDszGg-QDk54CL8QP6DHXMMGzGrb0fVGhqTwZvpahEp0ajo4cGXyxIPunE3EXwmv0A4WEotHnRVjXX_pXlE”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=3112c97c-d4a3-4efd-b5a6-6bf288389552<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA4LCJpYXQiOjE1Mjk5NDU3MDcsInNlc3NpZCI6IjE0OTNkYTVlLTUxN2MtNDRlYy1hNDcwLTYzZGM4MzI3M2NhNCJ9.TnC9-gh4wWJt2yjPYV1YU5Oc6Qy0IcxpK-77nqT7X3vIyv_4gabDJDIXWA8AL82UVvWkCvzthcOUHc9FcDEN9WjoCDszGg-QDk54CL8QP6DHXMMGzGrb0fVGhqTwZvpahEp0ajo4cGXyxIPunE3EXwmv0A4WEotHnRVjXX_pXlE" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA4LCJpYXQiOjE1Mjk5NDU3MDcsInNlc3NpZCI6IjE0OTNkYTVlLTUxN2MtNDRlYy1hNDcwLTYzZGM4MzI3M2NhNCJ9.TnC9-gh4wWJt2yjPYV1YU5Oc6Qy0IcxpK-77nqT7X3vIyv_4gabDJDIXWA8AL82UVvWkCvzthcOUHc9FcDEN9WjoCDszGg-QDk54CL8QP6DHXMMGzGrb0fVGhqTwZvpahEp0ajo4cGXyxIPunE3EXwmv0A4WEotHnRVjXX_pXlE</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Mon, 25 Jun 2018 16:55:07 GMT</p>
  </div>
       </div>
     </div>
@@ -1640,6 +4545,212 @@ Description     : This is an executable specification file which follows markdow
       <div class="messages">
         <div class="step-message"><p>Text inside Scenario Data Store [username] is: “osanda12”<br/><br/></p>
  </div><div class="step-message"><p>Path parameters which will append to the request URL:/osanda12/Password1<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Get configurations of the testing environment</h3>
+    <span class="time">00:00:01</span>
+
+	
+  
+
+	</div>
+  
+  
+
+	
+
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:01</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Configurations of the testing environment
+      </span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>————————————————————————————————————————————————</p>
+ </div><div class="step-message"><p>Configurations of Test Execution Environment</p>
+ </div><div class="step-message"><p>————————————————————————————————————————————————<br/></p>
+ </div><div class="step-message"><p>Operating System: Windows 7</p>
+ </div><div class="step-message"><p>Environment: DEV</p>
+ </div><div class="step-message"><p>Base URL:</p>
+ </div><div class="step-message"><p>————————————————————————————————————————————————</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Saving values to Data Store</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+
+	</div>
+  
+  
+
+	
+
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user save the values inside data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>variable1</td><td>Osanda Deshan</td></tr>
+    
+    <tr><td>Specification</td><td>variable2</td><td>Osanda Nimalarathna</td></tr>
+    
+    <tr><td>Scenario</td><td>variable3</td><td>Software Automation</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“Osanda Deshan” is successfully saved as a text in Scenario Data Store [variable1]</p>
+ </div><div class="step-message"><p>“Osanda Nimalarathna” is successfully saved as a text in Specification Data Store [variable2]</p>
+ </div><div class="step-message"><p>“Software Automation” is successfully saved as a text in Scenario Data Store [variable3]</p>
  </div>
       </div>
     </div>

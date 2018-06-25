@@ -14,17 +14,17 @@ public class MongoDBAutomation{
         try{
 
             //Connecting to the mongoDB instance
-            MongoClient mongoClient = new MongoClient( "10.199.240.67" , 27017 );
+            MongoClient mongoClient = new MongoClient( "10.199.253.208" , 27017 );
 
             //Selecting the database
-            DB db = mongoClient.getDB("flashcardservice");
+            DB db = mongoClient.getDB("deckservice_qaint");
 
             //Selecting the collection
-            DBCollection dbCollection = db.getCollection("questions");
+            DBCollection dbCollection = db.getCollection("expert_decks");
 
             //Setting search query with the required key-value pair
             BasicDBObject searchQuery = new BasicDBObject();
-            searchQuery.put("key", "value");
+            searchQuery.put("userId", "osan");
 
             //DBCursor with the find query result
             DBCursor cursor = dbCollection.find(searchQuery);

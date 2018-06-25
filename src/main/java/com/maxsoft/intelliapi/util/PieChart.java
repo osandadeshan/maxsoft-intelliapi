@@ -1,7 +1,15 @@
+/**
+ * Project Name : MaxSoft Email Client For Gauge
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/23/2018
+ * Time         : 2:56 PM
+ * Description  :
+ **/
+
 package com.maxsoft.intelliapi.util;
 
 import org.knowm.xchart.BitmapEncoder;
-import org.knowm.xchart.PieChart;
 import org.knowm.xchart.PieChartBuilder;
 import org.knowm.xchart.style.PieStyler;
 import org.knowm.xchart.style.Styler;
@@ -13,12 +21,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 
-/**
- * Created by Osanda on 5/29/2018.
- */
-
-
-public class Chart {
+public class PieChart {
 
     public static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
 
@@ -33,7 +36,7 @@ public class Chart {
     static String PIE_CHART_IMAGE_PATH = "";
     static String PIE_CHART_IMAGE_NAME = "";
 
-    public static void savePieChart(String passedCount, String failedCount, String skippedCount)
+    public static void save(String passedCount, String failedCount, String skippedCount)
             throws IOException {
 
         try {
@@ -61,15 +64,21 @@ public class Chart {
         String pieChartDir = CURRENT_DIRECTORY + File.separator + PIE_CHART_IMAGE_PATH;
         String imageDir = pieChartDir + File.separator + PIE_CHART_IMAGE_NAME;
 
-        // Create Chart
-        PieChart chart = new PieChartBuilder().width(640).height(480).title(PIE_CHART_TITLE).theme(Styler.ChartTheme.GGPlot2).build();
+        // Create PieChart
+        org.knowm.xchart.PieChart chart = new PieChartBuilder().width(640).height(480).title(PIE_CHART_TITLE).theme(Styler.ChartTheme.GGPlot2).build();
 
-        // Customize Chart
+        // Customize PieChart
         chart.getStyler().setLegendVisible(true);
+        chart.getStyler().setLegendLayout(Styler.LegendLayout.Horizontal);
+        chart.getStyler().setLegendBorderColor(Color.BLACK);
+        chart.getStyler().setLegendPosition(Styler.LegendPosition.OutsideS);
         chart.getStyler().setAnnotationType(PieStyler.AnnotationType.LabelAndPercentage);
         chart.getStyler().setAnnotationDistance(1.15);
         chart.getStyler().setPlotContentSize(.6);
         chart.getStyler().setStartAngleInDegrees(90);
+        chart.getStyler().setPlotBorderVisible(true);
+        chart.getStyler().setPlotBorderColor(Color.BLACK);
+        chart.getStyler().setChartTitleBoxBorderColor(Color.BLACK);
 
         // Series
         chart.addSeries("Passed", Integer.valueOf(passedCount)).setFillColor(GREEN);

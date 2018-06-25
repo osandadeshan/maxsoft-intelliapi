@@ -4,7 +4,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import java.io.*;
 import java.util.List;
-import static com.maxsoft.intelliapi.util.JsonReader.CURRENT_DIRECTORY;
+import static com.maxsoft.intelliapi.util.JsonReportReader.CURRENT_DIRECTORY;
 
 
 public class CsvOperator {

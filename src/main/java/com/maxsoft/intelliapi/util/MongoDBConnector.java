@@ -73,10 +73,10 @@ public class MongoDBConnector {
     public static void main(String[] args) {
         MongoDBConnector mongoDBConnector = new MongoDBConnector();
 
-        mongoDBConnector.loadMongoInstance("10.199.240.67", 27017);
-        mongoDBConnector.connectDatabase("flashcardservice");
-        mongoDBConnector.selectCollection("questions");
-        mongoDBConnector.setSearchQuery("", "");
+        mongoDBConnector.loadMongoInstance("10.199.253.208", 27017);
+        mongoDBConnector.connectDatabase("deckservice_qaint");
+        mongoDBConnector.selectCollection("expert_decks");
+        mongoDBConnector.setSearchQuery("userId", "osan");
         mongoDBConnector.getQueryResults();
         mongoDBConnector.assertQueryResults("");
     }

@@ -1,5 +1,15 @@
+/**
+ * Project Name : MaxSoft Email Client For Gauge
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/23/2018
+ * Time         : 2:56 PM
+ * Description  :
+ **/
+
 package com.maxsoft.intelliapi.util;
 
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,16 +24,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import static com.maxsoft.intelliapi.util.Chart.getSavedPieChartImageName;
-import static com.maxsoft.intelliapi.util.Chart.getSavedPieChartImagePath;
-import static com.maxsoft.intelliapi.util.JsonReader.getFailedScenarioCount;
-import static com.maxsoft.intelliapi.util.JsonReader.getPassedScenarioCount;
-import static com.maxsoft.intelliapi.util.JsonReader.getSkippedScenarioCount;
-
-
-/**
- * Created by Osanda on 3/30/2018.
- */
 
 
 public class Email {
@@ -177,23 +177,36 @@ public class Email {
 
                 // first part (the html)
                 BodyPart messageBodyPart = new MimeBodyPart();
-                String htmlText = "<h" + emailBodyTitleHeadingSize + ">" + emailBodyTitle + "</h" + emailBodyTitleHeadingSize + ">" + executionResults +
-                        "<br /><br />" + emailBody + "<br /><br /><br />" + emailFooterLine1 + "<br />" + emailFooterLine2 + "<br />" + emailFooterLine3;
+                String htmlText = "<h" + emailBodyTitleHeadingSize + ">" + emailBodyTitle + "</h" + emailBodyTitleHeadingSize + ">" +
+                        "<br /><br />" + emailBody + "<br /><br /><br />" + executionResults;
                 messageBodyPart.setContent(htmlText, "text/html");
                 // add it
                 multipart.addBodyPart(messageBodyPart);
 
-                // second part (the image)
+                // second part (the pie chart)
                 messageBodyPart = new MimeBodyPart();
-                Chart.savePieChart(getPassedScenarioCount(), getFailedScenarioCount(), getSkippedScenarioCount());
+                PieChart.save(JsonReportReader.getPassedScenarioCount(), JsonReportReader.getFailedScenarioCount(), JsonReportReader.getSkippedScenarioCount());
                 DataSource fds = new FileDataSource(
-                        getSavedPieChartImagePath());
+                        PieChart.getSavedPieChartImagePath());
 
                 messageBodyPart.setDataHandler(new DataHandler(fds));
-                messageBodyPart.setHeader("Content-ID", "<image>");
-                messageBodyPart.setFileName(getSavedPieChartImageName());
+                messageBodyPart.setHeader("Content-ID", "<pie-chart>");
+                messageBodyPart.setFileName(PieChart.getSavedPieChartImageName());
 
-                // add image to the multipart
+                // add pie chart to the multipart
+                multipart.addBodyPart(messageBodyPart);
+
+                // third part (the bar chart)
+                messageBodyPart = new MimeBodyPart();
+                BarChart.save();
+                DataSource fds2 = new FileDataSource(
+                        BarChart.getSavedBarChartImagePath());
+
+                messageBodyPart.setDataHandler(new DataHandler(fds2));
+                messageBodyPart.setHeader("Content-ID", "<bar-chart>");
+                messageBodyPart.setFileName(BarChart.getSavedBarChartImageName());
+
+                // add bar chart to the multipart
                 multipart.addBodyPart(messageBodyPart);
 
                 // put everything together
@@ -207,6 +220,8 @@ public class Email {
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
             } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ParseException e) {
                 e.printStackTrace();
             }
 
