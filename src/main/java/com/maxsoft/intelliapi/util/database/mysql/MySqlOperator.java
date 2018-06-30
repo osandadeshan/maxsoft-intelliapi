@@ -9,7 +9,7 @@ package com.maxsoft.intelliapi.util.database.mysql;
  * Description  :
  **/
 
-import com.maxsoft.intelliapi.request.Base;
+import com.maxsoft.intelliapi.api.Base;
 import com.maxsoft.intelliapi.util.comparison.Comparison;
 import com.maxsoft.intelliapi.util.comparison.Record;
 import com.mysql.jdbc.CommunicationsException;
@@ -23,16 +23,16 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class MySqlConnector extends Base {
+public class MySqlOperator extends Base {
 
     static String MYSQL_DRIVER_CLASS = "com.mysql.jdbc.Driver";
-    static String DATABASE_SERVER_URL = System.getenv("database_url");
+    static String DATABASE_SERVER_URL = System.getenv("mysql_database_url");
     static String MYSQL_DATABASE_CONNECTION_CLOSE_MESSAGE = "Database connection successfully closed";
     static Connection dbConnection;
     ArrayList<Record> recordListForValuesInDatabase = new ArrayList<Record>();
     ArrayList<Record> recordListForValuesInSpecFile = new ArrayList<Record>();
 
-    public static void loadDriver() throws CommunicationsException{
+    public static void loadDriver() {
         try {
             try {
                 Class.forName(MYSQL_DRIVER_CLASS);
@@ -44,7 +44,7 @@ public class MySqlConnector extends Base {
         }
     }
 
-    public static Statement initializeDbConnection(String databaseName, String username, String password) throws ClassNotFoundException, SQLException {
+    public static Statement initializeDbConnection(String databaseName, String username, String password) throws SQLException {
         String databaseUrl = DATABASE_SERVER_URL + databaseName;
         try {
             dbConnection = DriverManager.getConnection(databaseUrl, username, password);
@@ -63,12 +63,12 @@ public class MySqlConnector extends Base {
         return statement;
     }
 
-    public Statement connectDatabase() throws SQLException, ClassNotFoundException {
+    public Statement connectDatabase() throws SQLException {
         // Fetching username and password from the Data Store
         String username = getSavedValueForScenario("username");
         String password = getSavedValueForScenario("password");
         String databaseName = getSavedValueForScenario("databaseName");
-        Statement statement = MySqlConnector.initializeDbConnection(databaseName, username, password);
+        Statement statement = MySqlOperator.initializeDbConnection(databaseName, username, password);
         return statement;
     }
 
@@ -80,8 +80,6 @@ public class MySqlConnector extends Base {
             System.out.println("The executed query is invalid");
             Gauge.writeMessage("The executed query is invalid");
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         }
         // Adding query to the Data Store
         saveValueForScenario("query", query);
@@ -89,7 +87,7 @@ public class MySqlConnector extends Base {
     }
 
     // This method is used to validate all the data from the spec file with respect to the query results at once, not row by row
-    public void verifyAllResultsAtOnce(Table tableForExpectedResults) throws SQLException, ClassNotFoundException {
+    public void verifyAllResultsAtOnce(Table tableForExpectedResults) throws SQLException {
         // Fetching query from the Data Store
         String query = getSavedValueForScenario("query");
         ResultSet resultSet = executeQuery(query);
@@ -123,7 +121,7 @@ public class MySqlConnector extends Base {
     }
 
     // This method is used to validate all the data from the spec file with respect to the query results in row by row
-    public void verifyResultsAndReturnMismatches(Table tableForExpectedResults) throws SQLException, ClassNotFoundException {
+    public void verifyResultsAndReturnMismatches(Table tableForExpectedResults) throws SQLException {
         // Fetching query from the Data Store
         String query = getSavedValueForScenario("query");
         ResultSet resultSet = executeQuery(query);

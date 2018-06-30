@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.request;
+package com.maxsoft.intelliapi.api;
 
 /**
  * Project Name : MaxSoft-IntelliAPI
@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.List;
 
 
-public class CommonStepImpl extends Base {
+public class ApiStepImpl extends Base {
 
     public static final String FILE_SYNTAX = "<file:";
     public static final int FILE_SYNTAX_CHARACTER_COUNT = FILE_SYNTAX.length();
@@ -189,6 +189,7 @@ public class CommonStepImpl extends Base {
         JsonPayload.saveFinalJsonRequestBody(payload);
     }
 
+    // Use this method to set the request authentication
     public void saveRequestAuthConfigurations(Table configTable) {
         List<TableRow> rows = configTable.getTableRows();
         List<String> columnNames = configTable.getColumnNames();
@@ -205,7 +206,7 @@ public class CommonStepImpl extends Base {
         List<TableRow> rows = parameterTable.getTableRows();
         List<String> columnNames = parameterTable.getColumnNames();
         String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName));
+        String invokingEndpoint = baseUrl.concat(Endpoints.getApiEndpointByName(apiName));
         for (TableRow row : rows) {
             if (row.getCell(columnNames.get(1)).substring(0, Math.min(row.getCell(columnNames.get(1)).length(), FILE_SYNTAX_CHARACTER_COUNT)).toLowerCase().equals(FILE_SYNTAX)) {
                 invokingEndpoint = invokingEndpoint.replaceAll(row.getCell(columnNames.get(0)), TextFile.read(CURRENT_DIRECTORY + row.getCell(columnNames.get(1)).substring(FILE_SYNTAX_CHARACTER_COUNT, row.getCell(columnNames.get(1)).length() - 1)));
@@ -222,7 +223,7 @@ public class CommonStepImpl extends Base {
         List<TableRow> rows = parameterTable.getTableRows();
         List<String> columnNames = parameterTable.getColumnNames();
         String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        String invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName));
+        String invokingEndpoint = baseUrl.concat(Endpoints.getApiEndpointByName(apiName));
         for (TableRow row : rows) {
             String placeholder = row.getCell(columnNames.get(0));
             String isRetrievedFromDataStore = row.getCell(columnNames.get(1));

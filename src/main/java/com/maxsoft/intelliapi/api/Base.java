@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.request;
+package com.maxsoft.intelliapi.api;
 
 /**
  * Project Name : MaxSoft-IntelliAPI
@@ -42,7 +42,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import static com.maxsoft.intelliapi.request.Base.BodyType.JSON;
+import static com.maxsoft.intelliapi.api.Base.BodyType.JSON;
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
 
@@ -320,7 +320,7 @@ public class Base {
         saveValueForScenario("apiName", apiEndpointName);
         // Print API Endpoint
         System.out.println("\n");
-        printApiEndpoint(ApiEndpoints.getApiEndpointByName(apiEndpointName));
+        printApiEndpoint(Endpoints.getApiEndpointByName(apiEndpointName));
         printHttpMethod(apiEndpointName);
     }
 
@@ -344,7 +344,7 @@ public class Base {
         String invokingEndpoint = getSavedValueForScenario("invokingEndpoint");
         String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
         if (invokingEndpoint == null || invokingEndpoint.equals("")){
-            invokingEndpoint = baseUrl.concat(ApiEndpoints.getApiEndpointByName(apiName)).
+            invokingEndpoint = baseUrl.concat(Endpoints.getApiEndpointByName(apiName)).
                     concat(getPathParams().concat(getQueryParams()));
         } else {
             invokingEndpoint = baseUrl.concat(invokingEndpoint)
@@ -1004,9 +1004,12 @@ public class Base {
         String accessTokenString = "";
 
         try {
-            isAuthenticationRequired = String.valueOf(getSavedValueForScenario("Is authentication required?").toLowerCase());
-            isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase());
-            accessTokenString = String.valueOf(getSavedValueForScenario("Provide the access token if you need to authorize the API manually"));
+            isAuthenticationRequired = String.valueOf(getSavedValueForScenario(
+                    "Is authentication required?").toLowerCase());
+            isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario(
+                    "Do you need to retrieve the access token from the text file?").toLowerCase());
+            accessTokenString = String.valueOf(getSavedValueForScenario(
+                    "Provide the access token if you need to authorize the API manually"));
         } catch (Exception ex){
             isAuthenticationRequired = "";
             isAccessTokenRetrievedFromTextFile = "";

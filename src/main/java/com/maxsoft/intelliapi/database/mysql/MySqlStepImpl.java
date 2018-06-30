@@ -9,13 +9,13 @@ package com.maxsoft.intelliapi.database.mysql;
  * Description  :
  **/
 
-import com.maxsoft.intelliapi.util.database.mysql.MySqlConnector;
+import com.maxsoft.intelliapi.util.database.mysql.MySqlOperator;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import java.sql.SQLException;
 
 
-public class MySqlOperator extends MySqlConnector {
+public class MySqlStepImpl extends MySqlOperator {
 
 	private static final String MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE = "MySQL driver has been loaded successfully";
 	private static final String MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE = "MySQL database has been connected successfully";
@@ -23,14 +23,14 @@ public class MySqlOperator extends MySqlConnector {
 	private static final String EMPTY_QUERY_MESSAGE = "No records found for the executed query";
 	private static final String INVALID_QUERY_MESSAGE = "The executed query is invalid";
 
-	public void loadMySqlDriver() throws SQLException, ClassNotFoundException {
-		MySqlConnector.loadDriver();
+	public void loadMySqlDriver() {
+		MySqlOperator.loadDriver();
 		System.out.println(MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE);
 		Gauge.writeMessage(MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE);
 	}
 
-	public void loadMySqlDatabase (String databaseName, String username, String password) throws SQLException, ClassNotFoundException {
-		MySqlConnector.initializeDbConnection(databaseName, username, password);
+	public void loadMySqlDatabase (String databaseName, String username, String password) throws SQLException {
+		MySqlOperator.initializeDbConnection(databaseName, username, password);
 		System.out.println(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
 		Gauge.writeMessage(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
 	}
@@ -50,16 +50,16 @@ public class MySqlOperator extends MySqlConnector {
 		}
 	}
 
-	public void verifyResults( Table table) throws SQLException, ClassNotFoundException {
+	public void verifyResults( Table table) throws SQLException {
 		verifyResultsAndReturnMismatches(table);
 	}
 
-	public void verifyAllResults( Table table) throws SQLException, ClassNotFoundException {
+	public void verifyAllResults( Table table) throws SQLException {
 		verifyAllResultsAtOnce(table);
 	}
 
 	public static void closeDbConnection() throws Exception {
-		MySqlConnector.closeDbConnection();
+		MySqlOperator.closeDbConnection();
 	}
 
 

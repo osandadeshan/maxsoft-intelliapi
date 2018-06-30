@@ -12,7 +12,7 @@ package com.maxsoft.intelliapi.util.fileoperator;
 import com.thoughtworks.gauge.Gauge;
 import java.io.*;
 import java.util.Scanner;
-import static com.maxsoft.intelliapi.request.Base.getSavedValueForScenario;
+import static com.maxsoft.intelliapi.api.Base.getSavedValueForScenario;
 
 
 public abstract class TextFile {

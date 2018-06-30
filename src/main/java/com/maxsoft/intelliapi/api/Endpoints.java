@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.request;
+package com.maxsoft.intelliapi.api;
 
 /**
  * Project Name : MaxSoft-IntelliAPI
@@ -13,7 +13,7 @@ import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import java.io.IOException;
 
 
-public abstract class ApiEndpoints extends Base {
+public abstract class Endpoints extends Base {
 
 	public static String getApiEndpointByName(String apiEndpointName) throws IOException {
 		return ApiDocument.getAPIEndpoint(apiEndpointName);
