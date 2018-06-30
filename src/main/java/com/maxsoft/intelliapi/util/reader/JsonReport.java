@@ -1,16 +1,17 @@
+package com.maxsoft.intelliapi.util.reader;
+
 /**
- * Project Name : MaxSoft Email Client For Gauge
+ * Project Name : MaxSoft-IntelliAPI
  * Developer    : Osanda Deshan
  * Version      : 1.0.0
- * Date         : 6/23/2018
- * Time         : 2:56 PM
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
  * Description  :
  **/
 
-package com.maxsoft.intelliapi.util;
-
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
+import com.maxsoft.intelliapi.util.email.EmailTemplate;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -25,7 +26,7 @@ import java.util.List;
 import java.util.Properties;
 
 
-public class JsonReportReader {
+public class JsonReport {
 
     public static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
     static Properties propertyFile = new Properties();

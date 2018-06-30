@@ -1,18 +1,22 @@
-package com.maxsoft.intelliapi.database;
+package com.maxsoft.intelliapi.database.mysql;
 
-import com.maxsoft.intelliapi.util.MySqlConnector;
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
+import com.maxsoft.intelliapi.util.database.mysql.MySqlConnector;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import java.sql.SQLException;
 
 
-/**
- * Created by Osanda on 7/12/2017.
- */
-
-
 public class MySqlOperator extends MySqlConnector {
-	
+
 	private static final String MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE = "MySQL driver has been loaded successfully";
 	private static final String MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE = "MySQL database has been connected successfully";
 	private static final String QUERY_EXECUTION_SUCCESS_MESSAGE = "Query has been successfully executed";
@@ -28,7 +32,7 @@ public class MySqlOperator extends MySqlConnector {
 	public void loadMySqlDatabase (String databaseName, String username, String password) throws SQLException, ClassNotFoundException {
 		MySqlConnector.initializeDbConnection(databaseName, username, password);
 		System.out.println(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
-        Gauge.writeMessage(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
+		Gauge.writeMessage(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
 	}
 
 	public void executeGivenQuery(String query) {
@@ -57,6 +61,6 @@ public class MySqlOperator extends MySqlConnector {
 	public static void closeDbConnection() throws Exception {
 		MySqlConnector.closeDbConnection();
 	}
-		
-	
+
+
 }

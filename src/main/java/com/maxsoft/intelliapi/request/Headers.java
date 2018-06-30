@@ -1,6 +1,15 @@
 package com.maxsoft.intelliapi.request;
 
-import com.maxsoft.intelliapi.util.ApiDocumentReader;
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
+import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.thoughtworks.gauge.Gauge;
 import io.restassured.http.Header;
 import java.io.IOException;
@@ -8,19 +17,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-/**
- * Created by Osanda on 11/3/2017.
- */
-
-
-public class Headers extends BaseClass {
+public class Headers extends Base {
 
     static String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
     static String request;
     static List<Header> headerList = new LinkedList<Header>();
     static {
         try {
-            request = ApiDocumentReader.getRequestPayloadTemplate(apiName);
+            request = ApiDocument.getRequestPayloadTemplate(apiName);
         } catch (IOException e) {
             e.printStackTrace();
         }

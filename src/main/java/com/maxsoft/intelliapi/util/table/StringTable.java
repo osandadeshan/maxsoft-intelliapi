@@ -1,20 +1,20 @@
-package com.maxsoft.intelliapi.util;/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package com.maxsoft.intelliapi.util.table;
+
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by Osanda Deshan on 7/30/17.
- */
-
-
 public final class StringTable {
-    
+
     private Board board;
 
     private final int tableWidth;
@@ -40,7 +40,7 @@ public final class StringTable {
     public final static int GRID_FULL = 14;
 
     public final static int GRID_COLUMN = 15;
-    
+
     public StringTable(Board board, int tableWidth, List<String> headersList, List<List<String>> rowsList) {
         this.board = board;
         if (tableWidth <= 0) {
@@ -228,7 +228,7 @@ public final class StringTable {
                     }
                 }
             }
-        } else {            
+        } else {
             for (int i = 0; i < headersList.size(); i++) {
                 String columnData = "";
                 for (int j = 0; j < rowsList.size(); j++) {
@@ -237,7 +237,7 @@ public final class StringTable {
                 }
                 Block block = new Block(board, colWidthsList.get(i), rowsList.size(),columnData);
                 int alignIndex = colAlignsList.get(i);
-                    block.setDataAlign(alignIndex);
+                block.setDataAlign(alignIndex);
                 if (initialTableBlock.getBelowBlock() == null) {
                     initialTableBlock.setBelowBlock(block);
                 } else {
@@ -247,9 +247,11 @@ public final class StringTable {
         }
         return initialTableBlock;
     }
-    
+
     public StringTable invalidate(){
         initialTableBlock = null;
         return this;
     }
+
+
 }

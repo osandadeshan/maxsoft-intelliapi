@@ -1,36 +1,40 @@
 package com.maxsoft.intelliapi.request;
 
-import com.maxsoft.intelliapi.util.ApiDocumentReader;
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
+import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.thoughtworks.gauge.Gauge;
 import java.io.IOException;
 
 
-/**
- * Created by Osanda on 8/5/2017.
- */
+public abstract class JsonPayload extends Base {
 
-
-public abstract class JsonPayload extends BaseClass {
-	
 	static String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
 	static String request;
 	static {
 		try {
-			request = ApiDocumentReader.getRequestPayloadTemplate(apiName);
+			request = ApiDocument.getRequestPayloadTemplate(apiName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	protected JsonPayload() throws IOException {
 	}
-	
+
 	public static String setJsonAttributeValueAs(String attributeValueInJSONTemplate, String attributeValueToBeSet) throws IOException {
 		String replaceWithAttributeValue = request.replace(attributeValueInJSONTemplate, attributeValueToBeSet);
 		request = replaceWithAttributeValue;
 		return request;
 	}
-	
+
 	public static void saveFinalJsonRequestBody(){
 		saveValueForScenario("finalJsonRequestBody", request);
 		System.out.println("The JSON request body that you are going to use for the API is:\n" + request);
@@ -42,10 +46,10 @@ public abstract class JsonPayload extends BaseClass {
 		System.out.println("The JSON request body that you are going to use for the API is:\n" + payload);
 		Gauge.writeMessage("The JSON request body that you are going to use for the API is:\n" + payload);
 	}
-	
+
 	public static void setRequestToDefault() throws IOException {
-		request = ApiDocumentReader.getRequestPayloadTemplate(getSavedValueForScenario("apiName"));
+		request = ApiDocument.getRequestPayloadTemplate(getSavedValueForScenario("apiName"));
 	}
-	
-	
+
+
 }

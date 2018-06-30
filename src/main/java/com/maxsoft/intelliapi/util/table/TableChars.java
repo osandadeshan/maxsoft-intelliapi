@@ -1,20 +1,25 @@
-package com.maxsoft.intelliapi.util;
+package com.maxsoft.intelliapi.util.table;
 
 /**
- * Created by Osanda on 7/18/2017.
- */
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
 
 
 class TableChars {
-    
+
     protected static final char S = '-';
-    
+
     protected static final char NL = '\n';
-    
+
     protected static final char P = '+';
-    
+
     protected static final char D = '=';
-    
+
     protected static final char VL = '|';
 
     private final int x;
@@ -40,5 +45,6 @@ class TableChars {
     protected char getC() {
         return c;
     }
+
 
 }

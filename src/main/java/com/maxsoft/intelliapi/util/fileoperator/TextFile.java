@@ -1,45 +1,47 @@
-package com.maxsoft.intelliapi.util;
-
-import com.thoughtworks.gauge.Gauge;
-
-import java.io.*;
-import java.util.Scanner;
-
-import static com.maxsoft.intelliapi.request.BaseClass.getSavedValueForScenario;
-
+package com.maxsoft.intelliapi.util.fileoperator;
 
 /**
- * Created by Osanda on 7/31/2017.
- */
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
+import com.thoughtworks.gauge.Gauge;
+import java.io.*;
+import java.util.Scanner;
+import static com.maxsoft.intelliapi.request.Base.getSavedValueForScenario;
 
 
-public abstract class FileOperator {
+public abstract class TextFile {
 
-    public static void writeToFile(String text, String filePath){
+    public static void write(String text, String filePath){
         BufferedWriter writer = null;
+        try
+        {
+            writer = new BufferedWriter( new FileWriter(filePath));
+            writer.write(text);
+
+        }
+        catch ( IOException e)
+        {
+        }
+        finally
+        {
             try
             {
-                writer = new BufferedWriter( new FileWriter(filePath));
-                writer.write(text);
-
+                if ( writer != null)
+                    writer.close( );
             }
-                catch ( IOException e)
-                {
-                }
-                    finally
-                    {
-                        try
-                        {
-                            if ( writer != null)
-                                writer.close( );
-                        }
-                        catch ( IOException e)
-                        {
-                        }
-                    }
+            catch ( IOException e)
+            {
+            }
+        }
     }
 
-    public static String readAccessTokenFromFile(String filePath){
+    public static String readAccessToken(String filePath){
         String content = null;
         String isAuthenticationRequired = String.valueOf(getSavedValueForScenario("Is authentication required?").toLowerCase());
         String isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase());
@@ -65,7 +67,7 @@ public abstract class FileOperator {
         return content;
     }
 
-    public static String readFromFile(String filePath){
+    public static String read(String filePath){
         String content = null;
         try {
             content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());

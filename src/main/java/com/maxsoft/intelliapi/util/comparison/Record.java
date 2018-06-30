@@ -1,31 +1,36 @@
-package com.maxsoft.intelliapi.util;
+package com.maxsoft.intelliapi.util.comparison;
+
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
 
 import java.util.ArrayList;
 
 
-/**
- * Created by Osanda Deshan on 7/30/17.
- */
-
-
 public class Record implements Comparable<Record>{
+
 	private ArrayList<String> record;
 	private int factor = 0;
-	
+
 	public Record(ArrayList<String> record) {
 		this.record = record;
 	}
-	
+
 	public String get(int i){
 		if(record.size() > i && i >= 0)
 			return record.get(i);
 		return null;
 	}
-	
+
 	public String getString(int i){
 		return String.valueOf(get(i));
 	}
-	
+
 	public String toString() {
 		String str ="";
 		for(int i=0; i<size(); i++){
@@ -33,11 +38,11 @@ public class Record implements Comparable<Record>{
 		}
 		return str.substring(0,str.length()-1);
 	}
-	
+
 	public int size(){
 		return record.size();
 	}
-	
+
 	// factor is either 1 or next prime beginning with 31
 	private int nextFactor(){
 		if(factor == 0){
@@ -60,7 +65,7 @@ public class Record implements Comparable<Record>{
 		}
 		return factor;
 	}
-	
+
 	@Override
 	public boolean equals(final Object obj) {
 		if (this == obj)
@@ -78,7 +83,7 @@ public class Record implements Comparable<Record>{
 		}
 		return true;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		int hashVal = 0;
@@ -87,7 +92,7 @@ public class Record implements Comparable<Record>{
 		}
 		return hashVal;
 	}
-	
+
 	public int compareTo(Record r) {
 		int cmp = getString(0).compareTo(r.getString(0));
 		for(int i=1; i<size(); i++){
@@ -97,6 +102,6 @@ public class Record implements Comparable<Record>{
 		}
 		return cmp;
 	}
-	
-	
+
+
 }

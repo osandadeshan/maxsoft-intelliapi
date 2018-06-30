@@ -1,16 +1,20 @@
-package com.maxsoft.intelliapi.util;
+package com.maxsoft.intelliapi.util.table;
+
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by Osanda on 7/18/2017.
- */
-
-
 public class Board {
-    
+
     protected boolean showBlockIndex;
 
     protected int boardWidth;
@@ -44,7 +48,7 @@ public class Board {
 
     public void showBlockIndex(boolean showBlockIndex) {
         this.showBlockIndex = showBlockIndex;
-    }        
+    }
 
     public Board appendTableTo(int appendableBlockIndex, int appendableDirection, StringTable table) {
         Block tableBlock = table.tableToBlocks();
@@ -208,5 +212,6 @@ public class Board {
             invalidateBlock(block.getBelowBlock());
         }
     }
+
 
 }

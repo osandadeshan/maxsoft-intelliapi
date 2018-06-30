@@ -1,6 +1,17 @@
-package com.maxsoft.intelliapi.util;
+package com.maxsoft.intelliapi.util.database.mysql;
 
-import com.maxsoft.intelliapi.request.BaseClass;
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
+import com.maxsoft.intelliapi.request.Base;
+import com.maxsoft.intelliapi.util.comparison.Comparison;
+import com.maxsoft.intelliapi.util.comparison.Record;
 import com.mysql.jdbc.CommunicationsException;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
@@ -12,13 +23,8 @@ import java.util.Collections;
 import java.util.List;
 
 
-/**
- * Created by Osanda on 7/18/2017.
- */
+public class MySqlConnector extends Base {
 
-
-public class MySqlConnector extends BaseClass {
-    
     static String MYSQL_DRIVER_CLASS = "com.mysql.jdbc.Driver";
     static String DATABASE_SERVER_URL = System.getenv("database_url");
     static String MYSQL_DATABASE_CONNECTION_CLOSE_MESSAGE = "Database connection successfully closed";
@@ -37,7 +43,7 @@ public class MySqlConnector extends BaseClass {
             Assert.fail("JDBC driver was not successfully loaded due to ClassNotFoundException for the given driver \"" + e.getMessage() + "\"");
         }
     }
-    
+
     public static Statement initializeDbConnection(String databaseName, String username, String password) throws ClassNotFoundException, SQLException {
         String databaseUrl = DATABASE_SERVER_URL + databaseName;
         try {
@@ -193,6 +199,6 @@ public class MySqlConnector extends BaseClass {
             Gauge.writeMessage(MYSQL_DATABASE_CONNECTION_CLOSE_MESSAGE);
         }
     }
-	
-    
+
+
 }

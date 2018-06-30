@@ -1,13 +1,13 @@
+package com.maxsoft.intelliapi.util.charts;
+
 /**
- * Project Name : MaxSoft Email Client For Gauge
+ * Project Name : MaxSoft-IntelliAPI
  * Developer    : Osanda Deshan
  * Version      : 1.0.0
- * Date         : 6/23/2018
- * Time         : 2:56 PM
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
  * Description  :
  **/
-
-package com.maxsoft.intelliapi.util;
 
 import org.knowm.xchart.BitmapEncoder;
 import org.knowm.xchart.PieChartBuilder;

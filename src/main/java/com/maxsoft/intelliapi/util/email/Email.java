@@ -1,14 +1,17 @@
+package com.maxsoft.intelliapi.util.email;
+
 /**
- * Project Name : MaxSoft Email Client For Gauge
+ * Project Name : MaxSoft-IntelliAPI
  * Developer    : Osanda Deshan
  * Version      : 1.0.0
- * Date         : 6/23/2018
- * Time         : 2:56 PM
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
  * Description  :
  **/
 
-package com.maxsoft.intelliapi.util;
-
+import com.maxsoft.intelliapi.util.charts.BarChart;
+import com.maxsoft.intelliapi.util.charts.PieChart;
+import com.maxsoft.intelliapi.util.reader.JsonReport;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import java.io.File;
@@ -185,7 +188,7 @@ public class Email {
 
                 // second part (the pie chart)
                 messageBodyPart = new MimeBodyPart();
-                PieChart.save(JsonReportReader.getPassedScenarioCount(), JsonReportReader.getFailedScenarioCount(), JsonReportReader.getSkippedScenarioCount());
+                PieChart.save(JsonReport.getPassedScenarioCount(), JsonReport.getFailedScenarioCount(), JsonReport.getSkippedScenarioCount());
                 DataSource fds = new FileDataSource(
                         PieChart.getSavedPieChartImagePath());
 

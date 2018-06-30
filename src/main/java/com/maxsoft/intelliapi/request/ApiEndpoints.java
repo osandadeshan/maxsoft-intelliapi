@@ -1,19 +1,23 @@
 package com.maxsoft.intelliapi.request;
 
-import com.maxsoft.intelliapi.util.ApiDocumentReader;
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
+import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import java.io.IOException;
 
 
-/**
- * Created by Osanda on 7/17/2017.
- */
+public abstract class ApiEndpoints extends Base {
 
-
-public abstract class ApiEndpoints extends BaseClass{
-	
 	public static String getApiEndpointByName(String apiEndpointName) throws IOException {
-		return ApiDocumentReader.getAPIEndpoint(apiEndpointName);
+		return ApiDocument.getAPIEndpoint(apiEndpointName);
 	}
-	
-	
+
+
 }

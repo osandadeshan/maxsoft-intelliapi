@@ -1,9 +1,22 @@
 package com.maxsoft.intelliapi.request;
 
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
-import com.maxsoft.intelliapi.util.*;
+import com.maxsoft.intelliapi.util.fileoperator.Csv;
+import com.maxsoft.intelliapi.util.fileoperator.TextFile;
+import com.maxsoft.intelliapi.util.reader.ApiDocument;
+import com.maxsoft.intelliapi.util.table.Board;
+import com.maxsoft.intelliapi.util.table.StringTable;
 import com.opencsv.CSVWriter;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.datastore.DataStore;
@@ -29,17 +42,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import static com.maxsoft.intelliapi.request.BaseClass.BodyType.JSON;
+import static com.maxsoft.intelliapi.request.Base.BodyType.JSON;
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
 
 
-/**
- * Created by Osanda on 7/12/2017.
- */
-
-
-public class BaseClass {
+public class Base {
 
     private static final String DEV = "dev";
     private static final String QA = "qa";
@@ -54,7 +62,7 @@ public class BaseClass {
     public String baseUrl = setBaseUrl();
     private Response response;
     private RequestSpecification request = getRequestSpecification();
-    private static CsvOperator csvOperator = new CsvOperator();
+    private static Csv csv = new Csv();
     Map<String, String> formParams = new HashMap<>();
 
     public void print(String text){
@@ -88,7 +96,7 @@ public class BaseClass {
             default:
                 Assert.fail("Please assign an valid environment QA|DEV|UAT|PROD for \"environment\" in the property file");
                 break;
-    }
+        }
         if (baseUrl == null) {
             baseUrl = "";
         }
@@ -128,9 +136,9 @@ public class BaseClass {
     }
 
     public void replaceAllColumnValuesToTimestamps(String filePath, String columnName, String timestampPattern) throws IOException {
-        for(int i = 1; i<= csvOperator.getLinesCount(filePath); i++){
-            csvOperator.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(timestampPattern), i,
-                    csvOperator.getColumnIndexByColumnName(filePath, columnName));
+        for(int i = 1; i<= csv.getLinesCount(filePath); i++){
+            csv.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(timestampPattern), i,
+                    csv.getColumnIndexByColumnName(filePath, columnName));
         }
     }
 
@@ -286,7 +294,7 @@ public class BaseClass {
     }
 
     public void printHttpMethod(String apiEndpoint) throws IOException {
-        print("HTTP Method is: " + ApiDocumentReader.getHttpMethod(apiEndpoint) + "\n\n");
+        print("HTTP Method is: " + ApiDocument.getHttpMethod(apiEndpoint) + "\n\n");
     }
 
     public void printResponse() {
@@ -988,7 +996,7 @@ public class BaseClass {
 
     public void invokeApi(String jsonPayload, List<Header> headerList) throws IOException {
         String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        System.out.println("You are going to invoked a " + ApiDocumentReader.getHttpMethod(apiName));
+        System.out.println("You are going to invoked a " + ApiDocument.getHttpMethod(apiName));
         String accessTokenInFile = readAccessToken(); // Fetching token from the text file
         String accessToken = "";
         String isAuthenticationRequired = "";
@@ -1015,9 +1023,9 @@ public class BaseClass {
             accessToken = "";
         }
 
-        HttpMethod httpMethod = HttpMethod.valueOf(ApiDocumentReader.getHttpMethod(apiName).toUpperCase());
+        HttpMethod httpMethod = HttpMethod.valueOf(ApiDocument.getHttpMethod(apiName).toUpperCase());
 
-        String bodyTypeFromExcel = ApiDocumentReader.getBodyType(apiName);
+        String bodyTypeFromExcel = ApiDocument.getBodyType(apiName);
 
         if (bodyTypeFromExcel.equals("") || bodyTypeFromExcel == null){
             bodyTypeFromExcel = String.valueOf(JSON);
@@ -1025,7 +1033,7 @@ public class BaseClass {
 
         BodyType bodyType = BodyType.valueOf(bodyTypeFromExcel.toUpperCase());
 
-        if (ApiDocumentReader.getBodyType(apiName).equals("") || ApiDocumentReader.getBodyType(apiName) == null){
+        if (ApiDocument.getBodyType(apiName).equals("") || ApiDocument.getBodyType(apiName) == null){
             bodyType = JSON;
         }
 
@@ -1116,7 +1124,7 @@ public class BaseClass {
         System.out.println("Access token: " + AUTHENTICATION_FIRST_VALUE + jsonPathValue);
         // Save the token into a file
         try {
-            FileOperator.writeToFile(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
+            TextFile.write(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
             System.out.println("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
             Gauge.writeMessage("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
         } catch (Exception ex) {
@@ -1128,7 +1136,7 @@ public class BaseClass {
     public String readAccessToken() {
         String accessToken = "";
         try {
-            accessToken = FileOperator.readAccessTokenFromFile(ACCESS_TOKEN_FILE_PATH);
+            accessToken = TextFile.readAccessToken(ACCESS_TOKEN_FILE_PATH);
         } catch (Exception ex) {
         } finally {
             return accessToken;
@@ -1142,12 +1150,12 @@ public class BaseClass {
         // Save the token into a file
         try {
             File file = new File(CURRENT_DIRECTORY + filePath);
-                if(!file.exists()){
-                    file.createNewFile();
-                }else{
-                    System.out.println("Text file already exists in " + CURRENT_DIRECTORY + filePath);
-                }
-            FileOperator.writeToFile(jsonPathValue, CURRENT_DIRECTORY + filePath);
+            if(!file.exists()){
+                file.createNewFile();
+            }else{
+                System.out.println("Text file already exists in " + CURRENT_DIRECTORY + filePath);
+            }
+            TextFile.write(jsonPathValue, CURRENT_DIRECTORY + filePath);
             print("Successfully saved the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"");
         } catch (Exception ex) {
             print("Failed to save the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
@@ -1160,10 +1168,10 @@ public class BaseClass {
             System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
             Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
-            if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            }
+        if (responseString.toString().equals("[]")) {
+            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+        }
         String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is not contains the expected value.\nJSON Path value is: " + jsonPathValue +
                 "\n"+ "Expected value to be contained is: " + expectedResult + "\n\n";
@@ -1176,10 +1184,10 @@ public class BaseClass {
             System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
             Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
-            if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            }
+        if (responseString.toString().equals("[]")) {
+            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+        }
         String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is contains the expected value.\nJSON Path value is: " + jsonPathValue +
                 "\n"+ "Expected value not to be contained is: " + expectedResult + "\n\n";
@@ -1192,38 +1200,38 @@ public class BaseClass {
             System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
             Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
-            if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            }
+        if (responseString.toString().equals("[]")) {
+            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+        }
         String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is not equal to the Actual value.\n";
-                if (expectedResult.toLowerCase().equals("[]")) {
-                    String expectedResultForNull = "[]";
-                    Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, nullableMessage);
-                }
-                        else if (expectedResult.toLowerCase().equals("null")) {
-                            String expectedResultForNull = null;
-                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, nullableMessage);
-                        }
-                        else if (expectedResult.toLowerCase().equals("true")) {
-                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, nullableMessage);
-                        }
-                        else if (expectedResult.toLowerCase().equals("false")) {
-                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, nullableMessage);
-                        }
-                        else if (expectedResult.trim().equals("")) {
-                            String expectedResultForEmpty = "";
-                            Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, nullableMessage);
-                        }
-                        else if (expectedResult.matches("\\d+")) {
-                            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, nullableMessage);
-                        }
-                        else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
-                            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
-                        }
-                else {
-                    Assert.assertEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
-                }
+        if (expectedResult.toLowerCase().equals("[]")) {
+            String expectedResultForNull = "[]";
+            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, nullableMessage);
+        }
+        else if (expectedResult.toLowerCase().equals("null")) {
+            String expectedResultForNull = null;
+            Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, nullableMessage);
+        }
+        else if (expectedResult.toLowerCase().equals("true")) {
+            Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, nullableMessage);
+        }
+        else if (expectedResult.toLowerCase().equals("false")) {
+            Assert.assertEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, nullableMessage);
+        }
+        else if (expectedResult.trim().equals("")) {
+            String expectedResultForEmpty = "";
+            Assert.assertEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, nullableMessage);
+        }
+        else if (expectedResult.matches("\\d+")) {
+            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, nullableMessage);
+        }
+        else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
+            Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
+        }
+        else {
+            Assert.assertEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
+        }
     }
 
     public void jsonPathAssertionNotEquals(String jsonPath, String expectedResult) {
@@ -1232,38 +1240,38 @@ public class BaseClass {
             System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
             Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
-            if (responseString.toString().equals("[]")) {
-                System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-                Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            }
-            String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is equal to the Actual value.\n";
-                if (expectedResult.toLowerCase().equals("[]")) {
-                    String expectedResultForNull = "[]";
-                    Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, nullableMessage);
-                }
-                        else if (expectedResult.toLowerCase().equals("null")) {
-                            String expectedResultForNull = null;
-                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, nullableMessage);
-                        }
-                        else if (expectedResult.toLowerCase().equals("true")) {
-                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, nullableMessage);
-                        }
-                        else if (expectedResult.toLowerCase().equals("false")) {
-                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, nullableMessage);
-                        }
-                        else if (expectedResult.trim().equals("")) {
-                            String expectedResultForEmpty = "";
-                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, nullableMessage);
-                        }
-                        else if (expectedResult.matches("\\d+")) {
-                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, nullableMessage);
-                        }
-                        else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
-                            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
-                        }
-                else {
-                    Assert.assertNotEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
-                }
+        if (responseString.toString().equals("[]")) {
+            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+        }
+        String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is equal to the Actual value.\n";
+        if (expectedResult.toLowerCase().equals("[]")) {
+            String expectedResultForNull = "[]";
+            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResultForNull, nullableMessage);
+        }
+        else if (expectedResult.toLowerCase().equals("null")) {
+            String expectedResultForNull = null;
+            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), expectedResultForNull, nullableMessage);
+        }
+        else if (expectedResult.toLowerCase().equals("true")) {
+            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), Boolean.TRUE, nullableMessage);
+        }
+        else if (expectedResult.toLowerCase().equals("false")) {
+            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), Boolean.FALSE, nullableMessage);
+        }
+        else if (expectedResult.trim().equals("")) {
+            String expectedResultForEmpty = "";
+            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath), expectedResultForEmpty, nullableMessage);
+        }
+        else if (expectedResult.matches("\\d+")) {
+            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), expectedResult, nullableMessage);
+        }
+        else if (expectedResult.matches("[-+]?\\d*\\.?\\d*")) {
+            Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
+        }
+        else {
+            Assert.assertNotEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
+        }
     }
 
     public void isJsonPathExists(String jsonPath, Boolean isExists) {

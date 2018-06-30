@@ -1,13 +1,17 @@
-package com.maxsoft.intelliapi.util;
+package com.maxsoft.intelliapi.util.table;
+
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-
-/**
- * Created by Osanda on 7/18/2017.
- */
 
 
 public final class Block {
@@ -447,4 +451,6 @@ public final class Block {
         hash = 43 * hash + Objects.hashCode(this.belowBlock);
         return hash;
     }
+
+
 }

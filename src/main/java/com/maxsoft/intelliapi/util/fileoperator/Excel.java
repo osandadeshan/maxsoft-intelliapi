@@ -1,6 +1,15 @@
-package com.maxsoft.intelliapi.util;
+package com.maxsoft.intelliapi.util.fileoperator;
 
-import com.maxsoft.intelliapi.request.BaseClass;
+/**
+ * Project Name : MaxSoft-IntelliAPI
+ * Developer    : Osanda Deshan
+ * Version      : 1.0.0
+ * Date         : 6/30/2018
+ * Time         : 3:51 PM
+ * Description  :
+ **/
+
+import com.maxsoft.intelliapi.request.Base;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -13,16 +22,11 @@ import java.io.IOException;
 import java.util.Iterator;
 
 
-/**
- * Created by Osanda on 7/17/2017.
- */
+public abstract class Excel {
 
-
-public abstract class ExcelOperator {
-
-	static BaseClass baseObj = new BaseClass();
+	static Base baseObj = new Base();
 	static int column;
-	
+
 	public static int findColumnNumber(String cellContent) throws IOException {
 		FileInputStream inputStream = new FileInputStream(baseObj.getAPIDocumentFilePath());
 		Workbook workbook = new XSSFWorkbook(inputStream);
@@ -48,7 +52,7 @@ public abstract class ExcelOperator {
 		workbook.close();
 		return column;
 	}
-	
+
 	public static int findRowNumber(String cellContent) throws IOException {
 		System.out.println(baseObj.getAPIDocumentFilePath());
 		FileInputStream excelFile = new FileInputStream(new File(baseObj.getAPIDocumentFilePath()));
@@ -65,6 +69,6 @@ public abstract class ExcelOperator {
 		}
 		return 0;
 	}
-	
-	
+
+
 }
