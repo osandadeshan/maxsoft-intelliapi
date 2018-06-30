@@ -1006,7 +1006,7 @@ public class Base {
         try {
             isAuthenticationRequired = String.valueOf(getSavedValueForScenario("Is authentication required?").toLowerCase());
             isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase());
-            accessTokenString = String.valueOf(getSavedValueForScenario("Provide the access token if you need to authorize the API manually").toLowerCase());
+            accessTokenString = String.valueOf(getSavedValueForScenario("Provide the access token if you need to authorize the API manually"));
         } catch (Exception ex){
             isAuthenticationRequired = "";
             isAccessTokenRetrievedFromTextFile = "";

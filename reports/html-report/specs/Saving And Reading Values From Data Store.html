@@ -30,21 +30,21 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,0,0" data-total="1">
+        <svg id="pie-chart" data-results="0,4,0" data-total="4">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/4</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 4/4</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/4</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">1</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">4</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">0</span><span class="txt">Passed</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">4</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -57,15 +57,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>0%</span>
+          <span>100%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:20</span>
+          <span>00:01:27</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jun 25, 2018 at 10:24pm</span>
+          <span>Jun 30, 2018 at 5:37pm</span>
         </li>
       </ul>
       
@@ -93,11 +93,38 @@
         <ul id="scenarios" class="spec-list">
         
           <a href="Saving And Reading Values From Data Store.html">
-            
-              <li class='failed spec-name'>
+             
+              <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:17</span>
+              <span id="time" class="time">00:00:24</span>
+            </li>
+          </a>
+          
+          <a href="Read from saved CSV.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
+              <span id="time" class="time">00:00:19</span>
+            </li>
+          </a>
+          
+          <a href="Text files operations.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Text Files Operations Specification</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="CRUD in One Scenario.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
+              <span id="time" class="time">00:00:31</span>
             </li>
           </a>
           
@@ -115,8 +142,8 @@
         <h3 class="spec-head" title="C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\specs\Saving And Reading Values From Data Store.spec">Saving And Reading Values From Data Store Specification</h3>
         <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">2</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">6</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">8</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -129,7 +156,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:17</span>
+        <span class="time">00:00:24</span>
       </div>
 
 	
@@ -159,13 +186,13 @@ Description     : This is an executable specification file which follows markdow
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Replace API Endpoint placeholders - Scenario 1</h3>
-    <span class="time">00:00:00</span>
+    <h3 class="head borderBottom">Get configurations of the testing environment</h3>
+    <span class="time">00:00:01</span>
 
 	
   
@@ -186,10 +213,10 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -204,35 +231,31 @@ Description     : This is an executable specification file which follows markdow
   
     
       <span>
-        Given that a user needs to invoke 
+        Configurations of the testing environment
       </span>
-    
-  
-    
-      <span class='parameter'>"Purchase Validator API"</span>
     
   
   </div>
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: &#34;Purchase Validator API&#34; API Endpoint Name is not exist in the API Document Excel file located in &#34;C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/api_document/dev_api_doc.xlsx&#34;</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>com.maxsoft.intelliapi.util.reader.ApiDocumentReader.getAPIEndpoint(ApiDocumentReader.java:47)<br/>com.maxsoft.intelliapi.request.ApiEndpoints.getApiEndpointByName(ApiEndpoints.java:15)<br/>com.maxsoft.intelliapi.request.BaseClass.apiToBeInvoked(BaseClass.java:315)<br/>com.maxsoft.intelliapi.request.CommonStepDefinitions.apiToBeInvoked(CommonStepDefinitions.java:26)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.apiToBeInvoked(AllStepsDefinitions.java:32)<br/></pre>
-        </div>
-        
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>————————————————————————————————————————————————</p>
+ </div><div class="step-message"><p>Configurations of Test Execution Environment</p>
+ </div><div class="step-message"><p>————————————————————————————————————————————————<br/></p>
+ </div><div class="step-message"><p>Operating System: Windows 7</p>
+ </div><div class="step-message"><p>Environment: DEV</p>
+ </div><div class="step-message"><p>Base URL:</p>
+ </div><div class="step-message"><p>————————————————————————————————————————————————</p>
+ </div>
+      </div>
     </div>
-  </div>
-
-    
-  
-  
-  
   
 
 	</li></ul></div></div>
@@ -240,248 +263,6 @@ Description     : This is an executable specification file which follows markdow
     
   
 
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the user set values to the API endpoint placeholders as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Placeholder In JSON Template</th><th>Replacement Text</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>#skuid</td><td>com.pearsoned.smartflashcards.expert.elementary</td></tr>
-    
-    <tr><td>#purchaseToken</td><td>&lt;file:/resources/access_tokens/purchase_token.txt&gt;</td></tr>
-    
-    <tr><td>#access_token</td><td>&lt;file:/resources/access_tokens/access_token.txt&gt;</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Then the status code for the request is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"401"</span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the JSON Path Assertions for the response should be equal to the following 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>JSON Path</th><th>Expected Result</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>$.error.errors[0].reason</td><td>authError</td></tr>
-    
-    <tr><td>$.error.errors[0].message</td><td>Invalid Credentials</td></tr>
-    
-    <tr><td>$.error.code</td><td>401</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    <span></span>
   
 
   
@@ -496,12 +277,12 @@ Description     : This is an executable specification file which follows markdow
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Replace API Endpoint placeholders - Scenario 2</h3>
+    <h3 class="head borderBottom">Saving values to Data Store</h3>
     <span class="time">00:00:00</span>
 
 	
@@ -526,72 +307,7 @@ Description     : This is an executable specification file which follows markdow
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info failed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Given that a user needs to invoke 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Purchase Validator API"</span>
-    
-  
-  </div>
-
-  
-    
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: &#34;Purchase Validator API&#34; API Endpoint Name is not exist in the API Document Excel file located in &#34;C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/api_document/dev_api_doc.xlsx&#34;</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>com.maxsoft.intelliapi.util.reader.ApiDocumentReader.getAPIEndpoint(ApiDocumentReader.java:47)<br/>com.maxsoft.intelliapi.request.ApiEndpoints.getApiEndpointByName(ApiEndpoints.java:15)<br/>com.maxsoft.intelliapi.request.BaseClass.apiToBeInvoked(BaseClass.java:315)<br/>com.maxsoft.intelliapi.request.CommonStepDefinitions.apiToBeInvoked(CommonStepDefinitions.java:26)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.apiToBeInvoked(AllStepsDefinitions.java:32)<br/></pre>
-        </div>
-        
-    </div>
-  </div>
-
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -619,78 +335,11 @@ Description     : This is an executable specification file which follows markdow
   </tr>
   <tbody>
     
-    <tr><td>Scenario</td><td>purchaseToken</td><td>jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0</td></tr>
+    <tr><td>Scenario</td><td>variable1</td><td>Osanda Deshan</td></tr>
     
-    <tr><td>Scenario</td><td>accessToken</td><td>ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB</td></tr>
+    <tr><td>Specification</td><td>variable2</td><td>Osanda Nimalarathna</td></tr>
     
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the user set values to the API endpoint placeholders using data stores as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Placeholder In JSON Template</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Replacement Text</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>#skuid</td><td>n</td><td></td><td></td><td>com.pearsoned.smartflashcards.expert.elementary</td></tr>
-    
-    <tr><td>#purchaseToken</td><td>y</td><td>scenario</td><td>purchaseToken</td><td></td></tr>
-    
-    <tr><td>#access_token</td><td>y</td><td>scenario</td><td>accessToken</td><td></td></tr>
+    <tr><td>Scenario</td><td>variable3</td><td>Software Automation</td></tr>
     
   </tbody>
 </table>
@@ -707,172 +356,15 @@ Description     : This is an executable specification file which follows markdow
   
   
   
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Then the status code for the request is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"401"</span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info not-executed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the JSON Path Assertions for the response should be equal to the following 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>JSON Path</th><th>Expected Result</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>$.error.errors[0].reason</td><td>authError</td></tr>
-    
-    <tr><td>$.error.errors[0].message</td><td>Invalid Credentials</td></tr>
-    
-    <tr><td>$.error.code</td><td>401</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“Osanda Deshan” is successfully saved as a text in Scenario Data Store [variable1]</p>
+ </div><div class="step-message"><p>“Osanda Nimalarathna” is successfully saved as a text in Specification Data Store [variable2]</p>
+ </div><div class="step-message"><p>“Software Automation” is successfully saved as a text in Scenario Data Store [variable3]</p>
+ </div>
       </div>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
+    </div>
   
 
 	</li></ul></div></div>
@@ -880,6 +372,12 @@ Description     : This is an executable specification file which follows markdow
     
   
 
+  
+
+  
+    
+  
+    <span></span>
   
 
   
@@ -1015,7 +513,7 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password using payload text file</h3>
-    <span class="time">00:00:08</span>
+    <span class="time">00:00:09</span>
 
 	
   
@@ -1051,7 +549,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -1289,9 +787,9 @@ Description     : This is an executable specification file which follows markdow
       <div class="messages">
         <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 4777ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=95ba167e-e049-479f-9870-ac23ac93fa7d<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Mon, 25 Jun 2018 16:54:58 GMT</p>
+ </div><div class="step-message"><p>Response Time is: 4422ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjY1LCJpYXQiOjE1MzAzNjA0NjQsInNlc3NpZCI6IjM3MWE4YTFiLWE3MjYtNGI3MC04OTExLWM3MmM3YTYyNzAwNiJ9.B6A6H37_YOKMDV32n_J1r2hud0e99vqZM4mNsZmUC7T88hdR18dbNlI6EYauAuOOjLCXEvNHmVn_8vRsZoaFQXUBsmQU3RQl4-g2fZxJHqLrSXp2MBOl0QZEfK7-IKDlTASwzzb5GagpE9ksmiL0syjwB_vQFMw2s1R0sWRspsk”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=b09c59ff-a338-46f9-8de9-7256187c2aa8<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjY1LCJpYXQiOjE1MzAzNjA0NjQsInNlc3NpZCI6IjM3MWE4YTFiLWE3MjYtNGI3MC04OTExLWM3MmM3YTYyNzAwNiJ9.B6A6H37_YOKMDV32n_J1r2hud0e99vqZM4mNsZmUC7T88hdR18dbNlI6EYauAuOOjLCXEvNHmVn_8vRsZoaFQXUBsmQU3RQl4-g2fZxJHqLrSXp2MBOl0QZEfK7-IKDlTASwzzb5GagpE9ksmiL0syjwB_vQFMw2s1R0sWRspsk" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjY1LCJpYXQiOjE1MzAzNjA0NjQsInNlc3NpZCI6IjM3MWE4YTFiLWE3MjYtNGI3MC04OTExLWM3MmM3YTYyNzAwNiJ9.B6A6H37_YOKMDV32n_J1r2hud0e99vqZM4mNsZmUC7T88hdR18dbNlI6EYauAuOOjLCXEvNHmVn_8vRsZoaFQXUBsmQU3RQl4-g2fZxJHqLrSXp2MBOl0QZEfK7-IKDlTASwzzb5GagpE9ksmiL0syjwB_vQFMw2s1R0sWRspsk</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sat, 30 Jun 2018 12:07:44 GMT</p>
  </div>
       </div>
     </div>
@@ -1609,7 +1107,7 @@ Description     : This is an executable specification file which follows markdow
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
         <div class="step-message"><p>“success” is successfully saved as a text in Scenario Data Store [variable4]</p>
- </div><div class="step-message"><p>“eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ” is successfully saved as a text in Specification Data Store [variable5]</p>
+ </div><div class="step-message"><p>“eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjY1LCJpYXQiOjE1MzAzNjA0NjQsInNlc3NpZCI6IjM3MWE4YTFiLWE3MjYtNGI3MC04OTExLWM3MmM3YTYyNzAwNiJ9.B6A6H37_YOKMDV32n_J1r2hud0e99vqZM4mNsZmUC7T88hdR18dbNlI6EYauAuOOjLCXEvNHmVn_8vRsZoaFQXUBsmQU3RQl4-g2fZxJHqLrSXp2MBOl0QZEfK7-IKDlTASwzzb5GagpE9ksmiL0syjwB_vQFMw2s1R0sWRspsk” is successfully saved as a text in Specification Data Store [variable5]</p>
  </div>
       </div>
     </div>
@@ -1685,7 +1183,7 @@ Description     : This is an executable specification file which follows markdow
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
         <div class="step-message"><p>Text inside Scenario Data Store [variable4] is: “success”<br/><br/></p>
- </div><div class="step-message"><p>Text inside Specification Data Store [variable5] is: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NDk5LCJpYXQiOjE1Mjk5NDU2OTgsInNlc3NpZCI6ImY1ODFiYTk4LTAyOWYtNDFhZS1hYjY5LTlmNzM4MDQ4MGU5ZSJ9.XWczqa47Y-edfCwuAUg6jAktogkIoxQ2rQJMEZvuVt6O_YqOKHfK8fmwPnRdFYFg-jpjagPJwCsWRp7bJm10Y26YiFq0okwGYpGkj8DlVjoKNEOsgyjhXgmewAPt_v6IyRMAMD7ZhuhdpYQVtEvZ4eHfciJ_qqT_qR6X3h6FhRQ”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Specification Data Store [variable5] is: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjY1LCJpYXQiOjE1MzAzNjA0NjQsInNlc3NpZCI6IjM3MWE4YTFiLWE3MjYtNGI3MC04OTExLWM3MmM3YTYyNzAwNiJ9.B6A6H37_YOKMDV32n_J1r2hud0e99vqZM4mNsZmUC7T88hdR18dbNlI6EYauAuOOjLCXEvNHmVn_8vRsZoaFQXUBsmQU3RQl4-g2fZxJHqLrSXp2MBOl0QZEfK7-IKDlTASwzzb5GagpE9ksmiL0syjwB_vQFMw2s1R0sWRspsk”<br/><br/></p>
  </div>
       </div>
     </div>
@@ -2048,7 +1546,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:03</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -2083,9 +1581,9 @@ Description     : This is an executable specification file which follows markdow
       <div class="messages">
         <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2239ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA0LCJpYXQiOjE1Mjk5NDU3MDMsInNlc3NpZCI6IjcyYjU0YWViLWVhMzEtNGJlMS1hODRlLTA3M2NhYzQ3MGNlNCJ9.Ily0tdorJP64aVocxcwqnOzVNNMNuyhJpLmpA5MfiYqdd59kyGj7PNQsBG6vhKies36ksjQWi-mKW1jxL_L-H3V2RP9LKP1LlObDH9zEsjWxZGfnO25k8BNW4zKt2B_wliZYmEsDegAYlMJPJECmivGdxTeTEwSABiKFcAOGUP8”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=58fbb323-b1cb-4a49-bf1c-369148b1125a<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA0LCJpYXQiOjE1Mjk5NDU3MDMsInNlc3NpZCI6IjcyYjU0YWViLWVhMzEtNGJlMS1hODRlLTA3M2NhYzQ3MGNlNCJ9.Ily0tdorJP64aVocxcwqnOzVNNMNuyhJpLmpA5MfiYqdd59kyGj7PNQsBG6vhKies36ksjQWi-mKW1jxL_L-H3V2RP9LKP1LlObDH9zEsjWxZGfnO25k8BNW4zKt2B_wliZYmEsDegAYlMJPJECmivGdxTeTEwSABiKFcAOGUP8" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA0LCJpYXQiOjE1Mjk5NDU3MDMsInNlc3NpZCI6IjcyYjU0YWViLWVhMzEtNGJlMS1hODRlLTA3M2NhYzQ3MGNlNCJ9.Ily0tdorJP64aVocxcwqnOzVNNMNuyhJpLmpA5MfiYqdd59kyGj7PNQsBG6vhKies36ksjQWi-mKW1jxL_L-H3V2RP9LKP1LlObDH9zEsjWxZGfnO25k8BNW4zKt2B_wliZYmEsDegAYlMJPJECmivGdxTeTEwSABiKFcAOGUP8</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Mon, 25 Jun 2018 16:55:03 GMT</p>
+ </div><div class="step-message"><p>Response Time is: 1732ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjcwLCJpYXQiOjE1MzAzNjA0NjksInNlc3NpZCI6IjczMjI1ZTFiLTMyNDMtNDcxNS1iMWNkLWIwOGU1NTI0YjVhZCJ9.d50xrX053F2tUf-xNwlL_FqGbaEZG6OZDWGXKL2QfvzSNn5OC6n_ZTEV7pkXDJdspk59pkoaZcXmIYExJm2m7vTKg57rlarr1hk7NNKyYIWbNkT0Zn7XAG2SplgHkCd9zgJwIPv-nbLswCu57PybkqUFEa-IgK08wJ047dpyzT8”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=5d1ac9a0-6338-4daf-b4de-7be54d11ed6e<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjcwLCJpYXQiOjE1MzAzNjA0NjksInNlc3NpZCI6IjczMjI1ZTFiLTMyNDMtNDcxNS1iMWNkLWIwOGU1NTI0YjVhZCJ9.d50xrX053F2tUf-xNwlL_FqGbaEZG6OZDWGXKL2QfvzSNn5OC6n_ZTEV7pkXDJdspk59pkoaZcXmIYExJm2m7vTKg57rlarr1hk7NNKyYIWbNkT0Zn7XAG2SplgHkCd9zgJwIPv-nbLswCu57PybkqUFEa-IgK08wJ047dpyzT8" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjcwLCJpYXQiOjE1MzAzNjA0NjksInNlc3NpZCI6IjczMjI1ZTFiLTMyNDMtNDcxNS1iMWNkLWIwOGU1NTI0YjVhZCJ9.d50xrX053F2tUf-xNwlL_FqGbaEZG6OZDWGXKL2QfvzSNn5OC6n_ZTEV7pkXDJdspk59pkoaZcXmIYExJm2m7vTKg57rlarr1hk7NNKyYIWbNkT0Zn7XAG2SplgHkCd9zgJwIPv-nbLswCu57PybkqUFEa-IgK08wJ047dpyzT8</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sat, 30 Jun 2018 12:07:49 GMT</p>
  </div>
       </div>
     </div>
@@ -3070,7 +2568,7 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password using request attributes from text files</h3>
-    <span class="time">00:00:03</span>
+    <span class="time">00:00:02</span>
 
 	
   
@@ -3401,7 +2899,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:03</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -3436,9 +2934,9 @@ Description     : This is an executable specification file which follows markdow
       <div class="messages">
         <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2206ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA4LCJpYXQiOjE1Mjk5NDU3MDcsInNlc3NpZCI6IjE0OTNkYTVlLTUxN2MtNDRlYy1hNDcwLTYzZGM4MzI3M2NhNCJ9.TnC9-gh4wWJt2yjPYV1YU5Oc6Qy0IcxpK-77nqT7X3vIyv_4gabDJDIXWA8AL82UVvWkCvzthcOUHc9FcDEN9WjoCDszGg-QDk54CL8QP6DHXMMGzGrb0fVGhqTwZvpahEp0ajo4cGXyxIPunE3EXwmv0A4WEotHnRVjXX_pXlE”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=3112c97c-d4a3-4efd-b5a6-6bf288389552<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA4LCJpYXQiOjE1Mjk5NDU3MDcsInNlc3NpZCI6IjE0OTNkYTVlLTUxN2MtNDRlYy1hNDcwLTYzZGM4MzI3M2NhNCJ9.TnC9-gh4wWJt2yjPYV1YU5Oc6Qy0IcxpK-77nqT7X3vIyv_4gabDJDIXWA8AL82UVvWkCvzthcOUHc9FcDEN9WjoCDszGg-QDk54CL8QP6DHXMMGzGrb0fVGhqTwZvpahEp0ajo4cGXyxIPunE3EXwmv0A4WEotHnRVjXX_pXlE" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTI5OTU2NTA4LCJpYXQiOjE1Mjk5NDU3MDcsInNlc3NpZCI6IjE0OTNkYTVlLTUxN2MtNDRlYy1hNDcwLTYzZGM4MzI3M2NhNCJ9.TnC9-gh4wWJt2yjPYV1YU5Oc6Qy0IcxpK-77nqT7X3vIyv_4gabDJDIXWA8AL82UVvWkCvzthcOUHc9FcDEN9WjoCDszGg-QDk54CL8QP6DHXMMGzGrb0fVGhqTwZvpahEp0ajo4cGXyxIPunE3EXwmv0A4WEotHnRVjXX_pXlE</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Mon, 25 Jun 2018 16:55:07 GMT</p>
+ </div><div class="step-message"><p>Response Time is: 1806ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjczLCJpYXQiOjE1MzAzNjA0NzIsInNlc3NpZCI6IjZlYmUzM2I1LWM2ZDEtNDhhMS1hMTljLWE0OThjYTU5OGJjYiJ9.S1NDiNsSGzdXDxjdlVSUzCn96ikrsow3LEiw4UyjgKDT0X65eJwLHymqPkFg3sNdIDB67LGKvXM1VSUFn4bHA7S0kRt4veQyodXKkNuazSViuOBrdTPqarMRScx1wEQaw3p4K4AarrRjqfnhpNODLoT1VAo_A7n5Xi9g8PYZxvo”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=444675c4-a065-4f6e-966e-d01eb3ba9c08<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjczLCJpYXQiOjE1MzAzNjA0NzIsInNlc3NpZCI6IjZlYmUzM2I1LWM2ZDEtNDhhMS1hMTljLWE0OThjYTU5OGJjYiJ9.S1NDiNsSGzdXDxjdlVSUzCn96ikrsow3LEiw4UyjgKDT0X65eJwLHymqPkFg3sNdIDB67LGKvXM1VSUFn4bHA7S0kRt4veQyodXKkNuazSViuOBrdTPqarMRScx1wEQaw3p4K4AarrRjqfnhpNODLoT1VAo_A7n5Xi9g8PYZxvo" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJoY2MiOiJVUyIsInN1YiI6ImZmZmZmZmZmNTllODg2YjRlNGIwMWNlZDI4M2YwNjU1IiwidHlwZSI6ImF0IiwiZXhwIjoxNTMwMzcxMjczLCJpYXQiOjE1MzAzNjA0NzIsInNlc3NpZCI6IjZlYmUzM2I1LWM2ZDEtNDhhMS1hMTljLWE0OThjYTU5OGJjYiJ9.S1NDiNsSGzdXDxjdlVSUzCn96ikrsow3LEiw4UyjgKDT0X65eJwLHymqPkFg3sNdIDB67LGKvXM1VSUFn4bHA7S0kRt4veQyodXKkNuazSViuOBrdTPqarMRScx1wEQaw3p4K4AarrRjqfnhpNODLoT1VAo_A7n5Xi9g8PYZxvo</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sat, 30 Jun 2018 12:07:52 GMT</p>
  </div>
       </div>
     </div>
@@ -4580,8 +4078,8 @@ Description     : This is an executable specification file which follows markdow
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Get configurations of the testing environment</h3>
-    <span class="time">00:00:01</span>
+    <h3 class="head borderBottom">Replace API Endpoint placeholders - Scenario 1</h3>
+    <span class="time">00:00:04</span>
 
 	
   
@@ -4602,7 +4100,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -4620,7 +4118,144 @@ Description     : This is an executable specification file which follows markdow
   
     
       <span>
-        Configurations of the testing environment
+        Given that a user needs to invoke 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Purchase Validator API"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/#skuid/tokens/%23purchaseToken?access_token=%23access_token" rel="nofollow">https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/#skuid/tokens/#purchaseToken?access_token=#access_token</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set values to the API endpoint placeholders as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Placeholder In JSON Template</th><th>Replacement Text</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>#skuid</td><td>com.pearsoned.smartflashcards.expert.elementary</td></tr>
+    
+    <tr><td>#purchaseToken</td><td>&lt;file:/resources/access_tokens/purchase_token.txt&gt;</td></tr>
+    
+    <tr><td>#access_token</td><td>&lt;file:/resources/access_tokens/access_token.txt&gt;</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p><a href="https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0vhCEpnsaQzG4LiWlLPnzZZ8lurqkUwQOdEayJt-594AJ0ZXAD157IP8l0v-pHedljh50abW2HG50dAdzOQcLz_mE_5oqOApbkuC2X4mOlf8vJ09qul3zrAy30O3luyUqwOUOkJ1L2XhwrLhKROMAMXpx11t81UENIUxq0zaE?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYBk47vwbsMcq3moKMi8UGLl3ua_VMC6DDo3yJqImC4q-VCjaMZ-4rMHk2d8o7bVeNL_i87CO-z7NBzk4J18oGjXA" rel="nofollow">https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0vhCEpnsaQzG4LiWlLPnzZZ8lurqkUwQOdEayJt-594AJ0ZXAD157IP8l0v-pHedljh50abW2HG50dAdzOQcLz_mE_5oqOApbkuC2X4mOlf8vJ09qul3zrAy30O3luyUqwOUOkJ1L2XhwrLhKROMAMXpx11t81UENIUxq0zaE?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYBk47vwbsMcq3moKMi8UGLl3ua_VMC6DDo3yJqImC4q-VCjaMZ-4rMHk2d8o7bVeNL_i87CO-z7NBzk4J18oGjXA</a></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
       </span>
     
   
@@ -4635,13 +4270,11 @@ Description     : This is an executable specification file which follows markdow
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>————————————————————————————————————————————————</p>
- </div><div class="step-message"><p>Configurations of Test Execution Environment</p>
- </div><div class="step-message"><p>————————————————————————————————————————————————<br/></p>
- </div><div class="step-message"><p>Operating System: Windows 7</p>
- </div><div class="step-message"><p>Environment: DEV</p>
- </div><div class="step-message"><p>Base URL:</p>
- </div><div class="step-message"><p>————————————————————————————————————————————————</p>
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0vhCEpnsaQzG4LiWlLPnzZZ8lurqkUwQOdEayJt-594AJ0ZXAD157IP8l0v-pHedljh50abW2HG50dAdzOQcLz_mE_5oqOApbkuC2X4mOlf8vJ09qul3zrAy30O3luyUqwOUOkJ1L2XhwrLhKROMAMXpx11t81UENIUxq0zaE?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYBk47vwbsMcq3moKMi8UGLl3ua_VMC6DDo3yJqImC4q-VCjaMZ-4rMHk2d8o7bVeNL_i87CO-z7NBzk4J18oGjXA" rel="nofollow">https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0vhCEpnsaQzG4LiWlLPnzZZ8lurqkUwQOdEayJt-594AJ0ZXAD157IP8l0v-pHedljh50abW2HG50dAdzOQcLz_mE_5oqOApbkuC2X4mOlf8vJ09qul3zrAy30O3luyUqwOUOkJ1L2XhwrLhKROMAMXpx11t81UENIUxq0zaE?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYBk47vwbsMcq3moKMi8UGLl3ua_VMC6DDo3yJqImC4q-VCjaMZ-4rMHk2d8o7bVeNL_i87CO-z7NBzk4J18oGjXA</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 2344ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “error”: {<br/>        “errors”: [<br/>            {<br/>                “domain”: “global”,<br/>                “reason”: “authError”,<br/>                “message”: “Invalid Credentials”,<br/>                “locationType”: “header”,<br/>                “location”: “Authorization”<br/>            }<br/>        ],<br/>        “code”: 401,<br/>        “message”: “Invalid Credentials”<br/>    }<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Vary=Origin<br/>Vary=X-Origin<br/>WWW-Authenticate=Bearer realm=“<a href="https://accounts.google.com/%22" rel="nofollow">https://accounts.google.com/&#34;</a>, error=invalid_token<br/>Content-Type=application/json; charset=UTF-8<br/>Content-Encoding=gzip<br/>Date=Sat, 30 Jun 2018 12:07:57 GMT<br/>Expires=Sat, 30 Jun 2018 12:07:57 GMT<br/>Cache-Control=private, max-age=0<br/>X-Content-Type-Options=nosniff<br/>X-Frame-Options=SAMEORIGIN<br/>X-XSS-Protection=1; mode=block<br/>Server=GSE<br/>Alt-Svc=quic=”:443”; ma=2592000; v=“43,42,41,39,35”<br/>Transfer-Encoding=chunked</p>
  </div>
       </div>
     </div>
@@ -4652,6 +4285,132 @@ Description     : This is an executable specification file which follows markdow
     
   
 
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Then the status code for the request is 
+      </span>
+    
+  
+    
+      <span class='parameter'>"401"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.error.errors[0].reason</td><td>authError</td></tr>
+    
+    <tr><td>$.error.errors[0].message</td><td>Invalid Credentials</td></tr>
+    
+    <tr><td>$.error.code</td><td>401</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    <span></span>
   
 
   
@@ -4671,8 +4430,8 @@ Description     : This is an executable specification file which follows markdow
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Saving values to Data Store</h3>
-    <span class="time">00:00:00</span>
+    <h3 class="head borderBottom">Replace API Endpoint placeholders - Scenario 2</h3>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -4684,6 +4443,66 @@ Description     : This is an executable specification file which follows markdow
 	
 
   
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Given that a user needs to invoke 
+      </span>
+    
+  
+    
+      <span class='parameter'>"Purchase Validator API"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/#skuid/tokens/%23purchaseToken?access_token=%23access_token" rel="nofollow">https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/#skuid/tokens/#purchaseToken?access_token=#access_token</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
   
     
   
@@ -4724,11 +4543,9 @@ Description     : This is an executable specification file which follows markdow
   </tr>
   <tbody>
     
-    <tr><td>Scenario</td><td>variable1</td><td>Osanda Deshan</td></tr>
+    <tr><td>Scenario</td><td>purchaseToken</td><td>jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0</td></tr>
     
-    <tr><td>Specification</td><td>variable2</td><td>Osanda Nimalarathna</td></tr>
-    
-    <tr><td>Scenario</td><td>variable3</td><td>Software Automation</td></tr>
+    <tr><td>Scenario</td><td>accessToken</td><td>ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB</td></tr>
     
   </tbody>
 </table>
@@ -4748,9 +4565,8 @@ Description     : This is an executable specification file which follows markdow
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>“Osanda Deshan” is successfully saved as a text in Scenario Data Store [variable1]</p>
- </div><div class="step-message"><p>“Osanda Nimalarathna” is successfully saved as a text in Specification Data Store [variable2]</p>
- </div><div class="step-message"><p>“Software Automation” is successfully saved as a text in Scenario Data Store [variable3]</p>
+        <div class="step-message"><p>“jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0” is successfully saved as a text in Scenario Data Store [purchaseToken]</p>
+ </div><div class="step-message"><p>“ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB” is successfully saved as a text in Scenario Data Store [accessToken]</p>
  </div>
       </div>
     </div>
@@ -4766,7 +4582,259 @@ Description     : This is an executable specification file which follows markdow
   
     
   
-    <span></span>
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user set values to the API endpoint placeholders using data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>Placeholder In JSON Template</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Replacement Text</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>#skuid</td><td>n</td><td></td><td></td><td>com.pearsoned.smartflashcards.expert.elementary</td></tr>
+    
+    <tr><td>#purchaseToken</td><td>y</td><td>scenario</td><td>purchaseToken</td><td></td></tr>
+    
+    <tr><td>#access_token</td><td>y</td><td>scenario</td><td>accessToken</td><td></td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [purchaseToken] is: “jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Scenario Data Store [accessToken] is: “ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB”<br/><br/></p>
+ </div><div class="step-message"><p><a href="https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB" rel="nofollow">https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB</a></p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB" rel="nofollow">https://www.googleapis.com/androidpublisher/v3/applications/com.pearsoned.smartflashcards/purchases/products/com.pearsoned.smartflashcards.expert.elementary/tokens/jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0?access_token=ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 1726ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “error”: {<br/>        “errors”: [<br/>            {<br/>                “domain”: “global”,<br/>                “reason”: “authError”,<br/>                “message”: “Invalid Credentials”,<br/>                “locationType”: “header”,<br/>                “location”: “Authorization”<br/>            }<br/>        ],<br/>        “code”: 401,<br/>        “message”: “Invalid Credentials”<br/>    }<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Vary=Origin<br/>Vary=X-Origin<br/>WWW-Authenticate=Bearer realm=“<a href="https://accounts.google.com/%22" rel="nofollow">https://accounts.google.com/&#34;</a>, error=invalid_token<br/>Content-Type=application/json; charset=UTF-8<br/>Content-Encoding=gzip<br/>Date=Sat, 30 Jun 2018 12:08:01 GMT<br/>Expires=Sat, 30 Jun 2018 12:08:01 GMT<br/>Cache-Control=private, max-age=0<br/>X-Content-Type-Options=nosniff<br/>X-Frame-Options=SAMEORIGIN<br/>X-XSS-Protection=1; mode=block<br/>Server=GSE<br/>Alt-Svc=quic=”:443”; ma=2592000; v=“43,42,41,39,35”<br/>Transfer-Encoding=chunked</p>
+ </div>
+      </div>
+    </div>
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Then the status code for the request is 
+      </span>
+    
+  
+    
+      <span class='parameter'>"401"</span>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the JSON Path Assertions for the response should be equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>JSON Path</th><th>Expected Result</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>$.error.errors[0].reason</td><td>authError</td></tr>
+    
+    <tr><td>$.error.errors[0].message</td><td>Invalid Credentials</td></tr>
+    
+    <tr><td>$.error.code</td><td>401</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
   
 
   
