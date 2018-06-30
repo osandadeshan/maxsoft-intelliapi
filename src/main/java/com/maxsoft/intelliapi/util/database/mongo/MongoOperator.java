@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.database.mongo;
+package com.maxsoft.intelliapi.util.database.mongo;
 
 /**
  * Project Name : MaxSoft-IntelliAPI
@@ -21,7 +21,7 @@ import java.util.Arrays;
 import static com.mongodb.client.model.Filters.eq;
 
 
-public class MongoConnector {
+public class MongoOperator {
 
     private static final String DB_SERVER_HOST = System.getenv("mongo_database_host");
     private static final int DB_PORT = Integer.valueOf(System.getenv("mongo_database_port"));

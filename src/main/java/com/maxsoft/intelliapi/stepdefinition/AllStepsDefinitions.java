@@ -241,7 +241,7 @@ public class AllStepsDefinitions{
         mySQLStepImpl.loadMySqlDriver();
     }
 
-    @Step("When the user connects to the <databaseName> MySQL database using username as <username> and password as <password>")
+    @Step("And the user need to connect to the <databaseName> MySQL database using username as <username> and password as <password>")
     public void loadMySqlDatabase (String databaseName, String username, String password) throws SQLException {
         mySQLStepImpl.loadMySqlDatabase(databaseName, username, password);
     }
@@ -271,12 +271,12 @@ public class AllStepsDefinitions{
         mongoStepImpl.saveDatabaseNameCollectionName(databaseName, collectionName);
     }
 
-    @Step("When the user provides the MongoDB Authentication as follows <configTable>")
+    @Step("And the user set the MongoDB Authentication as follows <configTable>")
     public void setDatabaseAuthConfigurations(Table configTable){
         mongoStepImpl.saveDatabaseAuthConfigurations(configTable);
     }
 
-    @Step("Then the user executes the Mongo query using key as <key> and value as <value>")
+    @Step("When the user executes the Mongo query using key as <key> and value as <value>")
     public void executeMongoQuery(String key, String value) throws JSONException {
         mongoStepImpl.executeMongoDbQuery(key, value);
     }

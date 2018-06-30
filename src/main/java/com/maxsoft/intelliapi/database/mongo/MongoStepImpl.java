@@ -10,6 +10,7 @@ package com.maxsoft.intelliapi.database.mongo;
  **/
 
 import com.maxsoft.intelliapi.api.Base;
+import com.maxsoft.intelliapi.util.database.mongo.MongoOperator;
 import com.maxsoft.intelliapi.util.fileoperator.TextFile;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
@@ -80,7 +81,7 @@ public class MongoStepImpl extends Base {
             isAuthenticationProvided = Boolean.FALSE;
         }
 
-        MongoConnector.executeQuery(isAuthenticationProvided, userName, source, password, databaseName, collectionName, key, value);
+        MongoOperator.executeQuery(isAuthenticationProvided, userName, source, password, databaseName, collectionName, key, value);
     }
 
 

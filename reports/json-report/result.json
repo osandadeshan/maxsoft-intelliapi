@@ -1,23 +1,23 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Jun 30, 2018 at 9:23pm",
+	"timestamp": "Jun 30, 2018 at 9:44pm",
 	"successRate": 100,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 8107,
+	"executionTime": 8076,
 	"executionStatus": "pass",
 	"specResults": [
 		{
 			"specHeading": "MongoDB Test Specification",
 			"fileName": "C:\\Users\\UnimaOs\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\MongoDB Test.spec",
 			"tags": [],
-			"executionTime": 7243,
+			"executionTime": 7399,
 			"executionStatus": "pass",
 			"scenarios": [
 				{
 					"scenarioHeading": "MongoDB Test",
 					"tags": [],
-					"executionTime": 7243,
+					"executionTime": 7399,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
@@ -33,7 +33,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 1037,
+								"executionTime": 1360,
 								"skippedReason": "",
 								"messages": [],
 								"errorType": "assertion"
@@ -41,7 +41,7 @@
 						},
 						{
 							"itemType": "step",
-							"stepText": "When the user provides the MongoDB Authentication as follows",
+							"stepText": "And the user set the MongoDB Authentication as follows",
 							"table": {
 								"headers": [
 									"Configuration",
@@ -89,7 +89,7 @@
 						},
 						{
 							"itemType": "step",
-							"stepText": "Then the user executes the Mongo query using key as \"title\" and value as \"API Deck3\"",
+							"stepText": "When the user executes the Mongo query using key as \"title\" and value as \"API Deck3\"",
 							"table": null,
 							"beforeStepHookFailure": null,
 							"afterStepHookFailure": null,
@@ -98,7 +98,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 6206,
+								"executionTime": 6039,
 								"skippedReason": "",
 								"messages": [],
 								"errorType": "assertion"
