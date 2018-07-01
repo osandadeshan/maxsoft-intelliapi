@@ -246,17 +246,17 @@ public class AllStepsDefinitions{
         mySQLStepImpl.loadMySqlDatabase(databaseName, username, password);
     }
 
-    @Step("Then the user executes the MySQL query as <query>")
+    @Step("When the user executes the MySQL query as <query>")
     public void executeMySqlQuery(String query) {
         mySQLStepImpl.executeGivenQuery(query);
     }
 
-    @Step("And the results obtained from the MySQL database should contain the following <table>")
+    @Step("Then the results obtained from the MySQL database should contain the following <table>")
     public void verifyResults( Table table) throws SQLException {
         mySQLStepImpl.verifyResults(table);
     }
 
-    @Step("And the results obtained from the MySQL database should equal to the following <table>")
+    @Step("Then the results obtained from the MySQL database should equal to the following <table>")
     public void verifyAllResults( Table table) throws SQLException {
         mySQLStepImpl.verifyAllResults(table);
     }
@@ -266,12 +266,12 @@ public class AllStepsDefinitions{
         mySQLStepImpl.closeDbConnection();
     }
 
-    @Step("Given a user need to connect to the <databaseName> Mongo database and <collectionName> Collection")
+    @Step("Given a user need to connect to the <databaseName> Mongo database and <collectionName> collection")
     public void setMongoDatabaseCollection(String databaseName, String collectionName){
         mongoStepImpl.saveDatabaseNameCollectionName(databaseName, collectionName);
     }
 
-    @Step("And the user set the MongoDB Authentication as follows <configTable>")
+    @Step("And the user set the MongoDB authentication as follows <configTable>")
     public void setDatabaseAuthConfigurations(Table configTable){
         mongoStepImpl.saveDatabaseAuthConfigurations(configTable);
     }
@@ -279,6 +279,11 @@ public class AllStepsDefinitions{
     @Step("When the user executes the Mongo query using key as <key> and value as <value>")
     public void executeMongoQuery(String key, String value) throws JSONException {
         mongoStepImpl.executeMongoDbQuery(key, value);
+    }
+
+    @Step("When the user executes the Mongo query using data stores as follows <table>")
+    public void readDataStoreAndExecuteMongoDbQuery(Table table) throws JSONException {
+        mongoStepImpl.readDataStoreAndExecuteMongoDbQuery(table);
     }
 
 

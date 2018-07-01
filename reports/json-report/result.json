@@ -1,30 +1,30 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Jun 30, 2018 at 9:44pm",
+	"timestamp": "Jul 1, 2018 at 9:47pm",
 	"successRate": 100,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 8076,
+	"executionTime": 12810,
 	"executionStatus": "pass",
 	"specResults": [
 		{
 			"specHeading": "MongoDB Test Specification",
 			"fileName": "C:\\Users\\UnimaOs\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\MongoDB Test.spec",
 			"tags": [],
-			"executionTime": 7399,
+			"executionTime": 11597,
 			"executionStatus": "pass",
 			"scenarios": [
 				{
-					"scenarioHeading": "MongoDB Test",
+					"scenarioHeading": "MongoDB Test - Without data stores",
 					"tags": [],
-					"executionTime": 7399,
+					"executionTime": 7854,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
 					"items": [
 						{
 							"itemType": "step",
-							"stepText": "Given a user need to connect to the \"deckservice_qaint\" Mongo database and \"user_decks\" Collection",
+							"stepText": "Given a user need to connect to the \"deckservice_qaint\" Mongo database and \"user_decks\" collection",
 							"table": null,
 							"beforeStepHookFailure": null,
 							"afterStepHookFailure": null,
@@ -33,7 +33,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 1360,
+								"executionTime": 1801,
 								"skippedReason": "",
 								"messages": [],
 								"errorType": "assertion"
@@ -41,7 +41,103 @@
 						},
 						{
 							"itemType": "step",
-							"stepText": "And the user set the MongoDB Authentication as follows",
+							"stepText": "And the user set the MongoDB authentication as follows",
+							"table": {
+								"headers": [
+									"Configuration",
+									"Configuration Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Is authentication credentials required?",
+											"No"
+										]
+									},
+									{
+										"cells": [
+											"Username",
+											"N/A"
+										]
+									},
+									{
+										"cells": [
+											"Source",
+											"N/A"
+										]
+									},
+									{
+										"cells": [
+											"Password",
+											"N/A"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "When the user executes the Mongo query using key as \"title\" and value as \"API Deck3\"",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 6052,
+								"skippedReason": "",
+								"messages": [],
+								"errorType": "assertion"
+							}
+						}
+					],
+					"beforeScenarioHookFailure": null,
+					"afterScenarioHookFailure": null,
+					"skipErrors": [],
+					"tableRowIndex": -1
+				},
+				{
+					"scenarioHeading": "MongoDB Test - With data stores",
+					"tags": [],
+					"executionTime": 3743,
+					"executionStatus": "pass",
+					"contexts": [],
+					"teardowns": [],
+					"items": [
+						{
+							"itemType": "step",
+							"stepText": "Given a user need to connect to the \"deckservice_qaint\" Mongo database and \"user_decks\" collection",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 9,
+								"skippedReason": "",
+								"messages": [],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the user set the MongoDB authentication as follows",
 							"table": {
 								"headers": [
 									"Configuration",
@@ -89,8 +185,23 @@
 						},
 						{
 							"itemType": "step",
-							"stepText": "When the user executes the Mongo query using key as \"title\" and value as \"API Deck3\"",
-							"table": null,
+							"stepText": "And the user save the values inside data stores as follows",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Value To Be Stored"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"deckTitle",
+											"API Deck3"
+										]
+									}
+								]
+							},
 							"beforeStepHookFailure": null,
 							"afterStepHookFailure": null,
 							"result": {
@@ -98,9 +209,49 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 6039,
+								"executionTime": 1,
 								"skippedReason": "",
-								"messages": [],
+								"messages": [
+									"\"API Deck3\" is successfully saved as a text in Scenario Data Store [deckTitle]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "When the user executes the Mongo query using data stores as follows",
+							"table": {
+								"headers": [
+									"Key",
+									"Is Data Store Used For Value?",
+									"Data Store Type",
+									"Data Store Variable Name",
+									"Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"title",
+											"y",
+											"scenario",
+											"deckTitle",
+											"N/A"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 3733,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [deckTitle] is: \"API Deck3\"\n\n"
+								],
 								"errorType": "assertion"
 							}
 						}
@@ -115,7 +266,7 @@
 			"datatable": null,
 			"beforeSpecHookFailure": null,
 			"afterSpecHookFailure": null,
-			"passedScenarioCount": 1,
+			"passedScenarioCount": 2,
 			"failedScenarioCount": 0,
 			"skippedScenarioCount": 0
 		}
@@ -125,7 +276,7 @@
 	"passedSpecsCount": 1,
 	"failedSpecsCount": 0,
 	"skippedSpecsCount": 0,
-	"passedScenariosCount": 1,
+	"passedScenariosCount": 2,
 	"failedScenariosCount": 0,
 	"skippedScenariosCount": 0
 }
