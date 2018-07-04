@@ -1175,7 +1175,7 @@ public class Base {
             System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
             Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
         }
-        String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
+        String jsonPathValue = String.valueOf(JsonPath.read(responseString, jsonPath));
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is not contains the expected value.\nJSON Path value is: " + jsonPathValue +
                 "\n"+ "Expected value to be contained is: " + expectedResult + "\n\n";
         Assert.assertTrue(jsonPathValue.contains(expectedResult), nullableMessage);
@@ -1191,7 +1191,7 @@ public class Base {
             System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
             Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
         }
-        String jsonPathValue = JsonPath.read(responseString, jsonPath).toString();
+        String jsonPathValue = String.valueOf(JsonPath.read(responseString, jsonPath));
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is contains the expected value.\nJSON Path value is: " + jsonPathValue +
                 "\n"+ "Expected value not to be contained is: " + expectedResult + "\n\n";
         Assert.assertFalse(jsonPathValue.contains(expectedResult), nullableMessage);
