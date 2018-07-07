@@ -65,6 +65,34 @@ public class Base {
     private static Csv csv = new Csv();
     Map<String, String> formParams = new HashMap<>();
 
+    public static String getFirstCharacter(String string){
+        return string.substring(0, 1);
+    }
+
+    public static String getLastCharacter(String string){
+        return string.substring(string.length() - 1);
+    }
+
+    public static String setStringLastCharInverseToFirstChar(String string){
+        String firstChart = "";
+        String inverseOfLastChart = "";
+            if (getLastCharacter(string).equals("}")) {
+                inverseOfLastChart = "{";
+                firstChart = "{\n";
+                if (!(inverseOfLastChart.equals(getFirstCharacter(string)))) {
+                    return firstChart + string;
+                }
+            }
+            else if (getLastCharacter(string).equals("]")) {
+                inverseOfLastChart = "[";
+                firstChart = "[\n";
+                if (!(inverseOfLastChart.equals(getFirstCharacter(string)))) {
+                    return firstChart + string;
+                }
+            }
+            return string;
+    }
+
     public void print(String text){
         System.out.println(text);
         Gauge.writeMessage(text);
@@ -279,13 +307,10 @@ public class Base {
     }
 
     public void testingEnvDetails() {
-        print("————————————————————————————————————————————————");
-        print("Configurations of Test Execution Environment");
-        print("————————————————————————————————————————————————\n");
+        print("Configurations of Test Execution Environment\n\n");
         printTestingEnvironmentOS();
         printTestingEnvironmentName();
         printTestingEnvironmentURL();
-        print("————————————————————————————————————————————————");
     }
 
     public void printApiEndpoint(String apiEndpoint) {
@@ -298,7 +323,7 @@ public class Base {
     }
 
     public void printResponse() {
-        String response = getSavedValueForScenario("response");
+        String response = setStringLastCharInverseToFirstChar(getSavedValueForScenario("response"));
         if (response.equals("")) {
             System.out.println("Response is Empty" + "\n\n");
             Gauge.writeMessage("Response is Empty" + "\n\n");

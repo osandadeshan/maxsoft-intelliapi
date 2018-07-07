@@ -34,7 +34,6 @@ public abstract class ApiDocument {
 			Workbook workbook = new XSSFWorkbook(excelFile);
 			Sheet workSheet = workbook.getSheetAt(sheetName);
 			value = workSheet.getRow(row).getCell(column).getStringCellValue();
-			System.out.println(value);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
