@@ -74,16 +74,16 @@ public class Base {
     }
 
     public static String setStringLastCharInverseToFirstChar(String string){
-        String firstChart = "";
-        String inverseOfLastChart = "";
+        if (!(string.equals(""))) {
+            String firstChart = "";
+            String inverseOfLastChart = "";
             if (getLastCharacter(string).equals("}")) {
                 inverseOfLastChart = "{";
                 firstChart = "{\n";
                 if (!(inverseOfLastChart.equals(getFirstCharacter(string)))) {
                     return firstChart + string;
                 }
-            }
-            else if (getLastCharacter(string).equals("]")) {
+            } else if (getLastCharacter(string).equals("]")) {
                 inverseOfLastChart = "[";
                 firstChart = "[\n";
                 if (!(inverseOfLastChart.equals(getFirstCharacter(string)))) {
@@ -91,6 +91,9 @@ public class Base {
                 }
             }
             return string;
+        } else {
+            return string;
+        }
     }
 
     public void print(String text){
