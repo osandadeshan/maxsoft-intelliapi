@@ -93,8 +93,8 @@ public class BarChart {
         int iterator = getSpecHeadingList().size();
 
         for (int i=0; i<iterator; i++){
-            dataset.addValue( Integer.valueOf(getPassedScenarioCountList().get(i)) , PASSED , getSpecHeadingList().get(i) );
             dataset.addValue( Integer.valueOf(getFailedScenarioCountList().get(i)) , FAILED , getSpecHeadingList().get(i) );
+            dataset.addValue( Integer.valueOf(getPassedScenarioCountList().get(i)) , PASSED , getSpecHeadingList().get(i) );
             dataset.addValue( Integer.valueOf(getSkippedScenarioCountList().get(i)) , SKIPPED , getSpecHeadingList().get(i) );
         }
 
@@ -107,8 +107,8 @@ public class BarChart {
         CategoryPlot plot = barChart.getCategoryPlot();
         plot.getRangeAxis().setStandardTickUnits(NumberAxis.createIntegerTickUnits());
 
-        plot.getRenderer().setSeriesPaint(0, GREEN);
-        plot.getRenderer().setSeriesPaint(1, RED);
+        plot.getRenderer().setSeriesPaint(0, RED);
+        plot.getRenderer().setSeriesPaint(1, GREEN);
         plot.getRenderer().setSeriesPaint(2, DARK_GRAY);
 
         ChartPanel chartPanel = new ChartPanel(barChart, false);
