@@ -333,8 +333,8 @@ public class JsonReport {
             int totalSpecsCount = passedSpecsCount + failedSpecsCount + skippedSpecsCount;
 
             DecimalFormat df = new DecimalFormat(".##");
-            String successRate = df.format((double) passedScenariosCount * 100/ totalScenariosCount) + "%";
-            String failRate = df.format((double) failedScenariosCount * 100/ totalScenariosCount) + "%";
+            Double successRate = Double.valueOf(df.format((double) passedScenariosCount * 100/ totalScenariosCount));
+            Double failRate = Double.valueOf(df.format((double) failedScenariosCount * 100/ totalScenariosCount));
 
             String executionResults = EmailTemplate.get()
                     .replaceAll("#projectName", projectName)
@@ -342,8 +342,8 @@ public class JsonReport {
                     .replaceAll("#environment", environment.substring(0, 1).toUpperCase() + environment.substring(1))
                     .replaceAll("#executionTime", milliSecondsToTime(Integer.valueOf(executionTime)))
                     .replaceAll("#executionStatus", executionStatus.substring(0, 1).toUpperCase() + executionStatus.substring(1))
-                    .replaceAll("#successRate", successRate)
-                    .replaceAll("#failRate", failRate)
+                    .replaceAll("#successRate", successRate + "%")
+                    .replaceAll("#failRate", failRate + "%")
 
                     .replaceAll("#totalScenariosCount", String.valueOf(totalScenariosCount))
                     .replaceAll("#passedScenariosCount", String.valueOf(passedScenariosCount))
