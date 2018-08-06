@@ -144,14 +144,14 @@ public class EmailTemplate {
                 "  </tr>";
         int iterator = getSpecHeadingList().size();
         for (int i=0; i < iterator; i++){
-            appendHtml = appendHtml + "<tr>\n" +
+            appendHtml = appendHtml.concat("<tr>\n" +
                     "    <td><b>" + getSpecHeadingList().get(i) + "</b></td>\n" +
                     "    <td>" + (Integer.valueOf(getPassedScenarioCountList().get(i)) + Integer.valueOf(getFailedScenarioCountList().get(i)) +
                     Integer.valueOf(getSkippedScenarioCountList().get(i))) +"</td>\n" +
                     "    <td>" + getPassedScenarioCountList().get(i) + "</td>\n" +
                     "    <td>" + getFailedScenarioCountList().get(i) + "</td>\n" +
                     "    <td>" + getSkippedScenarioCountList().get(i) + "</td>\n" +
-                    "  </tr>";
+                    "  </tr>");
         }
         String lastAppend = "</table>\n" +
                 "<br><br>\n" +

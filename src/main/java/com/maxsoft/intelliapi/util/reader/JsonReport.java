@@ -342,8 +342,8 @@ public class JsonReport {
                     .replaceAll("#environment", environment.substring(0, 1).toUpperCase() + environment.substring(1))
                     .replaceAll("#executionTime", milliSecondsToTime(Integer.valueOf(executionTime)))
                     .replaceAll("#executionStatus", executionStatus.substring(0, 1).toUpperCase() + executionStatus.substring(1))
-                    .replaceAll("#successRate", successRate + "%")
-                    .replaceAll("#failRate", failRate + "%")
+                    .replaceAll("#successRate", successRate.toString() + "%")
+                    .replaceAll("#failRate", failRate.toString() + "%")
 
                     .replaceAll("#totalScenariosCount", String.valueOf(totalScenariosCount))
                     .replaceAll("#passedScenariosCount", String.valueOf(passedScenariosCount))

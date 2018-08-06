@@ -9,6 +9,8 @@ Description  	: This is an executable specification file which follows markdown 
 tags: sku, get_sku
 
 
+table: /resources/data_driven_test_csv/SKUs/SKUs.csv
+
 
 Get all skus
 ------------
@@ -34,9 +36,6 @@ Get all skus
      |$.[-1].price  |n                   |               |               |3.99           |
      |$[-1:].type   |n                   |               |               |DECK           |
 
-
-
-_________________________________________________________________________________________________________
 * Given that a user needs to invoke "Delete SKU"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
@@ -50,3 +49,29 @@ ________________________________________________________________________________
     |skuUUID        |y                  |scenario       |skuUUID                 |N/A            |
 * When the user invokes the API
 * Then the status code for the request is "204"
+
+
+
+Validate all skus for decks and bundles
+---------------------------------------
+* Given that a user needs to invoke "Get All SKUs using Aggregation Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* When the user invokes the API
+* Then the status code for the request is "200"
+//* And the JSON Path Assertions for the response should be equal to the "\\resources\\data_driven_test_csv\\SKUs\\SKUs.csv" data set, counter is "x"
+//    |CSV Column Name |JSON Path    |
+//    |----------------|-------------|
+//    |SKU             |$[x].skuId   |
+//    |Price           |$[x].price   |
+//    |Type            |$[x].type    |
+* test data set, counter is "x"
+    |JSON Path       |Expected Value |
+    |----------------|---------------|
+    |$[x].skuId      |<SKU>          |
+    |$[x].price      |<Price>        |
+    |$[x].type       |<Type>         |
