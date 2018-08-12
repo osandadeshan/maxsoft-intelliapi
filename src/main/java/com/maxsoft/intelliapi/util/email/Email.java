@@ -181,7 +181,7 @@ public class Email {
                 // first part (the html)
                 BodyPart messageBodyPart = new MimeBodyPart();
                 String htmlText = "<h" + emailBodyTitleHeadingSize + ">" + emailBodyTitle + "</h" + emailBodyTitleHeadingSize + ">" +
-                        "<br /><br />" + emailBody + "<br /><br /><br />" + executionResults;
+                        "<br />" + emailBody + "<br /><br /><br />" + executionResults;
                 messageBodyPart.setContent(htmlText, "text/html");
                 // add it
                 multipart.addBodyPart(messageBodyPart);

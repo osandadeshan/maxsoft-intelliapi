@@ -93,9 +93,9 @@ public class BarChart {
         int iterator = getSpecHeadingList().size();
 
         for (int i=0; i<iterator; i++){
-            dataset.addValue( Integer.valueOf(getFailedScenarioCountList().get(i)) , FAILED , getSpecHeadingList().get(i) );
-            dataset.addValue( Integer.valueOf(getPassedScenarioCountList().get(i)) , PASSED , getSpecHeadingList().get(i) );
-            dataset.addValue( Integer.valueOf(getSkippedScenarioCountList().get(i)) , SKIPPED , getSpecHeadingList().get(i) );
+            dataset.addValue(Integer.valueOf(getFailedScenarioCountList().get(i)), FAILED, getSpecHeadingList().get(i));
+            dataset.addValue(Integer.valueOf(getPassedScenarioCountList().get(i)), PASSED, getSpecHeadingList().get(i));
+            dataset.addValue(Integer.valueOf(getSkippedScenarioCountList().get(i)), SKIPPED, getSpecHeadingList().get(i));
         }
 
         JFreeChart barChart = ChartFactory.createBarChart(
@@ -115,8 +115,8 @@ public class BarChart {
 
         chartPanel.setBackground( Color.WHITE );
         barChart.getPlot().setBackgroundPaint( LIGHT_GRAY );
-        barChart.setBorderVisible(true);
-        barChart.setBorderPaint(Color.BLACK);
+//        barChart.setBorderVisible(true);
+//        barChart.setBorderPaint(Color.BLACK);
         ((AbstractRenderer) plot.getRenderer()).setBaseLegendShape(new Rectangle(20,20));
         LegendTitle legend = barChart.getLegend();
         Font labelFont = new Font("SansSerif", Font.TYPE1_FONT, 14);
