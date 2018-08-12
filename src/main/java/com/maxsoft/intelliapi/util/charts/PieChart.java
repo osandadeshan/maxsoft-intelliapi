@@ -81,8 +81,8 @@ public class PieChart {
         chart.getStyler().setChartTitleBoxBorderColor(Color.BLACK);
 
         // Series
-        chart.addSeries("Passed", Integer.valueOf(passedCount)).setFillColor(GREEN);
         chart.addSeries("Failed", Integer.valueOf(failedCount)).setFillColor(RED);
+        chart.addSeries("Passed", Integer.valueOf(passedCount)).setFillColor(GREEN);
         chart.addSeries("Skipped", Integer.valueOf(skippedCount)).setFillColor(DARK_GRAY);
 
         // Show it
