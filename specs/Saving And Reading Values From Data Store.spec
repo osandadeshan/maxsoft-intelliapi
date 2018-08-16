@@ -286,3 +286,66 @@ Replace API Endpoint placeholders - Scenario 2
      |$.error.errors[0].reason  |authError                                  |
      |$.error.errors[0].message |Invalid Credentials                        |
      |$.error.code              |401                                        |
+
+
+
+Validate the data store values
+------------------------------
+* Given that a user needs to invoke "Get Staging PI Token"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |No                             |
+     |Do you need to retrieve the access token from the text file?      |N/A                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the request payload as follows <file:/resources/payloads/login.txt>
+* When the user invokes the API
+* Then the status code for the request is "201"
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |---------------|---------------|-----------------------|
+    |Scenario       |status         |$.status               |
+* And the user save the values inside data stores as follows
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |---------------|---------------|-----------------------|
+    |Scenario       |username       |osanda12               |
+    |Scenario       |status         |success                |
+    |Scenario       |mobileUserName |osanda12               |
+
+* And the values inside the data stores equal to the following
+    |DataStore Type |Variable Name  |Expected Value         |
+    |---------------|---------------|-----------------------|
+    |Scenario       |username       |osanda12               |
+    |Scenario       |status         |success                |
+* And the values inside two data stores should be equal
+    |DataStore 1 Type |Variable 1 Name  |DataStore 2 Type |Variable 2 Name  |
+    |-----------------|-----------------|-----------------|-----------------|
+    |Scenario         |username         |Scenario         |mobileUserName   |
+* And the values inside the data stores not equal to the following
+    |DataStore Type |Variable Name  |Expected Value         |
+    |---------------|---------------|-----------------------|
+    |Scenario       |username       |osanda                 |
+    |Scenario       |status         |succes                 |
+* And the values inside two data stores should not be equal
+    |DataStore 1 Type |Variable 1 Name  |DataStore 2 Type |Variable 2 Name  |
+    |-----------------|-----------------|-----------------|-----------------|
+    |Scenario         |username         |Scenario         |status           |
+
+* And the values inside the data stores contain the following
+    |DataStore Type |Variable Name  |Expected Value         |
+    |---------------|---------------|-----------------------|
+    |Scenario       |username       |osanda                 |
+    |Scenario       |status         |succes                 |
+* And the value inside a data store should contain the value of the other data store
+    |DataStore 1 Type |Variable 1 Name  |DataStore 2 Type |Variable 2 Name  |
+    |-----------------|-----------------|-----------------|-----------------|
+    |Scenario         |username         |Scenario         |mobileUserName   |
+* And the values inside the data stores not contain the following
+    |DataStore Type |Variable Name  |Expected Value         |
+    |---------------|---------------|-----------------------|
+    |Scenario       |username       |deshan                 |
+    |Scenario       |status         |fail                   |
+* And the value inside a data store should not contain the value of the other data store
+    |DataStore 1 Type |Variable 1 Name  |DataStore 2 Type |Variable 2 Name  |
+    |-----------------|-----------------|-----------------|-----------------|
+    |Scenario         |username         |Scenario         |status           |

@@ -1339,6 +1339,38 @@ public class Base {
         writer.close();
     }
 
+    public void dataStoreValueEquals(String dataStoreType, String dataStoreVariableName, String expectedValue){
+        Assert.assertEquals(readFromDataStore(dataStoreType, dataStoreVariableName), expectedValue);
+    }
+
+    public void compareDataStoresEquals(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
+        Assert.assertEquals(readFromDataStore(firstDataStoreType, firstDataStoreVariableName), readFromDataStore(secondDataStoreType, secondDataStoreVariableName));
+    }
+
+    public void dataStoreValueNotEquals(String dataStoreType, String dataStoreVariableName, String expectedValue){
+        Assert.assertNotEquals(readFromDataStore(dataStoreType, dataStoreVariableName), expectedValue);
+    }
+
+    public void compareDataStoresNotEquals(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
+        Assert.assertNotEquals(readFromDataStore(firstDataStoreType, firstDataStoreVariableName), readFromDataStore(secondDataStoreType, secondDataStoreVariableName));
+    }
+
+    public void dataStoreValueContains(String dataStoreType, String dataStoreVariableName, String expectedValue){
+        Assert.assertTrue(readFromDataStore(dataStoreType, dataStoreVariableName).contains(expectedValue));
+    }
+
+    public void compareDataStoresContains(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
+        Assert.assertTrue(readFromDataStore(firstDataStoreType, firstDataStoreVariableName).contains(readFromDataStore(secondDataStoreType, secondDataStoreVariableName)));
+    }
+
+    public void dataStoreValueNotContains(String dataStoreType, String dataStoreVariableName, String expectedValue){
+        Assert.assertFalse(readFromDataStore(dataStoreType, dataStoreVariableName).contains(expectedValue));
+    }
+
+    public void compareDataStoresNotContains(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
+        Assert.assertFalse(readFromDataStore(firstDataStoreType, firstDataStoreVariableName).contains(readFromDataStore(secondDataStoreType, secondDataStoreVariableName)));
+    }
+
     public void printResults(List<String> headersList, List<List<String>> rowsList, String additional) {
         Board board = new Board(75);
         String tableString = board.setInitialBlock(new StringTable(board, 75, headersList, rowsList).tableToBlocks()).build().getPreview();

@@ -236,6 +236,54 @@ public class AllStepsDefinitions{
         apiStepImpl.saveJsonArrayValuesToCsv(table);
     }
 
+    // Use this method to validate the content in data stores
+    @Step("And the values inside the data stores equal to the following <table>")
+    public void dataStoreValueEquals(Table table) {
+        apiStepImpl.dataStoreValueEquals(table);
+    }
+
+    // Use this method to compare the content in two data stores
+    @Step("And the values inside two data stores should be equal <table>")
+    public void compareDataStoresEquals(Table table) {
+        apiStepImpl.compareDataStoresEquals(table);
+    }
+
+    // Use this method to validate the content in data stores
+    @Step("And the values inside the data stores not equal to the following <table>")
+    public void dataStoreValueNotEquals(Table table) {
+        apiStepImpl.dataStoreValueNotEquals(table);
+    }
+
+    // Use this method to compare the content in two data stores
+    @Step("And the values inside two data stores should not be equal <table>")
+    public void compareDataStoresNotEquals(Table table) {
+        apiStepImpl.compareDataStoresNotEquals(table);
+    }
+
+    // Use this method to validate the content in data stores
+    @Step("And the values inside the data stores contain the following <table>")
+    public void dataStoreValueContains(Table table) {
+        apiStepImpl.dataStoreValueContains(table);
+    }
+
+    // Use this method to compare the content in two data stores
+    @Step("And the value inside a data store should contain the value of the other data store <table>")
+    public void compareDataStoresContains(Table table) {
+        apiStepImpl.compareDataStoresContains(table);
+    }
+
+    // Use this method to validate the content in data stores
+    @Step("And the values inside the data stores not contain the following <table>")
+    public void dataStoreValueNotContains(Table table) {
+        apiStepImpl.dataStoreValueNotContains(table);
+    }
+
+    // Use this method to compare the content in two data stores
+    @Step("And the value inside a data store should not contain the value of the other data store <table>")
+    public void compareDataStoresNotContains(Table table) {
+        apiStepImpl.compareDataStoresNotContains(table);
+    }
+
     @Step("Given a user successfully connected to the MySQL Driver")
     public void loadMySqlDriver() {
         mySQLStepImpl.loadMySqlDriver();

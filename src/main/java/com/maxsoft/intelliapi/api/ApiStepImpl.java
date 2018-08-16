@@ -550,5 +550,77 @@ public class ApiStepImpl extends Base {
         }
     }
 
+    // Use this method to validate the values inside data stores
+    public void dataStoreValueEquals(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.dataStoreValueEquals(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+        }
+    }
+
+    // Use this method to validate the values inside data stores
+    public void compareDataStoresEquals(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.compareDataStoresEquals(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3)));
+        }
+    }
+
+    // Use this method to validate the values inside data stores
+    public void dataStoreValueNotEquals(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.dataStoreValueNotEquals(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+        }
+    }
+
+    // Use this method to validate the values inside data stores
+    public void compareDataStoresNotEquals(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.compareDataStoresNotEquals(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3)));
+        }
+    }
+
+    // Use this method to validate the values inside data stores
+    public void dataStoreValueContains(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.dataStoreValueContains(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+        }
+    }
+
+    // Use this method to validate the values inside data stores
+    public void compareDataStoresContains(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.compareDataStoresContains(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3)));
+        }
+    }
+
+    // Use this method to validate the values inside data stores
+    public void dataStoreValueNotContains(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.dataStoreValueNotContains(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+        }
+    }
+
+    // Use this method to validate the values inside data stores
+    public void compareDataStoresNotContains(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.compareDataStoresNotContains(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3)));
+        }
+    }
+
 
 }
