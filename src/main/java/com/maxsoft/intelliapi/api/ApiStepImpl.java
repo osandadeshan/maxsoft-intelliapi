@@ -523,6 +523,23 @@ public class ApiStepImpl extends Base {
         }
     }
 
+    // Use this method to save data store values as a list in another data store
+    public void saveDataStoresAsList(String listType, String dataStoreType, String dataStoreVariableName, Table table){
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        String valueList = "";
+        String concatString = "";
+        if(listType.toLowerCase().equals("string")){
+            concatString = "\"";
+        }
+        for (TableRow row : rows) {
+            valueList = valueList.concat(concatString).concat(readFromDataStore(row.getCell(columnNames.get(0)),row.getCell(columnNames.get(1))).concat(concatString + ","));
+        }
+        valueList = valueList.substring(0, valueList.length() - 1);
+        saveToDataStore(dataStoreType, dataStoreVariableName, valueList);
+        print("Value List: " + valueList);
+    }
+
     // Use this method to save strings in data store
     public void saveValueToDataStore(Table table){
         List<TableRow> rows = table.getTableRows();
