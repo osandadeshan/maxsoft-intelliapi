@@ -251,6 +251,21 @@ public class Base {
         }
     }
 
+    public static String getSuiteDataStoreValue(String variableNameOfValueStoredInDataStore) {
+        try {
+            // Fetching Value from the Data Store
+            DataStore suiteStore = DataStoreFactory.getSuiteDataStore();
+            String value = (String) suiteStore.get(variableNameOfValueStoredInDataStore);
+            System.out.println("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            Gauge.writeMessage("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            return value;
+        } catch (Exception ex) {
+            System.out.println("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            Gauge.writeMessage("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            return "";
+        }
+    }
+
     public static void saveToScenarioDataStore(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
         try {
             // Adding value to the Data Store
@@ -277,20 +292,57 @@ public class Base {
         }
     }
 
+    public static void saveToSuiteDataStore(String variableNameOfValueToBeStoredInDataStore, String valueToBeStoredInDataStore) {
+        try {
+            // Adding value to the Data Store
+            DataStore suiteStore = DataStoreFactory.getSuiteDataStore();
+            suiteStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+        } catch (Exception ex) {
+            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+        }
+    }
+
     public void saveToDataStore(String dataStoreType, String variableName, String valueToBeStored){
-        if (dataStoreType.toLowerCase().equals("spec") || dataStoreType.toLowerCase().equals("specification")){
-            saveToSpecificationDataStore(variableName, valueToBeStored);
-        } else {
-            saveToScenarioDataStore(variableName, valueToBeStored);
+        switch (dataStoreType.toLowerCase()){
+            case "spec":
+                saveToSpecificationDataStore(variableName, valueToBeStored);
+                break;
+            case "specification":
+                saveToSpecificationDataStore(variableName, valueToBeStored);
+                break;
+            case "scenario":
+                saveToScenarioDataStore(variableName, valueToBeStored);
+                break;
+            case "suite":
+                saveToSuiteDataStore(variableName, valueToBeStored);
+                break;
+            default:
+                Assert.fail("Please provide a valid data store type");
         }
     }
 
     public String readFromDataStore(String dataStoreType, String variableName){
-        if (dataStoreType.toLowerCase().equals("spec") || dataStoreType.toLowerCase().equals("specification")){
-            return getSpecificationDataStoreValue(variableName);
-        } else {
-            return getScenarioDataStoreValue(variableName);
+        String value = "";
+        switch (dataStoreType.toLowerCase()){
+            case "spec":
+                value = getSpecificationDataStoreValue(variableName);
+                break;
+            case "specification":
+                value = getSpecificationDataStoreValue(variableName);
+                break;
+            case "scenario":
+                value = getScenarioDataStoreValue(variableName);
+                break;
+            case "suite":
+                value = getSuiteDataStoreValue(variableName);
+                break;
+            default:
+                Assert.fail("Please provide a valid data store type");
         }
+        return value;
     }
 
     public RequestSpecification getRequestSpecification() {
