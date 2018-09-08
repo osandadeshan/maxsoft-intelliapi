@@ -189,6 +189,46 @@ public class ApiStepImpl extends Base {
         JsonPayload.saveFinalJsonRequestBody(payload);
     }
 
+    // Use this method to replace the values of the request payload
+    public void replaceAttributesInRequestPayload(Table table) {
+        String payloadWithPlaceholders = getSavedValueForScenario("finalJsonRequestBody");
+        String finalPayload = "";
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            payloadWithPlaceholders = payloadWithPlaceholders.replaceAll
+                    (row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+        }
+        finalPayload = payloadWithPlaceholders;
+        saveValueForScenario("finalJsonRequestBody", finalPayload);
+        print("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
+    }
+
+    // Use this method to replace the values of the request payload using data stores
+    public void replaceAttributesInRequestPayloadFromDataStores(Table table) {
+        String payloadWithPlaceholders = getSavedValueForScenario("finalJsonRequestBody");
+        String finalPayload = "";
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            String placeholder = row.getCell(columnNames.get(0));
+            String isRetrievedFromDataStore = row.getCell(columnNames.get(1));
+            String dataStoreType = row.getCell(columnNames.get(2));
+            String dataStoreVariableName = row.getCell(columnNames.get(3));
+            String replacement = row.getCell(columnNames.get(4));
+            if (isRetrievedFromDataStore.toLowerCase().equals("true") || isRetrievedFromDataStore.toLowerCase().equals("yes") || isRetrievedFromDataStore.toLowerCase().equals("y")) {
+                payloadWithPlaceholders = payloadWithPlaceholders.replaceAll
+                        (placeholder, readFromDataStore(dataStoreType, dataStoreVariableName));
+            } else {
+                payloadWithPlaceholders = payloadWithPlaceholders.replaceAll
+                        (placeholder, replacement);
+            }
+        }
+        finalPayload = payloadWithPlaceholders;
+        saveValueForScenario("finalJsonRequestBody", finalPayload);
+        print("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
+    }
+
     // Use this method to set the request authentication
     public void saveRequestAuthConfigurations(Table configTable) {
         List<TableRow> rows = configTable.getTableRows();

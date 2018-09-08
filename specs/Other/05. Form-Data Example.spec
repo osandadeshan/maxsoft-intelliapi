@@ -31,32 +31,37 @@ Get Google OAuth Access token
 
 Upload file
 -----------
-* Given that a user needs to invoke "Upload File"
+* Create a deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name        |Value To Be Stored     |
+    |---------------|---------------------|-----------------------|
+    |spec           |deckId               |$.id                   |
+* Given that a user needs to invoke "File Upload"
 * And the user set the request authentication configurations as follows
      |Configuration                                                     |Configuration Value            |
      |------------------------------------------------------------------|-------------------------------|
      |Is authentication required?                                       |Yes                            |
      |Do you need to retrieve the access token from the text file?      |Yes                            |
      |Provide the access token if you need to authorize the API manually|N/A                            |
-* And the user set the form-data key value pairs as follows
-     |Key                |Value                             |
-     |-------------------|----------------------------------|
-     |title              |DOCX file                         |
-     |creatorId          |Osanda                            |
-     |creatorPlatform    |Web                               |
-     |creatoredSource    |File                              |
-     |creatoredType      |Auto                              |
-     |deckId             |5b123fa92e02d85d8b54c7b6          |
-     |isExpert           |false                             |
-     |examDate           |                                  |
-     |userId             |osanda                            |
+* And the user set the form-data key value pairs using data stores as follows
+     |Key                |Is Data Store Used?|Data Store Type|Data Store Variable Name|Value                             |
+     |-------------------|-------------------|---------------|------------------------|----------------------------------|
+     |title              |n                  |               |                        |DOCX file                         |
+     |creatorId          |n                  |               |                        |Osanda                            |
+     |creatorPlatform    |n                  |               |                        |Web                               |
+     |creatoredSource    |n                  |               |                        |File                              |
+     |creatoredType      |n                  |               |                        |Auto                              |
+     |deckId             |y                  |spec           |deckId                  |5b123fa92e02d85d8b54c7b6          |
+     |isExpert           |n                  |               |                        |false                             |
+     |examDate           |n                  |               |                        |                                  |
+     |userId             |n                  |               |                        |osanda                            |
 * And the user set the multipart file key value pairs as follows
      |Key            |File Path                                    |Mime Type                                                               |
      |---------------|---------------------------------------------|------------------------------------------------------------------------|
      |file           |/resources/docx_files/DOCX file1.docx        |application/vnd.openxmlformats-officedocument.wordprocessingml.document |
 * When the user invokes the API
-* Then the status code for the request is "200"
+* Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following
      |JSON Path     |Expected Result|
      |--------------|---------------|
-     |$.length()    |35             |
+     |$.length()    |15             |

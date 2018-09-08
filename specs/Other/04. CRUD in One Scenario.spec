@@ -6,6 +6,7 @@ This is an executable specification file which follows markdown syntax.
 Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 
+
 CRUD operation for a sku and get all the 9 questions in a deck
 --------------------------------------------------------------
 * Given that a user needs to invoke "Create SKU"

@@ -85,6 +85,18 @@ public class AllStepsDefinitions{
         apiStepImpl.setRequestPayload(payload);
     }
 
+    // Use this method to replace the values of the request payload
+    @Step("And the user set values to the request payload placeholders as follows <table>")
+    public void replaceAttributesInRequestPayload(Table table) throws IOException {
+        apiStepImpl.replaceAttributesInRequestPayload(table);
+    }
+
+    // Use this method to replace the values of the request payload using data stores
+    @Step("And the user set values to the request payload placeholders using data stores as follows <table>")
+    public void replaceAttributesInRequestPayloadFromDataStores(Table table) throws IOException {
+        apiStepImpl.replaceAttributesInRequestPayloadFromDataStores(table);
+    }
+
     // Use this method to set the form-data key values for the request template in the Excel file
     @Step("And the user set the form-data key value pairs as follows <table>")
     public void setFormData(Table table) throws IOException {
