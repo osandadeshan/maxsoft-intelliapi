@@ -21,21 +21,23 @@ public abstract class TextFile {
         BufferedWriter writer = null;
         try
         {
-            writer = new BufferedWriter( new FileWriter(filePath));
+            File file = new File(filePath);
+            file.delete();
+            file.createNewFile();
+            writer = new BufferedWriter(new FileWriter(filePath));
             writer.write(text);
-
         }
-        catch ( IOException e)
+        catch (IOException e)
         {
         }
         finally
         {
             try
             {
-                if ( writer != null)
+                if (writer != null)
                     writer.close( );
             }
-            catch ( IOException e)
+            catch (IOException e)
             {
             }
         }
@@ -46,7 +48,6 @@ public abstract class TextFile {
         String isAuthenticationRequired = String.valueOf(getSavedValueForScenario("Is authentication required?").toLowerCase());
         String isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase());
         String accessTokenString = String.valueOf(getSavedValueForScenario("Provide the access token if you need to authorize the API manually").toLowerCase());
-
         try {
             content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
             if ((Boolean.valueOf(isAuthenticationRequired).equals(Boolean.TRUE) || isAuthenticationRequired.equals("yes") ||

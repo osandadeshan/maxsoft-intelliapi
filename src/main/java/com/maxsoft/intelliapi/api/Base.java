@@ -1375,9 +1375,9 @@ public class Base {
         JSONParser parser = new JSONParser();
         Object obj = parser.parse(JsonArrayResults);
         JSONArray array = (JSONArray)obj;
-
         File inputFile = new File(CURRENT_DIRECTORY + csvFilePath);
-        inputFile.getParentFile().mkdirs();
+        inputFile.delete();
+        inputFile.createNewFile();
         String[] header = {header1};
         CSVWriter writer = new CSVWriter(new FileWriter(inputFile), ',');
         writer.writeNext(header);
@@ -1428,6 +1428,10 @@ public class Base {
         String tableString = board.setInitialBlock(new StringTable(board, 75, headersList, rowsList).tableToBlocks()).build().getPreview();
         System.out.println("\nResults " + additional + " from the database for the executed query: \n" + tableString);
         Gauge.writeMessage("\nResults " + additional + " from the database for the executed query: \n" + tableString);
+    }
+
+    public void savePropertyFileValuesToDataStore(String dataStoreType, String dataStoreVariableName, String propertyName){
+        saveToDataStore(dataStoreType, dataStoreVariableName, System.getenv(propertyName));
     }
 
 

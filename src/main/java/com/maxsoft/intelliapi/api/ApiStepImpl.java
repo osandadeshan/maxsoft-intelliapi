@@ -679,5 +679,14 @@ public class ApiStepImpl extends Base {
         }
     }
 
+    // Use this method to save property file values into data stores
+    public void savePropertyFileValuesToDataStore(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.savePropertyFileValuesToDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), row.getCell(columnNames.get(2)));
+        }
+    }
+
 
 }

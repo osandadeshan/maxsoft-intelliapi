@@ -38,6 +38,12 @@ public class AllStepsDefinitions{
         apiStepImpl.apiToBeInvoked(apiEndpointName);
     }
 
+    // Use this method to save property file values into data stores
+    @Step("And the user saves environment property file data into data stores <table>")
+    public void savePropertyFileValuesToDataStore(Table table) {
+        apiStepImpl.savePropertyFileValuesToDataStore(table);
+    }
+
     // Use this method to replace the placeholders inside the API Endpoint in Excel
     @Step("And the user set values to the API endpoint placeholders as follows <table>")
     public void setApiEndpointReplacements(Table table) throws IOException {
