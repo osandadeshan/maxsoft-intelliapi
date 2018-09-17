@@ -11,6 +11,9 @@ package com.maxsoft.intelliapi.util.fileoperator;
 
 import com.thoughtworks.gauge.Gauge;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import static com.maxsoft.intelliapi.api.Base.getSavedValueForScenario;
 
@@ -21,6 +24,8 @@ public abstract class TextFile {
         BufferedWriter writer = null;
         try
         {
+            Path pathToFile = Paths.get(filePath);
+            Files.createDirectories(pathToFile.getParent());
             File file = new File(filePath);
             file.delete();
             file.createNewFile();
