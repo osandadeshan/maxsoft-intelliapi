@@ -17,6 +17,7 @@ import com.maxsoft.intelliapi.util.fileoperator.TextFile;
 import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.maxsoft.intelliapi.util.table.Board;
 import com.maxsoft.intelliapi.util.table.StringTable;
+import com.maxsoft.intelliapi.util.time.EpochTime;
 import com.opencsv.CSVWriter;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.datastore.DataStore;
@@ -1432,6 +1433,32 @@ public class Base {
 
     public void savePropertyFileValuesToDataStore(String dataStoreType, String dataStoreVariableName, String propertyName){
         saveToDataStore(dataStoreType, dataStoreVariableName, System.getenv(propertyName));
+    }
+
+    public void saveCurrentEpochTime(String secondsOrMillis, String dataStoreType, String dataStoreVariableName){
+        switch (secondsOrMillis.toLowerCase()){
+            case "seconds":
+                saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(EpochTime.getCurrentEpochTimeInSeconds()));
+                break;
+            case "milliseconds":
+                saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(EpochTime.getCurrentEpochTimeInMilliSeconds()));
+                break;
+            default:
+                Assert.fail("Invalid parameter for Seconds/Milliseconds. Please provide the string as Seconds or Milliseconds.");
+        }
+    }
+
+    public void saveEpochTime(String timestampPattern, String timestamp, String secondsOrMillis, String dataStoreType, String dataStoreVariableName) throws java.text.ParseException {
+        switch (secondsOrMillis.toLowerCase()){
+            case "seconds":
+                saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(EpochTime.getEpochTimeInSeconds(timestampPattern, timestamp)));
+                break;
+            case "milliseconds":
+                saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(EpochTime.getEpochTimeInMilliSeconds(timestampPattern, timestamp)));
+                break;
+            default:
+                Assert.fail("Invalid parameter for Seconds/Milliseconds. Please provide the string as Seconds or Milliseconds.");
+        }
     }
 
 

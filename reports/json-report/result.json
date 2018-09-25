@@ -1,35 +1,44 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Sep 17, 2018 at 4:50pm",
+	"timestamp": "Sep 25, 2018 at 9:26pm",
 	"successRate": 100,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 10030,
+	"executionTime": 4118,
 	"executionStatus": "pass",
 	"specResults": [
 		{
-			"specHeading": "Get Staging PI Token Specification",
-			"fileName": "C:\\Users\\unimaos\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Access Token\\Get Staging PI Token.spec",
-			"tags": [
-				"get_pi_token",
-				"staging_token"
-			],
-			"executionTime": 7260,
+			"specHeading": "Epoch Time Specification",
+			"fileName": "C:\\Users\\unimaos\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Other\\08. Epoch Time.spec",
+			"tags": [],
+			"executionTime": 913,
 			"executionStatus": "pass",
 			"scenarios": [
 				{
-					"scenarioHeading": "Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file",
-					"tags": [
-						"get_pi_token",
-						"staging"
-					],
-					"executionTime": 7260,
+					"scenarioHeading": "Current Epoch time",
+					"tags": [],
+					"executionTime": 864,
 					"executionStatus": "pass",
-					"contexts": [
+					"contexts": [],
+					"teardowns": [],
+					"items": [
 						{
 							"itemType": "step",
-							"stepText": "Given that a user needs to invoke \"Get Staging PI Token\"",
-							"table": null,
+							"stepText": "And the user saves the current epoch time in \"Seconds\" inside data stores",
+							"table": {
+								"headers": [
+									"Data Store Type",
+									"Data Store Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"scenario",
+											"currentEpochTime"
+										]
+									}
+								]
+							},
 							"beforeStepHookFailure": null,
 							"afterStepHookFailure": null,
 							"result": {
@@ -37,40 +46,27 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 2258,
+								"executionTime": 864,
 								"skippedReason": "",
 								"messages": [
-									"API Endpoint is: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
-									"HTTP Method is: POST\n\n"
+									"\"1537890988\" is successfully saved as a text in Scenario Data Store [currentEpochTime]"
 								],
 								"errorType": "assertion"
 							}
 						},
 						{
 							"itemType": "step",
-							"stepText": "And the user set the request authentication configurations as follows",
+							"stepText": "And the user saves the current epoch time in \"Milliseconds\" inside data stores",
 							"table": {
 								"headers": [
-									"Configuration",
-									"Configuration Value"
+									"Data Store Type",
+									"Data Store Variable Name"
 								],
 								"rows": [
 									{
 										"cells": [
-											"Is authentication required?",
-											"Yes"
-										]
-									},
-									{
-										"cells": [
-											"Do you need to retrieve the access token from the text file?",
-											"Yes"
-										]
-									},
-									{
-										"cells": [
-											"Provide the access token if you need to authorize the API manually",
-											"N/A"
+											"suite",
+											"currentEpochTime"
 										]
 									}
 								]
@@ -84,32 +80,39 @@
 								"errorMessage": "",
 								"executionTime": 0,
 								"skippedReason": "",
-								"messages": [],
+								"messages": [
+									"\"1537890988474\" is successfully saved as a text in Suite Data Store [currentEpochTime]"
+								],
 								"errorType": "assertion"
 							}
 						}
 					],
+					"beforeScenarioHookFailure": null,
+					"afterScenarioHookFailure": null,
+					"skipErrors": [],
+					"tableRowIndex": -1
+				},
+				{
+					"scenarioHeading": "Epoch time for a given timestamp",
+					"tags": [],
+					"executionTime": 49,
+					"executionStatus": "pass",
+					"contexts": [],
 					"teardowns": [],
 					"items": [
 						{
 							"itemType": "step",
-							"stepText": "And the user set the request attributes as follows",
+							"stepText": "And the user converts the \"yyyy-MM-dd'T'HH:mm:ss.SSSZ\" formatted \"2018-09-25T11:56:00.000-0000\" timestamp into epoch time in \"Seconds\" and saves inside data stores",
 							"table": {
 								"headers": [
-									"Attribute Value In JSON Template",
-									"Attribute Value To Be Set"
+									"Data Store Type",
+									"Data Store Variable Name"
 								],
 								"rows": [
 									{
 										"cells": [
-											"#username",
-											"osanda12"
-										]
-									},
-									{
-										"cells": [
-											"#password",
-											"Password1"
+											"scenario",
+											"epochTime"
 										]
 									}
 								]
@@ -121,68 +124,27 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 301,
+								"executionTime": 49,
 								"skippedReason": "",
 								"messages": [
-									"The JSON request body that you are going to use for the API is:\n{\n \"userName\": \"osanda12\",\n \"password\": \"Password1\"\n}"
+									"\"1537876560\" is successfully saved as a text in Scenario Data Store [epochTime]"
 								],
 								"errorType": "assertion"
 							}
 						},
 						{
 							"itemType": "step",
-							"stepText": "When the user invokes the API",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 4551,
-								"skippedReason": "",
-								"messages": [
-									"Reading the access token from the text file in the directory of \"C:\\Users\\unimaos\\IdeaProjects\\MaxSoft-IntelliAPI\\resources/access_tokens/saved_valid_access_token.txt\" is failed\n\n",
-									"Invoked API Endpoint: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
-									"HTTP Method is: POST\n\n",
-									"Response Time is: 2930ms\n\n",
-									"Response is: \n{\n    \"status\": \"success\",\n    \"data\": \"eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IlVTIiwidHlwZSI6ImF0IiwiZXhwIjoxNTM3MTk0MDU4LCJpYXQiOjE1MzcxODMyNTcsInNlc3NpZCI6IjU2M2MzMmE2LTE1ZjktNGNhNy05ZDljLWM5NzBjZGIwM2EzNSJ9.icijBkNeRjoofDhzM_2oXCgbnl6vzIXQ_mpD1nZ63lcr_6SfT9lIBYjzxuI_cFlIYXHYJ4vrzIbjajGx_P-JKLepkIBAzzzi4xVWDkRwoxOppGCE5zMIcSf42gkqJoVzSH47ZLpXzvlVsn-dxnw-ZTxH1KsZVkfJSz0cybuRLuM\"\n}\n\n",
-									"Response Headers are: \nServer=Apache-Coyote/1.1\nCorrelation-Id=7484e556-e9f9-45a2-be4f-5c57c4a92bad\nLocation=https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IlVTIiwidHlwZSI6ImF0IiwiZXhwIjoxNTM3MTk0MDU4LCJpYXQiOjE1MzcxODMyNTcsInNlc3NpZCI6IjU2M2MzMmE2LTE1ZjktNGNhNy05ZDljLWM5NzBjZGIwM2EzNSJ9.icijBkNeRjoofDhzM_2oXCgbnl6vzIXQ_mpD1nZ63lcr_6SfT9lIBYjzxuI_cFlIYXHYJ4vrzIbjajGx_P-JKLepkIBAzzzi4xVWDkRwoxOppGCE5zMIcSf42gkqJoVzSH47ZLpXzvlVsn-dxnw-ZTxH1KsZVkfJSz0cybuRLuM\nContent-Type=application/json;charset=UTF-8\nTransfer-Encoding=chunked\nDate=Mon, 17 Sep 2018 11:20:57 GMT"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "Then the status code for the request is \"201\"",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 4,
-								"skippedReason": "",
-								"messages": [],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the JSON Path Assertions for the response should be equal to the following",
+							"stepText": "And the user converts the \"yyyy-MM-dd'T'HH:mm:ss.SSSZ\" formatted \"2018-09-25T11:56:00.000-0000\" timestamp into epoch time in \"Milliseconds\" and saves inside data stores",
 							"table": {
 								"headers": [
-									"JSON Path",
-									"Expected Result"
+									"Data Store Type",
+									"Data Store Variable Name"
 								],
 								"rows": [
 									{
 										"cells": [
-											"$.status",
-											"success"
+											"suite",
+											"epochTime"
 										]
 									}
 								]
@@ -194,27 +156,10 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 124,
-								"skippedReason": "",
-								"messages": [],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And save the access token in the response which is located inside the JSON Path of \"$.data\"",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 22,
+								"executionTime": 0,
 								"skippedReason": "",
 								"messages": [
-									"Successfully saved the access token into the text file in the directory of \"C:\\Users\\unimaos\\IdeaProjects\\MaxSoft-IntelliAPI\\resources/access_tokens/saved_valid_access_token.txt\""
+									"\"1537876560000\" is successfully saved as a text in Suite Data Store [epochTime]"
 								],
 								"errorType": "assertion"
 							}
@@ -230,7 +175,7 @@
 			"datatable": null,
 			"beforeSpecHookFailure": null,
 			"afterSpecHookFailure": null,
-			"passedScenarioCount": 1,
+			"passedScenarioCount": 2,
 			"failedScenarioCount": 0,
 			"skippedScenarioCount": 0
 		}
@@ -240,7 +185,7 @@
 	"passedSpecsCount": 1,
 	"failedSpecsCount": 0,
 	"skippedSpecsCount": 0,
-	"passedScenariosCount": 1,
+	"passedScenariosCount": 2,
 	"failedScenariosCount": 0,
 	"skippedScenariosCount": 0
 }

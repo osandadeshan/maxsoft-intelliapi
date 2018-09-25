@@ -308,6 +308,18 @@ public class AllStepsDefinitions{
         apiStepImpl.compareDataStoresNotContains(table);
     }
 
+    // Use this method to save current epochTime into data stores
+    @Step("And the user saves the current epoch time in <secondsOrMillis> inside data stores <table>")
+    public void saveCurrentEpochTime(String secondsOrMillis, Table table) {
+        apiStepImpl.saveCurrentEpochTime(secondsOrMillis, table);
+    }
+
+    // Use this method to convert a given format timestamp into epochTime and save it into data stores
+    @Step("And the user converts the <timestampPattern> formatted <timestamp> timestamp into epoch time in <secondsOrMillis> and saves inside data stores <table>")
+    public void saveEpochTime(String timestampPattern, String timestamp, String secondsOrMillis, Table table) throws java.text.ParseException {
+        apiStepImpl.saveEpochTime(timestampPattern, timestamp, secondsOrMillis, table);
+    }
+
     @Step("Given a user successfully connected to the MySQL Driver")
     public void loadMySqlDriver() {
         mySQLStepImpl.loadMySqlDriver();

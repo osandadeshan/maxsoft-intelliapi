@@ -1,1 +1,1 @@
-var index = {"Tags":{"get_pi_token":["specs\\Access Token\\Get Staging PI Token.html"],"staging":["specs\\Access Token\\Get Staging PI Token.html"],"staging_token":["specs\\Access Token\\Get Staging PI Token.html"]},"Specs":{"Get Staging PI Token Specification":["specs\\Access Token\\Get Staging PI Token.html"]}};
+var index = {"Tags":{},"Specs":{"Epoch Time Specification":["specs\\Other\\08. Epoch Time.html"]}};

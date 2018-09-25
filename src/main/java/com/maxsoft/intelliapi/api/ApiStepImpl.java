@@ -688,5 +688,23 @@ public class ApiStepImpl extends Base {
         }
     }
 
+    // Use this method to save current epochTime into data stores
+    public void saveCurrentEpochTime(String secondsOrMillis, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.saveCurrentEpochTime(secondsOrMillis, row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+        }
+    }
+
+    // Use this method to convert a given format timestamp into epochTime and save it into data stores
+    public void saveEpochTime(String timestampPattern, String timestamp, String secondsOrMillis, Table table) throws java.text.ParseException {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.saveEpochTime(timestampPattern, timestamp, secondsOrMillis, row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+        }
+    }
+
 
 }
