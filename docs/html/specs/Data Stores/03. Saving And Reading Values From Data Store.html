@@ -1,0 +1,1439 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\style.css"><h1>Saving And Reading Values From Data Store Specification</h1>
+<p>Date Created    : 01/07/2018
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<h2>Get configurations of the testing environment</h2>
+<ul>
+<li>Configurations of the testing environment</li>
+</ul>
+<h2>Saving values to Data Store</h2>
+<ul>
+<li>
+<p>And the user save the values inside data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>variable1</td>
+<td>Osanda Deshan</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>variable2</td>
+<td>Osanda Nimalarathna</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>variable3</td>
+<td>Software Automation</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Reading values from Data Store</h2>
+<ul>
+<li>
+<p>And the user read the values from data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>variable1</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>variable2</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>variable3</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Invoke PI API in Staging Environment using valid username and password using payload text file</h2>
+<p>tags: get_pi_token, staging</p>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request payload as follows &lt;file:/resources/payloads/login.txt&gt;</p>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Existence in the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>isExists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>true</td>
+</tr>
+<tr>
+<td>$.osa</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And save the access token in the response which is located inside the JSON Path of &quot;$.data&quot;</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>variable4</td>
+<td>$.status</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>variable5</td>
+<td>$.data</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user read the values from data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>variable4</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>variable5</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file</h2>
+<p>tags: get_pi_token, staging</p>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user save the values inside data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>osanda12</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>variable6</td>
+<td>Osanda Nimalarathna</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>variable7</td>
+<td>Software Automation</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request headers using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Header Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Header Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header1</td>
+<td>y</td>
+<td>spec</td>
+<td>variable6</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request attributes using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>y</td>
+<td>scenario</td>
+<td>username</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>#password</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Password1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>$.status</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should contains the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>isContains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should contains the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>y</td>
+<td>scenario</td>
+<td>status</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should not contains the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>notContains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should not contains the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>y</td>
+<td>scenario</td>
+<td>variable7</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should not be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>y</td>
+<td>scenario</td>
+<td>status</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should not be equal to the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And save the access token in the response which is located inside the JSON Path of &quot;$.data&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Existence in the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>isExists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>true</td>
+</tr>
+<tr>
+<td>$.osa</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>y</td>
+<td>scenario</td>
+<td>username</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>password</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Password1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>y</td>
+<td>scenario</td>
+<td>username</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>#password</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Password1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Invoke PI API in Staging Environment using valid username and password using request attributes from text files</h2>
+<p>tags: get_pi_token, staging</p>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user save the values inside data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>osanda12</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>variable6</td>
+<td>Osanda Nimalarathna</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>variable7</td>
+<td>Software Automation</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request headers using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Header Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Header Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header1</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;file:/resources/texts/header1.txt&gt;</td>
+</tr>
+<tr>
+<td>header2</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;file:/resources/texts/header1.txt&gt;</td>
+</tr>
+<tr>
+<td>header3</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;file:/resources/texts/header1.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request attributes using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>y</td>
+<td>scenario</td>
+<td>username</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>#password</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>&lt;file:/resources/texts/password.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>$.status</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should contains the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>isContains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>&lt;file:/resources/texts/success_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should contains the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>y</td>
+<td>scenario</td>
+<td>status</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;file:/resources/texts/success_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should not contains the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>notContains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>&lt;file:/resources/texts/failure_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path values of the response should not contains the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>y</td>
+<td>scenario</td>
+<td>variable7</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;file:/resources/texts/failure_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>&lt;file:/resources/texts/success_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should not be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>fail</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>&lt;file:/resources/texts/failure_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>y</td>
+<td>scenario</td>
+<td>status</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>success</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>&lt;file:/resources/texts/success_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should not be equal to the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>fail</td>
+</tr>
+<tr>
+<td>$.status</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>&lt;file:/resources/texts/failure_status.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And save the access token in the response which is located inside the JSON Path of &quot;$.data&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Existence in the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>isExists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>true</td>
+</tr>
+<tr>
+<td>$.osa</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>&lt;file:/resources/texts/username.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Parameter</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>&lt;file:/resources/texts/username.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>y</td>
+<td>scenario</td>
+<td>username</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>password</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>&lt;file:/resources/texts/password.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>y</td>
+<td>scenario</td>
+<td>username</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>#password</td>
+<td>n</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>&lt;file:/resources/texts/password.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Replace API Endpoint placeholders - Scenario 1</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Purchase Validator API&quot;</p>
+</li>
+<li>
+<p>And the user set values to the API endpoint placeholders as follows</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder In JSON Template</th>
+<th>Replacement Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#skuid</td>
+<td>com.pearsoned.smartflashcards.expert.elementary</td>
+</tr>
+<tr>
+<td>#purchaseToken</td>
+<td>&lt;file:/resources/access_tokens/purchase_token.txt&gt;</td>
+</tr>
+<tr>
+<td>#access_token</td>
+<td>&lt;file:/resources/access_tokens/google_drive_token.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;403&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.error.errors[0].reason</td>
+<td>insufficientPermissions</td>
+</tr>
+<tr>
+<td>$.error.errors[0].message</td>
+<td>Insufficient Permission</td>
+</tr>
+<tr>
+<td>$.error.code</td>
+<td>403</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Replace API Endpoint placeholders - Scenario 2</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Purchase Validator API&quot;</p>
+</li>
+<li>
+<p>And the user save the values inside data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>purchaseToken</td>
+<td>jghpbegbjgnpfdfgjjkhdpeo.AO-J1OwpcCUVIa0</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>accessToken</td>
+<td>ya29.GlzGBXmxF34s99wQ0o8ie7B4P85ld_FUNBZxizYB</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set values to the API endpoint placeholders using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder In JSON Template</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Replacement Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#skuid</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>com.pearsoned.smartflashcards.expert.elementary</td>
+</tr>
+<tr>
+<td>#purchaseToken</td>
+<td>y</td>
+<td>scenario</td>
+<td>purchaseToken</td>
+<td></td>
+</tr>
+<tr>
+<td>#access_token</td>
+<td>y</td>
+<td>scenario</td>
+<td>accessToken</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;401&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.error.errors[0].reason</td>
+<td>authError</td>
+</tr>
+<tr>
+<td>$.error.errors[0].message</td>
+<td>Invalid Credentials</td>
+</tr>
+<tr>
+<td>$.error.code</td>
+<td>401</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Validate the data store values</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request payload as follows &lt;file:/resources/payloads/login.txt&gt;</p>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>$.status</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user save the values inside data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>osanda12</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>success</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>mobileUserName</td>
+<td>osanda12</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the values inside the data stores equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>osanda12</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the values inside two data stores should be equal</p>
+<table>
+<thead>
+<tr>
+<th>DataStore 1 Type</th>
+<th>Variable 1 Name</th>
+<th>DataStore 2 Type</th>
+<th>Variable 2 Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>Scenario</td>
+<td>mobileUserName</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the values inside the data stores not equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>osanda</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>succes</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the values inside two data stores should not be equal</p>
+<table>
+<thead>
+<tr>
+<th>DataStore 1 Type</th>
+<th>Variable 1 Name</th>
+<th>DataStore 2 Type</th>
+<th>Variable 2 Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>Scenario</td>
+<td>status</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the values inside the data stores contain the following</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>osanda</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>succes</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the value inside a data store should contain the value of the other data store</p>
+<table>
+<thead>
+<tr>
+<th>DataStore 1 Type</th>
+<th>Variable 1 Name</th>
+<th>DataStore 2 Type</th>
+<th>Variable 2 Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>Scenario</td>
+<td>mobileUserName</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the values inside the data stores not contain the following</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>deshan</td>
+</tr>
+<tr>
+<td>Scenario</td>
+<td>status</td>
+<td>fail</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the value inside a data store should not contain the value of the other data store</p>
+<table>
+<thead>
+<tr>
+<th>DataStore 1 Type</th>
+<th>Variable 1 Name</th>
+<th>DataStore 2 Type</th>
+<th>Variable 2 Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>Scenario</td>
+<td>status</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\02. Reading Values from Data Stores.html"><</a></li><li class="nav"><a href="..\..\index.html">=</a></li><li class="nav"><a href="..\Other\01. Text files operations.html">></a></li></center></article>

@@ -1314,7 +1314,7 @@ public class Base {
             Assert.assertEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
         }
         else {
-            Assert.assertEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
+            Assert.assertEquals(String.valueOf(JsonPath.read(responseString, jsonPath)), expectedResult, nullableMessage);
         }
     }
 
@@ -1354,7 +1354,7 @@ public class Base {
             Assert.assertNotEquals(JsonPath.read(responseString, jsonPath).toString(), String.valueOf(expectedResult), nullableMessage);
         }
         else {
-            Assert.assertNotEquals(StringUtils.strip(String.valueOf(JsonPath.read(responseString, jsonPath)), "\"[]"), expectedResult, nullableMessage);
+            Assert.assertNotEquals(String.valueOf(JsonPath.read(responseString, jsonPath)), expectedResult, nullableMessage);
         }
     }
 

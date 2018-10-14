@@ -1,0 +1,563 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\..\..\..\style.css"><h1>Search Expert Bundle Specification</h1>
+<p>Date Created    : 05/09/2018
+Version         : 1.0.0
+Owner           : Kinkini Gamage
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: bundle, get_bundle</p>
+<h2>Get expert deck bundle by title</h2>
+<ul>
+<li>
+<p>Create 3 expert bundles</p>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId1</td>
+<td>n</td>
+<td>scenario</td>
+<td></td>
+<td>osanda12</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>y</td>
+<td>scenario</td>
+<td>title1</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Get Expert Bundle using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.bundles[-1:].subjectId</td>
+<td>Information Technology1</td>
+</tr>
+<tr>
+<td>$.bundles[-1:].title</td>
+<td>Network Security1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Delete 3 expert bundles and associated 6 expert decks</p>
+</li>
+</ul>
+<h2>Get expert deck bundle by subject name</h2>
+<ul>
+<li>
+<p>Create 3 expert bundles</p>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId1</td>
+<td>n</td>
+<td>scenario</td>
+<td></td>
+<td>osanda12</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>subjectName</td>
+<td>y</td>
+<td>scenario</td>
+<td>subjectName1</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Get Expert Bundle using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.bundles[-1:].subjectId</td>
+<td>Information Technology1</td>
+</tr>
+<tr>
+<td>$.bundles[-1:].title</td>
+<td>Network Security1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Delete 3 expert bundles and associated 6 expert decks</p>
+</li>
+</ul>
+<h2>Get expert deck bundle by bookAuthorName</h2>
+<ul>
+<li>
+<p>Create 3 expert bundles</p>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId1</td>
+<td>n</td>
+<td>scenario</td>
+<td></td>
+<td>osanda12</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bookAuthorName</td>
+<td>y</td>
+<td>scenario</td>
+<td>bookAuthor1</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Get Expert Bundle using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.bundles[-1:].subjectId</td>
+<td>Information Technology1</td>
+</tr>
+<tr>
+<td>$.bundles[-1:].title</td>
+<td>Network Security1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Delete 3 expert bundles and associated 6 expert decks</p>
+</li>
+</ul>
+<h2>Get expert deck bundle by bookTitle</h2>
+<ul>
+<li>
+<p>Create 3 expert bundles</p>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId1</td>
+<td>n</td>
+<td>scenario</td>
+<td></td>
+<td>osanda12</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bookTitle</td>
+<td>y</td>
+<td>scenario</td>
+<td>bookTitle1</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Get Expert Bundle using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.bundles[-1:].subjectId</td>
+<td>Information Technology1</td>
+</tr>
+<tr>
+<td>$.bundles[-1:].title</td>
+<td>Network Security1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Delete 3 expert bundles and associated 6 expert decks</p>
+</li>
+</ul>
+<h2>Search expert deck bundle by searchQuery</h2>
+<ul>
+<li>
+<p>Create &quot;testBundle1&quot; bundle of id &quot;bundleId1&quot; with two expert decks of ids &quot;expertDeckId1&quot; and &quot;expertDeckId2&quot;</p>
+</li>
+<li>
+<p>Create &quot;testBundle2&quot; bundle of id &quot;bundleId2&quot; with two expert decks of ids &quot;expertDeckId3&quot; and &quot;expertDeckId4&quot;</p>
+</li>
+<li>
+<p>Create &quot;testBundle3&quot; bundle of id &quot;bundleId3&quot; with two expert decks of ids &quot;expertDeckId5&quot; and &quot;expertDeckId6&quot;</p>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId1</td>
+<td>n</td>
+<td>scenario</td>
+<td></td>
+<td>osanda12</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>searchQuery</td>
+<td>y</td>
+<td>scenario</td>
+<td>title</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Get Expert Bundle using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.bundles[-1:].subjectId</td>
+<td>Information Security</td>
+</tr>
+<tr>
+<td>$.bundles[-1:].title</td>
+<td>testBundle3</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Delete 3 expert bundles and associated 6 expert decks</p>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\Find Expert Bundle\Find Expert Bundle.html"><</a></li><li class="nav"><a href="..\..\..\..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\..\Load Decks\Load Decks of a Bundle.html">></a></li></center></article>

@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta charset="utf-8" />
     <title>Gauge Test Results</title>
-    <link rel="shortcut icon" type="image/x-icon" href="..\../images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="..\../css/open-sans.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="..\../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
   </head>
   <body>
   <header class="top">
     <div class="header">
       <div class="container">
         <div class="logo">
-          <a href="..\.."><img src="..\../images/logo.png" alt="Report logo"></a>
+          <a href="../.."><img src="../../images/logo.png" alt="Report logo"></a>
         </div>
         <h2 class="project">Project: MaxSoft-IntelliAPI</h2>
       </div>
@@ -30,21 +30,21 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,10,0" data-total="10">
+        <svg id="pie-chart" data-results="0,12,0" data-total="12">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/10</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/12</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 10/10</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 12/12</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/10</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/12</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">10</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">12</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
         <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">10</span><span class="txt">Passed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">12</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -52,7 +52,7 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>qa</span>
+          <span>default</span>
         </li>
         
         <li>
@@ -61,13 +61,16 @@
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:02:33</span>
+          <span>00:02:10</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Sep 8, 2018 at 2:43pm</span>
+          <span>Oct 14, 2018 at 6:03pm</span>
         </li>
       </ul>
+      
+  
+
       
   
 
@@ -92,12 +95,12 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="04. CRUD in One Scenario.html">
+          <a href="../Data Stores/03. Saving And Reading Values From Data Store.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
-              <span id="time" class="time">00:00:22</span>
+              <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
+              <span id="time" class="time">00:00:14</span>
             </li>
           </a>
           
@@ -106,11 +109,29 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
-              <span id="time" class="time">00:00:09</span>
+              <span id="time" class="time">00:00:08</span>
             </li>
           </a>
           
-          <a href="..\Data Stores\01. Saving to Data Stores.html">
+          <a href="08. Epoch Time.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Epoch Time Specification</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="09. Get Student Availablity - Negative Tests - 404 Error.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Get Student Availability - Negative Tests Specification - 404 Error</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="../Data Stores/01. Saving to Data Stores.html">
              
               <li class='passed spec-name'>
             
@@ -119,7 +140,7 @@
             </li>
           </a>
           
-          <a href="..\Data Stores\02. Reading Values from Data Stores.html">
+          <a href="../Data Stores/02. Reading Values from Data Stores.html">
              
               <li class='passed spec-name'>
             
@@ -133,34 +154,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Text Files Operations Specification</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
-          <a href="05. Form-Data Example.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
-              <span id="time" class="time">00:00:21</span>
-            </li>
-          </a>
-          
-          <a href="06. Request Placeholders.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
               <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="..\Data Stores\03. Saving And Reading Values From Data Store.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:19</span>
             </li>
           </a>
           
@@ -178,7 +172,34 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Create All Type Question using Question Service - Negative Data Driven Test Specification2</span>
-              <span id="time" class="time">00:00:57</span>
+              <span id="time" class="time">00:00:46</span>
+            </li>
+          </a>
+          
+          <a href="04. CRUD in One Scenario.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
+              <span id="time" class="time">00:00:16</span>
+            </li>
+          </a>
+          
+          <a href="05. Form-Data Example.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
+              <span id="time" class="time">00:00:22</span>
+            </li>
+          </a>
+          
+          <a href="06. Request Placeholders.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
+              <span id="time" class="time">00:00:06</span>
             </li>
           </a>
           
@@ -193,8 +214,8 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec">Form-Data Example Specification</h3>
-        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
+        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec">Form-Data Example Specification</h3>
+        <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
@@ -205,12 +226,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec" readonly/>
+          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:21</span>
+        <span class="time">00:00:22</span>
       </div>
 
 	
@@ -222,6 +243,7 @@
     
   
 
+    
     
 
     <div class="content">
@@ -248,12 +270,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Get Google OAuth Access token</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -284,6 +309,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -292,25 +320,22 @@ Description  : This is an executable specification file which follows markdown s
     
   
     
-      <span class='parameter'>"Get Google OAuth Access Token using Refresh Token"</span>
+      <span class='parameter'>"Get OAuth Access Token from Refresh Token"</span>
     
   
   </div>
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://accounts.google.com/o/oauth2/token" rel="nofollow">https://accounts.google.com/o/oauth2/token</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -338,6 +363,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -379,80 +407,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
-  
-  
-  
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Form Params Map: <br/><br/></p>
- </div><div class="step-message"><p>refresh_token = 1/3wu2nvsunxK3mYRDTPun_8t8GeBEKkY–LYfEr9SIvU</p>
- </div><div class="step-message"><p>grant_type = refresh_token</p>
- </div><div class="step-message"><p>client_secret = fILuyCiaWDRElAP6MdWcJIdK</p>
- </div><div class="step-message"><p>client_id = 211897666304-ii96f12k6tf8h5k15sp41reo92osrgnm.apps.googleusercontent.com</p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
     
   
 
   
-
   
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
   
   
 
   
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://accounts.google.com/o/oauth2/token" rel="nofollow">https://accounts.google.com/o/oauth2/token</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2213ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “access_token”: “ya29.Gl0SBqOyTyZmLVR9dqM8oqQ2Schqfv_f8hLI_EjHGJOIex0sqlDjL4m_VszSmzlGjsrTtZPob3tIaR3aDeNCAPyYyNzO5Tms6xAPRIMBeDIhb2U08sJVhb_9SIUiTsE”,<br/>    “expires_in”: 3600,<br/>    “scope”: “<a href="https://www.googleapis.com/auth/androidpublisher%22" rel="nofollow">https://www.googleapis.com/auth/androidpublisher&#34;</a>,<br/>    “token_type”: “Bearer”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json; charset=utf-8<br/>X-Content-Type-Options=nosniff<br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Pragma=no-cache<br/>Expires=Mon, 01 Jan 1990 00:00:00 GMT<br/>Date=Sat, 08 Sep 2018 09:15:06 GMT<br/>Content-Disposition=attachment; filename=“json.txt”; filename*=UTF-8”json.txt<br/>Content-Encoding=gzip<br/>Server=ESF<br/>X-XSS-Protection=1; mode=block<br/>X-Frame-Options=SAMEORIGIN<br/>Alt-Svc=quic=”:443”; ma=2592000; v=“44,43,39,35”<br/>Transfer-Encoding=chunked</p>
- </div>
-      </div>
-    </div>
   
 
 	</li></ul></div></div>
@@ -480,6 +443,65 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
 
   
   
@@ -501,8 +523,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -531,6 +559,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -568,8 +599,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -592,6 +629,9 @@ Description  : This is an executable specification file which follows markdown s
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -604,12 +644,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Upload file</h3>
-    <span class="time">00:00:18</span>
+    <span class="time">00:00:21</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -625,7 +668,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -672,6 +715,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -687,18 +733,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://deckservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks" rel="nofollow">http://deckservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -726,6 +769,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -765,8 +811,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -795,6 +847,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -886,17 +941,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “title”: “API Deck3”,<br/>  “description”: “test description”,<br/>  “tags”: [<br/>    “API tag1”<br/>  ],<br/>  “subject”: {<br/>    “id”: 2,<br/>    “name”: “API Testing3”<br/>  },<br/>  “book”: {<br/>    “bookTitle”: “Automation3”,<br/>    “bookAuthor”: “Osanda Nimalarathna”,<br/>    “chapter”: “Chap. 04”<br/>  },<br/>  “purchaseInfo”: {<br/>    “purchasedDate”: 1512021142001,<br/>    “price”: 777,<br/>    “sku”: “com.pearson.smartflashcards.test3”<br/>  },<br/>  “notificationSettings”: {<br/>    “areNotificationsEnabled”: true,<br/>    “notificationTime”: “08:00 AM”,<br/>    “notificationFrequency”: “5”<br/>  },<br/>  “categoryId”: “5a5db30a12ef181b0af109ba”,<br/>  “examDate”: 1512021142000,<br/>  “userId”: “34”,<br/>  “parentDeckId”: “5”,<br/>  “tempDeckId”: “999”,<br/>  “archived”: true,<br/>  “cardPreview”: true,<br/>  “noOfCards”: 2,<br/>  “progress”: 3,<br/>  “downloads”: 12,<br/>  “deckAuthor”: “Osanda”,<br/>  “deckAuthorId”: “6”,<br/>  “thumbnailUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>  “status”: “Closed”,<br/>  “starred”: true<br/>}</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -924,6 +977,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -941,22 +997,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://deckservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks" rel="nofollow">http://deckservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 722ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: “5b93931b74a4d1001089031e”,<br/>    “title”: “API Deck3”,<br/>    “description”: “test description”,<br/>    “tags”: [<br/>        “API tag1”<br/>    ],<br/>    “categoryId”: “5a5db30a12ef181b0af109ba”,<br/>    “book”: {<br/>        “bookTitle”: “Automation3”,<br/>        “bookAuthor”: “Osanda Nimalarathna”,<br/>        “chapter”: “Chap. 04”<br/>    },<br/>    “purchaseInfo”: {<br/>        “purchasedDate”: 1512021142001,<br/>        “price”: 777.0,<br/>        “sku”: “com.pearson.smartflashcards.test3”<br/>    },<br/>    “notificationSettings”: {<br/>        “areNotificationsEnabled”: true,<br/>        “notificationTime”: “08:00 AM”,<br/>        “notificationFrequency”: “5”<br/>    },<br/>    “epochTime”: {<br/>        “createdAt”: 1536398107927,<br/>        “updatedAt”: 1536398107927<br/>    },<br/>    “examReminder”: {<br/>        <br/>    },<br/>    “examDate”: 1512021142000,<br/>    “userId”: “34”,<br/>    “parentDeckId”: “5”,<br/>    “tempDeckId”: “999”,<br/>    “createdAt”: “2018-09-08T09:15:07.927Z”,<br/>    “updatedAt”: “2018-09-08T09:15:07.928Z”,<br/>    “archived”: true,<br/>    “cardPreview”: true,<br/>    “noOfCards”: 2,<br/>    “progress”: 3,<br/>    “downloads”: 12,<br/>    “deckAuthor”: “Osanda”,<br/>    “deckAuthorId”: “6”,<br/>    “thumbnailUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “status”: “Closed”,<br/>    “starred”: true,<br/>    “userDeck”: true,<br/>    “expert”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>Date=Sat, 08 Sep 2018 09:15:07 GMT<br/>Server=nginx<br/>X-Application-Context=application:qa:8090<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-dsrjh<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1006<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -984,6 +1033,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1005,8 +1057,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1040,6 +1098,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1075,17 +1136,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>“5b93931b74a4d1001089031e” is successfully saved as a text in Specification Data Store [deckId]</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1113,6 +1172,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1134,18 +1196,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/cards/file" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/cards/file</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1173,6 +1232,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1212,8 +1274,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1242,6 +1310,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1293,27 +1364,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [deckId] is: “5b93931b74a4d1001089031e”<br/><br/></p>
- </div><div class="step-message"><p>Form Params Map: <br/><br/></p>
- </div><div class="step-message"><p>isExpert = false</p>
- </div><div class="step-message"><p>examDate =</p>
- </div><div class="step-message"><p>creatorPlatform = Web</p>
- </div><div class="step-message"><p>creatoredType = Auto</p>
- </div><div class="step-message"><p>deckId = 5b93931b74a4d1001089031e</p>
- </div><div class="step-message"><p>creatorId = Osanda</p>
- </div><div class="step-message"><p>creatoredSource = File</p>
- </div><div class="step-message"><p>title = DOCX file</p>
- </div><div class="step-message"><p>userId = osanda</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1341,6 +1400,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1376,8 +1438,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1397,7 +1465,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:17</span>
+      <span class='time'>Execution Time : 00:00:20</span>
     </h5>
   
   <div class='step-info passed'>
@@ -1406,6 +1474,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1423,22 +1494,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/cards/file" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/cards/file</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 16667ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>[<br/>    {<br/>        “id”: “5b93932bfd3bf300115af89c”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “Click Insert and then choose the _ _ _ _  you want from the different galleries.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “elements”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932bfd3bf300115af89d”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “For example, you can add a matching cover page, _ _ _ , and sidebar.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “header”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932bfd3bf300115af89e”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “If you need to stop reading before you reach the end, Word remembers where you left off even on another _ _ _ .“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT<em>ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “device”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932bfd3bf300115af89f”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “</em> _ _ _ is easier, too, in the new Reading view.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “Reading”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932bfd3bf300115af8a0”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “Save _ _  in Word with new buttons that show up where you need them.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT<em>ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “time”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932bfd3bf300115af8a1”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “</em> _ _  and styles also help keep your document coordinated.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “Themes”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932bfd3bf300115af8a2”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “To change the way a _ _ _ _ fits in your document, click it and a button for layout options appears next to it.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “picture”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8a3”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “To make your document look professionally produced, _ _  provides header, footer, cover page, and text box designs that complement each other.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT<em>ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “Word”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8a4”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “</em> _ _ provides a powerful way to help you prove your point.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “Video”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8a5”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “When you apply _ _ _ , your headings change to match the new theme.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “styles”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8a6”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “When you click Design and choose a new Theme, the _ _ _ _ , charts, and SmartArt graphics change to match your new theme.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “pictures”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8a7”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “When you click _ _ _ _ _ _ , you can paste in the embed code for the video you want to add.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “Online Video”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8a8”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “When you work on a table, click where you want to add a row or a _ _ _ , and then click the plus sign.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “column”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8a9”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “You can also type a keyword to _ _ _  online for the video that best fits your document.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “search”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    },<br/>    {<br/>        “id”: “5b93932cfd3bf300115af8aa”,<br/>        “question”: {<br/>            “timeout”: 0,<br/>            “media”: null,<br/>            “prompt”: “You can collapse parts of the _ _ _ _  and focus on the text you want.“,<br/>            “imageUrl”: “”,<br/>            “promptType”: “TEXT”<br/>        },<br/>        “stats”: null,<br/>        “kind”: “SHORT_ANSWER”,<br/>        “learningObjectives”: [<br/>            “Empty”<br/>        ],<br/>        “rationale”: “Test Rationalae”,<br/>        “tags”: [<br/>            “Empty”<br/>        ],<br/>        “creatorId”: “Osanda”,<br/>        “deckId”: “5b93931b74a4d1001089031e”,<br/>        “creatoredType”: “Auto”,<br/>        “creatorPlatform”: “Web”,<br/>        “creatoredSource”: “File”,<br/>        “correctAnswers”: [<br/>            1<br/>        ],<br/>        “answers”: [<br/>            {<br/>                “id”: 1,<br/>                “value”: “document”,<br/>                “type”: “TEXT”,<br/>                “caseSensitive”: false,<br/>                “correct”: false<br/>            }<br/>        ],<br/>        “tempQuestionId”: “tempQuestionId”<br/>    }<br/>]<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=add81e3e-2bfc-442b-8568-cf79855ddcc6<br/>Date=Sat, 08 Sep 2018 09:15:24 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-hq9pm<br/>X-XSS-Protection=1; mode=block<br/>transfer-encoding=chunked<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1466,6 +1530,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1487,8 +1554,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1517,6 +1590,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1552,8 +1628,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1562,6 +1644,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -1582,6 +1667,7 @@ Description  : This is an executable specification file which follows markdown s
   
 
     
+    
     </div>
   
 
@@ -1599,15 +1685,15 @@ Description  : This is an executable specification file which follows markdown s
 
 	
     <script type="text/javascript">
-      var loadingImage = "..\../images/loading.gif";
-      var closeButton = "..\../images/close.gif";
+      var loadingImage = "../../images/loading.gif";
+      var closeButton = "../../images/close.gif";
     </script>
-    <script src="..\../js/lightbox.js"></script>
-    <script src="..\../js/jquery-3.1.0.min.js" type="text/javascript"></script>
-    <script src="..\../js/auto-complete.min.js" type="text/javascript"></script>
-    <script src="..\../js/clipboard.min.js" type="text/javascript"></script>
-    <script src="..\../js/search_index.js" type="text/javascript"></script>
-    <script src="..\../js/main.js" type="text/javascript"></script>
+    <script src="../../js/lightbox.js"></script>
+    <script src="../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="../../js/auto-complete.min.js" type="text/javascript"></script>
+    <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+    <script src="../../js/search_index.js" type="text/javascript"></script>
+    <script src="../../js/main.js" type="text/javascript"></script>
     </body>
   </html>
 

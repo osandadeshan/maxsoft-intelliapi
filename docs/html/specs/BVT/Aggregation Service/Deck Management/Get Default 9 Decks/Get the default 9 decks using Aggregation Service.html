@@ -1,0 +1,134 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\..\style.css"><h1>Get the default 9 decks using Aggregation Service Specification</h1>
+<p>Date Created    : 4/11/2018
+Version         : 1.0.0
+Owner           : Kinkini Gamage
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get the default 9 decks using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get onboarding 9 decks</h2>
+<ul>
+<li>
+<p>And the user set the path parameters as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Parameter</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>api_user21</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.length()</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Verify that the notifications are disable for onboarding decks</h2>
+<ul>
+<li>
+<p>Get the default 9 decks</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$[0].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[1].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[2].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[3].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[4].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[5].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[6].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[7].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>$[8].notificationSettings.areNotificationsEnabled</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\Deck CRUD Operations\My Deck CRUD Operations.html"><</a></li><li class="nav"><a href="..\..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\SKU\Get SKUs\Get All SKUs.html">></a></li></center></article>

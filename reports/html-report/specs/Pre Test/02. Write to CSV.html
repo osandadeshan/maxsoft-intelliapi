@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta charset="utf-8" />
     <title>Gauge Test Results</title>
-    <link rel="shortcut icon" type="image/x-icon" href="..\../images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="..\../css/open-sans.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="..\../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
   </head>
   <body>
   <header class="top">
     <div class="header">
       <div class="container">
         <div class="logo">
-          <a href="..\.."><img src="..\../images/logo.png" alt="Report logo"></a>
+          <a href="../.."><img src="../../images/logo.png" alt="Report logo"></a>
         </div>
         <h2 class="project">Project: MaxSoft-IntelliAPI</h2>
       </div>
@@ -30,20 +30,20 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,1,0" data-total="1">
+        <svg id="pie-chart" data-results="1,1,0" data-total="2">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/1</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 1/2</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 1/1</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 1/2</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/2</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">1</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">2</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
         <li class="pass spec-filter" data-status="passed"><span class="value">1</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
@@ -52,22 +52,25 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>default</span>
+          <span>dev</span>
         </li>
         
         <li>
           <label>Success Rate </label>
-          <span>100%</span>
+          <span>50%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:26</span>
+          <span>00:00:31</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Sep 13, 2018 at 10:03pm</span>
+          <span>Oct 14, 2018 at 5:06pm</span>
         </li>
       </ul>
+      
+  
+
       
   
 
@@ -93,11 +96,20 @@
         <ul id="scenarios" class="spec-list">
         
           <a href="02. Write to CSV.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Write to CSV Specification</span>
+              <span id="time" class="time">00:00:21</span>
+            </li>
+          </a>
+          
+          <a href="01. Get Staging PI Token.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Write to CSV Specification</span>
-              <span id="time" class="time">00:00:22</span>
+              <span id="scenarioName" class="scenarioname">Get Staging PI Token Specification</span>
+              <span id="time" class="time">00:00:07</span>
             </li>
           </a>
           
@@ -112,11 +124,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Write to CSV.spec">Write to CSV Specification</h3>
+        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Write to CSV.spec">Write to CSV Specification</h3>
         <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -124,12 +136,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Write to CSV.spec" readonly/>
+          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Write to CSV.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:22</span>
+        <span class="time">00:00:21</span>
       </div>
 
 	
@@ -141,6 +153,7 @@
     
   
 
+    
     
 
     <div class="content">
@@ -161,18 +174,21 @@ Description  : This is an executable specification file which follows markdown s
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Get all questions of a deck using a valid deckId</h3>
-    <span class="time">00:00:22</span>
+    <span class="time">00:00:21</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -188,7 +204,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:21</span>
+      <span class='time'>Execution Time : 00:00:18</span>
     </h5>
   
   <div class='step-info passed'>
@@ -220,7 +236,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -229,6 +245,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -250,6 +269,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -257,11 +279,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/decks" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/decks</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -289,6 +314,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -328,8 +356,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -358,6 +392,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -449,6 +486,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -460,6 +500,9 @@ Description  : This is an executable specification file which follows markdown s
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -478,7 +521,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:04</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -487,6 +530,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -504,6 +550,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -511,15 +560,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/decks</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/decks" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/decks</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 3462ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: “5b9a914e74a4d1001089032a”,<br/>    “title”: “API Deck3”,<br/>    “tags”: [<br/>        “API tag1”<br/>    ],<br/>    “categoryId”: “5a5db30a12ef181b0af109ba”,<br/>    “book”: {<br/>        “bookTitle”: “Automation3”,<br/>        “bookAuthor”: “Osanda Nimalarathna”,<br/>        “chapter”: “Chap. 04”<br/>    },<br/>    “purchaseInfo”: {<br/>        “purchasedDate”: 1512021142001,<br/>        “price”: 777.0,<br/>        “sku”: “com.pearson.smartflashcards.test3”<br/>    },<br/>    “notificationSettings”: {<br/>        “areNotificationsEnabled”: true,<br/>        “notificationTime”: “08:00”,<br/>        “notificationFrequency”: “0”<br/>    },<br/>    “epochTime”: {<br/>        “createdAt”: 1536856398568,<br/>        “updatedAt”: 1536856398568<br/>    },<br/>    “examDate”: 1512021142000,<br/>    “userId”: “osan”,<br/>    “parentDeckId”: “5”,<br/>    “tempDeckId”: “999”,<br/>    “createdAt”: “2018-09-13T16:33:18.568Z”,<br/>    “updatedAt”: “2018-09-13T16:33:18.570Z”,<br/>    “archived”: true,<br/>    “cardPreview”: true,<br/>    “noOfCards”: 2,<br/>    “progress”: 3,<br/>    “downloads”: 12,<br/>    “deckAuthor”: “Osanda”,<br/>    “deckAuthorId”: “6”,<br/>    “thumbnailUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “status”: “Closed”,<br/>    “starred”: true,<br/>    “examReminder”: {<br/>        “startDate”: 1510811542000,<br/>        “endDate”: 1512021142000,<br/>        “time”: “08:00”<br/>    },<br/>    “expert”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=66fae837-cc55-48d8-b46f-de4628b9a543<br/>Date=Thu, 13 Sep 2018 16:33:18 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-2j1v1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1020<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 2232ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “id”: “5bc32a656454ea0011893926”,<br/>    “title”: “API Deck3”,<br/>    “tags”: [<br/>        “API tag1”<br/>    ],<br/>    “categoryId”: “5a5db30a12ef181b0af109ba”,<br/>    “book”: {<br/>        “bookTitle”: “Automation3”,<br/>        “bookAuthor”: “Osanda Nimalarathna”,<br/>        “chapter”: “Chap. 04”<br/>    },<br/>    “purchaseInfo”: {<br/>        “purchasedDate”: 1512021142001,<br/>        “price”: 777.0,<br/>        “sku”: “com.pearson.smartflashcards.test3”<br/>    },<br/>    “notificationSettings”: {<br/>        “areNotificationsEnabled”: true,<br/>        “notificationTime”: “08:00”,<br/>        “notificationFrequency”: “0”<br/>    },<br/>    “epochTime”: {<br/>        “createdAt”: 1539517029303,<br/>        “updatedAt”: 1539517029303<br/>    },<br/>    “examDate”: 1512021142000,<br/>    “userId”: “osan”,<br/>    “parentDeckId”: “5”,<br/>    “tempDeckId”: “999”,<br/>    “createdAt”: “2018-10-14T11:37:09.303Z”,<br/>    “updatedAt”: “2018-10-14T11:37:09.305Z”,<br/>    “archived”: true,<br/>    “cardPreview”: true,<br/>    “noOfCards”: 2,<br/>    “progress”: 3,<br/>    “downloads”: 12,<br/>    “deckAuthor”: “Osanda”,<br/>    “deckAuthorId”: “6”,<br/>    “thumbnailUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “status”: “Closed”,<br/>    “starred”: true,<br/>    “examReminder”: {<br/>        “startDate”: 1510811542000,<br/>        “endDate”: 1512021142000,<br/>        “time”: “08:00”<br/>    },<br/>    “expert”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=b9b66258-85ae-437d-b058-17ab755b91c3<br/>Date=Sun, 14 Oct 2018 11:37:09 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-nvll1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1020<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -547,6 +599,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -568,8 +623,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -598,6 +659,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -633,6 +697,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -640,10 +707,13 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>“5b9a914e74a4d1001089032a” is successfully saved as a text in Specification Data Store [myDeckIdWith9Questions]</p>
+        <div class="step-message"><p>“5bc32a656454ea0011893926” is successfully saved as a text in Specification Data Store [myDeckIdWith9Questions]</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -671,6 +741,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -692,6 +765,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -699,11 +775,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -731,6 +810,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -770,8 +852,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -800,6 +888,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -921,6 +1012,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -928,11 +1022,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -951,7 +1048,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -960,6 +1057,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -977,6 +1077,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -984,15 +1087,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1014ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856400806,<br/>        “updatedAt”: 1536856400807<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b9a9150fd3bf300115af984”,<br/>    “createdAt”: “2018-09-13T16:33:20.806Z”,<br/>    “updatedAt”: “2018-09-13T16:33:20.807Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=739a198d-324a-4fb9-9b41-6fcbac02582c<br/>Date=Thu, 13 Sep 2018 16:33:21 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-2j1v1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1287<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 1633ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517031630,<br/>        “updatedAt”: 1539517031632<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5bc32a67aadd6d001093fbea”,<br/>    “createdAt”: “2018-10-14T11:37:11.630Z”,<br/>    “updatedAt”: “2018-10-14T11:37:11.632Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=5b39a486-faab-44fc-bfda-c595fe651d03<br/>Date=Sun, 14 Oct 2018 11:37:12 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-5v6z0<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1301<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1020,6 +1126,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1041,8 +1150,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1071,6 +1186,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1092,6 +1210,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1099,11 +1220,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1131,6 +1255,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1170,8 +1297,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1200,6 +1333,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1321,6 +1457,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1328,11 +1467,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1366,6 +1508,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -1377,6 +1522,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1384,15 +1532,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1159ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856402850,<br/>        “updatedAt”: 1536856402851<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b9a9152fd3bf300115af985”,<br/>    “createdAt”: “2018-09-13T16:33:22.850Z”,<br/>    “updatedAt”: “2018-09-13T16:33:22.851Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=2958696a-0ab0-4cc8-bea4-f43d44e7a8e0<br/>Date=Thu, 13 Sep 2018 16:33:22 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-lxkkr<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1287<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 1157ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517033945,<br/>        “updatedAt”: 1539517033948<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5bc32a69aadd6d001093fbeb”,<br/>    “createdAt”: “2018-10-14T11:37:13.945Z”,<br/>    “updatedAt”: “2018-10-14T11:37:13.948Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=e45f6119-28ed-493d-8523-77445f20d05c<br/>Date=Sun, 14 Oct 2018 11:37:14 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-nvll1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1301<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1420,6 +1571,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1441,8 +1595,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1471,6 +1631,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1506,6 +1669,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1513,10 +1679,13 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>“5b9a9152fd3bf300115af985” is successfully saved as a text in Scenario Data Store [cardId2]</p>
+        <div class="step-message"><p>“5bc32a69aadd6d001093fbeb” is successfully saved as a text in Scenario Data Store [cardId2]</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1544,6 +1713,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1565,6 +1737,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1572,11 +1747,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1604,6 +1782,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1643,8 +1824,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1673,6 +1860,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1794,6 +1984,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1801,11 +1994,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1839,6 +2035,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -1850,6 +2049,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1857,15 +2059,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 757ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856404409,<br/>        “updatedAt”: 1536856404410<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b9a9154fd3bf300115af986”,<br/>    “createdAt”: “2018-09-13T16:33:24.409Z”,<br/>    “updatedAt”: “2018-09-13T16:33:24.410Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=5b804190-7d8d-40d0-b644-4a6524fe8998<br/>Date=Thu, 13 Sep 2018 16:33:24 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-6ct5d<br/>X-XSS-Protection=1; mode=block<br/>transfer-encoding=chunked<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 1053ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517036276,<br/>        “updatedAt”: 1539517036278<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5bc32a6caadd6d001093fbec”,<br/>    “createdAt”: “2018-10-14T11:37:16.276Z”,<br/>    “updatedAt”: “2018-10-14T11:37:16.278Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=145d9c9d-093b-4fed-934d-b8e19b299a8c<br/>Date=Sun, 14 Oct 2018 11:37:16 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-6ct5d<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1301<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1893,6 +2098,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1914,8 +2122,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1944,6 +2158,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1965,6 +2182,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -1972,11 +2192,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2004,6 +2227,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2043,8 +2269,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2073,6 +2305,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2194,6 +2429,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -2201,11 +2439,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “MULTIPLE_CHOICE”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2239,6 +2480,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -2250,6 +2494,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -2257,15 +2504,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1116ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856406024,<br/>        “updatedAt”: 1536856406025<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b9a9156fd3bf300115af987”,<br/>    “createdAt”: “2018-09-13T16:33:26.024Z”,<br/>    “updatedAt”: “2018-09-13T16:33:26.025Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=add81e3e-2bfc-442b-8568-cf79855ddcc6<br/>Date=Thu, 13 Sep 2018 16:33:26 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-nvll1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1287<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 820ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “MULTIPLE_CHOICE”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517037790,<br/>        “updatedAt”: 1539517037793<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5bc32a6daadd6d001093fbed”,<br/>    “createdAt”: “2018-10-14T11:37:17.790Z”,<br/>    “updatedAt”: “2018-10-14T11:37:17.793Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=8fa90543-4d33-453b-a452-b6160bb204d6<br/>Date=Sun, 14 Oct 2018 11:37:17 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-nvll1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1301<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2293,6 +2543,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2314,8 +2567,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2344,6 +2603,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2365,6 +2627,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -2372,11 +2637,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2404,6 +2672,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2443,8 +2714,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2473,6 +2750,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2594,6 +2874,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -2601,11 +2884,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “ALL”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “ALL”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “learningObjective1”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “correctAnswers”: [<br/>        1,2<br/>  ],<br/>  “answers”: [<br/>      {<br/>        “id”: 1,<br/>        “value”: “Osanda”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 2,<br/>        “value”: “Gemunu”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      },<br/>      {<br/>        “id”: 3,<br/>        “value”: “Eranga”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 4,<br/>        “value”: “Heshan”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: false<br/>      },<br/>      {<br/>        “id”: 5,<br/>        “value”: “Thilina”,<br/>        “type”: “TEXT”,<br/>        “caseSensitive”: true<br/>      }<br/>    ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2639,6 +2925,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -2650,6 +2939,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -2657,15 +2949,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 786ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “ALL”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856407574,<br/>        “updatedAt”: 1536856407574<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5b9a9157fd3bf300115af988”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=05981130-9b27-41e7-99f1-9ccf2b3c4fc3<br/>Date=Thu, 13 Sep 2018 16:33:27 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-lxkkr<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1197<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 808ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “ALL”,<br/>    “learningObjectives”: [<br/>        “learningObjective1”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517039296,<br/>        “updatedAt”: 1539517039301<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 4,<br/>            “value”: “Heshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        },<br/>        {<br/>            “id”: 2,<br/>            “value”: “Gemunu”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 3,<br/>            “value”: “Eranga”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: true<br/>        },<br/>        {<br/>            “id”: 5,<br/>            “value”: “Thilina”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: true,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “correctAnswers”: [<br/>        1,<br/>        2<br/>    ],<br/>    “id”: “5bc32a6faadd6d001093fbee”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=752ea023-8a88-4069-a3d1-69e17fb8fc69<br/>Date=Sun, 14 Oct 2018 11:37:19 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-dsrjh<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=1211<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2693,6 +2988,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2714,8 +3012,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2744,6 +3048,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2779,6 +3086,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -2786,10 +3096,13 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>“5b9a9157fd3bf300115af988” is successfully saved as a text in Scenario Data Store [cardId5]</p>
+        <div class="step-message"><p>“5bc32a6faadd6d001093fbee” is successfully saved as a text in Scenario Data Store [cardId5]</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2817,6 +3130,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2838,6 +3154,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -2845,11 +3164,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2877,6 +3199,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2916,8 +3241,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2946,6 +3277,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3033,6 +3367,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3040,11 +3377,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3078,6 +3418,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -3089,6 +3432,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3096,15 +3442,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 822ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856408975,<br/>        “updatedAt”: 1536856408976<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b9a9158fd3bf300115af989”,<br/>    “createdAt”: “2018-09-13T16:33:28.975Z”,<br/>    “updatedAt”: “2018-09-13T16:33:28.976Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=4b8a8829-da92-48b2-85d7-c47b6078bf76<br/>Date=Thu, 13 Sep 2018 16:33:29 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-81spw<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=942<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 1141ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517041168,<br/>        “updatedAt”: 1539517041171<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5bc32a71aadd6d001093fbef”,<br/>    “createdAt”: “2018-10-14T11:37:21.168Z”,<br/>    “updatedAt”: “2018-10-14T11:37:21.171Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=a5032d25-bae7-48ae-93a2-2c48610f266e<br/>Date=Sun, 14 Oct 2018 11:37:21 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-2j1v1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=956<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3132,6 +3481,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3153,8 +3505,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3183,6 +3541,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3204,6 +3565,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3211,11 +3575,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3243,6 +3610,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3282,8 +3652,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3312,6 +3688,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3399,6 +3778,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3406,71 +3788,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
   
 
-	</li></ul></div></div>
   
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 794ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856410430,<br/>        “updatedAt”: 1536856410431<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b9a915afd3bf300115af98a”,<br/>    “createdAt”: “2018-09-13T16:33:30.430Z”,<br/>    “updatedAt”: “2018-09-13T16:33:30.431Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=16809cc4-c9d6-4a9f-aa81-e46145c82c5b<br/>Date=Thu, 13 Sep 2018 16:33:30 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-5v6z0<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=942<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
   
 
 	</li></ul></div></div>
@@ -3498,6 +3823,78 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 590ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517042345,<br/>        “updatedAt”: 1539517042348<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5bc32a72aadd6d001093fbf0”,<br/>    “createdAt”: “2018-10-14T11:37:22.345Z”,<br/>    “updatedAt”: “2018-10-14T11:37:22.348Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=f42d2f4c-9ee5-4128-b20e-f02753973215<br/>Date=Sun, 14 Oct 2018 11:37:22 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-5v6z0<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=956<br/>Connection=keep-alive</p>
+ </div>
+      </div>
+    </div>
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
 
   
   
@@ -3519,8 +3916,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3549,6 +3952,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3570,6 +3976,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3577,11 +3986,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3609,6 +4021,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3648,8 +4063,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3678,6 +4099,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3765,6 +4189,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3772,11 +4199,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3810,6 +4240,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -3821,6 +4254,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3828,15 +4264,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 822ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856411766,<br/>        “updatedAt”: 1536856411767<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b9a915bfd3bf300115af98b”,<br/>    “createdAt”: “2018-09-13T16:33:31.766Z”,<br/>    “updatedAt”: “2018-09-13T16:33:31.767Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=8d1f8216-5e03-4587-8e66-7f68872e8fe4<br/>Date=Thu, 13 Sep 2018 16:33:31 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-6ct5d<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=942<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 834ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517043738,<br/>        “updatedAt”: 1539517043740<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5bc32a73aadd6d001093fbf1”,<br/>    “createdAt”: “2018-10-14T11:37:23.738Z”,<br/>    “updatedAt”: “2018-10-14T11:37:23.740Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=0b4ab860-7c12-43c9-aa1a-f4ae5e4ad35a<br/>Date=Sun, 14 Oct 2018 11:37:23 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-nvll1<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=956<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3864,6 +4303,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3885,8 +4327,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3915,6 +4363,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3950,6 +4401,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -3957,10 +4411,13 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>“5b9a915bfd3bf300115af98b” is successfully saved as a text in Scenario Data Store [cardId8]</p>
+        <div class="step-message"><p>“5bc32a73aadd6d001093fbf1” is successfully saved as a text in Scenario Data Store [cardId8]</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3988,6 +4445,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4009,6 +4469,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -4016,11 +4479,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -4048,6 +4514,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4087,8 +4556,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -4117,6 +4592,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4204,6 +4682,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -4211,71 +4692,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5b9a914e74a4d1001089032a”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{<br/>  “creatorId”: “osanda12”,<br/>  “creatorPlatform”: “Web”,<br/>  “creatoredSource”: “App”,<br/>  “creatoredType”: “Manual”,<br/>  “deckId”: “5bc32a656454ea0011893926”,<br/>  “tempQuestionId”: “testId”,<br/>  “kind”: “SHORT_ANSWER”,<br/>  “deleted”: false,<br/>  “learningObjectives”: [<br/>    “”<br/>  ],<br/>  “question”: {<br/>    “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>    “media”: “TEXT”,<br/>    “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>    “promptType”: “TEXT”,<br/>    “timeout”: 60<br/>  },<br/>  “rationale”: “rationale”,<br/>  “stats”: {<br/>    “boxId”: 0,<br/>    “correctAttempts”: 1,<br/>    “inCorrectAttempts”: 0,<br/>    “lastAswered”: “2018-01-01T12:00:00+01:00”,<br/>    “questionId”: 0,<br/>    “skips”: 0,<br/>    “userId”: 0<br/>  },<br/> “answers”: [<br/>        {<br/>          “id”: 1,<br/>          “value”: “Osanda Deshan”,<br/>          “caseSensitive”: false,<br/>          “type”: “TEXT”<br/>        }<br/>  ],<br/>  “tags”: [<br/>    “MaxSoft”<br/>  ]<br/>}</p>
  </div>
       </div>
     </div>
   
 
-	</li></ul></div></div>
   
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 800ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5b9a914e74a4d1001089032a”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1536856413175,<br/>        “updatedAt”: 1536856413176<br/>    },<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5b9a915dfd3bf300115af98c”,<br/>    “createdAt”: “2018-09-13T16:33:33.175Z”,<br/>    “updatedAt”: “2018-09-13T16:33:33.176Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=55049ef0-1c0c-4761-89dc-ddc868020e8e<br/>Date=Thu, 13 Sep 2018 16:33:33 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-lxkkr<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=942<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
   
 
 	</li></ul></div></div>
@@ -4303,6 +4727,78 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 594ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “question”: {<br/>        “timeout”: 60,<br/>        “media”: “TEXT”,<br/>        “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>        “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>        “promptType”: “TEXT”<br/>    },<br/>    “stats”: {<br/>        “questionId”: 0,<br/>        “userId”: 0,<br/>        “boxId”: 0,<br/>        “skips”: 0,<br/>        “lastAswered”: 1514804400000,<br/>        “inCorrectAttempts”: 0,<br/>        “correctAttempts”: 1<br/>    },<br/>    “kind”: “SHORT_ANSWER”,<br/>    “learningObjectives”: [<br/>        “”<br/>    ],<br/>    “rationale”: “rationale”,<br/>    “tags”: [<br/>        “MaxSoft”<br/>    ],<br/>    “creatorId”: “osanda12”,<br/>    “deckId”: “5bc32a656454ea0011893926”,<br/>    “creatoredType”: “Manual”,<br/>    “creatorPlatform”: “Web”,<br/>    “creatoredSource”: “App”,<br/>    “parentId”: null,<br/>    “tempQuestionId”: “testId”,<br/>    “epochTime”: {<br/>        “createdAt”: 1539517044945,<br/>        “updatedAt”: 1539517044947<br/>    },<br/>    “status”: null,<br/>    “answers”: [<br/>        {<br/>            “id”: 1,<br/>            “value”: “Osanda Deshan”,<br/>            “type”: “TEXT”,<br/>            “caseSensitive”: false,<br/>            “correct”: false<br/>        }<br/>    ],<br/>    “id”: “5bc32a74aadd6d001093fbf2”,<br/>    “createdAt”: “2018-10-14T11:37:24.945Z”,<br/>    “updatedAt”: “2018-10-14T11:37:24.947Z”,<br/>    “deleted”: false,<br/>    “archived”: false<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=e3315b28-9cea-4eac-8067-b9d405ef53ec<br/>Date=Sun, 14 Oct 2018 11:37:25 GMT<br/>Server=nginx<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-5v6z0<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=956<br/>Connection=keep-alive</p>
+ </div>
+      </div>
+    </div>
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
 
   
   
@@ -4324,8 +4820,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -4354,6 +4856,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4389,6 +4894,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -4396,10 +4904,13 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>“5b9a915dfd3bf300115af98c” is successfully saved as a text in Scenario Data Store [questionId]</p>
+        <div class="step-message"><p>“5bc32a74aadd6d001093fbf2” is successfully saved as a text in Scenario Data Store [questionId]</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -4432,6 +4943,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4453,6 +4967,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -4460,11 +4977,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -4492,6 +5012,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4531,8 +5054,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -4561,6 +5090,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4596,6 +5128,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -4603,11 +5138,14 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5b9a914e74a4d1001089032a”<br/><br/></p>
- </div><div class="step-message"><p>Query parameters which will append to the request URL: ?deckId=5b9a914e74a4d1001089032a<br/><br/></p>
+        <div class="step-message"><p>Text inside Specification Data Store [myDeckIdWith9Questions] is: “5bc32a656454ea0011893926”<br/><br/></p>
+ </div><div class="step-message"><p>Query parameters which will append to the request URL: ?deckId=5bc32a656454ea0011893926<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -4626,7 +5164,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -4635,6 +5173,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4652,6 +5193,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
@@ -4659,15 +5203,18 @@ Description  : This is an executable specification file which follows markdown s
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions?deckId=5b9a914e74a4d1001089032a" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions?deckId=5b9a914e74a4d1001089032a</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions?deckId=5bc32a656454ea0011893926" rel="nofollow">http://questionservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/questions?deckId=5bc32a656454ea0011893926</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: GET<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 885ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “questions”: [<br/>        {<br/>            “id”: “5b9a9150fd3bf300115af984”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 1,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:20.806Z”,<br/>            “updatedAt”: “2018-09-13T16:33:20.807Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856400806,<br/>                “updatedAt”: 1536856400807<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a9152fd3bf300115af985”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 2,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:22.850Z”,<br/>            “updatedAt”: “2018-09-13T16:33:22.851Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856402850,<br/>                “updatedAt”: 1536856402851<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a9154fd3bf300115af986”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 3,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:24.409Z”,<br/>            “updatedAt”: “2018-09-13T16:33:24.410Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856404409,<br/>                “updatedAt”: 1536856404410<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a9156fd3bf300115af987”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 4,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:26.024Z”,<br/>            “updatedAt”: “2018-09-13T16:33:26.025Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856406024,<br/>                “updatedAt”: 1536856406025<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a9157fd3bf300115af988”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “ALL”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 5,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:27.574Z”,<br/>            “updatedAt”: “2018-09-13T16:33:27.574Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856407574,<br/>                “updatedAt”: 1536856407574<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a9158fd3bf300115af989”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 6,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:28.975Z”,<br/>            “updatedAt”: “2018-09-13T16:33:28.976Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856408975,<br/>                “updatedAt”: 1536856408976<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a915afd3bf300115af98a”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 7,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:30.430Z”,<br/>            “updatedAt”: “2018-09-13T16:33:30.431Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856410430,<br/>                “updatedAt”: 1536856410431<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a915bfd3bf300115af98b”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 8,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:31.766Z”,<br/>            “updatedAt”: “2018-09-13T16:33:31.767Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856411766,<br/>                “updatedAt”: 1536856411767<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5b9a915dfd3bf300115af98c”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “index”: 9,<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5b9a914e74a4d1001089032a”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-09-13T16:33:33.175Z”,<br/>            “updatedAt”: “2018-09-13T16:33:33.176Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1536856413175,<br/>                “updatedAt”: 1536856413176<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        }<br/>    ]<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=43167381-c867-4d9d-8635-a3dfec548258<br/>Date=Thu, 13 Sep 2018 16:33:34 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-13 16:33:34<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-hq9pm<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>transfer-encoding=chunked<br/>Connection=keep-alive</p>
+ </div><div class="step-message"><p>Response Time is: 1476ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “questions”: [<br/>        {<br/>            “id”: “5bc32a67aadd6d001093fbea”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:11.630Z”,<br/>            “updatedAt”: “2018-10-14T11:37:11.632Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517031630,<br/>                “updatedAt”: 1539517031632<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a69aadd6d001093fbeb”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:13.945Z”,<br/>            “updatedAt”: “2018-10-14T11:37:13.948Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517033945,<br/>                “updatedAt”: 1539517033948<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a6caadd6d001093fbec”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:16.276Z”,<br/>            “updatedAt”: “2018-10-14T11:37:16.278Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517036276,<br/>                “updatedAt”: 1539517036278<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a6daadd6d001093fbed”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “MULTIPLE_CHOICE”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:17.790Z”,<br/>            “updatedAt”: “2018-10-14T11:37:17.793Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517037790,<br/>                “updatedAt”: 1539517037793<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a6faadd6d001093fbee”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “ALL”,<br/>            “learningObjectives”: [<br/>                “learningObjective1”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:19.296Z”,<br/>            “updatedAt”: “2018-10-14T11:37:19.301Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517039296,<br/>                “updatedAt”: 1539517039301<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 2,<br/>                    “value”: “Gemunu”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                },<br/>                {<br/>                    “id”: 3,<br/>                    “value”: “Eranga”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 4,<br/>                    “value”: “Heshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                },<br/>                {<br/>                    “id”: 5,<br/>                    “value”: “Thilina”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: true<br/>                }<br/>            ],<br/>            “correctAnswers”: [<br/>                1,<br/>                2<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a71aadd6d001093fbef”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:21.168Z”,<br/>            “updatedAt”: “2018-10-14T11:37:21.171Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517041168,<br/>                “updatedAt”: 1539517041171<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a72aadd6d001093fbf0”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:22.345Z”,<br/>            “updatedAt”: “2018-10-14T11:37:22.348Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517042345,<br/>                “updatedAt”: 1539517042348<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a73aadd6d001093fbf1”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:23.738Z”,<br/>            “updatedAt”: “2018-10-14T11:37:23.740Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517043738,<br/>                “updatedAt”: 1539517043740<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        },<br/>        {<br/>            “id”: “5bc32a74aadd6d001093fbf2”,<br/>            “question”: {<br/>                “timeout”: 60,<br/>                “media”: “TEXT”,<br/>                “prompt”: “Who is the owner of MaxSoft? _ _ _ _ _ _ _ _“,<br/>                “imageUrl”: “<a href="https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;" rel="nofollow">https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL&#34;</a>,<br/>                “promptType”: “TEXT”<br/>            },<br/>            “stats”: {<br/>                “questionId”: 0,<br/>                “userId”: 0,<br/>                “boxId”: 0,<br/>                “skips”: 0,<br/>                “lastAswered”: 1514804400000,<br/>                “inCorrectAttempts”: 0,<br/>                “correctAttempts”: 1<br/>            },<br/>            “kind”: “SHORT_ANSWER”,<br/>            “learningObjectives”: [<br/>                “”<br/>            ],<br/>            “rationale”: “rationale”,<br/>            “tags”: [<br/>                “MaxSoft”<br/>            ],<br/>            “creatorId”: “osanda12”,<br/>            “deckId”: “5bc32a656454ea0011893926”,<br/>            “creatoredType”: “Manual”,<br/>            “creatorPlatform”: “Web”,<br/>            “creatoredSource”: “App”,<br/>            “tempQuestionId”: “testId”,<br/>            “createdAt”: “2018-10-14T11:37:24.945Z”,<br/>            “updatedAt”: “2018-10-14T11:37:24.947Z”,<br/>            “epochTime”: {<br/>                “createdAt”: 1539517044945,<br/>                “updatedAt”: 1539517044947<br/>            },<br/>            “answers”: [<br/>                {<br/>                    “id”: 1,<br/>                    “value”: “Osanda Deshan”,<br/>                    “type”: “TEXT”,<br/>                    “caseSensitive”: false<br/>                }<br/>            ],<br/>            “deleted”: false,<br/>            “archived”: false<br/>        }<br/>    ]<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=7cc603f5-2bf3-4776-8fdb-a19821685e22<br/>Date=Sun, 14 Oct 2018 11:37:27 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-10-14 11:37:26<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-nvll1<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Content-Length=13439<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -4695,6 +5242,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4716,8 +5266,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -4740,12 +5296,15 @@ Description  : This is an executable specification file which follows markdown s
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4793,8 +5352,27 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+        <div class="exception">
+          <h4 class="error-message">
+            <pre>java.lang.AssertionError: Expected value for the JSON Path of &#34;$.questions[-1:].question.media&#34; is not equal to the Actual value.<br/> expected [TEXT] but found [[&#34;TEXT&#34;]]</pre>
+          </h4>
+          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.jsonPathAssertionEquals(Base.java:1317)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.jsonPathAssertionEquals(ApiStepImpl.java:472)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.jsonPathAssertionEquals(AllStepsDefinitions.java:212)<br/></pre>
+        </div>
+    </div>
+  </div>
+
+    
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -4817,12 +5395,15 @@ Description  : This is an executable specification file which follows markdown s
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -4858,25 +5439,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>5b9a9150fd3bf300115af984</p>
- </div><div class="step-message"><p>5b9a9152fd3bf300115af985</p>
- </div><div class="step-message"><p>5b9a9154fd3bf300115af986</p>
- </div><div class="step-message"><p>5b9a9156fd3bf300115af987</p>
- </div><div class="step-message"><p>5b9a9157fd3bf300115af988</p>
- </div><div class="step-message"><p>5b9a9158fd3bf300115af989</p>
- </div><div class="step-message"><p>5b9a915afd3bf300115af98a</p>
- </div><div class="step-message"><p>5b9a915bfd3bf300115af98b</p>
- </div><div class="step-message"><p>5b9a915dfd3bf300115af98c</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -4884,6 +5455,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -4904,6 +5478,7 @@ Description  : This is an executable specification file which follows markdown s
   
 
     
+    
     </div>
   
 
@@ -4921,15 +5496,15 @@ Description  : This is an executable specification file which follows markdown s
 
 	
     <script type="text/javascript">
-      var loadingImage = "..\../images/loading.gif";
-      var closeButton = "..\../images/close.gif";
+      var loadingImage = "../../images/loading.gif";
+      var closeButton = "../../images/close.gif";
     </script>
-    <script src="..\../js/lightbox.js"></script>
-    <script src="..\../js/jquery-3.1.0.min.js" type="text/javascript"></script>
-    <script src="..\../js/auto-complete.min.js" type="text/javascript"></script>
-    <script src="..\../js/clipboard.min.js" type="text/javascript"></script>
-    <script src="..\../js/search_index.js" type="text/javascript"></script>
-    <script src="..\../js/main.js" type="text/javascript"></script>
+    <script src="../../js/lightbox.js"></script>
+    <script src="../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="../../js/auto-complete.min.js" type="text/javascript"></script>
+    <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+    <script src="../../js/search_index.js" type="text/javascript"></script>
+    <script src="../../js/main.js" type="text/javascript"></script>
     </body>
   </html>
 

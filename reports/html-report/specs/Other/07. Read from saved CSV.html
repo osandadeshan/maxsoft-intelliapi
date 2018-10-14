@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta charset="utf-8" />
     <title>Gauge Test Results</title>
-    <link rel="shortcut icon" type="image/x-icon" href="..\../images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="..\../css/open-sans.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="..\../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
   </head>
   <body>
   <header class="top">
     <div class="header">
       <div class="container">
         <div class="logo">
-          <a href="..\.."><img src="..\../images/logo.png" alt="Report logo"></a>
+          <a href="../.."><img src="../../images/logo.png" alt="Report logo"></a>
         </div>
         <h2 class="project">Project: MaxSoft-IntelliAPI</h2>
       </div>
@@ -30,21 +30,21 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,10,0" data-total="10">
+        <svg id="pie-chart" data-results="0,12,0" data-total="12">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/10</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/12</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 10/10</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 12/12</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/10</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/12</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">10</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">12</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
         <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">10</span><span class="txt">Passed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">12</span><span class="txt">Passed</span></li>
         <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
@@ -52,7 +52,7 @@
       <ul>
         <li>
           <label>Environment </label>
-          <span>qa</span>
+          <span>default</span>
         </li>
         
         <li>
@@ -61,13 +61,16 @@
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:02:33</span>
+          <span>00:02:10</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Sep 8, 2018 at 2:43pm</span>
+          <span>Oct 14, 2018 at 6:03pm</span>
         </li>
       </ul>
+      
+  
+
       
   
 
@@ -92,12 +95,12 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="04. CRUD in One Scenario.html">
+          <a href="../Data Stores/03. Saving And Reading Values From Data Store.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
-              <span id="time" class="time">00:00:22</span>
+              <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
+              <span id="time" class="time">00:00:14</span>
             </li>
           </a>
           
@@ -106,11 +109,29 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
-              <span id="time" class="time">00:00:09</span>
+              <span id="time" class="time">00:00:08</span>
             </li>
           </a>
           
-          <a href="..\Data Stores\01. Saving to Data Stores.html">
+          <a href="08. Epoch Time.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Epoch Time Specification</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="09. Get Student Availablity - Negative Tests - 404 Error.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Get Student Availability - Negative Tests Specification - 404 Error</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="../Data Stores/01. Saving to Data Stores.html">
              
               <li class='passed spec-name'>
             
@@ -119,7 +140,7 @@
             </li>
           </a>
           
-          <a href="..\Data Stores\02. Reading Values from Data Stores.html">
+          <a href="../Data Stores/02. Reading Values from Data Stores.html">
              
               <li class='passed spec-name'>
             
@@ -133,34 +154,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Text Files Operations Specification</span>
-              <span id="time" class="time">00:00:07</span>
-            </li>
-          </a>
-          
-          <a href="05. Form-Data Example.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
-              <span id="time" class="time">00:00:21</span>
-            </li>
-          </a>
-          
-          <a href="06. Request Placeholders.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
               <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="..\Data Stores\03. Saving And Reading Values From Data Store.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:19</span>
             </li>
           </a>
           
@@ -178,7 +172,34 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Create All Type Question using Question Service - Negative Data Driven Test Specification2</span>
-              <span id="time" class="time">00:00:57</span>
+              <span id="time" class="time">00:00:46</span>
+            </li>
+          </a>
+          
+          <a href="04. CRUD in One Scenario.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
+              <span id="time" class="time">00:00:16</span>
+            </li>
+          </a>
+          
+          <a href="05. Form-Data Example.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
+              <span id="time" class="time">00:00:22</span>
+            </li>
+          </a>
+          
+          <a href="06. Request Placeholders.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
+              <span id="time" class="time">00:00:06</span>
             </li>
           </a>
           
@@ -193,8 +214,8 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\07. Read from saved CSV.spec">Read from saved CSV Specification</h3>
-        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
+        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\07. Read from saved CSV.spec">Read from saved CSV Specification</h3>
+        <div class="report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">9</span><span class="txt">Passed</span></li>
@@ -205,12 +226,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\07. Read from saved CSV.spec" readonly/>
+          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\07. Read from saved CSV.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:09</span>
+        <span class="time">00:00:08</span>
       </div>
 
 	
@@ -222,6 +243,7 @@
     
   
 
+    
     
 
     <div class="content">
@@ -244,47 +266,47 @@ Description  : This is an executable specification file which follows markdown s
         
           <tr class='row-selector passed selected' data-rowIndex='0'>
           
-            <td>5b939283fd3bf300115af88a</td>
+            <td>5bc3377caadd6d001093fc3e</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='1'>
           
-            <td>5b939285fd3bf300115af88b</td>
+            <td>5bc3377eaadd6d001093fc3f</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='2'>
           
-            <td>5b939288fd3bf300115af88c</td>
+            <td>5bc33780aadd6d001093fc40</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='3'>
           
-            <td>5b939289fd3bf300115af88d</td>
+            <td>5bc33781aadd6d001093fc41</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='4'>
           
-            <td>5b93928bfd3bf300115af88e</td>
+            <td>5bc33782aadd6d001093fc42</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='5'>
           
-            <td>5b93928dfd3bf300115af88f</td>
+            <td>5bc33784aadd6d001093fc43</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='6'>
           
-            <td>5b93928ffd3bf300115af890</td>
+            <td>5bc33785aadd6d001093fc44</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='7'>
           
-            <td>5b939290fd3bf300115af891</td>
+            <td>5bc33786aadd6d001093fc45</td>
         </tr>
         
           <tr class='row-selector passed' data-rowIndex='8'>
           
-            <td>5b939291fd3bf300115af892</td>
+            <td>5bc33787aadd6d001093fc46</td>
         </tr>
         
       </tbody>
@@ -313,6 +335,9 @@ Description  : This is an executable specification file which follows markdown s
   
   
 
+  
+  
+
 	
 
   
@@ -340,6 +365,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -355,18 +383,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -394,6 +419,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -433,8 +461,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -469,6 +503,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -485,7 +522,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b939283fd3bf300115af88a</td></tr>
+    <tr><td>questionId</td><td>5bc3377caadd6d001093fc3e</td></tr>
     
   </tbody>
 </table>
@@ -498,17 +535,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b939283fd3bf300115af88a<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -542,6 +577,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -553,22 +591,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939283fd3bf300115af88a" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939283fd3bf300115af88a</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1017ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=13890b8e-9a0e-47d2-800b-b54cd1c9c561<br/>Date=Sat, 08 Sep 2018 09:15:35 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:35<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-81spw<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -602,6 +633,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -617,8 +651,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -627,6 +667,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -656,6 +699,9 @@ Description  : This is an executable specification file which follows markdown s
   
   
 
+  
+  
+
 	
 
   
@@ -683,6 +729,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -698,18 +747,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -737,6 +783,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -776,8 +825,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -806,6 +861,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -828,7 +886,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b939285fd3bf300115af88b</td></tr>
+    <tr><td>questionId</td><td>5bc3377eaadd6d001093fc3f</td></tr>
     
   </tbody>
 </table>
@@ -841,17 +899,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b939285fd3bf300115af88b<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -879,6 +935,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -896,22 +955,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939285fd3bf300115af88b" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939285fd3bf300115af88b</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 704ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=43167381-c867-4d9d-8635-a3dfec548258<br/>Date=Sat, 08 Sep 2018 09:15:36 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:36<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-2j1v1<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -939,6 +991,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -960,8 +1015,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -970,6 +1031,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -999,6 +1063,9 @@ Description  : This is an executable specification file which follows markdown s
   
   
 
+  
+  
+
 	
 
   
@@ -1026,6 +1093,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -1041,18 +1111,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1080,6 +1147,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1119,8 +1189,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1149,6 +1225,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1171,7 +1250,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b939288fd3bf300115af88c</td></tr>
+    <tr><td>questionId</td><td>5bc33780aadd6d001093fc40</td></tr>
     
   </tbody>
 </table>
@@ -1184,17 +1263,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b939288fd3bf300115af88c<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1222,6 +1299,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1239,22 +1319,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939288fd3bf300115af88c" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939288fd3bf300115af88c</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 699ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=221a02c9-7550-41be-98c0-c391e3a6c53f<br/>Date=Sat, 08 Sep 2018 09:15:37 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:37<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-6ct5d<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1282,6 +1355,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1303,8 +1379,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1313,6 +1395,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -1333,12 +1418,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Delete the created questions</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -1369,6 +1457,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -1384,18 +1475,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1423,6 +1511,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1462,8 +1553,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1492,6 +1589,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1514,7 +1614,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b939289fd3bf300115af88d</td></tr>
+    <tr><td>questionId</td><td>5bc33781aadd6d001093fc41</td></tr>
     
   </tbody>
 </table>
@@ -1527,17 +1627,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b939289fd3bf300115af88d<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1565,6 +1663,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1582,22 +1683,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939289fd3bf300115af88d" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939289fd3bf300115af88d</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 705ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=23cb56dd-657f-4dde-95eb-998fdf934e78<br/>Date=Sat, 08 Sep 2018 09:15:38 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:38<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-lxkkr<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1625,6 +1719,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1646,8 +1743,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1656,6 +1759,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -1676,12 +1782,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Delete the created questions</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -1712,6 +1821,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -1727,18 +1839,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -1766,6 +1875,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1805,8 +1917,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1835,6 +1953,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1857,7 +1978,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b93928bfd3bf300115af88e</td></tr>
+    <tr><td>questionId</td><td>5bc33782aadd6d001093fc42</td></tr>
     
   </tbody>
 </table>
@@ -1870,77 +1991,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
-  
-  
-  
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b93928bfd3bf300115af88e<br/><br/></p>
- </div>
-      </div>
-    </div>
-  
-
-	</li></ul></div></div>
-  
     
   
 
   
-
   
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
   
   
 
   
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-  
-  
-  
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b93928bfd3bf300115af88e" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b93928bfd3bf300115af88e</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 700ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=d148059d-53ce-4c21-b641-763313943dda<br/>Date=Sat, 08 Sep 2018 09:15:40 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:40<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-5v6z0<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
   
 
 	</li></ul></div></div>
@@ -1974,6 +2033,65 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
+  
+    
+      <span>
+        When the user invokes the API
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
   
     
       <span>
@@ -1989,8 +2107,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1999,6 +2123,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -2019,12 +2146,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Delete the created questions</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -2055,6 +2185,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -2070,18 +2203,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2109,6 +2239,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2148,8 +2281,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2178,6 +2317,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2200,7 +2342,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b93928dfd3bf300115af88f</td></tr>
+    <tr><td>questionId</td><td>5bc33784aadd6d001093fc43</td></tr>
     
   </tbody>
 </table>
@@ -2213,17 +2355,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b93928dfd3bf300115af88f<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2251,6 +2391,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2268,22 +2411,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b93928dfd3bf300115af88f" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b93928dfd3bf300115af88f</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 693ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=f1d12968-189a-472d-8244-10320cde2b9d<br/>Date=Sat, 08 Sep 2018 09:15:41 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:41<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-81spw<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2311,6 +2447,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2332,8 +2471,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2342,6 +2487,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -2362,12 +2510,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Delete the created questions</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -2398,6 +2549,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -2413,18 +2567,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2452,6 +2603,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2491,8 +2645,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2521,6 +2681,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2543,7 +2706,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b93928ffd3bf300115af890</td></tr>
+    <tr><td>questionId</td><td>5bc33785aadd6d001093fc44</td></tr>
     
   </tbody>
 </table>
@@ -2556,17 +2719,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b93928ffd3bf300115af890<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2594,6 +2755,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2611,22 +2775,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b93928ffd3bf300115af890" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b93928ffd3bf300115af890</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 704ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=45147690-c882-4c41-a5eb-45c90cd15f99<br/>Date=Sat, 08 Sep 2018 09:15:42 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:42<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-bdwm7<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2654,6 +2811,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2675,8 +2835,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2685,6 +2851,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -2705,12 +2874,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Delete the created questions</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -2741,6 +2913,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -2756,18 +2931,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2795,6 +2967,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2834,8 +3009,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2864,6 +3045,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2886,7 +3070,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b939290fd3bf300115af891</td></tr>
+    <tr><td>questionId</td><td>5bc33786aadd6d001093fc45</td></tr>
     
   </tbody>
 </table>
@@ -2899,17 +3083,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b939290fd3bf300115af891<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2937,6 +3119,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2954,22 +3139,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939290fd3bf300115af891" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939290fd3bf300115af891</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 722ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=f176fa8c-0c24-4b75-b59f-0c16c5f4b37b<br/>Date=Sat, 08 Sep 2018 09:15:43 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:43<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-nvll1<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -2997,6 +3175,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3018,8 +3199,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3028,6 +3215,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -3048,12 +3238,15 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Delete the created questions</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -3084,6 +3277,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
   
+
+  
+  
   
     
       <span>
@@ -3099,18 +3295,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -3138,6 +3331,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3177,8 +3373,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3207,6 +3409,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3229,7 +3434,7 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>questionId</td><td>5b939291fd3bf300115af892</td></tr>
+    <tr><td>questionId</td><td>5bc33787aadd6d001093fc46</td></tr>
     
   </tbody>
 </table>
@@ -3242,17 +3447,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Path parameters which will append to the request URL:/5b939291fd3bf300115af892<br/><br/></p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -3280,6 +3483,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3297,22 +3503,15 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
   
   
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\unimaos\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939291fd3bf300115af892" rel="nofollow">http://questionservice-pearson-prep-us1-qa.bite.pearsondev.tech/api/questions/5b939291fd3bf300115af892</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: DELETE<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 681ms<br/><br/></p>
- </div><div class="step-message"><p>Response is Empty<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Cache-Control=no-cache, no-store, max-age=0, must-revalidate<br/>Content-Type=application/json;charset=UTF-8<br/>correlation-id=888c723b-ed56-486b-8f2b-ef8a825db725<br/>Date=Sat, 08 Sep 2018 09:15:44 GMT<br/>Expires=0<br/>Pragma=no-cache<br/>Server=nginx<br/>ServerTime=2018-09-08 09:15:44<br/>X-Content-Type-Options=nosniff<br/>X-Content-Type-Options=nosniff<br/>X-Loadbalancer-Id=nginx-ingress-lxkkr<br/>X-XSS-Protection=1; mode=block<br/>X-XSS-Protection=1; mode=block<br/>Connection=keep-alive</p>
- </div>
-      </div>
-    </div>
+
+  
   
 
 	</li></ul></div></div>
@@ -3340,6 +3539,9 @@ Description  : This is an executable specification file which follows markdown s
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3361,8 +3563,14 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3371,6 +3579,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+  
+
+  
   
 
   
@@ -3391,6 +3602,7 @@ Description  : This is an executable specification file which follows markdown s
   
 
     
+    
     </div>
   
 
@@ -3408,15 +3620,15 @@ Description  : This is an executable specification file which follows markdown s
 
 	
     <script type="text/javascript">
-      var loadingImage = "..\../images/loading.gif";
-      var closeButton = "..\../images/close.gif";
+      var loadingImage = "../../images/loading.gif";
+      var closeButton = "../../images/close.gif";
     </script>
-    <script src="..\../js/lightbox.js"></script>
-    <script src="..\../js/jquery-3.1.0.min.js" type="text/javascript"></script>
-    <script src="..\../js/auto-complete.min.js" type="text/javascript"></script>
-    <script src="..\../js/clipboard.min.js" type="text/javascript"></script>
-    <script src="..\../js/search_index.js" type="text/javascript"></script>
-    <script src="..\../js/main.js" type="text/javascript"></script>
+    <script src="../../js/lightbox.js"></script>
+    <script src="../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="../../js/auto-complete.min.js" type="text/javascript"></script>
+    <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+    <script src="../../js/search_index.js" type="text/javascript"></script>
+    <script src="../../js/main.js" type="text/javascript"></script>
     </body>
   </html>
 

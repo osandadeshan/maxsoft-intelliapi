@@ -1,0 +1,123 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\style.css"><h1>Text Files Operations Specification</h1>
+<p>Project Name : MaxSoft-IntelliAPI
+Developer    : Osanda Deshan
+Version      : 1.0.0
+Date         : 6/17/2018
+Time         : 2:06 PM
+Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<h2>Invoke PI API in Staging Environment using valid username and password using payload text file</h2>
+<p>tags: get_pi_token, staging</p>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user set the request payload as follows &lt;file:/resources/payloads/login.txt&gt;</p>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Existence in the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>isExists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>true</td>
+</tr>
+<tr>
+<td>$.osa</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And save the access token in the response which is located inside the JSON Path of &quot;$.data&quot;</p>
+</li>
+<li>
+<p>And save the JSON Path values of the response into text files</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Text File Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>/resources/text_files/response_data/status.txt</td>
+</tr>
+<tr>
+<td>$.data</td>
+<td>/resources/text_files/response_data/token.txt</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Get a category</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get All Categories in Deck Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>&lt;file:/resources/text_files/response_data/token.txt&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\Data Stores\03. Saving And Reading Values From Data Store.html"><</a></li><li class="nav"><a href="..\..\index.html">=</a></li><li class="nav"><a href=".\02. Create a list from data store values.html">></a></li></center></article>

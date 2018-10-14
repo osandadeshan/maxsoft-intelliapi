@@ -59,10 +59,11 @@ public class Csv {
     }
 
     public static void writeToCsv(String filePath, String header1, String data, int noOfIterations) throws IOException {
-        File inputFile = new File(CURRENT_DIRECTORY + filePath);
-        inputFile.getParentFile().mkdirs();
+        File file = new File(CURRENT_DIRECTORY + filePath);
+        file.delete();
+        file.createNewFile();
         String[] header = {header1};
-        CSVWriter writer = new CSVWriter(new FileWriter(inputFile), ',');
+        CSVWriter writer = new CSVWriter(new FileWriter(file), ',');
         writer.writeNext(header);
         for (int i = 0; i < noOfIterations; i++) {
             writer.writeNext(new String[]{data});

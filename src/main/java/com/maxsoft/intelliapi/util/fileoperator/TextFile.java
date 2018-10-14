@@ -40,7 +40,7 @@ public abstract class TextFile {
             try
             {
                 if (writer != null)
-                    writer.close( );
+                    writer.close();
             }
             catch (IOException e)
             {
