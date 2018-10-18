@@ -17,7 +17,7 @@ import com.maxsoft.intelliapi.util.fileoperator.TextFile;
 import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.maxsoft.intelliapi.util.table.Board;
 import com.maxsoft.intelliapi.util.table.StringTable;
-import com.maxsoft.intelliapi.util.time.EpochTime;
+import com.maxsoft.intelliapi.util.datetime.EpochTime;
 import com.opencsv.CSVWriter;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.datastore.DataStore;
@@ -28,7 +28,6 @@ import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -110,7 +109,7 @@ public class Base {
     public String setBaseUrl() {
         String baseUrl = "";
         if (ENVIRONMENT == null) {
-            Assert.fail("Please add \"environment\" in the property file and assign an environment QA|DEV|UAT|PROD");
+            Assert.fail("Please add \"environment\" in the environment property file and assign an environment QA|DEV|UAT|PROD");
         }
         switch (ENVIRONMENT.toLowerCase()) {
             case DEV:
@@ -126,7 +125,7 @@ public class Base {
                 baseUrl = System.getenv("prod_environment_base_url");
                 break;
             default:
-                Assert.fail("Please assign an valid environment QA|DEV|UAT|PROD for \"environment\" in the property file");
+                Assert.fail("Please assign an valid environment QA|DEV|UAT|PROD for \"environment\" in the environment property file");
                 break;
         }
         if (baseUrl == null) {

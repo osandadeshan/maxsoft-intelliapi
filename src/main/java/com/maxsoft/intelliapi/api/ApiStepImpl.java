@@ -10,6 +10,7 @@ package com.maxsoft.intelliapi.api;
  **/
 
 import com.maxsoft.intelliapi.util.fileoperator.TextFile;
+import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
@@ -703,6 +704,15 @@ public class ApiStepImpl extends Base {
         List<String> columnNames = table.getColumnNames();
         for (TableRow row : rows) {
             super.saveEpochTime(timestampPattern, timestamp, secondsOrMillis, row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+        }
+    }
+
+    // Use this method to save api document test data into data stores
+    public void saveExcelDataToDataStore(Table table){
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            saveToDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), ApiDocument.getDataFromExcel(row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3))));
         }
     }
 

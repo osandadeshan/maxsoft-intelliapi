@@ -320,6 +320,12 @@ public class AllStepsDefinitions{
         apiStepImpl.saveEpochTime(timestampPattern, timestamp, secondsOrMillis, table);
     }
 
+    // Use this method to save api document test data into data stores
+    @Step("And the user saves test data inside excel file into data stores <table>")
+    public void saveExcelDataToDataStore(Table table){
+        apiStepImpl.saveExcelDataToDataStore(table);
+    }
+
     @Step("Given a user successfully connected to the MySQL Driver")
     public void loadMySqlDriver() {
         mySQLStepImpl.loadMySqlDriver();

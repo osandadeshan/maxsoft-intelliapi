@@ -1,9 +1,9 @@
 # Get Student Availability - Negative Tests Specification - 404 Error
-Project Name : Group_Work_API_Test_Automation
-Developer    : Ishal Dissanayake
+Project Name : MaxSoft-IntelliAPI
+Developer    : Osanda Deshan
 Version      : 1.0.0
-Date         : 10/10/2018
-Time         : 01.52 PM
+Date         : 6/17/2018
+Time         : 2:06 PM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
 

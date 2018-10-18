@@ -24,8 +24,8 @@ import java.util.Iterator;
 
 public abstract class Excel {
 
-	static Base baseObj = new Base();
-	static int column;
+	private static Base baseObj = new Base();
+	private static int column;
 
 	public static int findColumnNumber(String cellContent) throws IOException {
 		FileInputStream inputStream = new FileInputStream(baseObj.getAPIDocumentFilePath());
@@ -54,7 +54,6 @@ public abstract class Excel {
 	}
 
 	public static int findRowNumber(String cellContent) throws IOException {
-		System.out.println(baseObj.getAPIDocumentFilePath());
 		FileInputStream excelFile = new FileInputStream(new File(baseObj.getAPIDocumentFilePath()));
 		Workbook workbook = new XSSFWorkbook(excelFile);
 		Sheet workSheet = workbook.getSheetAt(0);
@@ -69,6 +68,22 @@ public abstract class Excel {
 		}
 		return 0;
 	}
+
+    public static int findRowNumber(String sheetName, String cellContent) throws IOException {
+        FileInputStream excelFile = new FileInputStream(new File(baseObj.getAPIDocumentFilePath()));
+        Workbook workbook = new XSSFWorkbook(excelFile);
+        Sheet workSheet = workbook.getSheet(sheetName);
+        for (Row row : workSheet) {
+            for (Cell cell : row) {
+                if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
+                    if (cell.getRichStringCellValue().getString().trim().equals(cellContent)) {
+                        return row.getRowNum();
+                    }
+                }
+            }
+        }
+        return 0;
+    }
 
 
 }

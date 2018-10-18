@@ -25,14 +25,30 @@ public abstract class ApiDocument {
 	private static Base baseObj = new Base();
 	private static String value = "";
 	private static String error = "";
-	private static int sheetName = 0;
+	private static int sheetIndex = 0;
+
+	public static String getDataFromExcel(String sheetName, String cellContent) {
+        String cellValue = "";
+		int colNum = 1;
+		try {
+			FileInputStream excelFile = new FileInputStream(new File(baseObj.getAPIDocumentFilePath()));
+			Workbook workbook = new XSSFWorkbook(excelFile);
+			Sheet workSheet = workbook.getSheet(sheetName);
+            cellValue = workSheet.getRow(Excel.findRowNumber(sheetName, cellContent)).getCell(colNum).getStringCellValue();
+            return cellValue;
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        return cellValue;
+	}
 
 	public static String getDataFromExcel(int row, int column) {
 		try {
 			FileInputStream excelFile = new FileInputStream(new File(baseObj.getAPIDocumentFilePath()));
-			System.out.println(baseObj.getAPIDocumentFilePath());
 			Workbook workbook = new XSSFWorkbook(excelFile);
-			Sheet workSheet = workbook.getSheetAt(sheetName);
+			Sheet workSheet = workbook.getSheetAt(sheetIndex);
 			value = workSheet.getRow(row).getCell(column).getStringCellValue();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
