@@ -5,6 +5,8 @@
 3) Execute this command. \
 `mvn clean install -DskipTests`
 
+<br />
+
 ## How to test the project code
 1) Open the command prompt.
 2) Navigate to the directory of the **Dev BVT.bat** file. \
