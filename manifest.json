@@ -4,6 +4,7 @@
     "html-report",
     "spectacle",
     "json-report",
+    "xml-report",
     "flash"
   ]
 }
