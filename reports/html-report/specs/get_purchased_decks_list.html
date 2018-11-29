@@ -183,7 +183,7 @@
   <span><p>Owner           : Osanda Deshan</p>
 </span>
   
-  <span><p>Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+  <span><p>Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a stepdefinition.</p>
 </span>
   
   <span></span>
@@ -218,23 +218,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -261,7 +261,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -281,18 +281,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -345,8 +345,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=root&amp;filter=purchased</p>
- </div><div class="step-message"><p>Response is: <br/>[<br/>    <br/>]</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=root&amp;filter=purchased</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>[<br/>    <br/>]</p>
  </div>
       </div>
     </div>
@@ -364,18 +364,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='stepdefinition-info failed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -402,7 +402,7 @@
           <h4 class="error-message">
             <pre>java.lang.AssertionError: The expected status code for the request is not match with the actual status code<br/> expected [401] but found [200]</pre>
           </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.ata.request.BaseClass.verifyResponseStatusCode(com.maxsoft.ata.request.BaseClass.java:453)<br/>com.maxsoft.ata.request.CommonStepDefinitions.verifyResponseStatusCode(com.maxsoft.ata.request.CommonStepDefinitions.java:134)<br/>com.maxsoft.ata.step.AllStepsDefinitions.verifyResponseStatusCode(com.maxsoft.ata.step.AllStepsDefinitions.java:106)<br/>sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
+          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>BaseClass.verifyResponseStatusCode(BaseClass.java:453)<br/>isResponseStatusCodeEqualTo(CommonStepDefinitions.java:134)<br/>stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(stepdefinition.AllStepsDefinitions.java:106)<br/>sun.reflect.GeneratedMethodAccessor128.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:39)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:89)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:104)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:36)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:85)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
         </div>
         
     </div>
@@ -426,18 +426,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info not-executed'>
+  <div class='stepdefinition-info not-executed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -523,23 +523,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -566,7 +566,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -586,18 +586,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -659,8 +659,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=Osanda&amp;filter=purchased</p>
- </div><div class="step-message"><p>Response is: <br/>[<br/>    <br/>]</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=Osanda&amp;filter=purchased</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>[<br/>    <br/>]</p>
  </div>
       </div>
     </div>
@@ -678,18 +678,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -726,18 +726,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -778,7 +778,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>No any JSON Paths found. Because the response is null for the given payload</p>
+        <div class="stepdefinition-message"><p>No any JSON Paths found. Because the response is null for the given payload</p>
  </div>
       </div>
     </div>
@@ -833,23 +833,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -876,7 +876,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -896,18 +896,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -969,8 +969,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=roo&amp;filter=purchased</p>
- </div><div class="step-message"><p>Response is: <br/>[<br/>    <br/>]</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=roo&amp;filter=purchased</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>[<br/>    <br/>]</p>
  </div>
       </div>
     </div>
@@ -988,18 +988,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1036,18 +1036,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1088,7 +1088,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>No any JSON Paths found. Because the response is null for the given payload</p>
+        <div class="stepdefinition-message"><p>No any JSON Paths found. Because the response is null for the given payload</p>
  </div>
       </div>
     </div>
@@ -1143,23 +1143,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1186,7 +1186,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -1206,18 +1206,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1277,8 +1277,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint doesn’t have any query parameters and query values. <br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315204556,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘userId’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
+        <div class="stepdefinition-message"><p>API Endpoint doesn’t have any query parameters and query values. <br/></p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315204556,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘userId’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
  </div>
       </div>
     </div>
@@ -1296,18 +1296,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1344,18 +1344,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1449,23 +1449,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1492,7 +1492,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -1512,18 +1512,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1583,8 +1583,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?filter=purchased</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315205204,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘userId’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?filter=purchased</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315205204,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘userId’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
  </div>
       </div>
     </div>
@@ -1602,18 +1602,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1650,18 +1650,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1755,23 +1755,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1798,7 +1798,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -1818,18 +1818,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1889,8 +1889,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=Osanda</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315205844,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘filter’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=Osanda</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315205844,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘filter’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
  </div>
       </div>
     </div>
@@ -1908,18 +1908,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -1956,18 +1956,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2061,23 +2061,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2104,7 +2104,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -2124,18 +2124,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2197,8 +2197,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=root&amp;filte=purchased</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315206473,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘filter’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=root&amp;filte=purchased</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315206473,<br/>    “status”: 400,<br/>    “error”: “Bad Request”,<br/>    “exception”: “org.springframework.web.bind.MissingServletRequestParameterException”,<br/>    “message”: “Required String parameter ‘filter’ is not present”,<br/>    “path”: “/api/decks”<br/>}</p>
  </div>
       </div>
     </div>
@@ -2216,18 +2216,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2264,18 +2264,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2369,23 +2369,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2412,7 +2412,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -2432,18 +2432,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2486,8 +2486,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=root&amp;filter=purchased</p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315207095,<br/>    “status”: 401,<br/>    “error”: “Unauthorized”,<br/>    “message”: “Invalid token”,<br/>    “path”: “/api/decks”<br/>}</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=root&amp;filter=purchased</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>{<br/>    “timestamp”: 1508315207095,<br/>    “status”: 401,<br/>    “error”: “Unauthorized”,<br/>    “message”: “Invalid token”,<br/>    “path”: “/api/decks”<br/>}</p>
  </div>
       </div>
     </div>
@@ -2505,18 +2505,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2553,18 +2553,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2656,23 +2656,23 @@
 	
 
   
-    <div class='context-step'>
+    <div class='context-stepdefinition'>
       
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2699,7 +2699,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/>/api/decks</p>
+        <div class="stepdefinition-message"><p>API Endpoint is: <br/>/api/decks</p>
  </div>
       </div>
     </div>
@@ -2719,18 +2719,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2792,8 +2792,8 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=&amp;filter=purchased</p>
- </div><div class="step-message"><p>Response is: <br/>[<br/>    <br/>]</p>
+        <div class="stepdefinition-message"><p>API Endpoint with query parameters and query values: <br/>/api/decks?userId=&amp;filter=purchased</p>
+ </div><div class="stepdefinition-message"><p>Response is: <br/>[<br/>    <br/>]</p>
  </div>
       </div>
     </div>
@@ -2811,18 +2811,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2859,18 +2859,18 @@
   
     
   
-  <div class='step'>
+  <div class='stepdefinition'>
   
   
     <h5 class='execution-time'>
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='stepdefinition-info passed'>
   
   <ul>
-    <li class='step'>
-      <div class='step-txt'>
+    <li class='stepdefinition'>
+      <div class='stepdefinition-txt'>
 
 
   
@@ -2911,7 +2911,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>No any JSON Paths found. Because the response is null for the given payload</p>
+        <div class="stepdefinition-message"><p>No any JSON Paths found. Because the response is null for the given payload</p>
  </div>
       </div>
     </div>

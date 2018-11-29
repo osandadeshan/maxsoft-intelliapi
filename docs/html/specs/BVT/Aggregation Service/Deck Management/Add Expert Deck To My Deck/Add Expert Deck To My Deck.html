@@ -1,0 +1,353 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\..\style.css"><h1>Add Expert Deck To My Deck using Aggregation Service Specification</h1>
+<p>Date Created    : 02/28/2018
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: add_expert_deck_to_my_deck, ci_ready</p>
+<h2>Add an expert deck to my deck</h2>
+<ul>
+<li>
+<p>Create an expert deck with 4 questions</p>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Add Expert Deck To My Deck using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Parameter</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>expertDeckIdWith4Questions</td>
+<td></td>
+</tr>
+<tr>
+<td>users</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>users</td>
+</tr>
+<tr>
+<td>userId</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>osan</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spec</td>
+<td>purchasedExpertDeckId</td>
+<td>$.id</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Verify all the questions are in the newly added deck</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Questions using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>purchasedExpertDeckId</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Expected Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.questions[0].deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>purchasedExpertDeckId</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.questions.length()</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Counting the number of questions inside that deck</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Questions Count using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>purchasedExpertDeckId</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>purchasedExpertDeckId</td>
+<td></td>
+</tr>
+<tr>
+<td>$.questionCount</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Delete the previously created expert deck</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Delete Expert Deck by ID using Expert Deck Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>expertDeckIdWith4Questions</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\..\Activity\Activity API in Aggregation Service.html"><</a></li><li class="nav"><a href="..\..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\Archive and Restore Deck (Staging)\Archive and Restore Expert Deck using Aggregation Service.html">></a></li></center></article>

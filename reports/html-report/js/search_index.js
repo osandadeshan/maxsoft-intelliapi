@@ -1,1 +1,1 @@
-var index = {"Tags":{"deck_management":["specs\\19. Delete A Deck using Deck Service - Positive Tests.html"],"deck_service":["specs\\19. Delete A Deck using Deck Service - Positive Tests.html"],"delete_a_deck":["specs\\19. Delete A Deck using Deck Service - Positive Tests.html"]},"Specs":{"Delete A Deck using Deck Service - Positive Test Specification":["specs\\19. Delete A Deck using Deck Service - Positive Tests.html"]}};
+var index = {"Tags":{},"Specs":{"Read From Excel File Specification":["specs/Other/10. Read from excel file.html"]}};

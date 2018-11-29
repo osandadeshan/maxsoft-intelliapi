@@ -186,12 +186,14 @@ header.top .project {
 
 .report_details {
     width: 100%;
+    margin: 10px 0 0 0;
+    padding: 10px;
 }
 
 .report_details ul {
     list-style-type: none;
-    margin: 10px 0 0 0;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
@@ -199,6 +201,33 @@ header.top .project {
 .report_details ul > li {
     display: flex;
     flex-direction: row;
+}
+
+.report_details .suite_messages {
+    overflow-y: scroll;
+    max-height: 100px;
+    background-color: #ccc;
+    font-family:  Courier New;
+}
+
+.report_details .suite_messages .message_separator {
+    text-align: center;
+}
+
+.report_details .suite_messages .step-message {
+    padding: 0px 0px 0px 10px;
+}
+
+.report_details .suite_messages .step-message p:before {
+    content: "$";
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.report_details .suite_screenshots {
+    overflow-y: scroll;
+    max-height: 100px;
+    background-color:#ccc;
 }
 
 .report_details label, .report_details span {
@@ -297,7 +326,10 @@ header.top .project {
     right: 30px;
     top: 20px;
 }
-
+.spec-screenshot-container {
+    max-width: 16.66%;
+    max-height: 16.66%;
+}
 .spec-list {
     list-style-type: none;
     margin: 0;
@@ -778,11 +810,11 @@ footer p {
     width: 100%;
 }
 
-.exception-container .screenshot-container {
+.screenshot-container {
     position: relative;
 }
 
-.exception-container img {
+.screenshot-container img {
     max-width: 50%;
 }
 
@@ -1002,9 +1034,6 @@ footer p {
     .report_details {
         width: 30%;
         padding: 0;
-    }
-
-    .report_details ul {
         margin: 1rem;
         padding: 1rem;
     }
@@ -1028,6 +1057,7 @@ footer p {
     }
 
     .specifications .sidebar {
+        min-width: 350px;
         width: 350px;
     }
 
@@ -1049,17 +1079,19 @@ footer p {
         padding: 0.5rem 1rem;
     }
 
-    .exception-container .screenshot-container {
-        max-width: 20rem;
+    .screenshot-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    .scenario-container .screenshot {
+        width: 16.66%;
     }
 
     .exception-container {
         flex-direction: row;
-    }
-
-    .exception-container .screenshot-container {
-        max-width: 15rem;
-        padding-left: 1rem;
     }
 
     .exception-container img {

@@ -1,0 +1,53 @@
+Date Created    : 02/04/2018
+Version   		: 1.0.0
+Owner      		: Osanda Deshan
+Description  	: This is a concept file with following syntax for each concept.
+
+
+
+# Create a short answer type question
+
+* Create a deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name              |Value To Be Stored     |
+    |---------------|---------------------------|-----------------------|
+    |scenario       |deckId                     |$.id                   |
+* Given that a user needs to invoke "Create Short Answer Type Question using Question Service"
+* And the user set the request authentication configurations as follows
+     |Configuration                                                     |Configuration Value            |
+     |------------------------------------------------------------------|-------------------------------|
+     |Is authentication required?                                       |Yes                            |
+     |Do you need to retrieve the access token from the text file?      |Yes                            |
+     |Provide the access token if you need to authorize the API manually|N/A                            |
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name    |Attribute Value To Be Set                                |
+     |--------------------------------|-------------------|---------------|----------------------------|---------------------------------------------------------|
+     |#creatorId                      |n                  |               |                            |osanda12                                                 |
+     |#creatorPlatform                |n                  |               |                            |Web                                                      |
+     |#creatoredSource                |n                  |               |                            |App                                                      |
+     |#creatoredType                  |n                  |               |                            |Manual                                                   |
+     |#deckId                         |y                  |scenario       |deckId                      |                                                         |
+     |#isDeleted                      |n                  |               |                            |false                                                    |
+     |#tempQuestionId                 |n                  |               |                            |testId                                                   |
+     |#kind                           |n                  |               |                            |SHORT_ANSWER                                             |
+     |#learningObjectives             |n                  |               |                            |                                                         |
+     |#imageUrl                       |n                  |               |                            |https://documentservice-qa.stg-prsn.com/api/v1/documents/5a155f35d5b71d1a8a54dd58/download/public?format=ORIGINAL                                    |
+     |#media                          |n                  |               |                            |TEXT                                                     |
+     |#questionPrompt                 |n                  |               |                            |Who is the owner of MaxSoft? _ _ _ _ _ _ _ _             |
+     |#promptType                     |n                  |               |                            |TEXT                                                     |
+     |#timeout                        |n                  |               |                            |60                                                       |
+     |#rationale                      |n                  |               |                            |rationale                                                |
+     |#boxId                          |n                  |               |                            |0                                                        |
+     |#correctAttempts                |n                  |               |                            |1                                                        |
+     |#inCorrectAttempts              |n                  |               |                            |0                                                        |
+     |#lastAswered                    |n                  |               |                            |2018-01-01T12:00:00+01:00                                |
+     |#questionId                     |n                  |               |                            |0                                                        |
+     |#skips                          |n                  |               |                            |0                                                        |
+     |#userId                         |n                  |               |                            |0                                                        |
+     |#correctAnswerId                |n                  |               |                            |1                                                        |
+     |#correctAnswerValue             |n                  |               |                            |Osanda Deshan                                            |
+     |#iscorrectAnswerCaseSensitive   |n                  |               |                            |false                                                    |
+     |#correctAnswerType              |n                  |               |                            |TEXT                                                     |
+     |#tags                           |n                  |               |                            |MaxSoft                                                  |
+* When the user invokes the API
+* Then the status code for the request is "201"

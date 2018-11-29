@@ -1,0 +1,3 @@
+scenario,api,skuId,price,type
+Create a SKU for a deck,Create SKU,com.pearsoned.smartflashcards.test1,0.99,DECK
+Create a SKU for a bundle,Create SKU,com.pearsoned.smartflashcards.test2,1.99,BUNDLE

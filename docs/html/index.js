@@ -1,16 +1,19 @@
 
-const statsTemplate = '<p><table style="text-align:center;margin-left: auto;margin-right: auto;border-collapse: separate;">\
-	<th style="border: none !important;">Specifications</th>\
-	<th style="border: none !important;">Scenarios</th>\
-	<tr>\
-		<td style="border: none !important;">SPEC_NUMBER</td>\
-		<td style="border: none !important;">SCENARIO_NUMBER</td>\
-	</tr>\
-</table></p>\
+const statsTemplate = '<p class="stats">\
+<span>\
+	<span class="entity">Specifications: </span>\
+	<span class="stat">SPEC_NUMBER</span>\
+</span>\
+<span class="separator">|</span>\
+<span>\
+	<span class="entity">Scenarios: </span>\
+	<span class="stat">SCENARIO_NUMBER</span>\
+</span>\
+</p>\
 ';
 const populateIndex = (specs) => {
     if (Object.keys(specs).length == 0) {
-        document.getElementsByClassName("specs")[0].innerHTML = "<p>No Specifications found that matches the given tag expression...<p>";
+		document.getElementsByClassName("specs")[0].innerHTML = statsTemplate.replace("SPEC_NUMBER", 0).replace("SCENARIO_NUMBER", 0);
         return;
     }
     let text = "<ul>";

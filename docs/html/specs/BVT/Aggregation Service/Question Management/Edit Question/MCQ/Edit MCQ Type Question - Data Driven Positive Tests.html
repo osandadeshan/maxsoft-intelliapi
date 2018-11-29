@@ -1,0 +1,525 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\..\..\style.css"><h1>Edit MCQ Type Question using Aggregation Service - Data Driven Positive Test Specification</h1>
+<p>Date Created    : 11/06/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: edit_question, edit_question_mcq_type, edit_question-positive_tests, positive</p>
+<p>table: /resources/data_driven_test_csv/edit_question/aggregation_service/edit_question_mcq_type-positive_tests.csv</p>
+<ul>
+<li>
+<p>Create a MCQ question using Question Service</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scenario</td>
+<td>questionId</td>
+<td>$.id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &lt;api&gt;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>questionId</td>
+<td>y</td>
+<td>scenario</td>
+<td>questionId</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Edit a question using a valid payload</h2>
+<ul>
+<li>
+<p>And the user set the request attributes using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#creatorId</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;creatorId&gt;</td>
+</tr>
+<tr>
+<td>#creatorPlatform</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;creatorPlatform&gt;</td>
+</tr>
+<tr>
+<td>#creatoredSource</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;creatoredSource&gt;</td>
+</tr>
+<tr>
+<td>#creatoredType</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;creatoredType&gt;</td>
+</tr>
+<tr>
+<td>#deckId</td>
+<td>y</td>
+<td>scenario</td>
+<td>deckId</td>
+<td></td>
+</tr>
+<tr>
+<td>#isDeleted</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;isDeleted&gt;</td>
+</tr>
+<tr>
+<td>#tempQuestionId</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;tempQuestionId&gt;</td>
+</tr>
+<tr>
+<td>#kind</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;kind&gt;</td>
+</tr>
+<tr>
+<td>#learningObjectives</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;learningObjectives&gt;</td>
+</tr>
+<tr>
+<td>#imageUrl</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;imageUrl&gt;</td>
+</tr>
+<tr>
+<td>#media</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;media&gt;</td>
+</tr>
+<tr>
+<td>#questionPrompt</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;prompt&gt;</td>
+</tr>
+<tr>
+<td>#promptType</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;promptType&gt;</td>
+</tr>
+<tr>
+<td>#timeout</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;timeout&gt;</td>
+</tr>
+<tr>
+<td>#rationale</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;rationale&gt;</td>
+</tr>
+<tr>
+<td>#boxId</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;boxId&gt;</td>
+</tr>
+<tr>
+<td>#correctAttempts</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;correctAttempts&gt;</td>
+</tr>
+<tr>
+<td>#inCorrectAttempts</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;inCorrectAttempts&gt;</td>
+</tr>
+<tr>
+<td>#lastAswered</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;lastAswered&gt;</td>
+</tr>
+<tr>
+<td>#questionId</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;questionId&gt;</td>
+</tr>
+<tr>
+<td>#skips</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;skips&gt;</td>
+</tr>
+<tr>
+<td>#userId</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;userId&gt;</td>
+</tr>
+<tr>
+<td>#correctAnswerList</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;correctAnswerList&gt;</td>
+</tr>
+<tr>
+<td>#answer1Id</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer1Id&gt;</td>
+</tr>
+<tr>
+<td>#answer1Value</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer1Value&gt;</td>
+</tr>
+<tr>
+<td>#answer1Type</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer1Type&gt;</td>
+</tr>
+<tr>
+<td>#answer1CaseSensitive</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer1CaseSensitive&gt;</td>
+</tr>
+<tr>
+<td>#answer2Id</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer2Id&gt;</td>
+</tr>
+<tr>
+<td>#answer2Value</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer2Value&gt;</td>
+</tr>
+<tr>
+<td>#answer2Type</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer2Type&gt;</td>
+</tr>
+<tr>
+<td>#answer2CaseSensitive</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer2CaseSensitive&gt;</td>
+</tr>
+<tr>
+<td>#answer3Id</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer3Id&gt;</td>
+</tr>
+<tr>
+<td>#answer3Value</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer3Value&gt;</td>
+</tr>
+<tr>
+<td>#answer3Type</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer3Type&gt;</td>
+</tr>
+<tr>
+<td>#answer3CaseSensitive</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer3CaseSensitive&gt;</td>
+</tr>
+<tr>
+<td>#answer4Id</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer4Id&gt;</td>
+</tr>
+<tr>
+<td>#answer4Value</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer4Value&gt;</td>
+</tr>
+<tr>
+<td>#answer4Type</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer4Type&gt;</td>
+</tr>
+<tr>
+<td>#answer4CaseSensitive</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer4CaseSensitive&gt;</td>
+</tr>
+<tr>
+<td>#answer5Id</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer5Id&gt;</td>
+</tr>
+<tr>
+<td>#answer5Value</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer5Value&gt;</td>
+</tr>
+<tr>
+<td>#answer5Type</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer5Type&gt;</td>
+</tr>
+<tr>
+<td>#answer5CaseSensitive</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;answer5CaseSensitive&gt;</td>
+</tr>
+<tr>
+<td>#tags</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>&lt;tags&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.question.media</td>
+<td>&lt;media&gt;</td>
+</tr>
+<tr>
+<td>$.question.prompt</td>
+<td>&lt;prompt&gt;</td>
+</tr>
+<tr>
+<td>$.question.imageUrl</td>
+<td>&lt;imageUrl&gt;</td>
+</tr>
+<tr>
+<td>$.question.promptType</td>
+<td>&lt;promptType&gt;</td>
+</tr>
+<tr>
+<td>$.stats.questionId</td>
+<td>&lt;questionId&gt;</td>
+</tr>
+<tr>
+<td>$.stats.userId</td>
+<td>&lt;userId&gt;</td>
+</tr>
+<tr>
+<td>$.stats.boxId</td>
+<td>&lt;boxId&gt;</td>
+</tr>
+<tr>
+<td>$.stats.skips</td>
+<td>&lt;skips&gt;</td>
+</tr>
+<tr>
+<td>$.stats.inCorrectAttempts</td>
+<td>&lt;inCorrectAttempts&gt;</td>
+</tr>
+<tr>
+<td>$.stats.correctAttempts</td>
+<td>&lt;correctAttempts&gt;</td>
+</tr>
+<tr>
+<td>$.learningObjectives</td>
+<td>&lt;learningObjectives&gt;</td>
+</tr>
+<tr>
+<td>$.rationale</td>
+<td>&lt;rationale&gt;</td>
+</tr>
+<tr>
+<td>$.tags</td>
+<td>&lt;tags&gt;</td>
+</tr>
+<tr>
+<td>$.creatorId</td>
+<td>&lt;creatorId&gt;</td>
+</tr>
+<tr>
+<td>$.creatoredType</td>
+<td>&lt;creatoredType&gt;</td>
+</tr>
+<tr>
+<td>$.creatorPlatform</td>
+<td>&lt;creatorPlatform&gt;</td>
+</tr>
+<tr>
+<td>$.creatoredSource</td>
+<td>&lt;creatoredSource&gt;</td>
+</tr>
+<tr>
+<td>$.deleted</td>
+<td>&lt;isDeleted&gt;</td>
+</tr>
+<tr>
+<td>$.tempQuestionId</td>
+<td>&lt;tempQuestionId&gt;</td>
+</tr>
+<tr>
+<td>$.correctAnswers[0]</td>
+<td>&lt;correctAnswerList&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>//     |$.answers[0].id                           |&lt;answer1Id&gt;                                              |
+//     |$.answers[0].value                        |&lt;answer1Value&gt;                                           |
+//     |$.answers[0].type                         |&lt;answer1Type&gt;                                            |
+//     |$.answers[0].caseSensitive                |&lt;answer1CaseSensitive&gt;                                   |
+//     |$.answers[1].id                           |&lt;answer2Id&gt;                                              |
+//     |$.answers[1].value                        |&lt;answer2Value&gt;                                           |
+//     |$.answers[1].type                         |&lt;answer2Type&gt;                                            |
+//     |$.answers[1].caseSensitive                |&lt;answer2CaseSensitive&gt;                                   |
+//     |$.answers[2].id                           |&lt;answer3Id&gt;                                              |
+//     |$.answers[2].value                        |&lt;answer3Value&gt;                                           |
+//     |$.answers[2].type                         |&lt;answer3Type&gt;                                            |
+//     |$.answers[2].caseSensitive                |&lt;answer3CaseSensitive&gt;                                   |
+//     |$.answers[3].id                           |&lt;answer4Id&gt;                                              |
+//     |$.answers[3].value                        |&lt;answer4Value&gt;                                           |
+//     |$.answers[3].type                         |&lt;answer4Type&gt;                                            |
+//     |$.answers[3].caseSensitive                |&lt;answer4CaseSensitive&gt;                                   |</p>
+<ul id="navigation"><center><li class="nav"><a href="..\All\Edit All Type Question - Data Driven Positive Tests.html"><</a></li><li class="nav"><a href="..\..\..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\Short Answer\Edit Short Answer Type Question - Data Driven Positive Tests.html">></a></li></center></article>

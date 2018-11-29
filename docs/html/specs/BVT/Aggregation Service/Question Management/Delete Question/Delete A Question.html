@@ -1,0 +1,442 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\..\style.css"><h1>Delete a Question using Aggregation Service Specification</h1>
+<p>Date Created    : 11/14/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: delete_a_question, ci_ready</p>
+<h2>Delete the only question using valid question id (short answer type)</h2>
+<ul>
+<li>
+<p>Create a short answer type question</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scenario</td>
+<td>questionId</td>
+<td>$.id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete a Question using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>questionId</td>
+<td>y</td>
+<td>scenario</td>
+<td>questionId</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+</ul>
+<h2>Delete the only question using valid question id (MCQ type)</h2>
+<ul>
+<li>
+<p>Create a MCQ question using Aggregation Service</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scenario</td>
+<td>questionId</td>
+<td>$.id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete a Question using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>questionId</td>
+<td>y</td>
+<td>scenario</td>
+<td>questionId</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+</ul>
+<h2>Delete the only question using valid question id (ALL type)</h2>
+<ul>
+<li>
+<p>Create an All type question using Aggregation Service</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scenario</td>
+<td>questionId</td>
+<td>$.id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete a Question using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>questionId</td>
+<td>y</td>
+<td>scenario</td>
+<td>questionId</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+</ul>
+<h2>Delete the second question using valid question id (short answer type)</h2>
+<ul>
+<li>
+<p>Create a my deck with all types of 9 questions</p>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete a Question using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>questionId</td>
+<td>y</td>
+<td>scenario</td>
+<td>cardId2</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+</ul>
+<h2>Delete the second last question using valid question id (MCQ type)</h2>
+<ul>
+<li>
+<p>Create a deck with 4 MCQ questions</p>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete a Question using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>questionId</td>
+<td>y</td>
+<td>spec</td>
+<td>mcqCardId2</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+</ul>
+<h2>Delete the fifth question using valid question id (ALL type)</h2>
+<ul>
+<li>
+<p>Create a my deck with all types of 9 questions</p>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete a Question using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>questionId</td>
+<td>y</td>
+<td>scenario</td>
+<td>cardId5</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\Create Questions From Text\Create Questions From Text using Aggregation Service - Data Driven Positive Test.html"><</a></li><li class="nav"><a href="..\..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\Edit Question\All\Edit All Type Question - Data Driven Positive Tests.html">></a></li></center></article>

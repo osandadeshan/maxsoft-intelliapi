@@ -1,0 +1,103 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\..\style.css"><h1>Get All Questions In A Deck using Aggregation Service Specification</h1>
+<p>Date Created    : 11/06/2017
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: get_all_questions_in_a_deck, ci_ready</p>
+<h2>Get all questions of a deck</h2>
+<ul>
+<li>
+<p>Create a my deck with all types of 9 questions</p>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Questions using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>myDeckIdWith9Questions</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.questions.[-1:].question.prompt</td>
+<td>Who is the owner of MaxSoft? _ _ _ _ _ _ _ _</td>
+</tr>
+<tr>
+<td>$.questions.[-1:].question.media</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>$.questions.[-1:].question.promptType</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>$.questions.[-1:].creatoredSource</td>
+<td>App</td>
+</tr>
+<tr>
+<td>$.questions.[-1:].answers.[0].type</td>
+<td>TEXT</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\Get A Question In A Deck.html"><</a></li><li class="nav"><a href="..\..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\Questions Count\Get Questions Count.html">></a></li></center></article>

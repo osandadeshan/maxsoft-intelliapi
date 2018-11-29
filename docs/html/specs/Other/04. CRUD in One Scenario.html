@@ -1,0 +1,447 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\style.css"><h1>CRUD in One Scenario Specification</h1>
+<p>Created by Osanda Deshan on 5/26/2018</p>
+<p>This is an executable specification file which follows markdown syntax.
+Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<h2>CRUD operation for a sku and get all the 9 questions in a deck</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Create SKU&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#skuId</td>
+<td>sampleSkuId1</td>
+</tr>
+<tr>
+<td>#price</td>
+<td>1.19</td>
+</tr>
+<tr>
+<td>#type</td>
+<td>DECK</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.skuId</td>
+<td>sampleSkuId1</td>
+</tr>
+<tr>
+<td>$.price</td>
+<td>1.19</td>
+</tr>
+<tr>
+<td>$.type</td>
+<td>DECK</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scenario</td>
+<td>skuUUID1</td>
+<td>$.id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Create a sku</p>
+</li>
+<li>
+<p>And save the JSON Path values in the response inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scenario</td>
+<td>skuUUID2</td>
+<td>$.id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Edit SKU&quot;</p>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skuUUID</td>
+<td>y</td>
+<td>scenario</td>
+<td>skuUUID2</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#skuId</td>
+<td>sampleSkuId2</td>
+</tr>
+<tr>
+<td>#price</td>
+<td>1.07</td>
+</tr>
+<tr>
+<td>#type</td>
+<td>DECK</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.skuId</td>
+<td>sampleSkuId2</td>
+</tr>
+<tr>
+<td>$.price</td>
+<td>1.07</td>
+</tr>
+<tr>
+<td>$.type</td>
+<td>DECK</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete SKU&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skuUUID</td>
+<td>y</td>
+<td>scenario</td>
+<td>skuUUID1</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Delete SKU&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Path Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Path Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skuUUID</td>
+<td>y</td>
+<td>scenario</td>
+<td>skuUUID2</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;204&quot;</p>
+</li>
+<li>
+<p>Create a my deck with all types of 9 questions</p>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Get all Questions using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>And the user set the query parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deckId</td>
+<td>y</td>
+<td>spec</td>
+<td>myDeckIdWith9Questions</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.questions.length()</td>
+<td>9</td>
+</tr>
+<tr>
+<td>$.questions.[-1].question.media</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>$.questions.[-1].question.promptType</td>
+<td>TEXT</td>
+</tr>
+<tr>
+<td>$.questions.[-1].creatoredSource</td>
+<td>App</td>
+</tr>
+<tr>
+<td>$.questions.[-1].answers.[0].type</td>
+<td>TEXT</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\03. Create All Type Question - Negative Data Driven Tests2.html"><</a></li><li class="nav"><a href="..\..\index.html">=</a></li><li class="nav"><a href=".\05. Form-Data Example.html">></a></li></center></article>

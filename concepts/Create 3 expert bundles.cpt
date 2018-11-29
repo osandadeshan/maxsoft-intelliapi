@@ -1,0 +1,132 @@
+Created by VGAMAKI on 5/9/2018
+
+This is a concept file with following syntax for each concept.
+
+
+# Create 3 expert bundles
+
+* Create an expert deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |scenario       |expertDeckId1  |$.id                   |
+* Create an expert deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |scenario       |expertDeckId2  |$.id                   |
+* Given that a user needs to invoke "Create Expert Bundle"
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
+     |#subjectId                      |n                  |               |                        |Information Security3    |
+     |#title                          |n                  |               |                        |Network Security3        |
+     |#status                         |n                  |               |                        |true                     |
+     |#previewcardIds                 |n                  |               |                        |true                     |
+     |#skuId                          |n                  |               |                        |12345                    |
+     |#bookAuthor                     |n                  |               |                        |Amoma Gamage             |
+     |#bookTitle                      |n                  |               |                        |Network Enhancement      |
+     |#description                    |n                  |               |                        |Security Test in mobile  |
+     |#id1                            |y                  |scenario       |expertDeckId1           |                         |
+     |#id3                            |y                  |scenario       |expertDeckId2           |                         |
+     |"#id2",                         |n                  |               |                        |                         |
+     |#authorId                       |n                  |               |                        |Aruna Gamage             |
+     |#createdSource                  |n                  |               |                        |web                      |
+     |#price                          |n                  |               |                        |500                      |
+     |#keyword1                       |n                  |               |                        |key1                     |
+     |#keyword2                       |n                  |               |                        |key2                     |
+     |#noOfDecks                      |n                  |               |                        |20                       |
+     |#purchaseStatus                 |n                  |               |                        |AVAILABLE                |
+* When the user invokes the API
+* Then the status code for the request is "201"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path                 |Expected Result              |
+     |$.subjectId               |Information Security3        |
+     |$.title                   |Network Security3            |
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored |
+    |scenario       |bundleId3      |$.id               |
+    |scenario       |title3         |$.title            |
+
+
+* Create an expert deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |scenario       |expertDeckId3  |$.id                   |
+* Create an expert deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |scenario       |expertDeckId4  |$.id                   |
+* Given that a user needs to invoke "Create Expert Bundle"
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
+     |#subjectId                      |n                  |               |                        |Network Security2        |
+     |#title                          |n                  |               |                        |Info Security2           |
+     |#status                         |n                  |               |                        |true                     |
+     |#previewcardIds                 |n                  |               |                        |true                     |
+     |#skuId                          |n                  |               |                        |12345                    |
+     |#bookAuthor                     |n                  |               |                        |Anoma Gamage             |
+     |#bookTitle                      |n                  |               |                        |Security Enhancement     |
+     |#description                    |n                  |               |                        |Security Test in mobile  |
+     |#id1                            |y                  |scenario       |expertDeckId3           |                         |
+     |#id3                            |y                  |scenario       |expertDeckId4           |                         |
+     |"#id2",                         |n                  |               |                        |                         |
+     |#authorId                       |n                  |               |                        |Aruna Gamage             |
+     |#createdSource                  |n                  |               |                        |web                      |
+     |#price                          |n                  |               |                        |500                      |
+     |#keyword1                       |n                  |               |                        |key1                     |
+     |#keyword2                       |n                  |               |                        |key2                     |
+     |#noOfDecks                      |n                  |               |                        |20                       |
+     |#purchaseStatus                 |n                  |               |                        |AVAILABLE                |
+* When the user invokes the API
+* Then the status code for the request is "201"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path                 |Expected Result             |
+     |$.subjectId               |Network Security2           |
+     |$.title                   |Info Security2              |
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored |
+    |scenario       |bundleId2      |$.id               |
+    |scenario       |title2         |$.title            |
+
+* Create an expert deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |scenario       |expertDeckId5  |$.id                   |
+* Create an expert deck
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored     |
+    |scenario       |expertDeckId6  |$.id                   |
+* Given that a user needs to invoke "Create Expert Bundle"
+* And the user set the request attributes using data stores as follows
+     |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
+     |#subjectId                      |n                  |               |                        |Information Technology1  |
+     |#title                          |n                  |               |                        |Network Security1        |
+     |#status                         |n                  |               |                        |true                     |
+     |#previewcardIds                 |n                  |               |                        |true                     |
+     |#skuId                          |n                  |               |                        |12345                    |
+     |#bookAuthor                     |n                  |               |                        |KLGamage                |
+     |#bookTitle                      |n                  |               |                        |Network Enhancement      |
+     |#description                    |n                  |               |                        |Security Test in mobile  |
+     |#id1                            |y                  |scenario       |expertDeckId5           |                         |
+     |#id3                            |y                  |scenario       |expertDeckId6           |                         |
+     |"#id2",                         |n                  |               |                        |                         |
+     |#authorId                       |n                  |               |                        |Aruna Gamage             |
+     |#createdSource                  |n                  |               |                        |web                      |
+     |#price                          |n                  |               |                        |500                      |
+     |#keyword1                       |n                  |               |                        |key1                     |
+     |#keyword2                       |n                  |               |                        |key2                     |
+     |#noOfDecks                      |n                  |               |                        |20                       |
+     |#purchaseStatus                 |n                  |               |                        |AVAILABLE                |
+* When the user invokes the API
+* Then the status code for the request is "201"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path                 |Expected Result             |
+     |$.subjectId               |Information Technology1     |
+     |$.title                   |Network Security1           |
+* And save the JSON Path values in the response inside the data stores
+    |DataStore Type |Variable Name  |Value To Be Stored |
+    |scenario       |bundleId1      |$.id               |
+    |scenario       |subjectName1   |$.subjectId        |
+    |scenario       |bookAuthor1    |$.book.bookAuthor  |
+    |scenario       |bookTitle1     |$.book.bookTitle   |
+    |scenario       |title1         |$.title            |
+    |scenario       |deckId1-1      |$.deckId[0]        |
+    |scenario       |deckId1-2      |$.deckId[1]        |

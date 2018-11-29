@@ -1,0 +1,124 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\..\..\..\style.css"><h1>Find Expert Bundle Specification</h1>
+<p>Date Created    : 05/30/2018
+Version         : 1.0.0
+Owner           : Kinkini Gamage
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: bundle, get_bundle</p>
+<h2>Find expert bundle</h2>
+<ul>
+<li>
+<p>Create 3 expert bundles</p>
+</li>
+<li>
+<p>And the user set the path parameters using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Query Name</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Query Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>y</td>
+<td>scenario</td>
+<td>bundleId1</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Given that a user needs to invoke &quot;Find a Bundle using Aggregation Service&quot;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;200&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the values inside the data stores</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.subjectId</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>Information Technology1</td>
+</tr>
+<tr>
+<td>$.title</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>Network Security1</td>
+</tr>
+<tr>
+<td>$.deckId.length()</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>$.deckId[0]</td>
+<td>y</td>
+<td></td>
+<td>deckId1-1</td>
+<td></td>
+</tr>
+<tr>
+<td>$.deckId[1]</td>
+<td>y</td>
+<td></td>
+<td>deckId1-2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Delete 3 expert bundles and associated 6 expert decks</p>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\..\..\Archive and Restore Deck (Staging)\Archive and Restore My Deck using Aggregation Service.html"><</a></li><li class="nav"><a href="..\..\..\..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\Search Expert Bundle\Search Expert Bundle.html">></a></li></center></article>

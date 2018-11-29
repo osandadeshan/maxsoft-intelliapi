@@ -1,0 +1,113 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\..\..\style.css"><h1>Send A Feedback using Aggregation Service - Data Driven Positive Tests Specification</h1>
+<p>Date Created    : 03/04/2018
+Version         : 1.0.0
+Owner           : Osanda Deshan
+Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<p>tags: feedback, send_feedback-positive_tests, positive, ci_ready</p>
+<p>table: /resources/data_driven_test_csv/send_feedback/send_feedback_using_aggregation_service.csv</p>
+<ul>
+<li>
+<p>Given that a user needs to invoke &lt;api&gt;</p>
+</li>
+<li>
+<p>And the user set the request authentication configurations as follows</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Configuration Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is authentication required?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Do you need to retrieve the access token from the text file?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Provide the access token if you need to authorize the API manually</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Send a feedback using valid payload</h2>
+<ul>
+<li>
+<p>And the user set the request attributes as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#comment</td>
+<td>&lt;comment&gt;</td>
+</tr>
+<tr>
+<td>#username</td>
+<td>&lt;username&gt;</td>
+</tr>
+<tr>
+<td>#rating</td>
+<td>&lt;rating&gt;</td>
+</tr>
+<tr>
+<td>#appId</td>
+<td>&lt;appId&gt;</td>
+</tr>
+<tr>
+<td>#email</td>
+<td>&lt;email&gt;</td>
+</tr>
+<tr>
+<td>#appName</td>
+<td>&lt;appName&gt;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>$.code</td>
+<td>201</td>
+</tr>
+<tr>
+<td>$.message.n</td>
+<td>1</td>
+</tr>
+<tr>
+<td>$.message.ok</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="..\Deck Management\SKU\Get SKUs\Get All SKUs.html"><</a></li><li class="nav"><a href="..\..\..\..\index.html">=</a></li><li class="nav"><a href="..\Question Management\Create Question\All\Create All Type Question - Data Driven Positive Tests.html">></a></li></center></article>

@@ -1,0 +1,266 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\..\style.css"><h1>Request Placeholders Specification</h1>
+<p>Project Name : MaxSoft-IntelliAPI
+Developer    : Osanda Deshan
+Version      : 1.0.0
+Date         : 9/8/2018
+Time         : 11:32 AM
+Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.</p>
+<h2>Saving values to Data Store</h2>
+<ul>
+<li>
+<p>And the user save the values inside data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>DataStore Type</th>
+<th>Variable Name</th>
+<th>Value To Be Stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scenario</td>
+<td>username</td>
+<td>Osanda12</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>username</td>
+<td>Osanda12</td>
+</tr>
+<tr>
+<td>Specification</td>
+<td>password</td>
+<td>Password1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Replace request placeholders from values</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user set the request payload as follows &lt;file:/resources/payloads/login_placeholders.txt&gt;</p>
+</li>
+<li>
+<p>And the user set values to the request payload placeholders as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>osanda12</td>
+</tr>
+<tr>
+<td>#password</td>
+<td>Password1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Replace one request placeholders from values</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user set the request payload as follows &lt;file:/resources/payloads/login_placeholder.txt&gt;</p>
+</li>
+<li>
+<p>And the user set values to the request payload placeholders as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>osanda12</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Replace request placeholders from data store values</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user set the request payload as follows &lt;file:/resources/payloads/login_placeholders.txt&gt;</p>
+</li>
+<li>
+<p>And the user set values to the request payload placeholders using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>y</td>
+<td>spec</td>
+<td>username</td>
+<td></td>
+</tr>
+<tr>
+<td>#password</td>
+<td>y</td>
+<td>spec</td>
+<td>password</td>
+<td>Password1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2>Replace one request placeholder from data store values</h2>
+<ul>
+<li>
+<p>Given that a user needs to invoke &quot;Get Staging PI Token&quot;</p>
+</li>
+<li>
+<p>And the user set the request payload as follows &lt;file:/resources/payloads/login_placeholders.txt&gt;</p>
+</li>
+<li>
+<p>And the user set values to the request payload placeholders using data stores as follows</p>
+<table>
+<thead>
+<tr>
+<th>Attribute Value In JSON Template</th>
+<th>Is Data Store Used?</th>
+<th>Data Store Type</th>
+<th>Data Store Variable Name</th>
+<th>Attribute Value To Be Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#username</td>
+<td>y</td>
+<td>spec</td>
+<td>username</td>
+<td></td>
+</tr>
+<tr>
+<td>#password</td>
+<td>n</td>
+<td></td>
+<td></td>
+<td>Password1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>When the user invokes the API</p>
+</li>
+<li>
+<p>Then the status code for the request is &quot;201&quot;</p>
+</li>
+<li>
+<p>And the JSON Path Assertions for the response should be equal to the following</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>Expected Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$.status</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href=".\05. Form-Data Example.html"><</a></li><li class="nav"><a href="..\..\index.html">=</a></li><li class="nav"><a href=".\07. Read from saved CSV.html">></a></li></center></article>
