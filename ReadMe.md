@@ -1,14 +1,12 @@
 # Setup Guide
-<br /> <br />
+<br />
 
 ## Pre Requisites
 1. Java
 2. Maven
-<br /> <br /> <br /> <br />
-
+<br />
 
 ## How to Install Gauge Core
-<br />
 
 **On Windows**
 1. Install Chocolatey by executing the following command. \
@@ -17,16 +15,12 @@
 2. Install Gauge by executing the following command. \
 `choco install gauge`
 
-<br /> <br />
-
 **On MacOS**
 1. Update Homebrew. \
 `brew update`
 
 2. Install Gauge using Homebrew. \
 `brew install gauge`
-
-<br /> <br />
 
 **On Linux**
 1. First, add Gauge’s GPG key with this command. \
@@ -38,8 +32,7 @@
 3. Finally, install Gauge using these commands. \
 `sudo apt-get update` \
 `sudo apt-get install gauge`
-
-<br /> <br /> <br />
+<br />
 
 ## How to Install Gauge Plugins
 1. Open Command Prompt and execute following commands. \
@@ -66,8 +59,7 @@
     spectacle (<version number>)
     xml-report (<version number>)
 ```
-
-<br /> <br /> <br />
+<br />
 
 ## MaxSoft IntelliAPI Tutorials
 1. [MaxSoft — IntelliAPI](https://medium.com/@osanda.deshan/maxsoft-ata-framework-for-api-test-automation-9cffd25a0b15 "MaxSoft — IntelliAPI")
@@ -76,8 +68,7 @@
 4. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 3](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-3-160f81e404f1 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 3")
 5. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-4-5fb265ca5eaf "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4")
 6. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-5-3b2c22328233 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5")
-
-<br /> <br /> <br />
+<br />
 
 ## How to build the MaxSoft IntelliAPI JAR file
 1) Get a clone of this project.
@@ -86,8 +77,7 @@
 `cd <project_dir>`
 4) Execute this command. \
 `mvn clean install -DskipTests`
-
-<br /> <br /> <br />
+<br />
 
 ## How to test the project code
 1) Open the command prompt.
@@ -96,15 +86,11 @@
 3) Enter the name of the **.bat** file and the extension. \
 `Dev BVT.bat`
 4) Press **Enter**.
-
-<br /> <br /> <br />
+<br />
 
 ## License
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/License_icon-mit-2.svg/2000px-License_icon-mit-2.svg.png" alt="MIT License" width="100" height="100"/> [MaxSoft IntelliAPI](https://medium.com/@osanda.deshan/maxsoft-ata-framework-for-api-test-automation-9cffd25a0b15) is released under [MIT License](https://opensource.org/licenses/MIT)
-
-<br /> <br /> <br />
+<br />
 
 ## Copyright
-
 Copyright 2018 MaxSoft.
