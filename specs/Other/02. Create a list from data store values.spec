@@ -9,14 +9,14 @@ Description  : This is an executable specification file which follows markdown s
 
 
 ## Create a list from data store values
-* And the user save the values inside data stores as follows 
+* And the user saves the values inside data stores as follows
 
    |DataStore Type|Variable Name|Value To Be Stored |
    |--------------|-------------|-------------------|
    |Scenario      |variable1    |Osanda Deshan      |
    |Specification |variable2    |Osanda Nimalarathna|
    |Scenario      |variable3    |Software Automation|
-* And the user save the values inside data stores as a "String" list to another "Scenario" type data store as "var1" 
+* And the user saves the values inside data stores as a "String" data type list into "Scenario" type data store by referencing the variable name as "var1"
 
    |DataStore Type|Variable Name|
    |--------------|-------------|

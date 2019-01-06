@@ -10,7 +10,7 @@ Description  	: This is an executable specification file which follows markdown 
 * Configurations of the testing environment
 
 ## Saving values to Data Store
-* And the user save the values inside data stores as follows 
+* And the user saves the values inside data stores as follows
 
    |DataStore Type|Variable Name|Value To Be Stored |
    |--------------|-------------|-------------------|
@@ -78,7 +78,7 @@ tags: get_pi_token, staging
 tags: get_pi_token, staging
 
 * Given that a user needs to invoke "Get Staging PI Token"
-* And the user save the values inside data stores as follows 
+* And the user saves the values inside data stores as follows
 
    |DataStore Type|Variable Name|Value To Be Stored |
    |--------------|-------------|-------------------|
@@ -171,7 +171,7 @@ tags: get_pi_token, staging
 tags: get_pi_token, staging
 
 * Given that a user needs to invoke "Get Staging PI Token"
-* And the user save the values inside data stores as follows 
+* And the user saves the values inside data stores as follows
 
    |DataStore Type|Variable Name|Value To Be Stored |
    |--------------|-------------|-------------------|
@@ -300,7 +300,7 @@ tags: get_pi_token, staging
 
 ## Replace API Endpoint placeholders - Scenario 2
 * Given that a user needs to invoke "Purchase Validator API"
-* And the user save the values inside data stores as follows 
+* And the user saves the values inside data stores as follows
 
    |DataStore Type|Variable Name|Value To Be Stored                           |
    |--------------|-------------|---------------------------------------------|
@@ -342,7 +342,7 @@ tags: get_pi_token, staging
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
    |Scenario      |status       |$.status          |
-* And the user save the values inside data stores as follows 
+* And the user saves the values inside data stores as follows
 
    |DataStore Type|Variable Name |Value To Be Stored|
    |--------------|--------------|------------------|
