@@ -152,13 +152,13 @@ public class AllStepsDefinitions{
     }
 
     // Use this method to save data store values as a list in another data store
-    @Step("And the user save the values inside data stores as a <listType> list to another <dataStoreType> type data store as <dataStoreVariableName> <table>")
+    @Step("And the user saves the values inside data stores as a <listType> data type list into <dataStoreType> type data store by referencing the variable name as <dataStoreVariableName> <table>")
     public void saveDataStoresAsList(String listType, String dataStoreType, String dataStoreVariableName, Table table){
         apiStepImpl.saveDataStoresAsList(listType, dataStoreType, dataStoreVariableName, table);
     }
 
     // Use this method to save strings in data store
-    @Step("And the user save the values inside data stores as follows <table>")
+    @Step("And the user saves the values inside data stores as follows <table>")
     public void saveValueToDataStore(Table table){
         apiStepImpl.saveValueToDataStore(table);
     }

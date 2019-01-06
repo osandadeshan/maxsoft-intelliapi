@@ -39,14 +39,20 @@
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">1</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
-      <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">1</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
-      </ul>
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">1</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">1</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">1</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">1</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
+      </div>
     </div>
     <div class="report_details">
       <ul>
@@ -61,11 +67,11 @@
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:09</span>
+          <span>00:00:06</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Oct 14, 2018 at 5:02pm</span>
+          <span>Dec 11, 2018 at 10:28am</span>
         </li>
       </ul>
       
@@ -92,6 +98,10 @@
         <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
         <i class="fa fa-search"></i>
       </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
@@ -100,7 +110,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Get Staging PI Token Specification</span>
-              <span id="time" class="time">00:00:07</span>
+              <span id="time" class="time">00:00:04</span>
             </li>
           </a>
           
@@ -115,8 +125,8 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Access Token\Get Staging PI Token.spec">Get Staging PI Token Specification</h3>
-        <div class="report_test-results" alt="Scenarios" title="Scenarios">
+        <h3 class="spec-head" title="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Access Token\Get Staging PI Token.spec">Get Staging PI Token Specification</h3>
+        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
@@ -127,12 +137,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Access Token\Get Staging PI Token.spec" readonly/>
+          <input id="specFileName" value="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Access Token\Get Staging PI Token.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:07</span>
+        <span class="time">00:00:04</span>
       </div>
 
 	
@@ -178,7 +188,7 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Invoke PI API in Staging Environment using valid username and password and save the access token inside the text file</h3>
-    <span class="time">00:00:07</span>
+    <span class="time">00:00:04</span>
 
 	
   
@@ -211,7 +221,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
   <div class='step-info passed'>
@@ -246,11 +256,6 @@ Description     : This is an executable specification file which follows markdow
     
     
   
-
-  
-  
-  
-  
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
@@ -259,6 +264,14 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
   
 
   
@@ -336,6 +349,9 @@ Description     : This is an executable specification file which follows markdow
     
   
 
+    
+  
+
   
   
   
@@ -353,6 +369,12 @@ Description     : This is an executable specification file which follows markdow
 
     </div>
   
+  
+    
+  
+    <span></span>
+  
+
   
     
   
@@ -419,11 +441,6 @@ Description     : This is an executable specification file which follows markdow
     
     
   
-
-  
-  
-  
-  
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
@@ -431,6 +448,14 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
   
 
   
@@ -452,7 +477,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:04</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
   <div class='step-info passed'>
@@ -483,23 +508,26 @@ Description     : This is an executable specification file which follows markdow
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 2227ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTQ0NTE1MTAwLCJpYXQiOjE1NDQ1MDQyOTksInNlc3NpZCI6IjYyYzQwZDNjLWI5MmEtNDllOC1iOGE3LWRjY2IyYTk3MjgzYyJ9.W5EfNV0EdcrdJNIKy-fprCtmqY1dh23_-w2BEQSzo7aqjqqImIOit-EtP2x64sQb56sdq8oYv4Pdr60OHusr7O7LfUKDMLOQpb_3SLWoIqDgsWVHWhjQBYxy3A5J6tPfICjqC5kPeStN3y4y0-ZXEx6XCTO15B4Dit0w_S93CDE”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=2b35af8a-3a9e-4982-83de-e5bd93c507ce<br/>Location=<a href="https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTQ0NTE1MTAwLCJpYXQiOjE1NDQ1MDQyOTksInNlc3NpZCI6IjYyYzQwZDNjLWI5MmEtNDllOC1iOGE3LWRjY2IyYTk3MjgzYyJ9.W5EfNV0EdcrdJNIKy-fprCtmqY1dh23_-w2BEQSzo7aqjqqImIOit-EtP2x64sQb56sdq8oYv4Pdr60OHusr7O7LfUKDMLOQpb_3SLWoIqDgsWVHWhjQBYxy3A5J6tPfICjqC5kPeStN3y4y0-ZXEx6XCTO15B4Dit0w_S93CDE" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTQ0NTE1MTAwLCJpYXQiOjE1NDQ1MDQyOTksInNlc3NpZCI6IjYyYzQwZDNjLWI5MmEtNDllOC1iOGE3LWRjY2IyYTk3MjgzYyJ9.W5EfNV0EdcrdJNIKy-fprCtmqY1dh23_-w2BEQSzo7aqjqqImIOit-EtP2x64sQb56sdq8oYv4Pdr60OHusr7O7LfUKDMLOQpb_3SLWoIqDgsWVHWhjQBYxy3A5J6tPfICjqC5kPeStN3y4y0-ZXEx6XCTO15B4Dit0w_S93CDE</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Tue, 11 Dec 2018 04:58:19 GMT</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
   
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
- </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2935ms<br/><br/></p>
- </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IlVTIiwidHlwZSI6ImF0IiwiZXhwIjoxNTM5NTI3NTU2LCJpYXQiOjE1Mzk1MTY3NTYsInNlc3NpZCI6ImEyZDIzMzc3LWQwMzEtNDk4NC1iNWFlLWNmZjM1YTM2MTFlYSJ9.Dv54NP_dueUs-QsoPedkwmYL31hBZ32qWQKtN0fnyXo-azFgBOIR7MsgtNdpix0qKW-6aGkgJXlYh1-IOQfn2CTAYgSq6xcrHFST3DWhXNUe1Cs8qltk-y9BRfxfdAMy3gPt-05D64AH-jDbuFwtNJgZI_2q41Pcwarjnvoaj8c”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>Server=Apache-Coyote/1.1<br/>Correlation-Id=6fe8d0c2-5c59-45ce-a059-b87204e37f84<br/>Location=<a href="https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IlVTIiwidHlwZSI6ImF0IiwiZXhwIjoxNTM5NTI3NTU2LCJpYXQiOjE1Mzk1MTY3NTYsInNlc3NpZCI6ImEyZDIzMzc3LWQwMzEtNDk4NC1iNWFlLWNmZjM1YTM2MTFlYSJ9.Dv54NP_dueUs-QsoPedkwmYL31hBZ32qWQKtN0fnyXo-azFgBOIR7MsgtNdpix0qKW-6aGkgJXlYh1-IOQfn2CTAYgSq6xcrHFST3DWhXNUe1Cs8qltk-y9BRfxfdAMy3gPt-05D64AH-jDbuFwtNJgZI_2q41Pcwarjnvoaj8c" rel="nofollow">https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IlVTIiwidHlwZSI6ImF0IiwiZXhwIjoxNTM5NTI3NTU2LCJpYXQiOjE1Mzk1MTY3NTYsInNlc3NpZCI6ImEyZDIzMzc3LWQwMzEtNDk4NC1iNWFlLWNmZjM1YTM2MTFlYSJ9.Dv54NP_dueUs-QsoPedkwmYL31hBZ32qWQKtN0fnyXo-azFgBOIR7MsgtNdpix0qKW-6aGkgJXlYh1-IOQfn2CTAYgSq6xcrHFST3DWhXNUe1Cs8qltk-y9BRfxfdAMy3gPt-05D64AH-jDbuFwtNJgZI_2q41Pcwarjnvoaj8c</a><br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Date=Sun, 14 Oct 2018 11:32:36 GMT</p>
- </div>
-      </div>
-    </div>
   
 
   
@@ -554,6 +582,9 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
     
   
 
@@ -631,6 +662,9 @@ Description     : This is an executable specification file which follows markdow
     
   
 
+    
+  
+
   
   
   
@@ -690,18 +724,21 @@ Description     : This is an executable specification file which follows markdow
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Successfully saved the access token into the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
   
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Successfully saved the access token into the text file in the directory of “C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”</p>
- </div>
-      </div>
-    </div>
   
 
   

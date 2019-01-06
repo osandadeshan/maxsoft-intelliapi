@@ -64,7 +64,7 @@ Description  : This is an executable specification file which follows markdown s
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
    |--------------------------------|-------------------|---------------|------------------------|-------------------------|
    |#username                       |y                  |spec           |username                |                         |
-   |#password                       |y                  |spec           |password                |Password1                |
+   |#password                       |y                  |spec           |password                |                         |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the following 
