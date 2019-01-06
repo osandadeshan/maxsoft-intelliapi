@@ -1,52 +1,56 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Oct 18, 2018 at 10:08pm",
+	"timestamp": "Jan 5, 2019 at 11:37pm",
 	"successRate": 100,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 11659,
+	"executionTime": 2696,
 	"executionStatus": "pass",
 	"specResults": [
 		{
-			"specHeading": "Read From Excel File Specification",
-			"fileName": "C:\\Users\\Osanda Deshan\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Other\\10. Read from excel file.spec",
+			"specHeading": "Create a list from data store values Specification",
+			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Other\\02. Create a list from data store values.spec",
 			"tags": [],
-			"executionTime": 9387,
+			"executionTime": 405,
 			"executionStatus": "pass",
 			"scenarios": [
 				{
-					"scenarioHeading": "Invoke PI API using the test data in excel file",
+					"scenarioHeading": "Create a list from data store values",
 					"tags": [],
-					"executionTime": 9387,
+					"executionTime": 405,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
 					"items": [
 						{
 							"itemType": "step",
-							"stepText": "And the user saves test data inside excel file into data stores",
+							"stepText": "And the user saves the values inside data stores as follows",
 							"table": {
 								"headers": [
 									"DataStore Type",
 									"Variable Name",
-									"Excel Sheet Name",
-									"Key Name"
+									"Value To Be Stored"
 								],
 								"rows": [
 									{
 										"cells": [
 											"Scenario",
-											"username",
-											"TestData",
-											"username"
+											"variable1",
+											"Osanda Deshan"
 										]
 									},
 									{
 										"cells": [
 											"Specification",
-											"password",
-											"TestData",
-											"password"
+											"variable2",
+											"Osanda Nimalarathna"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"variable3",
+											"Software Automation"
 										]
 									}
 								]
@@ -58,60 +62,41 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 3067,
+								"executionTime": 405,
 								"skippedReason": "",
 								"messages": [
-									"\"osanda12\" is successfully saved as a text in Scenario Data Store [username]",
-									"\"Password1\" is successfully saved as a text in Specification Data Store [password]"
+									"\"Osanda Deshan\" is successfully saved as a text in Scenario Data Store [variable1]",
+									"\"Osanda Nimalarathna\" is successfully saved as a text in Specification Data Store [variable2]",
+									"\"Software Automation\" is successfully saved as a text in Scenario Data Store [variable3]"
 								],
 								"errorType": "assertion"
 							}
 						},
 						{
 							"itemType": "step",
-							"stepText": "Given that a user needs to invoke \"Get Staging PI Token\"",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 504,
-								"skippedReason": "",
-								"messages": [
-									"API Endpoint is: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
-									"HTTP Method is: POST\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the user set the request authentication configurations as follows",
+							"stepText": "And the user saves the values inside data stores as a \"String\" data type list into \"Scenario\" type data store by referencing the variable name as \"var1\"",
 							"table": {
 								"headers": [
-									"Configuration",
-									"Configuration Value"
+									"DataStore Type",
+									"Variable Name"
 								],
 								"rows": [
 									{
 										"cells": [
-											"Is authentication required?",
-											"Yes"
+											"Scenario",
+											"variable1"
 										]
 									},
 									{
 										"cells": [
-											"Do you need to retrieve the access token from the text file?",
-											"Yes"
+											"Specification",
+											"variable2"
 										]
 									},
 									{
 										"cells": [
-											"Provide the access token if you need to authorize the API manually",
-											"N/A"
+											"Scenario",
+											"variable3"
 										]
 									}
 								]
@@ -125,38 +110,29 @@
 								"errorMessage": "",
 								"executionTime": 0,
 								"skippedReason": "",
-								"messages": [],
+								"messages": [
+									"Text inside Scenario Data Store [variable1] is: \"Osanda Deshan\"\n\n",
+									"Text inside Specification Data Store [variable2] is: \"Osanda Nimalarathna\"\n\n",
+									"Text inside Scenario Data Store [variable3] is: \"Software Automation\"\n\n",
+									"\"\"Osanda Deshan\",\"Osanda Nimalarathna\",\"Software Automation\"\" is successfully saved as a text in Scenario Data Store [var1]",
+									"Value List: \"Osanda Deshan\",\"Osanda Nimalarathna\",\"Software Automation\""
+								],
 								"errorType": "assertion"
 							}
 						},
 						{
 							"itemType": "step",
-							"stepText": "And the user set the request attributes using data stores as follows",
+							"stepText": "And the user read the values from data stores as follows",
 							"table": {
 								"headers": [
-									"Attribute Value In JSON Template",
-									"Is Data Store Used?",
-									"Data Store Type",
-									"Data Store Variable Name",
-									"Attribute Value To Be Set"
+									"DataStore Type",
+									"Variable Name"
 								],
 								"rows": [
 									{
 										"cells": [
-											"#username",
-											"y",
 											"Scenario",
-											"username",
-											"N/A"
-										]
-									},
-									{
-										"cells": [
-											"#password",
-											"y",
-											"Specification",
-											"password",
-											"N/A"
+											"var1"
 										]
 									}
 								]
@@ -168,102 +144,10 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 398,
+								"executionTime": 0,
 								"skippedReason": "",
 								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Specification Data Store [password] is: \"Password1\"\n\n",
-									"The JSON request body that you are going to use for the API is:\n{\n \"userName\": \"osanda12\",\n \"password\": \"Password1\"\n}"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "When the user invokes the API",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 5262,
-								"skippedReason": "",
-								"messages": [
-									"Successfully read the access token from the text file in the directory of \"C:\\Users\\Osanda Deshan\\IdeaProjects\\MaxSoft-IntelliAPI\\resources/access_tokens/saved_valid_access_token.txt\"\n\n",
-									"Invoked API Endpoint: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
-									"HTTP Method is: POST\n\n",
-									"Response Time is: 3470ms\n\n",
-									"Response is: \n{\n    \"status\": \"success\",\n    \"data\": \"eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IlVTIiwidHlwZSI6ImF0IiwiZXhwIjoxNTM5ODkxNTQ3LCJpYXQiOjE1Mzk4ODA3NDYsInNlc3NpZCI6IjNiODQxMWI2LWVmMDItNDFiMC1hNGUxLTIyNmNhZmU2ZDAzNSJ9.Q1zvyvjAsa0lyhdEmJQB5bMN1qmSutDk2bBA_iRfS-nDm_F_M95yLgtvaacmnz9AFx5RxmhmTOz4Em3KEkTa9klDTFKG1g7SxsSrz2C_bIq_QzF4XyPpDWfQSvP85HBYUpFGulAWxOiu_qxaXzh99oqJUyv1e7H23Gf4zWO7JXs\"\n}\n\n",
-									"Response Headers are: \nServer=Apache-Coyote/1.1\nCorrelation-Id=a11ace70-3616-49f2-9c7d-425a0bcf9674\nLocation=https://pi-int.pearsoned.com/v1/piapi-int/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IlVTIiwidHlwZSI6ImF0IiwiZXhwIjoxNTM5ODkxNTQ3LCJpYXQiOjE1Mzk4ODA3NDYsInNlc3NpZCI6IjNiODQxMWI2LWVmMDItNDFiMC1hNGUxLTIyNmNhZmU2ZDAzNSJ9.Q1zvyvjAsa0lyhdEmJQB5bMN1qmSutDk2bBA_iRfS-nDm_F_M95yLgtvaacmnz9AFx5RxmhmTOz4Em3KEkTa9klDTFKG1g7SxsSrz2C_bIq_QzF4XyPpDWfQSvP85HBYUpFGulAWxOiu_qxaXzh99oqJUyv1e7H23Gf4zWO7JXs\nContent-Type=application/json;charset=UTF-8\nTransfer-Encoding=chunked\nDate=Thu, 18 Oct 2018 16:39:06 GMT"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "Then the status code for the request is \"201\"",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 4,
-								"skippedReason": "",
-								"messages": [],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the JSON Path Assertions for the response should be equal to the following",
-							"table": {
-								"headers": [
-									"JSON Path",
-									"Expected Result"
-								],
-								"rows": [
-									{
-										"cells": [
-											"$.status",
-											"success"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 136,
-								"skippedReason": "",
-								"messages": [],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And save the access token in the response which is located inside the JSON Path of \"$.data\"",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 16,
-								"skippedReason": "",
-								"messages": [
-									"Successfully saved the access token into the text file in the directory of \"C:\\Users\\Osanda Deshan\\IdeaProjects\\MaxSoft-IntelliAPI\\resources/access_tokens/saved_valid_access_token.txt\""
+									"Text inside Scenario Data Store [var1] is: \"\"Osanda Deshan\",\"Osanda Nimalarathna\",\"Software Automation\"\"\n\n"
 								],
 								"errorType": "assertion"
 							}
