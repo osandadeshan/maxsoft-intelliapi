@@ -45,6 +45,14 @@ Description  : This is an executable specification file which follows markdown s
 
 
 ## Reading values from Data Store
+* And the user saves the values inside data stores as follows
+
+   |DataStore Type|Variable Name|Value To Be Stored |
+   |--------------|-------------|-------------------|
+   |Scenario      |variable1    |Osanda Deshan      |
+   |Specification |variable2    |Osanda Nimalarathna|
+   |Scenario      |variable3    |Software Automation|
+   |Suite         |variable4    |Gauge Framework    |
 * And the user read the values from data stores as follows 
 
    |DataStore Type|Variable Name|

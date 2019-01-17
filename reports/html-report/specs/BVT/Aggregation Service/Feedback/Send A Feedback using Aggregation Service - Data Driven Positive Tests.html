@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta charset="utf-8" />
     <title>Gauge Test Results</title>
-    <link rel="shortcut icon" type="image/x-icon" href="..\..\..\../images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="..\..\..\../css/open-sans.css">
-    <link rel="stylesheet" type="text/css" href="..\..\..\../css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="..\..\..\../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="..\..\..\../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../../../css/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../../../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../css/style.css" />
   </head>
   <body>
   <header class="top">
     <div class="header">
       <div class="container">
         <div class="logo">
-          <a href="..\..\..\.."><img src="..\..\..\../images/logo.png" alt="Report logo"></a>
+          <a href="../../../.."><img src="../../../../images/logo.png" alt="Report logo"></a>
         </div>
         <h2 class="project">Project: MaxSoft-IntelliAPI</h2>
       </div>
@@ -30,44 +30,53 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="25,8,0" data-total="33">
+        <svg id="pie-chart" data-results="1,0,0" data-total="1">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 25/33</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 8/33</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/33</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">33</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
-      <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">25</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">8</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
-      </ul>
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">1</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">0</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">7</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">0</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
+      </div>
     </div>
     <div class="report_details">
       <ul>
         <li>
           <label>Environment </label>
-          <span>UAT</span>
+          <span>default</span>
         </li>
         
         <li>
           <label>Success Rate </label>
-          <span>24%</span>
+          <span>0%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:12:53</span>
+          <span>00:00:12</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jun 17, 2018 at 3:07pm</span>
+          <span>Jan 15, 2019 at 3:51pm</span>
         </li>
       </ul>
+      
+  
+
       
   
 
@@ -89,303 +98,19 @@
         <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
         <i class="fa fa-search"></i>
       </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="..\Question Management\Edit Question\Short Answer\Edit Short Answer Type Question - Data Driven Positive Tests.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Edit Short Answer Type Question using Aggregation Service - Data Driven Positive Test Specification</span>
-              <span id="time" class="time">00:00:45</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Bundle\Expert Bundle\Find Expert Bundle\Find Expert Bundle.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Find Expert Bundle Specification</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Bundle\Expert Bundle\Search Expert Bundle\Search Expert Bundle.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Search Expert Bundle Specification</span>
-              <span id="time" class="time">00:00:40</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Create Question\MCQ\Create MCQ Type Question - Data Driven Positive Tests.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create MCQ Type Question using Aggregation Service - Data Driven Positive Test Specification</span>
-              <span id="time" class="time">00:00:41</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Create Question\Short Answer\Create Short Answer Type Question - Data Driven Positive Tests.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create Short Answer Type Question using Aggregation Service - Data Driven Positive Test Specification</span>
-              <span id="time" class="time">00:00:46</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Edit Question\All\Edit All Type Question - Data Driven Positive Tests.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Edit All Type Question using Aggregation Service - Data Driven Positive Test Specification</span>
-              <span id="time" class="time">00:00:40</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Edit Question\MCQ\Edit MCQ Type Question - Data Driven Positive Tests.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Edit MCQ Type Question using Aggregation Service - Data Driven Positive Test Specification</span>
-              <span id="time" class="time">00:00:39</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Get Default 9 Decks\Get the default 9 decks using Aggregation Service.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get the default 9 decks using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\SKU\Get SKUs\Get All SKUs.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get All SKUs Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="..\Recommendation\Recommendation API in Aggregation Service.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Recommendation API in Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:31</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Add Expert Deck To My Deck\Add Expert Deck To My Deck.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Add Expert Deck To My Deck using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:16</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Get Questions\Get A Question In A Deck.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get A Question using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Create Question\All\Create All Type Question - Data Driven Positive Tests.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create All Type Question using Aggregation Service - Data Driven Positive Tests Specification</span>
-              <span id="time" class="time">00:00:41</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Create Questions From Text\Create Questions From Text using Aggregation Service - Data Driven Positive Test.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create Questions From Text using Aggregation Service - Data Driven Positive Test Specification</span>
-              <span id="time" class="time">00:01:03</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Bundle\Load Decks\Load Decks of a Bundle.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Load Decks of a Bundle Specification</span>
-              <span id="time" class="time">00:00:24</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Archive and Restore Deck (Staging)\Archive and Restore My Deck using Aggregation Service.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Archive and Restore My Deck using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:19</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Delete Question\Delete A Question.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Delete a Question using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:26</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Archive and Restore Deck (Staging)\Archive and Restore Expert Deck using Aggregation Service.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Archive and Restore Expert Deck using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:29</span>
-            </li>
-          </a>
-          
-          <a href="..\Activity\Activity API in Aggregation Service.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Activity API in Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:09</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Deck CRUD Operations\My Deck CRUD Operations.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">My Deck CRUD Operations Specification</span>
-              <span id="time" class="time">00:00:03</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Questions Count\Get Questions Count.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get Questions Count using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:40</span>
-            </li>
-          </a>
-          
-          <a href="..\Question Management\Get Questions\Get All Questions In A Deck.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get All Questions In A Deck using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:02</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Copy Decks\Copy Decks using Aggregation Service.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Copy Decks using Aggregation Service Specification</span>
-              <span id="time" class="time">00:00:45</span>
-            </li>
-          </a>
-          
           <a href="Send A Feedback using Aggregation Service - Data Driven Positive Tests.html">
             
               <li class='failed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Send A Feedback using Aggregation Service - Data Driven Positive Tests Specification</span>
-              <span id="time" class="time">00:00:19</span>
-            </li>
-          </a>
-          
-          <a href="..\Deck Management\Deck CRUD Operations\Expert Deck CRUD Operations.html">
-            
-              <li class='failed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Expert Deck CRUD Operations Specification</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Edit Category\Edit Category using Deck Service - Data Driven Positive Tests.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Edit A Category using Deck Service - Data Driven Positive Tests Specification</span>
-              <span id="time" class="time">00:00:37</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Delete Category\Delete A Category using Deck Service - Negative Tests.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Delete A Category using Deck Service - Negative Test Specification</span>
               <span id="time" class="time">00:00:10</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Get Categories\Get All Categories using Deck Service.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get All Categories using Deck Service Specification</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Create Category\Create Category using Deck Service - Negative Tests.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create A Category using Deck Service - Negative Tests Specification</span>
-              <span id="time" class="time">00:00:02</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Create Category\Create Category using Deck Service - Data Driven Positive Tests.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create A Category using Deck Service - Data Driven Positive Tests Specification</span>
-              <span id="time" class="time">00:00:18</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Get Categories\Get A Category using Deck Service.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get A Category using Deck Service Specification</span>
-              <span id="time" class="time">00:00:10</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Edit Category\Edit Category using Deck Service - Negative Tests.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Edit A Category using Deck Service - Negative Tests Specification</span>
-              <span id="time" class="time">00:00:05</span>
-            </li>
-          </a>
-          
-          <a href="..\..\Deck Service\Subjects CRUD Operations\Delete Category\Delete A Category using Deck Service - Positive Tests.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Delete A Category using Deck Service - Positive Test Specification</span>
-              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -400,7 +125,7 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\specs\BVT\Aggregation Service\Feedback\Send A Feedback using Aggregation Service - Data Driven Positive Tests.spec">Send A Feedback using Aggregation Service - Data Driven Positive Tests Specification</h3>
+        <h3 class="spec-head" title="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\BVT\Aggregation Service\Feedback\Send A Feedback using Aggregation Service - Data Driven Positive Tests.spec">Send A Feedback using Aggregation Service - Data Driven Positive Tests Specification</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">7</span><span class="txt">Failed</span></li>
@@ -412,12 +137,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\specs\BVT\Aggregation Service\Feedback\Send A Feedback using Aggregation Service - Data Driven Positive Tests.spec" readonly/>
+          <input id="specFileName" value="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\BVT\Aggregation Service\Feedback\Send A Feedback using Aggregation Service - Data Driven Positive Tests.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:19</span>
+        <span class="time">00:00:10</span>
       </div>
 
 	
@@ -442,6 +167,7 @@
     
   
 
+    
     
 
     <div class="content">
@@ -512,12 +238,15 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send a feedback using valid payload</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:04</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -533,7 +262,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
   <div class='step-info passed'>
@@ -542,6 +271,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -563,18 +295,27 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -604,6 +345,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -643,8 +387,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -675,6 +428,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -720,9 +476,7 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
@@ -731,6 +485,17 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -749,7 +514,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:03</span>
     </h5>
   
   <div class='step-info passed'>
@@ -758,6 +523,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -775,22 +543,31 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1867ms<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 2166ms<br/><br/></p>
  </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “Error”,<br/>    “code”: “401”,<br/>    “message”: “Unauthorized Request”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=3480e6a0-82fc-4b62-a843-fac84035ff74<br/>Content-Type=application/json;charset=ISO-8859-1<br/>Content-Length=77<br/>Date=Sun, 17 Jun 2018 09:40:38 GMT</p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=ISO-8859-1<br/>correlation-id=b7036a79-0800-4a2d-bf2e-cbc691e0a508<br/>Date=Tue, 15 Jan 2019 10:21:41 GMT<br/>Server=nginx<br/>Content-Length=77<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -824,6 +601,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -842,19 +622,28 @@ Description     : This is an executable specification file which follows markdow
         
   <div class="error-container failed">
     <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.api.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/>sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:41)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:91)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:105)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:37)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:86)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
-        </div>
-        
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1174)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:392)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:182)<br/></pre>
+      </div>
+      
     </div>
   </div>
 
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -883,6 +672,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -924,8 +716,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -948,6 +749,9 @@ Description     : This is an executable specification file which follows markdow
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -960,12 +764,15 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send a feedback using valid payload</h3>
-    <span class="time">00:00:03</span>
+    <span class="time">00:00:01</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -996,6 +803,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -1011,18 +821,27 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1052,6 +871,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1091,8 +913,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1123,6 +954,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1168,9 +1002,7 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
@@ -1179,6 +1011,17 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1197,7 +1040,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -1206,6 +1049,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1223,22 +1069,31 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2234ms<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 625ms<br/><br/></p>
  </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “Error”,<br/>    “code”: “401”,<br/>    “message”: “Unauthorized Request”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=b31e243a-84d1-4166-b088-c39b324973ea<br/>Content-Type=application/json;charset=ISO-8859-1<br/>Content-Length=77<br/>Date=Sun, 17 Jun 2018 09:40:42 GMT</p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=ISO-8859-1<br/>correlation-id=e3568b42-e1da-44d6-821f-c6b2090540f6<br/>Date=Tue, 15 Jan 2019 10:21:42 GMT<br/>Server=nginx<br/>Content-Length=77<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1272,6 +1127,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -1290,19 +1148,28 @@ Description     : This is an executable specification file which follows markdow
         
   <div class="error-container failed">
     <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.api.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/>sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:41)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:91)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:105)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:37)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:86)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
-        </div>
-        
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1174)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:392)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:182)<br/></pre>
+      </div>
+      
     </div>
   </div>
 
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1331,6 +1198,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1372,8 +1242,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1396,6 +1275,9 @@ Description     : This is an executable specification file which follows markdow
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -1408,12 +1290,15 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send a feedback using valid payload</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -1444,6 +1329,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -1459,18 +1347,27 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1500,6 +1397,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1539,8 +1439,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1571,6 +1480,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1616,9 +1528,7 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
@@ -1627,6 +1537,17 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1645,7 +1566,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -1654,6 +1575,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1671,22 +1595,31 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1834ms<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 571ms<br/><br/></p>
  </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “Error”,<br/>    “code”: “401”,<br/>    “message”: “Unauthorized Request”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=474b3c9d-8476-492f-9bd9-f237ac82831b<br/>Content-Type=application/json;charset=ISO-8859-1<br/>Content-Length=77<br/>Date=Sun, 17 Jun 2018 09:40:44 GMT</p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=ISO-8859-1<br/>correlation-id=42fd3964-b973-44a7-a99e-3cad9b154fd6<br/>Date=Tue, 15 Jan 2019 10:21:43 GMT<br/>Server=nginx<br/>Content-Length=77<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1720,6 +1653,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -1738,19 +1674,28 @@ Description     : This is an executable specification file which follows markdow
         
   <div class="error-container failed">
     <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.api.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/>sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:41)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:91)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:105)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:37)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:86)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
-        </div>
-        
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1174)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:392)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:182)<br/></pre>
+      </div>
+      
     </div>
   </div>
 
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1779,6 +1724,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1820,8 +1768,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -1844,6 +1801,9 @@ Description     : This is an executable specification file which follows markdow
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -1856,12 +1816,15 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send a feedback using valid payload</h3>
-    <span class="time">00:00:03</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -1892,6 +1855,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -1907,18 +1873,27 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -1948,6 +1923,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -1987,8 +1965,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2019,6 +2006,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2064,9 +2054,7 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
@@ -2075,6 +2063,17 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2093,7 +2092,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -2102,6 +2101,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2119,22 +2121,31 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2226ms<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 607ms<br/><br/></p>
  </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “Error”,<br/>    “code”: “401”,<br/>    “message”: “Unauthorized Request”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=07868a7c-b75c-4e6a-82fb-92192a5c5c3f<br/>Content-Type=application/json;charset=ISO-8859-1<br/>Content-Length=77<br/>Date=Sun, 17 Jun 2018 09:40:47 GMT</p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=ISO-8859-1<br/>correlation-id=5d2d5de0-ba50-480c-9aa6-15cdfffe7532<br/>Date=Tue, 15 Jan 2019 10:21:44 GMT<br/>Server=nginx<br/>Content-Length=77<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2168,6 +2179,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -2186,19 +2200,28 @@ Description     : This is an executable specification file which follows markdow
         
   <div class="error-container failed">
     <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.api.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/>sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:41)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:91)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:105)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:37)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:86)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
-        </div>
-        
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1174)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:392)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:182)<br/></pre>
+      </div>
+      
     </div>
   </div>
 
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2227,6 +2250,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2268,8 +2294,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2292,6 +2327,9 @@ Description     : This is an executable specification file which follows markdow
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -2304,12 +2342,15 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send a feedback using valid payload</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -2340,6 +2381,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -2355,18 +2399,27 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2396,6 +2449,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2435,8 +2491,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2467,6 +2532,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2512,9 +2580,7 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
@@ -2523,6 +2589,17 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2541,7 +2618,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -2550,6 +2627,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2567,22 +2647,31 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2200ms<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 576ms<br/><br/></p>
  </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “Error”,<br/>    “code”: “401”,<br/>    “message”: “Unauthorized Request”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=527d9742-43c1-4724-b47e-71b8e4fa3764<br/>Content-Type=application/json;charset=ISO-8859-1<br/>Content-Length=77<br/>Date=Sun, 17 Jun 2018 09:40:50 GMT</p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=ISO-8859-1<br/>correlation-id=b77c541d-0dcb-44d5-813a-8d8a26e9fa99<br/>Date=Tue, 15 Jan 2019 10:21:45 GMT<br/>Server=nginx<br/>Content-Length=77<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2616,6 +2705,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -2634,19 +2726,28 @@ Description     : This is an executable specification file which follows markdow
         
   <div class="error-container failed">
     <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.api.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/>sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:41)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:91)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:105)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:37)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:86)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
-        </div>
-        
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1174)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:392)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:182)<br/></pre>
+      </div>
+      
     </div>
   </div>
 
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2675,6 +2776,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2716,8 +2820,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2740,6 +2853,9 @@ Description     : This is an executable specification file which follows markdow
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -2752,12 +2868,15 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send a feedback using valid payload</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -2788,6 +2907,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -2803,18 +2925,27 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2844,6 +2975,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2883,8 +3017,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -2915,6 +3058,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -2960,9 +3106,7 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
@@ -2971,6 +3115,17 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -2989,7 +3144,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -2998,6 +3153,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3015,22 +3173,31 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 1829ms<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 611ms<br/><br/></p>
  </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “Error”,<br/>    “code”: “401”,<br/>    “message”: “Unauthorized Request”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=b31c193b-2d16-4e72-9ff6-96c0171bdb4d<br/>Content-Type=application/json;charset=ISO-8859-1<br/>Content-Length=77<br/>Date=Sun, 17 Jun 2018 09:40:53 GMT</p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=ISO-8859-1<br/>correlation-id=a14b9be5-2b9b-408a-8386-1c6e29af41c5<br/>Date=Tue, 15 Jan 2019 10:21:46 GMT<br/>Server=nginx<br/>Content-Length=77<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3064,6 +3231,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -3082,19 +3252,28 @@ Description     : This is an executable specification file which follows markdow
         
   <div class="error-container failed">
     <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.api.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/>sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:41)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:91)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:105)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:37)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:86)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
-        </div>
-        
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1174)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:392)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:182)<br/></pre>
+      </div>
+      
     </div>
   </div>
 
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3123,6 +3302,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3164,8 +3346,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3188,6 +3379,9 @@ Description     : This is an executable specification file which follows markdow
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -3200,12 +3394,15 @@ Description     : This is an executable specification file which follows markdow
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Send a feedback using valid payload</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:00</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -3236,6 +3433,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -3251,18 +3451,27 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>API Endpoint is: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>API Endpoint is: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3292,6 +3501,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3331,8 +3543,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3363,6 +3584,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3408,9 +3632,7 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
@@ -3419,6 +3641,17 @@ Description     : This is an executable specification file which follows markdow
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3437,7 +3670,7 @@ Description     : This is an executable specification file which follows markdow
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -3446,6 +3679,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3463,22 +3699,31 @@ Description     : This is an executable specification file which follows markdow
 
   
     
-  
-  
-  
+    
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\UnimaOs\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
- </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://questionaggrigator.stg-prsn.com/api/feedback" rel="nofollow">https://questionaggrigator.stg-prsn.com/api/feedback</a><br/><br/></p>
+        <div class="step-message"><p>Successfully read the access token from the text file in the directory of “C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\resources/access_tokens/saved_valid_access_token.txt”<br/><br/></p>
+ </div><div class="step-message"><p>Invoked API Endpoint: <br/><a href="http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback" rel="nofollow">http://aggregationservice-pearson-prep-us1-dev.bite.pearsondev.tech/api/feedback</a><br/><br/></p>
  </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
- </div><div class="step-message"><p>Response Time is: 2139ms<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 608ms<br/><br/></p>
  </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “Error”,<br/>    “code”: “401”,<br/>    “message”: “Unauthorized Request”<br/>}<br/><br/></p>
- </div><div class="step-message"><p>Response Headers are: <br/>correlation-id=85608184-117c-42d6-80a8-ed89428b15c4<br/>Content-Type=application/json;charset=ISO-8859-1<br/>Content-Length=77<br/>Date=Sun, 17 Jun 2018 09:40:56 GMT</p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json;charset=ISO-8859-1<br/>correlation-id=a6c6808f-be55-40ea-ba10-ba5c34df3bbc<br/>Date=Tue, 15 Jan 2019 10:21:47 GMT<br/>Server=nginx<br/>Content-Length=77<br/>Connection=keep-alive</p>
  </div>
       </div>
     </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
   
 
 	</li></ul></div></div>
@@ -3512,6 +3757,9 @@ Description     : This is an executable specification file which follows markdow
 
   
   
+
+  
+  
   
     
       <span>
@@ -3530,19 +3778,28 @@ Description     : This is an executable specification file which follows markdow
         
   <div class="error-container failed">
     <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
-          </h4>
-          <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.request.BaseClass.isResponseStatusCodeEqualTo(BaseClass.java:1083)<br/>com.maxsoft.intelliapi.api.CommonStepDefinitions.isResponseStatusCodeEqualTo(CommonStepDefinitions.java:346)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:152)<br/>sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)<br/>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>java.lang.reflect.Method.invoke(Method.java:498)<br/>com.thoughtworks.gauge.execution.MethodExecutor.execute(MethodExecutor.java:38)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStepMethod(StepExecutionStage.java:74)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.executeStep(StepExecutionStage.java:67)<br/>com.thoughtworks.gauge.execution.StepExecutionStage.execute(StepExecutionStage.java:49)<br/>com.thoughtworks.gauge.execution.AbstractExecutionStage.executeNext(AbstractExecutionStage.java:24)<br/>com.thoughtworks.gauge.execution.HookExecutionStage.execute(HookExecutionStage.java:43)<br/>com.thoughtworks.gauge.execution.ExecutionPipeline.start(ExecutionPipeline.java:29)<br/>com.thoughtworks.gauge.processor.ExecuteStepProcessor.process(ExecuteStepProcessor.java:41)<br/>com.thoughtworks.gauge.connection.MessageDispatcher.dispatchMessages(MessageDispatcher.java:91)<br/>com.thoughtworks.gauge.GaugeRuntime.dispatchMessages(GaugeRuntime.java:105)<br/>com.thoughtworks.gauge.GaugeRuntime.access$100(GaugeRuntime.java:37)<br/>com.thoughtworks.gauge.GaugeRuntime$2.run(GaugeRuntime.java:86)<br/>java.lang.Thread.run(Thread.java:745)<br/></pre>
-        </div>
-        
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [201] but found [401]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1174)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:392)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:182)<br/></pre>
+      </div>
+      
     </div>
   </div>
 
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3571,6 +3828,9 @@ Description     : This is an executable specification file which follows markdow
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -3612,8 +3872,17 @@ Description     : This is an executable specification file which follows markdow
 
   
     
+    
+  
+
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -3636,6 +3905,9 @@ Description     : This is an executable specification file which follows markdow
   
   
 
+  
+  
+
 	
 	</div>
 
@@ -3647,6 +3919,7 @@ Description     : This is an executable specification file which follows markdow
     
   
 
+    
     
     </div>
   
@@ -3665,15 +3938,15 @@ Description     : This is an executable specification file which follows markdow
 
 	
     <script type="text/javascript">
-      var loadingImage = "..\..\..\../images/loading.gif";
-      var closeButton = "..\..\..\../images/close.gif";
+      var loadingImage = "../../../../images/loading.gif";
+      var closeButton = "../../../../images/close.gif";
     </script>
-    <script src="..\..\..\../js/lightbox.js"></script>
-    <script src="..\..\..\../js/jquery-3.1.0.min.js" type="text/javascript"></script>
-    <script src="..\..\..\../js/auto-complete.min.js" type="text/javascript"></script>
-    <script src="..\..\..\../js/clipboard.min.js" type="text/javascript"></script>
-    <script src="..\..\..\../js/search_index.js" type="text/javascript"></script>
-    <script src="..\..\..\../js/main.js" type="text/javascript"></script>
+    <script src="../../../../js/lightbox.js"></script>
+    <script src="../../../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="../../../../js/auto-complete.min.js" type="text/javascript"></script>
+    <script src="../../../../js/clipboard.min.js" type="text/javascript"></script>
+    <script src="../../../../js/search_index.js" type="text/javascript"></script>
+    <script src="../../../../js/main.js" type="text/javascript"></script>
     </body>
   </html>
 
