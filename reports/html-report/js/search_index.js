@@ -1,1 +1,1 @@
-var index = {"Tags":{},"Specs":{"Create a list from data store values Specification":["specs/Other/02. Create a list from data store values.html"]}};
+var index = {"Tags":{},"Specs":{"Saving to Data Stores Specification":["specs/Data Stores/01. Saving to Data Stores.html"]}};

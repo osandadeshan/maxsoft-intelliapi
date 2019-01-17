@@ -1,24 +1,24 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Jan 5, 2019 at 11:37pm",
-	"successRate": 100,
+	"timestamp": "Jan 15, 2019 at 7:32pm",
+	"successRate": 0,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 2696,
-	"executionStatus": "pass",
+	"executionTime": 2614,
+	"executionStatus": "fail",
 	"specResults": [
 		{
-			"specHeading": "Create a list from data store values Specification",
-			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Other\\02. Create a list from data store values.spec",
+			"specHeading": "Saving to Data Stores Specification",
+			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Data Stores\\01. Saving to Data Stores.spec",
 			"tags": [],
-			"executionTime": 405,
-			"executionStatus": "pass",
+			"executionTime": 374,
+			"executionStatus": "fail",
 			"scenarios": [
 				{
-					"scenarioHeading": "Create a list from data store values",
+					"scenarioHeading": "Reading values from Data Store",
 					"tags": [],
-					"executionTime": 405,
-					"executionStatus": "pass",
+					"executionTime": 374,
+					"executionStatus": "fail",
 					"contexts": [],
 					"teardowns": [],
 					"items": [
@@ -52,6 +52,13 @@
 											"variable3",
 											"Software Automation"
 										]
+									},
+									{
+										"cells": [
+											"Suite",
+											"variable4",
+											"Gauge Framework"
+										]
 									}
 								]
 							},
@@ -62,19 +69,20 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 405,
+								"executionTime": 371,
 								"skippedReason": "",
 								"messages": [
 									"\"Osanda Deshan\" is successfully saved as a text in Scenario Data Store [variable1]",
 									"\"Osanda Nimalarathna\" is successfully saved as a text in Specification Data Store [variable2]",
-									"\"Software Automation\" is successfully saved as a text in Scenario Data Store [variable3]"
+									"\"Software Automation\" is successfully saved as a text in Scenario Data Store [variable3]",
+									"\"Gauge Framework\" is successfully saved as a text in Suite Data Store [variable4]"
 								],
 								"errorType": "assertion"
 							}
 						},
 						{
 							"itemType": "step",
-							"stepText": "And the user saves the values inside data stores as a \"String\" data type list into \"Scenario\" type data store by referencing the variable name as \"var1\"",
+							"stepText": "And the user read the values from data stores as follows",
 							"table": {
 								"headers": [
 									"DataStore Type",
@@ -98,6 +106,12 @@
 											"Scenario",
 											"variable3"
 										]
+									},
+									{
+										"cells": [
+											"Suite",
+											"variable4"
+										]
 									}
 								]
 							},
@@ -114,25 +128,33 @@
 									"Text inside Scenario Data Store [variable1] is: \"Osanda Deshan\"\n\n",
 									"Text inside Specification Data Store [variable2] is: \"Osanda Nimalarathna\"\n\n",
 									"Text inside Scenario Data Store [variable3] is: \"Software Automation\"\n\n",
-									"\"\"Osanda Deshan\",\"Osanda Nimalarathna\",\"Software Automation\"\" is successfully saved as a text in Scenario Data Store [var1]",
-									"Value List: \"Osanda Deshan\",\"Osanda Nimalarathna\",\"Software Automation\""
+									"Text inside Suite Data Store [variable4] is: \"Gauge Framework\"\n\n"
 								],
 								"errorType": "assertion"
 							}
 						},
 						{
 							"itemType": "step",
-							"stepText": "And the user read the values from data stores as follows",
+							"stepText": "And the values inside the data stores equal to the following",
 							"table": {
 								"headers": [
 									"DataStore Type",
-									"Variable Name"
+									"Variable Name",
+									"Expected Value"
 								],
 								"rows": [
 									{
 										"cells": [
-											"Scenario",
-											"var1"
+											"Specification",
+											"variable2",
+											"Osanda Nimalarathna"
+										]
+									},
+									{
+										"cells": [
+											"Suite",
+											"variable4",
+											"Gauge Framework"
 										]
 									}
 								]
@@ -144,10 +166,52 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 0,
+								"executionTime": 2,
 								"skippedReason": "",
 								"messages": [
-									"Text inside Scenario Data Store [var1] is: \"\"Osanda Deshan\",\"Osanda Nimalarathna\",\"Software Automation\"\"\n\n"
+									"Text inside Specification Data Store [variable2] is: \"Osanda Nimalarathna\"\n\n",
+									"Text inside Suite Data Store [variable4] is: \"Gauge Framework\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores not equal to the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"variable1",
+											"Osanda Deshan"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"variable3",
+											"Software Automation"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "fail",
+								"stackTrace": "org.testng.Assert.fail(Assert.java:94)\norg.testng.Assert.assertNotEquals(Assert.java:758)\norg.testng.Assert.assertNotEquals(Assert.java:763)\ncom.maxsoft.intelliapi.api.Base.dataStoreValueNotEquals(Base.java:1403)\ncom.maxsoft.intelliapi.api.ApiStepImpl.dataStoreValueNotEquals(ApiStepImpl.java:634)\ncom.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.dataStoreValueNotEquals(AllStepsDefinitions.java:278)\n",
+								"screenshot": "",
+								"errorMessage": "java.lang.AssertionError: null",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [variable1] is: \"Osanda Deshan\"\n\n"
 								],
 								"errorType": "assertion"
 							}
@@ -163,17 +227,17 @@
 			"datatable": null,
 			"beforeSpecHookFailure": null,
 			"afterSpecHookFailure": null,
-			"passedScenarioCount": 1,
-			"failedScenarioCount": 0,
+			"passedScenarioCount": 0,
+			"failedScenarioCount": 1,
 			"skippedScenarioCount": 0
 		}
 	],
 	"beforeSuiteHookFailure": null,
 	"afterSuiteHookFailure": null,
-	"passedSpecsCount": 1,
-	"failedSpecsCount": 0,
+	"passedSpecsCount": 0,
+	"failedSpecsCount": 1,
 	"skippedSpecsCount": 0,
-	"passedScenariosCount": 1,
-	"failedScenariosCount": 0,
+	"passedScenariosCount": 0,
+	"failedScenariosCount": 1,
 	"skippedScenariosCount": 0
 }
