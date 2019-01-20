@@ -1,4 +1,4 @@
-# MaxSoft IntelliAPI Setup Guide
+# MaxSoft IntelliAPI - Setup Guide
 <br />
 
 ## Pre Requisites
