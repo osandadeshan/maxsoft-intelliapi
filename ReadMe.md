@@ -73,7 +73,7 @@
 
 ## How to build the MaxSoft IntelliAPI JAR file
 1) Get a clone of this project.
-2) Open the command prompt. \
+2) Open the command prompt. 
 3) Navigate to the project directory. \
 `cd <project_dir>`
 4) Execute this command. \
