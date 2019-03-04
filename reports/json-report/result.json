@@ -1,27 +1,182 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Jan 15, 2019 at 7:32pm",
-	"successRate": 0,
+	"timestamp": "Mar 4, 2019 at 11:13pm",
+	"successRate": 100,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 2614,
-	"executionStatus": "fail",
+	"executionTime": 8622,
+	"executionStatus": "pass",
 	"specResults": [
 		{
-			"specHeading": "Saving to Data Stores Specification",
-			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Data Stores\\01. Saving to Data Stores.spec",
+			"specHeading": "Saving And Reading Values From Data Store Specification",
+			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Data Stores\\03. Saving And Reading Values From Data Store.spec",
 			"tags": [],
-			"executionTime": 374,
-			"executionStatus": "fail",
+			"executionTime": 5925,
+			"executionStatus": "pass",
 			"scenarios": [
 				{
-					"scenarioHeading": "Reading values from Data Store",
+					"scenarioHeading": "Validate the data store values",
 					"tags": [],
-					"executionTime": 374,
-					"executionStatus": "fail",
+					"executionTime": 5925,
+					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
 					"items": [
+						{
+							"itemType": "step",
+							"stepText": "Given that a user needs to invoke \"Get Staging PI Token\"",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1604,
+								"skippedReason": "",
+								"messages": [
+									"API Endpoint is: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
+									"HTTP Method is: POST\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the user set the request authentication configurations as follows",
+							"table": {
+								"headers": [
+									"Configuration",
+									"Configuration Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Is authentication required?",
+											"No"
+										]
+									},
+									{
+										"cells": [
+											"Do you need to retrieve the access token from the text file?",
+											"N/A"
+										]
+									},
+									{
+										"cells": [
+											"Provide the access token if you need to authorize the API manually",
+											"N/A"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the user set the request payload as follows \u003cfile:/resources/payloads/login.txt\u003e",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 80,
+								"skippedReason": "",
+								"messages": [
+									"The JSON request body that you are going to use for the API is:\n{\r\n \"userName\": \"osanda12\",\r\n \"password\": \"Password1\"\r\n}"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "When the user invokes the API",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 4151,
+								"skippedReason": "",
+								"messages": [
+									"Invoked API Endpoint: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
+									"HTTP Method is: POST\n\n",
+									"Response Time is: 3293ms\n\n",
+									"Response is: \n{\n    \"status\": \"success\",\n    \"data\": \"eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzMyMjEwLCJpYXQiOjE1NTE3MjE0MTAsInNlc3NpZCI6ImU2OWNjODIzLWFjZGMtNDdmNS05ZTQ3LTRkYTUzYTllNWQ5ZSJ9.Xn3AHQ4b5ISESQJkDQzRoghizi-t1cL1mAWgsRwMfQHqmt6sMhaZNTJprV2-NHhHLDK2QLnFPrq-_lOvk_4EjeD-75EztmO5ZWbu-1BmVPDAIh8Rl9g7YTiolAv7S1mQlDFU3ScaZ8pQnmsgC8jLUvWTYJqtqWd2heGjcLZVtMQ\"\n}\n\n",
+									"Response Headers are: \nDate=Mon, 04 Mar 2019 17:43:30 GMT\nContent-Type=application/json;charset=UTF-8\nTransfer-Encoding=chunked\nConnection=keep-alive\nSet-Cookie=AWSALB=2Ys4tQjnMJhiqv5aYA7M69RAHXS63He8Mgts2jEZe2js63mZIcOH6hgDqgCrtdzJZy1R2AQpUJmGLSklYbpO04w690c1yd4zatotII/7jzPSo+T2vnEz7n7kwUp7; Expires=Mon, 11 Mar 2019 17:43:30 GMT; Path=/\nServer=nginx/1.15.7\nCorrelation-Id=3c52f99a-2610-4560-b689-b39a12682b0d\nLocation=https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzMyMjEwLCJpYXQiOjE1NTE3MjE0MTAsInNlc3NpZCI6ImU2OWNjODIzLWFjZGMtNDdmNS05ZTQ3LTRkYTUzYTllNWQ5ZSJ9.Xn3AHQ4b5ISESQJkDQzRoghizi-t1cL1mAWgsRwMfQHqmt6sMhaZNTJprV2-NHhHLDK2QLnFPrq-_lOvk_4EjeD-75EztmO5ZWbu-1BmVPDAIh8Rl9g7YTiolAv7S1mQlDFU3ScaZ8pQnmsgC8jLUvWTYJqtqWd2heGjcLZVtMQ"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Then the status code for the request is \"201\"",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 3,
+								"skippedReason": "",
+								"messages": [],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And save the JSON Path values in the response inside the data stores",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Value To Be Stored"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"status",
+											"$.status"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 81,
+								"skippedReason": "",
+								"messages": [
+									"\"success\" is successfully saved as a text in Scenario Data Store [status]"
+								],
+								"errorType": "assertion"
+							}
+						},
 						{
 							"itemType": "step",
 							"stepText": "And the user saves the values inside data stores as follows",
@@ -35,82 +190,22 @@
 									{
 										"cells": [
 											"Scenario",
-											"variable1",
-											"Osanda Deshan"
-										]
-									},
-									{
-										"cells": [
-											"Specification",
-											"variable2",
-											"Osanda Nimalarathna"
+											"username",
+											"osanda12"
 										]
 									},
 									{
 										"cells": [
 											"Scenario",
-											"variable3",
-											"Software Automation"
-										]
-									},
-									{
-										"cells": [
-											"Suite",
-											"variable4",
-											"Gauge Framework"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 371,
-								"skippedReason": "",
-								"messages": [
-									"\"Osanda Deshan\" is successfully saved as a text in Scenario Data Store [variable1]",
-									"\"Osanda Nimalarathna\" is successfully saved as a text in Specification Data Store [variable2]",
-									"\"Software Automation\" is successfully saved as a text in Scenario Data Store [variable3]",
-									"\"Gauge Framework\" is successfully saved as a text in Suite Data Store [variable4]"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the user read the values from data stores as follows",
-							"table": {
-								"headers": [
-									"DataStore Type",
-									"Variable Name"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"variable1"
-										]
-									},
-									{
-										"cells": [
-											"Specification",
-											"variable2"
+											"status",
+											"success"
 										]
 									},
 									{
 										"cells": [
 											"Scenario",
-											"variable3"
-										]
-									},
-									{
-										"cells": [
-											"Suite",
-											"variable4"
+											"mobileUserName",
+											"osanda12"
 										]
 									}
 								]
@@ -125,10 +220,9 @@
 								"executionTime": 0,
 								"skippedReason": "",
 								"messages": [
-									"Text inside Scenario Data Store [variable1] is: \"Osanda Deshan\"\n\n",
-									"Text inside Specification Data Store [variable2] is: \"Osanda Nimalarathna\"\n\n",
-									"Text inside Scenario Data Store [variable3] is: \"Software Automation\"\n\n",
-									"Text inside Suite Data Store [variable4] is: \"Gauge Framework\"\n\n"
+									"\"osanda12\" is successfully saved as a text in Scenario Data Store [username]",
+									"\"success\" is successfully saved as a text in Scenario Data Store [status]",
+									"\"osanda12\" is successfully saved as a text in Scenario Data Store [mobileUserName]"
 								],
 								"errorType": "assertion"
 							}
@@ -145,16 +239,16 @@
 								"rows": [
 									{
 										"cells": [
-											"Specification",
-											"variable2",
-											"Osanda Nimalarathna"
+											"Scenario",
+											"username",
+											"osanda12"
 										]
 									},
 									{
 										"cells": [
-											"Suite",
-											"variable4",
-											"Gauge Framework"
+											"Scenario",
+											"status",
+											"success"
 										]
 									}
 								]
@@ -166,11 +260,48 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 2,
+								"executionTime": 0,
 								"skippedReason": "",
 								"messages": [
-									"Text inside Specification Data Store [variable2] is: \"Osanda Nimalarathna\"\n\n",
-									"Text inside Suite Data Store [variable4] is: \"Gauge Framework\"\n\n"
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside two data stores should be equal",
+							"table": {
+								"headers": [
+									"DataStore 1 Type",
+									"Variable 1 Name",
+									"DataStore 2 Type",
+									"Variable 2 Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"username",
+											"Scenario",
+											"mobileUserName"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [mobileUserName] is: \"osanda12\"\n\n"
 								],
 								"errorType": "assertion"
 							}
@@ -188,15 +319,15 @@
 									{
 										"cells": [
 											"Scenario",
-											"variable1",
-											"Osanda Deshan"
+											"username",
+											"osanda"
 										]
 									},
 									{
 										"cells": [
 											"Scenario",
-											"variable3",
-											"Software Automation"
+											"status",
+											"succes"
 										]
 									}
 								]
@@ -204,14 +335,210 @@
 							"beforeStepHookFailure": null,
 							"afterStepHookFailure": null,
 							"result": {
-								"status": "fail",
-								"stackTrace": "org.testng.Assert.fail(Assert.java:94)\norg.testng.Assert.assertNotEquals(Assert.java:758)\norg.testng.Assert.assertNotEquals(Assert.java:763)\ncom.maxsoft.intelliapi.api.Base.dataStoreValueNotEquals(Base.java:1403)\ncom.maxsoft.intelliapi.api.ApiStepImpl.dataStoreValueNotEquals(ApiStepImpl.java:634)\ncom.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.dataStoreValueNotEquals(AllStepsDefinitions.java:278)\n",
+								"status": "pass",
+								"stackTrace": "",
 								"screenshot": "",
-								"errorMessage": "java.lang.AssertionError: null",
+								"errorMessage": "",
 								"executionTime": 1,
 								"skippedReason": "",
 								"messages": [
-									"Text inside Scenario Data Store [variable1] is: \"Osanda Deshan\"\n\n"
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside two data stores should not be equal",
+							"table": {
+								"headers": [
+									"DataStore 1 Type",
+									"Variable 1 Name",
+									"DataStore 2 Type",
+									"Variable 2 Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"username",
+											"Scenario",
+											"status"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores contain the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"username",
+											"osanda"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"status",
+											"succes"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the value inside a data store should contain the value of the other data store",
+							"table": {
+								"headers": [
+									"DataStore 1 Type",
+									"Variable 1 Name",
+									"DataStore 2 Type",
+									"Variable 2 Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"username",
+											"Scenario",
+											"mobileUserName"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [mobileUserName] is: \"osanda12\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores not contain the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"username",
+											"deshan"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"status",
+											"fail"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the value inside a data store should not contain the value of the other data store",
+							"table": {
+								"headers": [
+									"DataStore 1 Type",
+									"Variable 1 Name",
+									"DataStore 2 Type",
+									"Variable 2 Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"username",
+											"Scenario",
+											"status"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
+									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
 								],
 								"errorType": "assertion"
 							}
@@ -227,17 +554,17 @@
 			"datatable": null,
 			"beforeSpecHookFailure": null,
 			"afterSpecHookFailure": null,
-			"passedScenarioCount": 0,
-			"failedScenarioCount": 1,
+			"passedScenarioCount": 1,
+			"failedScenarioCount": 0,
 			"skippedScenarioCount": 0
 		}
 	],
 	"beforeSuiteHookFailure": null,
 	"afterSuiteHookFailure": null,
-	"passedSpecsCount": 0,
-	"failedSpecsCount": 1,
+	"passedSpecsCount": 1,
+	"failedSpecsCount": 0,
 	"skippedSpecsCount": 0,
-	"passedScenariosCount": 0,
-	"failedScenariosCount": 1,
+	"passedScenariosCount": 1,
+	"failedScenariosCount": 0,
 	"skippedScenariosCount": 0
 }

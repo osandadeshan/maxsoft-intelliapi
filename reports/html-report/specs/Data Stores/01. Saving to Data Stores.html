@@ -30,11 +30,11 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,0,0" data-total="1">
+        <svg id="pie-chart" data-results="0,1,0" data-total="1">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/1</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 1/1</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
         </svg>
@@ -43,14 +43,14 @@
     <div class="report_test-results">
       <div class="report_test-result specs">
           <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">1</span></div>
-          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
-          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">0</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">1</span></div>
           <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
       </div>
       <div class="report_test-result scenarios">
-          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">1</span></div>
-          <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
-          <div class="pass scenario-stats" data-status="passed"><span class="value">0</span></div>
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">2</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">2</span></div>
           <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
       </div>
     </div>
@@ -63,15 +63,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>0%</span>
+          <span>100%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:02</span>
+          <span>00:00:03</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Jan 15, 2019 at 7:32pm</span>
+          <span>Mar 4, 2019 at 11:12pm</span>
         </li>
       </ul>
       
@@ -106,8 +106,8 @@
         <ul id="scenarios" class="spec-list">
         
           <a href="01. Saving to Data Stores.html">
-            
-              <li class='failed spec-name'>
+             
+              <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Saving to Data Stores Specification</span>
               <span id="time" class="time">00:00:00</span>
@@ -128,8 +128,8 @@
         <h3 class="spec-head" title="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\01. Saving to Data Stores.spec">Saving to Data Stores Specification</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -175,7 +175,425 @@ Description  : This is an executable specification file which follows markdown s
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Saving to Data Stores</h3>
+    <span class="time">00:00:00</span>
+
+	
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user saves the values inside data stores as follows 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>variable1</td><td>Osanda Deshan</td></tr>
+    
+    <tr><td>Specification</td><td>variable2</td><td>Osanda Nimalarathna</td></tr>
+    
+    <tr><td>Scenario</td><td>variable3</td><td>Software Automation</td></tr>
+    
+    <tr><td>Suite</td><td>variable4</td><td>Gauge Framework</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“Osanda Deshan” is successfully saved as a text in Scenario Data Store [variable1]</p>
+ </div><div class="step-message"><p>“Osanda Nimalarathna” is successfully saved as a text in Specification Data Store [variable2]</p>
+ </div><div class="step-message"><p>“Software Automation” is successfully saved as a text in Scenario Data Store [variable3]</p>
+ </div><div class="step-message"><p>“Gauge Framework” is successfully saved as a text in Suite Data Store [variable4]</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the values inside the data stores equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>variable1</td><td>Osanda Deshan</td></tr>
+    
+    <tr><td>Specification</td><td>variable2</td><td>Osanda Nimalarathna</td></tr>
+    
+    <tr><td>Scenario</td><td>variable3</td><td>Software Automation</td></tr>
+    
+    <tr><td>Suite</td><td>variable4</td><td>Gauge Framework</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [variable1] is: “Osanda Deshan”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Specification Data Store [variable2] is: “Osanda Nimalarathna”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Scenario Data Store [variable3] is: “Software Automation”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Suite Data Store [variable4] is: “Gauge Framework”<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the user saves environment property file data into data stores 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Attribute Name In Property File</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>mongoHost</td><td>mongo_database_host</td></tr>
+    
+    <tr><td>Specification</td><td>mongoPort</td><td>mongo_database_port</td></tr>
+    
+    <tr><td>Scenario</td><td>mysqlUrl</td><td>mysql_database_url</td></tr>
+    
+    <tr><td>Suite</td><td>headerName</td><td>header_name_for_authorization</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“10.199.253.208” is successfully saved as a text in Scenario Data Store [mongoHost]</p>
+ </div><div class="step-message"><p>“27017” is successfully saved as a text in Specification Data Store [mongoPort]</p>
+ </div><div class="step-message"><p>“jdbc:mysql://localhost:3306/user” is successfully saved as a text in Scenario Data Store [mysqlUrl]</p>
+ </div><div class="step-message"><p>“X-Authorization” is successfully saved as a text in Suite Data Store [headerName]</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        And the values inside the data stores equal to the following 
+      </span>
+    
+  
+    
+      <div class='inline-table'>
+        <div>
+          <table>
+  <tr>
+    <th>DataStore Type</th><th>Variable Name</th><th>Expected Value</th>
+  </tr>
+  <tbody>
+    
+    <tr><td>Scenario</td><td>mongoHost</td><td>10.199.253.208</td></tr>
+    
+    <tr><td>Specification</td><td>mongoPort</td><td>27017</td></tr>
+    
+    <tr><td>Scenario</td><td>mysqlUrl</td><td>jdbc:mysql://localhost:3306/user</td></tr>
+    
+    <tr><td>Suite</td><td>headerName</td><td>X-Authorization</td></tr>
+    
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    
+  
+  </div>
+
+  
+    
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Scenario Data Store [mongoHost] is: “10.199.253.208”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Specification Data Store [mongoPort] is: “27017”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Scenario Data Store [mysqlUrl] is: “jdbc:mysql://localhost:3306/user”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Suite Data Store [headerName] is: “X-Authorization”<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    <span></span>
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
     
 
 	
@@ -484,7 +902,7 @@ Description  : This is an executable specification file which follows markdown s
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -515,9 +933,9 @@ Description  : This is an executable specification file which follows markdown s
   </tr>
   <tbody>
     
-    <tr><td>Scenario</td><td>variable1</td><td>Osanda Deshan</td></tr>
+    <tr><td>Scenario</td><td>variable1</td><td>Osa Deshan</td></tr>
     
-    <tr><td>Scenario</td><td>variable3</td><td>Software Automation</td></tr>
+    <tr><td>Scenario</td><td>variable3</td><td>Software Auto</td></tr>
     
   </tbody>
 </table>
@@ -530,26 +948,13 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>java.lang.AssertionError: null</pre>
-        </h4>
-        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.assertNotEquals(Assert.java:758)<br/>org.testng.Assert.assertNotEquals(Assert.java:763)<br/>com.maxsoft.intelliapi.api.Base.dataStoreValueNotEquals(Base.java:1403)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.dataStoreValueNotEquals(ApiStepImpl.java:634)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.dataStoreValueNotEquals(AllStepsDefinitions.java:278)<br/></pre>
-      </div>
-      
-    </div>
-  </div>
-
-    
     
   
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
         <div class="step-message"><p>Text inside Scenario Data Store [variable1] is: “Osanda Deshan”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Scenario Data Store [variable3] is: “Software Automation”<br/><br/></p>
  </div>
       </div>
     </div>
