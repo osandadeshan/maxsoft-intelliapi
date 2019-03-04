@@ -71,5 +71,5 @@ Description  : This is an executable specification file which follows markdown s
 
    |DataStore Type|Variable Name|Expected Value     |
    |--------------|-------------|-------------------|
-   |Scenario      |variable1    |Osanda Deshan      |
-   |Scenario      |variable3    |Software Automation|
+   |Scenario      |variable1    |Osa Deshan         |
+   |Scenario      |variable3    |Software Auto      |

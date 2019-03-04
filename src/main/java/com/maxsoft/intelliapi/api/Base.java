@@ -404,6 +404,14 @@ public class Base {
         printHttpMethod(apiEndpointName);
     }
 
+    public void getApiToBeInvoked(String dataStoreType, String variableName) throws IOException {
+        String invokingEndpoint = readFromDataStore(dataStoreType, variableName);
+        // Print API Endpoint
+        System.out.println("\n");
+        printApiEndpoint(invokingEndpoint);
+        print("HTTP Method is: GET");
+    }
+
     public String getQueryParams() {
         String queryParams = String.valueOf(getSavedValueForScenario("queryParams"));
         if (queryParams.equals("") || queryParams.equals("null")) {
@@ -434,6 +442,10 @@ public class Base {
         Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n");
         printHttpMethod(apiName);
         return invokingEndpoint;
+    }
+
+    public void setDataStoreEmpty(String dataStoreType, String variableName){
+        saveToDataStore(dataStoreType, variableName, "");
     }
 
     public void setScenarioDataStoreEmpty(String dataStoreName){
@@ -553,6 +565,34 @@ public class Base {
         }
         getStatusCode();
         getResponse();
+        printResponseTime();
+        printResponse();
+        printResponseHeaders();
+        setInvokingApiEndpointEmpty();
+        headerList.clear();
+    }
+
+    public void getAPIWithAuthMultipleHeadersAndCustomEndpoint(String dataStoreType, String variableName, String accessToken, List<Header> headerList) {
+        String invokingEndpoint = readFromDataStore(dataStoreType, variableName);
+        Headers headers = new Headers(headerList);
+        if (accessToken == null) {
+            response = request
+                    .given()
+                    .headers(headers)
+                    .when()
+                    .get(invokingEndpoint);
+        } else {
+            response = request
+                    .given()
+                    .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
+                    .headers(headers)
+                    .when()
+                    .get(invokingEndpoint);
+        }
+        getStatusCode();
+        getResponse();
+        print("Invoked API Endpoint:\n" + invokingEndpoint + "\n\n");
+        print("HTTP Method is: GET" + "\n\n");
         printResponseTime();
         printResponse();
         printResponseHeaders();
@@ -1170,6 +1210,38 @@ public class Base {
         }
     }
 
+    public void invokeGetApi(String dataStoreType, String variableName, List<Header> headerList){
+        String accessTokenInFile = readAccessToken(); // Fetching token from the text file
+        String accessToken = "";
+        String isAuthenticationRequired = "";
+        String isAccessTokenRetrievedFromTextFile = "";
+        String accessTokenString = "";
+
+        try {
+            isAuthenticationRequired = String.valueOf(getSavedValueForScenario(
+                    "Is authentication required?").toLowerCase());
+            isAccessTokenRetrievedFromTextFile = String.valueOf(getSavedValueForScenario(
+                    "Do you need to retrieve the access token from the text file?").toLowerCase());
+            accessTokenString = String.valueOf(getSavedValueForScenario(
+                    "Provide the access token if you need to authorize the API manually"));
+        } catch (Exception ex){
+            isAuthenticationRequired = "";
+            isAccessTokenRetrievedFromTextFile = "";
+            accessTokenString = "";
+        }
+
+        if (Boolean.valueOf(isAuthenticationRequired).equals(Boolean.TRUE) || isAuthenticationRequired.equals("yes") || isAuthenticationRequired.equals("y")) {
+            if (Boolean.valueOf(isAccessTokenRetrievedFromTextFile).equals(Boolean.TRUE) || isAccessTokenRetrievedFromTextFile.equals("yes") || isAccessTokenRetrievedFromTextFile.equals("y")) {
+                accessToken = accessTokenInFile;
+            } else {
+                accessToken = accessTokenString;
+            }
+        } else {
+            accessToken = "";
+        }
+        getAPIWithAuthMultipleHeadersAndCustomEndpoint(dataStoreType, variableName, accessToken, headerList);
+    }
+
     public void isResponseStatusCodeEqualTo(String statusCode) {
         Assert.assertEquals(getSavedValueForScenario("statusCode"), statusCode, "The expected status code for the request is not equal to the actual status code\n");
     }
@@ -1400,11 +1472,16 @@ public class Base {
     }
 
     public void dataStoreValueNotEquals(String dataStoreType, String dataStoreVariableName, String expectedValue){
-        Assert.assertNotEquals(readFromDataStore(dataStoreType, dataStoreVariableName), expectedValue);
+        String actualValue = readFromDataStore(dataStoreType, dataStoreVariableName);
+        Assert.assertFalse(actualValue.equals(expectedValue), "Not expected [" + expectedValue + "] but actual value in " +
+                dataStoreType +" Data Store [" + dataStoreVariableName + "] is [" + actualValue + "]\n");
     }
 
     public void compareDataStoresNotEquals(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
-        Assert.assertNotEquals(readFromDataStore(firstDataStoreType, firstDataStoreVariableName), readFromDataStore(secondDataStoreType, secondDataStoreVariableName));
+        String actualValue = readFromDataStore(firstDataStoreType, firstDataStoreVariableName);
+        String expectedValue = readFromDataStore(secondDataStoreType, secondDataStoreVariableName);
+        Assert.assertFalse(actualValue.equals(expectedValue), "Not expected [" + expectedValue + "] but actual value in " +
+                firstDataStoreType +" Data Store [" + firstDataStoreVariableName + "] is [" + actualValue + "]\n");
     }
 
     public void dataStoreValueContains(String dataStoreType, String dataStoreVariableName, String expectedValue){

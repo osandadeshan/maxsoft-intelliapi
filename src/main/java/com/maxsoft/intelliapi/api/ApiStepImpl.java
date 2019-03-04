@@ -31,6 +31,15 @@ public class ApiStepImpl extends Base {
         super.apiToBeInvoked(apiEndpointName);
     }
 
+    // Use this method at the beginning of the scenario to identify which GET API is going to use in that scenario
+    public void getApiToBeInvoked(Table table) throws IOException {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.getApiToBeInvoked(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)));
+        }
+    }
+
     // Use this method to replace column values into timestamps by column name of a CSV file
     public void replaceCSVColumnValuesToTimestamps(String filePath, String columnName, String timestampPattern) throws IOException {
         replaceAllColumnValuesToTimestamps(CURRENT_DIRECTORY + filePath, columnName, timestampPattern);
@@ -385,6 +394,20 @@ public class ApiStepImpl extends Base {
             headerList.clear();
         }
         super.invokeApi(jsonRequest, headerList);
+    }
+
+    /* Use this method when you need to pass the Invoking endpoint in previous step using data stores and the access token from the text file into the GET API.
+       The "saveRequestAuthConfigurations" must use before using this step */
+    public void invokeGetApiUsingDataStores(Table table) {
+        List<Header> headerList = Headers.getFinalHeaders();
+        if (headerList.isEmpty() || headerList.equals(null)){
+            headerList.clear();
+        }
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        for (TableRow row : rows) {
+            super.invokeGetApi(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)), headerList);
+        }
     }
 
     // Use this method to validate the status code of the response
