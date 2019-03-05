@@ -39,7 +39,7 @@ public class AllStepsDefinitions{
     }
 
     // Use this method at the beginning of the scenario to identify which GET API is going to use in that scenario
-    @Step("Given that a user needs to invoke GET API using data stores <table>")
+    @Step("Given that a user needs to invoke GET API using the endpoint saved in the data store <table>")
     public void getApiToBeInvoked(Table table) throws IOException {
         apiStepImpl.getApiToBeInvoked(table);
     }
@@ -184,9 +184,9 @@ public class AllStepsDefinitions{
 
     /* Use this method when you need to pass the Invoking endpoint in previous step using data stores and the access token from the text file into the GET API.
        The "saveRequestAuthConfigurations" must use before using this step */
-    @Step("When the user invokes GET API <table>")
-    public void invokeGetApiUsingDataStores(Table table) throws IOException {
-        apiStepImpl.invokeGetApiUsingDataStores(table);
+    @Step("When the user invokes GET API using the endpoint saved in the data store")
+    public void invokeGetApiUsingDataStores() throws IOException {
+        apiStepImpl.invokeGetApiUsingDataStores();
     }
 
     // Use this method to validate the status code of the response
