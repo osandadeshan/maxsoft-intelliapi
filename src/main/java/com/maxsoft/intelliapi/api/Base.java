@@ -406,6 +406,7 @@ public class Base {
 
     public void getApiToBeInvoked(String dataStoreType, String variableName) throws IOException {
         String invokingEndpoint = readFromDataStore(dataStoreType, variableName);
+        saveValueForScenario("invokingEndpointSavedInScenarioDataStore", invokingEndpoint);
         // Print API Endpoint
         System.out.println("\n");
         printApiEndpoint(invokingEndpoint);
@@ -572,26 +573,25 @@ public class Base {
         headerList.clear();
     }
 
-    public void getAPIWithAuthMultipleHeadersAndCustomEndpoint(String dataStoreType, String variableName, String accessToken, List<Header> headerList) {
-        String invokingEndpoint = readFromDataStore(dataStoreType, variableName);
+    public void getAPIWithAuthMultipleHeadersAndCustomEndpoint(String apiEndpoint, String accessToken, List<Header> headerList) {
         Headers headers = new Headers(headerList);
         if (accessToken == null) {
             response = request
                     .given()
                     .headers(headers)
                     .when()
-                    .get(invokingEndpoint);
+                    .get(apiEndpoint);
         } else {
             response = request
                     .given()
                     .header(AUTHORIZATION_HEADER_NAME, accessToken) //Some API contains access token to run with the API
                     .headers(headers)
                     .when()
-                    .get(invokingEndpoint);
+                    .get(apiEndpoint);
         }
         getStatusCode();
         getResponse();
-        print("Invoked API Endpoint:\n" + invokingEndpoint + "\n\n");
+        print("Invoked API Endpoint:\n" + apiEndpoint + "\n\n");
         print("HTTP Method is: GET" + "\n\n");
         printResponseTime();
         printResponse();
@@ -1210,12 +1210,13 @@ public class Base {
         }
     }
 
-    public void invokeGetApi(String dataStoreType, String variableName, List<Header> headerList){
+    public void invokeGetApi(List<Header> headerList){
         String accessTokenInFile = readAccessToken(); // Fetching token from the text file
         String accessToken = "";
         String isAuthenticationRequired = "";
         String isAccessTokenRetrievedFromTextFile = "";
         String accessTokenString = "";
+        String apiEndpoint = getSavedValueForScenario("invokingEndpointSavedInScenarioDataStore");
 
         try {
             isAuthenticationRequired = String.valueOf(getSavedValueForScenario(
@@ -1239,7 +1240,7 @@ public class Base {
         } else {
             accessToken = "";
         }
-        getAPIWithAuthMultipleHeadersAndCustomEndpoint(dataStoreType, variableName, accessToken, headerList);
+        getAPIWithAuthMultipleHeadersAndCustomEndpoint(apiEndpoint, accessToken, headerList);
     }
 
     public void isResponseStatusCodeEqualTo(String statusCode) {

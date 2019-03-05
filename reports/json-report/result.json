@@ -1,23 +1,23 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Mar 4, 2019 at 11:13pm",
+	"timestamp": "Mar 5, 2019 at 8:58am",
 	"successRate": 100,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 8622,
+	"executionTime": 9564,
 	"executionStatus": "pass",
 	"specResults": [
 		{
-			"specHeading": "Saving And Reading Values From Data Store Specification",
-			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Data Stores\\03. Saving And Reading Values From Data Store.spec",
+			"specHeading": "Run GET API using Endpoint in Data Store Specification",
+			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Data Stores\\04. Run GET API using Endpoint in Data Store.spec",
 			"tags": [],
-			"executionTime": 5925,
+			"executionTime": 6630,
 			"executionStatus": "pass",
 			"scenarios": [
 				{
-					"scenarioHeading": "Validate the data store values",
+					"scenarioHeading": "Run GET API using Endpoint in Data Store",
 					"tags": [],
-					"executionTime": 5925,
+					"executionTime": 6630,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
@@ -33,11 +33,187 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 1604,
+								"executionTime": 1056,
 								"skippedReason": "",
 								"messages": [
 									"API Endpoint is: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
 									"HTTP Method is: POST\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the user set the request payload as follows \u003cfile:/resources/payloads/login.txt\u003e",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 69,
+								"skippedReason": "",
+								"messages": [
+									"The JSON request body that you are going to use for the API is:\n{\r\n \"userName\": \"osanda12\",\r\n \"password\": \"Password1\"\r\n}"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "When the user invokes the API",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 3195,
+								"skippedReason": "",
+								"messages": [
+									"Invoked API Endpoint: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
+									"HTTP Method is: POST\n\n",
+									"Response Time is: 2448ms\n\n",
+									"Response is: \n{\n    \"status\": \"success\",\n    \"data\": \"eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzY3MzM3LCJpYXQiOjE1NTE3NTY1MzYsInNlc3NpZCI6ImIzN2UwYTE5LTdjZjAtNGZmZC1hOTkyLWZlNDkxYjkzZDY0MCJ9.bW10NUGNeLjV7DWZ0nGmanJqb9Lbqx2AqCNpDfYbbFoZ7kvy1kHDOUq0QaJMr4jOO3UG4n5BxAmhjq3F2i8JL2MrVAS3Uh98MeVAhSCPSOEWajN2LAIyWxBjkBDiypj4oEfie0f5mUPqKT_YZzRL1mwRzcY-L9PGMOG0WjoygY0\"\n}\n\n",
+									"Response Headers are: \nDate=Tue, 05 Mar 2019 03:28:56 GMT\nContent-Type=application/json;charset=UTF-8\nTransfer-Encoding=chunked\nConnection=keep-alive\nSet-Cookie=AWSALB=jsUscQ6UR0LnnsRYNb+bykIUHw7VLSh3CUbdGPJqDyiuuc9saHFP6KN0J9+l6unTUv70Dx3W4l/fBqkSQrKcmXNT1tlaHw6gxH1INd4eUw+dUqFRaSObUAyCpGLP; Expires=Tue, 12 Mar 2019 03:28:56 GMT; Path=/\nServer=nginx/1.15.7\nCorrelation-Id=7ead5cfa-4056-47b6-acab-c821f3c3bcad\nLocation=https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzY3MzM3LCJpYXQiOjE1NTE3NTY1MzYsInNlc3NpZCI6ImIzN2UwYTE5LTdjZjAtNGZmZC1hOTkyLWZlNDkxYjkzZDY0MCJ9.bW10NUGNeLjV7DWZ0nGmanJqb9Lbqx2AqCNpDfYbbFoZ7kvy1kHDOUq0QaJMr4jOO3UG4n5BxAmhjq3F2i8JL2MrVAS3Uh98MeVAhSCPSOEWajN2LAIyWxBjkBDiypj4oEfie0f5mUPqKT_YZzRL1mwRzcY-L9PGMOG0WjoygY0"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Then the status code for the request is \"201\"",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 2,
+								"skippedReason": "",
+								"messages": [],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the JSON Path Assertions for the response should be equal to the following",
+							"table": {
+								"headers": [
+									"JSON Path",
+									"Expected Result"
+								],
+								"rows": [
+									{
+										"cells": [
+											"$.status",
+											"success"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 66,
+								"skippedReason": "",
+								"messages": [],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And save the access token in the response which is located inside the JSON Path of \"$.data\"",
+							"table": null,
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 5,
+								"skippedReason": "",
+								"messages": [
+									"Successfully saved the access token into the text file in the directory of \"C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\resources/access_tokens/saved_valid_access_token.txt\""
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the user saves the values inside data stores as follows",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Value To Be Stored"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"invokingEndpoint",
+											"http://aggregationservice-pearson-prep-us1-stg-blue.bite.pearsondev.tech/api/questions?deckId=5badc2027246d600100fe269"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"\"http://aggregationservice-pearson-prep-us1-stg-blue.bite.pearsondev.tech/api/questions?deckId=5badc2027246d600100fe269\" is successfully saved as a text in Scenario Data Store [invokingEndpoint]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Given that a user needs to invoke GET API using the endpoint saved in the data store",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"invokingEndpoint"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [invokingEndpoint] is: \"http://aggregationservice-pearson-prep-us1-stg-blue.bite.pearsondev.tech/api/questions?deckId=5badc2027246d600100fe269\"\n\n",
+									"API Endpoint is: \nhttp://aggregationservice-pearson-prep-us1-stg-blue.bite.pearsondev.tech/api/questions?deckId=5badc2027246d600100fe269\n\n",
+									"HTTP Method is: GET"
 								],
 								"errorType": "assertion"
 							}
@@ -54,13 +230,13 @@
 									{
 										"cells": [
 											"Is authentication required?",
-											"No"
+											"Yes"
 										]
 									},
 									{
 										"cells": [
 											"Do you need to retrieve the access token from the text file?",
-											"N/A"
+											"Yes"
 										]
 									},
 									{
@@ -86,7 +262,7 @@
 						},
 						{
 							"itemType": "step",
-							"stepText": "And the user set the request payload as follows \u003cfile:/resources/payloads/login.txt\u003e",
+							"stepText": "When the user invokes GET API using the endpoint saved in the data store",
 							"table": null,
 							"beforeStepHookFailure": null,
 							"afterStepHookFailure": null,
@@ -95,17 +271,22 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 80,
+								"executionTime": 2237,
 								"skippedReason": "",
 								"messages": [
-									"The JSON request body that you are going to use for the API is:\n{\r\n \"userName\": \"osanda12\",\r\n \"password\": \"Password1\"\r\n}"
+									"Successfully read the access token from the text file in the directory of \"C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\resources/access_tokens/saved_valid_access_token.txt\"\n\n",
+									"Invoked API Endpoint:\nhttp://aggregationservice-pearson-prep-us1-stg-blue.bite.pearsondev.tech/api/questions?deckId=5badc2027246d600100fe269\n\n",
+									"HTTP Method is: GET\n\n",
+									"Response Time is: 2215ms\n\n",
+									"Response is: \n{\n    \"questions\": [\n        \n    ]\n}\n\n",
+									"Response Headers are: \nContent-Type=application/json;charset=UTF-8\ncorrelation-id=b054245e-69ff-4b16-b1b8-701275af8c16\nDate=Tue, 05 Mar 2019 03:28:59 GMT\nServer=nginx\nX-Content-Type-Options=nosniff\nX-Loadbalancer-Id=nginx-ingress-2j1v1\nX-XSS-Protection=1; mode=block\nContent-Length=16\nConnection=keep-alive"
 								],
 								"errorType": "assertion"
 							}
 						},
 						{
 							"itemType": "step",
-							"stepText": "When the user invokes the API",
+							"stepText": "Then the status code for the request is \"200\"",
 							"table": null,
 							"beforeStepHookFailure": null,
 							"afterStepHookFailure": null,
@@ -114,30 +295,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 4151,
-								"skippedReason": "",
-								"messages": [
-									"Invoked API Endpoint: \nhttps://int-piapi-internal.stg-openclass.com/tokens\n\n",
-									"HTTP Method is: POST\n\n",
-									"Response Time is: 3293ms\n\n",
-									"Response is: \n{\n    \"status\": \"success\",\n    \"data\": \"eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzMyMjEwLCJpYXQiOjE1NTE3MjE0MTAsInNlc3NpZCI6ImU2OWNjODIzLWFjZGMtNDdmNS05ZTQ3LTRkYTUzYTllNWQ5ZSJ9.Xn3AHQ4b5ISESQJkDQzRoghizi-t1cL1mAWgsRwMfQHqmt6sMhaZNTJprV2-NHhHLDK2QLnFPrq-_lOvk_4EjeD-75EztmO5ZWbu-1BmVPDAIh8Rl9g7YTiolAv7S1mQlDFU3ScaZ8pQnmsgC8jLUvWTYJqtqWd2heGjcLZVtMQ\"\n}\n\n",
-									"Response Headers are: \nDate=Mon, 04 Mar 2019 17:43:30 GMT\nContent-Type=application/json;charset=UTF-8\nTransfer-Encoding=chunked\nConnection=keep-alive\nSet-Cookie=AWSALB=2Ys4tQjnMJhiqv5aYA7M69RAHXS63He8Mgts2jEZe2js63mZIcOH6hgDqgCrtdzJZy1R2AQpUJmGLSklYbpO04w690c1yd4zatotII/7jzPSo+T2vnEz7n7kwUp7; Expires=Mon, 11 Mar 2019 17:43:30 GMT; Path=/\nServer=nginx/1.15.7\nCorrelation-Id=3c52f99a-2610-4560-b689-b39a12682b0d\nLocation=https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzMyMjEwLCJpYXQiOjE1NTE3MjE0MTAsInNlc3NpZCI6ImU2OWNjODIzLWFjZGMtNDdmNS05ZTQ3LTRkYTUzYTllNWQ5ZSJ9.Xn3AHQ4b5ISESQJkDQzRoghizi-t1cL1mAWgsRwMfQHqmt6sMhaZNTJprV2-NHhHLDK2QLnFPrq-_lOvk_4EjeD-75EztmO5ZWbu-1BmVPDAIh8Rl9g7YTiolAv7S1mQlDFU3ScaZ8pQnmsgC8jLUvWTYJqtqWd2heGjcLZVtMQ"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "Then the status code for the request is \"201\"",
-							"table": null,
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 3,
+								"executionTime": 0,
 								"skippedReason": "",
 								"messages": [],
 								"errorType": "assertion"
@@ -145,67 +303,17 @@
 						},
 						{
 							"itemType": "step",
-							"stepText": "And save the JSON Path values in the response inside the data stores",
+							"stepText": "And the JSON Path Assertions for the response should be equal to the following",
 							"table": {
 								"headers": [
-									"DataStore Type",
-									"Variable Name",
-									"Value To Be Stored"
+									"JSON Path",
+									"Expected Result"
 								],
 								"rows": [
 									{
 										"cells": [
-											"Scenario",
-											"status",
-											"$.status"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 81,
-								"skippedReason": "",
-								"messages": [
-									"\"success\" is successfully saved as a text in Scenario Data Store [status]"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the user saves the values inside data stores as follows",
-							"table": {
-								"headers": [
-									"DataStore Type",
-									"Variable Name",
-									"Value To Be Stored"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"osanda12"
-										]
-									},
-									{
-										"cells": [
-											"Scenario",
-											"status",
-											"success"
-										]
-									},
-									{
-										"cells": [
-											"Scenario",
-											"mobileUserName",
-											"osanda12"
+											"$.questions",
+											"[]"
 										]
 									}
 								]
@@ -219,327 +327,7 @@
 								"errorMessage": "",
 								"executionTime": 0,
 								"skippedReason": "",
-								"messages": [
-									"\"osanda12\" is successfully saved as a text in Scenario Data Store [username]",
-									"\"success\" is successfully saved as a text in Scenario Data Store [status]",
-									"\"osanda12\" is successfully saved as a text in Scenario Data Store [mobileUserName]"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the values inside the data stores equal to the following",
-							"table": {
-								"headers": [
-									"DataStore Type",
-									"Variable Name",
-									"Expected Value"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"osanda12"
-										]
-									},
-									{
-										"cells": [
-											"Scenario",
-											"status",
-											"success"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 0,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the values inside two data stores should be equal",
-							"table": {
-								"headers": [
-									"DataStore 1 Type",
-									"Variable 1 Name",
-									"DataStore 2 Type",
-									"Variable 2 Name"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"Scenario",
-											"mobileUserName"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 1,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [mobileUserName] is: \"osanda12\"\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the values inside the data stores not equal to the following",
-							"table": {
-								"headers": [
-									"DataStore Type",
-									"Variable Name",
-									"Expected Value"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"osanda"
-										]
-									},
-									{
-										"cells": [
-											"Scenario",
-											"status",
-											"succes"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 1,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the values inside two data stores should not be equal",
-							"table": {
-								"headers": [
-									"DataStore 1 Type",
-									"Variable 1 Name",
-									"DataStore 2 Type",
-									"Variable 2 Name"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"Scenario",
-											"status"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 0,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the values inside the data stores contain the following",
-							"table": {
-								"headers": [
-									"DataStore Type",
-									"Variable Name",
-									"Expected Value"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"osanda"
-										]
-									},
-									{
-										"cells": [
-											"Scenario",
-											"status",
-											"succes"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 1,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the value inside a data store should contain the value of the other data store",
-							"table": {
-								"headers": [
-									"DataStore 1 Type",
-									"Variable 1 Name",
-									"DataStore 2 Type",
-									"Variable 2 Name"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"Scenario",
-											"mobileUserName"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 1,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [mobileUserName] is: \"osanda12\"\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the values inside the data stores not contain the following",
-							"table": {
-								"headers": [
-									"DataStore Type",
-									"Variable Name",
-									"Expected Value"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"deshan"
-										]
-									},
-									{
-										"cells": [
-											"Scenario",
-											"status",
-											"fail"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 1,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
-								],
-								"errorType": "assertion"
-							}
-						},
-						{
-							"itemType": "step",
-							"stepText": "And the value inside a data store should not contain the value of the other data store",
-							"table": {
-								"headers": [
-									"DataStore 1 Type",
-									"Variable 1 Name",
-									"DataStore 2 Type",
-									"Variable 2 Name"
-								],
-								"rows": [
-									{
-										"cells": [
-											"Scenario",
-											"username",
-											"Scenario",
-											"status"
-										]
-									}
-								]
-							},
-							"beforeStepHookFailure": null,
-							"afterStepHookFailure": null,
-							"result": {
-								"status": "pass",
-								"stackTrace": "",
-								"screenshot": "",
-								"errorMessage": "",
-								"executionTime": 1,
-								"skippedReason": "",
-								"messages": [
-									"Text inside Scenario Data Store [username] is: \"osanda12\"\n\n",
-									"Text inside Scenario Data Store [status] is: \"success\"\n\n"
-								],
+								"messages": [],
 								"errorType": "assertion"
 							}
 						}

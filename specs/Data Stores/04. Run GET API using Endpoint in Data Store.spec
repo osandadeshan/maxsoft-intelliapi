@@ -29,7 +29,7 @@ Description     : This is an executable specification file
    |--------------|--------------------|----------------------------------------------------------------------------------------------------------------------------|
    |Scenario      |invokingEndpoint    |http://aggregationservice-pearson-prep-us1-stg-blue.bite.pearsondev.tech/api/questions?deckId=5badc2027246d600100fe269      |
 
-* Given that a user needs to invoke GET API using data stores
+* Given that a user needs to invoke GET API using the endpoint saved in the data store
 
    |DataStore Type|Variable Name      |
    |--------------|-------------------|
@@ -41,11 +41,7 @@ Description     : This is an executable specification file
    |Is authentication required?                                       |Yes                |
    |Do you need to retrieve the access token from the text file?      |Yes                |
    |Provide the access token if you need to authorize the API manually|N/A                |
-* When the user invokes GET API
-
-   |DataStore Type|Variable Name      |
-   |--------------|-------------------|
-   |Scenario      |invokingEndpoint   |
+* When the user invokes GET API using the endpoint saved in the data store
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
 
