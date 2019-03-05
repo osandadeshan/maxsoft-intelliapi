@@ -287,14 +287,14 @@ tags: get_pi_token, staging
    |#purchaseToken              |<file:/resources/access_tokens/purchase_token.txt>    |
    |#access_token               |<file:/resources/access_tokens/google_drive_token.txt>|
 * When the user invokes the API
-* Then the status code for the request is "403"
+* Then the status code for the request is "401"
 * And the JSON Path Assertions for the response should be equal to the following 
 
    |JSON Path                |Expected Result        |
    |-------------------------|-----------------------|
-   |$.error.errors[0].reason |insufficientPermissions|
-   |$.error.errors[0].message|Insufficient Permission|
-   |$.error.code             |403                    |
+   |$.error.errors[0].reason |authError              |
+   |$.error.errors[0].message|Invalid Credentials    |
+   |$.error.code             |401                    |
 
 
 

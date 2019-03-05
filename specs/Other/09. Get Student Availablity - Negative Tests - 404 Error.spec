@@ -33,6 +33,6 @@ Description  : This is an executable specification file which follows markdown s
 * Then the status code for the request is "404"
 * And the JSON Path Assertions for the response should be equal to the following 
 
-   |JSON Path|Expected Result           |
-   |---------|--------------------------|
-   |$.message|Invalid student Ids: [116]|
+   |JSON Path|Expected Result                               |
+   |---------|----------------------------------------------|
+   |$.message|Requested resource not found from roster side |

@@ -9,6 +9,13 @@ Description  : This is an executable specification file which follows markdown s
 
 
 ## Reading Values from Data Stores
+* And the user saves the values inside data stores as follows
+
+   |DataStore Type|Variable Name|Value To Be Stored|
+   |--------------|-------------|------------------|
+   |Scenario      |variable1    |Osanda12          |
+   |Specification |variable2    |Osanda12          |
+   |Scenario      |variable3    |Password1         |
 * And the user read the values from data stores as follows 
 
    |DataStore Type|Variable Name|

@@ -30,23 +30,29 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,12,0" data-total="12">
+        <svg id="pie-chart" data-results="4,10,0" data-total="14">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/12</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 4/14</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 12/12</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 10/14</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/12</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/14</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">12</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
-      <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">12</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
-      </ul>
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">14</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">4</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">10</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">61</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">35</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">26</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
+      </div>
     </div>
     <div class="report_details">
       <ul>
@@ -57,15 +63,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>100%</span>
+          <span>71%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:02:10</span>
+          <span>00:00:55</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Oct 14, 2018 at 6:03pm</span>
+          <span>Mar 5, 2019 at 1:57pm</span>
         </li>
       </ul>
       
@@ -92,41 +98,63 @@
         <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
         <i class="fa fa-search"></i>
       </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="07. Read from saved CSV.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="03. Create All Type Question - Negative Data Driven Tests2.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Create All Type Question using Question Service - Negative Data Driven Test Specification2</span>
+              <span id="time" class="time">00:00:17</span>
+            </li>
+          </a>
+          
+          <a href="04. CRUD in One Scenario.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="05. Form-Data Example.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
           <a href="../Data Stores/03. Saving And Reading Values From Data Store.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:14</span>
+              <span id="time" class="time">00:00:10</span>
             </li>
           </a>
           
-          <a href="07. Read from saved CSV.html">
+          <a href="10. Read from excel file.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="08. Epoch Time.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Epoch Time Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="09. Get Student Availablity - Negative Tests - 404 Error.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get Student Availability - Negative Tests Specification - 404 Error</span>
+              <span id="scenarioName" class="scenarioname">Read From Excel File Specification</span>
               <span id="time" class="time">00:00:01</span>
             </li>
           </a>
@@ -137,6 +165,24 @@
             
               <span id="scenarioName" class="scenarioname">Saving to Data Stores Specification</span>
               <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="06. Request Placeholders.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="09. Get Student Availablity - Negative Tests - 404 Error.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Get Student Availability - Negative Tests Specification - 404 Error</span>
+              <span id="time" class="time">00:00:01</span>
             </li>
           </a>
           
@@ -154,7 +200,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Text Files Operations Specification</span>
-              <span id="time" class="time">00:00:08</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -167,39 +213,21 @@
             </li>
           </a>
           
-          <a href="03. Create All Type Question - Negative Data Driven Tests2.html">
+          <a href="08. Epoch Time.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Create All Type Question using Question Service - Negative Data Driven Test Specification2</span>
-              <span id="time" class="time">00:00:46</span>
+              <span id="scenarioName" class="scenarioname">Epoch Time Specification</span>
+              <span id="time" class="time">00:00:00</span>
             </li>
           </a>
           
-          <a href="04. CRUD in One Scenario.html">
+          <a href="../Data Stores/04. Run GET API using Endpoint in Data Store.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
-              <span id="time" class="time">00:00:16</span>
-            </li>
-          </a>
-          
-          <a href="05. Form-Data Example.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
-              <span id="time" class="time">00:00:22</span>
-            </li>
-          </a>
-          
-          <a href="06. Request Placeholders.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
-              <span id="time" class="time">00:00:06</span>
+              <span id="scenarioName" class="scenarioname">Run GET API using Endpoint in Data Store Specification</span>
+              <span id="time" class="time">00:00:02</span>
             </li>
           </a>
           
@@ -214,8 +242,8 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\08. Epoch Time.spec">Epoch Time Specification</h3>
-        <div class="report_test-results" alt="Scenarios" title="Scenarios">
+        <h3 class="spec-head" title="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\08. Epoch Time.spec">Epoch Time Specification</h3>
+        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
@@ -226,7 +254,7 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\08. Epoch Time.spec" readonly/>
+          <input id="specFileName" value="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\08. Epoch Time.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
@@ -353,6 +381,17 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“1551774508” is successfully saved as a text in Scenario Data Store [currentEpochTime]</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -435,6 +474,17 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“1551774508735” is successfully saved as a text in Suite Data Store [currentEpochTime]</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -583,6 +633,17 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“1537876560” is successfully saved as a text in Scenario Data Store [epochTime]</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -685,6 +746,17 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“1537876560000” is successfully saved as a text in Suite Data Store [epochTime]</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 

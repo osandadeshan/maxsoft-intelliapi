@@ -30,23 +30,29 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,3,0" data-total="3">
+        <svg id="pie-chart" data-results="1,2,0" data-total="3">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/3</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 1/3</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 3/3</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 2/3</title></path>
           <path class="status skipped" />
           <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/3</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">3</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
-      <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">3</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
-      </ul>
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">3</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">2</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">3</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">2</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
+      </div>
     </div>
     <div class="report_details">
       <ul>
@@ -57,15 +63,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>100%</span>
+          <span>66%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:28</span>
+          <span>00:00:22</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Oct 14, 2018 at 6:02pm</span>
+          <span>Mar 5, 2019 at 1:55pm</span>
         </li>
       </ul>
       
@@ -92,24 +98,28 @@
         <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
         <i class="fa fa-search"></i>
       </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="02. Get Google OAuth Access Token.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Get Google OAuth Access Token Specification</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
           <a href="01. Get Staging PI Token.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Get Staging PI Token Specification</span>
-              <span id="time" class="time">00:00:06</span>
-            </li>
-          </a>
-          
-          <a href="02. Get Google OAuth Access Token.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get Google OAuth Access Token Specification</span>
-              <span id="time" class="time">00:00:01</span>
+              <span id="time" class="time">00:00:04</span>
             </li>
           </a>
           
@@ -118,7 +128,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Write to CSV Specification</span>
-              <span id="time" class="time">00:00:17</span>
+              <span id="time" class="time">00:00:14</span>
             </li>
           </a>
           
@@ -133,11 +143,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Get Google OAuth Access Token.spec">Get Google OAuth Access Token Specification</h3>
-        <div class="report_test-results" alt="Scenarios" title="Scenarios">
+        <h3 class="spec-head" title="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Get Google OAuth Access Token.spec">Get Google OAuth Access Token Specification</h3>
+        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -145,12 +155,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Get Google OAuth Access Token.spec" readonly/>
+          <input id="specFileName" value="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\02. Get Google OAuth Access Token.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:01</span>
+        <span class="time">00:00:00</span>
       </div>
 
 	
@@ -183,13 +193,13 @@ Description  : This is an executable specification file which follows markdown s
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container failed'>
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Get Google OAuth Access token</h3>
-    <span class="time">00:00:01</span>
+    <span class="time">00:00:00</span>
 
 	
   
@@ -246,6 +256,18 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://accounts.google.com/o/oauth2/token" rel="nofollow">https://accounts.google.com/o/oauth2/token</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -328,6 +350,21 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Form Params Map: <br/><br/></p>
+ </div><div class="step-message"><p>refresh_token = 1/Hen2_CfJpxfkfHQ-EWvnI1sTbOQNCj-amx0-WPYv2A_AMTSRkuIjHHaHLDcuBSB2</p>
+ </div><div class="step-message"><p>grant_type = refresh_token</p>
+ </div><div class="step-message"><p>client_secret = dgUqQzhUfgbJ6YKiE_9U_rW8</p>
+ </div><div class="step-message"><p>client_id = 1072307075112-fposi9hgskm5uud3239f6gbfpkf6dfpk.apps.googleusercontent.com</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -353,7 +390,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:01</span>
+      <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
   <div class='step-info passed'>
@@ -384,6 +421,21 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://accounts.google.com/o/oauth2/token" rel="nofollow">https://accounts.google.com/o/oauth2/token</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 439ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “error”: “invalid_grant”,<br/>    “error_description”: “Account has been deleted”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json; charset=utf-8<br/>Vary=Origin<br/>Vary=X-Origin<br/>Vary=Referer<br/>Content-Encoding=gzip<br/>Date=Tue, 05 Mar 2019 08:25:50 GMT<br/>Server=ESF<br/>Cache-Control=private<br/>X-XSS-Protection=1; mode=block<br/>X-Frame-Options=SAMEORIGIN<br/>X-Content-Type-Options=nosniff<br/>Alt-Svc=quic=”:443”; ma=2592000; v=“44,43,39”<br/>Transfer-Encoding=chunked</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -412,7 +464,7 @@ Description  : This is an executable specification file which follows markdown s
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info failed'>
   
   <ul>
     <li class='step'>
@@ -442,6 +494,23 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>java.lang.AssertionError: The expected status code for the request is not equal to the actual status code<br/> expected [200] but found [400]</pre>
+        </h4>
+        <pre class="stacktrace">org.testng.Assert.fail(Assert.java:94)<br/>org.testng.Assert.failNotEquals(Assert.java:494)<br/>org.testng.Assert.assertEquals(Assert.java:123)<br/>org.testng.Assert.assertEquals(Assert.java:176)<br/>com.maxsoft.intelliapi.api.Base.isResponseStatusCodeEqualTo(Base.java:1247)<br/>com.maxsoft.intelliapi.api.ApiStepImpl.isResponseStatusCodeEqualTo(ApiStepImpl.java:411)<br/>com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.verifyResponseStatusCode(AllStepsDefinitions.java:195)<br/></pre>
+      </div>
+      
+    </div>
+  </div>
+
+    
+    
+  
+
     
   
 
@@ -472,7 +541,7 @@ Description  : This is an executable specification file which follows markdown s
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -521,6 +590,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+    
+  
+
   
   
   
@@ -548,7 +620,7 @@ Description  : This is an executable specification file which follows markdown s
       <span class='time'>Execution Time : 00:00:00</span>
     </h5>
   
-  <div class='step-info passed'>
+  <div class='step-info not-executed'>
   
   <ul>
     <li class='step'>
@@ -592,6 +664,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 

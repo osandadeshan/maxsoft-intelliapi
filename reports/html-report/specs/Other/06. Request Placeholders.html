@@ -30,23 +30,29 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,12,0" data-total="12">
+        <svg id="pie-chart" data-results="4,10,0" data-total="14">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/12</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 4/14</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 12/12</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 10/14</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/12</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/14</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">12</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
-      <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">12</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
-      </ul>
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">14</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">4</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">10</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">61</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">35</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">26</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
+      </div>
     </div>
     <div class="report_details">
       <ul>
@@ -57,15 +63,15 @@
         
         <li>
           <label>Success Rate </label>
-          <span>100%</span>
+          <span>71%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:02:10</span>
+          <span>00:00:55</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Oct 14, 2018 at 6:03pm</span>
+          <span>Mar 5, 2019 at 1:57pm</span>
         </li>
       </ul>
       
@@ -92,41 +98,63 @@
         <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
         <i class="fa fa-search"></i>
       </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="07. Read from saved CSV.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="03. Create All Type Question - Negative Data Driven Tests2.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Create All Type Question using Question Service - Negative Data Driven Test Specification2</span>
+              <span id="time" class="time">00:00:17</span>
+            </li>
+          </a>
+          
+          <a href="04. CRUD in One Scenario.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="05. Form-Data Example.html">
+            
+              <li class='failed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
           <a href="../Data Stores/03. Saving And Reading Values From Data Store.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:14</span>
+              <span id="time" class="time">00:00:10</span>
             </li>
           </a>
           
-          <a href="07. Read from saved CSV.html">
+          <a href="10. Read from excel file.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="08. Epoch Time.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Epoch Time Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="09. Get Student Availablity - Negative Tests - 404 Error.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get Student Availability - Negative Tests Specification - 404 Error</span>
+              <span id="scenarioName" class="scenarioname">Read From Excel File Specification</span>
               <span id="time" class="time">00:00:01</span>
             </li>
           </a>
@@ -137,6 +165,24 @@
             
               <span id="scenarioName" class="scenarioname">Saving to Data Stores Specification</span>
               <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="06. Request Placeholders.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
+              <span id="time" class="time">00:00:06</span>
+            </li>
+          </a>
+          
+          <a href="09. Get Student Availablity - Negative Tests - 404 Error.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Get Student Availability - Negative Tests Specification - 404 Error</span>
+              <span id="time" class="time">00:00:01</span>
             </li>
           </a>
           
@@ -154,7 +200,7 @@
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Text Files Operations Specification</span>
-              <span id="time" class="time">00:00:08</span>
+              <span id="time" class="time">00:00:05</span>
             </li>
           </a>
           
@@ -167,39 +213,21 @@
             </li>
           </a>
           
-          <a href="03. Create All Type Question - Negative Data Driven Tests2.html">
+          <a href="08. Epoch Time.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">Create All Type Question using Question Service - Negative Data Driven Test Specification2</span>
-              <span id="time" class="time">00:00:46</span>
+              <span id="scenarioName" class="scenarioname">Epoch Time Specification</span>
+              <span id="time" class="time">00:00:00</span>
             </li>
           </a>
           
-          <a href="04. CRUD in One Scenario.html">
+          <a href="../Data Stores/04. Run GET API using Endpoint in Data Store.html">
              
               <li class='passed spec-name'>
             
-              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
-              <span id="time" class="time">00:00:16</span>
-            </li>
-          </a>
-          
-          <a href="05. Form-Data Example.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
-              <span id="time" class="time">00:00:22</span>
-            </li>
-          </a>
-          
-          <a href="06. Request Placeholders.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
-              <span id="time" class="time">00:00:06</span>
+              <span id="scenarioName" class="scenarioname">Run GET API using Endpoint in Data Store Specification</span>
+              <span id="time" class="time">00:00:02</span>
             </li>
           </a>
           
@@ -214,8 +242,8 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\06. Request Placeholders.spec">Request Placeholders Specification</h3>
-        <div class="report_test-results" alt="Scenarios" title="Scenarios">
+        <h3 class="spec-head" title="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\06. Request Placeholders.spec">Request Placeholders Specification</h3>
+        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
             <li class="pass"><span class="value">5</span><span class="txt">Passed</span></li>
@@ -226,7 +254,7 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\06. Request Placeholders.spec" readonly/>
+          <input id="specFileName" value="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\06. Request Placeholders.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
@@ -315,7 +343,7 @@ Description  : This is an executable specification file which follows markdown s
   
     
       <span>
-        And the user save the values inside data stores as follows 
+        And the user saves the values inside data stores as follows 
       </span>
     
   
@@ -345,6 +373,19 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>“Osanda12” is successfully saved as a text in Scenario Data Store [username]</p>
+ </div><div class="step-message"><p>“Osanda12” is successfully saved as a text in Specification Data Store [username]</p>
+ </div><div class="step-message"><p>“Password1” is successfully saved as a text in Specification Data Store [password]</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -449,6 +490,18 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -519,6 +572,20 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “#username”,
+<br/> “password”: “#password”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -597,6 +664,20 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>The final JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “osanda12”,
+<br/> “password”: “Password1”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -651,6 +732,21 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 1493ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1Mjk4LCJpYXQiOjE1NTE3NzQ0OTgsInNlc3NpZCI6ImU2YjJjNjg1LTZiZTUtNGY5My1iMmYyLTE2YzMzYjQ1NzViNSJ9.EzbQZlz2_AKpcIuTLjPNwSgP2W5q-R_7sauVA6Y2oSsU3-NKm8v1CcHIGKVyAHzh00JjY_A7sMOQ60sB8ldWtkHrOrDUi0lsLIXj3ej4jIshiWp455KMSwHFrNrmYmtrkVVoeOtzMutaoa4DOOquxI81WCPGQ_oQeBWMKcdBZcU”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Date=Tue, 05 Mar 2019 08:28:18 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Connection=keep-alive<br/>Set-Cookie=AWSALB=OkoQywBsXqsq++gH3xfQtf5/nnLZhfQiMKWvE0AysBwpcTA9ReveUp3XZeTK3iKCE4dQZWl+e6sNdngo7DJRlneciffSNZtIIkYE+XAW98yDTUT744IhNOOSXM/H; Expires=Tue, 12 Mar 2019 08:28:18 GMT; Path=/<br/>Server=nginx/1.15.7<br/>Correlation-Id=61f5b9ed-1d89-449f-b8a3-b6b93ea8df21<br/>Location=<a href="https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1Mjk4LCJpYXQiOjE1NTE3NzQ0OTgsInNlc3NpZCI6ImU2YjJjNjg1LTZiZTUtNGY5My1iMmYyLTE2YzMzYjQ1NzViNSJ9.EzbQZlz2_AKpcIuTLjPNwSgP2W5q-R_7sauVA6Y2oSsU3-NKm8v1CcHIGKVyAHzh00JjY_A7sMOQ60sB8ldWtkHrOrDUi0lsLIXj3ej4jIshiWp455KMSwHFrNrmYmtrkVVoeOtzMutaoa4DOOquxI81WCPGQ_oQeBWMKcdBZcU" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1Mjk4LCJpYXQiOjE1NTE3NzQ0OTgsInNlc3NpZCI6ImU2YjJjNjg1LTZiZTUtNGY5My1iMmYyLTE2YzMzYjQ1NzViNSJ9.EzbQZlz2_AKpcIuTLjPNwSgP2W5q-R_7sauVA6Y2oSsU3-NKm8v1CcHIGKVyAHzh00JjY_A7sMOQ60sB8ldWtkHrOrDUi0lsLIXj3ej4jIshiWp455KMSwHFrNrmYmtrkVVoeOtzMutaoa4DOOquxI81WCPGQ_oQeBWMKcdBZcU</a></p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -711,6 +807,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -785,6 +884,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -889,6 +991,18 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -959,6 +1073,20 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “#username”,
+<br/> “password”: “Password1”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -1035,6 +1163,20 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>The final JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “osanda12”,
+<br/> “password”: “Password1”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -1089,6 +1231,21 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 1383ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAwLCJpYXQiOjE1NTE3NzQ0OTksInNlc3NpZCI6Ijk5M2M5ZjU0LTZlYjItNDdlZS1hNTQxLTYxMzk0NzBjMjJlZCJ9.FzfHLmn6Bx661s8Ebq4YFGiR_ZGeHnc9jossigk1mypXzi25bSbGP22HWU_RP5vXKlTlY809ZFogUfIc9vRwfzNTX2fUa6Q3ZqJL3wRGTNii1LCreL_wspUZtxfu1N6Qb7o2-6BLPz3JDJgTFyvGann8SXCS2nl0q5Bztv5asP0”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Date=Tue, 05 Mar 2019 08:28:19 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Connection=keep-alive<br/>Set-Cookie=AWSALB=rAuHfbYkZouvAtXnxt/cnqb3BGFuIuSTrUmXzZX3zvuDXUZDosiB/yUlMen7sk6+1Pp7XwmogyfatQheWV93lPGSfslQ3FxwdhqPzrsl1T4TRwxTRH40ifhDNGG9; Expires=Tue, 12 Mar 2019 08:28:19 GMT; Path=/<br/>Server=nginx/1.15.7<br/>Correlation-Id=572b14a6-fba0-4f3a-870c-60e9a0cbe451<br/>Location=<a href="https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAwLCJpYXQiOjE1NTE3NzQ0OTksInNlc3NpZCI6Ijk5M2M5ZjU0LTZlYjItNDdlZS1hNTQxLTYxMzk0NzBjMjJlZCJ9.FzfHLmn6Bx661s8Ebq4YFGiR_ZGeHnc9jossigk1mypXzi25bSbGP22HWU_RP5vXKlTlY809ZFogUfIc9vRwfzNTX2fUa6Q3ZqJL3wRGTNii1LCreL_wspUZtxfu1N6Qb7o2-6BLPz3JDJgTFyvGann8SXCS2nl0q5Bztv5asP0" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAwLCJpYXQiOjE1NTE3NzQ0OTksInNlc3NpZCI6Ijk5M2M5ZjU0LTZlYjItNDdlZS1hNTQxLTYxMzk0NzBjMjJlZCJ9.FzfHLmn6Bx661s8Ebq4YFGiR_ZGeHnc9jossigk1mypXzi25bSbGP22HWU_RP5vXKlTlY809ZFogUfIc9vRwfzNTX2fUa6Q3ZqJL3wRGTNii1LCreL_wspUZtxfu1N6Qb7o2-6BLPz3JDJgTFyvGann8SXCS2nl0q5Bztv5asP0</a></p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -1149,6 +1306,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -1223,6 +1383,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -1327,6 +1490,18 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -1399,6 +1574,20 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “#username”,
+<br/> “password”: “#password”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -1460,7 +1649,7 @@ Description  : This is an executable specification file which follows markdown s
     
     <tr><td>#username</td><td>y</td><td>spec</td><td>username</td><td></td></tr>
     
-    <tr><td>#password</td><td>y</td><td>spec</td><td>password</td><td>Password1</td></tr>
+    <tr><td>#password</td><td>y</td><td>spec</td><td>password</td><td></td></tr>
     
   </tbody>
 </table>
@@ -1473,6 +1662,22 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Specification Data Store [username] is: “Osanda12”<br/><br/></p>
+ </div><div class="step-message"><p>Text inside Specification Data Store [password] is: “Password1”<br/><br/></p>
+ </div><div class="step-message"><p>The final JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “Osanda12”,
+<br/> “password”: “Password1”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -1529,6 +1734,21 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 1331ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAxLCJpYXQiOjE1NTE3NzQ1MDEsInNlc3NpZCI6IjgzZDZmYzYwLTdlMWQtNGRjZi1hODJjLWIxMjQyODVmMTYyZSJ9.fTZB1HqIVAYP5VSrVBodFZp8CF-yI2j4QMKJWfeAxWMxcNpyB4U6WHA2_mpl0w9nG-6sKNqDnuz1Efz6iGH03LVRdz1fTKVAtIJHCd_YfcCtU2sbCqmFWb1Sjrh0Cqb6aq9HpYZfIAqzCgOyyzi_0plgT_0G3cTxfpqiz7-pGXg”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Date=Tue, 05 Mar 2019 08:28:21 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Connection=keep-alive<br/>Set-Cookie=AWSALB=ZrZ96NZMpSuH6H5q1zmy9sFE3HumB0VcFeU81be0jMvsHg021gc5HZoBKZ1U5TxGmpi5LcEqDD/nSUCrmZNb0Qjhq1dl0/MN+Zo5jjMVECQ9nLAIeskN0qJv28eK; Expires=Tue, 12 Mar 2019 08:28:21 GMT; Path=/<br/>Server=nginx/1.15.7<br/>Correlation-Id=16776f2f-f1e8-4f8e-bc76-cdb44995f9d5<br/>Location=<a href="https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAxLCJpYXQiOjE1NTE3NzQ1MDEsInNlc3NpZCI6IjgzZDZmYzYwLTdlMWQtNGRjZi1hODJjLWIxMjQyODVmMTYyZSJ9.fTZB1HqIVAYP5VSrVBodFZp8CF-yI2j4QMKJWfeAxWMxcNpyB4U6WHA2_mpl0w9nG-6sKNqDnuz1Efz6iGH03LVRdz1fTKVAtIJHCd_YfcCtU2sbCqmFWb1Sjrh0Cqb6aq9HpYZfIAqzCgOyyzi_0plgT_0G3cTxfpqiz7-pGXg" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAxLCJpYXQiOjE1NTE3NzQ1MDEsInNlc3NpZCI6IjgzZDZmYzYwLTdlMWQtNGRjZi1hODJjLWIxMjQyODVmMTYyZSJ9.fTZB1HqIVAYP5VSrVBodFZp8CF-yI2j4QMKJWfeAxWMxcNpyB4U6WHA2_mpl0w9nG-6sKNqDnuz1Efz6iGH03LVRdz1fTKVAtIJHCd_YfcCtU2sbCqmFWb1Sjrh0Cqb6aq9HpYZfIAqzCgOyyzi_0plgT_0G3cTxfpqiz7-pGXg</a></p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -1589,6 +1809,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -1663,6 +1886,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -1767,6 +1993,18 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -1837,6 +2075,20 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>The JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “#username”,
+<br/> “password”: “#password”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -1915,6 +2167,21 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Text inside Specification Data Store [username] is: “Osanda12”<br/><br/></p>
+ </div><div class="step-message"><p>The final JSON request body that you are going to use for the API is:<br/>{
+<br/> “userName”: “Osanda12”,
+<br/> “password”: “Password1”
+<br/>}</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -1969,6 +2236,21 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://int-piapi-internal.stg-openclass.com/tokens" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 1290ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “status”: “success”,<br/>    “data”: “eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAyLCJpYXQiOjE1NTE3NzQ1MDIsInNlc3NpZCI6ImY1N2NjODNlLTIxZTktNDA1ZC1hMjAwLTk3MDg2NTljODJmNCJ9.Goy3RyxPl4MMplPkuXh926vThSLmiUhksnYnA6pdcupqePR2tZsIUIVDfpT8dWrn0tqQ0hNCbsnQe2mA5YcnxcAE_UWCx_n0fGn-m6E7n4SZ-xBpfFEeWHROP4tdkdERQW967uw68cPyB7KpUGe3ZcTzT8p1qrmXaNrgJAGc0Qs”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Date=Tue, 05 Mar 2019 08:28:22 GMT<br/>Content-Type=application/json;charset=UTF-8<br/>Transfer-Encoding=chunked<br/>Connection=keep-alive<br/>Set-Cookie=AWSALB=8q7aIcDaVm52h0gzVS245p+97uO4ufYBgv4rVlIR8kUMhBf7DObgjBV29J2wIVlqbbPLo2oUoXT2EJ3lSHxh5/LAJbFRf5Wrl5QRgmjOsQWHrv1QaTQx/1+lHlFm; Expires=Tue, 12 Mar 2019 08:28:22 GMT; Path=/<br/>Server=nginx/1.15.7<br/>Correlation-Id=8d692674-cf97-47f5-8875-9d8d5f292b7d<br/>Location=<a href="https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAyLCJpYXQiOjE1NTE3NzQ1MDIsInNlc3NpZCI6ImY1N2NjODNlLTIxZTktNDA1ZC1hMjAwLTk3MDg2NTljODJmNCJ9.Goy3RyxPl4MMplPkuXh926vThSLmiUhksnYnA6pdcupqePR2tZsIUIVDfpT8dWrn0tqQ0hNCbsnQe2mA5YcnxcAE_UWCx_n0fGn-m6E7n4SZ-xBpfFEeWHROP4tdkdERQW967uw68cPyB7KpUGe3ZcTzT8p1qrmXaNrgJAGc0Qs" rel="nofollow">https://int-piapi-internal.stg-openclass.com/tokens/eyJraWQiOiJrMTA2OTQ4MTkwIiwiYWxnIjoiUlM1MTIifQ.eyJzdWIiOiJmZmZmZmZmZjU5ZTg4NmI0ZTRiMDFjZWQyODNmMDY1NSIsImhjYyI6IkxLIiwidHlwZSI6ImF0IiwiZXhwIjoxNTUxNzg1MzAyLCJpYXQiOjE1NTE3NzQ1MDIsInNlc3NpZCI6ImY1N2NjODNlLTIxZTktNDA1ZC1hMjAwLTk3MDg2NTljODJmNCJ9.Goy3RyxPl4MMplPkuXh926vThSLmiUhksnYnA6pdcupqePR2tZsIUIVDfpT8dWrn0tqQ0hNCbsnQe2mA5YcnxcAE_UWCx_n0fGn-m6E7n4SZ-xBpfFEeWHROP4tdkdERQW967uw68cPyB7KpUGe3ZcTzT8p1qrmXaNrgJAGc0Qs</a></p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -2029,6 +2311,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -2103,6 +2388,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 

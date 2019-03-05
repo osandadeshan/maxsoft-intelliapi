@@ -9,7 +9,7 @@ Description  : This is an executable specification file which follows markdown s
 
 
 ## Saving values to Data Store
-* And the user save the values inside data stores as follows 
+* And the user saves the values inside data stores as follows
 
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
