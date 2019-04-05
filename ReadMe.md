@@ -19,18 +19,16 @@ The main reason for developing this framework is to provide an easy way for Tech
 
 ### Supported Languages
 - Java
-<br />
 
 ### Advantages
-
-Generation of an executable document.
-Human readable tests, business language and Mark-down syntax.
-Tests can be designed even by a non- technical person.
-Ability to validate backend databases.
-Generate a HTML report with test details for every test execution.
-Parallel execution.
-Live execution report.
-Automated emails for test execution summary with graphical representations.
+- Generation of an executable document.
+- Human readable tests, business language and Mark-down syntax.
+- Tests can be designed even by a non- technical person.
+- Ability to validate backend databases.
+- Generate a HTML report with test details for every test execution.
+- Parallel execution.
+- Live execution report.
+- Automated emails for test execution summary with graphical representations.
 <br />
 
 ## Pre Requisites
