@@ -16,7 +16,7 @@ import static com.maxsoft.intelliapi.util.reader.JsonReport.*;
 
 public class EmailTemplate {
 
-    static String template = "<!DOCTYPE html> \n" +
+    private static String template = "<!DOCTYPE html> \n" +
             "            <html> \n" +
             "            <head> \n" +
             "            </head> \n" +
@@ -108,7 +108,7 @@ public class EmailTemplate {
             "            </table> \n" +
             "            <br><br>";
 
-    public static String appendToTemplate() throws IOException, ParseException {
+    private static String appendToTemplate() throws IOException, ParseException {
         String appendHtml = "<style>\n" +
                 "       table#regression_table tr:nth-child(odd){background-color: #f2f2f2}\n" +
                 "   </style>\n" +
