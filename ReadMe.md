@@ -1,4 +1,34 @@
-# MaxSoft IntelliAPI - Setup Guide
+# MaxSoft IntelliAPI
+<br />
+
+## Introduction
+The main reason for developing this framework is to provide an easy way for Technical QA, Developer or Non-technical QA to perform API testing in an easy manner.
+
+### Technologies/Frameworks used
+- Java
+- Gauge Framework
+- Rest Assured
+- Apache POI
+- Junit
+- Apache Maven
+
+### Supported Platforms
+- Windows
+- Linux
+- Mac OS
+
+### Supported Languages
+- Java
+
+### Advantages
+- Generation of an executable document.
+- Human readable tests, business language and Mark-down syntax.
+- Tests can be designed even by a non- technical person.
+- Ability to validate backend databases.
+- Generate a HTML report with test details for every test execution.
+- Parallel execution.
+- Live execution report.
+- Automated emails for test execution summary with graphical representations.
 <br />
 
 ## Pre Requisites
