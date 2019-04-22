@@ -308,6 +308,30 @@ public class AllStepsDefinitions{
         apiStepImpl.compareDataStoresNotContains(table);
     }
 
+    // Use this method to add integer values in data stores and save to a new data store
+    @Step("Add the integer values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void addIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.addIntegerValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
+    // Use this method to subtract integer values in data stores and save to a new data store
+    @Step("Subtract the integer values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void subtractIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.subtractIntegerValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
+    // Use this method to divide integer values in data stores and save to a new data store
+    @Step("Divide the integer values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void divideIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.divideIntegerValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
+    // Use this method to multiply integer values in data stores and save to a new data store
+    @Step("Multiply the integer values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void multiplyIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.multiplyIntegerValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
     // Use this method to save current epochTime into data stores
     @Step("And the user saves the current epoch time in <secondsOrMillis> inside data stores <table>")
     public void saveCurrentEpochTime(String secondsOrMillis, Table table) {

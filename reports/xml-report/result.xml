@@ -1,0 +1,11 @@
+<testsuites>
+	<testsuite id="1" tests="4" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Arithmatic Operations.spec" time="0.432" timestamp="2019-04-22T21:19:49" name="Arithmatic Operations Specification" errors="0" hostname="CV000179">
+		<properties></properties>
+		<testcase classname="Arithmatic Operations Specification" name="Add integer values in data stores and save it in a new data store" time="0.425"></testcase>
+		<testcase classname="Arithmatic Operations Specification" name="Subtract integer values in data stores and save it in a new data store" time="0.003"></testcase>
+		<testcase classname="Arithmatic Operations Specification" name="Divide integer values in data stores and save it in a new data store" time="0.002"></testcase>
+		<testcase classname="Arithmatic Operations Specification" name="Multiply integer values in data stores and save it in a new data store" time="0.002"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+</testsuites>

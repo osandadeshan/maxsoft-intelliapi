@@ -680,6 +680,52 @@ public class ApiStepImpl extends Base {
         }
     }
 
+    // Use this method to add integer values in data stores and save to a new data store
+    public void addIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        int finalVal = 0;
+        for (TableRow row : rows) {
+            finalVal = finalVal + Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to subtract integer values in data stores and save to a new data store
+    public void subtractIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        int finalVal = 0;
+        for (TableRow row : rows) {
+            finalVal = Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)))) -
+                    Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to divide integer values in data stores and save to a new data store
+    public void divideIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        Double finalVal = null;
+        for (TableRow row : rows) {
+            finalVal = (double)Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)))) /
+                    (double)Integer.parseInt((readFromDataStore(row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3)))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to multiply integer values in data stores and save to a new data store
+    public void multiplyIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        int finalVal = 1;
+        for (TableRow row : rows) {
+            finalVal = finalVal * Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
     // Use this method to save property file values into data stores
     public void savePropertyFileValuesToDataStore(Table table) {
         List<TableRow> rows = table.getTableRows();
