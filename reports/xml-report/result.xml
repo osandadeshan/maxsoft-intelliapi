@@ -1,10 +1,14 @@
 <testsuites>
-	<testsuite id="1" tests="4" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Arithmatic Operations.spec" time="0.432" timestamp="2019-04-22T21:19:49" name="Arithmatic Operations Specification" errors="0" hostname="CV000179">
+	<testsuite id="1" tests="8" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\04. Arithmetic Operations.spec" time="0.814" timestamp="2019-04-26T21:52:50" name="Arithmetic Operations Specification" errors="0" hostname="CV000179">
 		<properties></properties>
-		<testcase classname="Arithmatic Operations Specification" name="Add integer values in data stores and save it in a new data store" time="0.425"></testcase>
-		<testcase classname="Arithmatic Operations Specification" name="Subtract integer values in data stores and save it in a new data store" time="0.003"></testcase>
-		<testcase classname="Arithmatic Operations Specification" name="Divide integer values in data stores and save it in a new data store" time="0.002"></testcase>
-		<testcase classname="Arithmatic Operations Specification" name="Multiply integer values in data stores and save it in a new data store" time="0.002"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Add integer values in data stores and save it in a new data store" time="0.789"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Subtract integer values in data stores and save it in a new data store" time="0.007"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Divide integer values in data stores and save it in a new data store" time="0.003"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Multiply integer values in data stores and save it in a new data store" time="0.004"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Add decimal values in data stores and save it in a new data store" time="0.002"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Subtract decimal values in data stores and save it in a new data store" time="0.006"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Divide decimal values in data stores and save it in a new data store" time="0.001"></testcase>
+		<testcase classname="Arithmetic Operations Specification" name="Multiply decimal values in data stores and save it in a new data store" time="0.002"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>

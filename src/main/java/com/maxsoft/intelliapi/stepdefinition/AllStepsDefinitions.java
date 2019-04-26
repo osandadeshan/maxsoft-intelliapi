@@ -332,6 +332,30 @@ public class AllStepsDefinitions{
         apiStepImpl.multiplyIntegerValuesInDataStore(dataStoreType, dataStoreVariableName, table);
     }
 
+    // Use this method to add decimal values in data stores and save to a new data store
+    @Step("Add the decimal values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void addDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.addDecimalValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
+    // Use this method to subtract decimal values in data stores and save to a new data store
+    @Step("Subtract the decimal values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void subtractDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.subtractDecimalValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
+    // Use this method to divide decimal values in data stores and save to a new data store
+    @Step("Divide the decimal values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void divideDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.divideDecimalValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
+    // Use this method to multiply decimal values in data stores and save to a new data store
+    @Step("Multiply the decimal values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void multiplyDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.multiplyDecimalValuesInDataStore(dataStoreType, dataStoreVariableName, table);
+    }
+
     // Use this method to save current epochTime into data stores
     @Step("And the user saves the current epoch time in <secondsOrMillis> inside data stores <table>")
     public void saveCurrentEpochTime(String secondsOrMillis, Table table) {

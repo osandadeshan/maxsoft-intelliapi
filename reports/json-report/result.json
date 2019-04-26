@@ -1,23 +1,23 @@
 {
 	"projectName": "MaxSoft-IntelliAPI",
-	"timestamp": "Apr 22, 2019 at 9:19pm",
+	"timestamp": "Apr 26, 2019 at 9:52pm",
 	"successRate": 100,
 	"environment": "default",
 	"tags": "",
-	"executionTime": 2739,
+	"executionTime": 3227,
 	"executionStatus": "pass",
 	"specResults": [
 		{
-			"specHeading": "Arithmatic Operations Specification",
-			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Data Stores\\Arithmatic Operations.spec",
+			"specHeading": "Arithmetic Operations Specification",
+			"fileName": "C:\\Users\\onimalarathna\\IdeaProjects\\MaxSoft-IntelliAPI\\specs\\Data Stores\\04. Arithmetic Operations.spec",
 			"tags": [],
-			"executionTime": 432,
+			"executionTime": 814,
 			"executionStatus": "pass",
 			"scenarios": [
 				{
 					"scenarioHeading": "Add integer values in data stores and save it in a new data store",
 					"tags": [],
-					"executionTime": 425,
+					"executionTime": 789,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
@@ -62,7 +62,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 422,
+								"executionTime": 786,
 								"skippedReason": "",
 								"messages": [
 									"\"14\" is successfully saved as a text in Scenario Data Store [val1]",
@@ -162,7 +162,7 @@
 				{
 					"scenarioHeading": "Subtract integer values in data stores and save it in a new data store",
 					"tags": [],
-					"executionTime": 3,
+					"executionTime": 7,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
@@ -207,7 +207,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 3,
+								"executionTime": 6,
 								"skippedReason": "",
 								"messages": [
 									"\"14\" is successfully saved as a text in Scenario Data Store [val1]",
@@ -292,7 +292,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 0,
+								"executionTime": 1,
 								"skippedReason": "",
 								"messages": [
 									"Text inside Scenario Data Store [val2] is: \"10\"\n\n",
@@ -345,7 +345,7 @@
 				{
 					"scenarioHeading": "Divide integer values in data stores and save it in a new data store",
 					"tags": [],
-					"executionTime": 2,
+					"executionTime": 3,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
@@ -428,7 +428,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 0,
+								"executionTime": 1,
 								"skippedReason": "",
 								"messages": [
 									"Text inside Scenario Data Store [val1] is: \"14\"\n\n",
@@ -481,7 +481,7 @@
 				{
 					"scenarioHeading": "Multiply integer values in data stores and save it in a new data store",
 					"tags": [],
-					"executionTime": 2,
+					"executionTime": 4,
 					"executionStatus": "pass",
 					"contexts": [],
 					"teardowns": [],
@@ -526,7 +526,7 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 2,
+								"executionTime": 3,
 								"skippedReason": "",
 								"messages": [
 									"\"14\" is successfully saved as a text in Scenario Data Store [val1]",
@@ -609,10 +609,691 @@
 								"stackTrace": "",
 								"screenshot": "",
 								"errorMessage": "",
-								"executionTime": 0,
+								"executionTime": 1,
 								"skippedReason": "",
 								"messages": [
 									"Text inside Scenario Data Store [totalVal4] is: \"1680\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						}
+					],
+					"beforeScenarioHookFailure": null,
+					"afterScenarioHookFailure": null,
+					"skipErrors": [],
+					"tableRowIndex": -1
+				},
+				{
+					"scenarioHeading": "Add decimal values in data stores and save it in a new data store",
+					"tags": [],
+					"executionTime": 2,
+					"executionStatus": "pass",
+					"contexts": [],
+					"teardowns": [],
+					"items": [
+						{
+							"itemType": "step",
+							"stepText": "And the user saves the values inside data stores as follows",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Value To Be Stored"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1",
+											"14.2"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val2",
+											"10.326"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val3",
+											"12"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 2,
+								"skippedReason": "",
+								"messages": [
+									"\"14.2\" is successfully saved as a text in Scenario Data Store [val1]",
+									"\"10.326\" is successfully saved as a text in Scenario Data Store [val2]",
+									"\"12\" is successfully saved as a text in Scenario Data Store [val3]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Add the decimal values in data stores and save it in a \"Scenario\" type data store named \"totalVal\"",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val2"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val3"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [val1] is: \"14.2\"\n\n",
+									"Text inside Scenario Data Store [val2] is: \"10.326\"\n\n",
+									"Text inside Scenario Data Store [val3] is: \"12\"\n\n",
+									"\"36.526\" is successfully saved as a text in Scenario Data Store [totalVal]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores equal to the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"totalVal",
+											"36.526"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [totalVal] is: \"36.526\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						}
+					],
+					"beforeScenarioHookFailure": null,
+					"afterScenarioHookFailure": null,
+					"skipErrors": [],
+					"tableRowIndex": -1
+				},
+				{
+					"scenarioHeading": "Subtract decimal values in data stores and save it in a new data store",
+					"tags": [],
+					"executionTime": 6,
+					"executionStatus": "pass",
+					"contexts": [],
+					"teardowns": [],
+					"items": [
+						{
+							"itemType": "step",
+							"stepText": "And the user saves the values inside data stores as follows",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Value To Be Stored"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1",
+											"14.2"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val2",
+											"10.326"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val3",
+											"12"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 6,
+								"skippedReason": "",
+								"messages": [
+									"\"14.2\" is successfully saved as a text in Scenario Data Store [val1]",
+									"\"10.326\" is successfully saved as a text in Scenario Data Store [val2]",
+									"\"12\" is successfully saved as a text in Scenario Data Store [val3]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Add the decimal values in data stores and save it in a \"Scenario\" type data store named \"val4\"",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val2"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val3"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [val1] is: \"14.2\"\n\n",
+									"Text inside Scenario Data Store [val2] is: \"10.326\"\n\n",
+									"Text inside Scenario Data Store [val3] is: \"12\"\n\n",
+									"\"36.526\" is successfully saved as a text in Scenario Data Store [val4]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Subtract the decimal values in data stores and save it in a \"Scenario\" type data store named \"totalVal2\"",
+							"table": {
+								"headers": [
+									"First DataStore Type",
+									"First Variable Name",
+									"Second DataStore Type",
+									"Second Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val2",
+											"Scenario",
+											"val4"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [val2] is: \"10.326\"\n\n",
+									"Text inside Scenario Data Store [val4] is: \"36.526\"\n\n",
+									"\"-26.2\" is successfully saved as a text in Scenario Data Store [totalVal2]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores equal to the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"totalVal2",
+											"-26.2"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [totalVal2] is: \"-26.2\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						}
+					],
+					"beforeScenarioHookFailure": null,
+					"afterScenarioHookFailure": null,
+					"skipErrors": [],
+					"tableRowIndex": -1
+				},
+				{
+					"scenarioHeading": "Divide decimal values in data stores and save it in a new data store",
+					"tags": [],
+					"executionTime": 1,
+					"executionStatus": "pass",
+					"contexts": [],
+					"teardowns": [],
+					"items": [
+						{
+							"itemType": "step",
+							"stepText": "And the user saves the values inside data stores as follows",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Value To Be Stored"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1",
+											"14.125"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val2",
+											"10.23"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val3",
+											"0.125"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 1,
+								"skippedReason": "",
+								"messages": [
+									"\"14.125\" is successfully saved as a text in Scenario Data Store [val1]",
+									"\"10.23\" is successfully saved as a text in Scenario Data Store [val2]",
+									"\"0.125\" is successfully saved as a text in Scenario Data Store [val3]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Divide the decimal values in data stores and save it in a \"Scenario\" type data store named \"totalVal3\"",
+							"table": {
+								"headers": [
+									"First DataStore Type",
+									"First Variable Name",
+									"Second DataStore Type",
+									"Second Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1",
+											"Scenario",
+											"val2"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [val1] is: \"14.125\"\n\n",
+									"Text inside Scenario Data Store [val2] is: \"10.23\"\n\n",
+									"\"1.380743\" is successfully saved as a text in Scenario Data Store [totalVal3]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores equal to the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"totalVal3",
+											"1.380743"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [totalVal3] is: \"1.380743\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Divide the decimal values in data stores and save it in a \"Scenario\" type data store named \"totalVal4\"",
+							"table": {
+								"headers": [
+									"First DataStore Type",
+									"First Variable Name",
+									"Second DataStore Type",
+									"Second Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1",
+											"Scenario",
+											"val3"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [val1] is: \"14.125\"\n\n",
+									"Text inside Scenario Data Store [val3] is: \"0.125\"\n\n",
+									"\"113.0\" is successfully saved as a text in Scenario Data Store [totalVal4]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores equal to the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"totalVal4",
+											"113.0"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [totalVal4] is: \"113.0\"\n\n"
+								],
+								"errorType": "assertion"
+							}
+						}
+					],
+					"beforeScenarioHookFailure": null,
+					"afterScenarioHookFailure": null,
+					"skipErrors": [],
+					"tableRowIndex": -1
+				},
+				{
+					"scenarioHeading": "Multiply decimal values in data stores and save it in a new data store",
+					"tags": [],
+					"executionTime": 2,
+					"executionStatus": "pass",
+					"contexts": [],
+					"teardowns": [],
+					"items": [
+						{
+							"itemType": "step",
+							"stepText": "And the user saves the values inside data stores as follows",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Value To Be Stored"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1",
+											"14.023"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val2",
+											"10.108"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val3",
+											"12.1"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 2,
+								"skippedReason": "",
+								"messages": [
+									"\"14.023\" is successfully saved as a text in Scenario Data Store [val1]",
+									"\"10.108\" is successfully saved as a text in Scenario Data Store [val2]",
+									"\"12.1\" is successfully saved as a text in Scenario Data Store [val3]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "Multiply the decimal values in data stores and save it in a \"Scenario\" type data store named \"totalVal4\"",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"val1"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val2"
+										]
+									},
+									{
+										"cells": [
+											"Scenario",
+											"val3"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [val1] is: \"14.023\"\n\n",
+									"Text inside Scenario Data Store [val2] is: \"10.108\"\n\n",
+									"Text inside Scenario Data Store [val3] is: \"12.1\"\n\n",
+									"\"1715.1083\" is successfully saved as a text in Scenario Data Store [totalVal4]"
+								],
+								"errorType": "assertion"
+							}
+						},
+						{
+							"itemType": "step",
+							"stepText": "And the values inside the data stores equal to the following",
+							"table": {
+								"headers": [
+									"DataStore Type",
+									"Variable Name",
+									"Expected Value"
+								],
+								"rows": [
+									{
+										"cells": [
+											"Scenario",
+											"totalVal4",
+											"1715.1083"
+										]
+									}
+								]
+							},
+							"beforeStepHookFailure": null,
+							"afterStepHookFailure": null,
+							"result": {
+								"status": "pass",
+								"stackTrace": "",
+								"screenshot": "",
+								"errorMessage": "",
+								"executionTime": 0,
+								"skippedReason": "",
+								"messages": [
+									"Text inside Scenario Data Store [totalVal4] is: \"1715.1083\"\n\n"
 								],
 								"errorType": "assertion"
 							}
@@ -628,7 +1309,7 @@
 			"datatable": null,
 			"beforeSpecHookFailure": null,
 			"afterSpecHookFailure": null,
-			"passedScenarioCount": 4,
+			"passedScenarioCount": 8,
 			"failedScenarioCount": 0,
 			"skippedScenarioCount": 0
 		}
@@ -638,7 +1319,7 @@
 	"passedSpecsCount": 1,
 	"failedSpecsCount": 0,
 	"skippedSpecsCount": 0,
-	"passedScenariosCount": 4,
+	"passedScenariosCount": 8,
 	"failedScenariosCount": 0,
 	"skippedScenariosCount": 0
 }

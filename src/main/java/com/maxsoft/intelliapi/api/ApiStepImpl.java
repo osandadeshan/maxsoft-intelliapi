@@ -707,10 +707,10 @@ public class ApiStepImpl extends Base {
     public void divideIntegerValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
         List<TableRow> rows = table.getTableRows();
         List<String> columnNames = table.getColumnNames();
-        Double finalVal = null;
+        Float finalVal = null;
         for (TableRow row : rows) {
-            finalVal = (double)Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)))) /
-                    (double)Integer.parseInt((readFromDataStore(row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3)))));
+            finalVal = (float)Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)))) /
+                    (float) Integer.parseInt((readFromDataStore(row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3)))));
         }
         saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
     }
@@ -722,6 +722,52 @@ public class ApiStepImpl extends Base {
         int finalVal = 1;
         for (TableRow row : rows) {
             finalVal = finalVal * Integer.parseInt(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to add decimal values in data stores and save to a new data store
+    public void addDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        float finalVal = 0;
+        for (TableRow row : rows) {
+            finalVal = finalVal + Float.parseFloat(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to subtract decimal values in data stores and save to a new data store
+    public void subtractDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        float finalVal = 0;
+        for (TableRow row : rows) {
+            finalVal = Float.parseFloat(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)))) -
+                    Float.parseFloat(readFromDataStore(row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to divide decimal values in data stores and save to a new data store
+    public void divideDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        Float finalVal = null;
+        for (TableRow row : rows) {
+            finalVal = Float.parseFloat(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1)))) /
+                    Float.parseFloat(readFromDataStore(row.getCell(columnNames.get(2)), row.getCell(columnNames.get(3))));
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to multiply decimal values in data stores and save to a new data store
+    public void multiplyDecimalValuesInDataStore(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        float finalVal = Float.parseFloat("1");
+        for (TableRow row : rows) {
+            finalVal = finalVal * Float.parseFloat(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1))));
         }
         saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
     }
