@@ -12,7 +12,11 @@ package com.maxsoft.intelliapi.database.mysql;
 import com.maxsoft.intelliapi.util.database.mysql.MySqlOperator;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
+import java.io.IOException;
 import java.sql.SQLException;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 
 public class MySqlStepImpl extends MySqlOperator {
@@ -23,30 +27,47 @@ public class MySqlStepImpl extends MySqlOperator {
 	private static final String EMPTY_QUERY_MESSAGE = "No records found for the executed query";
 	private static final String INVALID_QUERY_MESSAGE = "The executed query is invalid";
 
+    private static Logger logger = Logger.getLogger(MySqlStepImpl.class.getName());
+    private static FileHandler fileHandler;
+    private static SimpleFormatter formatter = new SimpleFormatter();
+
+	static {
+		try {
+			fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+    public static void printInfo(String text){
+        logger.addHandler(fileHandler);
+        fileHandler.setFormatter(formatter);
+        logger.info(text +"\n");
+        Gauge.writeMessage(text);
+    }
+
+	public MySqlStepImpl() throws IOException {
+	}
+
 	public void loadMySqlDriver() {
 		MySqlOperator.loadDriver();
-		System.out.println(MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE);
-		Gauge.writeMessage(MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE);
+		printInfo(MYSQL_DRIVER_LOADING_SUCCESS_MESSAGE);
 	}
 
 	public void loadMySqlDatabase (String databaseName, String username, String password) throws SQLException {
 		MySqlOperator.initializeDbConnection(databaseName, username, password);
-		System.out.println(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
-		Gauge.writeMessage(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
+		printInfo(MYSQL_DATABASE_CONNECTION_SUCCESS_MESSAGE);
 	}
 
 	public void executeGivenQuery(String query) {
 		if (executeQuery(query).toString().equals("")){
-			System.out.println(EMPTY_QUERY_MESSAGE);
-			Gauge.writeMessage(EMPTY_QUERY_MESSAGE);
+			printInfo(EMPTY_QUERY_MESSAGE);
 		}
 		if (executeQuery(query) == null){
-			System.out.println(INVALID_QUERY_MESSAGE);
-			Gauge.writeMessage(INVALID_QUERY_MESSAGE);
+			printInfo(INVALID_QUERY_MESSAGE);
 		} else {
 			executeQuery(query);
-			System.out.println(QUERY_EXECUTION_SUCCESS_MESSAGE);
-			Gauge.writeMessage(QUERY_EXECUTION_SUCCESS_MESSAGE);
+			printInfo(QUERY_EXECUTION_SUCCESS_MESSAGE);
 		}
 	}
 

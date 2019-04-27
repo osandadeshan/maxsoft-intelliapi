@@ -42,6 +42,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 import static com.maxsoft.intelliapi.api.Base.BodyType.JSON;
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
@@ -53,17 +56,33 @@ public class Base {
     private static final String QA = "qa";
     private static final String UAT = "uat";
     private static final String PROD = "prod";
+
     public String AUTHORIZATION_HEADER_NAME = System.getenv("header_name_for_authorization");
     public String AUTHENTICATION_FIRST_VALUE = System.getenv("authentication_first_value");
-    public String CURRENT_DIRECTORY = System.getProperty("user.dir");
+    public static String CURRENT_DIRECTORY = System.getProperty("user.dir");
     public String ACCESS_TOKEN_FILE_PATH = CURRENT_DIRECTORY + File.separator + System.getenv("access_token_file_path");
+    public static String INTELLIAPI_LOGS_FILE_PATH = CURRENT_DIRECTORY + File.separator + "logs" + File.separator + "intelliapi.log";
     public static String ENVIRONMENT = System.getenv("environment");
     public static String OS = System.getProperty("os.name");
     public String baseUrl = setBaseUrl();
+
     private Response response;
     private RequestSpecification request = getRequestSpecification();
     private static Csv csv = new Csv();
     Map<String, String> formParams = new HashMap<>();
+
+    private static Logger logger = Logger.getLogger(Base.class.getName());
+    private static FileHandler fileHandler;
+    private static SimpleFormatter formatter = new SimpleFormatter();
+
+    static {
+        try {
+            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static String getFirstCharacter(String string){
         return string.substring(0, 1);
@@ -96,14 +115,22 @@ public class Base {
         }
     }
 
-    public void print(String text){
-        System.out.println(text);
+    public static void printInfo(String text){
+        logger.addHandler(fileHandler);
+        fileHandler.setFormatter(formatter);
+        logger.info(text +"\n");
+        Gauge.writeMessage(text);
+    }
+
+    public static void printWarning(String text){
+        logger.addHandler(fileHandler);
+        fileHandler.setFormatter(formatter);
+        logger.warning(text +"\n");
         Gauge.writeMessage(text);
     }
 
     public static void printRequest(String request) {
-        System.out.println("Request is: " + "\n" + request);
-        Gauge.writeMessage("Request is: " + "\n" + request);
+        printInfo("Request is: " + "\n" + request);
     }
 
     public String setBaseUrl() {
@@ -180,8 +207,7 @@ public class Base {
             String value = (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
             return value;
         } catch (Exception ex) {
-            System.out.println("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
-            Gauge.writeMessage("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            printWarning("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
             return "";
         }
     }
@@ -193,8 +219,7 @@ public class Base {
             String value = (String) specDataStore.get(variableNameOfValueStoredInDataStore);
             return value;
         } catch (Exception ex) {
-            System.out.println("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
-            Gauge.writeMessage("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            printWarning("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
             return "";
         }
     }
@@ -205,8 +230,7 @@ public class Base {
             DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
             scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
         } catch (Exception ex) {
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
         }
     }
 
@@ -216,8 +240,7 @@ public class Base {
             DataStore specDataStore = DataStoreFactory.getSpecDataStore();
             specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
         } catch (Exception ex) {
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
         }
     }
 
@@ -226,12 +249,10 @@ public class Base {
             // Fetching Value from the Data Store
             DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
             String value = (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
-            System.out.println("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
-            Gauge.writeMessage("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            printInfo("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            System.out.println("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
-            Gauge.writeMessage("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printWarning("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -241,12 +262,10 @@ public class Base {
             // Fetching Value from the Data Store
             DataStore specDataStore = DataStoreFactory.getSpecDataStore();
             String value = (String) specDataStore.get(variableNameOfValueStoredInDataStore);
-            System.out.println("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
-            Gauge.writeMessage("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            printInfo("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            System.out.println("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
-            Gauge.writeMessage("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printWarning("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -256,12 +275,10 @@ public class Base {
             // Fetching Value from the Data Store
             DataStore suiteStore = DataStoreFactory.getSuiteDataStore();
             String value = (String) suiteStore.get(variableNameOfValueStoredInDataStore);
-            System.out.println("Text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
-            Gauge.writeMessage("Text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            printInfo("Text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            System.out.println("Failed to read the text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
-            Gauge.writeMessage("Failed to read the text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printWarning("Failed to read the text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -271,11 +288,9 @@ public class Base {
             // Adding value to the Data Store
             DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
             scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printInfo("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         } catch (Exception ex) {
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         }
     }
 
@@ -284,11 +299,9 @@ public class Base {
             // Adding value to the Data Store
             DataStore specDataStore = DataStoreFactory.getSpecDataStore();
             specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printInfo("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         } catch (Exception ex) {
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         }
     }
 
@@ -297,11 +310,9 @@ public class Base {
             // Adding value to the Data Store
             DataStore suiteStore = DataStoreFactory.getSuiteDataStore();
             suiteStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printInfo("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         } catch (Exception ex) {
-            System.out.println("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
-            Gauge.writeMessage("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         }
     }
 
@@ -350,56 +361,52 @@ public class Base {
     }
 
     public void printTestingEnvironmentName() {
-        print("Environment: " + ENVIRONMENT.toUpperCase());
+        printInfo("Environment: " + ENVIRONMENT.toUpperCase());
     }
 
     public void printTestingEnvironmentURL() {
-        print("Base URL: " + baseUrl);
+        printInfo("Base URL: " + baseUrl);
     }
 
     public void printTestingEnvironmentOS() {
-        print("Operating System: " + OS);
+        printInfo("Operating System: " + OS);
     }
 
     public void testingEnvDetails() {
-        print("Configurations of Test Execution Environment\n\n");
+        printInfo("Configurations of Test Execution Environment\n\n");
         printTestingEnvironmentOS();
         printTestingEnvironmentName();
         printTestingEnvironmentURL();
     }
 
     public void printApiEndpoint(String apiEndpoint) {
-        System.out.println("API Endpoint is: " + "\n" + apiEndpoint + "\n\n");
-        Gauge.writeMessage("API Endpoint is: " + "\n" + apiEndpoint + "\n\n");
+        printInfo("API Endpoint is: " + "\n" + apiEndpoint + "\n\n");
     }
 
     public void printHttpMethod(String apiEndpoint) throws IOException {
-        print("HTTP Method is: " + ApiDocument.getHttpMethod(apiEndpoint) + "\n\n");
+        printInfo("HTTP Method is: " + ApiDocument.getHttpMethod(apiEndpoint) + "\n\n");
     }
 
     public void printResponse() {
         String response = setStringLastCharInverseToFirstChar(getSavedValueForScenario("response"));
         if (response.equals("")) {
-            System.out.println("Response is Empty" + "\n\n");
-            Gauge.writeMessage("Response is Empty" + "\n\n");
+            printInfo("Response is Empty" + "\n\n");
         } else {
-            System.out.println("Response is: " + "\n" + response + "\n\n");
-            Gauge.writeMessage("Response is: " + "\n" + response + "\n\n");
+            printInfo("Response is: " + "\n" + response + "\n\n");
         }
     }
 
     public void printResponseTime(){
-        print("Response Time is: " + response.getTimeIn(TimeUnit.MILLISECONDS) + "ms" + "\n\n");
+        printInfo("Response Time is: " + response.getTimeIn(TimeUnit.MILLISECONDS) + "ms" + "\n\n");
     }
 
     public void printResponseHeaders() {
-        print("Response Headers are: \n" + response.getHeaders().toString());
+        printInfo("Response Headers are: \n" + response.getHeaders().toString());
     }
 
     public void apiToBeInvoked(String apiEndpointName) throws IOException {
         saveValueForScenario("apiName", apiEndpointName);
         // Print API Endpoint
-        System.out.println("\n");
         printApiEndpoint(Endpoints.getApiEndpointByName(apiEndpointName));
         printHttpMethod(apiEndpointName);
     }
@@ -430,8 +437,7 @@ public class Base {
             invokingEndpoint = baseUrl.concat(invokingEndpoint)
                     .concat(getPathParams().concat(getQueryParams()));
         }
-        System.out.println("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n");
-        Gauge.writeMessage("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n");
+        printInfo("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n");
         printHttpMethod(apiName);
         return invokingEndpoint;
     }
@@ -566,12 +572,10 @@ public class Base {
     }
 
     public void printFormParamsMap() {
-        System.out.println("Form Params Map: \n\n");
-        Gauge.writeMessage("Form Params Map: \n\n");
+        printInfo("Form Params Map: \n\n");
         for (Map.Entry entry : formParams.entrySet())
         {
-            System.out.println(entry.getKey() + " = " + entry.getValue());
-            Gauge.writeMessage(entry.getKey() + " = " + entry.getValue());
+            printInfo(entry.getKey() + " = " + entry.getValue());
         }
     }
 
@@ -1076,7 +1080,6 @@ public class Base {
 
     public void invokeApi(String jsonPayload, List<Header> headerList) throws IOException {
         String apiName = getSavedValueForScenario("apiName"); // Fetching Value from the Data Store
-        System.out.println("You are going to invoked a " + ApiDocument.getHttpMethod(apiName));
         String accessTokenInFile = readAccessToken(); // Fetching token from the text file
         String accessToken = "";
         String isAuthenticationRequired = "";
@@ -1189,7 +1192,6 @@ public class Base {
 
     public void saveResponseJsonPathValue(String dataStoreType, String variableName, String jsonPath) throws JSONException {
         String jsonData = getSavedValueForScenario("response");
-        System.out.println(jsonData);
         Object dataObject = JsonPath.parse(jsonData).read(jsonPath);
         String jsonPathValue = dataObject.toString();
         // Save the value of response into a Data Store
@@ -1198,21 +1200,17 @@ public class Base {
 
     public void saveAccessToken(String jsonPath) throws JSONException {
         String jsonData = getSavedValueForScenario("response");
-        System.out.println(jsonData);
         Object dataObject = JsonPath.parse(jsonData).read(jsonPath);
         String jsonPathValue = dataObject.toString();
         if (AUTHENTICATION_FIRST_VALUE == null || AUTHENTICATION_FIRST_VALUE.equals(" ") || AUTHENTICATION_FIRST_VALUE.equals("")) {
             AUTHENTICATION_FIRST_VALUE = "";
         }
-        System.out.println("Access token: " + AUTHENTICATION_FIRST_VALUE + jsonPathValue);
         // Save the token into a file
         try {
             TextFile.write(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
-            System.out.println("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
-            Gauge.writeMessage("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
+            printInfo("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
         } catch (Exception ex) {
-            System.out.println("Failed to save the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
-            Gauge.writeMessage("Failed to save the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
+            printWarning("Failed to save the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
         }
     }
 
@@ -1235,25 +1233,21 @@ public class Base {
             File file = new File(CURRENT_DIRECTORY + filePath);
             if(!file.exists()){
                 file.createNewFile();
-            }else{
-                System.out.println("Text file already exists in " + CURRENT_DIRECTORY + filePath);
             }
             TextFile.write(jsonPathValue, CURRENT_DIRECTORY + filePath);
-            print("Successfully saved the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"");
+            printInfo("Successfully saved the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"");
         } catch (Exception ex) {
-            print("Failed to save the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
+            printWarning("Failed to save the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
         }
     }
 
     public void jsonPathValueContains(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
         if (responseString.toString().equals("[]")) {
-            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
         }
         String jsonPathValue = String.valueOf(JsonPath.read(responseString, jsonPath));
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is not contains the expected value.\nJSON Path value is: " + jsonPathValue +
@@ -1264,12 +1258,10 @@ public class Base {
     public void jsonPathValueNotContains(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
         if (responseString.toString().equals("[]")) {
-            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
         }
         String jsonPathValue = String.valueOf(JsonPath.read(responseString, jsonPath));
         String nullableMessage = "JSON Path value for the \"" +jsonPath+ "\" is contains the expected value.\nJSON Path value is: " + jsonPathValue +
@@ -1280,12 +1272,10 @@ public class Base {
     public void jsonPathAssertionEquals(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
         if (responseString.toString().equals("[]")) {
-            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
         }
         String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is not equal to the Actual value.\n";
         if (expectedResult.toLowerCase().equals("[]")) {
@@ -1320,12 +1310,10 @@ public class Base {
     public void jsonPathAssertionNotEquals(String jsonPath, String expectedResult) {
         Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(getSavedValueForScenario("response"));
         if (responseString.toString().equals("")) {
-            System.out.println("No any JSON Paths found. Because the response is a no-content response for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
         }
         if (responseString.toString().equals("[]")) {
-            System.out.println("No any JSON Paths found. Because the response is an empty array for the given payload.");
-            Gauge.writeMessage("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
         }
         String nullableMessage = "Expected value for the JSON Path of \"" +jsonPath+ "\" is equal to the Actual value.\n";
         if (expectedResult.toLowerCase().equals("[]")) {
@@ -1382,8 +1370,7 @@ public class Base {
         CSVWriter writer = new CSVWriter(new FileWriter(inputFile), ',');
         writer.writeNext(header);
         for (int i=0; i<array.size(); i++){
-            System.out.println(array.get(i));
-            Gauge.writeMessage((String) array.get(i));
+            printInfo((String) array.get(i));
             writer.writeNext(new String[]{(String) array.get(i)});
         }
 
@@ -1426,8 +1413,7 @@ public class Base {
     public void printResults(List<String> headersList, List<List<String>> rowsList, String additional) {
         Board board = new Board(75);
         String tableString = board.setInitialBlock(new StringTable(board, 75, headersList, rowsList).tableToBlocks()).build().getPreview();
-        System.out.println("\nResults " + additional + " from the database for the executed query: \n" + tableString);
-        Gauge.writeMessage("\nResults " + additional + " from the database for the executed query: \n" + tableString);
+        printInfo("\nResults " + additional + " from the database for the executed query: \n" + tableString);
     }
 
     public void savePropertyFileValuesToDataStore(String dataStoreType, String dataStoreVariableName, String propertyName){

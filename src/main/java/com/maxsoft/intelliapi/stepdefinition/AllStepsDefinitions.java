@@ -26,6 +26,9 @@ public class AllStepsDefinitions{
     private MongoStepImpl mongoStepImpl = new MongoStepImpl();
     private MySqlStepImpl mySQLStepImpl = new MySqlStepImpl();
 
+    public AllStepsDefinitions() throws IOException {
+    }
+
     // Use this method to print the testing environment name in the HTML report
     @Step("Configurations of the testing environment")
     public void testEnvDetails(){

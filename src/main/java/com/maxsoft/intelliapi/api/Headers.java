@@ -15,6 +15,9 @@ import io.restassured.http.Header;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 
 public class Headers extends Base {
@@ -30,11 +33,30 @@ public class Headers extends Base {
         }
     }
 
+    private static Logger logger = Logger.getLogger(Headers.class.getName());
+    private static FileHandler fileHandler;
+    private static SimpleFormatter formatter = new SimpleFormatter();
+
+    static {
+        try {
+            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void printInfo(String text){
+        logger.addHandler(fileHandler);
+        fileHandler.setFormatter(formatter);
+        logger.info(text +"\n");
+        Gauge.writeMessage(text);
+    }
+
     public Headers(List<Header> headerList) {
         super();
     }
 
-    public static Headers setRequestHeaders(String headerName, String headerValue) throws IOException {
+    public static Headers setRequestHeaders(String headerName, String headerValue) {
         Header header = new Header(headerName, headerValue);
         headerList.add(header);
         return new Headers(headerList);
@@ -45,15 +67,13 @@ public class Headers extends Base {
     }
 
     public static void printHeaders() {
-        System.out.println("Header List: ");
-        Gauge.writeMessage("Header List: ");
+        printInfo("Header List: ");
         for(Header header : headerList) {
-            System.out.println(header.getName() + " = " + header.getValue());
-            Gauge.writeMessage(header.getName() + " = " + header.getValue());
+            printInfo(header.getName() + " = " + header.getValue());
         }
     }
 
-    public static void clearHeaders() throws IOException {
+    public static void clearHeaders() {
         headerList.clear();
     }
 

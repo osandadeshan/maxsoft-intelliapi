@@ -22,7 +22,12 @@ import java.io.IOException;
 
 public abstract class ApiDocument {
 
-	private static Base baseObj = new Base();
+	private static Base baseObj;
+
+	static {
+        baseObj = new Base();
+    }
+
 	private static String value = "";
 	private static String error = "";
 	private static int sheetIndex = 0;

@@ -1,1 +1,1 @@
-var index = {"Tags":{},"Specs":{"Arithmetic Operations Specification":["specs/Data Stores/04. Arithmetic Operations.html"]}};
+var index = {"Tags":{"get_pi_token":["specs/Pre Test/01. Get Staging PI Token.html"],"staging":["specs/Pre Test/01. Get Staging PI Token.html"],"staging_token":["specs/Pre Test/01. Get Staging PI Token.html"]},"Specs":{"Get Staging PI Token Specification":["specs/Pre Test/01. Get Staging PI Token.html"]}};

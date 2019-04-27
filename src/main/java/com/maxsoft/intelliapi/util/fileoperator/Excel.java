@@ -24,7 +24,12 @@ import java.util.Iterator;
 
 public abstract class Excel {
 
-	private static Base baseObj = new Base();
+	private static Base baseObj;
+
+	static {
+        baseObj = new Base();
+    }
+
 	private static int column;
 
 	public static int findColumnNumber(String cellContent) throws IOException {

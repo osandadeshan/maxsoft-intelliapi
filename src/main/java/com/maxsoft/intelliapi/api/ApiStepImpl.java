@@ -19,12 +19,34 @@ import org.json.JSONException;
 import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 
 public class ApiStepImpl extends Base {
 
     public static final String FILE_SYNTAX = "<file:";
     public static final int FILE_SYNTAX_CHARACTER_COUNT = FILE_SYNTAX.length();
+
+    private static Logger logger = Logger.getLogger(ApiStepImpl.class.getName());
+    private static FileHandler fileHandler;
+    private static SimpleFormatter formatter = new SimpleFormatter();
+
+    static {
+        try {
+            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void printInfo(String text){
+        logger.addHandler(fileHandler);
+        fileHandler.setFormatter(formatter);
+        logger.info(text +"\n");
+        Gauge.writeMessage(text);
+    }
 
     // Use this method at the beginning of the scenario to identify which API is going to use in that scenario
     public void apiToBeInvoked(String apiEndpointName) throws IOException {
@@ -202,7 +224,7 @@ public class ApiStepImpl extends Base {
         }
         finalPayload = payloadWithPlaceholders;
         saveValueForScenario("finalJsonRequestBody", finalPayload);
-        print("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
+        printInfo("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
     }
 
     // Use this method to replace the values of the request payload using data stores
@@ -227,7 +249,7 @@ public class ApiStepImpl extends Base {
         }
         finalPayload = payloadWithPlaceholders;
         saveValueForScenario("finalJsonRequestBody", finalPayload);
-        print("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
+        printInfo("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
     }
 
     // Use this method to set the request authentication
@@ -256,8 +278,7 @@ public class ApiStepImpl extends Base {
             }
         }
         saveValueForScenario("invokingEndpoint", invokingEndpoint);
-        System.out.println(getSavedValueForScenario("invokingEndpoint"));
-        Gauge.writeMessage(getSavedValueForScenario("invokingEndpoint"));
+        printInfo(getSavedValueForScenario("invokingEndpoint"));
     }
 
     public void setApiEndpointReplacementsFromDataStores(Table parameterTable) throws IOException {
@@ -282,8 +303,7 @@ public class ApiStepImpl extends Base {
             }
         }
         saveValueForScenario("invokingEndpoint", invokingEndpoint);
-        System.out.println(getSavedValueForScenario("invokingEndpoint"));
-        Gauge.writeMessage(getSavedValueForScenario("invokingEndpoint"));
+        printInfo(getSavedValueForScenario("invokingEndpoint"));
     }
 
     public void setQueryParams(Table parameterTable){
@@ -298,8 +318,7 @@ public class ApiStepImpl extends Base {
             }
         }
         queryParams = queryParams.replaceAll(".$", "");
-        System.out.println("Query parameters which will append to the request URL: " + queryParams + "\n\n");
-        Gauge.writeMessage("Query parameters which will append to the request URL: " + queryParams + "\n\n");
+        printInfo("Query parameters which will append to the request URL: " + queryParams + "\n\n");
         saveValueForScenario("queryParams", queryParams);
     }
 
@@ -324,8 +343,7 @@ public class ApiStepImpl extends Base {
             }
         }
         queryParams = queryParams.replaceAll(".$", "");
-        System.out.println("Query parameters which will append to the request URL: " + queryParams + "\n\n");
-        Gauge.writeMessage("Query parameters which will append to the request URL: " + queryParams + "\n\n");
+        printInfo("Query parameters which will append to the request URL: " + queryParams + "\n\n");
         saveValueForScenario("queryParams", queryParams);
     }
 
@@ -342,8 +360,7 @@ public class ApiStepImpl extends Base {
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.substring(0, pathParams.length() - 1);
-        System.out.println("Path parameters which will append to the request URL:" + pathParams + "\n\n");
-        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams + "\n\n");
+        printInfo("Path parameters which will append to the request URL:" + pathParams + "\n\n");
         saveValueForScenario("pathParams", pathParams);
     }
 
@@ -368,8 +385,7 @@ public class ApiStepImpl extends Base {
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.substring(0, pathParams.length() - 1);
-        System.out.println("Path parameters which will append to the request URL:" + pathParams + "\n\n");
-        Gauge.writeMessage("Path parameters which will append to the request URL:" + pathParams + "\n\n");
+        printInfo("Path parameters which will append to the request URL:" + pathParams + "\n\n");
         saveValueForScenario("pathParams", pathParams);
     }
 
@@ -578,7 +594,7 @@ public class ApiStepImpl extends Base {
         }
         valueList = valueList.substring(0, valueList.length() - 1);
         saveToDataStore(dataStoreType, dataStoreVariableName, valueList);
-        print("Value List: " + valueList);
+        printInfo("Value List: " + valueList);
     }
 
     // Use this method to save strings in data store

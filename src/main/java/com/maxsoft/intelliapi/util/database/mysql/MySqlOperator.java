@@ -17,10 +17,14 @@ import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
 import org.junit.Assert;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 
 public class MySqlOperator extends Base {
@@ -31,6 +35,32 @@ public class MySqlOperator extends Base {
     static Connection dbConnection;
     ArrayList<Record> recordListForValuesInDatabase = new ArrayList<Record>();
     ArrayList<Record> recordListForValuesInSpecFile = new ArrayList<Record>();
+
+    private static Logger logger = Logger.getLogger(MySqlOperator.class.getName());
+    private static FileHandler fileHandler;
+    private static SimpleFormatter formatter = new SimpleFormatter();
+
+    static {
+        try {
+            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void printInfo(String text){
+        logger.addHandler(fileHandler);
+        fileHandler.setFormatter(formatter);
+        logger.info(text +"\n");
+        Gauge.writeMessage(text);
+    }
+
+    public static void printWarning(String text){
+        logger.addHandler(fileHandler);
+        fileHandler.setFormatter(formatter);
+        logger.warning(text +"\n");
+        Gauge.writeMessage(text);
+    }
 
     public static void loadDriver() {
         try {
@@ -77,8 +107,7 @@ public class MySqlOperator extends Base {
         try {
             resultSet = connectDatabase().executeQuery(query);
         } catch (SQLException e) {
-            System.out.println("The executed query is invalid");
-            Gauge.writeMessage("The executed query is invalid");
+            printWarning("The executed query is invalid");
             e.printStackTrace();
         }
         // Adding query to the Data Store
@@ -163,16 +192,15 @@ public class MySqlOperator extends Base {
     public void getColumnNames(ResultSet resultSet) throws SQLException {
         ResultSetMetaData metadata = resultSet.getMetaData();
         int columnCount = metadata.getColumnCount();
-        System.out.println("\nColumn Names: ");
+        logger.info("\nColumn Names: ");
         for (int i = 1; i <= columnCount; i++) {
-            System.out.println(metadata.getColumnName(i));
+            logger.info(metadata.getColumnName(i));
         }
-        System.out.println("Column count: "+columnCount);
-        System.out.println();
+        logger.info("Column count: " + columnCount + "\n");
     }
 
     public void getRecordsinRows(ResultSet resultSet) throws SQLException {
-        System.out.println("Records in the rows: ");
+        logger.info("Records in the rows: ");
         ResultSetMetaData metadata = resultSet.getMetaData();
         int columnCount = metadata.getColumnCount();
         while (resultSet.next()) {
@@ -180,7 +208,7 @@ public class MySqlOperator extends Base {
             for (int i = 1; i <= columnCount; i++) {
                 row += resultSet.getString(i) + ", ";
             }
-            System.out.println(row);
+            logger.info(row);
         }
     }
 
@@ -193,8 +221,7 @@ public class MySqlOperator extends Base {
         // Close DB connection
         if (dbConnection != null) {
             dbConnection.close();
-            System.out.println(MYSQL_DATABASE_CONNECTION_CLOSE_MESSAGE);
-            Gauge.writeMessage(MYSQL_DATABASE_CONNECTION_CLOSE_MESSAGE);
+            printInfo(MYSQL_DATABASE_CONNECTION_CLOSE_MESSAGE);
         }
     }
 
