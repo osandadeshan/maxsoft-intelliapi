@@ -4,7 +4,7 @@
 ## Introduction
 The main reason for developing this framework is to provide an easy way for Technical QA, Developer or Non-technical QA to perform API testing in an easy manner.
 
-### Technologies/Frameworks used
+## Technologies/Frameworks used
 - Java
 - Gauge Framework
 - Rest Assured
@@ -12,15 +12,15 @@ The main reason for developing this framework is to provide an easy way for Tech
 - Junit
 - Apache Maven
 
-### Supported Platforms
+## Supported Platforms
 - Windows
 - Linux
 - Mac OS
 
-### Supported Languages
+## Supported Languages
 - Java
 
-### Advantages
+## Advantages
 - Generation of an executable document.
 - Human readable tests, business language and Mark-down syntax.
 - Tests can be designed even by a non- technical person.
