@@ -1,5 +1,4 @@
 # MaxSoft IntelliAPI
-<br />
 
 ## Introduction
 The main reason for developing this framework is to provide an easy way for Technical QA, Developer or Non-technical QA to perform API testing in an easy manner.
