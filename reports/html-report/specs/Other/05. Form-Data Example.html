@@ -30,23 +30,29 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,12,0" data-total="12">
+        <svg id="pie-chart" data-results="0,1,0" data-total="1">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/12</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/1</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 12/12</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 1/1</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/12</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">12</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
-      <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">12</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
-      </ul>
+      <div class="report_test-result specs">
+          <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">1</span></div>
+          <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+          <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">1</span></div>
+          <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
+      </div>
+      <div class="report_test-result scenarios">
+          <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">1</span></div>
+          <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+          <div class="pass scenario-stats" data-status="passed"><span class="value">1</span></div>
+          <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
+      </div>
     </div>
     <div class="report_details">
       <ul>
@@ -61,11 +67,11 @@
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:02:10</span>
+          <span>00:00:05</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Oct 14, 2018 at 6:03pm</span>
+          <span>Apr 28, 2019 at 5:55pm</span>
         </li>
       </ul>
       
@@ -92,114 +98,19 @@
         <input id="searchSpecifications" placeholder="Type specification or tag name" type="text" />
         <i class="fa fa-search"></i>
       </div>
+      <div class='specs-sorting'>
+        <div class="sort sort-specs-name" data-sort-by="specs-name"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Name</span></div>
+        <div class="sort sort-execution-time" data-sort-by="execution-time"><span class='sort-icons'><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span><span>Execution time</span></div>
+      </div>
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="../Data Stores/03. Saving And Reading Values From Data Store.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Saving And Reading Values From Data Store Specification</span>
-              <span id="time" class="time">00:00:14</span>
-            </li>
-          </a>
-          
-          <a href="07. Read from saved CSV.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Read from saved CSV Specification</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="08. Epoch Time.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Epoch Time Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="09. Get Student Availablity - Negative Tests - 404 Error.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Get Student Availability - Negative Tests Specification - 404 Error</span>
-              <span id="time" class="time">00:00:01</span>
-            </li>
-          </a>
-          
-          <a href="../Data Stores/01. Saving to Data Stores.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Saving to Data Stores Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="../Data Stores/02. Reading Values from Data Stores.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Reading Values from Data Stores Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="01. Text files operations.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Text Files Operations Specification</span>
-              <span id="time" class="time">00:00:08</span>
-            </li>
-          </a>
-          
-          <a href="02. Create a list from data store values.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create a list from data store values Specification</span>
-              <span id="time" class="time">00:00:00</span>
-            </li>
-          </a>
-          
-          <a href="03. Create All Type Question - Negative Data Driven Tests2.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Create All Type Question using Question Service - Negative Data Driven Test Specification2</span>
-              <span id="time" class="time">00:00:46</span>
-            </li>
-          </a>
-          
-          <a href="04. CRUD in One Scenario.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">CRUD in One Scenario Specification</span>
-              <span id="time" class="time">00:00:16</span>
-            </li>
-          </a>
-          
           <a href="05. Form-Data Example.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Form-Data Example Specification</span>
-              <span id="time" class="time">00:00:22</span>
-            </li>
-          </a>
-          
-          <a href="06. Request Placeholders.html">
-             
-              <li class='passed spec-name'>
-            
-              <span id="scenarioName" class="scenarioname">Request Placeholders Specification</span>
-              <span id="time" class="time">00:00:06</span>
+              <span id="time" class="time">00:00:03</span>
             </li>
           </a>
           
@@ -214,11 +125,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec">Form-Data Example Specification</h3>
-        <div class="report_test-results" alt="Scenarios" title="Scenarios">
+        <h3 class="spec-head" title="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec">Form-Data Example Specification</h3>
+        <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
+            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -226,12 +137,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="C:\Users\Osanda Deshan\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec" readonly/>
+          <input id="specFileName" value="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\05. Form-Data Example.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:22</span>
+        <span class="time">00:00:03</span>
       </div>
 
 	
@@ -270,7 +181,7 @@ Description  : This is an executable specification file which follows markdown s
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Get Google OAuth Access token</h3>
-    <span class="time">00:00:00</span>
+    <span class="time">00:00:03</span>
 
 	
   
@@ -327,6 +238,18 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>API Endpoint is: <br/><a href="https://accounts.google.com/o/oauth2/token" rel="nofollow">https://accounts.google.com/o/oauth2/token</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -409,6 +332,21 @@ Description  : This is an executable specification file which follows markdown s
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Form Params Map: <br/><br/></p>
+ </div><div class="step-message"><p>refresh_token = 1/3wu2nvsunxK3mYRDTPun_8t8GeBEKkY–LYfEr9SIvU</p>
+ </div><div class="step-message"><p>grant_type = refresh_token</p>
+ </div><div class="step-message"><p>client_secret = fILuyCiaWDRElAP6MdWcJIdK</p>
+ </div><div class="step-message"><p>client_id = 211897666304-ii96f12k6tf8h5k15sp41reo92osrgnm.apps.googleusercontent.com</p>
+ </div>
+      </div>
+    </div>
+  
+
+    
+  
 
   
   
@@ -434,7 +372,7 @@ Description  : This is an executable specification file which follows markdown s
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:02</span>
     </h5>
   
   <div class='step-info passed'>
@@ -463,6 +401,21 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Invoked API Endpoint: <br/><a href="https://accounts.google.com/o/oauth2/token" rel="nofollow">https://accounts.google.com/o/oauth2/token</a><br/><br/></p>
+ </div><div class="step-message"><p>HTTP Method is: POST<br/><br/></p>
+ </div><div class="step-message"><p>Response Time is: 1563ms<br/><br/></p>
+ </div><div class="step-message"><p>Response is: <br/>{<br/>    “access_token”: “ya29.Gl35BjiEieqGUy4fC_XdPx3TDz-YBjJqB1TVixGjmjJQD0N-23Acd9QLyuSTK3PgICi1jYmWSZPZyevPj6kVpqz8sJgQqvEsdycsEF_YosvHuDQNEsPrqu-LobW5Afg”,<br/>    “expires_in”: 3600,<br/>    “scope”: “<a href="https://www.googleapis.com/auth/androidpublisher%22" rel="nofollow">https://www.googleapis.com/auth/androidpublisher&#34;</a>,<br/>    “token_type”: “Bearer”<br/>}<br/><br/></p>
+ </div><div class="step-message"><p>Response Headers are: <br/>Content-Type=application/json; charset=utf-8<br/>Vary=Origin<br/>Vary=X-Origin<br/>Vary=Referer<br/>Content-Encoding=gzip<br/>Date=Sun, 28 Apr 2019 12:25:34 GMT<br/>Server=ESF<br/>Cache-Control=private<br/>X-XSS-Protection=0<br/>X-Frame-Options=SAMEORIGIN<br/>X-Content-Type-Options=nosniff<br/>Alt-Svc=quic=”:443”; ma=2592000; v=“46,44,43,39”<br/>Transfer-Encoding=chunked</p>
+ </div>
+      </div>
+    </div>
+  
+
     
   
 
@@ -523,6 +476,9 @@ Description  : This is an executable specification file which follows markdown s
 
   
     
+    
+  
+
     
   
 
@@ -602,6 +558,9 @@ Description  : This is an executable specification file which follows markdown s
     
   
 
+    
+  
+
   
   
   
@@ -621,1029 +580,6 @@ Description  : This is an executable specification file which follows markdown s
     
   
     <span></span>
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-	
-	</div>
-
-      
-        
-	
-  <div class='scenario-container passed'>
-    
-
-	
-  <div class="scenario-head">
-    <h3 class="head borderBottom">Upload file</h3>
-    <span class="time">00:00:21</span>
-
-	
-  
-
-	</div>
-  
-  
-
-  
-  
-
-	
-
-  
-  
-    
-  
-    
-  
-  <div class='step concept'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Create a deck
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class='concept-steps'>
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Given that a user needs to invoke 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Create a Deck using Deck Service"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the user set the request authentication configurations as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Configuration</th><th>Configuration Value</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>Is authentication required?</td><td>Yes</td></tr>
-    
-    <tr><td>Do you need to retrieve the access token from the text file?</td><td>Yes</td></tr>
-    
-    <tr><td>Provide the access token if you need to authorize the API manually</td><td>N/A</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the user set the request attributes as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Attribute Value In JSON Template</th><th>Attribute Value To Be Set</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>#title</td><td>API Deck3</td></tr>
-    
-    <tr><td>#description</td><td>test description</td></tr>
-    
-    <tr><td>#tags1</td><td>API tag1</td></tr>
-    
-    <tr><td>#subjectId</td><td>2</td></tr>
-    
-    <tr><td>#subjectName</td><td>API Testing3</td></tr>
-    
-    <tr><td>#bookTitle</td><td>Automation3</td></tr>
-    
-    <tr><td>#bookAuthor</td><td>Osanda Nimalarathna</td></tr>
-    
-    <tr><td>#bookChapter</td><td>Chap. 04</td></tr>
-    
-    <tr><td>#purchasedDate</td><td>1512021142001</td></tr>
-    
-    <tr><td>#purchaseInformationPrice</td><td>777</td></tr>
-    
-    <tr><td>#purchaseInformationsku</td><td>com.pearson.smartflashcards.test3</td></tr>
-    
-    <tr><td>#areNotificationsEnabled</td><td>true</td></tr>
-    
-    <tr><td>#notificationTime</td><td>08:00 AM</td></tr>
-    
-    <tr><td>#notificationFrequency</td><td>5</td></tr>
-    
-    <tr><td>#examDate</td><td>1512021142000</td></tr>
-    
-    <tr><td>#userId</td><td>34</td></tr>
-    
-    <tr><td>#parentDeckId</td><td>5</td></tr>
-    
-    <tr><td>#tempDeckId</td><td>999</td></tr>
-    
-    <tr><td>#archived</td><td>true</td></tr>
-    
-    <tr><td>#cardPreview</td><td>true</td></tr>
-    
-    <tr><td>#noOfCards</td><td>2</td></tr>
-    
-    <tr><td>#progress</td><td>3</td></tr>
-    
-    <tr><td>#downloads</td><td>12</td></tr>
-    
-    <tr><td>#deckAuthorName</td><td>Osanda</td></tr>
-    
-    <tr><td>#deckAuthorId</td><td>6</td></tr>
-    
-    <tr><td>#thumbnailUrl</td><td>https://documentservice-qa.stg-prsn.com/api/v1/documents/5a154f35d5b71d1a8a54dd58/download/public?format=ORIGINAL</td></tr>
-    
-    <tr><td>#status</td><td>Closed</td></tr>
-    
-    <tr><td>#starred</td><td>true</td></tr>
-    
-    <tr><td>#categoryId</td><td>5a5db30a12ef181b0af109ba</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Then the status code for the request is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"201"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And save the JSON Path values in the response inside the data stores 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>DataStore Type</th><th>Variable Name</th><th>Value To Be Stored</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>spec</td><td>deckId</td><td>$.id</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Given that a user needs to invoke 
-      </span>
-    
-  
-    
-      <span class='parameter'>"File Upload"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the user set the request authentication configurations as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Configuration</th><th>Configuration Value</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>Is authentication required?</td><td>Yes</td></tr>
-    
-    <tr><td>Do you need to retrieve the access token from the text file?</td><td>Yes</td></tr>
-    
-    <tr><td>Provide the access token if you need to authorize the API manually</td><td>N/A</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the user set the form-data key value pairs using data stores as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Key</th><th>Is Data Store Used?</th><th>Data Store Type</th><th>Data Store Variable Name</th><th>Value</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>title</td><td>n</td><td></td><td></td><td>DOCX file</td></tr>
-    
-    <tr><td>creatorId</td><td>n</td><td></td><td></td><td>Osanda</td></tr>
-    
-    <tr><td>creatorPlatform</td><td>n</td><td></td><td></td><td>Web</td></tr>
-    
-    <tr><td>creatoredSource</td><td>n</td><td></td><td></td><td>File</td></tr>
-    
-    <tr><td>creatoredType</td><td>n</td><td></td><td></td><td>Auto</td></tr>
-    
-    <tr><td>deckId</td><td>y</td><td>spec</td><td>deckId</td><td>5b123fa92e02d85d8b54c7b6</td></tr>
-    
-    <tr><td>isExpert</td><td>n</td><td></td><td></td><td>false</td></tr>
-    
-    <tr><td>examDate</td><td>n</td><td></td><td></td><td></td></tr>
-    
-    <tr><td>userId</td><td>n</td><td></td><td></td><td>osanda</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the user set the multipart file key value pairs as follows 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>Key</th><th>File Path</th><th>Mime Type</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>file</td><td>/resources/docx_files/DOCX file1.docx</td><td>application/vnd.openxmlformats-officedocument.wordprocessingml.document</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:20</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        When the user invokes the API
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        Then the status code for the request is 
-      </span>
-    
-  
-    
-      <span class='parameter'>"201"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class='step'>
-  
-  
-    <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class='step-info passed'>
-  
-  <ul>
-    <li class='step'>
-      <div class='step-txt'>
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-    
-      <span>
-        And the JSON Path Assertions for the response should be equal to the following 
-      </span>
-    
-  
-    
-      <div class='inline-table'>
-        <div>
-          <table>
-  <tr>
-    <th>JSON Path</th><th>Expected Result</th>
-  </tr>
-  <tbody>
-    
-    <tr><td>$.length()</td><td>15</td></tr>
-    
-  </tbody>
-</table>
-
-        </div>
-      </div>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-	</li></ul></div></div>
-  
-    
-  
-
   
 
   

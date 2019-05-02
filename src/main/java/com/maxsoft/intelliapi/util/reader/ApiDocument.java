@@ -45,6 +45,9 @@ public abstract class ApiDocument {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (NullPointerException e) {
+			Assert.fail("Key \"" + cellContent + "\" is not found in \"" + sheetName + "\" sheet");
+			e.printStackTrace();
 		}
         return cellValue;
 	}

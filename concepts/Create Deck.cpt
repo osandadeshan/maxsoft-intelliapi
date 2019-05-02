@@ -1,0 +1,37 @@
+<pre>
+Project Name    : MaxSoft-IntelliAPI
+Developer       : Osanda Deshan
+Version         : 1.0.0
+Date            : 28/04/2019
+Time            : 17:56
+Description     : This is an executable concept file
+</pre>
+
+
+
+# Create a deck
+
+* Given that a user needs to invoke "Create Deck"
+* And the user saves test data inside excel file into data stores
+
+   |DataStore Type|Variable Name      |Excel Sheet Name |Key Name         |
+   |Scenario      |varUserId          |Deck_Test_Data   |userId           |
+   |Scenario      |varDeckTitle       |Deck_Test_Data   |deckTitle        |
+* And the user set the request attributes using data stores as follows
+
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
+   |#deckTitle                      |yes                |Scenario       |varDeckTitle            |                        |
+   |#userId                         |yes                |Scenario       |varUserId               |                        |
+* And the user set the request authentication configurations as follows
+
+   |Configuration                                                     |Configuration Value|
+   |Is authentication required?                                       |Yes                |
+   |Do you need to retrieve the access token from the text file?      |Yes                |
+   |Provide the access token if you need to authorize the API manually|N/A                |
+* When the user invokes the API
+* Then the status code for the request is "201"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |$.title      |yes                |Scenario       |varDeckTitle            |              |
+   |$.userId     |yes                |Scenario       |varUserId               |              |

@@ -1387,27 +1387,36 @@ public class Base {
     }
 
     public void dataStoreValueNotEquals(String dataStoreType, String dataStoreVariableName, String expectedValue){
-        Assert.assertNotEquals(readFromDataStore(dataStoreType, dataStoreVariableName), expectedValue);
+        Assert.assertNotEquals(readFromDataStore(dataStoreType, dataStoreVariableName), expectedValue,
+                "Text inside " + dataStoreType + " Data Store [" + dataStoreVariableName + "] is equal to the expected value \"" + expectedValue + "\"\n");
     }
 
     public void compareDataStoresNotEquals(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
-        Assert.assertNotEquals(readFromDataStore(firstDataStoreType, firstDataStoreVariableName), readFromDataStore(secondDataStoreType, secondDataStoreVariableName));
+        Assert.assertNotEquals(readFromDataStore(firstDataStoreType, firstDataStoreVariableName), readFromDataStore(secondDataStoreType, secondDataStoreVariableName),
+                "Text inside " + firstDataStoreType + " Data Store [" + firstDataStoreVariableName + "] is equal to the text inside " +
+                        secondDataStoreType + " Data Store [" + secondDataStoreVariableName + "]\n");
     }
 
     public void dataStoreValueContains(String dataStoreType, String dataStoreVariableName, String expectedValue){
-        Assert.assertTrue(readFromDataStore(dataStoreType, dataStoreVariableName).contains(expectedValue));
+        Assert.assertTrue(readFromDataStore(dataStoreType, dataStoreVariableName).contains(expectedValue),
+                "Text inside " + dataStoreType + " Data Store [" + dataStoreVariableName + "] not contains the expected value \"" + expectedValue + "\"\n");
     }
 
     public void compareDataStoresContains(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
-        Assert.assertTrue(readFromDataStore(firstDataStoreType, firstDataStoreVariableName).contains(readFromDataStore(secondDataStoreType, secondDataStoreVariableName)));
+        Assert.assertTrue(readFromDataStore(firstDataStoreType, firstDataStoreVariableName).contains(readFromDataStore(secondDataStoreType, secondDataStoreVariableName)),
+                "Text inside " + firstDataStoreType + " Data Store [" + firstDataStoreVariableName + "] not contains the text inside " +
+                        secondDataStoreType + " Data Store [" + secondDataStoreVariableName + "]\n");
     }
 
     public void dataStoreValueNotContains(String dataStoreType, String dataStoreVariableName, String expectedValue){
-        Assert.assertFalse(readFromDataStore(dataStoreType, dataStoreVariableName).contains(expectedValue));
+        Assert.assertFalse(readFromDataStore(dataStoreType, dataStoreVariableName).contains(expectedValue),
+                "Text inside " + dataStoreType + " Data Store [" + dataStoreVariableName + "] contains the expected value \"" + expectedValue + "\"\n");
     }
 
     public void compareDataStoresNotContains(String firstDataStoreType, String firstDataStoreVariableName, String secondDataStoreType, String secondDataStoreVariableName){
-        Assert.assertFalse(readFromDataStore(firstDataStoreType, firstDataStoreVariableName).contains(readFromDataStore(secondDataStoreType, secondDataStoreVariableName)));
+        Assert.assertFalse(readFromDataStore(firstDataStoreType, firstDataStoreVariableName).contains(readFromDataStore(secondDataStoreType, secondDataStoreVariableName)),
+                "Text inside " + firstDataStoreType + " Data Store [" + firstDataStoreVariableName + "] contains the text inside " +
+                        secondDataStoreType + " Data Store [" + secondDataStoreVariableName + "]\n");
     }
 
     public void printResults(List<String> headersList, List<List<String>> rowsList, String additional) {
