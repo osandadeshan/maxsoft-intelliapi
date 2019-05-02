@@ -1,134 +1,13 @@
 <testsuites>
-	<testsuite id="1" tests="3" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\Text Files Operations.spec" time="2.842" timestamp="2019-04-29T09:13:51" name="Text Files Operations Specification" errors="0" hostname="CV000179">
+	<testsuite id="1" tests="1" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\Save Auth Token To A Text File.spec" time="4.629" timestamp="2019-05-02T09:57:22" name="Save Auth Token To A Text File Specification" errors="0" hostname="CV000179">
 		<properties></properties>
-		<testcase classname="Text Files Operations Specification" name="Get all decks of a user" time="0.724"></testcase>
-		<testcase classname="Text Files Operations Specification" name="Invoke Auth API using valid username and password using request attributes from text files" time="1.489"></testcase>
-		<testcase classname="Text Files Operations Specification" name="Replace API Endpoint placeholders" time="0.629"></testcase>
+		<testcase classname="Save Auth Token To A Text File Specification" name="Invoke Auth API using valid username and password using payload text file and save the token in a text file" time="4.629"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>
-	<testsuite id="2" tests="8" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Data Store Comparison.spec" time="11.461" timestamp="2019-04-29T09:13:51" name="Data Store Comparison Specification" errors="0" hostname="CV000179">
+	<testsuite id="2" tests="1" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Pre Test\Write to CSV.spec" time="9.711" timestamp="2019-05-02T09:57:22" name="Write to CSV Specification" errors="0" hostname="CV000179">
 		<properties></properties>
-		<testcase classname="Data Store Comparison Specification" name="Equality of data store values with hard coded values" time="1.445"></testcase>
-		<testcase classname="Data Store Comparison Specification" name="Equality of data store values with another data store values" time="1.428"></testcase>
-		<testcase classname="Data Store Comparison Specification" name="Not equality of data store values with hard coded values" time="1.437"></testcase>
-		<testcase classname="Data Store Comparison Specification" name="Not equality of data store values with another data store values" time="1.456"></testcase>
-		<testcase classname="Data Store Comparison Specification" name="Contains of data store values with hard coded values" time="1.431"></testcase>
-		<testcase classname="Data Store Comparison Specification" name="Contains of data store values with another data store values" time="1.389"></testcase>
-		<testcase classname="Data Store Comparison Specification" name="Not contains of data store values with hard coded values" time="1.418"></testcase>
-		<testcase classname="Data Store Comparison Specification" name="Not contains of data store values with another data store values" time="1.457"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="3" tests="2" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\Epoch Time.spec" time="0.029" timestamp="2019-04-29T09:13:51" name="Epoch Time Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Epoch Time Specification" name="Current Epoch time" time="0.016"></testcase>
-		<testcase classname="Epoch Time Specification" name="Epoch time for a given timestamp" time="0.013"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="4" tests="8" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Data Store Arithmetic Operations.spec" time="0.392" timestamp="2019-04-29T09:13:51" name="Data Store Arithmetic Operations Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Add integer values in data stores and save it in a new data store" time="0.042"></testcase>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Subtract integer values in data stores and save it in a new data store" time="0.057"></testcase>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Divide integer values in data stores and save it in a new data store" time="0.036"></testcase>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Multiply integer values in data stores and save it in a new data store" time="0.040"></testcase>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Add decimal values in data stores and save it in a new data store" time="0.039"></testcase>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Subtract decimal values in data stores and save it in a new data store" time="0.063"></testcase>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Divide decimal values in data stores and save it in a new data store" time="0.060"></testcase>
-		<testcase classname="Data Store Arithmetic Operations Specification" name="Multiply decimal values in data stores and save it in a new data store" time="0.055"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="5" tests="2" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\Form-Data Example.spec" time="4.908" timestamp="2019-04-29T09:13:51" name="Form-Data Example Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Form-Data Example Specification" name="Get Google OAuth Access token" time="0.535"></testcase>
-		<testcase classname="Form-Data Example Specification" name="Upload file" time="4.373"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="6" tests="2" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Reading Values From Data Stores.spec" time="0.016" timestamp="2019-04-29T09:13:51" name="Reading Values From Data Stores Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Reading Values From Data Stores Specification" name="Saving values to data stores" time="0.007"></testcase>
-		<testcase classname="Reading Values From Data Stores Specification" name="Reading values from data stores" time="0.009"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="7" tests="1" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Creating A List From Data Store Values.spec" time="0.034" timestamp="2019-04-29T09:13:51" name="Creating A List From Data Store Values Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Creating A List From Data Store Values Specification" name="Create a list from data store values" time="0.034"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="8" tests="2" failures="2" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\DB Test\MongoDB Test.spec" time="60.478" timestamp="2019-04-29T09:13:51" name="MongoDB Test Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="MongoDB Test Specification" name="MongoDB Test - Without data stores" time="30.456">
-			<failure message="When the user executes the Mongo query using key as &#34;title&#34; and value as &#34;API Deck3&#34;&#xA;Step Execution Failure: &#39;com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=10.199.253.208:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]&#39;" type="When the user executes the Mongo query using key as &#34;title&#34; and value as &#34;API Deck3&#34;&#xA;Step Execution Failure: &#39;com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=10.199.253.208:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]&#39;">com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:375)&#xA;com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)&#xA;com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.&lt;init&gt;(ClusterBinding.java:75)&#xA;com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.&lt;init&gt;(ClusterBinding.java:71)&#xA;com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)&#xA;com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:404)&#xA;com.mongodb.operation.FindOperation.execute(FindOperation.java:709)&#xA;com.mongodb.operation.FindOperation.execute(FindOperation.java:81)&#xA;com.mongodb.Mongo.execute(Mongo.java:810)&#xA;com.mongodb.Mongo$2.execute(Mongo.java:797)&#xA;com.mongodb.FindIterableImpl$FindOperationIterable.first(FindIterableImpl.java:273)&#xA;com.mongodb.FindIterableImpl.first(FindIterableImpl.java:205)&#xA;com.maxsoft.intelliapi.util.database.mongo.MongoOperator.executeQuery(MongoOperator.java:54)&#xA;com.maxsoft.intelliapi.database.mongo.MongoStepImpl.executeMongoDbQuery(MongoStepImpl.java:83)&#xA;com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.executeMongoQuery(AllStepsDefinitions.java:422)&#xA;</failure>
-		</testcase>
-		<testcase classname="MongoDB Test Specification" name="MongoDB Test - With data stores" time="30.022">
-			<failure message="When the user executes the Mongo query using data stores as follows&#xA;Step Execution Failure: &#39;com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=10.199.253.208:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]&#39;" type="When the user executes the Mongo query using data stores as follows&#xA;Step Execution Failure: &#39;com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{address=10.199.253.208:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.SocketTimeoutException: connect timed out}}]&#39;">com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:375)&#xA;com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)&#xA;com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.&lt;init&gt;(ClusterBinding.java:75)&#xA;com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.&lt;init&gt;(ClusterBinding.java:71)&#xA;com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)&#xA;com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:404)&#xA;com.mongodb.operation.FindOperation.execute(FindOperation.java:709)&#xA;com.mongodb.operation.FindOperation.execute(FindOperation.java:81)&#xA;com.mongodb.Mongo.execute(Mongo.java:810)&#xA;com.mongodb.Mongo$2.execute(Mongo.java:797)&#xA;com.mongodb.FindIterableImpl$FindOperationIterable.first(FindIterableImpl.java:273)&#xA;com.mongodb.FindIterableImpl.first(FindIterableImpl.java:205)&#xA;com.maxsoft.intelliapi.util.database.mongo.MongoOperator.executeQuery(MongoOperator.java:54)&#xA;com.maxsoft.intelliapi.database.mongo.MongoStepImpl.readDataStoreAndExecuteMongoDbQuery(MongoStepImpl.java:133)&#xA;com.maxsoft.intelliapi.stepdefinition.AllStepsDefinitions.readDataStoreAndExecuteMongoDbQuery(AllStepsDefinitions.java:427)&#xA;</failure>
-		</testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="9" tests="1" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Access Token\Get Auth Token.spec" time="4.347" timestamp="2019-04-29T09:13:51" name="Get Auth Token Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Get Auth Token Specification" name="Invoke Auth API using valid username and password and save the access token inside the text file" time="4.347"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="10" tests="4" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\Read CSV File Saved In Pre Test.spec" time="3.925" timestamp="2019-04-29T09:13:51" name="Read CSV File Saved In Pre Test Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Read CSV File Saved In Pre Test Specification" name="Delete questions by questionIds which was saved in a CSV file from the pre test 1" time="1.419"></testcase>
-		<testcase classname="Read CSV File Saved In Pre Test Specification" name="Delete questions by questionIds which was saved in a CSV file from the pre test 2" time="0.952"></testcase>
-		<testcase classname="Read CSV File Saved In Pre Test Specification" name="Delete questions by questionIds which was saved in a CSV file from the pre test 3" time="0.831"></testcase>
-		<testcase classname="Read CSV File Saved In Pre Test Specification" name="Delete questions by questionIds which was saved in a CSV file from the pre test 4" time="0.723"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="11" tests="1" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\CRUD In One Scenario.spec" time="3.105" timestamp="2019-04-29T09:13:51" name="CRUD In One Scenario Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="CRUD In One Scenario Specification" name="CRUD operation for a deck" time="3.105"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="12" tests="5" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\Replace Request Placeholders.spec" time="6.258" timestamp="2019-04-29T09:13:51" name="Replace Request Placeholders Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Replace Request Placeholders Specification" name="Saving values to Data Store" time="0.013"></testcase>
-		<testcase classname="Replace Request Placeholders Specification" name="Replace request placeholders from values" time="1.680"></testcase>
-		<testcase classname="Replace Request Placeholders Specification" name="Replace one request placeholders from values" time="1.418"></testcase>
-		<testcase classname="Replace Request Placeholders Specification" name="Replace request placeholders from data store values" time="1.689"></testcase>
-		<testcase classname="Replace Request Placeholders Specification" name="Replace one request placeholder from data store values" time="1.458"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="13" tests="1" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\Headers.spec" time="0.728" timestamp="2019-04-29T09:13:51" name="Headers Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Headers Specification" name="Get all decks of a user with auth header" time="0.728"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="14" tests="1" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Other\Read From Excel File.spec" time="1.437" timestamp="2019-04-29T09:13:51" name="Read From Excel File Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Read From Excel File Specification" name="Invoke Auth API using the test data in excel file" time="1.437"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="15" tests="6" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Saving And Reading Values From Data Stores.spec" time="3.456" timestamp="2019-04-29T09:13:51" name="Saving And Reading Values From Data Stores Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Saving And Reading Values From Data Stores Specification" name="Get configurations of the testing environment" time="0.007"></testcase>
-		<testcase classname="Saving And Reading Values From Data Stores Specification" name="Saving values to Data Store" time="0.006"></testcase>
-		<testcase classname="Saving And Reading Values From Data Stores Specification" name="Reading values from Data Store" time="0.007"></testcase>
-		<testcase classname="Saving And Reading Values From Data Stores Specification" name="Invoke Auth API using valid username and password using payload text file" time="1.470"></testcase>
-		<testcase classname="Saving And Reading Values From Data Stores Specification" name="Invoke Auth API using valid username and password and save the access token inside the text file" time="1.503"></testcase>
-		<testcase classname="Saving And Reading Values From Data Stores Specification" name="Replace API Endpoint placeholders" time="0.463"></testcase>
-		<system-out></system-out>
-		<system-err></system-err>
-	</testsuite>
-	<testsuite id="16" tests="2" failures="0" package="C:\Users\onimalarathna\IdeaProjects\MaxSoft-IntelliAPI\specs\Data Stores\Saving To Data Stores.spec" time="0.058" timestamp="2019-04-29T09:13:51" name="Saving To Data Stores Specification" errors="0" hostname="CV000179">
-		<properties></properties>
-		<testcase classname="Saving To Data Stores Specification" name="Saving to Data Stores" time="0.030"></testcase>
-		<testcase classname="Saving To Data Stores Specification" name="Reading values from Data Store" time="0.028"></testcase>
+		<testcase classname="Write to CSV Specification" name="Get all questions of a deck using a valid deckId" time="9.711"></testcase>
 		<system-out></system-out>
 		<system-err></system-err>
 	</testsuite>

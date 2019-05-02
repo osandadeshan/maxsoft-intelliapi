@@ -35,7 +35,7 @@ import static com.maxsoft.intelliapi.api.Base.INTELLIAPI_LOGS_FILE_PATH;
 
 public class Email {
 
-    public static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
+    private static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
 
     private static final String DEV = "dev";
     private static final String QA = "qa";
@@ -76,7 +76,7 @@ public class Email {
         logger.info(text +"\n");
     }
 
-    private static void setEmailConfigurations(){
+    private static void setEmailConfigurations() {
         try {
             inputEmailPropertyFile = new FileInputStream(CURRENT_DIRECTORY + File.separator + "env" + File.separator + "email"
                     + File.separator + "email.properties");
@@ -202,8 +202,9 @@ public class Email {
 
                 // first part (the html)
                 BodyPart messageBodyPart = new MimeBodyPart();
-                String htmlText = "<h" + emailBodyTitleHeadingSize + ">" + emailBodyTitle + "</h" + emailBodyTitleHeadingSize + ">" +
-                        "<br />" + emailBody + "<br /><br /><br />" + executionResults;
+                String htmlText = "<h2 style=\"color:black;\"> Test Execution Status: " + "<span " + JsonReport.getExecutionStatusColor() + ">" + JsonReport.getExecutionStatus() + "</h2><br />" +
+                        "<h" + emailBodyTitleHeadingSize + ">" + emailBodyTitle + "</h" + emailBodyTitleHeadingSize + ">" + "<br />" +
+                        emailBody + "<br /><br /><br />" + executionResults;
                 messageBodyPart.setContent(htmlText, "text/html");
                 // add it
                 multipart.addBodyPart(messageBodyPart);
