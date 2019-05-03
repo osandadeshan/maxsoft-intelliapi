@@ -1,1 +1,0 @@
-var index = {"Tags":{"get_auth_token":["specs/Pre Test/Save Auth Token To A Text File.html"]},"Specs":{"Save Auth Token To A Text File Specification":["specs/Pre Test/Save Auth Token To A Text File.html"],"Write to CSV Specification":["specs/Pre Test/Write to CSV.html"]}};
