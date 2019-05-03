@@ -1,8 +1,0 @@
-scenario,api,name,description
-Edit a category using alphabetical characters as the name,Edit A Category in Deck Service,API Deck,Test Description for category1
-Edit a category using numeric values as the name,Edit A Category in Deck Service,123456.987,Test Description for category2
-Edit a category using alpha-numeric values as the name,Edit A Category in Deck Service,API89 Name1,Test Description for category3
-Edit a category using alphabetical characters as the description,Edit A Category in Deck Service,API Deck3,API Deck
-Edit a category using numeric values as the description,Edit A Category in Deck Service,API Deck4,123456.987
-Edit a category using alpha-numeric values as the description,Edit A Category in Deck Service,API Deck5,API89 Name1
-Edit a category using empty string as the description,Edit A Category in Deck Service,API Deck6,
