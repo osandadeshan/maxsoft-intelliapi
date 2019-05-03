@@ -52,7 +52,7 @@
         <dependency>
             <groupId>com.thoughtworks.gauge</groupId>
             <artifactId>gauge-java</artifactId>
-            <version>0.6.9</version>
+            <version>0.7.2</version>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
