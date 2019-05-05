@@ -13,7 +13,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import java.io.*;
 import java.util.List;
-import static com.maxsoft.intelliapi.api.Base.CURRENT_DIRECTORY;
+import static com.maxsoft.intelliapi.common.Base.CURRENT_DIRECTORY;
 
 
 public class Csv {

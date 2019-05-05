@@ -30,7 +30,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import static com.maxsoft.intelliapi.api.Base.INTELLIAPI_LOGS_FILE_PATH;
+import static com.maxsoft.intelliapi.common.Base.INTELLIAPI_LOGS_FILE_PATH;
 
 
 public class Email {

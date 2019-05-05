@@ -9,6 +9,7 @@ package com.maxsoft.intelliapi.api;
  * Description  :
  **/
 
+import com.maxsoft.intelliapi.common.Base;
 import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.thoughtworks.gauge.Gauge;
 import io.restassured.http.Header;

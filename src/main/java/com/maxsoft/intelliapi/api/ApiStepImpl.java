@@ -9,6 +9,7 @@ package com.maxsoft.intelliapi.api;
  * Description  :
  **/
 
+import com.maxsoft.intelliapi.common.Base;
 import com.maxsoft.intelliapi.util.fileoperator.TextFile;
 import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.thoughtworks.gauge.Gauge;
@@ -786,6 +787,21 @@ public class ApiStepImpl extends Base {
             finalVal = finalVal * Float.parseFloat(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1))));
         }
         saveToDataStore(dataStoreType, dataStoreVariableName, String.valueOf(finalVal));
+    }
+
+    // Use this method to concat values in data stores and save to a new data store
+    public void concatDataStoreValues(String dataStoreType, String dataStoreVariableName, Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+        String finalString = "";
+        for (TableRow row : rows) {
+            if (row.getCell(columnNames.get(1)).toLowerCase().equals("${space}")) {
+                finalString = finalString.concat(" ");
+            } else {
+                finalString = finalString.concat(readFromDataStore(row.getCell(columnNames.get(0)), row.getCell(columnNames.get(1))));
+            }
+        }
+        saveToDataStore(dataStoreType, dataStoreVariableName, finalString);
     }
 
     // Use this method to save property file values into data stores

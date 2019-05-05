@@ -9,7 +9,7 @@ package com.maxsoft.intelliapi.database.mongo;
  * Description  :
  **/
 
-import com.maxsoft.intelliapi.api.Base;
+import com.maxsoft.intelliapi.common.Base;
 import com.maxsoft.intelliapi.util.database.mongo.MongoOperator;
 import com.maxsoft.intelliapi.util.fileoperator.TextFile;
 import com.thoughtworks.gauge.Table;

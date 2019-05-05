@@ -9,7 +9,7 @@ package com.maxsoft.intelliapi.util.database.mysql;
  * Description  :
  **/
 
-import com.maxsoft.intelliapi.api.Base;
+import com.maxsoft.intelliapi.common.Base;
 import com.maxsoft.intelliapi.util.comparison.Comparison;
 import com.maxsoft.intelliapi.util.comparison.Record;
 import com.mysql.jdbc.CommunicationsException;
