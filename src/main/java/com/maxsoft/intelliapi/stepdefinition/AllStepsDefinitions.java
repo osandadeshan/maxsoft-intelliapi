@@ -359,6 +359,12 @@ public class AllStepsDefinitions{
         apiStepImpl.multiplyDecimalValuesInDataStore(dataStoreType, dataStoreVariableName, table);
     }
 
+    // Use this method to concat values in data stores and save to a new data store
+    @Step("Concat values in data stores and save it in a <dataStoreType> type data store named <dataStoreVariableName> <table>")
+    public void concatDataStoreValues(String dataStoreType, String dataStoreVariableName, Table table) {
+        apiStepImpl.concatDataStoreValues(dataStoreType, dataStoreVariableName, table);
+    }
+
     // Use this method to save current epochTime into data stores
     @Step("And the user saves the current epoch time in <secondsOrMillis> inside data stores <table>")
     public void saveCurrentEpochTime(String secondsOrMillis, Table table) {

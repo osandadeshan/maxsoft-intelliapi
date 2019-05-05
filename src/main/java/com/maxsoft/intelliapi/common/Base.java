@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.api;
+package com.maxsoft.intelliapi.common;
 
 /**
  * Project Name : MaxSoft-IntelliAPI
@@ -12,6 +12,7 @@ package com.maxsoft.intelliapi.api;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
+import com.maxsoft.intelliapi.api.Endpoints;
 import com.maxsoft.intelliapi.util.fileoperator.Csv;
 import com.maxsoft.intelliapi.util.fileoperator.TextFile;
 import com.maxsoft.intelliapi.util.reader.ApiDocument;
@@ -45,7 +46,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import static com.maxsoft.intelliapi.api.Base.BodyType.JSON;
+import static com.maxsoft.intelliapi.common.Base.BodyType.JSON;
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
 

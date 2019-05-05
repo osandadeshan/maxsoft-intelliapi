@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import static com.maxsoft.intelliapi.api.Base.INTELLIAPI_LOGS_FILE_PATH;
+import static com.maxsoft.intelliapi.common.Base.INTELLIAPI_LOGS_FILE_PATH;
 
 
 public class Comparison {

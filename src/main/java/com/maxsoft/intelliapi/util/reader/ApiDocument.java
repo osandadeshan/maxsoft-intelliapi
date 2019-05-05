@@ -9,7 +9,7 @@ package com.maxsoft.intelliapi.util.reader;
  * Description  :
  **/
 
-import com.maxsoft.intelliapi.api.Base;
+import com.maxsoft.intelliapi.common.Base;
 import com.maxsoft.intelliapi.util.fileoperator.Excel;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;

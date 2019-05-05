@@ -18,8 +18,8 @@ import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import static com.maxsoft.intelliapi.api.Base.INTELLIAPI_LOGS_FILE_PATH;
-import static com.maxsoft.intelliapi.api.Base.getSavedValueForScenario;
+import static com.maxsoft.intelliapi.common.Base.INTELLIAPI_LOGS_FILE_PATH;
+import static com.maxsoft.intelliapi.common.Base.getSavedValueForScenario;
 
 
 public abstract class TextFile {

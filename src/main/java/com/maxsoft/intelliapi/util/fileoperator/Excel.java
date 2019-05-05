@@ -9,7 +9,7 @@ package com.maxsoft.intelliapi.util.fileoperator;
  * Description  :
  **/
 
-import com.maxsoft.intelliapi.api.Base;
+import com.maxsoft.intelliapi.common.Base;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
