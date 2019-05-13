@@ -123,6 +123,11 @@ The main reason for developing this framework is to provide an easy way for Tech
 4) Press **Enter**.
 <br />
 
+## Support Forum
+[Gitter] (https://gitter.im/MaxSoft-IntelliAPI/community)
+
+<br />
+
 ## License
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/License_icon-mit-2.svg/2000px-License_icon-mit-2.svg.png" alt="MIT License" width="100" height="100"/> [MaxSoft IntelliAPI](https://medium.com/intelliapi) is released under [MIT License](https://opensource.org/licenses/MIT)
 
