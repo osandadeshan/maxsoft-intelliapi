@@ -124,7 +124,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 <br />
 
 ## Support Forum
-[Gitter] (https://gitter.im/MaxSoft-IntelliAPI/community)
+[Gitter](https://gitter.im/MaxSoft-IntelliAPI/community)
 
 <br />
 
