@@ -16,15 +16,12 @@ import com.mysql.jdbc.CommunicationsException;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
-import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 
 public class MySqlOperator extends Base {
@@ -36,29 +33,15 @@ public class MySqlOperator extends Base {
     ArrayList<Record> recordListForValuesInDatabase = new ArrayList<Record>();
     ArrayList<Record> recordListForValuesInSpecFile = new ArrayList<Record>();
 
-    private static Logger logger = Logger.getLogger(MySqlOperator.class.getName());
-    private static FileHandler fileHandler;
-    private static SimpleFormatter formatter = new SimpleFormatter();
-
-    static {
-        try {
-            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    private final static Logger logger = Logger.getLogger(MySqlOperator.class.getName());
 
     public static void printInfo(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
         logger.info(text +"\n");
         Gauge.writeMessage(text);
     }
 
-    public static void printWarning(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
-        logger.warning(text +"\n");
+    public static void printError(String text){
+        logger.error(text +"\n");
         Gauge.writeMessage(text);
     }
 
@@ -107,7 +90,7 @@ public class MySqlOperator extends Base {
         try {
             resultSet = connectDatabase().executeQuery(query);
         } catch (SQLException e) {
-            printWarning("The executed query is invalid");
+            printError("The executed query is invalid");
             e.printStackTrace();
         }
         // Adding query to the Data Store

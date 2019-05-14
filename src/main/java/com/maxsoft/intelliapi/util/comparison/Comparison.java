@@ -10,15 +10,10 @@ package com.maxsoft.intelliapi.util.comparison;
  **/
 
 import com.thoughtworks.gauge.Gauge;
-
-import java.io.IOException;
+import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-import static com.maxsoft.intelliapi.common.Base.INTELLIAPI_LOGS_FILE_PATH;
 
 
 public class Comparison {
@@ -26,21 +21,9 @@ public class Comparison {
 	static ArrayList<Record> mismatchedResultsInSpecFile = new ArrayList<Record>();
 	static ArrayList<Record> mismatchedResultsInDb = new ArrayList<Record>();
 
-	private static Logger logger = Logger.getLogger(Comparison.class.getName());
-	private static FileHandler fileHandler;
-	private static SimpleFormatter formatter = new SimpleFormatter();
-
-	static {
-		try {
-			fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+	private final static Logger logger = Logger.getLogger(Comparison.class.getName());
 
 	public static void printInfo(String text){
-		logger.addHandler(fileHandler);
-		fileHandler.setFormatter(formatter);
 		logger.info(text +"\n");
 		Gauge.writeMessage(text);
 	}

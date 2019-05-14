@@ -43,12 +43,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 import static com.maxsoft.intelliapi.common.Base.BodyType.JSON;
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
+import org.apache.log4j.Logger;
 
 
 public class Base {
@@ -62,7 +60,6 @@ public class Base {
     public String AUTHENTICATION_FIRST_VALUE = System.getenv("authentication_first_value");
     public static String CURRENT_DIRECTORY = System.getProperty("user.dir");
     public String ACCESS_TOKEN_FILE_PATH = CURRENT_DIRECTORY + File.separator + System.getenv("access_token_file_path");
-    public static String INTELLIAPI_LOGS_FILE_PATH = CURRENT_DIRECTORY + File.separator + "logs" + File.separator + "intelliapi.log";
     public static String ENVIRONMENT = System.getenv("environment");
     public static String OS = System.getProperty("os.name");
     public String baseUrl = setBaseUrl();
@@ -72,17 +69,7 @@ public class Base {
     private static Csv csv = new Csv();
     Map<String, String> formParams = new HashMap<>();
 
-    private static Logger logger = Logger.getLogger(Base.class.getName());
-    private static FileHandler fileHandler;
-    private static SimpleFormatter formatter = new SimpleFormatter();
-
-    static {
-        try {
-            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    private final static Logger logger = Logger.getLogger(Base.class.getName());
 
 
     public static String getFirstCharacter(String string){
@@ -117,16 +104,12 @@ public class Base {
     }
 
     public static void printInfo(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
         logger.info(text +"\n");
         Gauge.writeMessage(text);
     }
 
-    public static void printWarning(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
-        logger.warning(text +"\n");
+    public static void printError(String text){
+        logger.error(text +"\n");
         Gauge.writeMessage(text);
     }
 
@@ -208,7 +191,7 @@ public class Base {
             String value = (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
             return value;
         } catch (Exception ex) {
-            printWarning("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            printError("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
             return "";
         }
     }
@@ -220,7 +203,7 @@ public class Base {
             String value = (String) specDataStore.get(variableNameOfValueStoredInDataStore);
             return value;
         } catch (Exception ex) {
-            printWarning("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
+            printError("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]\n" + ex.getMessage());
             return "";
         }
     }
@@ -231,7 +214,7 @@ public class Base {
             DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
             scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
         } catch (Exception ex) {
-            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+            printError("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
         }
     }
 
@@ -241,7 +224,7 @@ public class Base {
             DataStore specDataStore = DataStoreFactory.getSpecDataStore();
             specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
         } catch (Exception ex) {
-            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
+            printError("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]\n" + ex.getMessage());
         }
     }
 
@@ -253,7 +236,7 @@ public class Base {
             printInfo("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            printWarning("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printError("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -266,7 +249,7 @@ public class Base {
             printInfo("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            printWarning("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printError("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -279,7 +262,7 @@ public class Base {
             printInfo("Text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
             return value;
         } catch (Exception ex) {
-            printWarning("Failed to read the text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printError("Failed to read the text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
             return "";
         }
     }
@@ -291,7 +274,7 @@ public class Base {
             scenarioStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
             printInfo("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         } catch (Exception ex) {
-            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printError("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Scenario Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         }
     }
 
@@ -302,7 +285,7 @@ public class Base {
             specDataStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
             printInfo("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         } catch (Exception ex) {
-            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printError("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Specification Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         }
     }
 
@@ -313,7 +296,7 @@ public class Base {
             suiteStore.put(variableNameOfValueToBeStoredInDataStore, valueToBeStoredInDataStore);
             printInfo("\"" + valueToBeStoredInDataStore + "\" is successfully saved as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         } catch (Exception ex) {
-            printWarning("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
+            printError("\"" + valueToBeStoredInDataStore + "\" is failed to save as a text in Suite Data Store [" + variableNameOfValueToBeStoredInDataStore + "]");
         }
     }
 
@@ -1211,7 +1194,7 @@ public class Base {
             TextFile.write(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
             printInfo("Successfully saved the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"");
         } catch (Exception ex) {
-            printWarning("Failed to save the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
+            printError("Failed to save the access token into the text file in the directory of \"" + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
         }
     }
 
@@ -1238,7 +1221,7 @@ public class Base {
             TextFile.write(jsonPathValue, CURRENT_DIRECTORY + filePath);
             printInfo("Successfully saved the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"");
         } catch (Exception ex) {
-            printWarning("Failed to save the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
+            printError("Failed to save the value inside \"" +jsonPath+ "\" into the text file in the directory of \"" + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
         }
     }
 

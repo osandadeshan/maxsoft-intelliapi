@@ -12,6 +12,8 @@ package com.maxsoft.intelliapi.util.email;
 import com.maxsoft.intelliapi.util.charts.BarChart;
 import com.maxsoft.intelliapi.util.charts.PieChart;
 import com.maxsoft.intelliapi.util.reader.JsonReport;
+import com.thoughtworks.gauge.Gauge;
+import org.apache.log4j.Logger;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import java.io.File;
@@ -19,9 +21,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -30,7 +29,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import static com.maxsoft.intelliapi.common.Base.INTELLIAPI_LOGS_FILE_PATH;
 
 
 public class Email {
@@ -58,22 +56,11 @@ public class Email {
     private static String emailFooterLine2 = "";
     private static String emailFooterLine3 = "";
 
-    private static Logger logger = Logger.getLogger(Email.class.getName());
-    private static FileHandler fileHandler;
-    private static SimpleFormatter formatter = new SimpleFormatter();
-
-    static {
-        try {
-            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    private final static Logger logger = Logger.getLogger(Email.class.getName());
 
     public static void printInfo(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
         logger.info(text +"\n");
+        Gauge.writeMessage(text);
     }
 
     private static void setEmailConfigurations() {

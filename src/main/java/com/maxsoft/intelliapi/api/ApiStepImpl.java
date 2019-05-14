@@ -20,9 +20,7 @@ import org.json.JSONException;
 import org.json.simple.parser.ParseException;
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+import org.apache.log4j.Logger;
 
 
 public class ApiStepImpl extends Base {
@@ -30,21 +28,9 @@ public class ApiStepImpl extends Base {
     public static final String FILE_SYNTAX = "<file:";
     public static final int FILE_SYNTAX_CHARACTER_COUNT = FILE_SYNTAX.length();
 
-    private static Logger logger = Logger.getLogger(ApiStepImpl.class.getName());
-    private static FileHandler fileHandler;
-    private static SimpleFormatter formatter = new SimpleFormatter();
-
-    static {
-        try {
-            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    private final static Logger logger = Logger.getLogger(ApiStepImpl.class.getName());
 
     public static void printInfo(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
         logger.info(text +"\n");
         Gauge.writeMessage(text);
     }

@@ -13,12 +13,10 @@ import com.maxsoft.intelliapi.common.Base;
 import com.maxsoft.intelliapi.util.reader.ApiDocument;
 import com.thoughtworks.gauge.Gauge;
 import io.restassured.http.Header;
+import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 
 public class Headers extends Base {
@@ -34,21 +32,9 @@ public class Headers extends Base {
         }
     }
 
-    private static Logger logger = Logger.getLogger(Headers.class.getName());
-    private static FileHandler fileHandler;
-    private static SimpleFormatter formatter = new SimpleFormatter();
-
-    static {
-        try {
-            fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    private final static Logger logger = Logger.getLogger(Headers.class.getName());
 
     public static void printInfo(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
         logger.info(text +"\n");
         Gauge.writeMessage(text);
     }

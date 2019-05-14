@@ -12,11 +12,9 @@ package com.maxsoft.intelliapi.database.mysql;
 import com.maxsoft.intelliapi.util.database.mysql.MySqlOperator;
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Table;
+import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 
 public class MySqlStepImpl extends MySqlOperator {
@@ -27,24 +25,12 @@ public class MySqlStepImpl extends MySqlOperator {
 	private static final String EMPTY_QUERY_MESSAGE = "No records found for the executed query";
 	private static final String INVALID_QUERY_MESSAGE = "The executed query is invalid";
 
-    private static Logger logger = Logger.getLogger(MySqlStepImpl.class.getName());
-    private static FileHandler fileHandler;
-    private static SimpleFormatter formatter = new SimpleFormatter();
+	private final static Logger logger = Logger.getLogger(MySqlStepImpl.class.getName());
 
-	static {
-		try {
-			fileHandler = new FileHandler(INTELLIAPI_LOGS_FILE_PATH, true);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public static void printInfo(String text){
+		logger.info(text +"\n");
+		Gauge.writeMessage(text);
 	}
-
-    public static void printInfo(String text){
-        logger.addHandler(fileHandler);
-        fileHandler.setFormatter(formatter);
-        logger.info(text +"\n");
-        Gauge.writeMessage(text);
-    }
 
 	public MySqlStepImpl() throws IOException {
 	}
