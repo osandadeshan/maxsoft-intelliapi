@@ -3,7 +3,7 @@
 
 ## Introduction
 The main reason for developing this framework is to provide an easy way for Technical QA, Developer or Non-technical QA to perform API testing in an easy manner.
-<br />
+<br /><br />
 
 ## Technologies/Frameworks used
 - Java
@@ -121,6 +121,11 @@ The main reason for developing this framework is to provide an easy way for Tech
 3) Enter the name of the **.bat** file and the extension. \
 `Dev BVT.bat`
 4) Press **Enter**.
+<br />
+
+## Support Forum
+[Gitter](https://gitter.im/MaxSoft-IntelliAPI/community)
+
 <br />
 
 ## License
