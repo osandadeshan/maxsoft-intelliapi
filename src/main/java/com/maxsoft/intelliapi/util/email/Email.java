@@ -59,7 +59,7 @@ public class Email {
     private final static Logger logger = Logger.getLogger(Email.class.getName());
 
     public static void printInfo(String text){
-        logger.info(text +"\n");
+        logger.info(text);
         Gauge.writeMessage(text);
     }
 

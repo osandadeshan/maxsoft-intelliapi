@@ -24,12 +24,12 @@ public abstract class TextFile {
     private final static Logger logger = Logger.getLogger(TextFile.class.getName());
 
     public static void printInfo(String text){
-        logger.info(text +"\n");
+        logger.info(text);
         Gauge.writeMessage(text);
     }
 
     public static void printError(String text){
-        logger.error(text +"\n");
+        logger.error(text);
         Gauge.writeMessage(text);
     }
 

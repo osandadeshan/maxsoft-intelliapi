@@ -31,7 +31,7 @@ public abstract class JsonPayload extends Base {
 	private final static Logger logger = Logger.getLogger(JsonPayload.class.getName());
 
 	public static void printInfo(String text){
-		logger.info(text +"\n");
+		logger.info(text);
 		Gauge.writeMessage(text);
 	}
 

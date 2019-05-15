@@ -35,7 +35,7 @@ public class Headers extends Base {
     private final static Logger logger = Logger.getLogger(Headers.class.getName());
 
     public static void printInfo(String text){
-        logger.info(text +"\n");
+        logger.info(text);
         Gauge.writeMessage(text);
     }
 

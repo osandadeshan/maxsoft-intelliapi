@@ -104,12 +104,12 @@ public class Base {
     }
 
     public static void printInfo(String text){
-        logger.info(text +"\n");
+        logger.info(text);
         Gauge.writeMessage(text);
     }
 
     public static void printError(String text){
-        logger.error(text +"\n");
+        logger.error(text);
         Gauge.writeMessage(text);
     }
 
@@ -233,10 +233,10 @@ public class Base {
             // Fetching Value from the Data Store
             DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
             String value = (String) scenarioStore.get(variableNameOfValueStoredInDataStore);
-            printInfo("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            printInfo("Text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n");
             return value;
         } catch (Exception ex) {
-            printError("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printError("Failed to read the text inside Scenario Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n");
             return "";
         }
     }
@@ -246,10 +246,10 @@ public class Base {
             // Fetching Value from the Data Store
             DataStore specDataStore = DataStoreFactory.getSpecDataStore();
             String value = (String) specDataStore.get(variableNameOfValueStoredInDataStore);
-            printInfo("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            printInfo("Text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n");
             return value;
         } catch (Exception ex) {
-            printError("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printError("Failed to read the text inside Specification Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n");
             return "";
         }
     }
@@ -259,10 +259,10 @@ public class Base {
             // Fetching Value from the Data Store
             DataStore suiteStore = DataStoreFactory.getSuiteDataStore();
             String value = (String) suiteStore.get(variableNameOfValueStoredInDataStore);
-            printInfo("Text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n\n");
+            printInfo("Text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "] is: \"" + value + "\"" + "\n");
             return value;
         } catch (Exception ex) {
-            printError("Failed to read the text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n\n");
+            printError("Failed to read the text inside Suite Data Store [" + variableNameOfValueStoredInDataStore + "]" + "\n");
             return "";
         }
     }

@@ -18,52 +18,44 @@ public class ExecutionContextHook {
     private final static Logger logger = Logger.getLogger(ExecutionContextHook.class.getName());
 
     public static void printInfo(String text){
-        logger.info(text +"\n");
+        logger.info(text);
     }
 
     @BeforeSpec
     public void logSpecInfo(ExecutionContext context) {
         String specName = context.getCurrentSpecification().getName();
-        printInfo("#########################################################################################################################################################################################");
-        printInfo("Running Specification: " + specName);
-        printInfo("#########################################################################################################################################################################################");
+        printInfo("Running Specification: " + specName + "\n\n\n\n");
     }
 
     @BeforeScenario
     public void logScenarioInfo(ExecutionContext context) {
         String scenarioName = context.getCurrentScenario().getName();
-        printInfo("_________________________________________________________________________________________________________________________________________________________________________________________");
-        printInfo("Running Scenario: " + scenarioName);
-        printInfo("_________________________________________________________________________________________________________________________________________________________________________________________");
+        printInfo("Running Scenario: " + scenarioName + "\n\n\n");
     }
 
     @BeforeStep
     public void logStepInfo(ExecutionContext context) {
         String stepName = context.getCurrentStep().getText();
-        printInfo("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        printInfo("Running Step: " + stepName);
-        printInfo("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        printInfo("Running Step: " + stepName + "\n");
     }
 
     @AfterSpec
     public void closeSpecInfo(ExecutionContext context) {
         String specName = context.getCurrentSpecification().getName();
-        printInfo("Finished Execution of Specification: " + specName);
-        printInfo("#########################################################################################################################################################################################" + "\n\n\n");
+        printInfo("Finished Execution of Specification: " + specName + "\n\n\n\n\n\n");
     }
 
     @AfterScenario
     public void closeScenarioInfo(ExecutionContext context) {
         String scenarioName = context.getCurrentScenario().getName();
-        printInfo("Finished Execution of Scenario: " + scenarioName);
-        printInfo("_________________________________________________________________________________________________________________________________________________________________________________________" + "\n\n");
+        printInfo("Finished Execution of Scenario: " + scenarioName + "\n\n\n\n");
     }
 
     @AfterStep
     public void closeStepInfo(ExecutionContext context) {
         String stepName = context.getCurrentStep().getText();
-        printInfo("Finished Execution of Step: " + stepName);
-        printInfo("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" + "\n");
+        printInfo("\n");
+        printInfo("Finished Execution of Step: " + stepName + "\n\n\n");
     }
 
 

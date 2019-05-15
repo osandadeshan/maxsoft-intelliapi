@@ -28,7 +28,7 @@ public class MySqlStepImpl extends MySqlOperator {
 	private final static Logger logger = Logger.getLogger(MySqlStepImpl.class.getName());
 
 	public static void printInfo(String text){
-		logger.info(text +"\n");
+		logger.info(text);
 		Gauge.writeMessage(text);
 	}
 
