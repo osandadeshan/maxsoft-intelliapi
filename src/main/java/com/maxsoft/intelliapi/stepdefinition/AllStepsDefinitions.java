@@ -383,6 +383,12 @@ public class AllStepsDefinitions{
         apiStepImpl.saveExcelDataToDataStore(table);
     }
 
+    // Use this method to wait for a given time period
+    @Step("And the user waits <seconds> seconds")
+    public void waitBySeconds(String seconds){
+        apiStepImpl.waitBySeconds(Integer.parseInt(seconds));
+    }
+
     @Step("Given a user successfully connected to the MySQL Driver")
     public void loadMySqlDriver() {
         mySQLStepImpl.loadMySqlDriver();

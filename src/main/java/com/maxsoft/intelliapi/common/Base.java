@@ -46,6 +46,7 @@ import java.util.concurrent.TimeUnit;
 import static com.maxsoft.intelliapi.common.Base.BodyType.JSON;
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
+import static java.lang.Thread.sleep;
 import org.apache.log4j.Logger;
 
 
@@ -71,6 +72,14 @@ public class Base {
 
     private final static Logger logger = Logger.getLogger(Base.class.getName());
 
+
+    public void waitBySeconds(int seconds){
+        try {
+            sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static String getFirstCharacter(String string){
         return string.substring(0, 1);

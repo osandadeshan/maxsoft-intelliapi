@@ -31,6 +31,7 @@ Description  : This is an executable specification file which follows markdown s
    |Data Store Type|Data Store Variable Name|
    |---------------|------------------------|
    |scenario       |epochTime               |
+* And the user waits "10" seconds
 * And the user converts the "yyyy-MM-dd'T'HH:mm:ss.SSSZ" formatted "2018-09-25T11:56:00.000-0000" timestamp into epoch time in "Milliseconds" and saves inside data stores 
 
    |Data Store Type|Data Store Variable Name|
