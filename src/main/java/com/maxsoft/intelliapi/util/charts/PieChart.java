@@ -20,29 +20,23 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-
 public class PieChart {
 
     public static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
-
-    static Properties pieChartProperties = new Properties();
-    static InputStream inputPieChartPropertyFile = null;
-
     public final static Color DARK_GRAY = new Color(96, 96, 96);
     public final static Color GREEN = new Color(76, 153, 0);
     public final static Color RED = new Color(205, 0, 0);
+    static Properties pieChartProperties = new Properties();
+    static String fileSeparator = File.separator;
+    static InputStream inputPieChartPropertyFile = null;
+    static String PIE_CHART_TITLE;
+    static String PIE_CHART_IMAGE_PATH;
+    static String PIE_CHART_IMAGE_NAME;
 
-    static String PIE_CHART_TITLE = "";
-    static String PIE_CHART_IMAGE_PATH = "";
-    static String PIE_CHART_IMAGE_NAME = "";
-
-    public static void save(String passedCount, String failedCount, String skippedCount)
-            throws IOException {
-
+    public static void save(String passedCount, String failedCount, String skippedCount) throws IOException {
         try {
-            inputPieChartPropertyFile = new FileInputStream(CURRENT_DIRECTORY + File.separator + "env" + File.separator + "chart"
-                    + File.separator + "piechart.properties");
-            // load a properties file
+            inputPieChartPropertyFile = new FileInputStream(CURRENT_DIRECTORY + fileSeparator + "env"
+                    + fileSeparator + "chart" + fileSeparator + "piechart.properties");
             pieChartProperties.load(inputPieChartPropertyFile);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -61,11 +55,12 @@ public class PieChart {
         PIE_CHART_IMAGE_PATH = pieChartProperties.getProperty("pie_chart_image_path");
         PIE_CHART_IMAGE_NAME = pieChartProperties.getProperty("pie_chart_image_name");
 
-        String pieChartDir = CURRENT_DIRECTORY + File.separator + PIE_CHART_IMAGE_PATH;
-        String imageDir = pieChartDir + File.separator + PIE_CHART_IMAGE_NAME;
+        String pieChartDir = CURRENT_DIRECTORY + fileSeparator + PIE_CHART_IMAGE_PATH;
+        String imageDir = pieChartDir + fileSeparator + PIE_CHART_IMAGE_NAME;
 
         // Create PieChart
-        org.knowm.xchart.PieChart chart = new PieChartBuilder().width(640).height(480).title(PIE_CHART_TITLE).theme(Styler.ChartTheme.GGPlot2).build();
+        org.knowm.xchart.PieChart chart = new PieChartBuilder().width(640).height(480).title(PIE_CHART_TITLE)
+                .theme(Styler.ChartTheme.GGPlot2).build();
 
         // Customize PieChart
         chart.getStyler().setLegendVisible(true);
@@ -90,7 +85,7 @@ public class PieChart {
 
         // Save it, if the pi-chart directory is not there create it
         File directory = new File(pieChartDir);
-        if (! directory.exists()){
+        if (!directory.exists()) {
             directory.mkdirs();
         }
         BitmapEncoder.saveBitmap(chart, imageDir, BitmapEncoder.BitmapFormat.PNG);
@@ -99,13 +94,11 @@ public class PieChart {
         //BitmapEncoder.saveBitmapWithDPI(chart, filePath, BitmapEncoder.BitmapFormat.PNG, 300);
     }
 
-    public static String getSavedPieChartImageName(){
+    public static String getSavedPieChartImageName() {
         return PIE_CHART_IMAGE_NAME;
     }
 
-    public static String getSavedPieChartImagePath(){
-        return CURRENT_DIRECTORY + File.separator + PIE_CHART_IMAGE_PATH + File.separator + PIE_CHART_IMAGE_NAME + ".PNG";
+    public static String getSavedPieChartImagePath() {
+        return CURRENT_DIRECTORY + fileSeparator + PIE_CHART_IMAGE_PATH + fileSeparator + PIE_CHART_IMAGE_NAME + ".png";
     }
-
-
 }

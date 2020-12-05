@@ -25,25 +25,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-
 public class JsonReport {
 
     private static final String CURRENT_DIRECTORY = System.getProperty("user.dir");
-    private static Properties propertyFile = new Properties();
+    private static final Properties propertyFile = new Properties();
+    private static final DecimalFormat df = new DecimalFormat(".##");
+    static String fileSeparator = File.separator;
+    private static final String propertyFilePath = CURRENT_DIRECTORY + fileSeparator + "env" + fileSeparator + "default"
+            + fileSeparator + "default.properties";
     private static InputStream input = null;
-    private static String propertyFilePath = CURRENT_DIRECTORY + File.separator + "env" + File.separator + "default"
-            + File.separator + "default.properties";
-
-    private static DecimalFormat df = new DecimalFormat(".##");
 
     private static String readFile(String path, Charset encoding) throws IOException {
         byte[] encoded = Files.readAllBytes(Paths.get(path));
         return new String(encoded, encoding);
     }
 
-    private static String milliSecondsToTime(int millisec) {
-        int milli = millisec % 1000;
-        int sec = millisec / 1000;
+    private static String milliSecondsToTime(int milliseconds) {
+        int milli = milliseconds % 1000;
+        int sec = milliseconds / 1000;
         int second = sec % 60;
         int minute = sec / 60;
         if (minute >= 60) {
@@ -57,12 +56,12 @@ public class JsonReport {
     }
 
     public static String getExecutionStatusColor() {
-        switch (getExecutionStatus().toLowerCase()){
-            case "pass":
+        switch (getExecutionStatus().toLowerCase()) {
+            case "passed":
                 return "style=\"color:green;\"";
-            case "fail":
+            case "failed":
                 return "style=\"color:red;\"";
-            case "skip":
+            case "skipped":
                 return "style=\"color:gray;\"";
             default:
                 return "";
@@ -72,7 +71,6 @@ public class JsonReport {
     public static String getExecutionStatus() {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -85,10 +83,10 @@ public class JsonReport {
                 }
             }
         }
-        String executionStatus = "";
+        String executionStatus = null;
         try {
-            String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                    "json-report" + File.separator + "result.json";
+            String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir") + fileSeparator +
+                    "json-report" + fileSeparator + "result.json";
 
             Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(readFile(jsonFilePath, Charset.defaultCharset()));
 
@@ -103,7 +101,6 @@ public class JsonReport {
     public static String getPassedScenarioCount() {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -116,10 +113,10 @@ public class JsonReport {
                 }
             }
         }
-        String passedScenarioCount = "";
+        String passedScenarioCount = null;
         try {
-            String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                    "json-report" + File.separator + "result.json";
+            String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir") + fileSeparator +
+                    "json-report" + fileSeparator + "result.json";
 
             Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(readFile(jsonFilePath, Charset.defaultCharset()));
 
@@ -133,7 +130,6 @@ public class JsonReport {
     public static String getFailedScenarioCount() {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -146,10 +142,10 @@ public class JsonReport {
                 }
             }
         }
-        String failedScenariosCount = "";
+        String failedScenariosCount = null;
         try {
-            String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                    "json-report" + File.separator + "result.json";
+            String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir") + fileSeparator +
+                    "json-report" + fileSeparator + "result.json";
 
             Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(readFile(jsonFilePath, Charset.defaultCharset()));
 
@@ -163,7 +159,6 @@ public class JsonReport {
     public static String getSkippedScenarioCount() {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -176,10 +171,10 @@ public class JsonReport {
                 }
             }
         }
-        String skippedScenariosCount = "";
+        String skippedScenariosCount = null;
         try {
-            String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                    "json-report" + File.separator + "result.json";
+            String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir") + fileSeparator +
+                    "json-report" + fileSeparator + "result.json";
 
             Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(readFile(jsonFilePath, Charset.defaultCharset()));
 
@@ -193,7 +188,6 @@ public class JsonReport {
     public static List<String> getSpecHeadingList() throws IOException, ParseException {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -207,8 +201,8 @@ public class JsonReport {
             }
         }
 
-        String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                "json-report" + File.separator + "result.json";
+        String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                + fileSeparator + "json-report" + fileSeparator + "result.json";
 
         JSONParser parser = new JSONParser();
 
@@ -230,7 +224,6 @@ public class JsonReport {
     public static List<String> getPassedScenarioCountList() throws IOException, ParseException {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -244,8 +237,8 @@ public class JsonReport {
             }
         }
 
-        String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                "json-report" + File.separator + "result.json";
+        String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                + fileSeparator + "json-report" + fileSeparator + "result.json";
 
         JSONParser parser = new JSONParser();
 
@@ -267,7 +260,6 @@ public class JsonReport {
     public static List<String> getPassedScenarioPercentageList() throws IOException, ParseException {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -281,8 +273,8 @@ public class JsonReport {
             }
         }
 
-        String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                "json-report" + File.separator + "result.json";
+        String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                + fileSeparator + "json-report" + fileSeparator + "result.json";
 
         JSONParser parser = new JSONParser();
 
@@ -295,9 +287,9 @@ public class JsonReport {
 
         for (Object object : jsonArray) {
             JSONObject jsonObject1 = (JSONObject) object;
-            int passedScenarioCount = Integer.valueOf(jsonObject1.get("passedScenarioCount").toString());
-            int failedScenarioCount = Integer.valueOf(jsonObject1.get("failedScenarioCount").toString());
-            int skippedScenarioCount = Integer.valueOf(jsonObject1.get("skippedScenarioCount").toString());
+            int passedScenarioCount = Integer.parseInt(jsonObject1.get("passedScenarioCount").toString());
+            int failedScenarioCount = Integer.parseInt(jsonObject1.get("failedScenarioCount").toString());
+            int skippedScenarioCount = Integer.parseInt(jsonObject1.get("skippedScenarioCount").toString());
             int totalScenarioCount = passedScenarioCount + failedScenarioCount + skippedScenarioCount;
             double passedScenariosPercentage = 0;
             if (totalScenarioCount != 0) {
@@ -311,7 +303,6 @@ public class JsonReport {
     public static List<String> getFailedScenarioCountList() throws IOException, ParseException {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -325,8 +316,8 @@ public class JsonReport {
             }
         }
 
-        String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                "json-report" + File.separator + "result.json";
+        String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                + fileSeparator + "json-report" + fileSeparator + "result.json";
 
         JSONParser parser = new JSONParser();
 
@@ -348,7 +339,6 @@ public class JsonReport {
     public static List<String> getFailedScenarioPercentageList() throws IOException, ParseException {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -362,8 +352,8 @@ public class JsonReport {
             }
         }
 
-        String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                "json-report" + File.separator + "result.json";
+        String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                + fileSeparator + "json-report" + fileSeparator + "result.json";
 
         JSONParser parser = new JSONParser();
 
@@ -376,13 +366,14 @@ public class JsonReport {
 
         for (Object object : jsonArray) {
             JSONObject jsonObject1 = (JSONObject) object;
-            int passedScenarioCount = Integer.valueOf(jsonObject1.get("passedScenarioCount").toString());
-            int failedScenarioCount = Integer.valueOf(jsonObject1.get("failedScenarioCount").toString());
-            int skippedScenarioCount = Integer.valueOf(jsonObject1.get("skippedScenarioCount").toString());
+            int passedScenarioCount = Integer.parseInt(jsonObject1.get("passedScenarioCount").toString());
+            int failedScenarioCount = Integer.parseInt(jsonObject1.get("failedScenarioCount").toString());
+            int skippedScenarioCount = Integer.parseInt(jsonObject1.get("skippedScenarioCount").toString());
             int totalScenarioCount = passedScenarioCount + failedScenarioCount + skippedScenarioCount;
             double failedScenariosPercentage = 0;
             if (totalScenarioCount != 0) {
-                failedScenariosPercentage = Double.parseDouble(df.format((double) (failedScenarioCount * 100) /(double) totalScenarioCount));
+                failedScenariosPercentage = Double.parseDouble(df.format((double) (failedScenarioCount * 100)
+                        / (double) totalScenarioCount));
             }
             failedScenariosPercentageList.add(failedScenariosPercentage + "%");
         }
@@ -392,7 +383,6 @@ public class JsonReport {
     public static List<String> getSkippedScenarioCountList() throws IOException, ParseException {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -406,8 +396,8 @@ public class JsonReport {
             }
         }
 
-        String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                "json-report" + File.separator + "result.json";
+        String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                + fileSeparator + "json-report" + fileSeparator + "result.json";
 
         JSONParser parser = new JSONParser();
 
@@ -429,7 +419,6 @@ public class JsonReport {
     public static List<String> getSkippedScenarioPercentageList() throws IOException, ParseException {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -443,8 +432,8 @@ public class JsonReport {
             }
         }
 
-        String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                "json-report" + File.separator + "result.json";
+        String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                + fileSeparator + "json-report" + fileSeparator + "result.json";
 
         JSONParser parser = new JSONParser();
 
@@ -457,13 +446,14 @@ public class JsonReport {
 
         for (Object object : jsonArray) {
             JSONObject jsonObject1 = (JSONObject) object;
-            int passedScenarioCount = Integer.valueOf(jsonObject1.get("passedScenarioCount").toString());
-            int failedScenarioCount = Integer.valueOf(jsonObject1.get("failedScenarioCount").toString());
-            int skippedScenarioCount = Integer.valueOf(jsonObject1.get("skippedScenarioCount").toString());
+            int passedScenarioCount = Integer.parseInt(jsonObject1.get("passedScenarioCount").toString());
+            int failedScenarioCount = Integer.parseInt(jsonObject1.get("failedScenarioCount").toString());
+            int skippedScenarioCount = Integer.parseInt(jsonObject1.get("skippedScenarioCount").toString());
             int totalScenarioCount = passedScenarioCount + failedScenarioCount + skippedScenarioCount;
             double skippedScenariosPercentage = 0;
-            if(totalScenarioCount != 0){
-                skippedScenariosPercentage = Double.parseDouble(df.format((double) (skippedScenarioCount * 100) / (double) totalScenarioCount));
+            if (totalScenarioCount != 0) {
+                skippedScenariosPercentage = Double.parseDouble(df.format((double) (skippedScenarioCount * 100)
+                        / (double) totalScenarioCount));
             }
             skippedScenariosPercentageList.add(skippedScenariosPercentage + "%");
         }
@@ -473,7 +463,6 @@ public class JsonReport {
     public static String getExecutionResults() {
         try {
             input = new FileInputStream(propertyFilePath);
-            // load a properties file
             propertyFile.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -487,12 +476,12 @@ public class JsonReport {
             }
         }
 
-        try
-        {
-            String jsonFilePath = CURRENT_DIRECTORY + File.separator + propertyFile.getProperty("gauge_reports_dir") + File.separator +
-                    "json-report" + File.separator + "result.json";
+        try {
+            String jsonFilePath = CURRENT_DIRECTORY + fileSeparator + propertyFile.getProperty("gauge_reports_dir")
+                    + fileSeparator + "json-report" + fileSeparator + "result.json";
 
-            Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(readFile(jsonFilePath, Charset.defaultCharset()));
+            Object responseString = Configuration.defaultConfiguration().jsonProvider().parse(readFile(jsonFilePath,
+                    Charset.defaultCharset()));
 
             String projectName = JsonPath.read(responseString, "$.projectName").toString();
             String timestamp = JsonPath.read(responseString, "$.timestamp").toString();
@@ -500,31 +489,45 @@ public class JsonReport {
             String executionTime = JsonPath.read(responseString, "$.executionTime").toString();
             String executionStatus = JsonPath.read(responseString, "$.executionStatus").toString();
 
-            int passedScenariosCount = Integer.valueOf(JsonPath.read(responseString, "$.passedScenariosCount").toString());
-            int failedScenariosCount = Integer.valueOf(JsonPath.read(responseString, "$.failedScenariosCount").toString());
-            int skippedScenariosCount = Integer.valueOf(JsonPath.read(responseString, "$.skippedScenariosCount").toString());
+            int passedScenariosCount = Integer.parseInt(JsonPath.read(responseString,
+                    "$.passedScenariosCount").toString());
+            int failedScenariosCount = Integer.parseInt(JsonPath.read(responseString,
+                    "$.failedScenariosCount").toString());
+            int skippedScenariosCount = Integer.parseInt(JsonPath.read(responseString,
+                    "$.skippedScenariosCount").toString());
             int totalScenariosCount = passedScenariosCount + failedScenariosCount + skippedScenariosCount;
-            double passedScenariosPercentage = Double.parseDouble(df.format((double) (passedScenariosCount * 100) / (double) totalScenariosCount));
-            double failedScenariosPercentage = Double.parseDouble(df.format((double) (failedScenariosCount * 100) / (double) totalScenariosCount));
-            double skippedScenariosPercentage = Double.parseDouble(df.format((double) (skippedScenariosCount * 100) / (double) totalScenariosCount));
+            double passedScenariosPercentage = Double.parseDouble
+                    (df.format((double) (passedScenariosCount * 100) / (double) totalScenariosCount));
+            double failedScenariosPercentage = Double.parseDouble
+                    (df.format((double) (failedScenariosCount * 100) / (double) totalScenariosCount));
+            double skippedScenariosPercentage = Double.parseDouble
+                    (df.format((double) (skippedScenariosCount * 100) / (double) totalScenariosCount));
 
-            int passedSpecsCount = Integer.valueOf(JsonPath.read(responseString, "$.passedSpecsCount").toString());
-            int failedSpecsCount = Integer.valueOf(JsonPath.read(responseString, "$.failedSpecsCount").toString());
-            int skippedSpecsCount = Integer.valueOf(JsonPath.read(responseString, "$.skippedSpecsCount").toString());
+            int passedSpecsCount = Integer.parseInt(JsonPath.read(responseString,
+                    "$.passedSpecsCount").toString());
+            int failedSpecsCount = Integer.parseInt(JsonPath.read(responseString,
+                    "$.failedSpecsCount").toString());
+            int skippedSpecsCount = Integer.parseInt(JsonPath.read(responseString,
+                    "$.skippedSpecsCount").toString());
             int totalSpecsCount = passedSpecsCount + failedSpecsCount + skippedSpecsCount;
-            double passedSpecsPercentage = Double.parseDouble(df.format((double) (passedSpecsCount * 100) / (double) totalSpecsCount));
-            double failedSpecsPercentage = Double.parseDouble(df.format((double) (failedSpecsCount * 100) / (double) totalSpecsCount));
-            double skippedSpecsPercentage = Double.parseDouble(df.format((double) (skippedSpecsCount * 100) / (double) totalSpecsCount));
+            double passedSpecsPercentage = Double.parseDouble
+                    (df.format((double) (passedSpecsCount * 100) / (double) totalSpecsCount));
+            double failedSpecsPercentage = Double.parseDouble
+                    (df.format((double) (failedSpecsCount * 100) / (double) totalSpecsCount));
+            double skippedSpecsPercentage = Double.parseDouble
+                    (df.format((double) (skippedSpecsCount * 100) / (double) totalSpecsCount));
 
-            Double successRate = Double.valueOf(df.format((double) passedScenariosCount * 100/ totalScenariosCount));
-            Double failRate = Double.valueOf(df.format((double) failedScenariosCount * 100/ totalScenariosCount));
+            Double successRate = Double.valueOf(df.format((double) passedScenariosCount * 100 / totalScenariosCount));
+            Double failRate = Double.valueOf(df.format((double) failedScenariosCount * 100 / totalScenariosCount));
 
-            String executionResults = EmailTemplate.get()
+            return EmailTemplate.get()
                     .replaceAll("#projectName", projectName)
                     .replaceAll("#timestamp", timestamp)
-                    .replaceAll("#environment", environment.substring(0, 1).toUpperCase() + environment.substring(1))
-                    .replaceAll("#executionTime", milliSecondsToTime(Integer.valueOf(executionTime)))
-                    .replaceAll("#executionStatus", executionStatus.substring(0, 1).toUpperCase() + executionStatus.substring(1))
+                    .replaceAll("#environment",
+                            environment.substring(0, 1).toUpperCase() + environment.substring(1))
+                    .replaceAll("#executionTime", milliSecondsToTime(Integer.parseInt(executionTime)))
+                    .replaceAll("#executionStatus",
+                            executionStatus.substring(0, 1).toUpperCase() + executionStatus.substring(1))
                     .replaceAll("#successRate", successRate + "%")
                     .replaceAll("#failRate", failRate + "%")
 
@@ -543,14 +546,10 @@ public class JsonReport {
                     .replaceAll("#failedSpecsPercentage", failedSpecsPercentage + "%")
                     .replaceAll("#skippedSpecsCount", String.valueOf(skippedSpecsCount))
                     .replaceAll("#skippedSpecsPercentage", skippedSpecsPercentage + "%");
-
-            return executionResults;
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
             ex.getStackTrace();
         }
         return "An error occurred while fetching the execution results from json-report";
     }
-
-
 }
+
