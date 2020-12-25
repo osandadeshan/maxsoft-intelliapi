@@ -7,20 +7,17 @@ Date         : 6/7/2018
 Time         : 9:30 PM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
+tags: csv
 
 
-## Get all questions of a deck using a valid deckId
+## Get all users and save userIds greater than 16
 
-* Add 4 questions into a deck by deckId saved in "Spec" type data store named "deckIdWith4Questions"
-
-* Given that a user needs to invoke "Get All Questions Of Deck"
-* And the user set the query parameters using data stores as follows 
-
-   |Query Parameter|Is Data Store Used?|Data Store Type|Data Store Variable Name|Query Value|
-   |---------------|-------------------|---------------|------------------------|-----------|
-   |deckId         |y                  |Spec           |deckIdWith4Questions    |           |
-* And the user set the request authentication configurations as follows 
-
+* Create a user
+* Create a user
+* Create a user
+* Create a user
+* Given that a user needs to invoke "Get all users"
+* And the user set the request authentication configurations as follows
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
@@ -28,10 +25,11 @@ Description  : This is an executable specification file which follows markdown s
    |Provide the access token if you need to authorize the API manually|N/A                |
 * When the user invokes the API
 * Then the status code for the request is "200"
-* And save the JSON Array values of the response into CSV files 
+* And save the JSON Array values of the response into CSV files
+   |JSON Path              |Header Name|CSV File Path                      |
+   |-----------------------|-----------|-----------------------------------|
+   |$.data[?(@.id > 16)].id|userId     |/src/test/resources/csv/userIds.csv|
 
-   |JSON Path        |Header Name|CSV File Path                 |
-   |-----------------|-----------|------------------------------|
-   |$.questions[*].id|questionId |/resources/csv/questionIds.csv|
 
-* Delete deck by deckId saved in "Spec" type data store named "deckIdWith4Questions"
+## Replace CSV column with timestamp
+* And replace the row values in "timestamp" column of the CSV "/src/test/resources/csv/timestamp.csv" into the "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" timestamp pattern

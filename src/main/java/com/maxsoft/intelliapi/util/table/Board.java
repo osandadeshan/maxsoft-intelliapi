@@ -1,5 +1,8 @@
 package com.maxsoft.intelliapi.util.table;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Project Name : MaxSoft-IntelliAPI
  * Developer    : Osanda Deshan
@@ -9,29 +12,17 @@ package com.maxsoft.intelliapi.util.table;
  * Description  :
  **/
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Board {
 
-    protected boolean showBlockIndex;
-
-    protected int boardWidth;
-
+    protected final boolean showBlockIndex;
+    protected final int boardWidth;
     private Block initialBlock;
-
-    private List<TableChars> charsInTableBoarders;
-
+    private final List<TableChars> charsInTableBoarders;
     private String preview;
-
-    public static final int APPEND_RIGHT = 16;
-
-    public static final int APPEND_BELOW = 17;
 
     public Board(int boardWidth) {
         this.boardWidth = boardWidth;
-        this.charsInTableBoarders = new ArrayList<TableChars>();
+        this.charsInTableBoarders = new ArrayList<>();
         this.preview = "";
         this.showBlockIndex = false;
         Block.nextIndex = 0;
@@ -42,103 +33,46 @@ public class Board {
         return this;
     }
 
-    public boolean isBlockIndexShowing() {
-        return showBlockIndex;
-    }
-
-    public void showBlockIndex(boolean showBlockIndex) {
-        this.showBlockIndex = showBlockIndex;
-    }
-
-    public Board appendTableTo(int appendableBlockIndex, int appendableDirection, StringTable table) {
-        Block tableBlock = table.tableToBlocks();
-        Block block = getBlock(appendableBlockIndex);
-        if (appendableDirection == APPEND_RIGHT) {
-            block.setRightBlock(tableBlock);
-            rearranegCoordinates(block);
-        } else if (appendableDirection == APPEND_BELOW) {
-            block.setBelowBlock(tableBlock);
-            rearranegCoordinates(block);
-        } else {
-            throw new RuntimeException("Invalid block appending direction given");
-        }
-        return this;
-    }
-
-    private void rearranegCoordinates(Block block) {
+    private void rearrangeCoordinates(Block block) {
         Block rightBlock = block.getRightBlock();
         Block belowBlock = block.getBelowBlock();
         if (rightBlock != null && belowBlock == null) {
             block.setRightBlock(rightBlock);
-            rearranegCoordinates(rightBlock);
+            rearrangeCoordinates(rightBlock);
         } else if (rightBlock == null && belowBlock != null) {
             block.setBelowBlock(belowBlock);
-            rearranegCoordinates(belowBlock);
-        } else if (rightBlock != null && belowBlock != null) {
+            rearrangeCoordinates(belowBlock);
+        } else if (rightBlock != null) {
             int rightIndex = rightBlock.getIndex();
             int belowIndex = belowBlock.getIndex();
             int blockIdDiff = rightIndex - belowIndex;
             if (blockIdDiff > 0) {
+                block.setRightBlock(rightBlock);
                 if (blockIdDiff == 1) {
-                    block.setRightBlock(rightBlock);
                     block.setBelowBlock(belowBlock);
-                    rearranegCoordinates(rightBlock);
-                    rearranegCoordinates(belowBlock);
+                    rearrangeCoordinates(rightBlock);
                 } else {
-                    block.setRightBlock(rightBlock);
-                    rearranegCoordinates(rightBlock);
+                    rearrangeCoordinates(rightBlock);
                     block.setBelowBlock(belowBlock);
-                    rearranegCoordinates(belowBlock);
                 }
+                rearrangeCoordinates(belowBlock);
             } else if (blockIdDiff < 0) {
                 blockIdDiff *= -1;
+                block.setBelowBlock(belowBlock);
                 if (blockIdDiff == 1) {
-                    block.setBelowBlock(belowBlock);
                     block.setRightBlock(rightBlock);
-                    rearranegCoordinates(belowBlock);
-                    rearranegCoordinates(rightBlock);
+                    rearrangeCoordinates(belowBlock);
                 } else {
-                    block.setBelowBlock(belowBlock);
-                    rearranegCoordinates(belowBlock);
+                    rearrangeCoordinates(belowBlock);
                     block.setRightBlock(rightBlock);
-                    rearranegCoordinates(rightBlock);
                 }
+                rearrangeCoordinates(rightBlock);
             }
         }
-    }
-
-    public Block getBlock(int blockIndex) {
-        if (blockIndex >= 0) {
-            return getBlock(blockIndex, initialBlock);
-        } else {
-            throw new RuntimeException("Block index cannot be negative. " + blockIndex + " given.");
-        }
-    }
-
-    private Block getBlock(int blockIndex, Block block) {
-        Block foundBlock = null;
-        if (block.getIndex() == blockIndex) {
-            return block;
-        } else {
-            if (block.getRightBlock() != null) {
-                foundBlock = getBlock(blockIndex, block.getRightBlock());
-            }
-            if (foundBlock != null) {
-                return foundBlock;
-            }
-            if (block.getBelowBlock() != null) {
-                foundBlock = getBlock(blockIndex, block.getBelowBlock());
-            }
-            if (foundBlock != null) {
-                return foundBlock;
-            }
-        }
-        return foundBlock;
     }
 
     public Board build() {
         if (charsInTableBoarders.isEmpty()) {
-            //rearranegCoordinates(initialBlock);
             buildBlock(initialBlock);
             dumpCharrsFromBlock(initialBlock);
 
@@ -182,13 +116,6 @@ public class Board {
         return preview;
     }
 
-    public Board invalidate() {
-        invalidateBlock(initialBlock);
-        charsInTableBoarders = new ArrayList<TableChars>();
-        preview = "";
-        return this;
-    }
-
     private void buildBlock(Block block) {
         if (block != null) {
             block.build();
@@ -212,6 +139,4 @@ public class Board {
             invalidateBlock(block.getBelowBlock());
         }
     }
-
-
 }

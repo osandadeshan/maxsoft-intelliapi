@@ -7,93 +7,130 @@ Date         : 9/8/2018
 Time         : 11:32 AM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
+tags: request_placeholders
 
 
 ## Saving values to Data Store
 
-* And the user saves the values inside data stores as follows 
-
+* And the user saves the values inside data stores as follows
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
-   |Scenario      |username     |Osanda12          |
-   |Specification |username     |Osanda12          |
-   |Specification |password     |Password1         |
+   |Specification |varName      |Osanda            |
+   |Specification |varGender    |Male              |
+   |Specification |varStatus    |Active            |
 
 
+## Replace all request placeholders in a text file from data store values
 
-## Replace request placeholders from values
-
-* Given that a user needs to invoke "Get Auth Token"
-* And the user set the request payload as follows <file:/resources/payloads/login_placeholders.txt>
-* And the user set values to the request payload placeholders as follows 
-
-   |Attribute Value In JSON Template|Attribute Value To Be Set|
-   |--------------------------------|-------------------------|
-   |#username                       |osanda12                 |
-   |#password                       |Password1                |
+* Given that a user needs to invoke "Create a user"
+* And the user set the request authentication configurations as follows
+   |Configuration                                                     |Configuration Value|
+   |------------------------------------------------------------------|-------------------|
+   |Is authentication required?                                       |Yes                |
+   |Do you need to retrieve the access token from the text file?      |Yes                |
+   |Provide the access token if you need to authorize the API manually|N/A                |
+* And the user set the request payload as follows <file:/src/test/resources/payloads/create_a_user_with_all_fields.txt>
+* And generate random email and save it in a data store as follows
+   |Data Store Type|Data Store Variable Name|Domain Name     |
+   |---------------|------------------------|----------------|
+   |Scenario       |varEmail                |mailinator.com  |
+* And the user set the request attributes using data stores as follows
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
+   |--------------------------------|-------------------|---------------|------------------------|------------------------|
+   |#email                          |yes                |Scenario       |varEmail                |                        |
+   |#name                           |yes                |Specification  |varName                 |                        |
+   |#gender                         |yes                |Specification  |varGender               |                        |
+   |#status                         |yes                |Specification  |varStatus               |                        |
 * When the user invokes the API
-* Then the status code for the request is "201"
-* And the JSON Path Assertions for the response should be equal to the following 
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |-------------|-------------------|---------------|------------------------|--------------|
+   |$.code       |no                 |               |                        |201           |
+   |$.data.name  |yes                |Specification  |varName                 |              |
+   |$.data.email |yes                |Scenario       |varEmail                |              |
+   |$.data.gender|yes                |Specification  |varGender               |              |
 
-   |JSON Path|Expected Result|
-   |---------|---------------|
-   |$.status |success        |
 
+## Replace one request placeholder in a text file from a data store value
 
-
-## Replace one request placeholders from values
-
-* Given that a user needs to invoke "Get Auth Token"
-* And the user set the request payload as follows <file:/resources/payloads/login_placeholder.txt>
-* And the user set values to the request payload placeholders as follows 
-
-   |Attribute Value In JSON Template|Attribute Value To Be Set|
-   |--------------------------------|-------------------------|
-   |#username                       |osanda12                 |
+* Given that a user needs to invoke "Create a user  (JSON request from text file)"
+* And the user set the request authentication configurations as follows
+   |Configuration                                                     |Configuration Value|
+   |------------------------------------------------------------------|-------------------|
+   |Is authentication required?                                       |Yes                |
+   |Do you need to retrieve the access token from the text file?      |Yes                |
+   |Provide the access token if you need to authorize the API manually|N/A                |
+* And the user set the request payload as follows <file:/src/test/resources/payloads/create_a_user_with_email.txt>
+* And generate random email and save it in a data store as follows
+   |Data Store Type|Data Store Variable Name|Domain Name     |
+   |---------------|------------------------|----------------|
+   |Scenario       |varEmail                |mailinator.com  |
+* And the user set the request attributes using data stores as follows
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
+   |--------------------------------|-------------------|---------------|------------------------|------------------------|
+   |#email                          |yes                |Scenario       |varEmail                |                        |
 * When the user invokes the API
-* Then the status code for the request is "201"
-* And the JSON Path Assertions for the response should be equal to the following 
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |-------------|-------------------|---------------|------------------------|--------------|
+   |$.code       |no                 |               |                        |201           |
+   |$.data.name  |no                 |               |                        |Tester2       |
+   |$.data.email |yes                |Scenario       |varEmail                |              |
+   |$.data.gender|no                 |               |                        |Female        |
+   |$.data.status|no                 |               |                        |Inactive      |
 
-   |JSON Path|Expected Result|
-   |---------|---------------|
-   |$.status |success        |
 
+## Replace two request placeholders in API document from text file values
 
-
-## Replace request placeholders from data store values
-
-* Given that a user needs to invoke "Get Auth Token"
-* And the user set the request payload as follows <file:/resources/payloads/login_placeholders.txt>
-* And the user set values to the request payload placeholders using data stores as follows 
-
-   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
-   |--------------------------------|-------------------|---------------|------------------------|-------------------------|
-   |#username                       |y                  |spec           |username                |                         |
-   |#password                       |y                  |spec           |password                |                         |
+* Given that a user needs to invoke "Create a user"
+* And the user set the request authentication configurations as follows
+   |Configuration                                                     |Configuration Value|
+   |------------------------------------------------------------------|-------------------|
+   |Is authentication required?                                       |Yes                |
+   |Do you need to retrieve the access token from the text file?      |Yes                |
+   |Provide the access token if you need to authorize the API manually|N/A                |
+* And generate random email and save it in a data store as follows
+   |Data Store Type|Data Store Variable Name|Domain Name     |
+   |---------------|------------------------|----------------|
+   |Scenario       |varEmail                |mailinator.com  |
+* And the user set the request attributes using data stores as follows
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                      |
+   |--------------------------------|-------------------|---------------|------------------------|----------------------------------------------|
+   |#email                          |yes                |Scenario       |varEmail                |                                              |
+   |#name                           |yes                |Specification  |varName                 |                                              |
+   |#gender                         |n                  |               |                        |<file:/src/test/resources/payloads/gender.txt>|
+   |#status                         |n                  |               |                        |<file:/src/test/resources/payloads/status.txt>|
 * When the user invokes the API
-* Then the status code for the request is "201"
-* And the JSON Path Assertions for the response should be equal to the following 
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |-------------|-------------------|---------------|------------------------|--------------|
+   |$.code       |no                 |               |                        |201           |
+   |$.data.name  |yes                |Specification  |varName                 |              |
+   |$.data.email |yes                |Scenario       |varEmail                |              |
+   |$.data.gender|yes                |Specification  |varGender               |              |
 
-   |JSON Path|Expected Result|
-   |---------|---------------|
-   |$.status |success        |
 
+## Replace API Endpoint placeholders
 
-
-## Replace one request placeholder from data store values
-
-* Given that a user needs to invoke "Get Auth Token"
-* And the user set the request payload as follows <file:/resources/payloads/login_placeholders.txt>
-* And the user set values to the request payload placeholders using data stores as follows 
-
-   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attribute Value To Be Set|
-   |--------------------------------|-------------------|---------------|------------------------|-------------------------|
-   |#username                       |y                  |spec           |username                |                         |
-   |#password                       |n                  |               |                        |Password1                |
+* Given that a user needs to invoke "Get metrics"
+* And the user saves the values inside data stores as follows
+   |DataStore Type|Variable Name|Value To Be Stored |
+   |--------------|-------------|-------------------|
+   |Scenario      |version      |v2                 |
+   |Scenario      |jsonFile     |metrics.json       |
+* And the user set values to the API endpoint placeholders using data stores as follows
+   |Placeholder In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Replacement Text |
+   |----------------------------|-------------------|---------------|------------------------|-----------------|
+   |#version                    |n                  |               |                        |v2               |
+   |#jsonFile                   |y                  |Scenario       |jsonFile                |                 |
 * When the user invokes the API
-* Then the status code for the request is "201"
-* And the JSON Path Assertions for the response should be equal to the following 
-
-   |JSON Path|Expected Result|
-   |---------|---------------|
-   |$.status |success        |
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the following
+   |JSON Path       |Expected Result    |
+   |----------------|-------------------|
+   |$.numAPIs       |1828               |
+   |$.numEndpoints  |56776              |
+   |$.numSpecs      |3224               |

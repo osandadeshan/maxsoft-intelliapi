@@ -1,7 +1,0 @@
-scenario,api,version,androidVersionCode,appName,platform,allowforceUpdate
-Send an update to iOS app by changing the version number,Send Force Update,0.0.1,,prep,ios,true
-Send an update to iOS app by changing the build number,Send Force Update,1.0.2,,prep,ios,true
-Send an update to iOS app by changing the allowForceUpdate into false,Send Force Update,1.0.8,,prep,ios,false
-Send an update to Android app by changing the version number,Send Force Update,0.0.1,100,prep,android,true
-Send an update to Android app by changing the build number,Send Force Update,1.0.2,100,prep,android,true
-Send an update to Android app by changing the allowForceUpdate into false,Send Force Update,1.0.8,100,prep,android,false

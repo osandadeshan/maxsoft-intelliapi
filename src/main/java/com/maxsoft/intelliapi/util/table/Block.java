@@ -1,5 +1,9 @@
 package com.maxsoft.intelliapi.util.table;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 /**
  * Project Name : MaxSoft-IntelliAPI
  * Developer    : Osanda Deshan
@@ -9,55 +13,29 @@ package com.maxsoft.intelliapi.util.table;
  * Description  :
  **/
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
-
 public final class Block {
 
-    protected static int nextIndex = 0;
-
-    private Board board;
-
-    private final int index;
-
-    private int width;
-
-    private int height;
-
-    private boolean allowGrid;
-
-    private int blockAlign;
-
     public static final int BLOCK_LEFT = 1;
-
     public static final int BLOCK_CENTRE = 2;
-
     public static final int BLOCK_RIGHT = 3;
-
-    private String data;
-
-    private int dataAlign;
-
     public static final int DATA_TOP_LEFT = 4;
-
     public static final int DATA_TOP_MIDDLE = 5;
-
     public static final int DATA_TOP_RIGHT = 6;
-
     public static final int DATA_MIDDLE_LEFT = 7;
-
     public static final int DATA_CENTER = 8;
-
     public static final int DATA_MIDDLE_RIGHT = 9;
-
     public static final int DATA_BOTTOM_LEFT = 10;
-
     public static final int DATA_BOTTOM_MIDDLE = 11;
-
     public static final int DATA_BOTTOM_RIGHT = 12;
-
+    protected static int nextIndex = 0;
+    private final Board board;
+    private final int index;
+    private int width;
+    private int height;
+    private boolean allowGrid;
+    private int blockAlign;
+    private String data;
+    private int dataAlign;
     private int x;
 
     private int y;
@@ -86,7 +64,7 @@ public final class Block {
         this.y = 0;
         this.rightBlock = null;
         this.belowBlock = null;
-        this.charrsList = new ArrayList<TableChars>();
+        this.charrsList = new ArrayList<>();
         this.preview = "";
         this.index = nextIndex;
         Block.nextIndex++;
@@ -137,9 +115,8 @@ public final class Block {
         return allowGrid;
     }
 
-    public Block allowGrid(boolean allowGrid) {
+    public void allowGrid(boolean allowGrid) {
         this.allowGrid = allowGrid;
-        return this;
     }
 
     public int getBlockAlign() {
@@ -168,7 +145,7 @@ public final class Block {
         return dataAlign;
     }
 
-    public Block setDataAlign(int dataAlign) {
+    public void setDataAlign(int dataAlign) {
         if (dataAlign == DATA_TOP_LEFT || dataAlign == DATA_TOP_MIDDLE || dataAlign == DATA_TOP_RIGHT
                 || dataAlign == DATA_MIDDLE_LEFT || dataAlign == DATA_CENTER || dataAlign == DATA_MIDDLE_RIGHT
                 || dataAlign == DATA_BOTTOM_LEFT || dataAlign == DATA_BOTTOM_MIDDLE || dataAlign == DATA_BOTTOM_RIGHT) {
@@ -176,64 +153,58 @@ public final class Block {
         } else {
             throw new RuntimeException("Invalid data align mode. " + dataAlign + " given.");
         }
-        return this;
     }
 
     protected int getX() {
         return x;
     }
 
-    protected Block setX(int x) {
+    protected void setX(int x) {
         if (x + getWidth() + (isGridAllowed() ? 2 : 0) <= board.boardWidth) {
             this.x = x;
         } else {
             throw new RuntimeException("Block " + toString() + " exceeded the board width " + board.boardWidth);
         }
-        return this;
     }
 
     protected int getY() {
         return y;
     }
 
-    protected Block setY(int y) {
+    protected void setY(int y) {
         this.y = y;
-        return this;
     }
 
     public Block getRightBlock() {
         return rightBlock;
     }
 
-    public Block setRightBlock(Block rightBlock) {
+    public void setRightBlock(Block rightBlock) {
         if (rightBlock != null) {
             rightBlock.setX(getX() + getWidth() + (isGridAllowed() ? 1 : 0));
             rightBlock.setY(getY());
             this.rightBlock = rightBlock;
         }
-        return this;
     }
 
     public Block getBelowBlock() {
         return belowBlock;
     }
 
-    public Block setBelowBlock(Block belowBlock) {
+    public void setBelowBlock(Block belowBlock) {
         if (belowBlock != null) {
             belowBlock.setX(getX());
             belowBlock.setY(getY() + getHeight() + (isGridAllowed() ? 1 : 0));
             this.belowBlock = belowBlock;
         }
-        return this;
     }
 
-    protected Block invalidate() {
-        charrsList = new ArrayList<TableChars>();
+    protected void invalidate() {
+        charrsList = new ArrayList<>();
         preview = "";
-        return this;
     }
 
-    protected Block build() {
+    protected void build() {
         if (charrsList.isEmpty()) {
             int ix = x;
             int iy = y;
@@ -245,7 +216,8 @@ public final class Block {
                     break;
                 }
                 case BLOCK_CENTRE: {
-                    blockLeftSideSpaces = (board.boardWidth - (ix + getWidth() + additionalWidth)) / 2 + (board.boardWidth - (ix + getWidth() + additionalWidth)) % 2;
+                    blockLeftSideSpaces = (board.boardWidth - (ix + getWidth() + additionalWidth)) / 2
+                            + (board.boardWidth - (ix + getWidth() + additionalWidth)) % 2;
                     break;
                 }
                 case BLOCK_RIGHT: {
@@ -258,7 +230,7 @@ public final class Block {
                 data = toString();
             }
             String[] lines = data.split("\n");
-            List<String> dataInLines = new ArrayList<String>();
+            List<String> dataInLines = new ArrayList<>();
             if (board.showBlockIndex) {
                 dataInLines.add("i = " + index);
             }
@@ -277,9 +249,10 @@ public final class Block {
                 if (dataLine.length() > getWidth()) {
                     dataInLines.set(i, dataLine.substring(0, getWidth()));
                     if (i + 1 != dataInLines.size()) {
-                        String prifix = dataLine.substring(getWidth(), dataLine.length());
+                        String prifix = dataLine.substring(getWidth());
                         String suffix = dataInLines.get(i + 1);
-                        String combinedValue = prifix.concat((suffix.length() > 0 ? String.valueOf(TableChars.S) : "")).concat(suffix);
+                        String combinedValue = prifix.concat((suffix.length() > 0
+                                ? String.valueOf(TableChars.S) : "")).concat(suffix);
                         dataInLines.set(i + 1, combinedValue);
                     }
                 }
@@ -294,19 +267,24 @@ public final class Block {
             int givenAlign = getDataAlign();
             int dataStartingLineIndex = -1;
             int additionalHeight = (isGridAllowed() ? 1 : 0);
+
             if (givenAlign == DATA_TOP_LEFT || givenAlign == DATA_TOP_MIDDLE || givenAlign == DATA_TOP_RIGHT) {
                 dataStartingLineIndex = iy + additionalHeight;
             } else if (givenAlign == DATA_MIDDLE_LEFT || givenAlign == DATA_CENTER || givenAlign == DATA_MIDDLE_RIGHT) {
-                dataStartingLineIndex = iy + additionalHeight + ((getHeight() - dataInLines.size()) / 2 + (getHeight() - dataInLines.size()) % 2);
-            } else if (givenAlign == DATA_BOTTOM_LEFT || givenAlign == DATA_BOTTOM_MIDDLE || givenAlign == DATA_BOTTOM_RIGHT) {
+                dataStartingLineIndex = iy + additionalHeight + ((getHeight() - dataInLines.size()) / 2
+                        + (getHeight() - dataInLines.size()) % 2);
+            } else if (givenAlign == DATA_BOTTOM_LEFT || givenAlign == DATA_BOTTOM_MIDDLE
+                    || givenAlign == DATA_BOTTOM_RIGHT) {
                 dataStartingLineIndex = iy + additionalHeight + (getHeight() - dataInLines.size());
             }
+
             int dataEndingLineIndex = dataStartingLineIndex + dataInLines.size();
 
             int extendedIX = ix + getWidth() + (isGridAllowed() ? 2 : 0);
             int extendedIY = iy + getHeight() + (isGridAllowed() ? 2 : 0);
             int startingIX = ix;
             int startingIY = iy;
+
             for (; iy < extendedIY; iy++) {
                 for (; ix < extendedIX; ix++) {
                     boolean writeData;
@@ -314,11 +292,10 @@ public final class Block {
                         if ((iy == startingIY) || (iy == extendedIY - 1)) {
                             if ((ix == startingIX) || (ix == extendedIX - 1)) {
                                 charrsList.add(new TableChars(ix, iy, TableChars.P));
-                                writeData = false;
                             } else {
                                 charrsList.add(new TableChars(ix, iy, TableChars.D));
-                                writeData = false;
                             }
+                            writeData = false;
                         } else {
                             if ((ix == startingIX) || (ix == extendedIX - 1)) {
                                 charrsList.add(new TableChars(ix, iy, TableChars.VL));
@@ -335,15 +312,20 @@ public final class Block {
                         String lineData = dataInLines.get(dataLineIndex);
                         if (!lineData.isEmpty()) {
                             int dataLeftSideSpaces = -1;
-                            if (givenAlign == DATA_TOP_LEFT || givenAlign == DATA_MIDDLE_LEFT || givenAlign == DATA_BOTTOM_LEFT) {
+                            if (givenAlign == DATA_TOP_LEFT || givenAlign == DATA_MIDDLE_LEFT || givenAlign
+                                    == DATA_BOTTOM_LEFT) {
                                 dataLeftSideSpaces = 0;
-                            } else if (givenAlign == DATA_TOP_MIDDLE || givenAlign == DATA_CENTER || givenAlign == DATA_BOTTOM_MIDDLE) {
-                                dataLeftSideSpaces = (getWidth() - lineData.length()) / 2 + (getWidth() - lineData.length()) % 2;
-                            } else if (givenAlign == DATA_TOP_RIGHT || givenAlign == DATA_MIDDLE_RIGHT || givenAlign == DATA_BOTTOM_RIGHT) {
+                            } else if (givenAlign == DATA_TOP_MIDDLE || givenAlign == DATA_CENTER || givenAlign
+                                    == DATA_BOTTOM_MIDDLE) {
+                                dataLeftSideSpaces = (getWidth() - lineData.length()) / 2
+                                        + (getWidth() - lineData.length()) % 2;
+                            } else if (givenAlign == DATA_TOP_RIGHT || givenAlign == DATA_MIDDLE_RIGHT || givenAlign
+                                    == DATA_BOTTOM_RIGHT) {
                                 dataLeftSideSpaces = getWidth() - lineData.length();
                             }
                             int dataStartingIndex = (startingIX + dataLeftSideSpaces + (isGridAllowed() ? 1 : 0));
-                            int dataEndingIndex = (startingIX + dataLeftSideSpaces + lineData.length() - (isGridAllowed() ? 0 : 1));
+                            int dataEndingIndex = (startingIX + dataLeftSideSpaces + lineData.length()
+                                    - (isGridAllowed() ? 0 : 1));
                             if (ix >= dataStartingIndex && ix <= dataEndingIndex) {
                                 char charData = lineData.charAt(ix - dataStartingIndex);
                                 charrsList.add(new TableChars(ix, iy, charData));
@@ -354,7 +336,6 @@ public final class Block {
                 ix = startingIX;
             }
         }
-        return this;
     }
 
     protected List<TableChars> getChars() {
@@ -378,7 +359,8 @@ public final class Block {
             }
             String[][] dataPoints = new String[maxY + 1][board.boardWidth];
             for (TableChars charsInTableBoarder : charrsList) {
-                dataPoints[charsInTableBoarder.getY()][charsInTableBoarder.getX()] = String.valueOf(charsInTableBoarder.getC());
+                dataPoints[charsInTableBoarder.getY()][charsInTableBoarder.getX()]
+                        = String.valueOf(charsInTableBoarder.getC());
             }
 
             for (String[] dataPoint : dataPoints) {
@@ -451,6 +433,4 @@ public final class Block {
         hash = 43 * hash + Objects.hashCode(this.belowBlock);
         return hash;
     }
-
-
 }

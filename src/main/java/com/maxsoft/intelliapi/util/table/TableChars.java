@@ -9,7 +9,6 @@ package com.maxsoft.intelliapi.util.table;
  * Description  :
  **/
 
-
 class TableChars {
 
     protected static final char S = '-';
@@ -45,6 +44,4 @@ class TableChars {
     protected char getC() {
         return c;
     }
-
-
 }

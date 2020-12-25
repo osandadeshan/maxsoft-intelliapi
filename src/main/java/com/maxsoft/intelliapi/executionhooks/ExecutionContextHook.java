@@ -12,51 +12,38 @@ import org.apache.log4j.Logger;
  * Description  :
  **/
 
-
 public class ExecutionContextHook {
 
     private final static Logger logger = Logger.getLogger(ExecutionContextHook.class.getName());
 
-    public static void printInfo(String text){
-        logger.info(text);
-    }
-
     @BeforeSpec
-    public void logSpecInfo(ExecutionContext context) {
-        String specName = context.getCurrentSpecification().getName();
-        printInfo("Running Specification: " + specName + "\n\n\n\n");
+    public void beforeSpec(ExecutionContext context) {
+        logger.info("Running Specification: " + context.getCurrentSpecification().getName() + "\n\n\n\n");
     }
 
     @BeforeScenario
-    public void logScenarioInfo(ExecutionContext context) {
-        String scenarioName = context.getCurrentScenario().getName();
-        printInfo("Running Scenario: " + scenarioName + "\n\n\n");
+    public void beforeScenario(ExecutionContext context) {
+        logger.info("Running Scenario: " + context.getCurrentScenario().getName() + "\n\n\n");
     }
 
     @BeforeStep
-    public void logStepInfo(ExecutionContext context) {
-        String stepName = context.getCurrentStep().getText();
-        printInfo("Running Step: " + stepName + "\n");
-    }
-
-    @AfterSpec
-    public void closeSpecInfo(ExecutionContext context) {
-        String specName = context.getCurrentSpecification().getName();
-        printInfo("Finished Execution of Specification: " + specName + "\n\n\n\n\n\n");
-    }
-
-    @AfterScenario
-    public void closeScenarioInfo(ExecutionContext context) {
-        String scenarioName = context.getCurrentScenario().getName();
-        printInfo("Finished Execution of Scenario: " + scenarioName + "\n\n\n\n");
+    public void beforeStep(ExecutionContext context) {
+        logger.info("Running Step: " + context.getCurrentStep().getText() + "\n");
     }
 
     @AfterStep
-    public void closeStepInfo(ExecutionContext context) {
-        String stepName = context.getCurrentStep().getText();
-        printInfo("\n");
-        printInfo("Finished Execution of Step: " + stepName + "\n\n\n");
+    public void afterStep(ExecutionContext context) {
+        logger.info("\n");
+        logger.info("Finished Execution of Step: " + context.getCurrentStep().getText() + "\n\n\n");
     }
 
+    @AfterScenario
+    public void afterScenario(ExecutionContext context) {
+        logger.info("Finished Execution of Scenario: " + context.getCurrentScenario().getName() + "\n\n\n\n");
+    }
 
+    @AfterSpec
+    public void afterSpec(ExecutionContext context) {
+        logger.info("Finished Execution of Specification: " + context.getCurrentSpecification().getName() + "\n\n\n\n\n\n");
+    }
 }

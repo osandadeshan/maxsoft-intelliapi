@@ -1,0 +1,24 @@
+Project Name    : MaxSoft-IntelliAPI
+Developer       : Osanda Deshan
+Version         : 1.0.0
+Date            : 28/04/2019
+Time            : 18:07
+Description     : This is a concept file
+
+
+# Delete a user by userId saved in <dataStoreType> type data store named <dataStoreVariableName>
+
+* Given that a user needs to invoke "Delete a user"
+* And the user set the path parameters using data stores as follows
+   |Path Name   |Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value  |
+   |userId      |yes                |<dataStoreType>|<dataStoreVariableName> |            |
+* And the user set the request authentication configurations as follows
+   |Configuration                                                     |Configuration Value|
+   |Is authentication required?                                       |Yes                |
+   |Do you need to retrieve the access token from the text file?      |Yes                |
+   |Provide the access token if you need to authorize the API manually|N/A                |
+* When the user invokes the API
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the following
+     |JSON Path     |Expected Result|
+     |$.code        |204            |
