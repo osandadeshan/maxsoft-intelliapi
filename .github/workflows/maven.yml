@@ -28,7 +28,5 @@ jobs:
         run: sudo apt-get update && sudo apt-get install gauge
       - name: Install Gauge-Java plugin
         run: gauge install java --version 0.7.2
-      - name: Run pre-requisites tests with Maven
-        run: mvn test-compile gauge:execute -DspecsDir="specs\pre_requisites_test" -Denv="dev"
       - name: Run all tests with Maven
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Denv="dev"
