@@ -133,7 +133,7 @@
          <plugin>
              <groupId>com.thoughtworks.gauge.maven</groupId>
              <artifactId>gauge-maven-plugin</artifactId>
-             <version>1.4.3</version>
+             <version>1.4.0</version>
          </plugin>
          <plugin>
              <artifactId>maven-jar-plugin</artifactId>
