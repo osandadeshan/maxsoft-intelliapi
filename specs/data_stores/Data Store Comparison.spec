@@ -11,7 +11,7 @@ tags: data_store
 
 
 * Given that a user needs to invoke "Create a user"
-* And the user set the request payload as follows <file:/src/test/resources/payloads/create_a_user.txt>
+* And the user set the request payload as follows <file:./src/test/resources/payloads/create_a_user.txt>
 * And the user set the request authentication configurations as follows
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
