@@ -4,7 +4,7 @@ echo Executing MaxSoft IntelliAPI Dev BVT API Test Automation Suite.............
 cd ..
 cd .. 
 
-call mvn test-compile gauge:execute -DspecsDir="specs\pre_requisites_test" -Denv="dev"
+call mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="dev"
 call mvn test-compile gauge:execute -DspecsDir="specs" -Denv="dev" -DinParallel=true
 
 call mvn clean -DemailConfigEnv=dev install exec:java
