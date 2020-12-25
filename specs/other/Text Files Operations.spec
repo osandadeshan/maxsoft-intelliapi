@@ -93,9 +93,9 @@ tags: text_file
    |$.data.gender|no                 |               |                        |<file:./src/test/resources/payloads/gender.txt>|
    |$.data.status|no                 |               |                        |Acti                                           |
 * And the JSON Path values of the response should not contains the following
-   |JSON Path    |notContains                                    |
-   |-------------|-----------------------------------------------|
-   |$.data.status|<file:/src/test/resources/payloads/gender.txt> |
+   |JSON Path    |notContains                                     |
+   |-------------|------------------------------------------------|
+   |$.data.status|<file:./src/test/resources/payloads/gender.txt> |
 * And the JSON Path values of the response should not contains the values inside the data stores 
    |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                                 |
    |-------------|-------------------|---------------|------------------------|-----------------------------------------------|
