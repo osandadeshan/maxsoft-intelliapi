@@ -51,7 +51,7 @@ tags: data_store
    |Is authentication required?                                       |Yes                |
    |Do you need to retrieve the access token from the text file?      |Yes                |
    |Provide the access token if you need to authorize the API manually|N/A                |
-* And the user set the request payload as follows <file:/src/test/resources/payloads/create_a_user_with_all_fields.txt>
+* And the user set the request payload as follows <file:./src/test/resources/payloads/create_a_user_with_all_fields.txt>
 * And generate random email and save it in a data store as follows
    |Data Store Type|Data Store Variable Name|Domain Name     |
    |---------------|------------------------|----------------|

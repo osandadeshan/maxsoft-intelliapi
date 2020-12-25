@@ -29,7 +29,7 @@ tags: request_placeholders
    |Is authentication required?                                       |Yes                |
    |Do you need to retrieve the access token from the text file?      |Yes                |
    |Provide the access token if you need to authorize the API manually|N/A                |
-* And the user set the request payload as follows <file:/src/test/resources/payloads/create_a_user_with_all_fields.txt>
+* And the user set the request payload as follows <file:./src/test/resources/payloads/create_a_user_with_all_fields.txt>
 * And generate random email and save it in a data store as follows
    |Data Store Type|Data Store Variable Name|Domain Name     |
    |---------------|------------------------|----------------|
@@ -61,7 +61,7 @@ tags: request_placeholders
    |Is authentication required?                                       |Yes                |
    |Do you need to retrieve the access token from the text file?      |Yes                |
    |Provide the access token if you need to authorize the API manually|N/A                |
-* And the user set the request payload as follows <file:/src/test/resources/payloads/create_a_user_with_email.txt>
+* And the user set the request payload as follows <file:./src/test/resources/payloads/create_a_user_with_email.txt>
 * And generate random email and save it in a data store as follows
    |Data Store Type|Data Store Variable Name|Domain Name     |
    |---------------|------------------------|----------------|
@@ -96,12 +96,12 @@ tags: request_placeholders
    |---------------|------------------------|----------------|
    |Scenario       |varEmail                |mailinator.com  |
 * And the user set the request attributes using data stores as follows
-   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                      |
-   |--------------------------------|-------------------|---------------|------------------------|----------------------------------------------|
-   |#email                          |yes                |Scenario       |varEmail                |                                              |
-   |#name                           |yes                |Specification  |varName                 |                                              |
-   |#gender                         |n                  |               |                        |<file:/src/test/resources/payloads/gender.txt>|
-   |#status                         |n                  |               |                        |<file:/src/test/resources/payloads/status.txt>|
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                       |
+   |--------------------------------|-------------------|---------------|------------------------|-----------------------------------------------|
+   |#email                          |yes                |Scenario       |varEmail                |                                               |
+   |#name                           |yes                |Specification  |varName                 |                                               |
+   |#gender                         |n                  |               |                        |<file:./src/test/resources/payloads/gender.txt>|
+   |#status                         |n                  |               |                        |<file:./src/test/resources/payloads/status.txt>|
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores

@@ -9,7 +9,7 @@ Description     : This is an executable specification file which follows markdow
 
 tags: csv
 
-table: /src/test/resources/csv/userIds.csv
+table: ./src/test/resources/csv/userIds.csv
 
 
 ## Delete users by uderId which was saved in a CSV file from the pre test
