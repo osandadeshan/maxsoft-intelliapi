@@ -7,7 +7,7 @@ Date            : 28/04/2019
 Time            : 20:09
 Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: headers
+tags: headers, regression
 
 
 * Given that a user needs to invoke "Get auth token"

@@ -7,7 +7,7 @@ Date            : 28/04/2019
 Time            : 20:09
 Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: crud
+tags: crud, regression
 
 
 ## CRUD operation for a user

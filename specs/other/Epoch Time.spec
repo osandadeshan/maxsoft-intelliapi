@@ -7,7 +7,7 @@ Date         : 9/25/2018
 Time         : 12:28 PM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: epoch_time
+tags: epoch_time, regression
 
 
 ## Current Epoch time

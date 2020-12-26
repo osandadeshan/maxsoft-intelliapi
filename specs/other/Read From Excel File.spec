@@ -7,7 +7,7 @@ Date         : 6/17/2018
 Time         : 2:06 PM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: excel
+tags: excel, regression
 
 
 ## Invoke Create a user API using the test data in excel file

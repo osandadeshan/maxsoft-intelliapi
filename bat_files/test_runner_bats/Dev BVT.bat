@@ -5,7 +5,7 @@ cd ..
 cd .. 
 
 call mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="dev"
-call mvn test-compile gauge:execute -DspecsDir="specs" -Denv="dev" -DinParallel=true
+call mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="regression" -Denv="dev" -DinParallel=true
 
 call mvn clean -DemailConfigEnv=dev install exec:java
 echo Exit Code = %ERRORLEVEL%

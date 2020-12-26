@@ -7,7 +7,7 @@ Date         : 6/2/2018
 Time         : 3:02 PM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: form_data
+tags: form_data, regression
 
 
 ## Get Google OAuth Access token

@@ -7,7 +7,7 @@ Date            : 28/04/2019
 Time            : 19:36
 Description     : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: csv
+tags: csv, regression
 
 table: ./src/test/resources/csv/userIds.csv
 

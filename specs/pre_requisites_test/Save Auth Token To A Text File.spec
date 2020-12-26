@@ -7,7 +7,7 @@ Date            : 28/04/2019
 Time            : 13:49
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: get_auth_token, pre_requisites
+tags: get_auth_token, pre_requisites, regression
 
 
 ## Invoke Auth API using valid username and password using payload text file and save the token in a text file

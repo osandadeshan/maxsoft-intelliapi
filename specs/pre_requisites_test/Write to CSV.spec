@@ -7,7 +7,7 @@ Date         : 6/7/2018
 Time         : 9:30 PM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: csv, pre_requisites
+tags: csv, pre_requisites, regression
 
 
 ## Get all users and save userIds greater than 16

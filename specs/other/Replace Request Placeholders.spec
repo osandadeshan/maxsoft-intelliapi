@@ -7,7 +7,7 @@ Date         : 9/8/2018
 Time         : 11:32 AM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: request_placeholders
+tags: request_placeholders, regression
 
 
 ## Saving values to Data Store

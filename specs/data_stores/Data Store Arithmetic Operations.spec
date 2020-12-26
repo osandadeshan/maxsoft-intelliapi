@@ -7,7 +7,7 @@ Date         : 12/24/2020
 Time         : 10:13 AM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: data_store
+tags: data_store, regression
 
 
 ## Add integer values in data stores and save it in a new data store

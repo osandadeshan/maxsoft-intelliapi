@@ -7,7 +7,7 @@ Date         : 12/24/2020
 Time         : 9:33 AM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: get_auth_token
+tags: get_auth_token, regression
 
 
 ## Invoke Auth API and save the access token inside the text file
