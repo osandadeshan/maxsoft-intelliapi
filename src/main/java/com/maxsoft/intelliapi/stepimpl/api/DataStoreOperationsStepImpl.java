@@ -8,7 +8,7 @@ import com.thoughtworks.gauge.TableRow;
 
 import java.util.List;
 
-import static com.maxsoft.intelliapi.common.Base.*;
+import static com.maxsoft.intelliapi.util.FrameworkUtil.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.readFromDataStore;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.saveToDataStore;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;

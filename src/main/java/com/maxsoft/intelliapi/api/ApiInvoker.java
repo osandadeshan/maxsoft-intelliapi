@@ -1,6 +1,6 @@
 package com.maxsoft.intelliapi.api;
 
-import com.maxsoft.intelliapi.common.Base;
+import com.maxsoft.intelliapi.util.FrameworkUtil;
 import com.maxsoft.intelliapi.common.BodyType;
 import com.maxsoft.intelliapi.common.HttpMethod;
 import io.restassured.http.Headers;
@@ -24,7 +24,7 @@ import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForSce
  * Description     :
  **/
 
-public class ApiInvoker extends Base {
+public class ApiInvoker extends FrameworkUtil {
 
     public static void invoke(String jsonPayload, Headers headers) {
         String invokingEndpoint = getApiEndpointToBeInvoked();

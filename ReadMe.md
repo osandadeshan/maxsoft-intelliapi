@@ -116,10 +116,10 @@ The main reason for developing this framework is to provide an easy way for Tech
 
 ## How to test the project code
 1) Open the command prompt.
-2) Navigate to the directory of the **Dev BVT.bat** file. \
-`cd <project_dir\bat_files\test_runner_bats>`
+2) Navigate to the directory of the **dev_regression_run.bat** file. \
+`cd <project_dir\batch_files>`
 3) Enter the name of the **.bat** file and the extension. \
-`Dev BVT.bat`
+`dev_regression_run.bat`
 4) Press **Enter**.
 <br />
 
@@ -134,4 +134,4 @@ The main reason for developing this framework is to provide an easy way for Tech
 <br />
 
 ## Copyright
-Copyright 2018 MaxSoft.
+Copyright 2020 MaxSoft.

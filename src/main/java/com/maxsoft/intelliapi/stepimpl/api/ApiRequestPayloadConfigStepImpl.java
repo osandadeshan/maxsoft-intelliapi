@@ -9,7 +9,7 @@ import com.thoughtworks.gauge.TableRow;
 import java.util.List;
 
 import static com.maxsoft.intelliapi.api.ApiRequestPayload.*;
-import static com.maxsoft.intelliapi.common.Base.*;
+import static com.maxsoft.intelliapi.util.FrameworkUtil.*;
 import static com.maxsoft.intelliapi.common.Constants.*;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.*;

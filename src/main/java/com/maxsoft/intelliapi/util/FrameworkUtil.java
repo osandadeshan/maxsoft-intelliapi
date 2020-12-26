@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.common;
+package com.maxsoft.intelliapi.util;
 
 import com.github.javafaker.Faker;
 import com.maxsoft.intelliapi.util.fileoperator.CsvFile;
@@ -23,7 +23,7 @@ import static java.time.temporal.ChronoUnit.SECONDS;
  * Description  :
  **/
 
-public class Base {
+public class FrameworkUtil {
 
     public static void waitBySeconds(int seconds){
         Instant waitEndTime = Instant.now().plus(seconds, SECONDS);

@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-import static com.maxsoft.intelliapi.common.Base.isTrue;
+import static com.maxsoft.intelliapi.util.FrameworkUtil.isTrue;
 import static com.maxsoft.intelliapi.common.Constants.IS_AUTHENTICATION_REQUIRED;
 import static com.maxsoft.intelliapi.common.Constants.RETRIEVE_TOKEN_FROM_TEXT_FILE;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;

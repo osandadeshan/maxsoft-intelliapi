@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-import static com.maxsoft.intelliapi.common.Base.*;
+import static com.maxsoft.intelliapi.util.FrameworkUtil.*;
 import static com.maxsoft.intelliapi.common.Constants.VAR_API_RESPONSE_STATUS_CODE;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.readFromDataStore;

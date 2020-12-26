@@ -1,7 +1,7 @@
 package com.maxsoft.intelliapi.stepimpl.api;
 
 import com.maxsoft.intelliapi.api.ApiInvoker;
-import com.maxsoft.intelliapi.common.Base;
+import com.maxsoft.intelliapi.util.FrameworkUtil;
 import com.thoughtworks.gauge.Step;
 import io.restassured.http.Headers;
 
@@ -23,7 +23,7 @@ public class OtherStepImpl {
     // Use this method to print the testing environment name in the HTML report
     @Step("Configurations of the testing environment")
     public void printTestingEnvDetails() {
-        Base.printTestingEnvDetails();
+        FrameworkUtil.printTestingEnvDetails();
     }
 
     /* Use this method when you need to pass the JSON request in previous step and the access token from the text file into the GET/POST/PUT/DELETE API.
@@ -44,12 +44,12 @@ public class OtherStepImpl {
 
     @Step("And replace the row values in <columnName> column of the CSV <filePath> into the <timestampPattern> timestamp pattern")
     public void replaceAllColumnValuesToCurrentTimestamp(String columnName, String filePath, String timestampPattern) {
-        Base.replaceAllColumnValuesToCurrentTimestamp(CURRENT_DIRECTORY + filePath, columnName, timestampPattern);
+        FrameworkUtil.replaceAllColumnValuesToCurrentTimestamp(CURRENT_DIRECTORY + filePath, columnName, timestampPattern);
     }
 
     // Use this method to wait for a given time period
     @Step("And the user waits <seconds> seconds")
     public void waitBySeconds(String seconds) {
-        Base.waitBySeconds(Integer.parseInt(seconds));
+        FrameworkUtil.waitBySeconds(Integer.parseInt(seconds));
     }
 }
