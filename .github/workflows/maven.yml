@@ -34,3 +34,14 @@ jobs:
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="qa"
       - name: Run regression tests with Maven
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="regression" -Denv="qa"
+      - name: Send email action
+        uses: wadeww/send-email-action@v1
+        with:
+          server_address: smtp.gmail.com
+          port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: MaxSoft IntelliAPI Workflow Finished
+          body: Job completed ${{job.status}}
+          to: osanda.deshan@gmail.com
+          from: MaxSoft IntelliAPI
