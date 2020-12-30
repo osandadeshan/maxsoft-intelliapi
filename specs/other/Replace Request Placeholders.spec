@@ -131,6 +131,6 @@ tags: request_placeholders, regression
 * And the JSON Path Assertions for the response should be equal to the following
    |JSON Path       |Expected Result    |
    |----------------|-------------------|
-   |$.numAPIs       |1828               |
-   |$.numEndpoints  |56776              |
-   |$.numSpecs      |3224               |
+   |$.numAPIs       |1829               |
+   |$.numEndpoints  |56801              |
+   |$.numSpecs      |3225               |
