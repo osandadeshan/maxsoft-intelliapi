@@ -129,8 +129,8 @@ tags: request_placeholders, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
-   |JSON Path       |Expected Result    |
+   |JSON Path       |isExists?          |
    |----------------|-------------------|
-   |$.numAPIs       |1829               |
-   |$.numEndpoints  |56801              |
-   |$.numSpecs      |3225               |
+   |$.numAPIs       |true               |
+   |$.numEndpoints  |true               |
+   |$.numSpecs      |true               |
