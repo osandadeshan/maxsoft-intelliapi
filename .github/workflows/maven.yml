@@ -36,12 +36,12 @@ jobs:
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="regression" -Denv="qa"
       - name: Send workflow status as an email
         uses: wadeww/send-email-action@v1
-          with:
-            server_address: smtp.gmail.com
-            port: 465
-            username: ${{ secrets.MAIL_USERNAME }}
-            password: ${{ secrets.MAIL_PASSWORD }}
-            subject: MaxSoft IntelliAPI Workflow Finished
-            body: Workflow job finished as ${{job.status}}
-            to: osanda.deshan@gmail.com
-            from: MaxSoft IntelliAPI
+        with:
+          server_address: smtp.gmail.com
+          port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: MaxSoft IntelliAPI Workflow Finished
+          body: Workflow job finished as ${{job.status}}
+          to: osanda.deshan@gmail.com
+          from: MaxSoft IntelliAPI
