@@ -44,7 +44,7 @@ jobs:
           subject: Github Actions job result
           body: Build job of ${{github.repository}} completed successfully!
           to: osanda.deshan@gmail.com
-          from: osanda.deshan@gmail.com
+          from: maxsoftintelliapi@gmail.com
           cc:
           bcc:
           # Optional content type (defaults to text/plain):
