@@ -35,13 +35,19 @@ jobs:
       - name: Run regression tests with Maven
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="regression" -Denv="qa"
       - name: Send workflow status as an email
-        uses: wadeww/send-email-action@v1
+        uses: dawidd6/action-send-mail@v2.4.0
         with:
           server_address: smtp.gmail.com
-          port: 465
+          server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: MaxSoft IntelliAPI Workflow Finished
-          body: Workflow job finished as ${{job.status}}
+          subject: Github Actions job result
+          body: Build job of ${{github.repository}} completed successfully!
           to: osanda.deshan@gmail.com
-          from: MaxSoft IntelliAPI
+          from: osanda.deshan@gmail.com
+          cc:
+          bcc:
+          # Optional content type (defaults to text/plain):
+          content_type: text/html
+          # Optional converting Markdown to HTML (set content_type to text/html too):
+          convert_markdown: true
