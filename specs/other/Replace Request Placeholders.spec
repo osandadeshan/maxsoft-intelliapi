@@ -128,7 +128,7 @@ tags: request_placeholders, regression
    |#jsonFile                   |y                  |Scenario       |jsonFile                |                 |
 * When the user invokes the API
 * Then the status code for the request is "200"
-* And the JSON Path Assertions for the response should be equal to the following
+* And the JSON Path Existence in the response should be equal to the following
    |JSON Path       |isExists?          |
    |----------------|-------------------|
    |$.numAPIs       |true               |
