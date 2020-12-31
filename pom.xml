@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.thoughtworks.gauge</groupId>
             <artifactId>gauge-java</artifactId>
-            <version>0.7.2</version>
+            <version>0.7.13</version>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -32,9 +32,14 @@
             <version>4.3.0</version>
         </dependency>
         <dependency>
-            <groupId>javax.activation</groupId>
-            <artifactId>activation</artifactId>
-            <version>1.1.1</version>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>2.4.0</version>
         </dependency>
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -47,34 +52,9 @@
             <version>8.0.16</version>
         </dependency>
         <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>4.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy</artifactId>
-            <version>3.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>java-hamcrest</artifactId>
-            <version>2.0.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.8</version>
-        </dependency>
-        <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20090211</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.3</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -82,19 +62,9 @@
             <version>3.15</version>
         </dependency>
         <dependency>
-            <groupId>com.jayway.jsonpath</groupId>
-            <artifactId>json-path</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>3.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>1.1.1</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
@@ -102,14 +72,19 @@
             <version>0.12</version>
         </dependency>
         <dependency>
-            <groupId>com.github.osandadeshan</groupId>
-            <artifactId>MaxSoft-GReporter</artifactId>
-            <version>1.0.6</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.osandadeshan</groupId>
+            <artifactId>MaxSoft-GReporter</artifactId>
+            <version>1.0.6</version>
         </dependency>
     </dependencies>
 
@@ -118,7 +93,7 @@
          <plugin>
              <groupId>org.codehaus.mojo</groupId>
              <artifactId>exec-maven-plugin</artifactId>
-             <version>1.6.0</version>
+             <version>3.0.0</version>
              <executions>
                  <execution>
                      <goals>

@@ -33,4 +33,4 @@ jobs:
       - name: Run pre-requisites tests with Maven
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="qa"
       - name: Run regression tests with Maven
-        run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="regression" -Denv="qa"
+        run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="regression" -Denv="qa" -DinParallel=true

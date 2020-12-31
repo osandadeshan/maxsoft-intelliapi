@@ -1,7 +1,6 @@
 package com.maxsoft.intelliapi.util;
 
-import com.thoughtworks.gauge.datastore.DataStore;
-import com.thoughtworks.gauge.datastore.DataStoreFactory;
+import com.thoughtworks.gauge.datastore.*;
 import org.testng.Assert;
 
 import java.security.InvalidParameterException;
@@ -23,8 +22,7 @@ public class DataStoreProcessor {
 
     public static String getSavedValueForScenario(String variableName) {
         try {
-            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-            return (String) scenarioStore.get(variableName);
+            return (String) ScenarioDataStore.get(variableName);
         } catch (Exception ex) {
             printError("Failed to read the text inside Scenario Data Store ["
                     + variableName + "]\n" + ex.getMessage());
@@ -34,8 +32,7 @@ public class DataStoreProcessor {
 
     public static void saveValueForScenario(String variableName, String textToBeStored) {
         try {
-            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-            scenarioStore.put(variableName, textToBeStored);
+            ScenarioDataStore.put(variableName, textToBeStored);
         } catch (Exception ex) {
             printError("\"" + textToBeStored + "\" is failed to save as a text in Scenario Data Store ["
                     + variableName + "]\n" + ex.getMessage());
@@ -181,8 +178,7 @@ public class DataStoreProcessor {
 
     private static String getScenarioDataStoreValue(String variableName) {
         try {
-            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-            String value = (String) scenarioStore.get(variableName);
+            String value = (String) ScenarioDataStore.get(variableName);
             printInfo("Text inside Scenario Data Store [" + variableName
                     + "] is: \"" + value + "\"" + "\n");
             return value;
@@ -195,8 +191,7 @@ public class DataStoreProcessor {
 
     private static String getSpecificationDataStoreValue(String variableName) {
         try {
-            DataStore specDataStore = DataStoreFactory.getSpecDataStore();
-            String value = (String) specDataStore.get(variableName);
+            String value = (String) SpecDataStore.get(variableName);
             printInfo("Text inside Specification Data Store [" + variableName
                     + "] is: \"" + value + "\"" + "\n");
             return value;
@@ -209,8 +204,7 @@ public class DataStoreProcessor {
 
     private static String getSuiteDataStoreValue(String variableName) {
         try {
-            DataStore suiteStore = DataStoreFactory.getSuiteDataStore();
-            String value = (String) suiteStore.get(variableName);
+            String value = (String) SuiteDataStore.get(variableName);
             printInfo("Text inside Suite Data Store [" + variableName + "] is: \""
                     + value + "\"" + "\n");
             return value;
@@ -223,8 +217,7 @@ public class DataStoreProcessor {
 
     private static void saveToScenarioDataStore(String variableName, String textToBeStored) {
         try {
-            DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
-            scenarioStore.put(variableName, textToBeStored);
+            ScenarioDataStore.put(variableName, textToBeStored);
             printInfo("\"" + textToBeStored + "\" is successfully saved as a text in Scenario Data Store ["
                     + variableName + "]");
         } catch (Exception ex) {
@@ -235,8 +228,7 @@ public class DataStoreProcessor {
 
     private static void saveToSpecificationDataStore(String variableName, String textToBeStored) {
         try {
-            DataStore specDataStore = DataStoreFactory.getSpecDataStore();
-            specDataStore.put(variableName, textToBeStored);
+            SpecDataStore.put(variableName, textToBeStored);
             printInfo("\"" + textToBeStored + "\" is successfully saved as a text in Specification Data Store ["
                     + variableName + "]");
         } catch (Exception ex) {
@@ -247,8 +239,7 @@ public class DataStoreProcessor {
 
     private static void saveToSuiteDataStore(String variableName, String textToBeStored) {
         try {
-            DataStore suiteStore = DataStoreFactory.getSuiteDataStore();
-            suiteStore.put(variableName, textToBeStored);
+            SuiteDataStore.put(variableName, textToBeStored);
             printInfo("\"" + textToBeStored + "\" is successfully saved as a text in Suite Data Store ["
                     + variableName + "]");
         } catch (Exception ex) {
