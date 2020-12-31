@@ -29,7 +29,7 @@ jobs:
       - name: Install Gauge
         run: sudo apt-get update && sudo apt-get install gauge
       - name: Install Gauge-Java plugin
-        run: gauge install java --version 0.7.2
+        run: gauge install java
       - name: Run pre-requisites tests with Maven
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="qa"
       - name: Run regression tests with Maven
