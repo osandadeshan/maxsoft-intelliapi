@@ -23,7 +23,7 @@ tags: headers, regression
    |Scenario      |varToken     |$.token           |
 
 
-## Invoke Create a user API with authentication header separately
+## Invoke create a user API with authentication header separately
 
 * Given that a user needs to invoke "Create a user"
 * And the user saves environment property file data into data stores
@@ -68,9 +68,9 @@ tags: headers, regression
    |$.data.email |yes                |Scenario       |varEmail                |                |
 
 
-## Invoke Task API with valid headers
+## Invoke create task API with valid headers and valid json request body
 
-* Given that a user needs to invoke "Create task"
+* Given that a user needs to invoke "Create a task"
 * And the user saves environment property file data into data stores
    |DataStore Type|Variable Name  |Attribute Name In Property File|
    |--------------|---------------|-------------------------------|
@@ -84,22 +84,27 @@ tags: headers, regression
    |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
    |-------------|-------------------|---------------|------------------------|-----------------------------------|
    |Authorization|yes                |Scenario       |AuthToken               |                                   |
-   |tenant       |no                 |               |                        |taskdb                             |
+   |App-Name     |no                 |               |                        |IntelliAPI                         |
+   |Organization |no                 |               |                        |MaxSoft                            |
 * And the user set the request attributes using data stores as follows
-   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
-   |--------------------------------|-------------------|---------------|------------------------|------------------------|
-   |#app                            |no                 |               |                        |IntelliAPI              |
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                         |
+   |--------------------------------|-------------------|---------------|------------------------|-------------------------------------------------|
+   |#status                         |no                 |               |                        |In Progress                                      |
+   |#name                           |no                 |               |                        |IntelliAPI framework for codeless API automation |
+   |#category                       |no                 |               |                        |IntelliAPI                                       |
+   |#isDeleted                      |no                 |               |                        |false                                            |
+   |#version                        |no                 |               |                        |1.3                                              |
 * When the user invokes the API
 * Then the status code for the request is "201"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
-   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value  |
-   |-------------|-------------------|---------------|------------------------|----------------|
-   |$.message    |no                 |               |                        |Success         |
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                |
+   |-------------|-------------------|---------------|------------------------|------------------------------|
+   |$.message    |no                 |               |                        |Task has created successfully |
 
 
-## Invoke Task API with invalid headers
+## Invoke create task API with an invalid header and valid json request body
 
-* Given that a user needs to invoke "Create task"
+* Given that a user needs to invoke "Create a task"
 * And the user saves environment property file data into data stores
    |DataStore Type|Variable Name  |Attribute Name In Property File|
    |--------------|---------------|-------------------------------|
@@ -113,33 +118,27 @@ tags: headers, regression
    |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
    |-------------|-------------------|---------------|------------------------|-----------------------------------|
    |Authorization|yes                |Scenario       |AuthToken               |                                   |
-   |tenant       |no                 |               |                        |taskdb                             |
+   |App-Name     |no                 |               |                        |IntelliApp                         |
+   |Organization |no                 |               |                        |MaxSoft                            |
 * And the user set the request attributes using data stores as follows
-   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
-   |--------------------------------|-------------------|---------------|------------------------|------------------------|
-   |#app                            |no                 |               |                        |GReporter               |
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                         |
+   |--------------------------------|-------------------|---------------|------------------------|-------------------------------------------------|
+   |#status                         |no                 |               |                        |In Progress                                      |
+   |#name                           |no                 |               |                        |IntelliAPI framework for codeless API automation |
+   |#category                       |no                 |               |                        |IntelliAPI                                       |
+   |#isDeleted                      |no                 |               |                        |false                                            |
+   |#version                        |no                 |               |                        |1.3                                              |
 * When the user invokes the API
-* Then the status code for the request is "404"
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                |
+   |-------------|-------------------|---------------|------------------------|------------------------------|
+   |$.message    |no                 |               |                        |Invalid header(s)             |
 
 
-## Invoke Task API without authentication header
+## Invoke create task API with invalid headers and valid json request body
 
-* Given that a user needs to invoke "Create task"
-* And the user set the request headers using data stores as follows
-   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
-   |-------------|-------------------|---------------|------------------------|-----------------------------------|
-   |tenant       |no                 |               |                        |taskdb                             |
-* And the user set the request attributes using data stores as follows
-   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
-   |--------------------------------|-------------------|---------------|------------------------|------------------------|
-   |#app                            |no                 |               |                        |GReporter               |
-* When the user invokes the API
-* Then the status code for the request is "404"
-
-
-## Invoke Task API without tenant header
-
-* Given that a user needs to invoke "Create task"
+* Given that a user needs to invoke "Create a task"
 * And the user saves environment property file data into data stores
    |DataStore Type|Variable Name  |Attribute Name In Property File|
    |--------------|---------------|-------------------------------|
@@ -153,9 +152,224 @@ tags: headers, regression
    |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
    |-------------|-------------------|---------------|------------------------|-----------------------------------|
    |Authorization|yes                |Scenario       |AuthToken               |                                   |
+   |App-Name     |no                 |               |                        |IntelliApp                         |
+   |Organization |no                 |               |                        |MaxSoftLK                          |
 * And the user set the request attributes using data stores as follows
-   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
-   |--------------------------------|-------------------|---------------|------------------------|------------------------|
-   |#app                            |no                 |               |                        |GReporter               |
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                         |
+   |--------------------------------|-------------------|---------------|------------------------|-------------------------------------------------|
+   |#status                         |no                 |               |                        |In Progress                                      |
+   |#name                           |no                 |               |                        |IntelliAPI framework for codeless API automation |
+   |#category                       |no                 |               |                        |IntelliAPI                                       |
+   |#isDeleted                      |no                 |               |                        |false                                            |
+   |#version                        |no                 |               |                        |1.3                                              |
 * When the user invokes the API
-* Then the status code for the request is "404"
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                |
+   |-------------|-------------------|---------------|------------------------|------------------------------|
+   |$.message    |no                 |               |                        |Invalid header(s)             |
+
+
+## Invoke create task API without authentication header and valid json request body
+
+* Given that a user needs to invoke "Create a task"
+* And the user set the request headers using data stores as follows
+   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
+   |-------------|-------------------|---------------|------------------------|-----------------------------------|
+   |App-Name     |no                 |               |                        |IntelliAPI                         |
+   |Organization |no                 |               |                        |MaxSoft                            |
+* And the user set the request attributes using data stores as follows
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                         |
+   |--------------------------------|-------------------|---------------|------------------------|-------------------------------------------------|
+   |#status                         |no                 |               |                        |In Progress                                      |
+   |#name                           |no                 |               |                        |IntelliAPI framework for codeless API automation |
+   |#category                       |no                 |               |                        |IntelliAPI                                       |
+   |#isDeleted                      |no                 |               |                        |false                                            |
+   |#version                        |no                 |               |                        |1.3                                              |
+* When the user invokes the API
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                  |
+   |-------------|-------------------|---------------|------------------------|--------------------------------|
+   |$.message    |no                 |               |                        |Authorization header is required|
+
+
+## Invoke create task API without organization header and valid json request body
+
+* Given that a user needs to invoke "Create a task"
+* And the user saves environment property file data into data stores
+   |DataStore Type|Variable Name  |Attribute Name In Property File|
+   |--------------|---------------|-------------------------------|
+   |Scenario      |authFirstValue |authentication_first_value     |
+* And concat values in data stores and save it in a "Scenario" type data store named "AuthToken"
+   |DataStore Type|Variable Name  |
+   |--------------|---------------|
+   |Scenario      |authFirstValue |
+   |Scenario      |varToken       |
+* And the user set the request headers using data stores as follows
+   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
+   |-------------|-------------------|---------------|------------------------|-----------------------------------|
+   |Authorization|yes                |Scenario       |AuthToken               |                                   |
+   |App-Name     |no                 |               |                        |IntelliAPI                         |
+* And the user set the request attributes using data stores as follows
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                         |
+   |--------------------------------|-------------------|---------------|------------------------|-------------------------------------------------|
+   |#status                         |no                 |               |                        |In Progress                                      |
+   |#name                           |no                 |               |                        |IntelliAPI framework for codeless API automation |
+   |#category                       |no                 |               |                        |IntelliAPI                                       |
+   |#isDeleted                      |no                 |               |                        |false                                            |
+   |#version                        |no                 |               |                        |1.3                                              |
+* When the user invokes the API
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                 |
+   |-------------|-------------------|---------------|------------------------|-------------------------------|
+   |$.message    |no                 |               |                        |Organization header is required|
+
+
+## Invoke create task API with valid headers and invalid json request body
+
+* Given that a user needs to invoke "Create a task"
+* And the user saves environment property file data into data stores
+   |DataStore Type|Variable Name  |Attribute Name In Property File|
+   |--------------|---------------|-------------------------------|
+   |Scenario      |authFirstValue |authentication_first_value     |
+* And concat values in data stores and save it in a "Scenario" type data store named "AuthToken"
+   |DataStore Type|Variable Name  |
+   |--------------|---------------|
+   |Scenario      |authFirstValue |
+   |Scenario      |varToken       |
+* And the user set the request headers using data stores as follows
+   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
+   |-------------|-------------------|---------------|------------------------|-----------------------------------|
+   |Authorization|yes                |Scenario       |AuthToken               |                                   |
+   |App-Name     |no                 |               |                        |IntelliAPI                         |
+   |Organization |no                 |               |                        |MaxSoft                            |
+* And the user set the request attributes using data stores as follows
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                         |
+   |--------------------------------|-------------------|---------------|------------------------|-------------------------------------------------|
+   |#status                         |no                 |               |                        |Completed                                        |
+   |#name                           |no                 |               |                        |IntelliAPI framework for codeless API automation |
+   |#category                       |no                 |               |                        |IntelliAPI                                       |
+   |#isDeleted                      |no                 |               |                        |false                                            |
+   |#version                        |no                 |               |                        |1.3                                              |
+* When the user invokes the API
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                    |
+   |-------------|-------------------|---------------|------------------------|----------------------------------|
+   |$.message    |no                 |               |                        |JSON request body is not accepted |
+
+
+## Invoke create task API with invalid headers and invalid json request body
+
+* Given that a user needs to invoke "Create a task"
+* And the user saves environment property file data into data stores
+   |DataStore Type|Variable Name  |Attribute Name In Property File|
+   |--------------|---------------|-------------------------------|
+   |Scenario      |authFirstValue |authentication_first_value     |
+* And concat values in data stores and save it in a "Scenario" type data store named "AuthToken"
+   |DataStore Type|Variable Name  |
+   |--------------|---------------|
+   |Scenario      |authFirstValue |
+   |Scenario      |varToken       |
+* And the user set the request headers using data stores as follows
+   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
+   |-------------|-------------------|---------------|------------------------|-----------------------------------|
+   |Authorization|yes                |Scenario       |AuthToken               |                                   |
+   |App-Name     |no                 |               |                        |IntelliApp                         |
+   |Organization |no                 |               |                        |MaxSoftLK                          |
+* And the user set the request attributes using data stores as follows
+   |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                         |
+   |--------------------------------|-------------------|---------------|------------------------|-------------------------------------------------|
+   |#status                         |no                 |               |                        |Completed                                        |
+   |#name                           |no                 |               |                        |IntelliAPI framework for codeless API automation |
+   |#category                       |no                 |               |                        |IntelliAPI                                       |
+   |#isDeleted                      |no                 |               |                        |false                                            |
+   |#version                        |no                 |               |                        |1.3                                              |
+* When the user invokes the API
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                |
+   |-------------|-------------------|---------------|------------------------|------------------------------|
+   |$.message    |no                 |               |                        |Invalid header(s)             |
+
+
+## Invoke get all tasks API with valid headers
+
+* Given that a user needs to invoke "Get all tasks"
+* And the user saves environment property file data into data stores
+   |DataStore Type|Variable Name  |Attribute Name In Property File|
+   |--------------|---------------|-------------------------------|
+   |Scenario      |authFirstValue |authentication_first_value     |
+* And concat values in data stores and save it in a "Scenario" type data store named "AuthToken"
+   |DataStore Type|Variable Name  |
+   |--------------|---------------|
+   |Scenario      |authFirstValue |
+   |Scenario      |varToken       |
+* And the user set the request headers using data stores as follows
+   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
+   |-------------|-------------------|---------------|------------------------|-----------------------------------|
+   |Authorization|yes                |Scenario       |AuthToken               |                                   |
+   |App-Name     |no                 |               |                        |IntelliAPI                         |
+   |Organization |no                 |               |                        |MaxSoft                            |
+* When the user invokes the API
+* Then the status code for the request is "200"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path     |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                                  |
+   |--------------|-------------------|---------------|------------------------|------------------------------------------------|
+   |$[0].status[0]|no                 |               |                        |In Progress                                     |
+   |$[0].name     |no                 |               |                        |IntelliAPI framework for codeless API automation|
+   |$[0].category |no                 |               |                        |IntelliAPI                                      |
+   |$[0].__v      |no                 |               |                        |1.3                                             |
+
+
+## Invoke get all tasks API with invalid headers
+
+* Given that a user needs to invoke "Get all tasks"
+* And the user saves environment property file data into data stores
+   |DataStore Type|Variable Name  |Attribute Name In Property File|
+   |--------------|---------------|-------------------------------|
+   |Scenario      |authFirstValue |authentication_first_value     |
+* And concat values in data stores and save it in a "Scenario" type data store named "AuthToken"
+   |DataStore Type|Variable Name  |
+   |--------------|---------------|
+   |Scenario      |authFirstValue |
+   |Scenario      |varToken       |
+* And the user set the request headers using data stores as follows
+   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
+   |-------------|-------------------|---------------|------------------------|-----------------------------------|
+   |Authorization|yes                |Scenario       |AuthToken               |                                   |
+   |App-Name     |no                 |               |                        |IntelliAPI                         |
+   |Organization |no                 |               |                        |MaxSoftLK                          |
+* When the user invokes the API
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                |
+   |-------------|-------------------|---------------|------------------------|------------------------------|
+   |$.message    |no                 |               |                        |Invalid header(s)             |
+
+
+## Invoke get all tasks API without organization header
+
+* Given that a user needs to invoke "Get all tasks"
+* And the user saves environment property file data into data stores
+   |DataStore Type|Variable Name  |Attribute Name In Property File|
+   |--------------|---------------|-------------------------------|
+   |Scenario      |authFirstValue |authentication_first_value     |
+* And concat values in data stores and save it in a "Scenario" type data store named "AuthToken"
+   |DataStore Type|Variable Name  |
+   |--------------|---------------|
+   |Scenario      |authFirstValue |
+   |Scenario      |varToken       |
+* And the user set the request headers using data stores as follows
+   |Header Name  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Header Value                       |
+   |-------------|-------------------|---------------|------------------------|-----------------------------------|
+   |Authorization|yes                |Scenario       |AuthToken               |                                   |
+   |App-Name     |no                 |               |                        |IntelliAPI                         |
+* When the user invokes the API
+* Then the status code for the request is "400"
+* And the JSON Path Assertions for the response should be equal to the values inside the data stores
+   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value                 |
+   |-------------|-------------------|---------------|------------------------|-------------------------------|
+   |$.message    |no                 |               |                        |Organization header is required|
