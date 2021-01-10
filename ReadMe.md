@@ -43,10 +43,10 @@ The main reason for developing this framework is to provide an easy way for Tech
 ## How to Install Gauge Core
 
 **On Windows**
-1. Install Chocolatey by executing the following command. \
-` @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString(‘https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
+1. Install Chocolatey by executing the following command in an administrator command prompt. \
+`@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
 
-2. Install Gauge by executing the following command. \
+2. Install Gauge by executing the following command in an administrator command prompt. \
 `choco install gauge`
 
 **On MacOS**
