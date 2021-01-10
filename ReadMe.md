@@ -4,10 +4,12 @@
 The main reason for developing this framework is to provide an easy way for Technical QA, Developer or Non-technical QA to perform API testing in an easy manner.
 
 ## Advantages
-- Generation of an executable document.
-- Human readable tests, business language and Mark-down syntax.
-- Tests can be designed even by a non- technical person.
+- Ability to implement automated tests for an API within few minutes.
+- Codeless API automation.
 - Ability to validate backend databases.
+- Tests can be designed even by a non- technical person.
+- Human readable tests in business language and markdown syntax.
+- Generation of an executable document.
 - Generate a HTML report with test details for every test execution.
 - Parallel execution.
 - Live execution report.
