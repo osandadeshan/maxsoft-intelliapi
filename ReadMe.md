@@ -31,6 +31,9 @@ The main reason for developing this framework is to provide an easy way for Tech
 ## Supported Languages
 - Java
 
+## Design Diagram
+![image](https://user-images.githubusercontent.com/9147189/104115454-a1ed7d00-5335-11eb-9e23-0f75137068af.png)
+
 ## Pre Requisites
 1. Java
 2. Maven
