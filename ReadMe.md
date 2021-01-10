@@ -13,7 +13,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 - Live execution report.
 - Automated emails for test execution summary with graphical representations.
 
-## Technologies/Frameworks used
+## Technologies/Frameworks Used
 - Java
 - Gauge Framework
 - Rest Assured
@@ -33,7 +33,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 1. Java
 2. Maven
 
-## How to Install Gauge Core
+## Installing Gauge Core
 **On Windows**
 1. Install Chocolatey by executing the following command in an administrator command prompt. \
 `@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
@@ -59,7 +59,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 `sudo apt-get update` \
 `sudo apt-get install gauge`
 
-## How to Install Gauge Plugins
+## Installing Gauge Plugins
 1. Open Command Prompt and execute following commands. \
 `gauge install java` \
 `gauge install html-report` \
@@ -100,7 +100,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 6. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-4-5fb265ca5eaf "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4")
 7. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-5-3b2c22328233 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5")
 
-## How to build the MaxSoft IntelliAPI JAR file
+## Building the MaxSoft IntelliAPI JAR File
 1) Get a clone of this project.
 2) Open the command prompt. 
 3) Navigate to the project directory. \
@@ -108,7 +108,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 4) Execute this command. \
 `mvn clean install -DskipTests`
 
-## How to test the project code
+## Testing the Project
 1) Open the command prompt.
 2) Navigate to the directory of the **dev_regression_run.bat** file. \
 `cd <project_dir\batch_files>`
