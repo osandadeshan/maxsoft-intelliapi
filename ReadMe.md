@@ -1,9 +1,7 @@
 # MaxSoft IntelliAPI
-<br />
 
 ## Introduction
 The main reason for developing this framework is to provide an easy way for Technical QA, Developer or Non-technical QA to perform API testing in an easy manner.
-<br /><br />
 
 ## Technologies/Frameworks used
 - Java
@@ -12,17 +10,14 @@ The main reason for developing this framework is to provide an easy way for Tech
 - Apache POI
 - Junit
 - Apache Maven
-<br />
 
 ## Supported Platforms
 - Windows
 - Linux
 - Mac OS
-<br />
 
 ## Supported Languages
 - Java
-<br />
 
 ## Advantages
 - Generation of an executable document.
@@ -33,15 +28,12 @@ The main reason for developing this framework is to provide an easy way for Tech
 - Parallel execution.
 - Live execution report.
 - Automated emails for test execution summary with graphical representations.
-<br />
 
 ## Pre Requisites
 1. Java
 2. Maven
-<br />
 
 ## How to Install Gauge Core
-
 **On Windows**
 1. Install Chocolatey by executing the following command in an administrator command prompt. \
 `@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
@@ -66,7 +58,6 @@ The main reason for developing this framework is to provide an easy way for Tech
 3. Finally, install Gauge using these commands. \
 `sudo apt-get update` \
 `sudo apt-get install gauge`
-<br />
 
 ## How to Install Gauge Plugins
 1. Open Command Prompt and execute following commands. \
@@ -93,7 +84,12 @@ The main reason for developing this framework is to provide an easy way for Tech
     spectacle (<version number>)
     xml-report (<version number>)
 ```
-<br />
+
+## Tested Versions
+1. Java Version: 1.8.0_181
+2. Apache Maven Version: 3.6.1
+3. Gauge Version: 1.1.6
+4. Gauge-Java Version: 0.7.13
 
 ## MaxSoft IntelliAPI Tutorials
 1. [MaxSoft IntelliAPI](https://medium.com/@osanda.deshan/maxsoft-ata-framework-for-api-test-automation-9cffd25a0b15 "MaxSoft — IntelliAPI")
@@ -103,7 +99,6 @@ The main reason for developing this framework is to provide an easy way for Tech
 5. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 3](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-3-160f81e404f1 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 3")
 6. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-4-5fb265ca5eaf "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4")
 7. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-5-3b2c22328233 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5")
-<br />
 
 ## How to build the MaxSoft IntelliAPI JAR file
 1) Get a clone of this project.
@@ -112,7 +107,6 @@ The main reason for developing this framework is to provide an easy way for Tech
 `cd <project_dir>`
 4) Execute this command. \
 `mvn clean install -DskipTests`
-<br />
 
 ## How to test the project code
 1) Open the command prompt.
@@ -121,17 +115,13 @@ The main reason for developing this framework is to provide an easy way for Tech
 3) Enter the name of the **.bat** file and the extension. \
 `dev_regression_run.bat`
 4) Press **Enter**.
-<br />
 
 ## Support Forum
 [Gitter](https://gitter.im/MaxSoft-IntelliAPI/community)
 
-<br />
-
 ## License
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/License_icon-mit-2.svg/2000px-License_icon-mit-2.svg.png" alt="MIT License" width="100" height="100"/> [MaxSoft IntelliAPI](https://medium.com/intelliapi) is released under [MIT License](https://opensource.org/licenses/MIT)
 
-<br />
-
 ## Copyright
-Copyright 2020 MaxSoft.
+Copyright 2021
+MaxSoft.
