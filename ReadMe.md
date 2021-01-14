@@ -91,10 +91,11 @@ The main reason for developing this framework is to provide an easy way for Tech
 ```
 
 ## Tested Versions
-1. Java Version: 1.8.0_181
-2. Apache Maven Version: 3.6.1
-3. Gauge Version: 1.1.6
-4. Gauge-Java Version: 0.7.13
+| OS 			    | Java Version   | Maven Version | Gauge Version | Gauge Java Version |
+| ------------------------- | -------------- | ------------- | ------------ | ------------------- |
+| Windows 10 Enterprise     | 1.8.0_181      | 3.6.1 	     | 1.1.6 	    | 0.7.13		  |
+| Windows 10 		    | 1.8.0_271      | 3.6.3 	     | 1.1.6	    | 0.7.13 		  |
+| Ubuntu 18.04 		    | 1.8  	     | 3.6.3 	     | 1.1.7 	    | 0.7.13 		  |
 
 ## MaxSoft IntelliAPI Tutorials
 1. [MaxSoft IntelliAPI](https://medium.com/@osanda.deshan/maxsoft-ata-framework-for-api-test-automation-9cffd25a0b15 "MaxSoft — IntelliAPI")
