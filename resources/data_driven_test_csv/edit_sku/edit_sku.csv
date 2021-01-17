@@ -1,3 +1,0 @@
-scenario,api,skuId,type,price
-Edit a SKU for a deck,Edit SKU,com.pearsoned.smartflashcards.test1,DECK,0.99
-Edit a SKU for a bundle,Edit SKU,com.pearsoned.smartflashcards.test2,BUNDLE,0.99

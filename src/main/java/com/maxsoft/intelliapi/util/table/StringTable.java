@@ -1,5 +1,8 @@
 package com.maxsoft.intelliapi.util.table;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Project Name : MaxSoft-IntelliAPI
  * Developer    : Osanda Deshan
@@ -9,65 +12,46 @@ package com.maxsoft.intelliapi.util.table;
  * Description  :
  **/
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public final class StringTable {
 
-    private Board board;
-
-    private final int tableWidth;
-
-    private List<String> headersList;
-
-    private List<List<String>> rowsList;
-
-    private List<Integer> colWidthsList;
-
-    private List<Integer> colAlignsList;
-
-    private int headerHeight;
-
-    private int rowHeight;
-
-    private int gridMode;
-
-    private Block initialTableBlock;
-
     public final static int GRID_NON = 13;
-
-    public final static int GRID_FULL = 14;
-
     public final static int GRID_COLUMN = 15;
+    private final Board board;
+    private final List<String> headersList;
+    private final List<List<String>> rowsList;
+    private final List<Integer> colWidthsList;
+    private final List<Integer> colAlignsList;
+    private final int headerHeight;
+    private final int rowHeight;
+    private final int gridMode;
+    private Block initialTableBlock;
 
     public StringTable(Board board, int tableWidth, List<String> headersList, List<List<String>> rowsList) {
         this.board = board;
         if (tableWidth <= 0) {
             throw new RuntimeException("Board width must be large than zero. " + tableWidth + " given.");
-        } else {
-            this.tableWidth = tableWidth;
         }
         if (headersList.size() <= 0) {
-            throw new RuntimeException("Header size must be large than zero. " + headersList.size() + " found.");
+            throw new RuntimeException("Header size must be large than zero. " + 0 + " found.");
         } else {
             this.headersList = headersList;
         }
         for (int i = 0; i < rowsList.size(); i++) {
             List<String> row = rowsList.get(i);
             if (row.size() != headersList.size()) {
-                throw new RuntimeException("Size(" + row.size() + ") of the row(" + i + ") and header size(" + headersList.size() + ") are not equal");
+                throw new RuntimeException("Size(" + row.size() + ") of the row(" + i + ") and header size("
+                        + headersList.size() + ") are not equal");
             }
         }
         this.rowsList = rowsList;
-        this.colWidthsList = new ArrayList<Integer>();
-        int avgWidthOfCol = (tableWidth - (gridMode == GRID_NON ? 0 : headersList.size() + 1)) / headersList.size();
-        int availableForExtend = (tableWidth - (gridMode == GRID_NON ? 0 : headersList.size() + 1)) % headersList.size();
+        this.colWidthsList = new ArrayList<>();
+        int avgWidthOfCol = (tableWidth - (headersList.size() + 1)) / headersList.size();
+        int availableForExtend = (tableWidth - (headersList.size() + 1)) % headersList.size();
         for (int i = 0; i < headersList.size(); i++, availableForExtend--) {
             int finalWidth = avgWidthOfCol + (availableForExtend > 0 ? 1 : 0);
             this.colWidthsList.add(finalWidth);
         }
-        this.colAlignsList = new ArrayList<Integer>();
+        this.colAlignsList = new ArrayList<>();
         List<String> firstRow = rowsList.get(0);
         for (String cell : firstRow) {
             int alignMode;
@@ -94,97 +78,8 @@ public final class StringTable {
         gridMode = GRID_COLUMN;
     }
 
-    public StringTable(Board board, int tableWidth, List<String> headersList, List<List<String>> rowsList, List<Integer> colWidthsList) {
-        this(board, tableWidth, headersList, rowsList);
-        if (colWidthsList.size() != headersList.size()) {
-            throw new RuntimeException("Column width count(" + colWidthsList.size() + ") and header size(" + headersList.size() + ") are not equal");
-        } else {
-            this.colWidthsList = colWidthsList;
-        }
-    }
-
-    public StringTable(Board board, int tableWidth, List<String> headersList, List<List<String>> rowsList, List<Integer> colWidthsList, List<Integer> colAlignsList) {
-        this(board, tableWidth, headersList, rowsList, colWidthsList);
-        if (colAlignsList.size() != headersList.size()) {
-            throw new RuntimeException("Column align count(" + colAlignsList.size() + ") and header size(" + headersList.size() + ") are not equal");
-        } else {
-            this.colAlignsList = colAlignsList;
-        }
-    }
-
-    public List<String> getHeadersList() {
-        return headersList;
-    }
-
-    public StringTable setHeadersList(List<String> headersList) {
-        this.headersList = headersList;
-        return this;
-    }
-
-    public List<List<String>> getRowsList() {
-        return rowsList;
-    }
-
-    public StringTable setRowsList(List<List<String>> rowsList) {
-        this.rowsList = rowsList;
-        return this;
-    }
-
-    public List<Integer> getColWidthsList() {
-        return colWidthsList;
-    }
-
-    public StringTable setColWidthsList(List<Integer> colWidthsList) {
-        if (colWidthsList.size() != headersList.size()) {
-            throw new RuntimeException("Column width count(" + colWidthsList.size() + ") and header size(" + headersList.size() + ") are not equal");
-        } else {
-            this.colWidthsList = colWidthsList;
-        }
-        return this;
-    }
-
-    public List<Integer> getColAlignsList() {
-        return colAlignsList;
-    }
-
-    public StringTable setColAlignsList(List<Integer> colAlignsList) {
-        if (colAlignsList.size() != headersList.size()) {
-            throw new RuntimeException("Column align count(" + colAlignsList.size() + ") and header size(" + headersList.size() + ") are not equal");
-        } else {
-            this.colAlignsList = colAlignsList;
-        }
-        return this;
-    }
-
-    public int getHeaderHeight() {
-        return headerHeight;
-    }
-
-    public StringTable setHeaderHeight(int headerHeight) {
-        this.headerHeight = headerHeight;
-        return this;
-    }
-
-    public int getRowHeight() {
-        return rowHeight;
-    }
-
-    public StringTable setRowHeight(int rowHeight) {
-        this.rowHeight = rowHeight;
-        return this;
-    }
-
     public int getGridMode() {
         return gridMode;
-    }
-
-    public StringTable setGridMode(int gridMode) {
-        if (gridMode == GRID_NON || gridMode == GRID_FULL || gridMode == GRID_COLUMN) {
-            this.gridMode = gridMode;
-        } else {
-            throw new RuntimeException("Invalid grid mode. " + gridMode + " given.");
-        }
-        return this;
     }
 
     public Block tableToBlocks() {
@@ -192,11 +87,7 @@ public final class StringTable {
             String headerValue = headersList.get(i);
             int columnWidth = colWidthsList.get(i);
             Block block = new Block(board, columnWidth, headerHeight, headerValue);
-            if (getGridMode() == GRID_NON) {
-                block.allowGrid(false);
-            } else {
-                block.allowGrid(true);
-            }
+            block.allowGrid(getGridMode() != GRID_NON);
             int alignIndex = colAlignsList.get(i);
             block.setDataAlign(alignIndex);
             if (initialTableBlock == null) {
@@ -206,18 +97,13 @@ public final class StringTable {
             }
         }
         if (getGridMode() != GRID_COLUMN) {
-            for (int i = 0; i < rowsList.size(); i++) {
-                List<String> row = rowsList.get(i);
+            for (List<String> row : rowsList) {
                 Block rowStartingBlock = initialTableBlock.getMostBelowBlock();
                 for (int j = 0; j < row.size(); j++) {
                     String rowValue = row.get(j);
                     int columnWidth = colWidthsList.get(j);
                     Block block = new Block(board, columnWidth, rowHeight, rowValue);
-                    if (getGridMode() == GRID_NON) {
-                        block.allowGrid(false);
-                    } else {
-                        block.allowGrid(true);
-                    }
+                    block.allowGrid(getGridMode() != GRID_NON);
                     int alignIndex = colAlignsList.get(j);
                     block.setDataAlign(alignIndex);
 
@@ -231,11 +117,11 @@ public final class StringTable {
         } else {
             for (int i = 0; i < headersList.size(); i++) {
                 String columnData = "";
-                for (int j = 0; j < rowsList.size(); j++) {
-                    String rowData = rowsList.get(j).get(i);
+                for (List<String> strings : rowsList) {
+                    String rowData = strings.get(i);
                     columnData = columnData.concat(rowData).concat("\n");
                 }
-                Block block = new Block(board, colWidthsList.get(i), rowsList.size(),columnData);
+                Block block = new Block(board, colWidthsList.get(i), rowsList.size(), columnData);
                 int alignIndex = colAlignsList.get(i);
                 block.setDataAlign(alignIndex);
                 if (initialTableBlock.getBelowBlock() == null) {
@@ -247,11 +133,4 @@ public final class StringTable {
         }
         return initialTableBlock;
     }
-
-    public StringTable invalidate(){
-        initialTableBlock = null;
-        return this;
-    }
-
-
 }

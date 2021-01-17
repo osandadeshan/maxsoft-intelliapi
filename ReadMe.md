@@ -1,52 +1,49 @@
 # MaxSoft IntelliAPI
-<br />
 
 ## Introduction
 The main reason for developing this framework is to provide an easy way for Technical QA, Developer or Non-technical QA to perform API testing in an easy manner.
-<br /><br />
 
-## Technologies/Frameworks used
+## Advantages
+- Ability to implement automated tests for an API within few minutes.
+- Codeless API automation.
+- Ability to validate backend databases.
+- Tests can be designed even by a non- technical person.
+- Human readable tests in business language and markdown syntax.
+- Generation of an executable document.
+- Generate a HTML report with test details for every test execution.
+- Parallel execution.
+- Live execution report.
+- Automated emails for test execution summary with graphical representations.
+
+## Technologies/Frameworks Used
 - Java
 - Gauge Framework
 - Rest Assured
 - Apache POI
 - Junit
 - Apache Maven
-<br />
 
 ## Supported Platforms
 - Windows
 - Linux
 - Mac OS
-<br />
 
 ## Supported Languages
 - Java
-<br />
 
-## Advantages
-- Generation of an executable document.
-- Human readable tests, business language and Mark-down syntax.
-- Tests can be designed even by a non- technical person.
-- Ability to validate backend databases.
-- Generate a HTML report with test details for every test execution.
-- Parallel execution.
-- Live execution report.
-- Automated emails for test execution summary with graphical representations.
-<br />
+## Design Diagram
+![image](https://user-images.githubusercontent.com/9147189/104115454-a1ed7d00-5335-11eb-9e23-0f75137068af.png)
 
 ## Pre Requisites
 1. Java
 2. Maven
-<br />
 
-## How to Install Gauge Core
-
+## Installing Gauge Core
 **On Windows**
-1. Install Chocolatey by executing the following command. \
-` @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString(‘https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
+1. Install Chocolatey by executing the following command in an administrator command prompt. \
+`@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
 
-2. Install Gauge by executing the following command. \
+2. Install Gauge by executing the following command in an administrator command prompt. \
 `choco install gauge`
 
 **On MacOS**
@@ -66,9 +63,8 @@ The main reason for developing this framework is to provide an easy way for Tech
 3. Finally, install Gauge using these commands. \
 `sudo apt-get update` \
 `sudo apt-get install gauge`
-<br />
 
-## How to Install Gauge Plugins
+## Installing Gauge Plugins
 1. Open Command Prompt and execute following commands. \
 `gauge install java` \
 `gauge install html-report` \
@@ -93,7 +89,15 @@ The main reason for developing this framework is to provide an easy way for Tech
     spectacle (<version number>)
     xml-report (<version number>)
 ```
-<br />
+
+## Tested Versions
+| OS 			    | Java Version   | Maven Version | Gauge Version | Gauge Java Version |
+| ------------------------- | -------------- | ------------- | ------------ | ------------------- |
+| Windows 10 Enterprise     | 1.8.0_181      | 3.6.1 	     | 1.1.6 	    | 0.7.13		  |
+| Windows 10 Enterprise     | 1.8.0_131      | 3.5.0 	     | 1.1.7 	    | 0.7.13		  |
+| Windows 10 		    | 1.8.0_271      | 3.6.3 	     | 1.1.6	    | 0.7.13 		  |
+| Ubuntu 18.04 		    | 1.8  	     | 3.6.3 	     | 1.1.7 	    | 0.7.13 		  |
+| MacOS Catalina v10.15.7   | 1.8.0_275      | 3.6.3 	     | 1.1.7 	    | 0.7.13 		  |
 
 ## MaxSoft IntelliAPI Tutorials
 1. [MaxSoft IntelliAPI](https://medium.com/@osanda.deshan/maxsoft-ata-framework-for-api-test-automation-9cffd25a0b15 "MaxSoft — IntelliAPI")
@@ -103,35 +107,28 @@ The main reason for developing this framework is to provide an easy way for Tech
 5. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 3](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-3-160f81e404f1 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 3")
 6. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-4-5fb265ca5eaf "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4")
 7. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-5-3b2c22328233 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5")
-<br />
 
-## How to build the MaxSoft IntelliAPI JAR file
+## Building the MaxSoft IntelliAPI JAR File
 1) Get a clone of this project.
 2) Open the command prompt. 
 3) Navigate to the project directory. \
 `cd <project_dir>`
 4) Execute this command. \
 `mvn clean install -DskipTests`
-<br />
 
-## How to test the project code
+## Testing the Project
 1) Open the command prompt.
-2) Navigate to the directory of the **Dev BVT.bat** file. \
-`cd <project_dir\bat_files\test_runner_bats>`
+2) Navigate to the directory of the **dev_regression_run.bat** file. \
+`cd <project_dir\batch_files>`
 3) Enter the name of the **.bat** file and the extension. \
-`Dev BVT.bat`
+`dev_regression_run.bat`
 4) Press **Enter**.
-<br />
 
 ## Support Forum
 [Gitter](https://gitter.im/MaxSoft-IntelliAPI/community)
 
-<br />
-
 ## License
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/License_icon-mit-2.svg/2000px-License_icon-mit-2.svg.png" alt="MIT License" width="100" height="100"/> [MaxSoft IntelliAPI](https://medium.com/intelliapi) is released under [MIT License](https://opensource.org/licenses/MIT)
 
-<br />
-
 ## Copyright
-Copyright 2018 MaxSoft.
+Copyright 2021 [MaxSoft](https://maxsoftlk.github.io/).

@@ -1,4 +1,0 @@
-{
- "userId": "osan",
- "title": "Expert Deck using only userId and title"
-}

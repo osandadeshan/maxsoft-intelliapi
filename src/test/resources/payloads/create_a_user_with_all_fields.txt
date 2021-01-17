@@ -1,0 +1,6 @@
+{
+    "name": "#name",
+    "email": "#email",
+    "gender": "#gender",
+    "status": "#status"
+}

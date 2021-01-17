@@ -1,8 +1,0 @@
-scenario,api,comment,username,rating,appId,email,appName
-Send a feedback using special characters for the comment,Send A Feedback,@#$5fdf*,osa,Good,sfc_mvp,osa@max.com,sfc_mvp_ios
-Send a feedback using special characters for the username,Send A Feedback,Nice App,@#$5fdf*,Awesome,sfc_mvp,osa@max.com,sfc_mvp_android
-Send a feedback using special characters for the rating,Send A Feedback,Nice App,osa,@#$5fdf*,sfc_mvp,osa@max.com,sfc_mvp_ios
-Send a feedback using appId as uppercase,Send A Feedback,Nice App,osa,Good,SFC_MVP,osa@max.com,sfc_mvp_ios
-Send a feedback using appId as uppercase and lowercase,Send A Feedback,Nice App,osa,Good,SfC_mVp,osa@max.com,sfc_mvp_ios
-Send a feedback with empty email,Send A Feedback,Nice App,osa,Bad,sfc_mvp,,sfc_mvp_android
-Send a feedback with empty appName,Send A Feedback,Nice App,osa,Good,sfc_mvp,osa@max.com,

@@ -1,5 +1,18 @@
 package com.maxsoft.intelliapi.util.fileoperator;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+import static com.maxsoft.intelliapi.util.FrameworkUtil.isTrue;
+import static com.maxsoft.intelliapi.common.Constants.IS_AUTHENTICATION_REQUIRED;
+import static com.maxsoft.intelliapi.common.Constants.RETRIEVE_TOKEN_FROM_TEXT_FILE;
+import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
+import static com.maxsoft.intelliapi.util.LogUtil.printError;
+import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
+
 /**
  * Project Name : MaxSoft-IntelliAPI
  * Developer    : Osanda Deshan
@@ -9,34 +22,12 @@ package com.maxsoft.intelliapi.util.fileoperator;
  * Description  :
  **/
 
-import com.thoughtworks.gauge.Gauge;
-import org.apache.log4j.Logger;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Scanner;
-import static com.maxsoft.intelliapi.common.Base.getSavedValueForScenario;
-
-
 public abstract class TextFile {
 
-    private final static Logger logger = Logger.getLogger(TextFile.class.getName());
-
-    public static void printInfo(String text){
-        logger.info(text);
-        Gauge.writeMessage(text);
-    }
-
-    public static void printError(String text){
-        logger.error(text);
-        Gauge.writeMessage(text);
-    }
-
-    public static void write(String text, String filePath){
+    public static void write(String text, String filePath) {
         BufferedWriter writer = null;
-        try
-        {
+
+        try {
             Path pathToFile = Paths.get(filePath);
             Files.createDirectories(pathToFile.getParent());
             File file = new File(filePath);
@@ -44,56 +35,45 @@ public abstract class TextFile {
             file.createNewFile();
             writer = new BufferedWriter(new FileWriter(filePath));
             writer.write(text);
-        }
-        catch (IOException e)
-        {
-        }
-        finally
-        {
-            try
-            {
+        } catch (IOException ignored) {
+        } finally {
+            try {
                 if (writer != null)
                     writer.close();
-            }
-            catch (IOException e)
-            {
+            } catch (IOException ignored) {
             }
         }
     }
 
-    public static String readAccessToken(String filePath){
+    public static String read(String filePath) {
         String content = null;
-        String isAuthenticationRequired = getSavedValueForScenario("Is authentication required?").toLowerCase();
-        String isAccessTokenRetrievedFromTextFile = getSavedValueForScenario("Do you need to retrieve the access token from the text file?").toLowerCase();
-        String accessTokenString = getSavedValueForScenario("Provide the access token if you need to authorize the API manually").toLowerCase();
-        try {
-            content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
-            if ((Boolean.valueOf(isAuthenticationRequired).equals(Boolean.TRUE) || isAuthenticationRequired.equals("yes") ||
-                    isAuthenticationRequired.equals("y")) && (Boolean.valueOf(isAccessTokenRetrievedFromTextFile).equals(Boolean.TRUE) ||
-                    isAccessTokenRetrievedFromTextFile.equals("yes") || isAccessTokenRetrievedFromTextFile.equals("y"))) {
-                printInfo("Successfully read the access token from the text file in the directory of \"" + filePath + "\"\n\n");
-            }
-        } catch (FileNotFoundException e) {
-            if ((Boolean.valueOf(isAuthenticationRequired).equals(Boolean.TRUE) || isAuthenticationRequired.equals("yes") ||
-                    isAuthenticationRequired.equals("y")) && (Boolean.valueOf(isAccessTokenRetrievedFromTextFile).equals(Boolean.TRUE) ||
-                    isAccessTokenRetrievedFromTextFile.equals("yes") || isAccessTokenRetrievedFromTextFile.equals("y"))) {
-                printError("Reading the access token from the text file in the directory of \"" + filePath + "\" is failed\n\n");
-            }
-        }
-        logger.info(content);
-        return content;
-    }
 
-    public static String read(String filePath){
-        String content = null;
         try {
             content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
         } catch (FileNotFoundException e) {
-            printError("Reading the text file in the directory of \"" + filePath + "\" is failed");
+            printError("Reading the text file in the directory of \"" + filePath + "\" is failed due to "
+                    + e.getMessage());
         }
-        logger.info(content);
+        printInfo(content);
         return content;
     }
 
+    public static String readAccessToken(String filePath) {
+        String content = null;
+        String isAuthenticationRequired = getSavedValueForScenario(IS_AUTHENTICATION_REQUIRED).toLowerCase();
+        String isAccessTokenRetrievedFromTextFile = getSavedValueForScenario(RETRIEVE_TOKEN_FROM_TEXT_FILE).toLowerCase();
 
+        try {
+            content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
+            if (isTrue(isAuthenticationRequired) && isTrue(isAccessTokenRetrievedFromTextFile)) {
+                printInfo("Successfully read the access token from the text file in the directory of \""
+                        + filePath + "\"\n\n");
+            }
+        } catch (FileNotFoundException e) {
+            printError("Reading the access token from the text file in the directory of \""
+                    + filePath + "\" is failed due to " + e.getMessage() + "\n\n");
+        }
+        printInfo(content);
+        return content;
+    }
 }

@@ -1,2 +1,0 @@
-scenario,api,subjectId,title,status,previewCardIds,skuId,bookAuthor,purchaseStatus,bookTitle,id1,id2,authorId,createdSource,price,keyword1,keyword2,noOfDecks,description
-Create bundle using expert deck service all the attributes in the contract,Create Expert Bundle,Madol doowa,Ape gama,false,true,AAPIPH5-DC2-W,Kinkini Gamage,AVAILABLE,Ch. 02,,,Osanda Nimalarathna,web,100.0,key1,key2,2,Martin Book Series
