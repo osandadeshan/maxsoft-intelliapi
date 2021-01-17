@@ -94,6 +94,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 | OS 			    | Java Version   | Maven Version | Gauge Version | Gauge Java Version |
 | ------------------------- | -------------- | ------------- | ------------ | ------------------- |
 | Windows 10 Enterprise     | 1.8.0_181      | 3.6.1 	     | 1.1.6 	    | 0.7.13		  |
+| Windows 10 Enterprise     | 1.8.0_131      | 3.5.0 	     | 1.1.7 	    | 0.7.13		  |
 | Windows 10 		    | 1.8.0_271      | 3.6.3 	     | 1.1.6	    | 0.7.13 		  |
 | Ubuntu 18.04 		    | 1.8  	     | 3.6.3 	     | 1.1.7 	    | 0.7.13 		  |
 | MacOS Catalina v10.15.7   | 1.8.0_275      | 3.6.3 	     | 1.1.7 	    | 0.7.13 		  |
