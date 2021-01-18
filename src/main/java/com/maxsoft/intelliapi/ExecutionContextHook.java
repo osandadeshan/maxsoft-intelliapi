@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.executionhooks;
+package com.maxsoft.intelliapi;
 
 import com.maxsoft.intelliapi.util.LogUtil;
 import com.thoughtworks.gauge.*;

@@ -6,7 +6,7 @@ import com.thoughtworks.gauge.TableRow;
 
 import java.util.List;
 
-import static com.maxsoft.intelliapi.api.ApiResponse.*;
+import static com.maxsoft.intelliapi.api.ApiResponseProcessor.*;
 
 /**
  * Project Name    : MaxSoft-IntelliAPI

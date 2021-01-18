@@ -6,7 +6,7 @@ import io.restassured.http.Headers;
 
 import java.util.*;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
 import static com.maxsoft.intelliapi.util.reader.ApiDocumentReader.*;
@@ -20,7 +20,7 @@ import static com.maxsoft.intelliapi.util.reader.ApiDocumentReader.*;
  * Description     :
  **/
 
-public class ApiRequestPayload {
+public class ApiRequestPayloadProcessor {
 
     public static void initializeApiToBeInvoked(String apiEndpointName) {
         setApiEndpoint(apiEndpointName);

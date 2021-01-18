@@ -5,8 +5,8 @@ import com.maxsoft.intelliapi.util.FrameworkUtil;
 import com.thoughtworks.gauge.Step;
 import io.restassured.http.Headers;
 
-import static com.maxsoft.intelliapi.api.ApiRequestPayload.getHeaders;
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.api.ApiRequestPayloadProcessor.getHeaders;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
 
 /**
@@ -21,7 +21,7 @@ import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForSce
 public class OtherStepImpl {
 
     // Use this method to print the testing environment name in the HTML report
-    @Step("Configurations of the testing environment")
+    @Step("Print configuration details of the testing environment")
     public void printTestingEnvDetails() {
         FrameworkUtil.printTestingEnvDetails();
     }

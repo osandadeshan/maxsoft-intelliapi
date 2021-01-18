@@ -10,7 +10,7 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.Random;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
 import static java.time.temporal.ChronoUnit.SECONDS;
 
@@ -47,7 +47,7 @@ public class FrameworkUtil {
     }
 
     public static void printTestingEnvDetails() {
-        printInfo("Configurations of Test Execution Environment\n\n");
+        printInfo("Configurations of test execution environment\n\n");
         printInfo("Operating System: " + OS);
         printInfo("Environment: " + ENVIRONMENT.toUpperCase());
         printInfo("Base URL: " + EnvironmentPropertyReader.getBaseUrl());

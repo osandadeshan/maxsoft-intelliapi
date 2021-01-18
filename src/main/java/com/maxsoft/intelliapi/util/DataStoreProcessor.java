@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 import java.security.InvalidParameterException;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.LogUtil.printError;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
 

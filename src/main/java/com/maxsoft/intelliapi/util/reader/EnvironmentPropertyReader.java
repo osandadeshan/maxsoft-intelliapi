@@ -2,7 +2,7 @@ package com.maxsoft.intelliapi.util.reader;
 
 import java.security.InvalidParameterException;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 
 /**
  * Project Name    : MaxSoft-IntelliAPI

@@ -12,7 +12,7 @@ tags: data_store, regression
 
 ## Get configurations of the testing environment
 
-* Configurations of the testing environment
+* Print configuration details of the testing environment
 
 
 ## Saving values to Data Store

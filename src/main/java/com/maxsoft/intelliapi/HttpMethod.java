@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.common;
+package com.maxsoft.intelliapi;
 
 /**
  * Project Name    : MaxSoft-IntelliAPI
