@@ -8,11 +8,12 @@ import com.thoughtworks.gauge.TableRow;
 
 import java.util.List;
 
-import static com.maxsoft.intelliapi.api.ApiRequestPayloadProcessor.*;
-import static com.maxsoft.intelliapi.util.FrameworkUtil.*;
 import static com.maxsoft.intelliapi.Constants.*;
-import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
+import static com.maxsoft.intelliapi.api.ApiRequestPayloadProcessor.*;
+import static com.maxsoft.intelliapi.api.ApiResponseProcessor.saveResponseJsonPathValue;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.*;
+import static com.maxsoft.intelliapi.util.FrameworkUtil.*;
+import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
 
 /**
  * Project Name    : MaxSoft-IntelliAPI
@@ -29,6 +30,12 @@ public class ApiRequestPayloadConfigStepImpl {
     @Step("Given that a user needs to invoke <apiEndpointName>")
     public void apiToBeInvoked(String apiEndpointName) {
         initializeApiToBeInvoked(apiEndpointName);
+    }
+
+    // Use this method before invoking a GET API from a request url in the response's JSON path
+    @Step("Given that a user needs to invoke a GET API from the JSON Path value <jsonPath>")
+    public void saveApiEndpointInResponseBody(String jsonPath) {
+        saveResponseJsonPathValue(SCENARIO, VAR_API_ENDPOINT, jsonPath);
     }
 
     // Use this method to replace the placeholders inside the API Endpoint in Excel

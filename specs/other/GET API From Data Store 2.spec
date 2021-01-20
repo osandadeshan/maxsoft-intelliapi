@@ -19,6 +19,7 @@ tags: get_api, regression
 
 
 ## Invoke GET Request from a response's JSON Path value without authentication
+
 * Given that a user needs to invoke "Get urls"
 * And the user set the request authentication configurations as follows
    |Configuration                                                     |Configuration Value|
@@ -39,6 +40,6 @@ tags: get_api, regression
    |$[0].name     |no                 |               |                        |First photo                                     |
    |$[1].name     |no                 |               |                        |Second photo                                    |
    |$[3].name     |no                 |               |                        |Get all tasks with auth header                  |
-* And the user saves an API request url in the JSON Path <JSON Path> to a data store
-* And invoke a GET request from the API request url saved in the data store
+* Given that a user needs to invoke a GET API from the JSON Path value <JSON Path>
+* When the user invokes the GET API
 * Then the status code for the request is <Expected Response Status Code>
