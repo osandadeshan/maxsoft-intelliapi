@@ -9,7 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.security.InvalidParameterException;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.saveValueForScenario;
 
 /**

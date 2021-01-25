@@ -7,8 +7,8 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 import static com.maxsoft.intelliapi.util.FrameworkUtil.isTrue;
-import static com.maxsoft.intelliapi.common.Constants.IS_AUTHENTICATION_REQUIRED;
-import static com.maxsoft.intelliapi.common.Constants.RETRIEVE_TOKEN_FROM_TEXT_FILE;
+import static com.maxsoft.intelliapi.Constants.IS_AUTHENTICATION_REQUIRED;
+import static com.maxsoft.intelliapi.Constants.RETRIEVE_TOKEN_FROM_TEXT_FILE;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
 import static com.maxsoft.intelliapi.util.LogUtil.printError;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;

@@ -1,18 +1,18 @@
 package com.maxsoft.intelliapi.api;
 
 import com.maxsoft.intelliapi.util.FrameworkUtil;
-import com.maxsoft.intelliapi.common.BodyType;
-import com.maxsoft.intelliapi.common.HttpMethod;
+import com.maxsoft.intelliapi.BodyType;
+import com.maxsoft.intelliapi.HttpMethod;
 import io.restassured.http.Headers;
 
 import java.security.InvalidParameterException;
 
-import static com.maxsoft.intelliapi.api.ApiRequestPayload.getApiEndpointToBeInvoked;
-import static com.maxsoft.intelliapi.api.FormDataHttpMethodsProcessor.postFormDataApiWithAuthMultipleHeaders;
-import static com.maxsoft.intelliapi.api.FormDataHttpMethodsProcessor.putFormDataApiWithAuthMultipleHeaders;
-import static com.maxsoft.intelliapi.api.JsonHttpMethodsProcessor.*;
-import static com.maxsoft.intelliapi.common.BodyType.JSON;
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.api.ApiRequestPayloadProcessor.getApiEndpointToBeInvoked;
+import static com.maxsoft.intelliapi.api.FormDataRequestProcessor.postFormDataApiWithAuthMultipleHeaders;
+import static com.maxsoft.intelliapi.api.FormDataRequestProcessor.putFormDataApiWithAuthMultipleHeaders;
+import static com.maxsoft.intelliapi.api.JsonRequestProcessor.*;
+import static com.maxsoft.intelliapi.BodyType.JSON;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
 
 /**

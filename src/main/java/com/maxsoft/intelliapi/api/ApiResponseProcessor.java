@@ -16,7 +16,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.*;
 import static com.maxsoft.intelliapi.util.LogUtil.printError;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
@@ -30,7 +30,7 @@ import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
  * Description     :
  **/
 
-public class ApiResponse {
+public class ApiResponseProcessor {
 
     public static void saveStatusCode(Response response) {
         saveValueForScenario(VAR_API_RESPONSE_STATUS_CODE, String.valueOf(response.statusCode()));

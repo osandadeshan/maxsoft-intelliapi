@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.saveValueForScenario;
 import static com.maxsoft.intelliapi.util.LogUtil.printError;

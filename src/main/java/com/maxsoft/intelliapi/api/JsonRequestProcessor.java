@@ -4,8 +4,8 @@ import io.restassured.http.ContentType;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 
-import static com.maxsoft.intelliapi.api.ApiResponse.*;
-import static com.maxsoft.intelliapi.common.Constants.AUTHORIZATION_HEADER_NAME;
+import static com.maxsoft.intelliapi.api.ApiResponseProcessor.*;
+import static com.maxsoft.intelliapi.Constants.AUTHORIZATION_HEADER_NAME;
 import static io.restassured.RestAssured.given;
 
 /**
@@ -17,7 +17,7 @@ import static io.restassured.RestAssured.given;
  * Description     :
  **/
 
-public class JsonHttpMethodsProcessor {
+public class JsonRequestProcessor {
 
     public static void getApiWithAuthMultipleHeaders(String invokingEndpoint, String accessToken, Headers headers) {
         Response response;

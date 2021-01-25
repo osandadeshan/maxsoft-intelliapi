@@ -9,9 +9,9 @@ import java.io.File;
 import java.util.Collections;
 import java.util.Map;
 
-import static com.maxsoft.intelliapi.api.ApiRequestPayload.getFormData;
-import static com.maxsoft.intelliapi.api.ApiResponse.*;
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.api.ApiRequestPayloadProcessor.getFormData;
+import static com.maxsoft.intelliapi.api.ApiResponseProcessor.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.getSavedValueForScenario;
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
@@ -25,7 +25,7 @@ import static io.restassured.config.EncoderConfig.encoderConfig;
  * Description     :
  **/
 
-public class FormDataHttpMethodsProcessor {
+public class FormDataRequestProcessor {
 
     public static void postFormDataApiWithAuthMultipleHeaders(String invokingEndpoint, String accessToken, Headers headers) {
         Response response;

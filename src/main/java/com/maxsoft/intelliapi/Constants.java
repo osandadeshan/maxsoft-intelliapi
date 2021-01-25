@@ -1,4 +1,4 @@
-package com.maxsoft.intelliapi.common;
+package com.maxsoft.intelliapi;
 
 import java.io.File;
 

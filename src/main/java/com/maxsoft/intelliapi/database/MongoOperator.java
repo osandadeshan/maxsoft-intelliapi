@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 import java.util.Collections;
 
-import static com.maxsoft.intelliapi.common.Constants.*;
+import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.saveValueForScenario;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
 import static com.mongodb.client.model.Filters.eq;

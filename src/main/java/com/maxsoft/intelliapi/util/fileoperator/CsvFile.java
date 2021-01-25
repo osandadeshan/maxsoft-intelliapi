@@ -6,7 +6,7 @@ import com.opencsv.CSVWriter;
 import java.io.*;
 import java.util.List;
 
-import static com.maxsoft.intelliapi.common.Constants.CURRENT_DIRECTORY;
+import static com.maxsoft.intelliapi.Constants.CURRENT_DIRECTORY;
 
 /**
  * Project Name : MaxSoft-IntelliAPI
