@@ -34,13 +34,13 @@ public class MySqlStepImpl {
     // Use this method to execute the mysql query
 	@Step("When the user executes the MySQL query as <query>")
     public void executeGivenQuery(String query) {
-        if (MySqlOperator.executeQuery(query).toString().equals("")) {
+        if (MySqlOperator.getResultsByExecutingQuery(query).toString().equals("")) {
             printInfo("No records found for the executed query");
         }
-        if (MySqlOperator.executeQuery(query) == null) {
+        if (MySqlOperator.getResultsByExecutingQuery(query) == null) {
 			printInfo("The executed query is invalid");
         } else {
-            MySqlOperator.executeQuery(query);
+            MySqlOperator.getResultsByExecutingQuery(query);
             printInfo("Query has been successfully executed");
         }
     }

@@ -1,6 +1,6 @@
 package com.maxsoft.intelliapi.database;
 
-import com.maxsoft.intelliapi.util.comparison.Comparison;
+import com.maxsoft.intelliapi.util.comparison.RecordsChecker;
 import com.maxsoft.intelliapi.util.comparison.Record;
 import com.maxsoft.intelliapi.util.table.Board;
 import com.maxsoft.intelliapi.util.table.StringTable;
@@ -50,7 +50,7 @@ public class MySqlOperator {
     public static Statement initializeDbConnection(String databaseName, String username, String password) {
         Statement statement = null;
         try {
-            dbConnection = DriverManager.getConnection(MYSQL_DATABASE_URL + databaseName, username, password);
+            dbConnection = DriverManager.getConnection(MYSQL_DATABASE_URL + "/" + databaseName, username, password);
             saveValueForScenario(MYSQL_USERNAME, username);
             saveValueForScenario(MYSQL_PASSWORD, password);
             saveValueForScenario(MYSQL_DATABASE_NAME, databaseName);
@@ -61,12 +61,7 @@ public class MySqlOperator {
         return statement;
     }
 
-    public static Statement connectDatabase() {
-        return MySqlOperator.initializeDbConnection(getSavedValueForScenario(MYSQL_DATABASE_NAME),
-                getSavedValueForScenario(MYSQL_USERNAME), getSavedValueForScenario(MYSQL_PASSWORD));
-    }
-
-    public static ResultSet executeQuery(String query) {
+    public static ResultSet getResultsByExecutingQuery(String query) {
         ResultSet resultSet = null;
 
         try {
@@ -83,7 +78,7 @@ public class MySqlOperator {
     public static void checkAllResultsAtOnce(Table tableForExpectedResults) {
         try {
             String query = getSavedValueForScenario(MYSQL_QUERY);
-            ResultSet resultSet = executeQuery(query);
+            ResultSet resultSet = getResultsByExecutingQuery(query);
             getColumnNames(resultSet);
 
             List<String> headersList1 = new ArrayList<>();
@@ -119,13 +114,15 @@ public class MySqlOperator {
         } catch (SQLException throwable) {
             throwable.printStackTrace();
         }
+        recordListForValuesInDatabase.clear();
+        recordListForValuesInSpecFile.clear();
     }
 
     // This method is used to validate all the data from the spec file with respect to the query results in row by row
     public static void checkResultsAndReturnMismatches(Table table) {
         try {
             String query = getSavedValueForScenario(MYSQL_QUERY);
-            ResultSet resultSet = executeQuery(query);
+            ResultSet resultSet = getResultsByExecutingQuery(query);
             getColumnNames(resultSet);
 
             List<String> headersList1 = new ArrayList<>();
@@ -156,17 +153,19 @@ public class MySqlOperator {
 
             Collections.sort(recordListForValuesInSpecFile);
             Collections.sort(recordListForValuesInDatabase);
-            Comparison.compareRecords(recordListForValuesInSpecFile, recordListForValuesInDatabase);
+            RecordsChecker.compare(recordListForValuesInSpecFile, recordListForValuesInDatabase);
 
             if (!(recordListForValuesInSpecFile.equals(recordListForValuesInDatabase))) {
                 printResults(headersList1, rowsList1);
             }
 
-            Assert.assertEquals(recordListForValuesInDatabase, recordListForValuesInSpecFile,
+            Assert.assertTrue(recordListForValuesInDatabase.containsAll(recordListForValuesInSpecFile),
                     "Results obtained from the database for the executed query and the expected results are different.\n");
         } catch (SQLException throwable) {
             throwable.printStackTrace();
         }
+        recordListForValuesInDatabase.clear();
+        recordListForValuesInSpecFile.clear();
     }
 
     public static void closeDbConnection() {
@@ -178,6 +177,11 @@ public class MySqlOperator {
             }
             printInfo("Database connection successfully closed");
         }
+    }
+
+    private static Statement connectDatabase() {
+        return MySqlOperator.initializeDbConnection(getSavedValueForScenario(MYSQL_DATABASE_NAME),
+                getSavedValueForScenario(MYSQL_USERNAME), getSavedValueForScenario(MYSQL_PASSWORD));
     }
 
     private static void getRecordsInRows(ResultSet resultSet) {
@@ -212,10 +216,11 @@ public class MySqlOperator {
         try {
             ResultSetMetaData metadata = resultSet.getMetaData();
             int columnCount = metadata.getColumnCount();
-            printInfo("\nColumn Names: ");
+            printInfo("Column Names: ");
             for (int i = 1; i <= columnCount; i++) {
                 printInfo(metadata.getColumnName(i));
             }
+            printInfo("\n");
             printInfo("Column count: " + columnCount + "\n");
         } catch (SQLException throwable) {
             throwable.printStackTrace();
@@ -226,6 +231,7 @@ public class MySqlOperator {
         Board board = new Board(75);
         String tableString = board.setInitialBlock(new StringTable(board, 75, headersList, rowsList)
                 .tableToBlocks()).build().getPreview();
-        printInfo("\nResults obtained from the database for the executed query: \n" + tableString);
+        printInfo("\n");
+        printInfo("Results obtained from the database for the executed query: \n" + tableString);
     }
 }

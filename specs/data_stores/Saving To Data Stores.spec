@@ -38,7 +38,7 @@ tags: data_store, regression
    |--------------|-------------|--------------------------------|
    |Scenario      |mongoHost    |127.0.0.1                       |
    |Specification |mongoPort    |27017                           |
-   |Scenario      |mysqlUrl     |jdbc:mysql://localhost:3306/user|
+   |Scenario      |mysqlUrl     |jdbc:mysql://localhost:3306     |
    |Suite         |headerName   |Authorization                   |
 
 

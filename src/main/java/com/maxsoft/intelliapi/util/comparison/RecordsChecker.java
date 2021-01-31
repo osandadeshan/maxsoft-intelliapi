@@ -15,16 +15,16 @@ import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
  * Description  :
  **/
 
-public class Comparison {
+public class RecordsChecker {
 
     static final ArrayList<Record> mismatchedResultsInSpecFile = new ArrayList<>();
     static final ArrayList<Record> mismatchedResultsInDb = new ArrayList<>();
 
-    public static boolean compareLists(List list1, List list2) {
+    public static boolean compare(List list1, List list2) {
         return list1.toString().contentEquals(list2.toString());
     }
 
-    public static void compareRecords(ArrayList<Record> recordListForSpec, ArrayList<Record> recordListForDb) {
+    public static void compare(ArrayList<Record> recordListForSpec, ArrayList<Record> recordListForDb) {
         Collections.sort(recordListForSpec);
         Collections.sort(recordListForDb);
 		boolean loop = true;
@@ -58,9 +58,11 @@ public class Comparison {
                 loop = false;
             }
         }
-        printInfo("\nMismatched results in the specification file:");
+        printInfo("\n");
+        printInfo("Mismatched results in the specification file:");
         printInfo(String.valueOf(mismatchedResultsInSpecFile));
-        printInfo("\nMismatched results in the database:");
+        printInfo("\n");
+        printInfo("Mismatched results in the database:");
         printInfo(String.valueOf(mismatchedResultsInDb));
     }
 }
