@@ -7,10 +7,8 @@ Date         : 6/30/2018
 Time         : 9:14 PM
 Description  : This is an executable specification file which follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 
-tags: database
+tags: database, mongo
 
-
-## MongoDB Test - Without data stores
 
 * Given a user need to connect to the "tasksdb" Mongo database and "tasks" collection
 * And the user set the MongoDB authentication as follows
@@ -20,6 +18,10 @@ tags: database
    |Username                               |N/A                |
    |Source                                 |N/A                |
    |Password                               |N/A                |
+
+
+## MongoDB Test - Without data stores
+
 * When the user executes the Mongo query using key as "name" and value as "Ron"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
    |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
@@ -30,14 +32,6 @@ tags: database
 
 ## MongoDB Test - With data stores
 
-* Given a user need to connect to the "tasksdb" Mongo database and "tasks" collection
-* And the user set the MongoDB authentication as follows
-   |Configuration                          |Configuration Value|
-   |---------------------------------------|-------------------|
-   |Is authentication credentials required?|No                 |
-   |Username                               |N/A                |
-   |Source                                 |N/A                |
-   |Password                               |N/A                |
 * And the user saves the values inside data stores as follows
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
