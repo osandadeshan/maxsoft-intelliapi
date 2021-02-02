@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "numAPIs": {
+      "type": "integer"
+    },
+    "numEndpoints": {
+      "type": "integer"
+    },
+    "numSpecs": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "numAPIs",
+    "numEndpoints",
+    "numSpecs"
+  ]
+}

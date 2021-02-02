@@ -20,6 +20,8 @@ import static com.maxsoft.intelliapi.Constants.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.*;
 import static com.maxsoft.intelliapi.util.LogUtil.printError;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * Project Name    : MaxSoft-IntelliAPI
@@ -263,5 +265,9 @@ public class ApiResponseProcessor {
             printError("Failed to save the value inside \"" + jsonPath + "\" into the text file in the directory of \""
                     + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
         }
+    }
+
+    public static void validateJsonSchema(String jsonSchemaFileName) {
+        assertThat(getSavedValueForScenario(VAR_API_RESPONSE_BODY), matchesJsonSchemaInClasspath(jsonSchemaFileName));
     }
 }

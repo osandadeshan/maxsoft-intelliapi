@@ -234,4 +234,10 @@ public class ApiResponseValidatorStepImpl {
             }
         }
     }
+
+    // Use this method to validate the JSON Schema
+    @Step("And validate the response against the JSON Schema saved in <jsonSchemaFileName>")
+    public void validateJsonSchema(String jsonSchemaFileName) {
+        ApiResponseProcessor.validateJsonSchema(jsonSchemaFileName);
+    }
 }
