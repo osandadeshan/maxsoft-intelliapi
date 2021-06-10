@@ -111,10 +111,10 @@ The main reason for developing this framework is to provide an easy way for Tech
 
 ## Testing the Project
 1) Go to **batch_files** folder in the project root directory.
-2) Double click on **dev_regression_run.bat** file.
-OR
-Run below commands on the terminal
-`mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="dev"`
+2) Double click on **dev_regression_run.bat** file. \
+OR \
+Run below commands on the terminal \
+`mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="dev"` \
 `mvn test-compile gauge:execute -DspecsDir="specs" -Denv="dev"`
 
 ## Support Forum
