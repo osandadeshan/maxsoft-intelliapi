@@ -1,6 +1,6 @@
 package com.maxsoft.intelliapi.stepimpl.api;
 
-import com.maxsoft.intelliapi.util.fileoperator.TextFile;
+import com.maxsoft.intelliapi.util.fileoperator.TextFileOperator;
 import com.maxsoft.intelliapi.util.reader.EnvironmentPropertyReader;
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.Table;
@@ -52,7 +52,7 @@ public class ApiRequestPayloadConfigStepImpl {
 
             if (hasContainedFileSyntax(replacementText)) {
                 invokingEndpoint = invokingEndpoint.replaceAll(placeholder,
-                        TextFile.read(getFilePathFromFileSyntax(replacementText)));
+                        TextFileOperator.read(getFilePathFromFileSyntax(replacementText)));
             } else {
                 invokingEndpoint = invokingEndpoint.replaceAll(placeholder, replacementText);
             }
@@ -82,7 +82,7 @@ public class ApiRequestPayloadConfigStepImpl {
             } else {
                 if (hasContainedFileSyntax(replacementText)) {
                     invokingEndpoint = invokingEndpoint.replaceAll(placeholder,
-                            TextFile.read(getFilePathFromFileSyntax(replacementText)));
+                            TextFileOperator.read(getFilePathFromFileSyntax(replacementText)));
                 } else {
                     invokingEndpoint = invokingEndpoint.replaceAll(placeholder, replacementText);
                 }
@@ -105,7 +105,7 @@ public class ApiRequestPayloadConfigStepImpl {
 
             if (hasContainedFileSyntax(headerValue)) {
                 headerNames = headerNames.concat(headerName).concat(",");
-                headerValues = headerValues.concat(TextFile.read(getFilePathFromFileSyntax(headerValue))).concat(",");
+                headerValues = headerValues.concat(TextFileOperator.read(getFilePathFromFileSyntax(headerValue))).concat(",");
             } else {
                 headerNames = headerNames.concat(headerName).concat(",");
                 headerValues = headerValues.concat(headerValue).concat(",");
@@ -138,7 +138,7 @@ public class ApiRequestPayloadConfigStepImpl {
             } else {
                 if (hasContainedFileSyntax(headerValue)) {
                     headerNames = headerNames.concat(headerName).concat(",");
-                    headerValues = headerValues.concat(TextFile.read(getFilePathFromFileSyntax(headerValue))).concat(",");
+                    headerValues = headerValues.concat(TextFileOperator.read(getFilePathFromFileSyntax(headerValue))).concat(",");
                 } else {
                     headerNames = headerNames.concat(headerName).concat(",");
                     headerValues = headerValues.concat(headerValue).concat(",");
@@ -171,7 +171,7 @@ public class ApiRequestPayloadConfigStepImpl {
             }
             else if (hasContainedFileSyntax(replacementText)) {
                 jsonRequestBody = jsonRequestBody.replaceAll(placeholder,
-                        TextFile.read(getFilePathFromFileSyntax(replacementText)));
+                        TextFileOperator.read(getFilePathFromFileSyntax(replacementText)));
             }
             else {
                 jsonRequestBody = jsonRequestBody.replaceAll(placeholder, replacementText);
@@ -206,7 +206,7 @@ public class ApiRequestPayloadConfigStepImpl {
                 }
                 else if (hasContainedFileSyntax(replacementText)) {
                     jsonRequestBody = jsonRequestBody.replaceAll(placeholder,
-                            TextFile.read(getFilePathFromFileSyntax(replacementText)));
+                            TextFileOperator.read(getFilePathFromFileSyntax(replacementText)));
                 } else {
                     jsonRequestBody = jsonRequestBody.replaceAll(placeholder, replacementText);
                 }
@@ -237,7 +237,7 @@ public class ApiRequestPayloadConfigStepImpl {
 
             if (hasContainedFileSyntax(replacementText)) {
                 payloadWithPlaceholders = payloadWithPlaceholders.replaceAll(placeholder,
-                        TextFile.read(getFilePathFromFileSyntax(replacementText)));
+                        TextFileOperator.read(getFilePathFromFileSyntax(replacementText)));
             } else {
                 payloadWithPlaceholders = payloadWithPlaceholders.replaceAll(placeholder, replacementText);
             }
@@ -268,7 +268,7 @@ public class ApiRequestPayloadConfigStepImpl {
             } else {
                 if (hasContainedFileSyntax(replacementText)) {
                     payloadWithPlaceholders = payloadWithPlaceholders.replaceAll(placeholder,
-                            TextFile.read(getFilePathFromFileSyntax(replacementText)));
+                            TextFileOperator.read(getFilePathFromFileSyntax(replacementText)));
                 } else {
                     payloadWithPlaceholders = payloadWithPlaceholders.replaceAll(placeholder, replacementText);
                 }
@@ -292,7 +292,7 @@ public class ApiRequestPayloadConfigStepImpl {
 
             if (hasContainedFileSyntax(value)) {
                 keys = keys.concat(key).concat(",");
-                values = values.concat(TextFile.read(getFilePathFromFileSyntax(value))).concat(",");
+                values = values.concat(TextFileOperator.read(getFilePathFromFileSyntax(value))).concat(",");
             } else {
                 keys = keys.concat(key).concat(",");
                 values = values.concat(value).concat(",");
@@ -325,7 +325,7 @@ public class ApiRequestPayloadConfigStepImpl {
             } else {
                 if (hasContainedFileSyntax(value)) {
                     keys = keys.concat(key).concat(",");
-                    values = values.concat(TextFile.read(getFilePathFromFileSyntax(value))).concat(",");
+                    values = values.concat(TextFileOperator.read(getFilePathFromFileSyntax(value))).concat(",");
                 } else {
                     keys = keys.concat(key).concat(",");
                     values = values.concat(value).concat(",");
@@ -372,7 +372,7 @@ public class ApiRequestPayloadConfigStepImpl {
 
             if (hasContainedFileSyntax(queryValue)) {
                 queryParams = queryParams.concat(queryName + "=" +
-                        TextFile.read(getFilePathFromFileSyntax(queryValue)) + "&");
+                        TextFileOperator.read(getFilePathFromFileSyntax(queryValue)) + "&");
             } else {
                 queryParams = queryParams.concat(queryName + "=" + queryValue + "&");
             }
@@ -402,7 +402,7 @@ public class ApiRequestPayloadConfigStepImpl {
             } else {
                 if (hasContainedFileSyntax(queryValue)) {
                     queryParams = queryParams.concat(queryName + "=" +
-                            TextFile.read(getFilePathFromFileSyntax(queryValue)) + "&");
+                            TextFileOperator.read(getFilePathFromFileSyntax(queryValue)) + "&");
                 } else {
                     queryParams = queryParams.concat(queryName + "=" + queryValue + "&");
                 }
@@ -425,7 +425,7 @@ public class ApiRequestPayloadConfigStepImpl {
             String pathValue = row.getCell(columnNames.get(1));
 
             if (hasContainedFileSyntax(pathValue)) {
-                pathParams = pathParams.concat(TextFile.read(getFilePathFromFileSyntax(pathValue)));
+                pathParams = pathParams.concat(TextFileOperator.read(getFilePathFromFileSyntax(pathValue)));
             } else {
                 pathParams = pathParams.concat(pathValue);
             }
@@ -453,7 +453,7 @@ public class ApiRequestPayloadConfigStepImpl {
                 pathParams = pathParams.concat(readFromDataStore(dataStoreType, dataStoreVariableName));
             } else {
                 if (hasContainedFileSyntax(pathValue)) {
-                    pathParams = pathParams.concat(TextFile.read(getFilePathFromFileSyntax(pathValue)));
+                    pathParams = pathParams.concat(TextFileOperator.read(getFilePathFromFileSyntax(pathValue)));
                 } else {
                     pathParams = pathParams.concat(pathValue);
                 }
@@ -476,7 +476,7 @@ public class ApiRequestPayloadConfigStepImpl {
             String value = row.getCell(columnNames.get(1));
 
             if (hasContainedFileSyntax(value)) {
-                saveValueForScenario(authConfig, TextFile.read(getFilePathFromFileSyntax(value)));
+                saveValueForScenario(authConfig, TextFileOperator.read(getFilePathFromFileSyntax(value)));
             } else {
                 saveValueForScenario(authConfig, value);
             }

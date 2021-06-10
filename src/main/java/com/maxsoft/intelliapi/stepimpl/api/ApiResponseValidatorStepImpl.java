@@ -1,7 +1,7 @@
 package com.maxsoft.intelliapi.stepimpl.api;
 
 import com.maxsoft.intelliapi.api.ApiResponseProcessor;
-import com.maxsoft.intelliapi.util.fileoperator.TextFile;
+import com.maxsoft.intelliapi.util.fileoperator.TextFileOperator;
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
@@ -44,7 +44,7 @@ public class ApiResponseValidatorStepImpl {
 
             if (hasContainedFileSyntax(jsonPathValue)) {
                 ApiResponseProcessor.checkJsonPathValueContainsText(jsonPath,
-                        TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                        TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
             } else {
                 ApiResponseProcessor.checkJsonPathValueContainsText(jsonPath, jsonPathValue);
             }
@@ -70,7 +70,7 @@ public class ApiResponseValidatorStepImpl {
             } else {
                 if (hasContainedFileSyntax(jsonPathValue)) {
                     ApiResponseProcessor.checkJsonPathValueContainsText(jsonPath,
-                            TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                            TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
                 } else {
                     ApiResponseProcessor.checkJsonPathValueContainsText(jsonPath, jsonPathValue);
                 }
@@ -90,7 +90,7 @@ public class ApiResponseValidatorStepImpl {
 
             if (hasContainedFileSyntax(jsonPathValue)) {
                 ApiResponseProcessor.checkJsonPathValueNotContainsText(jsonPath,
-                        TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                        TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
             } else {
                 ApiResponseProcessor.checkJsonPathValueNotContainsText(jsonPath, jsonPathValue);
             }
@@ -116,7 +116,7 @@ public class ApiResponseValidatorStepImpl {
             } else {
                 if (hasContainedFileSyntax(jsonPathValue)) {
                     ApiResponseProcessor.checkJsonPathValueNotContainsText(jsonPath,
-                            TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                            TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
                 } else {
                     ApiResponseProcessor.checkJsonPathValueNotContainsText(jsonPath, jsonPathValue);
                 }
@@ -136,7 +136,7 @@ public class ApiResponseValidatorStepImpl {
 
             if (hasContainedFileSyntax(jsonPathValue)) {
                 ApiResponseProcessor.checkJsonPathAssertionEqualsText(jsonPath,
-                        TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                        TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
             } else {
                 ApiResponseProcessor.checkJsonPathAssertionEqualsText(jsonPath, jsonPathValue);
             }
@@ -162,7 +162,7 @@ public class ApiResponseValidatorStepImpl {
             } else {
                 if (hasContainedFileSyntax(jsonPathValue)) {
                     ApiResponseProcessor.checkJsonPathAssertionEqualsText(jsonPath,
-                            TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                            TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
                 } else {
                     ApiResponseProcessor.checkJsonPathAssertionEqualsText(jsonPath, jsonPathValue);
                 }
@@ -182,7 +182,7 @@ public class ApiResponseValidatorStepImpl {
 
             if (hasContainedFileSyntax(jsonPathValue)) {
                 ApiResponseProcessor.checkJsonPathAssertionNotEqualsText(jsonPath,
-                        TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                        TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
             } else {
                 ApiResponseProcessor.checkJsonPathAssertionNotEqualsText(jsonPath, jsonPathValue);
             }
@@ -208,7 +208,7 @@ public class ApiResponseValidatorStepImpl {
             } else {
                 if (hasContainedFileSyntax(jsonPathValue)) {
                     ApiResponseProcessor.checkJsonPathAssertionNotEqualsText(jsonPath,
-                            TextFile.read(getFilePathFromFileSyntax(jsonPathValue)));
+                            TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue)));
                 } else {
                     ApiResponseProcessor.checkJsonPathAssertionNotEqualsText(jsonPath, jsonPathValue);
                 }
@@ -228,7 +228,7 @@ public class ApiResponseValidatorStepImpl {
 
             if (hasContainedFileSyntax(jsonPathValue)) {
                 ApiResponseProcessor.checkJsonPathExistence(jsonPath,
-                        Boolean.valueOf(TextFile.read(getFilePathFromFileSyntax(jsonPathValue))));
+                        Boolean.valueOf(TextFileOperator.read(getFilePathFromFileSyntax(jsonPathValue))));
             } else {
                 ApiResponseProcessor.checkJsonPathExistence(jsonPath, Boolean.valueOf(jsonPathValue));
             }

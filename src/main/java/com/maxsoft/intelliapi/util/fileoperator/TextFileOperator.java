@@ -22,7 +22,7 @@ import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
  * Description  :
  **/
 
-public abstract class TextFile {
+public abstract class TextFileOperator {
 
     public static void write(String text, String filePath) {
         BufferedWriter writer = null;

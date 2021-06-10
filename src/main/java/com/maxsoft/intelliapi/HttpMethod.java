@@ -11,5 +11,9 @@ package com.maxsoft.intelliapi;
 
 public enum HttpMethod {
 
-    GET, POST, PUT, DELETE
+    GET,
+    POST,
+    PUT,
+    PATCH,
+    DELETE
 }

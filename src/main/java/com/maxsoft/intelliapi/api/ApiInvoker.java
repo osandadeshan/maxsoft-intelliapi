@@ -8,8 +8,7 @@ import io.restassured.http.Headers;
 import java.security.InvalidParameterException;
 
 import static com.maxsoft.intelliapi.api.ApiRequestPayloadProcessor.getApiEndpointToBeInvoked;
-import static com.maxsoft.intelliapi.api.FormDataRequestProcessor.postFormDataApiWithAuthMultipleHeaders;
-import static com.maxsoft.intelliapi.api.FormDataRequestProcessor.putFormDataApiWithAuthMultipleHeaders;
+import static com.maxsoft.intelliapi.api.FormDataRequestProcessor.*;
 import static com.maxsoft.intelliapi.api.JsonRequestProcessor.*;
 import static com.maxsoft.intelliapi.BodyType.JSON;
 import static com.maxsoft.intelliapi.Constants.*;
@@ -73,6 +72,8 @@ public class ApiInvoker extends FrameworkUtil {
                         break;
                     case PUT:
                         putApiWithAuthMultipleHeaders(invokingEndpoint, jsonPayload, accessToken, headers);
+                    case PATCH:
+                        patchApiWithAuthMultipleHeaders(invokingEndpoint, jsonPayload, accessToken, headers);
                         break;
                     case DELETE:
                         deleteApiWithAuthMultipleHeaders(invokingEndpoint, accessToken, headers);
@@ -92,6 +93,8 @@ public class ApiInvoker extends FrameworkUtil {
                         break;
                     case PUT:
                         putFormDataApiWithAuthMultipleHeaders(invokingEndpoint, accessToken, headers);
+                    case PATCH:
+                        patchFormDataApiWithAuthMultipleHeaders(invokingEndpoint, accessToken, headers);
                         break;
                     case DELETE:
                         deleteApiWithAuthMultipleHeaders(invokingEndpoint, accessToken, headers);

@@ -3,7 +3,7 @@ package com.maxsoft.intelliapi.api;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.PathNotFoundException;
-import com.maxsoft.intelliapi.util.fileoperator.TextFile;
+import com.maxsoft.intelliapi.util.fileoperator.TextFileOperator;
 import com.opencsv.CSVWriter;
 import io.restassured.response.Response;
 import org.json.simple.JSONArray;
@@ -239,7 +239,7 @@ public class ApiResponseProcessor {
         }
 
         try {
-            TextFile.write(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
+            TextFileOperator.write(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
             printInfo("Successfully saved the access token into the text file in the directory of \""
                     + ACCESS_TOKEN_FILE_PATH + "\"");
         } catch (Exception ex) {
@@ -258,7 +258,7 @@ public class ApiResponseProcessor {
             if (!file.exists()) {
                 file.createNewFile();
             }
-            TextFile.write(jsonPathValue, CURRENT_DIRECTORY + filePath);
+            TextFileOperator.write(jsonPathValue, CURRENT_DIRECTORY + filePath);
             printInfo("Successfully saved the value inside \"" + jsonPath + "\" into the text file in the directory of \""
                     + CURRENT_DIRECTORY + filePath + "\"");
         } catch (Exception ex) {

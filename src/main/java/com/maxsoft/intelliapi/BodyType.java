@@ -11,5 +11,6 @@ package com.maxsoft.intelliapi;
 
 public enum BodyType {
 
-    JSON, FORM_DATA
+    JSON,
+    FORM_DATA
 }

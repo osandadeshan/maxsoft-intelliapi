@@ -20,7 +20,7 @@ import java.util.Iterator;
  * Description  :
  **/
 
-public abstract class ExcelFile {
+public abstract class ExcelFileOperator {
 
     private static int column;
 

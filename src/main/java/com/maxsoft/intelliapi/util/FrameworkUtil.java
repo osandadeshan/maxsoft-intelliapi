@@ -1,8 +1,8 @@
 package com.maxsoft.intelliapi.util;
 
 import com.github.javafaker.Faker;
-import com.maxsoft.intelliapi.util.fileoperator.CsvFile;
-import com.maxsoft.intelliapi.util.fileoperator.TextFile;
+import com.maxsoft.intelliapi.util.fileoperator.CsvFileOperator;
+import com.maxsoft.intelliapi.util.fileoperator.TextFileOperator;
 import com.maxsoft.intelliapi.util.reader.EnvironmentPropertyReader;
 
 import java.text.SimpleDateFormat;
@@ -39,10 +39,10 @@ public class FrameworkUtil {
     }
 
     public static void replaceAllColumnValuesToCurrentTimestamp(String filePath, String columnName, String timestampPattern) {
-        CsvFile csvFile = new CsvFile();
-        for(int i = 1; i<= csvFile.getLinesCount(filePath); i++){
-            csvFile.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(timestampPattern), i,
-                    csvFile.getColumnIndexByColumnName(filePath, columnName));
+        CsvFileOperator csvFileOperator = new CsvFileOperator();
+        for(int i = 1; i<= csvFileOperator.getLinesCount(filePath); i++){
+            csvFileOperator.updateCSVByRowIndexAndColumnIndex(filePath, getCurrentTimestamp(timestampPattern), i,
+                    csvFileOperator.getColumnIndexByColumnName(filePath, columnName));
         }
     }
 
@@ -56,7 +56,7 @@ public class FrameworkUtil {
     public static String readAccessToken() {
         String accessToken = "";
         try {
-            accessToken = TextFile.readAccessToken(ACCESS_TOKEN_FILE_PATH);
+            accessToken = TextFileOperator.readAccessToken(ACCESS_TOKEN_FILE_PATH);
         } catch (Exception ignored) {
         }
         return accessToken;

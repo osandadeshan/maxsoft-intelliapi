@@ -101,6 +101,34 @@ public class JsonRequestProcessor {
         clearInvokedApiEndpointArtifacts();
     }
 
+    public static void patchApiWithAuthMultipleHeaders(String invokingEndpoint, String jsonPayload, String accessToken, Headers headers) {
+        Response response;
+
+        if (accessToken == null || accessToken.equals("")) {
+            response = given()
+                    .contentType(ContentType.JSON)
+                    .headers(headers)
+                    .body(jsonPayload)
+                    .when()
+                    .patch(invokingEndpoint);
+        } else {
+            response = given()
+                    .contentType(ContentType.JSON)
+                    .header(AUTHORIZATION_HEADER_NAME, accessToken)
+                    .headers(headers)
+                    .body(jsonPayload)
+                    .when()
+                    .patch(invokingEndpoint);
+        }
+
+        saveStatusCode(response);
+        saveApiResponseBody(response);
+        printResponseTime(response);
+        printResponse();
+        printResponseHeaders(response);
+        clearInvokedApiEndpointArtifacts();
+    }
+
     public static void deleteApiWithAuthMultipleHeaders(String invokingEndpoint, String accessToken, Headers headers) {
         Response response;
 
