@@ -94,6 +94,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 | OS 			    | Java Version   | Maven Version | Gauge Version | Gauge Java Version |
 | ------------------------- | -------------- | ------------- | ------------ | ------------------- |
 | Windows 10 Enterprise     | 1.8.0_181      | 3.6.1 	     | 1.1.6 	    | 0.7.13		  |
+| Windows 10 Enterprise     | 1.8.0_181      | 3.6.1 	     | 1.2.1 	    | 0.7.15		  |
 | Windows 10 Enterprise     | 1.8.0_131      | 3.5.0 	     | 1.1.7 	    | 0.7.13		  |
 | Windows 10 		    | 1.8.0_271      | 3.6.3 	     | 1.1.6	    | 0.7.13 		  |
 | Ubuntu 18.04 		    | 1.8  	     | 3.6.3 	     | 1.1.7 	    | 0.7.13 		  |
@@ -108,21 +109,13 @@ The main reason for developing this framework is to provide an easy way for Tech
 6. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-4-5fb265ca5eaf "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 4")
 7. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-5-3b2c22328233 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5")
 
-## Building the MaxSoft IntelliAPI JAR File
-1) Get a clone of this project.
-2) Open the command prompt. 
-3) Navigate to the project directory. \
-`cd <project_dir>`
-4) Execute this command. \
-`mvn clean install -DskipTests`
-
 ## Testing the Project
-1) Open the command prompt.
-2) Navigate to the directory of the **dev_regression_run.bat** file. \
-`cd <project_dir\batch_files>`
-3) Enter the name of the **.bat** file and the extension. \
-`dev_regression_run.bat`
-4) Press **Enter**.
+1) Go to **batch_files** folder in the project root directory.
+2) Double click on **dev_regression_run.bat** file.
+OR
+Run below commands on the terminal
+`mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -Denv="dev"`
+`mvn test-compile gauge:execute -DspecsDir="specs" -Denv="dev"`
 
 ## Support Forum
 [Gitter](https://gitter.im/MaxSoft-IntelliAPI/community)
