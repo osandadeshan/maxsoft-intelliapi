@@ -14,6 +14,7 @@ tags: form_data, regression
 
 * Given that a user needs to invoke "Get oauth access token from refresh token"
 * And the user set the form-data key value pairs using data stores as follows
+
    |Key          |Is Data Store Used?|Data Store Type|Data Store Variable Name|Value                                                 |
    |-------------|-------------------|---------------|------------------------|------------------------------------------------------|
    |grant_type   |no                 |               |                        |refresh_token                                         |
@@ -23,6 +24,7 @@ tags: form_data, regression
 * When the user invokes the API
 * Then the status code for the request is "401"
 * And the JSON Path Assertions for the response should be equal to the following
+
    |JSON Path          |Expected Result                |
    |-------------------|-------------------------------|
    |$.error            |invalid_client                 |
@@ -33,17 +35,20 @@ tags: form_data, regression
 
 * Given that a user needs to invoke "File upload"
 * And the user set the multipart file key value pairs as follows
-   |Key     |File Path                                        |Mime Type                                                              |
-   |--------|-------------------------------------------------|-----------------------------------------------------------------------|
-   |filename|/src/test/resources/api_document/dev_api_doc.xlsx|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet      |
+
+   |Key     |File Path                                        |Mime Type                                                        |
+   |--------|-------------------------------------------------|-----------------------------------------------------------------|
+   |filename|/src/test/resources/api_document/dev_api_doc.xlsx|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Existence in the response should be equal to the following
-   |JSON Path  |isExists|
-   |-----------|--------|
-   |$.FileId   |true    |
-   |$.FileSize |false   |
+
+   |JSON Path |isExists|
+   |----------|--------|
+   |$.FileId  |true    |
+   |$.FileSize|false   |
 * And the JSON Path Assertions for the response should be equal to the following
+
    |JSON Path |Expected Result |
    |----------|----------------|
    |$.FileName|dev_api_doc.xlsx|

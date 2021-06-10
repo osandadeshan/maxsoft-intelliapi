@@ -16,7 +16,8 @@ tags: get_auth_token, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path     |Expected Result|
-     |--------------|---------------|
-     |$.status      |success        |
+
+   |JSON Path|Expected Result|
+   |---------|---------------|
+   |$.status |success        |
 * And save the access token in the response which is located inside the JSON Path of "$.token"

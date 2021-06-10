@@ -16,16 +16,19 @@ tags: get_auth_token, pre_requisites, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
+
    |JSON Path|Expected Result|
    |---------|---------------|
    |$.status |success        |
 * And the JSON Path Existence in the response should be equal to the following
+
    |JSON Path|isExists|
    |---------|--------|
    |$.status |true    |
    |$.osa    |false   |
 * And save the access token in the response which is located inside the JSON Path of "$.token"
 * And save the JSON Path values of the response into text files
+
    |JSON Path|Text File Path                                |
    |---------|----------------------------------------------|
    |$.status |/resources/text_files/response_data/status.txt|

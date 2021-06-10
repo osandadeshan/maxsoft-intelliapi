@@ -14,24 +14,25 @@ tags: database, mysql
 * And the user need to connect to the "empdb" MySQL database using username as "root" and password as "root"
 * When the user executes the MySQL query as "select * from employee"
 
-
 ## Validate specific users information in the users table
 
 * Then the results obtained from the MySQL database should contain the following
-     |Employee Id|First Name|Last Name     |Age|
-     |-----------|----------|--------------|---|
-     |2          |Eranga    |Nimalarathna  |27 |
-     |1          |Osanda    |Nimalarathna  |28 |
+
+   |Employee Id|First Name|Last Name   |Age|
+   |-----------|----------|------------|---|
+   |2          |Eranga    |Nimalarathna|27 |
+   |1          |Osanda    |Nimalarathna|28 |
 
 
 ## Validate all users information in the users table
 
 * Then the results obtained from the MySQL database should equal to the following
-     |Employee Id|First Name|Last Name     |Age|
-     |-----------|----------|--------------|---|
-     |1          |Osanda    |Nimalarathna  |28 |
-     |2          |Eranga    |Nimalarathna  |27 |
-     |3          |Gemunu    |Priyadarshana |32 |
+
+   |Employee Id|First Name|Last Name    |Age|
+   |-----------|----------|-------------|---|
+   |1          |Osanda    |Nimalarathna |28 |
+   |2          |Eranga    |Nimalarathna |27 |
+   |3          |Gemunu    |Priyadarshana|32 |
 
 
 __________________________________________________

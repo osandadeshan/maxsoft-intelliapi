@@ -14,16 +14,19 @@ tags: excel, regression
 
 * Given that a user needs to invoke "Create a user"
 * And the user saves test data inside excel file into data stores
-   |DataStore Type|Variable Name      |Excel Sheet Name |Key Name         |
-   |--------------|-------------------|-----------------|-----------------|
-   |Scenario      |varName            |User_Test_Data   |name             |
-   |Scenario      |varGender          |User_Test_Data   |gender           |
-   |Scenario      |varStatus          |User_Test_Data   |status           |
+
+   |DataStore Type|Variable Name|Excel Sheet Name|Key Name|
+   |--------------|-------------|----------------|--------|
+   |Scenario      |varName      |User_Test_Data  |name    |
+   |Scenario      |varGender    |User_Test_Data  |gender  |
+   |Scenario      |varStatus    |User_Test_Data  |status  |
 * And generate random email and save it in a data store as follows
-   |Data Store Type|Data Store Variable Name|Domain Name     |
-   |---------------|------------------------|----------------|
-   |Scenario       |varEmail                |mailinator.com  |
+
+   |Data Store Type|Data Store Variable Name|Domain Name   |
+   |---------------|------------------------|--------------|
+   |Scenario       |varEmail                |mailinator.com|
 * And the user set the request attributes using data stores as follows
+
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
    |--------------------------------|-------------------|---------------|------------------------|------------------------|
    |#email                          |yes                |Scenario       |varEmail                |                        |
@@ -31,6 +34,7 @@ tags: excel, regression
    |#gender                         |yes                |Scenario       |varGender               |                        |
    |#status                         |yes                |Scenario       |varStatus               |                        |
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
@@ -39,13 +43,15 @@ tags: excel, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And save the JSON Path values in the response inside the data stores
+
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
    |Scenario      |varUserId    |$.data.id         |
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
-   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
-   |-------------|-------------------|---------------|------------------------|--------------|
-   |$.code       |no                 |               |                        |201           |
-   |$.data.name  |yes                |Scenario       |varName                 |              |
-   |$.data.email |yes                |Scenario       |varEmail                |              |
+
+   |JSON Path   |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |------------|-------------------|---------------|------------------------|--------------|
+   |$.code      |no                 |               |                        |201           |
+   |$.data.name |yes                |Scenario       |varName                 |              |
+   |$.data.email|yes                |Scenario       |varEmail                |              |
 * Delete a user by userId saved in "Scenario" type data store named "varUserId"
