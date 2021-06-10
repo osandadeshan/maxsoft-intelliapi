@@ -16,11 +16,12 @@ tags: json_path, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Existence in the response should be equal to the following
-   |JSON Path                 |isExists?            |
-   |--------------------------|---------------------|
-   |$.code                    |true                 |
-   |$.status                  |false                |
-   |$.data[?(@.id=='10')].name|true                 |
+
+   |JSON Path                 |isExists?|
+   |--------------------------|---------|
+   |$.code                    |true     |
+   |$.status                  |false    |
+   |$.data[?(@.id=='10')].name|true     |
 
 
 ## Get camera model by userId
@@ -29,6 +30,7 @@ tags: json_path, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
-   |JSON Path                             |Expected Result          |
-   |--------------------------------------|-------------------------|
-   |$.photos[?(@.user.id=='23896')].camera|["ILCA-99M2"]            |
+
+   |JSON Path                             |Expected Result|
+   |--------------------------------------|---------------|
+   |$.photos[?(@.user.id=='23896')].camera|["ILCA-99M2"]  |

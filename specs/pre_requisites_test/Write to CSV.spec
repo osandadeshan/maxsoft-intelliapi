@@ -18,6 +18,7 @@ tags: csv, pre_requisites, regression
 * Create a user
 * Given that a user needs to invoke "Get all users"
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
@@ -26,6 +27,7 @@ tags: csv, pre_requisites, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And save the JSON Array values of the response into CSV files
+
    |JSON Path              |Header Name|CSV File Path                      |
    |-----------------------|-----------|-----------------------------------|
    |$.data[?(@.id > 16)].id|userId     |/src/test/resources/csv/userIds.csv|

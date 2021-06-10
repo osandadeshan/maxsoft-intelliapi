@@ -14,20 +14,24 @@ tags: crud, regression
 
 * Create a user
 * And save the JSON Path values in the response inside the data stores
+
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
    |Scenario      |varUserId    |$.data.id         |
 
 * Given that a user needs to invoke "Edit a user"
 * And the user set the path parameters using data stores as follows
+
    |Path Name|Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value|
    |---------|-------------------|---------------|------------------------|----------|
    |userId   |yes                |Scenario       |varUserId               |          |
 * And generate random email and save it in a data store as follows
-   |Data Store Type|Data Store Variable Name|Domain Name     |
-   |---------------|------------------------|----------------|
-   |Scenario       |varEmail                |mailinator.com  |
+
+   |Data Store Type|Data Store Variable Name|Domain Name   |
+   |---------------|------------------------|--------------|
+   |Scenario       |varEmail                |mailinator.com|
 * And the user set the request attributes using data stores as follows
+
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
    |--------------------------------|-------------------|---------------|------------------------|------------------------|
    |#email                          |yes                |Scenario       |varEmail                |                        |
@@ -35,6 +39,7 @@ tags: crud, regression
    |#gender                         |no                 |               |                        |Female                  |
    |#status                         |no                 |               |                        |Active                  |
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
@@ -43,17 +48,20 @@ tags: crud, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
-   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
-   |-------------|-------------------|---------------|------------------------|--------------|
-   |$.code       |no                 |               |                        |200           |
-   |$.data.email |yes                |Scenario       |varEmail                |              |
+
+   |JSON Path   |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |------------|-------------------|---------------|------------------------|--------------|
+   |$.code      |no                 |               |                        |200           |
+   |$.data.email|yes                |Scenario       |varEmail                |              |
 
 * Given that a user needs to invoke "Get a user"
 * And the user set the path parameters using data stores as follows
+
    |Path Name|Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value|
    |---------|-------------------|---------------|------------------------|----------|
    |userId   |yes                |Scenario       |varUserId               |          |
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
@@ -62,9 +70,10 @@ tags: crud, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
-   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
-   |-------------|-------------------|---------------|------------------------|--------------|
-   |$.code       |no                 |               |                        |200           |
-   |$.data.email |yes                |Scenario       |varEmail                |              |
+
+   |JSON Path   |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |------------|-------------------|---------------|------------------------|--------------|
+   |$.code      |no                 |               |                        |200           |
+   |$.data.email|yes                |Scenario       |varEmail                |              |
 
 * Delete a user by userId saved in "Scenario" type data store named "varUserId"

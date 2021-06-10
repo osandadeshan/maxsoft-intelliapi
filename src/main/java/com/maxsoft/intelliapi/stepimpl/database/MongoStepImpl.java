@@ -1,7 +1,7 @@
 package com.maxsoft.intelliapi.stepimpl.database;
 
 import com.maxsoft.intelliapi.database.MongoOperator;
-import com.maxsoft.intelliapi.util.fileoperator.TextFile;
+import com.maxsoft.intelliapi.util.fileoperator.TextFileOperator;
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
@@ -41,7 +41,7 @@ public class MongoStepImpl {
             String value = row.getCell(columnNames.get(1));
 
             if (hasContainedFileSyntax(value)) {
-                saveValueForScenario(config, TextFile.read(getFilePathFromFileSyntax(value)));
+                saveValueForScenario(config, TextFileOperator.read(getFilePathFromFileSyntax(value)));
             } else {
                 saveValueForScenario(config, value);
             }
@@ -124,7 +124,7 @@ public class MongoStepImpl {
             } else {
                 if (hasContainedFileSyntax(value)) {
                     MongoOperator.executeQuery(isAuthenticationProvided, userName, source, password, databaseName,
-                            collectionName, key, TextFile.read(getFilePathFromFileSyntax(value)));
+                            collectionName, key, TextFileOperator.read(getFilePathFromFileSyntax(value)));
                 } else {
                     MongoOperator.executeQuery(isAuthenticationProvided, userName, source, password, databaseName,
                             collectionName, key, value);

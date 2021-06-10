@@ -1,5 +1,5 @@
 @echo off
-echo Executing MaxSoft IntelliAPI Dev BVT API Test Automation Suite.............
+echo Executing MaxSoft IntelliAPI Dev BVT API Test Automation Suite .............
 
 cd .. 
 

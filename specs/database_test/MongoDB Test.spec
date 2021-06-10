@@ -12,6 +12,7 @@ tags: database, mongo
 
 * Given a user need to connect to the "tasksdb" Mongo database and "tasks" collection
 * And the user set the MongoDB authentication as follows
+
    |Configuration                          |Configuration Value|
    |---------------------------------------|-------------------|
    |Is authentication credentials required?|No                 |
@@ -24,24 +25,28 @@ tags: database, mongo
 
 * When the user executes the Mongo query using key as "name" and value as "Ron"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
-   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
-   |-------------|-------------------|---------------|------------------------|--------------|
-   |$.name       |n                  |               |                        |Ron           |
-   |$.category   |n                  |               |                        |Gauge         |
+
+   |JSON Path |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |----------|-------------------|---------------|------------------------|--------------|
+   |$.name    |n                  |               |                        |Ron           |
+   |$.category|n                  |               |                        |Gauge         |
 
 
 ## MongoDB Test - With data stores
 
 * And the user saves the values inside data stores as follows
+
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
    |Scenario      |name         |Ron               |
 * When the user executes the Mongo query using data stores as follows
-   |Key  |Is Data Store Used For Value?|Data Store Type|Data Store Variable Name|Value|
-   |-----|-----------------------------|---------------|------------------------|-----|
-   |name |y                            |Scenario       |name                    |N/A  |
+
+   |Key |Is Data Store Used For Value?|Data Store Type|Data Store Variable Name|Value|
+   |----|-----------------------------|---------------|------------------------|-----|
+   |name|y                            |Scenario       |name                    |N/A  |
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
-   |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
-   |-------------|-------------------|---------------|------------------------|--------------|
-   |$.name       |y                  |Scenario       |name                    |              |
-   |$.category   |n                  |               |                        |Gauge         |
+
+   |JSON Path |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
+   |----------|-------------------|---------------|------------------------|--------------|
+   |$.name    |y                  |Scenario       |name                    |              |
+   |$.category|n                  |               |                        |Gauge         |

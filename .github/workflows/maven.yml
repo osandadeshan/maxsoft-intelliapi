@@ -22,12 +22,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Add Gauge's GPG key
-        run: sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 023EDB0B
-      - name: Add Gauge to the repository list
-        run: echo deb https://dl.bintray.com/gauge/gauge-deb stable main | sudo tee -a /etc/apt/sources.list
       - name: Install Gauge
-        run: sudo apt-get update && sudo apt-get install gauge
+        run: curl -SsL https://downloads.gauge.org/stable | sh
       - name: Install Gauge-Java plugin
         run: gauge install java
       - name: Run pre-requisites tests with Maven

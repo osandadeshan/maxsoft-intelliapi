@@ -17,7 +17,7 @@ import static com.maxsoft.intelliapi.Constants.CURRENT_DIRECTORY;
  * Description  :
  **/
 
-public class CsvFile {
+public class CsvFileOperator {
 
     public static void writeToCsv(String filePath, String header1, String data, int noOfIterations) {
         try {

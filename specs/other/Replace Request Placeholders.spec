@@ -13,6 +13,7 @@ tags: request_placeholders, regression
 ## Saving values to Data Store
 
 * And the user saves the values inside data stores as follows
+
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
    |Specification |varName      |Osanda            |
@@ -24,6 +25,7 @@ tags: request_placeholders, regression
 
 * Given that a user needs to invoke "Create a user"
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
@@ -31,10 +33,12 @@ tags: request_placeholders, regression
    |Provide the access token if you need to authorize the API manually|N/A                |
 * And the user set the request payload as follows <file:./src/test/resources/payloads/create_a_user_with_all_fields.txt>
 * And generate random email and save it in a data store as follows
-   |Data Store Type|Data Store Variable Name|Domain Name     |
-   |---------------|------------------------|----------------|
-   |Scenario       |varEmail                |mailinator.com  |
+
+   |Data Store Type|Data Store Variable Name|Domain Name   |
+   |---------------|------------------------|--------------|
+   |Scenario       |varEmail                |mailinator.com|
 * And the user set the request attributes using data stores as follows
+
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
    |--------------------------------|-------------------|---------------|------------------------|------------------------|
    |#email                          |yes                |Scenario       |varEmail                |                        |
@@ -44,6 +48,7 @@ tags: request_placeholders, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
+
    |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
    |-------------|-------------------|---------------|------------------------|--------------|
    |$.code       |no                 |               |                        |201           |
@@ -56,6 +61,7 @@ tags: request_placeholders, regression
 
 * Given that a user needs to invoke "Create a user  (JSON request from text file)"
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
@@ -63,16 +69,19 @@ tags: request_placeholders, regression
    |Provide the access token if you need to authorize the API manually|N/A                |
 * And the user set the request payload as follows <file:./src/test/resources/payloads/create_a_user_with_email.txt>
 * And generate random email and save it in a data store as follows
-   |Data Store Type|Data Store Variable Name|Domain Name     |
-   |---------------|------------------------|----------------|
-   |Scenario       |varEmail                |mailinator.com  |
+
+   |Data Store Type|Data Store Variable Name|Domain Name   |
+   |---------------|------------------------|--------------|
+   |Scenario       |varEmail                |mailinator.com|
 * And the user set the request attributes using data stores as follows
+
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
    |--------------------------------|-------------------|---------------|------------------------|------------------------|
    |#email                          |yes                |Scenario       |varEmail                |                        |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
+
    |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
    |-------------|-------------------|---------------|------------------------|--------------|
    |$.code       |no                 |               |                        |201           |
@@ -86,16 +95,19 @@ tags: request_placeholders, regression
 
 * Given that a user needs to invoke "Create a user"
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
    |Do you need to retrieve the access token from the text file?      |Yes                |
    |Provide the access token if you need to authorize the API manually|N/A                |
 * And generate random email and save it in a data store as follows
-   |Data Store Type|Data Store Variable Name|Domain Name     |
-   |---------------|------------------------|----------------|
-   |Scenario       |varEmail                |mailinator.com  |
+
+   |Data Store Type|Data Store Variable Name|Domain Name   |
+   |---------------|------------------------|--------------|
+   |Scenario       |varEmail                |mailinator.com|
 * And the user set the request attributes using data stores as follows
+
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set                       |
    |--------------------------------|-------------------|---------------|------------------------|-----------------------------------------------|
    |#email                          |yes                |Scenario       |varEmail                |                                               |
@@ -105,6 +117,7 @@ tags: request_placeholders, regression
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the values inside the data stores
+
    |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
    |-------------|-------------------|---------------|------------------------|--------------|
    |$.code       |no                 |               |                        |201           |
@@ -117,20 +130,23 @@ tags: request_placeholders, regression
 
 * Given that a user needs to invoke "Get metrics"
 * And the user saves the values inside data stores as follows
-   |DataStore Type|Variable Name|Value To Be Stored |
-   |--------------|-------------|-------------------|
-   |Scenario      |version      |v2                 |
-   |Scenario      |jsonFile     |metrics.json       |
+
+   |DataStore Type|Variable Name|Value To Be Stored|
+   |--------------|-------------|------------------|
+   |Scenario      |version      |v2                |
+   |Scenario      |jsonFile     |metrics.json      |
 * And the user set values to the API endpoint placeholders using data stores as follows
-   |Placeholder In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Replacement Text |
-   |----------------------------|-------------------|---------------|------------------------|-----------------|
-   |#version                    |n                  |               |                        |v2               |
-   |#jsonFile                   |y                  |Scenario       |jsonFile                |                 |
+
+   |Placeholder In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Replacement Text|
+   |----------------------------|-------------------|---------------|------------------------|----------------|
+   |#version                    |n                  |               |                        |v2              |
+   |#jsonFile                   |y                  |Scenario       |jsonFile                |                |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Existence in the response should be equal to the following
-   |JSON Path       |isExists?          |
-   |----------------|-------------------|
-   |$.numAPIs       |true               |
-   |$.numEndpoints  |true               |
-   |$.numSpecs      |true               |
+
+   |JSON Path     |isExists?|
+   |--------------|---------|
+   |$.numAPIs     |true     |
+   |$.numEndpoints|true     |
+   |$.numSpecs    |true     |

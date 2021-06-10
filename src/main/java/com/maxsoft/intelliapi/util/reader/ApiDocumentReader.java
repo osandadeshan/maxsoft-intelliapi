@@ -1,6 +1,6 @@
 package com.maxsoft.intelliapi.util.reader;
 
-import com.maxsoft.intelliapi.util.fileoperator.ExcelFile;
+import com.maxsoft.intelliapi.util.fileoperator.ExcelFileOperator;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -29,8 +29,8 @@ public abstract class ApiDocumentReader {
 
     public static void setApiEndpoint(String apiEndpointName) {
         int row, column;
-        row = ExcelFile.findRowNumber(apiEndpointName);
-        column = ExcelFile.findColumnNumber(apiEndpointName) + 1;
+        row = ExcelFileOperator.findRowNumber(apiEndpointName);
+        column = ExcelFileOperator.findColumnNumber(apiEndpointName) + 1;
         error = "\"" + apiEndpointName + "\" API Endpoint Name is not exist in the API Document Excel file located in \""
                 + apiDocFilePath + "\"";
         if (row == 0 && column == 1) {
@@ -42,8 +42,8 @@ public abstract class ApiDocumentReader {
 
     public static void setHttpMethod(String apiEndpointName) {
         int row, column;
-        row = ExcelFile.findRowNumber(apiEndpointName);
-        column = ExcelFile.findColumnNumber(apiEndpointName) + 2;
+        row = ExcelFileOperator.findRowNumber(apiEndpointName);
+        column = ExcelFileOperator.findColumnNumber(apiEndpointName) + 2;
         error = "\"" + apiEndpointName + "\" API Endpoint Name is not exist in the API Document Excel file located in \""
                 + apiDocFilePath + "\"";
         if (row == 0 && column == 2) {
@@ -55,8 +55,8 @@ public abstract class ApiDocumentReader {
 
     public static void setBodyType(String apiEndpointName) {
         int row, column;
-        row = ExcelFile.findRowNumber(apiEndpointName);
-        column = ExcelFile.findColumnNumber(apiEndpointName) + 3;
+        row = ExcelFileOperator.findRowNumber(apiEndpointName);
+        column = ExcelFileOperator.findColumnNumber(apiEndpointName) + 3;
         error = "\"" + apiEndpointName + "\" API Endpoint Name is not exist in the API Document Excel file located in \""
                 + apiDocFilePath + "\"";
         if (row == 0 && column == 2) {
@@ -68,8 +68,8 @@ public abstract class ApiDocumentReader {
 
     public static void setRequestPayloadTemplate(String apiEndpointName) {
         int row, column;
-        row = ExcelFile.findRowNumber(apiEndpointName);
-        column = ExcelFile.findColumnNumber(apiEndpointName) + 4;
+        row = ExcelFileOperator.findRowNumber(apiEndpointName);
+        column = ExcelFileOperator.findColumnNumber(apiEndpointName) + 4;
         error = "\"" + apiEndpointName + "\" API Endpoint Name is not exist in the API Document Excel file located in \""
                 + apiDocFilePath + "\"";
         if (row == 0 && column == 2) {
@@ -86,7 +86,7 @@ public abstract class ApiDocumentReader {
             FileInputStream excelFile = new FileInputStream(apiDocFilePath);
             Workbook workbook = new XSSFWorkbook(excelFile);
             Sheet workSheet = workbook.getSheet(sheetName);
-            cellValue = workSheet.getRow(ExcelFile.findRowNumber(sheetName, cellContent))
+            cellValue = workSheet.getRow(ExcelFileOperator.findRowNumber(sheetName, cellContent))
                     .getCell(colNum).getStringCellValue();
             return cellValue;
         } catch (IOException e) {

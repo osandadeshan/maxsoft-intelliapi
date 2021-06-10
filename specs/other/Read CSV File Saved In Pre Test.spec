@@ -16,18 +16,21 @@ table: ./src/test/resources/csv/userIds.csv
 
 * Given that a user needs to invoke "Delete a user"
 * And the user set the request authentication configurations as follows
+
    |Configuration                                                     |Configuration Value|
    |------------------------------------------------------------------|-------------------|
    |Is authentication required?                                       |Yes                |
    |Do you need to retrieve the access token from the text file?      |Yes                |
    |Provide the access token if you need to authorize the API manually|N/A                |
 * And the user set the path parameters as follows
-   |Path Parameter|Path Value  |
-   |--------------|------------|
-   |userId        |<userId>    |
+
+   |Path Parameter|Path Value|
+   |--------------|----------|
+   |userId        |<userId>  |
 * When the user invokes the API
 * Then the status code for the request is "200"
 * And the JSON Path Assertions for the response should be equal to the following
-     |JSON Path     |Expected Result|
-     |--------------|---------------|
-     |$.code        |204            |
+
+   |JSON Path|Expected Result|
+   |---------|---------------|
+   |$.code   |204            |
