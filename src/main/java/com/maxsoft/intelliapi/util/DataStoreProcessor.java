@@ -25,7 +25,7 @@ public class DataStoreProcessor {
             return (String) ScenarioDataStore.get(variableName);
         } catch (Exception ex) {
             printError("Failed to read the text inside Scenario Data Store ["
-                    + variableName + "]\n" + ex.getMessage());
+                    + variableName + "]\n" + ex.getMessage(), DataStoreProcessor.class);
             return "";
         }
     }
@@ -35,7 +35,7 @@ public class DataStoreProcessor {
             ScenarioDataStore.put(variableName, textToBeStored);
         } catch (Exception ex) {
             printError("\"" + textToBeStored + "\" is failed to save as a text in Scenario Data Store ["
-                    + variableName + "]\n" + ex.getMessage());
+                    + variableName + "]\n" + ex.getMessage(), DataStoreProcessor.class);
         }
     }
 
@@ -180,11 +180,11 @@ public class DataStoreProcessor {
         try {
             String value = (String) ScenarioDataStore.get(variableName);
             printInfo("Text inside Scenario Data Store [" + variableName
-                    + "] is: \"" + value + "\"" + "\n");
+                    + "] is: \"" + value + "\"" + "\n", DataStoreProcessor.class);
             return value;
         } catch (Exception ex) {
             printError("Failed to read the text inside Scenario Data Store ["
-                    + variableName + "]" + "\n");
+                    + variableName + "]" + "\n", DataStoreProcessor.class);
             return "";
         }
     }
@@ -193,11 +193,11 @@ public class DataStoreProcessor {
         try {
             String value = (String) SpecDataStore.get(variableName);
             printInfo("Text inside Specification Data Store [" + variableName
-                    + "] is: \"" + value + "\"" + "\n");
+                    + "] is: \"" + value + "\"" + "\n", DataStoreProcessor.class);
             return value;
         } catch (Exception ex) {
             printError("Failed to read the text inside Specification Data Store ["
-                    + variableName + "]" + "\n");
+                    + variableName + "]" + "\n", DataStoreProcessor.class);
             return "";
         }
     }
@@ -206,11 +206,11 @@ public class DataStoreProcessor {
         try {
             String value = (String) SuiteDataStore.get(variableName);
             printInfo("Text inside Suite Data Store [" + variableName + "] is: \""
-                    + value + "\"" + "\n");
+                    + value + "\"" + "\n", DataStoreProcessor.class);
             return value;
         } catch (Exception ex) {
             printError("Failed to read the text inside Suite Data Store [" + variableName
-                    + "]" + "\n");
+                    + "]" + "\n", DataStoreProcessor.class);
             return "";
         }
     }
@@ -219,10 +219,10 @@ public class DataStoreProcessor {
         try {
             ScenarioDataStore.put(variableName, textToBeStored);
             printInfo("\"" + textToBeStored + "\" is successfully saved as a text in Scenario Data Store ["
-                    + variableName + "]");
+                    + variableName + "]", DataStoreProcessor.class);
         } catch (Exception ex) {
             printError("\"" + textToBeStored + "\" is failed to save as a text in Scenario Data Store ["
-                    + variableName + "]");
+                    + variableName + "]", DataStoreProcessor.class);
         }
     }
 
@@ -230,10 +230,10 @@ public class DataStoreProcessor {
         try {
             SpecDataStore.put(variableName, textToBeStored);
             printInfo("\"" + textToBeStored + "\" is successfully saved as a text in Specification Data Store ["
-                    + variableName + "]");
+                    + variableName + "]", DataStoreProcessor.class);
         } catch (Exception ex) {
             printError("\"" + textToBeStored + "\" is failed to save as a text in Specification Data Store ["
-                    + variableName + "]");
+                    + variableName + "]", DataStoreProcessor.class);
         }
     }
 
@@ -241,10 +241,10 @@ public class DataStoreProcessor {
         try {
             SuiteDataStore.put(variableName, textToBeStored);
             printInfo("\"" + textToBeStored + "\" is successfully saved as a text in Suite Data Store ["
-                    + variableName + "]");
+                    + variableName + "]", DataStoreProcessor.class);
         } catch (Exception ex) {
             printError("\"" + textToBeStored + "\" is failed to save as a text in Suite Data Store ["
-                    + variableName + "]");
+                    + variableName + "]", DataStoreProcessor.class);
         }
     }
 }

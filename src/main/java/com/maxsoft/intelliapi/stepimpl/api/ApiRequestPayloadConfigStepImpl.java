@@ -58,7 +58,7 @@ public class ApiRequestPayloadConfigStepImpl {
             }
         }
         saveValueForScenario(VAR_API_ENDPOINT, invokingEndpoint);
-        printInfo("The final API Endpoint is:\n" + invokingEndpoint);
+        printInfo("The final API Endpoint is:\n" + invokingEndpoint, ApiRequestPayloadConfigStepImpl.class);
     }
 
     // Use this method to replace the placeholders inside the API Endpoint in Excel using data store values
@@ -89,7 +89,7 @@ public class ApiRequestPayloadConfigStepImpl {
             }
         }
         saveValueForScenario(VAR_API_ENDPOINT, invokingEndpoint);
-        printInfo("The final API Endpoint is:\n" + invokingEndpoint);
+        printInfo("The final API Endpoint is:\n" + invokingEndpoint, ApiRequestPayloadConfigStepImpl.class);
     }
 
     // Use this method to set the headers values for the JSON request
@@ -178,7 +178,8 @@ public class ApiRequestPayloadConfigStepImpl {
             }
         }
         saveValueForScenario(VAR_API_JSON_REQUEST_BODY, jsonRequestBody);
-        printInfo("The JSON request body that you are going to use for the API is:\n" + jsonRequestBody);
+        printInfo("The JSON request body that you are going to use for the API is:\n" + jsonRequestBody,
+                ApiRequestPayloadConfigStepImpl.class);
     }
 
     // Use this method to set the attribute values for the JSON request template in the Excel file using data store values
@@ -196,7 +197,8 @@ public class ApiRequestPayloadConfigStepImpl {
             String replacementText = row.getCell(columnNames.get(4));
 
             if (isTrue(isRetrievedFromDataStore)){
-                jsonRequestBody = jsonRequestBody.replaceAll(placeholder, readFromDataStore(dataStoreType, dataStoreVariableName));
+                jsonRequestBody = jsonRequestBody.replaceAll(placeholder,
+                        readFromDataStore(dataStoreType, dataStoreVariableName));
             } else {
                 if (replacementText.equalsIgnoreCase("\"null\"")){
                     jsonRequestBody = jsonRequestBody.replaceAll("\"" + placeholder + "\"", "null");
@@ -213,14 +215,16 @@ public class ApiRequestPayloadConfigStepImpl {
             }
         }
         saveValueForScenario(VAR_API_JSON_REQUEST_BODY, jsonRequestBody);
-        printInfo("The JSON request body that you are going to use for the API is:\n" + jsonRequestBody);
+        printInfo("The JSON request body that you are going to use for the API is:\n" + jsonRequestBody,
+                ApiRequestPayloadConfigStepImpl.class);
     }
 
     // Use this method to set a custom request payload
     @Step("And the user set the request payload as follows <payload>")
     public void setRequestPayload(String payload) {
         saveValueForScenario(VAR_API_JSON_REQUEST_BODY, payload);
-        printInfo("The JSON request body that you are going to use for the API is:\n" + payload);
+        printInfo("The JSON request body that you are going to use for the API is:\n" + payload,
+                ApiRequestPayloadConfigStepImpl.class);
     }
 
     // Use this method to replace the values of the request payload
@@ -244,7 +248,8 @@ public class ApiRequestPayloadConfigStepImpl {
         }
         finalPayload = payloadWithPlaceholders;
         saveValueForScenario(VAR_API_JSON_REQUEST_BODY, finalPayload);
-        printInfo("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
+        printInfo("The final JSON request body that you are going to use for the API is:\n" + finalPayload,
+                ApiRequestPayloadConfigStepImpl.class);
     }
 
     // Use this method to replace the values of the request payload using data stores
@@ -276,7 +281,8 @@ public class ApiRequestPayloadConfigStepImpl {
         }
         finalPayload = payloadWithPlaceholders;
         saveValueForScenario(VAR_API_JSON_REQUEST_BODY, finalPayload);
-        printInfo("The final JSON request body that you are going to use for the API is:\n" + finalPayload);
+        printInfo("The final JSON request body that you are going to use for the API is:\n" + finalPayload,
+                ApiRequestPayloadConfigStepImpl.class);
     }
 
     // Use this method to set the form-data key values for the request template in the Excel file
@@ -378,7 +384,8 @@ public class ApiRequestPayloadConfigStepImpl {
             }
         }
         queryParams = queryParams.replaceAll(".$", "");
-        printInfo("Query parameters which will append to the request URL: " + queryParams + "\n\n");
+        printInfo("Query parameters which will append to the request URL: " + queryParams + "\n\n",
+                ApiRequestPayloadConfigStepImpl.class);
         saveValueForScenario(VAR_API_QUERY_PARAMS, queryParams);
     }
 
@@ -409,7 +416,8 @@ public class ApiRequestPayloadConfigStepImpl {
             }
         }
         queryParams = queryParams.replaceAll(".$", "");
-        printInfo("Query parameters which will append to the request URL: " + queryParams + "\n\n");
+        printInfo("Query parameters which will append to the request URL: " + queryParams + "\n\n",
+                ApiRequestPayloadConfigStepImpl.class);
         saveValueForScenario(VAR_API_QUERY_PARAMS, queryParams);
     }
 
@@ -432,7 +440,8 @@ public class ApiRequestPayloadConfigStepImpl {
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.replaceAll(".$", "");
-        printInfo("Path parameters which will append to the request URL:" + pathParams + "\n\n");
+        printInfo("Path parameters which will append to the request URL:" + pathParams + "\n\n",
+                ApiRequestPayloadConfigStepImpl.class);
         saveValueForScenario(VAR_API_PATH_PARAMS, pathParams);
     }
 
@@ -461,7 +470,8 @@ public class ApiRequestPayloadConfigStepImpl {
             pathParams = pathParams.concat("/");
         }
         pathParams = pathParams.replaceAll(".$", "");
-        printInfo("Path parameters which will append to the request URL:" + pathParams + "\n\n");
+        printInfo("Path parameters which will append to the request URL:" + pathParams + "\n\n",
+                ApiRequestPayloadConfigStepImpl.class);
         saveValueForScenario(VAR_API_PATH_PARAMS, pathParams);
     }
 

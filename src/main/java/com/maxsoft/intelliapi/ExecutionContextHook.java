@@ -1,6 +1,5 @@
 package com.maxsoft.intelliapi;
 
-import com.maxsoft.intelliapi.util.LogUtil;
 import com.thoughtworks.gauge.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 
 public class ExecutionContextHook {
 
-    private final static Logger logger = LogManager.getLogger(LogUtil.class);
+    private final static Logger logger = LogManager.getLogger(ExecutionContextHook.class);
 
     @BeforeSpec
     public void beforeSpec(ExecutionContext context) {

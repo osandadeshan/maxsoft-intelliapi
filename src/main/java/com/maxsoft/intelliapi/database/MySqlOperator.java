@@ -67,7 +67,7 @@ public class MySqlOperator {
         try {
             resultSet = connectDatabase().executeQuery(query);
         } catch (SQLException e) {
-            printError("The executed query is invalid");
+            printError("The executed query is invalid", MySqlOperator.class);
             e.printStackTrace();
         }
         saveValueForScenario(MYSQL_QUERY, query);
@@ -175,7 +175,7 @@ public class MySqlOperator {
             } catch (SQLException throwable) {
                 throwable.printStackTrace();
             }
-            printInfo("Database connection successfully closed");
+            printInfo("Database connection successfully closed", MySqlOperator.class);
         }
     }
 
@@ -185,7 +185,7 @@ public class MySqlOperator {
     }
 
     private static void getRecordsInRows(ResultSet resultSet) {
-        printInfo("Records in the rows: ");
+        printInfo("Records in the rows: ", MySqlOperator.class);
         try {
             ResultSetMetaData metadata = resultSet.getMetaData();
             int columnCount = metadata.getColumnCount();
@@ -194,7 +194,7 @@ public class MySqlOperator {
                 for (int i = 1; i <= columnCount; i++) {
                     row.append(resultSet.getString(i)).append(", ");
                 }
-                printInfo(row.toString());
+                printInfo(row.toString(), MySqlOperator.class);
             }
         } catch (SQLException throwable) {
             throwable.printStackTrace();
@@ -216,12 +216,12 @@ public class MySqlOperator {
         try {
             ResultSetMetaData metadata = resultSet.getMetaData();
             int columnCount = metadata.getColumnCount();
-            printInfo("Column Names: ");
+            printInfo("Column Names: ", MySqlOperator.class);
             for (int i = 1; i <= columnCount; i++) {
-                printInfo(metadata.getColumnName(i));
+                printInfo(metadata.getColumnName(i), MySqlOperator.class);
             }
-            printInfo("\n");
-            printInfo("Column count: " + columnCount + "\n");
+            printInfo("\n", MySqlOperator.class);
+            printInfo("Column count: " + columnCount + "\n", MySqlOperator.class);
         } catch (SQLException throwable) {
             throwable.printStackTrace();
         }
@@ -231,7 +231,7 @@ public class MySqlOperator {
         Board board = new Board(75);
         String tableString = board.setInitialBlock(new StringTable(board, 75, headersList, rowsList)
                 .tableToBlocks()).build().getPreview();
-        printInfo("\n");
-        printInfo("Results obtained from the database for the executed query: \n" + tableString);
+        printInfo("\n", MySqlOperator.class);
+        printInfo("Results obtained from the database for the executed query: \n" + tableString, MySqlOperator.class);
     }
 }

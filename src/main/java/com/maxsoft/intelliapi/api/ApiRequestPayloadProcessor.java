@@ -28,16 +28,19 @@ public class ApiRequestPayloadProcessor {
         setBodyType(apiEndpointName);
         setRequestPayloadTemplate(apiEndpointName);
 
-        printInfo("API Endpoint is: " + "\n" + getSavedValueForScenario(VAR_API_ENDPOINT) + "\n\n");
-        printInfo("HTTP Method is: " + getSavedValueForScenario(VAR_API_HTTP_METHOD) + "\n\n");
+        printInfo("API Endpoint is: " + "\n" + getSavedValueForScenario(VAR_API_ENDPOINT) + "\n\n",
+                ApiRequestPayloadProcessor.class);
+        printInfo("HTTP Method is: " + getSavedValueForScenario(VAR_API_HTTP_METHOD) + "\n\n",
+                ApiRequestPayloadProcessor.class);
     }
 
     public static String getApiEndpointToBeInvoked() {
         String invokingEndpoint = getSavedValueForScenario(VAR_API_ENDPOINT);
         invokingEndpoint = EnvironmentPropertyReader.getBaseUrl()
                 .concat(invokingEndpoint).concat(getPathParams()).concat(getQueryParams());
-        printInfo("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n");
-        printInfo("HTTP Method is: " + getSavedValueForScenario(VAR_API_HTTP_METHOD) + "\n\n");
+        printInfo("Invoked API Endpoint: \n" + invokingEndpoint + "\n\n", ApiRequestPayloadProcessor.class);
+        printInfo("HTTP Method is: " + getSavedValueForScenario(VAR_API_HTTP_METHOD) + "\n\n",
+                ApiRequestPayloadProcessor.class);
         return invokingEndpoint;
     }
 
@@ -81,10 +84,10 @@ public class ApiRequestPayloadProcessor {
     }
 
     public static void printHeaders(String headerNameList, String headerValueList) {
-        printInfo("Header List:");
+        printInfo("Header List:", ApiRequestPayloadProcessor.class);
 
         for (Header header : new Headers(getHeaders(headerNameList, headerValueList))) {
-            printInfo(header.getName() + " = " + header.getValue());
+            printInfo(header.getName() + " = " + header.getValue(), ApiRequestPayloadProcessor.class);
         }
     }
 
@@ -108,10 +111,10 @@ public class ApiRequestPayloadProcessor {
     }
 
     public static void printFormData(String headerNameList, String headerValueList) {
-        printInfo("Form Params Map:");
+        printInfo("Form Params Map:", ApiRequestPayloadProcessor.class);
 
         for (Header header : new Headers(getHeaders(headerNameList, headerValueList))) {
-            printInfo(header.getName() + " = " + header.getValue());
+            printInfo(header.getName() + " = " + header.getValue(), ApiRequestPayloadProcessor.class);
         }
     }
 }
