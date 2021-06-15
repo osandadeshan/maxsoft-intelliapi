@@ -21,27 +21,27 @@ public class MySqlStepImpl {
 	@Step("Given a user successfully connected to the MySQL Driver")
     public void loadMySqlDriver() {
         MySqlOperator.loadDriver();
-        printInfo("MySQL driver has been loaded successfully");
+        printInfo("MySQL driver has been loaded successfully", MySqlStepImpl.class);
     }
 
     // Use this method to load the mysql database
 	@Step("And the user need to connect to the <databaseName> MySQL database using username as <username> and password as <password>")
     public void loadMySqlDatabase(String databaseName, String username, String password) {
         MySqlOperator.initializeDbConnection(databaseName, username, password);
-        printInfo("MySQL database has been connected successfully");
+        printInfo("MySQL database has been connected successfully", MySqlStepImpl.class);
     }
 
     // Use this method to execute the mysql query
 	@Step("When the user executes the MySQL query as <query>")
     public void executeGivenQuery(String query) {
         if (MySqlOperator.getResultsByExecutingQuery(query).toString().equals("")) {
-            printInfo("No records found for the executed query");
+            printInfo("No records found for the executed query", MySqlStepImpl.class);
         }
         if (MySqlOperator.getResultsByExecutingQuery(query) == null) {
-			printInfo("The executed query is invalid");
+			printInfo("The executed query is invalid", MySqlStepImpl.class);
         } else {
             MySqlOperator.getResultsByExecutingQuery(query);
-            printInfo("Query has been successfully executed");
+            printInfo("Query has been successfully executed", MySqlStepImpl.class);
         }
     }
 

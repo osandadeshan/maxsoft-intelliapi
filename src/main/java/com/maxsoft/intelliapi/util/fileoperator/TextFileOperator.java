@@ -52,9 +52,9 @@ public abstract class TextFileOperator {
             content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
         } catch (FileNotFoundException e) {
             printError("Reading the text file in the directory of \"" + filePath + "\" is failed due to "
-                    + e.getMessage());
+                    + e.getMessage(), TextFileOperator.class);
         }
-        printInfo(content);
+        printInfo(content, TextFileOperator.class);
         return content;
     }
 
@@ -67,13 +67,13 @@ public abstract class TextFileOperator {
             content = String.valueOf(new Scanner(new File(filePath)).useDelimiter("\\Z").next());
             if (isTrue(isAuthenticationRequired) && isTrue(isAccessTokenRetrievedFromTextFile)) {
                 printInfo("Successfully read the access token from the text file in the directory of \""
-                        + filePath + "\"\n\n");
+                        + filePath + "\"\n\n", TextFileOperator.class);
             }
         } catch (FileNotFoundException e) {
             printError("Reading the access token from the text file in the directory of \""
-                    + filePath + "\" is failed due to " + e.getMessage() + "\n\n");
+                    + filePath + "\" is failed due to " + e.getMessage() + "\n\n", TextFileOperator.class);
         }
-        printInfo(content);
+        printInfo(content, TextFileOperator.class);
         return content;
     }
 }

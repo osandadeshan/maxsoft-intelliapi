@@ -70,10 +70,10 @@ public class ApiRequestInvokerStepImpl {
             accessToken = "";
         }
 
-        printInfo("");
-        printInfo("");
-        printInfo("Invoked API Endpoint:\n" + invokingEndpoint + "\n\n");
-        printInfo("HTTP Method is: GET\n\n");
+        printInfo("", ApiRequestInvokerStepImpl.class);
+        printInfo("", ApiRequestInvokerStepImpl.class);
+        printInfo("Invoked API Endpoint:\n" + invokingEndpoint + "\n\n", ApiRequestInvokerStepImpl.class);
+        printInfo("HTTP Method is: GET\n\n", ApiRequestInvokerStepImpl.class);
 
         if (headerNamesList == null || headerNamesList.equals("") ||
                 headerValuesList == null || headerValuesList.equals("")) {

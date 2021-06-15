@@ -2,7 +2,6 @@ package com.maxsoft.intelliapi.util;
 
 import com.thoughtworks.gauge.Gauge;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 /**
  * Project Name    : MaxSoft-IntelliAPI
@@ -15,15 +14,13 @@ import org.apache.logging.log4j.Logger;
 
 public class LogUtil {
 
-    private final static Logger logger = LogManager.getLogger(LogUtil.class);
-
-    public static void printInfo(String text){
-        logger.info(text);
+    public static void printInfo(String text, final Class<?> clazz){
+        LogManager.getLogger(clazz).info(text);
         Gauge.writeMessage(text);
     }
 
-    public static void printError(String text){
-        logger.error(text);
+    public static void printError(String text, final Class<?> clazz){
+        LogManager.getLogger(clazz).error(text);
         Gauge.writeMessage(text);
     }
 }

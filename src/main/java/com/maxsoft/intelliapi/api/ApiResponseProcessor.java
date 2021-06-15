@@ -43,20 +43,21 @@ public class ApiResponseProcessor {
     }
 
     public static void printResponseTime(Response response) {
-        printInfo("Response Time is: " + response.getTimeIn(TimeUnit.MILLISECONDS) + "ms" + "\n\n");
+        printInfo("Response Time is: " + response.getTimeIn(TimeUnit.MILLISECONDS) + "ms" + "\n\n",
+                ApiResponseProcessor.class);
     }
 
     public static void printResponse() {
         String response = getSavedValueForScenario(VAR_API_RESPONSE_BODY);
         if (response.equals("")) {
-            printInfo("Response is Empty" + "\n\n");
+            printInfo("Response is Empty" + "\n\n", ApiResponseProcessor.class);
         } else {
-            printInfo("Response is: " + "\n" + response + "\n\n");
+            printInfo("Response is: " + "\n" + response + "\n\n", ApiResponseProcessor.class);
         }
     }
 
     public static void printResponseHeaders(Response response) {
-        printInfo("Response Headers are: \n" + response.getHeaders().toString());
+        printInfo("Response Headers are: \n" + response.getHeaders().toString(), ApiResponseProcessor.class);
     }
 
     public static void clearInvokedApiEndpointArtifacts() {
@@ -83,11 +84,13 @@ public class ApiResponseProcessor {
                 .parse(getSavedValueForScenario(VAR_API_RESPONSE_BODY));
 
         if (responseString.toString().equals("")) {
-            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         if (responseString.toString().equals("[]")) {
-            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         String actualJsonPathValue = JsonPath.read(responseString, jsonPath).toString();
@@ -102,11 +105,13 @@ public class ApiResponseProcessor {
                 .parse(getSavedValueForScenario(VAR_API_RESPONSE_BODY));
 
         if (responseString.toString().equals("")) {
-            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         if (responseString.toString().equals("[]")) {
-            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         String actualJsonPathValue = JsonPath.read(responseString, jsonPath).toString();
@@ -120,11 +125,13 @@ public class ApiResponseProcessor {
                 .parse(getSavedValueForScenario(VAR_API_RESPONSE_BODY));
 
         if (responseString.toString().equals("")) {
-            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         if (responseString.toString().equals("[]")) {
-            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         String nullableMessage = "Expected value for the JSON Path of \"" + jsonPath + "\" is not equal to the Actual value.\n";
@@ -153,11 +160,13 @@ public class ApiResponseProcessor {
                 .parse(getSavedValueForScenario(VAR_API_RESPONSE_BODY));
 
         if (responseString.toString().equals("")) {
-            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is a no-content response for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         if (responseString.toString().equals("[]")) {
-            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.");
+            printInfo("No any JSON Paths found. Because the response is an empty array for the given payload.",
+                    ApiResponseProcessor.class);
         }
 
         String nullableMessage = "Expected value for the JSON Path of \"" + jsonPath + "\" is equal to the Actual value.\n";
@@ -211,7 +220,7 @@ public class ApiResponseProcessor {
             CSVWriter writer = new CSVWriter(new FileWriter(inputFile), ',');
             writer.writeNext(header);
             for (Object object : array) {
-                printInfo(object.toString());
+                printInfo(object.toString(), ApiResponseProcessor.class);
                 writer.writeNext(new String[]{object.toString()});
             }
             writer.flush();
@@ -241,10 +250,10 @@ public class ApiResponseProcessor {
         try {
             TextFileOperator.write(AUTHENTICATION_FIRST_VALUE + jsonPathValue, ACCESS_TOKEN_FILE_PATH);
             printInfo("Successfully saved the access token into the text file in the directory of \""
-                    + ACCESS_TOKEN_FILE_PATH + "\"");
+                    + ACCESS_TOKEN_FILE_PATH + "\"", ApiResponseProcessor.class);
         } catch (Exception ex) {
             printError("Failed to save the access token into the text file in the directory of \""
-                    + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage());
+                    + ACCESS_TOKEN_FILE_PATH + "\"\n" + ex.getMessage(), ApiResponseProcessor.class);
         }
     }
 
@@ -260,10 +269,10 @@ public class ApiResponseProcessor {
             }
             TextFileOperator.write(jsonPathValue, CURRENT_DIRECTORY + filePath);
             printInfo("Successfully saved the value inside \"" + jsonPath + "\" into the text file in the directory of \""
-                    + CURRENT_DIRECTORY + filePath + "\"");
+                    + CURRENT_DIRECTORY + filePath + "\"", ApiResponseProcessor.class);
         } catch (Exception ex) {
             printError("Failed to save the value inside \"" + jsonPath + "\" into the text file in the directory of \""
-                    + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage());
+                    + CURRENT_DIRECTORY + filePath + "\"\n" + ex.getMessage(), ApiResponseProcessor.class);
         }
     }
 

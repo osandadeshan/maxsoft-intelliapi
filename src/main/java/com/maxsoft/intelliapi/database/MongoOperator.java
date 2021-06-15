@@ -54,7 +54,7 @@ public class MongoOperator {
             MongoCollection<Document> mongoCollection = database.getCollection(collectionName);
             document = mongoCollection.find(eq(key, value)).first();
             JSONObject json = new JSONObject(document.toJson());
-            printInfo("Results for the given query is:\n" + json.toString(4));
+            printInfo("Results for the given query is:\n" + json.toString(4), MongoOperator.class);
             saveValueForScenario(VAR_API_RESPONSE_BODY, json.toString());
         } catch (JSONException e) {
             e.printStackTrace();

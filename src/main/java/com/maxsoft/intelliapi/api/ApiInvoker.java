@@ -72,6 +72,7 @@ public class ApiInvoker extends FrameworkUtil {
                         break;
                     case PUT:
                         putApiWithAuthMultipleHeaders(invokingEndpoint, jsonPayload, accessToken, headers);
+                        break;
                     case PATCH:
                         patchApiWithAuthMultipleHeaders(invokingEndpoint, jsonPayload, accessToken, headers);
                         break;
@@ -93,6 +94,7 @@ public class ApiInvoker extends FrameworkUtil {
                         break;
                     case PUT:
                         putFormDataApiWithAuthMultipleHeaders(invokingEndpoint, accessToken, headers);
+                        break;
                     case PATCH:
                         patchFormDataApiWithAuthMultipleHeaders(invokingEndpoint, accessToken, headers);
                         break;

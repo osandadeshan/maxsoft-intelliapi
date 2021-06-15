@@ -58,11 +58,11 @@ public class RecordsChecker {
                 loop = false;
             }
         }
-        printInfo("\n");
-        printInfo("Mismatched results in the specification file:");
-        printInfo(String.valueOf(mismatchedResultsInSpecFile));
-        printInfo("\n");
-        printInfo("Mismatched results in the database:");
-        printInfo(String.valueOf(mismatchedResultsInDb));
+        printInfo("\n", RecordsChecker.class);
+        printInfo("Mismatched results in the specification file:", RecordsChecker.class);
+        printInfo(String.valueOf(mismatchedResultsInSpecFile), RecordsChecker.class);
+        printInfo("\n", RecordsChecker.class);
+        printInfo("Mismatched results in the database:", RecordsChecker.class);
+        printInfo(String.valueOf(mismatchedResultsInDb), RecordsChecker.class);
     }
 }

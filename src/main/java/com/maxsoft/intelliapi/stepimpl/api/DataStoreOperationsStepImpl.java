@@ -61,7 +61,7 @@ public class DataStoreOperationsStepImpl {
         }
         valueList = valueList.replaceFirst(".$", "");
         saveToDataStore(newDataStoreType, newDataStoreVariableName, valueList);
-        printInfo("Value List: " + valueList);
+        printInfo("Value List: " + valueList, DataStoreOperationsStepImpl.class);
     }
 
     // Use this method to save strings in data store

@@ -30,7 +30,7 @@ public class FrameworkUtil {
         while (Instant.now().isBefore(waitEndTime)) {
             Instant tenSecondsAfterNowTime = Instant.now().plus(10, SECONDS);
             while (Instant.now().isBefore(tenSecondsAfterNowTime)) {}
-            printInfo("Waited 10 seconds till timeout expires........");
+            printInfo("Waited 10 seconds till timeout expires........", FrameworkUtil.class);
         }
     }
 
@@ -47,10 +47,10 @@ public class FrameworkUtil {
     }
 
     public static void printTestingEnvDetails() {
-        printInfo("Configurations of test execution environment\n\n");
-        printInfo("Operating System: " + OS);
-        printInfo("Environment: " + ENVIRONMENT.toUpperCase());
-        printInfo("Base URL: " + EnvironmentPropertyReader.getBaseUrl());
+        printInfo("Configurations of test execution environment\n\n", FrameworkUtil.class);
+        printInfo("Operating System: " + OS, FrameworkUtil.class);
+        printInfo("Environment: " + ENVIRONMENT.toUpperCase(), FrameworkUtil.class);
+        printInfo("Base URL: " + EnvironmentPropertyReader.getBaseUrl(), FrameworkUtil.class);
     }
 
     public static String readAccessToken() {
