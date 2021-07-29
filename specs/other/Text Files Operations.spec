@@ -104,7 +104,7 @@ tags: text_file, regression
    |$.data.name  |yes                |Scenario       |varName                 |                                               |
    |$.data.email |yes                |Scenario       |varEmail                |                                               |
    |$.data.gender|no                 |               |                        |<file:./src/test/resources/payloads/gender.txt>|
-   |$.data.status|no                 |               |                        |Acti                                           |
+   |$.data.status|no                 |               |                        |acti                                           |
 * And the JSON Path values of the response should not contains the following
 
    |JSON Path    |notContains                                    |
