@@ -95,8 +95,8 @@ public class ApiResponseProcessor {
 
         String actualJsonPathValue = JsonPath.read(responseString, jsonPath).toString();
         Assert.assertTrue(actualJsonPathValue.contains(expectedJsonPathValue),
-                "JSON Path value for the \"" + jsonPath + "\" is contains the expected value.\nJSON Path value is: "
-                        + actualJsonPathValue + "\n" + "Expected value not to be contained is: "
+                "JSON Path value for the \"" + jsonPath + "\" is not contains the expected value.\nJSON Path value is: "
+                        + actualJsonPathValue + "\n" + "Expected value to be contained is: "
                         + expectedJsonPathValue + "\n\n");
     }
 

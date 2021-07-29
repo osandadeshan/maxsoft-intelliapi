@@ -11,6 +11,7 @@ import java.util.List;
 import static com.maxsoft.intelliapi.util.FrameworkUtil.*;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.readFromDataStore;
 import static com.maxsoft.intelliapi.util.DataStoreProcessor.saveToDataStore;
+import static com.maxsoft.intelliapi.util.FrameworkUtil.getRandomData;
 import static com.maxsoft.intelliapi.util.LogUtil.printInfo;
 
 /**
@@ -437,6 +438,21 @@ public class DataStoreOperationsStepImpl {
             String domainName = row.getCell(columnNames.get(2));
 
             saveToDataStore(dataStoreType, variableName, getRandomEmail(domainName));
+        }
+    }
+
+    // Use this method to generate random data (firstName, lastName, fullName and address) and save in a new/existing data store
+    @Step("And generate random data and save it in a data store as follows <table>")
+    public void generateRandomDataAndSaveToDataStore(Table table) {
+        List<TableRow> rows = table.getTableRows();
+        List<String> columnNames = table.getColumnNames();
+
+        for (TableRow row : rows) {
+            String dataStoreType = row.getCell(columnNames.get(0));
+            String variableName = row.getCell(columnNames.get(1));
+            String expectedDataType = row.getCell(columnNames.get(2));
+
+            saveToDataStore(dataStoreType, variableName, getRandomData(expectedDataType));
         }
     }
 
