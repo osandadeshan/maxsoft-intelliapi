@@ -55,7 +55,7 @@ tags: http_methods, regression
 
    |Path Name|Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value|
    |---------|-------------------|---------------|------------------------|----------|
-   |userId   |no                 |               |                        |12        |
+   |userId   |no                 |               |                        |2         |
 * And the user set the request attributes using data stores as follows
 
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|

@@ -5,6 +5,7 @@ import com.maxsoft.intelliapi.util.fileoperator.CsvFileOperator;
 import com.maxsoft.intelliapi.util.fileoperator.TextFileOperator;
 import com.maxsoft.intelliapi.util.reader.EnvironmentPropertyReader;
 
+import java.security.InvalidParameterException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
@@ -24,6 +25,8 @@ import static java.time.temporal.ChronoUnit.SECONDS;
  **/
 
 public class FrameworkUtil {
+
+    private static final Faker faker = new Faker();
 
     public static void waitBySeconds(int seconds){
         Instant waitEndTime = Instant.now().plus(seconds, SECONDS);
@@ -74,8 +77,32 @@ public class FrameworkUtil {
     }
 
     public static String getRandomEmail(String domainName) {
-        Faker faker = new Faker();
         return faker.name().firstName().concat(".").concat(faker.name().lastName()).concat("@").concat(domainName);
+    }
+
+    public static String getRandomData(String expectedDataType) {
+        String randomData;
+
+        switch (expectedDataType.toLowerCase()) {
+            case FIRST_NAME:
+                randomData = faker.name().firstName().replaceAll("'", "");
+                break;
+            case LAST_NAME:
+                randomData = faker.name().lastName().replaceAll("'", "");
+                break;
+            case FULL_NAME:
+                randomData = faker.name().firstName().replaceAll("'", "") + " "
+                        + faker.name().lastName().replaceAll("'", "");
+                break;
+            case ADDRESS:
+                randomData = faker.address().fullAddress().replaceAll("'", "");
+                break;
+            default:
+                throw new InvalidParameterException("Invalid expected data type. Please provide one of these as the " +
+                        "expected data type " + FIRST_NAME + " | " + LAST_NAME + " | " + FULL_NAME + " | " + ADDRESS);
+        }
+
+        return randomData;
     }
 
     public static boolean isTrue(String rowCell) {

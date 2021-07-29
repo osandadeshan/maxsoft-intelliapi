@@ -10,6 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.Objects;
 
 /**
  * Project Name : MaxSoft-IntelliAPI
@@ -22,9 +23,9 @@ import java.util.Iterator;
 
 public abstract class ExcelFileOperator {
 
-    private static int column;
-
     public static int findColumnNumber(String cellContent) {
+        String columnNumber = null;
+
         try {
             FileInputStream inputStream = new FileInputStream(EnvironmentPropertyReader.getApiDocumentFilePath());
             Workbook workbook = new XSSFWorkbook(inputStream);
@@ -37,7 +38,7 @@ public abstract class ExcelFileOperator {
                     if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
                         String text = cell.getStringCellValue();
                         if (cellContent.equals(text)) {
-                            column = cell.getColumnIndex();
+                            columnNumber = String.valueOf(cell.getColumnIndex());
                             break;
                         }
                     }
@@ -47,10 +48,13 @@ public abstract class ExcelFileOperator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return column;
+
+        return Integer.parseInt(Objects.requireNonNull(columnNumber));
     }
 
     public static int findRowNumber(String cellContent) {
+        String rowNumber = null;
+
         try {
             FileInputStream excelFile = new FileInputStream(EnvironmentPropertyReader.getApiDocumentFilePath());
             Workbook workbook = new XSSFWorkbook(excelFile);
@@ -59,7 +63,8 @@ public abstract class ExcelFileOperator {
                 for (Cell cell : row) {
                     if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
                         if (cell.getRichStringCellValue().getString().trim().equals(cellContent)) {
-                            return row.getRowNum();
+                            rowNumber = String.valueOf(row.getRowNum());
+                            break;
                         }
                     }
                 }
@@ -67,10 +72,13 @@ public abstract class ExcelFileOperator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return 0;
+
+        return Integer.parseInt(Objects.requireNonNull(rowNumber));
     }
 
     public static int findRowNumber(String sheetName, String cellContent) {
+        String rowNumber = null;
+
         try {
             FileInputStream excelFile = new FileInputStream(EnvironmentPropertyReader.getApiDocumentFilePath());
             Workbook workbook = new XSSFWorkbook(excelFile);
@@ -79,7 +87,8 @@ public abstract class ExcelFileOperator {
                 for (Cell cell : row) {
                     if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
                         if (cell.getRichStringCellValue().getString().trim().equals(cellContent)) {
-                            return row.getRowNum();
+                            rowNumber = String.valueOf(row.getRowNum());
+                            break;
                         }
                     }
                 }
@@ -87,6 +96,7 @@ public abstract class ExcelFileOperator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return 0;
+
+        return Integer.parseInt(Objects.requireNonNull(rowNumber));
     }
 }

@@ -86,4 +86,10 @@ public class Constants {
     public static final String MONGO_USERNAME = "Username";
     public static final String MONGO_SOURCE = "Source";
     public static final String MONGO_PASSWORD = "Password";
+
+    // Random Data Generation Constants
+    public static final String FIRST_NAME = "firstname";
+    public static final String LAST_NAME = "lastname";
+    public static final String FULL_NAME = "fullname";
+    public static final String ADDRESS = "address";
 }

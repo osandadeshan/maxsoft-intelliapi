@@ -17,8 +17,8 @@ tags: request_placeholders, regression
    |DataStore Type|Variable Name|Value To Be Stored|
    |--------------|-------------|------------------|
    |Specification |varName      |Osanda            |
-   |Specification |varGender    |Male              |
-   |Specification |varStatus    |Active            |
+   |Specification |varGender    |male              |
+   |Specification |varStatus    |active            |
 
 
 ## Replace all request placeholders in a text file from data store values
@@ -87,8 +87,8 @@ tags: request_placeholders, regression
    |$.code       |no                 |               |                        |201           |
    |$.data.name  |no                 |               |                        |Tester2       |
    |$.data.email |yes                |Scenario       |varEmail                |              |
-   |$.data.gender|no                 |               |                        |Female        |
-   |$.data.status|no                 |               |                        |Inactive      |
+   |$.data.gender|no                 |               |                        |female        |
+   |$.data.status|no                 |               |                        |inactive      |
 
 
 ## Replace two request placeholders in API document from text file values
