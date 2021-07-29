@@ -64,13 +64,16 @@ tags: data_store, regression
 
    |Data Store Type|Data Store Variable Name|Expected Data Type   |
    |---------------|------------------------|---------------------|
-   |Scenario       |varName                 |FullName             |
+   |Scenario       |varFirstName            |FirstName            |
+   |Scenario       |varLastName             |LastName             |
+   |Scenario       |varFullName             |FullName             |
+   |Scenario       |varAddress              |Address              |
 * And the user set the request attributes using data stores as follows
 
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
    |--------------------------------|-------------------|---------------|------------------------|------------------------|
    |#email                          |yes                |Scenario       |varEmail                |                        |
-   |#name                           |yes                |Scenario       |varName                 |                        |
+   |#name                           |yes                |Scenario       |varFullName             |                        |
    |#gender                         |yes                |Specification  |varGender               |                        |
    |#status                         |yes                |Specification  |varStatus               |                        |
 * When the user invokes the API
@@ -80,7 +83,7 @@ tags: data_store, regression
    |JSON Path    |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
    |-------------|-------------------|---------------|------------------------|--------------|
    |$.code       |no                 |               |                        |201           |
-   |$.data.name  |yes                |Scenario       |varName                 |              |
+   |$.data.name  |yes                |Scenario       |varFullName             |              |
    |$.data.email |yes                |Scenario       |varEmail                |              |
    |$.data.gender|yes                |Specification  |varGender               |              |
 * And the JSON Path Existence in the response should be equal to the following
@@ -105,7 +108,7 @@ tags: data_store, regression
 
    |JSON Path  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
    |-----------|-------------------|---------------|------------------------|--------------|
-   |$.data.name|y                  |Scenario       |varName                 |              |
+   |$.data.name|y                  |Scenario       |varFullName             |              |
 * And the JSON Path values of the response should not contains the following
 
    |JSON Path  |notContains|
@@ -125,7 +128,7 @@ tags: data_store, regression
 
    |JSON Path  |Is Data Store Used?|Data Store Type|Data Store Variable Name|Expected Value|
    |-----------|-------------------|---------------|------------------------|--------------|
-   |$.data.name|y                  |Scenario       |varName                 |              |
+   |$.data.name|y                  |Scenario       |varFullName             |              |
    |$.code     |n                  |               |                        |201           |
 * And the JSON Path Assertions for the response should not be equal to the values inside the data stores
 

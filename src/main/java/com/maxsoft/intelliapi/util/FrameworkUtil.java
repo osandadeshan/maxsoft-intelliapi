@@ -85,17 +85,16 @@ public class FrameworkUtil {
 
         switch (expectedDataType.toLowerCase()) {
             case FIRST_NAME:
-                randomData = faker.name().firstName().replaceAll("'", "");
+                randomData = faker.name().firstName();
                 break;
             case LAST_NAME:
-                randomData = faker.name().lastName().replaceAll("'", "");
+                randomData = faker.name().lastName();
                 break;
             case FULL_NAME:
-                randomData = faker.name().firstName().replaceAll("'", "") + " "
-                        + faker.name().lastName().replaceAll("'", "");
+                randomData = faker.name().firstName() + " " + faker.name().lastName();
                 break;
             case ADDRESS:
-                randomData = faker.address().fullAddress().replaceAll("'", "");
+                randomData = faker.address().fullAddress();
                 break;
             default:
                 throw new InvalidParameterException("Invalid expected data type. Please provide one of these as the " +
