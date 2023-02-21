@@ -2,6 +2,8 @@
 echo Formating Specifications .............
 
 cd .. 
+cd ..
+
 gauge format specs
 
 echo Exit Code = %ERRORLEVEL%
