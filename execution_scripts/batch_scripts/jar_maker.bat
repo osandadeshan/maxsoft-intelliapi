@@ -2,6 +2,7 @@
 echo Making MaxSoft IntelliAPI JAR .............
 
 cd .. 
+cd ..
 
 mvn clean install -DskipTests
 

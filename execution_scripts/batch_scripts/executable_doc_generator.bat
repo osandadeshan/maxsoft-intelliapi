@@ -2,6 +2,8 @@
 echo Executable Document Generation .............
 
 cd .. 
+cd ..
+
 gauge docs spectacle specs
 
 echo Exit Code = %ERRORLEVEL%
