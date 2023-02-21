@@ -110,7 +110,7 @@ The main reason for developing this framework is to provide an easy way for Tech
 7. [How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5](https://medium.com/@osanda.deshan/how-to-use-maxsoft-ata-framework-for-api-test-automation-tutorial-5-3b2c22328233 "How to use MaxSoft IntelliAPI for API Test Automation? — Tutorial 5")
 
 ## Testing the Project
-1) Go to **batch_files** folder in the project root directory.
+1) Go to **execution_scripts/batch_scripts** folder in the project root directory.
 2) Double click on **dev_regression_run.bat** file. \
 OR \
 Run below commands on the terminal \
