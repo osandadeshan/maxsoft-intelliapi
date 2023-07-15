@@ -6,7 +6,7 @@
 
     <groupId>com.maxsoft.intelliapi</groupId>
     <artifactId>maxsoft-intelliapi</artifactId>
-    <version>1.4.3</version>
+    <version>1.4.4</version>
 
     <repositories>
         <repository>

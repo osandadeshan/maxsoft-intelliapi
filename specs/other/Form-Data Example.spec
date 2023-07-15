@@ -46,7 +46,8 @@ tags: form_data, regression
    |JSON Path |isExists|
    |----------|--------|
    |$.FileId  |true    |
-   |$.FileSize|false   |
+   |$.FileType|false   |
+   |$.FileSize|true    |
 * And the JSON Path Assertions for the response should be equal to the following
 
    |JSON Path |Expected Result |

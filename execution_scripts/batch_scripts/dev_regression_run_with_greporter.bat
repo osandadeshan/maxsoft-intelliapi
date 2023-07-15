@@ -8,5 +8,6 @@ call mvn test-compile gauge:execute -DspecsDir="specs" -Dtags="pre_requisites" -
 call mvn test-compile gauge:execute -DspecsDir="specs" -Denv="dev"
 
 call mvn clean -DemailConfigEnv=dev install exec:java
+
 echo Exit Code = %ERRORLEVEL%
 if not "%ERRORLEVEL%" == "0" exit /b

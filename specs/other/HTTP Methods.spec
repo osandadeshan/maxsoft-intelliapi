@@ -43,6 +43,15 @@ tags: http_methods, regression
 
 ## Invoke PATCH Request with json request and authentication
 
+* Given that a user needs to invoke "Get all users"
+* When the user invokes the API
+* Then the status code for the request is "200"
+* And save the JSON Path values in the response inside the data stores
+
+   |DataStore Type|Variable Name|Value To Be Stored|
+   |--------------|-------------|------------------|
+   |Scenario      |userId       |$.data[0].id      |
+
 * Given that a user needs to invoke "Edit a user (PATCH)"
 * And the user set the request authentication configurations as follows
 
@@ -55,7 +64,7 @@ tags: http_methods, regression
 
    |Path Name|Is Data Store Used?|Data Store Type|Data Store Variable Name|Path Value|
    |---------|-------------------|---------------|------------------------|----------|
-   |userId   |no                 |               |                        |2         |
+   |userId   |yes                |Scenario       |userId                  |          |
 * And the user set the request attributes using data stores as follows
 
    |Attribute Value In JSON Template|Is Data Store Used?|Data Store Type|Data Store Variable Name|Attibute Value To Be Set|
